@@ -1,0 +1,283 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+            .style1
+            {
+                font-family: "Courier New", Courier, monospace;
+            }
+        </style>
+	</head>
+	<body>
+	    <h1>Edit Functions</h1>
+        <p>
+        Netrix editor is primarily an HTML editor. Beside the basic editing function it offers several advanced editing and helper functions.
+        You can create simple editors, advanced text processing applications, or interactive displays. The internal format is HTML. It is
+        extensible with private XML elements.
+        </p>
+        <h1>Basic Editing</h1>
+        <p>
+        The basic text editing function are such as "Bold", "Italic", font family and color. These functions work in either direct or toggle mode. Binary 
+        functions, such as "Bold", are toggle functions. Applying the same command to an already formatted text returns to the other state.
+        </p>
+        <p>
+        Other basic functions, such as "Copy", "Paste", and "Cut" don't toggle. Simple buttons will work well. However, you have to take care the current 
+        functions 'availability'. For each method call Netrix provides the corresponding "Can" method. Hence, for "Copy" is a method "CanCopy".
+        </p>
+        <p>
+        One of the challenges you face as a developer is to synchronize the toolbars or ribbons with the current state at the cursor position. In this demo
+        application we use a ribbon with either ToggleButton or regular Button element.
+        </p>
+        <h2>Event Handling</h2>
+        <p>
+        One crucial question is how to synchronize the toolbar or ribbon an when it's safe to issue the commands. First of all, Netrix works
+        asynchronous during the load phase. Each loading process, invoked by any of the "Load" methods, is handled asyncrhonously internally.
+        Any operation agaínst the control must wait for the "ReadyStateComplete" event. Once it is fired, the IsReady property is set to true.
+        </p>
+        <p>
+        Another crucial event is "UpdateUI". Any user operation, such as Key or Mouse, can change the caret's position and hence change the 
+        appearance of tool buttons. It's recommended to update all tools at once in this event only.
+        </p>
+        <h3>Example: Font Handling</h3>
+        In ths demo the Windows 7 Ribbon is used. The ribbon provides a Font control, that summerizes all basic font functions. All features 
+        supported by this control are well handled by Netrix.
+
+	    This is a snippet from font control&#39;s execute event:
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_fontControl_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;Toggle&nbsp;Buttons&nbsp;need&nbsp;to&nbsp;be&nbsp;wrapped</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(CanToggle(_fontControl.Bold,&nbsp;<span 
+            style="color: #2b91af">HtmlCommand</span>.Bold))
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.ToggleBold();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}</pre>
+        <p>
+            The editor just need a call to <span class="style1">ToggleBold</span>. This 
+            method can be found in the HtmlTextFormatting class, exposed by the
+            <span class="style1">TextFormatting</span> property.</p>
+        <p>
+            The CanToggle method is a private helper method that takes the command invoked 
+            by the font control ( _fontControl.Bold) and the corresponding command from 
+            HtmlCommand enum. This enum contains an entry for all formatting and several 
+            element functions. It is used to ask Netrix whether a specific command is 
+            currently available.
+        </p>
+        <pre style="font-family: consolas"><span style="color: blue">bool</span>&nbsp;CanToggle(RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>&nbsp;prop,&nbsp;<span 
+            style="color: #2b91af">HtmlCommand</span>&nbsp;check)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;(prop&nbsp;==&nbsp;RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>.Set
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.CommandStatus(check)&nbsp;!=&nbsp;<span 
+            style="color: #2b91af">HtmlCommandInfo</span>.Checked)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_fontControl.Bold&nbsp;==&nbsp;RibbonLib.Interop.<span style="color: #2b91af">FontProperties</span>.NotSet
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.CommandStatus(check)&nbsp;!=&nbsp;<span 
+            style="color: #2b91af">HtmlCommandInfo</span>.Enabled);
+}
+</pre>
+        <p>
+&nbsp;Netrix provides the CommandStatus method to check for a command&#39;s availability. A 
+            command can have several states, such as &quot;Checked&quot;, &quot;Enabled&quot;, or &quot;Both&quot;. 
+            &quot;Checked&quot; means that the command is currently applied. In case of Bold this 
+            means the caret is with a text that is formatted bold (between &lt;b&gt; tags, 
+            actually). If it is possible to invoke the command, the method return &quot;Enabled&quot;. 
+            Ususally, especially for toggle commands, the method returns &quot;Both&quot; (is active 
+            and can be invoked again).</p>
+        <p>
+            In the example code the state of the ribbon&#39;s font control is synchronized with 
+            the Netrix control&#39;s state.</p>
+        <p>
+            Using this, the ribbon handled the Netrix control&#39;s Bold feature. There is just 
+            one fuunction left. The toggle control on the ribbon&#39;s font control must stay in 
+            sync even if the user just moves the caret (not invoking any specific command). 
+            Here we use the UpdateUI event. In the example the is routed through the handler 
+            class, because the Netrix control resides in a separate window (to make it 
+            dockable). The handler looks like this:</p>
+        <pre style="font-family: consolas">_fontControl.Bold&nbsp;=&nbsp;CheckState(<span 
+            style="color: #2b91af">HtmlCommand</span>.Bold);</pre>
+        <p>
+            The CheckState method contains the required logic:</p>
+        <pre style="font-family: consolas">RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>&nbsp;CheckState(<span 
+            style="color: #2b91af">HtmlCommand</span>&nbsp;cmd)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(EditorDocument.HtmlEditor.CommandStatus(cmd)&nbsp;==&nbsp;<span 
+            style="color: #2b91af">HtmlCommandInfo</span>.Checked
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.CommandStatus(cmd)&nbsp;==&nbsp;<span style="color: #2b91af">HtmlCommandInfo</span>.Both)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>.Set;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_fontControl.Bold&nbsp;=&nbsp;RibbonLib.Interop.<span style="color: #2b91af">FontProperties</span>.NotSet;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(EditorDocument.HtmlEditor.CommandStatus(cmd)&nbsp;!=&nbsp;<span 
+            style="color: #2b91af">HtmlCommandInfo</span>.Enabled
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.CommandStatus(cmd)&nbsp;!=&nbsp;<span style="color: #2b91af">HtmlCommandInfo</span>.Both)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>.NotAvailable;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;RibbonLib.Interop.<span 
+            style="color: #2b91af">FontProperties</span>.NotSet;
+}</pre>
+        <p>
+            Again the HtmlCommand enum is used to check the current state. In case the state 
+            is &quot;Checked&quot; or &quot;Both&quot; the toggle tool is set. In case it is not enabled the 
+            tool is disabled. Otherwise it&#39;s avaiable and not set. Some functions do not 
+            toggle. In those cases you can simply read the corresponding properties and set 
+            your tools accordingly:</p>
+        <pre style="font-family: consolas">_fontControl.Family&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextFormatting.FontName;
+_fontControl.ForegroundColor&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextFormatting.ForeColor;
+_fontControl.BackgroundColor&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextFormatting.BackColor;</pre>
+        <p>
+            Internally all HTLM colors are properly translated to System.Drawing.Color 
+            objects.</p>
+        <h3>
+            Example: Formatting Paragraphs</h3>
+        <p>
+            Typical operations regarding paragraphs are alignment, adding ordered or 
+            unordered lists, or indent blocks. All these commands are applied as simple 
+            method calls. Again, it&#39;s recommended to check for the functions availability 
+            through the UpdateUI event as shown before. The example shows how to left align 
+            a paragraph:</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_buttonAlignLeft_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.SetAlignment(<span style="color: #2b91af">Alignment</span>.Left);
+}</pre>
+        <p>
+            All method calls in the formatting classes uses the term &quot;align&quot;. There is, 
+            however, a conflict between the alignment capabilites of styles (CSS), within 
+            block elements, such as table cells, and regular paragraphs. Hence the 
+            HtmlCommand enum uses for paragraphs the term &quot;justify&quot;. Enabling of disabling 
+            the tools checks the CommandStatus method using the JustifyXXX entries of the 
+            enum,</p>
+        <h2>
+            Search and Replace</h2>
+        <p>
+            Netrix comes with full support for search and replace opertions. Search is 
+            internally exposed through the &quot;Find&quot; method. Search and replace both have few 
+            options:</p>
+        <ul>
+            <li>Search full words</li>
+            <li>Search case sensitive</li>
+            <li>Search upwards</li>
+        </ul>
+        <p>
+            The search and replace algorithm takes care of HTML formatting automatically. 
+            However, if a word has been found with formatting within the word itself, and 
+            the whole word gets replaces, the formatting gets lost. The replace method takes 
+            pure text only.
+        </p>
+        <p>
+            In the example the NextWord event is used to sync a dialog with the current 
+            search (or replace) process:</p>
+        <pre style="font-family: consolas"><span style="color: blue">private</span>&nbsp;<span 
+            style="color: blue">void</span>&nbsp;HandleSearchAndReplace(<span 
+            style="color: blue">bool</span>&nbsp;replace)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.NextWord&nbsp;+=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+            style="color: #2b91af">EventHandler</span>(SearchReplaceDialog_NextWord);
+&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.FormClosed&nbsp;+=&nbsp;<span style="color: blue">new</span>&nbsp;System.Windows.Forms.<span 
+            style="color: #2b91af">FormClosedEventHandler</span>(SearchReplaceDialog_FormClosed);
+&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.Show(<span style="color: blue">this</span>);
+}
+ 
+<span style="color: blue">void</span>&nbsp;SearchReplaceDialog_FormClosed(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;System.Windows.Forms.<span 
+            style="color: #2b91af">FormClosedEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(SearchReplaceDialog.DialogResult&nbsp;==&nbsp;System.Windows.Forms.<span 
+            style="color: #2b91af">DialogResult</span>.OK)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;last&nbsp;search&nbsp;before&nbsp;close</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog_NextWord(sender,&nbsp;<span style="color: #2b91af">EventArgs</span>.Empty);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog&nbsp;=&nbsp;<span style="color: blue">null</span>;
+}
+ 
+<span style="color: blue">void</span>&nbsp;SearchReplaceDialog_NextWord(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">EventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(SearchReplaceDialog.UseReplace)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.ReplaceNext(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.SearchFor,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.ReplaceWith,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.CaseSensitive,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.WholeWord,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.SearchUp);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Find(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.SearchFor,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.CaseSensitive,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.WholeWord,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SearchReplaceDialog.SearchUp);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>
+            The several options provided to the editors &quot;Find&quot; as well as &quot;ReplaceNext&quot; 
+            methods are pulled from controls the dialog provides.</p>
+        <p>
+            The search method does not handle anything. In case a word has been found the 
+            word is highlighted. Any commands, such as Delete, Copy, or formatting, applies 
+            against a highlighted fragment, if any.</p>
+        <h2>
+            Copy, Paste, Cut, and Delete</h2>
+        <p>
+            The common editing functions work like any other functions. The are bound to hot 
+            keys internally. Hot keys can be suppressed and replaced by private once if 
+            required.</p>
+        <h2>
+            Undo / Redo</h2>
+        <p>
+            Undo and Redo is fully implemented. Moreover, you can:</p>
+        <ul>
+            <li>Retrieve the list of recent undo operations</li>
+            <li>Create containers to put several steps together into one undo operation</li>
+            <li>Clear the undo stack to prevent the user from undoing anything</li>
+            <li>Handle undo operations through events</li>
+        </ul>
+        <p>
+            Usually it&#39;s not necessary to implement anything using Undo. The call looks 
+            simple:</p>
+        <pre style="font-family: consolas">htmlEditor1.Undo();</pre>
+        <p>
+            <strong>Note</strong>: In the example application this is wrapped into a method 
+            that applies the command to either the Netrix editor or the code editor.</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+
+	</body>
+</html>

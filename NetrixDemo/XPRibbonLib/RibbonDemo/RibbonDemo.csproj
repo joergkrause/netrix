@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B72F4D92-C1BB-4466-A2A1-CF1F30B0BBBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RibbonDemo</RootNamespace>
+    <AssemblyName>RibbonDemo</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlackForm.Designer.cs">
+      <DependentUpon>BlackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BlackForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BlackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon.csproj">
+      <Project>{46A18A55-5AE8-49CE-91CD-C7421B642E7E}</Project>
+      <Name>System.Windows.Forms.Ribbon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastespecial16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastelink16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyformat16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontsizeincrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontsizedecrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraseformat16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strikethru16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subindex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superindex16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casing16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hilight16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontcolor16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unorderedlist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderedlist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multilevellist16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentdecrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentdecrease161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indentincrease16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisiblechars16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paragraphspacing16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fill16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borderbottom16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignleft16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textaligncenter16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignright16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textalignjustify16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\styleset16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stylechange32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\style16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\themefont.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newdocument32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prepare32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publish32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worddocument32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wordtemplate32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word2003doc32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addons32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printquick32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\replace16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goto16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pageblank16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

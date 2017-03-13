@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+        </style>
+	</head>
+	<body>
+	    <h1>HelpLine Plug-In</h1>
+        <p>
+        The helpline plug-in is an extender provider for the HtmlEditor class. Once it has been added to the current form you can activate a helpline.
+        A helpline is a vertical, horizontal, or both line, that the user can move over the text. It stays on an independent layer and does not persist
+        in the document. The purpose is simply to support the alignment of objects that are absolute positioned. Hence, it's reocmmended to position
+        elements absolutely.
+        </p>
+        <p>
+        The helpline tab exposes to helper functions, 'Show Grid' and 'Absolute Position' that makes sense especially when using the helpline.
+        </p>
+        <h1>Code</h1>
+        <p>Use this code to create two helpline objects:</p>
+        <pre style="font-family: consolas"><span style="color: blue">this</span>.helpLine1&nbsp;=&nbsp;<span 
+            style="color: blue">new</span>&nbsp;GuruComponents.Netrix.HelpLine.<span 
+            style="color: #2b91af">HelpLine</span>(<span style="color: blue">this</span>.components);
+<span style="color: blue">this</span>.helpLine1.SetHelpLine(htmlEditor1,&nbsp;<span 
+            style="color: blue">new</span>&nbsp;<span style="color: #2b91af">HelpLineProperties</span>());
+<span style="color: blue">this</span>.helpLine2&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;GuruComponents.Netrix.HelpLine.<span 
+            style="color: #2b91af">HelpLine</span>(<span style="color: blue">this</span>.components);
+<span style="color: blue">this</span>.helpLine2.SetHelpLine(htmlEditor1,&nbsp;<span 
+            style="color: blue">new</span>&nbsp;<span style="color: #2b91af">HelpLineProperties</span>());</pre>
+        <p>&nbsp;This is similar to what the Visual Studio designer does internally. You can 
+            use the designer as well. Just drag the extender control onto the designer 
+            surface.</p>
+        <p>Once the helpline is there, you can set various properties:</p>
+        <pre style="font-family: consolas"><span style="color: blue">this</span>.helpLine2.GetHelpLine(htmlEditor1).LineVisible&nbsp;=&nbsp;<span 
+            style="color: blue">false</span>;
+<span style="color: blue">this</span>.helpLine2.GetHelpLine(htmlEditor1).LineColor&nbsp;=&nbsp;<span 
+            style="color: #2b91af">Color</span>.Blue;
+<span style="color: blue">this</span>.helpLine2.GetHelpLine(htmlEditor1).X&nbsp;=&nbsp;100;
+<span style="color: blue">this</span>.helpLine2.GetHelpLine(htmlEditor1).Y&nbsp;=&nbsp;100;
+ 
+<span style="color: blue">this</span>.helpLine1.GetHelpLine(htmlEditor1).LineVisible&nbsp;=&nbsp;<span 
+            style="color: blue">false</span>;
+<span style="color: blue">this</span>.helpLine1.GetHelpLine(htmlEditor1).LineColor&nbsp;=&nbsp;<span 
+            style="color: #2b91af">Color</span>.Red;
+<span style="color: blue">this</span>.helpLine1.GetHelpLine(htmlEditor1).X&nbsp;=&nbsp;30;
+<span style="color: blue">this</span>.helpLine1.GetHelpLine(htmlEditor1).Y&nbsp;=&nbsp;30;</pre>
+        <p>The call to GetHelpLine is necessary to assign the helpline to a specific editor 
+            on your form (even if there is one only). The call exposes the property bag.</p>
+        <p>In the demo code we do two things. First, the tools get synchronized with current 
+            property bag (simplified shortcut to the code shown above):</p>
+        <pre style="font-family: consolas">_togglebuttonHelpLine_B.BooleanValue&nbsp;=&nbsp;EditorDocument.HelpLineB.LineVisible;
+_togglebuttonHelpLine_A.BooleanValue&nbsp;=&nbsp;EditorDocument.HelpLineA.LineVisible;</pre>
+        <p>Second, we use the ribbon&#39;s excecute events to set the appropriate properties:</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_togglebuttonHelpLine_B_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HelpLineB.LineVisible&nbsp;=&nbsp;_togglebuttonHelpLine_B.BooleanValue;
+}</pre>
+        <p>Again, HelpLineB (as well as HelpLineA) are public properties that give access to 
+            the property bag like this:</p>
+        <pre style="font-family: consolas"><span style="color: blue">public</span>&nbsp;<span 
+            style="color: #2b91af">HelpLineProperties</span>&nbsp;HelpLineB
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">get</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;helpLine2.GetHelpLine(htmlEditor1);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <h1>Properties</h1>
+        <p>To make most out of the helpline it makes sense to put the control in absolute position mode. To do so, click the "Absolute Position' toggle button in the ribbon's tab.
+        </p>
+        <hr />
+        <p>
+        Here are some elements you can easily position and move around. Activate the helplines and see, how the various functions work:
+        </p>
+        <ul>
+            <li>Helpline Color: Sets the color the helpline is drawn with</li>
+            <li>Line Dash: A pattern that is used to draw the helpline</li>
+            <li>Line Size: The size (thickness) in pixel</li>
+            <li>Line X and Line Y: You can switch the horizontal (X) and vertical (Y) line seperately. However, you cannot set the other properties separately.</li>
+            <li>Position Y and Position Y: The current position of the helpline's spot. Can be read and set programmatically.</li>
+            <li>Snap: Make absolute positionable elements (and only thus) snapping to helpline next the element's border. The snap zone is 16 pixels, but can be set in code.</li>
+            <li>Snap To Grid: The helpline runs on a virtual grid (this is not the same as the control's grid) and snaps to grid lines. The distance is 16 pixels. This value can be set in code.</li>
+            <li>Grid Size: The distance between grid lines in pixel. This size is independend to the control's grid.</li>
+        </ul>
+        <p>
+        Helpline B is just to show how a preset line can be switched on and off easily. It shows that you can have as many helplines as you like, too. However, working with more
+        than 2 or 3 helplines is not recommended (performance issues might arise, users get confused, snapping is hard to control).
+        </p>
+        <h1>
+            Exercise</h1>
+        <div style="position:absolute; top:1506; left:168; border:2px solid gray; vertical-align:middle; text-align:center; height: 64px; width: 90px; margin-top: 0px;">
+            OBJECT 1</div>
+        <div style="position:absolute; top:1485; left:379; border:2px solid gray; vertical-align:middle; text-align:center; height: 101px; width: 252px; background-color: #FFFF00;">
+            OBJECT 3</div>
+        <div style="position:absolute; top:1479; left:240; border:2px solid gray; vertical-align:middle; text-align:center; height: 63px; width: 90px; background-color: #FFFFFF;">
+            OBJECT 2</div>
+	    <p>
+            Switch one or both helplines on an move the absolute positioned objects shown 
+            below around:</p>
+        <p>
+            &nbsp;</p>
+	</body>
+</html>

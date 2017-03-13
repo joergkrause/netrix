@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        code
+        {
+            font-family: Courier New;
+            font-size: 10pt;
+        }
+        .style1
+        {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Format and Insert Elements</h1>
+    <p>
+        On this tab you see how to insert elements that format on paragraph level and how
+        to add additional elements, such as tables.
+    </p>
+    <p style="font-weight:bold">
+        Note:
+    To see the table designer in action just insert a table and use the table tabs on the ribbon for more information.
+    </p>
+    <h1>
+        Exercise</h1>
+    <p>
+        To work with the function you can so this:</p>
+    <ul>
+        <li>Click into a paragraph you wish to format.</li>
+        <li>Select a format from the dropdown button called "Format". Choose Header, PRE, or CODE.</li>
+    </ul>
+    <p><b>Note: Netrix supports <u>all</u> HTML 4 elements. The demo shows just a few of these elements.</b></p>
+    <p>Alternatively, you can drag drop elements. But these elements appear at the caret position and do not span content. The formatting feature encapsulates the
+    current paragraph automatically.</p>
+    <p>To remove a formatting, you have to select the region properly. Otherwise, the current word is taken automatically and the formatting tags
+    are re-arranged left and right of the current word. Removing block formats (such as paragraphs) and inline formats behaves slightly different.</p>
+    <h1>Code</h1>
+
+    <p>
+        The code shows how the ribbon buttons are treated in the demo:</p>
+    <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_buttonRemoveFormat_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.RemoveParagraphFormat();
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonRemoveInlineFormat_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.RemoveInlineFormat();
+}
+ 
+<span style="color: blue">void</span>&nbsp;_galleryParagraphElementsHeader_ItemsSourceReady(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">EventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">IUICollection</span>&nbsp;headerItems&nbsp;=&nbsp;_galleryParagraphElementsHeader.ItemsSource;
+&nbsp;&nbsp;&nbsp;&nbsp;headerItems.Clear();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;here&nbsp;we&nbsp;create&nbsp;the&nbsp;Header&nbsp;images&nbsp;on&nbsp;the&nbsp;fly&nbsp;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">int</span>[]&nbsp;fontmap&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+        style="color: blue">int</span>[]&nbsp;{&nbsp;16,&nbsp;14,&nbsp;12,&nbsp;10,&nbsp;9,&nbsp;8,&nbsp;6&nbsp;};
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">Brush</span>&nbsp;b&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+        style="color: #2b91af">SolidBrush</span>(<span style="color: #2b91af">Color</span>.Black);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">for</span>&nbsp;(<span style="color: blue">int</span>&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;&nbsp;7;&nbsp;i++)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">Bitmap</span>&nbsp;image&nbsp;=&nbsp;<span 
+        style="color: blue">new</span>&nbsp;<span style="color: #2b91af">Bitmap</span>(32,&nbsp;32);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">using</span>&nbsp;(<span style="color: #2b91af">Graphics</span>&nbsp;g&nbsp;=&nbsp;<span 
+        style="color: #2b91af">Graphics</span>.FromImage(image))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.Drawing.<span style="color: #2b91af">Font</span>&nbsp;f&nbsp;=&nbsp;<span 
+        style="color: blue">new</span>&nbsp;<span style="color: #2b91af">Font</span>(<span 
+        style="color: #2b91af">FontFamily</span>.GenericSansSerif,&nbsp;fontmap[i]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">string</span>&nbsp;t&nbsp;=&nbsp;<span 
+        style="color: #2b91af">String</span>.Format(<span style="color: #a31515">&quot;H{0}&quot;</span>,&nbsp;i);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">SizeF</span>&nbsp;sf&nbsp;=&nbsp;g.MeasureString(t,&nbsp;f);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.DrawString(t,&nbsp;f,&nbsp;b,&nbsp;16&nbsp;-&nbsp;sf.Width&nbsp;/&nbsp;2,&nbsp;16&nbsp;-&nbsp;sf.Height&nbsp;/&nbsp;2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headerItems.Add(<span style="color: blue">new</span>&nbsp;<span 
+        style="color: #2b91af">GalleryItemPropertySet</span>()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ItemImage&nbsp;=&nbsp;ribbon1.ConvertToUIImage(image),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Label&nbsp;=&nbsp;<span style="color: #2b91af">String</span>.Format(<span 
+        style="color: #a31515">&quot;Heading{0}&quot;</span>,&nbsp;i),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CategoryID&nbsp;=&nbsp;1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+ 
+<span style="color: blue">void</span>&nbsp;_galleryParagraphElementsHeader_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">uint</span>&nbsp;id&nbsp;=&nbsp;_galleryParagraphElementsHeader.SelectedItem;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">object</span>&nbsp;item;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;use&nbsp;the&nbsp;label&nbsp;to&nbsp;transport&nbsp;the&nbsp;enum&#39;s&nbsp;value&nbsp;we&nbsp;need&nbsp;to&nbsp;format&nbsp;a&nbsp;paragraph</span>
+&nbsp;&nbsp;&nbsp;&nbsp;_galleryParagraphElementsHeader.ItemsSource.GetItem(id,&nbsp;<span 
+        style="color: blue">out</span>&nbsp;item);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(item&nbsp;!=&nbsp;<span style="color: blue">null</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">HtmlFormat</span>&nbsp;format&nbsp;=&nbsp;(<span 
+        style="color: #2b91af">HtmlFormat</span>)<span style="color: #2b91af">Enum</span>.Parse(<span 
+        style="color: blue">typeof</span>(<span style="color: #2b91af">HtmlFormat</span>),&nbsp;((<span 
+        style="color: #2b91af">GalleryItemPropertySet</span>)item).Label);
+<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.SetHtmlFormat(format);</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonParagraphElementsCode_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>EditorDocument.HtmlEditor.Document.InsertCode();</strong>
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonParagraphElementsPre_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>EditorDocument.HtmlEditor.Document.InsertPreformatted();</strong>
+}</pre>
+    <p>
+        The gallery images for header elements are created on-the-fly. This is just a 
+        suggestion, consider using pre-created images. The main method call is
+        <span class="style1">SetHtmlFormat</span> here. If it is not formatting option, 
+        rather an element you have to insert, use the various Insert methods the
+        <span class="style1">HtmlDocument</span> class provides, exposed by the
+        <span class="style1">Document</span> property.</p>
+
+</body>
+</html>

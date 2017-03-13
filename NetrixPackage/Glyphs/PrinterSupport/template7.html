@@ -1,0 +1,393 @@
+<HTML XMLNS:IE>
+<HEAD>
+<?IMPORT NAMESPACE="ie" IMPLEMENTATION="#default">
+<STYLE TYPE="text/css">
+.lorstyle
+{
+    background:white;
+    margin-top:1in;
+    margin-left:1in;
+    width:6in;
+    height:8in;
+}
+.pagestyle
+{ 
+    background:white;
+    border-left:1 solid black;
+    border-top:1 solid black;
+    border-right:4 solid black;
+    border-bottom:4 solid black;
+    width:8.5in;
+    height:11in;
+    margin:10px;
+    overflow:hidden;
+    left:-100in;
+}
+.headerstyle
+{
+    position:absolute;
+    top:.25in;
+    width:6in;
+    left:1in;
+}
+.footerstyle
+{
+    position:absolute;
+    top:10.5in;
+    width:6in;
+    left:1in;
+}
+#ui
+{
+    height:60px;
+    background-color:red;
+    margin:0px;
+    padding;0px; 
+}
+#zoomcontainer
+{
+    zoom:50%;
+    width:100%;
+    position:relative;
+}
+#pagecontainer
+{
+   width:100%;
+   overflow:auto; 
+   border:'thin threedhighlight inset'; 
+   background:threedshadow;
+
+}
+</STYLE>
+<SCRIPT LANGUAGE="JScript">
+var iNextPageToCreate = 1;
+var oPageStyleClass;
+var oLorStyleClass;
+var oHeaderStyleClass;
+var oFooterStyleClass;
+
+function FindStyleRule(styleName)
+{
+    for (i = 0; i < document.styleSheets.length; i++)
+    {
+        for (j = 0; j < document.styleSheets(i).rules.length; j++)
+        {
+            if (document.styleSheets(i).rules(j).selectorText == styleName)
+                return document.styleSheets(i).rules(j);
+        }
+        
+    }
+}
+
+function InitClasses()
+{
+    oPageStyleClass.style.width = printer.pageWidth/100 + "in";
+    oPageStyleClass.style.height = printer.pageHeight/100 + "in";  
+    oLorStyleClass.style.marginTop = printer.marginTop/100 + "in";    
+    oLorStyleClass.style.marginLeft = printer.marginLeft/100 + "in";
+    oLorStyleClass.style.width = (printer.pageWidth - (printer.marginLeft + printer.marginRight))/100 + "in";
+    oLorStyleClass.style.height = (printer.pageHeight - (printer.marginTop + printer.marginBottom))/100 + "in";
+    oHeaderStyleClass.style.left = printer.marginLeft/100 + "in";
+    oHeaderStyleClass.style.top = printer.unprintableTop/100 + "in";
+    oHeaderStyleClass.style.width = oLorStyleClass.style.width;   
+    oFooterStyleClass.style.left = printer.marginLeft/100 + "in";
+    oFooterStyleClass.style.width = oLorStyleClass.style.width;
+    oFooterStyleClass.style.top = null;
+    oFooterStyleClass.style.bottom = printer.unprintableBottom/100 + "in";
+}
+
+function Init()
+{
+    AddFirstPage();
+
+    zoomcontainer.style.zoom = "50%";
+    ui.style.width = document.body.clientWidth;
+    ui.style.height = "60px";
+    pagecontainer.style.height = document.body.clientHeight - ui.style.pixelHeight;
+     
+    oPageStyleClass = FindStyleRule(".pagestyle");
+    oLorStyleClass = FindStyleRule(".lorstyle");
+    oHeaderStyleClass = FindStyleRule(".headerstyle");
+    oFooterStyleClass = FindStyleRule(".footerstyle");
+    
+    InitClasses();
+}
+
+function CheckPrint()
+{               
+    switch (dialogArguments.__IE_PrintType)
+    {
+        case "Prompt":
+            if (printer.showPrintDialog()) 
+                PrintPrep();
+            break;
+        case "NoPrompt":
+            PrintPrep();
+            break;
+        case "Preview":
+        default:
+            break;
+    }
+}
+
+function PrintPrep()
+{
+    if (layoutrect1.contentDocument.readyState == "complete")
+    {
+        // This block will be called when printing with user prompt
+        // because the Print dialog box gives time for the content
+        // document to complete loading
+        PrintNow();
+    }
+    else
+    {
+        // This block will usually be called when printing w/o user prompt
+        // and sets an event handler that listens for the loading of the content
+        // document before printing. Sometimes, however, the content document
+        // will be loaded in time for the previous block to execute
+        layoutrect1.contentDocument.onreadystatechange = PrintWhenContentDocComplete;
+    }
+}
+
+function PrintWhenContentDocComplete()
+{
+    if (layoutrect1.contentDocument.readyState == "complete")
+    {
+        layoutrect1.contentDocument.onreadystatechange = null;
+        PrintNow();
+    }
+}
+
+function PrintNow()
+{
+    var startPage;
+    var endPage;
+    var oDeviceRectCollection = document.all.tags("DEVICERECT");
+    
+    if (dialogArguments.__IE_PrintType == "NoPrompt" || 
+        printer.selectedPages == false)
+    {
+        startPage = 1;
+        endPage = oDeviceRectCollection.length;
+    }
+    else if (printer.currentPage == true)
+    {
+        // Determine current page, if necessary.
+        // Normally, the print current page option is disabled because a print
+        // template has no way of determining which section of a document is displayed
+        // in the browser and cannot calculate a current page. In print preview,
+        // a print template can enable the print current page option because the
+        // template can determine which page is currently showing in the print
+        // preview dialog. The print preview window would need a user interface
+        // with a print button so that the user could print from the print preview
+        // window. See template7.htm for an example showing how to add a user
+        // interface to a print preview template.
+    }
+    else
+    {
+        startPage = printer.pageFrom;
+        endPage = printer.pageTo;
+        if (startPage > endPage)
+        {
+            alert("Error: Start page greater than end page");
+            return;
+        }
+        if (startPage > oDeviceRectCollection.length)
+        {
+            alert("Error: Start page greater than number of pages in print job.");
+            return;
+        }
+        if (endPage > oDeviceRectCollection.length)
+        {
+            alert("Warning: End page greater than number of pages in print job. Continuing Print Job.");
+            endPage = oDeviceRectCollection.length;
+        }
+    }
+    
+    printer.startDoc("Printing from Tmplt6.htm");
+
+    for (i = startPage - 1; i < endPage; i++)
+        printer.printPage(oDeviceRectCollection[i]);
+        
+    printer.stopDoc();
+}
+
+function AddFirstPage()
+{
+    newHTML  = "<IE:DEVICERECT ID='page1' MEDIA='print' CLASS='pagestyle'>";
+    newHTML += "<IE:LAYOUTRECT ID='layoutrect1' CONTENTSRC='document' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect2' CLASS='lorstyle'/>";
+    newHTML += "</IE:DEVICERECT>";
+
+    zoomcontainer.insertAdjacentHTML("afterBegin", newHTML);
+
+    headfoot.textHead = printer.header;
+    headfoot.textFoot = printer.footer;
+    headfoot.url = dialogArguments.__IE_BrowseDocument.URL;
+    headfoot.title = dialogArguments.__IE_BrowseDocument.title;
+    headfoot.page = 1;
+    AddHeaderAndFooterToPage(1);
+
+    iNextPageToCreate = 2;
+}
+
+function OnRectComplete()
+{
+    if (event.contentOverflow == true)
+        AddNewPage();
+    else
+    {
+        headfoot.pageTotal = document.all.tags("DEVICERECT").length;
+        
+        for (i = 1; i <= headfoot.pageTotal; i++)
+            AddPageTotalToPages(i);
+
+        setTimeout("CheckPrint();", 100);
+    }
+}
+
+function OnRectCompleteSimple()
+{
+    if (event.contentOverflow == true) return;
+    headfoot.pageTotal = parseInt(event.srcElement.parentElement.id.substring(4), 10);
+
+    AddPageTotalToPages();
+
+    ShowFilledPagesAndHideExcessPages();
+}
+
+function ShowFilledPagesAndHideExcessPages()
+{
+    for (i = 1; i <= headfoot.pageTotal; i++)
+        document.all("page" + i).style.position = "static";
+        
+    var i = headfoot.pageTotal + 1;
+    
+    while (document.all("page" + i))
+    {
+        document.all("page" + i).style.position = "absolute";
+        i++;
+    }
+}
+
+function AddHeaderAndFooterToPage(pageNum)
+{
+    newHeader = "<DIV CLASS='headerstyle'>" + headfoot.htmlHead + "</DIV>";
+    newFooter = "<DIV CLASS='footerstyle'>" +headfoot.htmlFoot + "</DIV>";
+    
+    document.all("page" + pageNum).insertAdjacentHTML("afterBegin", newHeader); 
+    document.all("page" + pageNum).insertAdjacentHTML("beforeEnd", newFooter);
+}
+
+function AddNewPage()
+{
+    document.all("layoutrect" + (iNextPageToCreate - 1)).onlayoutcomplete = OnRectCompleteSimple;
+    headfoot.page = iNextPageToCreate;
+    
+    newHTML  = "<IE:DEVICERECT ID='page" + iNextPageToCreate +  "' MEDIA='print' CLASS='pagestyle'>";
+    newHTML += "<IE:LAYOUTRECT ID='layoutrect" + iNextPageToCreate + "' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect" + (iNextPageToCreate + 1) + "'  CLASS='lorstyle'/>";
+    newHTML += "</IE:DEVICERECT>";
+
+    zoomcontainer.insertAdjacentHTML("beforeEnd", newHTML);
+    AddHeaderAndFooterToPage(iNextPageToCreate);
+    headfoot.pageTotal = iNextPageToCreate;
+    iNextPageToCreate++;
+}
+
+function AddPageTotalToPages()
+{
+    oSpanCollection = document.all.tags("span");
+    for (i = 0; i < oSpanCollection.length; i++)
+    {
+        if (oSpanCollection[i].className == "hfPageTotal")
+            oSpanCollection[i].innerText = headfoot.pageTotal;
+    }
+}
+
+function ResizeApp()
+{
+    ui.style.width = document.body.clientWidth;
+    pagecontainer.style.height = document.body.clientHeight - ui.style.pixelHeight;
+}
+
+function Zoomer(string)
+{
+    if (string == "in")
+    {
+        currZoom = zoomcontainer.style.zoom;
+        currZoom = currZoom.substring(0, currZoom.length - 1);
+        currZoom = parseInt(currZoom, 10);
+        newZoom = currZoom + 1;
+        
+        if (newZoom > 10000) return;
+        
+        zoomcontainer.style.zoom = newZoom + "%";
+        zoomnumber.value = newZoom;
+    }
+    else if (string == "out")
+    {
+        currZoom = zoomcontainer.style.zoom;
+        currZoom = currZoom.substring(0, currZoom.length - 1);
+        currZoom = parseInt(currZoom, 10);
+        newZoom = currZoom - 1;
+        
+        if (newZoom < 1) return;
+               
+        zoomcontainer.style.zoom = newZoom + "%";
+        zoomnumber.value = newZoom;
+    }
+    else
+    {
+        if (event.srcElement.id != "zoomnumber") return;
+        if (event.keyCode != 13) return;
+
+        var newZoom = zoomnumber.value;
+        numValue = parseInt(newZoom, 10);
+        
+        if (numValue != newZoom) return;
+        if (newZoom > 10000) return;
+        if (newZoom < 1) return;
+            
+        zoomcontainer.style.zoom = newZoom + "%";
+    }
+}
+
+function DoPageSetup()
+{
+    printer.showPageSetupDialog();
+    InitClasses();
+}
+
+function DoPrintFromPreview()
+{
+    if (printer.showPrintDialog()) 
+        PrintPrep();
+}
+</SCRIPT>
+<HEAD>
+<BODY ONLOAD="Init()" ONRESIZE="ResizeApp()" SCROLL="no">
+
+    <IE:TEMPLATEPRINTER ID="printer"/>
+    <IE:HEADERFOOTER ID="headfoot"/>
+
+    <DIV ID="ui">
+        <BR>
+        &nbsp;&nbsp;
+        <INPUT TYPE="BUTTON" VALUE="Page Setup..." onmouseup="DoPageSetup()">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <INPUT TYPE="BUTTON" VALUE="Zoom In" onmouseup="Zoomer('in')">
+        &nbsp;
+        <INPUT ID="zoomnumber" TYPE="TEXT" VALUE="50" SIZE="3" MAXLENGTH="4" onkeyup="Zoomer('amount')">%
+        &nbsp;
+        <INPUT TYPE="BUTTON" VALUE="Zoom Out" onmouseup="Zoomer('out')">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <INPUT TYPE="BUTTON" VALUE="Print..." onmouseup="DoPrintFromPreview()">
+    </DIV>
+
+    <DIV ID="pagecontainer">
+        <DIV ID="zoomcontainer">
+        <!-- Dynamically created pages go here. -->
+        </DIV>
+    </DIV>
+
+</BODY>
+</HTML>

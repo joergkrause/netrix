@@ -1,0 +1,1648 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+    <Application.Commands>
+        <Command Name="cmdApplicationMenu" Id="900" LabelTitle="HTML Editor Application" />
+        <Command Name="cmdRecentFiles" Id="901" LabelTitle="Recent Files"></Command>
+        <Command Name="cmdHelp" Id="902" LabelTitle="Help"></Command>
+        
+        <Command Name="cmdHelpEditGroup" LabelTitle="Help"></Command>
+
+        <Command Name="cmdHelpEdit" LabelTitle="Info" Id="101">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpElementGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpElement" LabelTitle="Info" Id="102">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpDisplayGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpDisplay" LabelTitle="Info" Id="103">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpControlGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpControl" LabelTitle="Info" Id="104">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpTextGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpText" LabelTitle="Info" Id="105">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpStylesGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpStyles" LabelTitle="Info" Id="106">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpHelplineGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpHelpline" LabelTitle="Info" Id="107">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpSpellerGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpSpeller" LabelTitle="Info" Id="108">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpTableEditorGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpTableEditor" LabelTitle="Info" Id="109">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdHelpTableOptionsGroup" LabelTitle="Help"></Command>
+        <Command Name="cmdHelpTableOptions" LabelTitle="Info" Id="110">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/help2.bmp</Image>
+            </Command.LargeImages>
+            <Command.TooltipTitle>Features on this tab</Command.TooltipTitle>
+            <Command.TooltipDescription>On this tab you find the common edit features. Click the button to load a document to play around.</Command.TooltipDescription>
+        </Command>
+
+        <Command Name="cmdTabEdit" Id="1000" LabelTitle="Edit" Keytip="E"></Command>
+        <Command Name="cmdButtonNew"
+                     Id="1001"
+                     LabelTitle="&amp;New"
+                     LabelDescription="New HTML File"
+                     TooltipTitle="New (Ctrl+N)"
+                     TooltipDescription="Create a new HTML file.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonOpen"
+                 Id="1002"
+                 LabelTitle="Open"
+                 LabelDescription="Open Description"
+                 TooltipTitle="Open (Ctrl+O)"
+                 TooltipDescription="Open an existing HTML file.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/folder_document.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/folder_document.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonSave"
+                 Id="1003"
+                 LabelTitle="Save"
+                 LabelDescription="Save Description"
+                 TooltipTitle="Save (Ctrl+S)"
+                 TooltipDescription="Save the current file to disc.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/floppy_disk.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/floppy_disk.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonPrint"
+                 Id="1004"
+                 LabelTitle="Print"
+                 LabelDescription="Print with Preview"
+                 TooltipTitle="Print Preview  (Ctrl+P)"
+                 TooltipDescription="Print the current file">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/printer.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/printer.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonProperties" Id="1005" LabelTitle="Properties" LabelDescription="Editor Properties">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/preferences_edit.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/preferences_edit.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdButtonExit"
+                 Id="1100"
+                 LabelTitle="Exit"
+                 LabelDescription="Exit application"
+                 TooltipTitle="Exit (ALT+F4)"
+                 TooltipDescription="Exit HTML Editor application.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/exit.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/exit.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+
+        <Command Name="cmdGroupClipboard" Id="2000"
+                             LabelTitle="Clipboard">
+        </Command>
+        <Command Name="cmdButtonPaste" Id="2001"
+                     LabelTitle="&amp;Paste"
+                     LabelDescription="Paste"
+                     TooltipTitle="Paste (Ctrl+V)"
+                     TooltipDescription="Paste from clipboard.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/paste.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/paste.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonCut" Id="2002"
+                     LabelTitle="C&amp;ut"
+                     LabelDescription="Cut"
+                     TooltipTitle="Cut (Ctrl+X)"
+                     TooltipDescription="Cut selection and copy to clipboard.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/cut.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/cut.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonCopy" Id="2003"
+                     LabelTitle="&amp;Copy"
+                     LabelDescription="Copy"
+                     TooltipTitle="Copy (Ctrl+C)"
+                     TooltipDescription="Copy to clipboard.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/copy.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/copy.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdButtonUndo" Id="2004"
+                     LabelTitle="Undo"
+                     LabelDescription="Undo"
+                     TooltipTitle="Undo (Ctrl+Z)"
+                     TooltipDescription="Undo the last operation.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/undo.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/undo.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonRedo" Id="2005"
+                     LabelTitle="&amp;Redo"
+                     LabelDescription="Redo"
+                     TooltipTitle="Redo (Ctrl+Y)"
+                     TooltipDescription="Redo operation.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/redo.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/redo.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonPasteImage" Id="2006"
+             LabelTitle="Paste Image"
+             LabelDescription="Paste Image from Clipboard"
+             TooltipTitle="Paste Image from clipboard (creates an image element to a temp path)"
+             TooltipDescription="Paste from clipboard.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/paste.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/paste.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdGroupFont" Id="2010"
+                     LabelTitle="Font">
+        </Command>
+        <Command Name="cmdFont" Id="2011"
+                     LabelTitle="&amp;Font"
+                     LabelDescription="Font"
+                     TooltipTitle="Font"
+                     TooltipDescription="Set font for current text.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdGroupParagraph" Id="2020"
+                     LabelTitle="Paragraph">
+        </Command>
+        <Command Name="cmdButtonInsertUL" Id="2021"
+                     LabelTitle="UL"
+                     LabelDescription="Insert Unordered List"
+                     TooltipTitle="Insert Unordered List"
+                     TooltipDescription="Insert Unordered List">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/bullet_square_grey.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/bullet_square_grey.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonInsertOL" Id="2022"
+                     LabelTitle="OL"
+                     LabelDescription="Insert Ordered List"
+                     TooltipTitle="Insert Ordered List"
+                     TooltipDescription="Insert Ordered List.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/bullet_ball_grey.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/bullet_ball_grey.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonInsertOutdent" Id="2023"
+                     LabelTitle="Outdent"
+                     LabelDescription="Outdent"
+                     TooltipTitle="Outdent"
+                     TooltipDescription="Outdent.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonInsertIndent" Id="2024"
+                     LabelTitle="Indent"
+                     LabelDescription="Indent"
+                     TooltipTitle="Indent"
+                     TooltipDescription="Indent">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonAlignLeft" Id="2025"
+                     LabelTitle="Left"
+                     LabelDescription="Align Left"
+                     TooltipTitle="Left"
+                     TooltipDescription="Align Left.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/text_align_left.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/text_align_left.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonAlignRight" Id="2026"
+                     LabelTitle="Right"
+                     LabelDescription="Align Right"
+                     TooltipTitle="Right"
+                     TooltipDescription="Align Right.">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/text_align_right.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/text_align_right.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonAlignCenter" Id="2027"
+                     LabelTitle="Center"
+                     LabelDescription="Align Center"
+                     TooltipTitle="Center"
+                     TooltipDescription="Align Center">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/text_align_center.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/text_align_center.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonAlignFull" Id="2028"
+                     LabelTitle="Full"
+                     LabelDescription="Align Full"
+                     TooltipTitle="Align Full"
+                     TooltipDescription="Align Full">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/text_align_justified.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/text_align_justified.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdGroupDesignMode" Id="2040" LabelTitle="Control Mode" ></Command>
+        <Command Name="cmdDesignMode" Id="2041" LabelTitle="Design Mode" >
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/edit.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/edit.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+
+            <Command Name="cmdGroupInRibbonGallery" Id="2050" LabelTitle="View"></Command>
+        <Command Name="cmdGlyphsVariant" Id="2051" LabelTitle="Glyphs">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/TabControl.CodeView.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/TabControl.CodeView.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdGlyphVariantNone" Id="2052" LabelTitle="No Glyphs"></Command>
+        <Command Name="cmdGlyphVariantStandard" Id="2053" LabelTitle="Standard Glyphs"></Command>
+        <Command Name="cmdGlyphVariantColored" Id="2054" LabelTitle="Colored Glyphs"></Command>
+
+        <Command Name="cmdGlyphKind" Id="2055" LabelTitle="Glyph Kind">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/marker.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/marker.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdButtonViewSource" Id="2059" LabelTitle="View Source">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/code.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/code.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdGroupSearchReplace' Id='2060' LabelTitle='Edit'></Command>
+        <Command Name="cmdButtonSearch" Id="2061" LabelTitle="Search">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/find_text.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/find_text.bmp</Image>
+            </Command.SmallImages>
+            <Command.TooltipTitle>Search</Command.TooltipTitle>
+            <Command.TooltipDescription>
+                Search is implemented straight forward. You have some options controlled by parameters of the Find method.&#xA;&#xA;The call loops from last caret position or, if the document is freshly loaded, from the beginning. The words found are highlighted by inverse colors.
+            </Command.TooltipDescription>
+        </Command>
+        <Command Name="cmdButtonReplace" Id="2062" LabelTitle="Replace">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/replace.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/replace.bmp</Image>
+            </Command.SmallImages>
+            <Command.TooltipTitle>Replace</Command.TooltipTitle>
+            <Command.TooltipDescription>
+                Replace is implemented straight forward. You have some options controlled by parameters of the Replace method.&#xA;&#xA;The call loops from last caret position or, if the document is freshly loaded, from the beginning. The words found are highlighted by inverse colors.
+            </Command.TooltipDescription>
+        </Command>
+        <Command Name="cmdUndoRedo" Id="2100" LabelTitle="Undo / Redo"></Command>
+        <Command Name="cmdUndoStack" Id="2101" LabelTitle="Undo Stack"></Command>
+        <Command Name="cmdUndoStep" Id="2102" LabelTitle="Undo Last Step">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/undo.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/undo.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdRedoStep" Id="2103" LabelTitle="Redo Last Step">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/redo.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/redo.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdUndoAddPackedStack" Id="2104" LabelTitle="Create Packed Operation">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document_refresh.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document_refresh.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdTabInsert" Id="3000" LabelTitle="Insert" Keytip="I"></Command>
+        <Command Name="cmdGroupParagraphElements" Id="3001" LabelTitle="Paragraph Formatting"></Command>
+        <Command Name='cmdGroupInsertCommonElements' Id='3010' LabelTitle='Insert Elements'></Command>
+        <!-- ADD ELEMENTS -->
+        <Command Name='cmdGroupParagraphElementsHeader' LabelTitle='Format' Id='3012'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/form_blue_add.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/form_blue_add.bmp</Image>
+            </Command.SmallImages> 
+        </Command>
+        <Command Name='cmdGroupParagraphElementsPre' LabelTitle='PRE Element (Block)' Id='3013'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/form_blue.bmp</Image>
+            </Command.SmallImages>
+
+        </Command>
+        <Command Name='cmdGroupParagraphElementsCode' LabelTitle='CODE Element (Inline)' Id='3014'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/form_green.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdRemoveFormat' LabelTitle='Remove Block Format' Id='3015'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/form_blue_delete.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/form_blue_delete.bmp</Image>
+            </Command.SmallImages> 
+        </Command>
+ <Command Name='cmdRemoveInlineFormat' LabelTitle='Remove Inline Format' Id='3016'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/form_green_delete.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/form_green_delete.bmp</Image>
+            </Command.SmallImages> 
+        </Command>
+
+        <Command Name='cmdGroupInsertFormElements' Id='3020' LabelTitle='Form Elements'></Command>
+        <Command Name='cmdGroupInsertTable' Id='3030' LabelTitle='Table'></Command>
+        <Command Name='cmdInsertTABLE' Id='3031' LabelTitle='Insert Table'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdTabDisplay" Id="4000" LabelTitle="Display"></Command>
+        <Command Name='cmdHelplineTools' Id='4001' LabelTitle='Helpline Tools'></Command>
+        <Command Name='cmdTabHelpline' Id='4002' LabelTitle='HelpLine Options'></Command>
+        <Command Name='cmdGroupDisplayPositioningOptions' Id='4003' LabelTitle='Position Options'></Command>
+        <Command Name='cmdGroupRuler' LabelTitle='Display'></Command>
+        <Command Name='cmdRuler' Id='4004' LabelTitle='Show Ruler'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/drawing_utensils.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/drawing_utensils.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdGroupDisplayGrid' Id='4010' LabelTitle='Grid'></Command>
+        <Command Name='cmdGridShow' Id='4011' LabelTitle='Show Grid'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Grid.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Grid.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdGridSize' Id='4012' LabelTitle='Size' LabelDescription='The distance between grid lines'></Command>
+        <Command Name='cmdGridColor' Id='4013' LabelTitle='Color' LabelDescription='The color of all grid elements'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdGridStyle' Id='4014' LabelTitle='Style' LabelDescription='The style of the cross elements'></Command>
+
+        <Command Name='cmdPositionMultipleSelection' Id='4015' LabelTitle='Multiple Selection'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Multiselection.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Multiselection.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdGroupDisplayHelpline' Id='4019' LabelTitle='Helpline'></Command>
+        <Command Name='cmdHelpLine_A' Id='4020' LabelTitle='Helpline'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/HelpLine.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/HelpLine.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdHelpLineX_A' Id='4021' LabelTitle='X-Axis visible'></Command>
+        <Command Name='cmdHelpLineY_A' Id='4022' LabelTitle='Y-Axis visible'></Command>
+        <Command Name='cmdHelpLinePositionX_A' Id='4023' LabelTitle='Position X'></Command>
+        <Command Name='cmdHelpLinePositionY_A' Id='4024' LabelTitle='Position Y'></Command>
+        <Command Name='cmdHelpLineSnap_A' Id='4025' LabelTitle='Snap Elements to Line'></Command>
+        <Command Name='cmdHelpLineColor_A' Id='4026' LabelTitle='Line Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdHelpLineLineSize_A' Id='4027' LabelTitle='Line Width'></Command>
+        <Command Name='cmdHelpLineLineDash_A' Id='4028' LabelTitle='Line Dash Pattern'></Command>
+        <Command Name='cmdHelpLineSnapToGrid_A' Id='4029' LabelTitle='Snap Line to Grid'></Command>
+        <Command Name='cmdHelpLineSnapGridSize_A' Id='4030' LabelTitle='Grid Size'></Command>
+        <Command Name='cmdHelpLine_B' Id='4031' LabelTitle='Show Helpline B (predefined)'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/HelpLine.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/HelpLine.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdGroupDisplayPositioning' Id='4130' LabelTitle='Positioning'></Command>
+        <Command Name='cmdPositionAbsolute' Id='4131' LabelTitle='Absolute Positioning'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/2DPosition.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/2DPosition.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdPositionToFront' Id='4132' LabelTitle='Move Element to Front'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/front.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/front.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdPositionToBack' Id='4133' LabelTitle='Move Element to Back'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/back.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/back.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdGroupDisplayScrollbars' Id='4140' LabelTitle='Scrollbars'></Command>
+        <Command Name='cmdScrollbarColor' Id='4141' LabelTitle='Scrollbars Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarUp' Id='4142' LabelTitle='Scroll Up'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/arrow_up_blue.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/arrow_up_blue.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarDown' Id='4143' LabelTitle='Scroll Down'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/arrow_down_blue.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/arrow_down_blue.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarLeft' Id='4144' LabelTitle='Scroll Left'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/arrow_left_blue.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/arrow_left_blue.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarRight' Id='4145' LabelTitle='Scroll Right'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/arrow_right_blue.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/arrow_right_blue.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarsEnabled' Id='4146' LabelTitle='Scrollbar Enabled'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/scroll.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/scroll.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdScrollbarX' Id='4147' LabelTitle='Horizontal Pos.'></Command>
+        <Command Name='cmdScrollbarY' Id='4148' LabelTitle='Vertical Pos.'></Command>
+
+        <Command Name="cmdTabControl" Id="5000" LabelTitle="Control"></Command>
+        <Command Name='cmdGroupControlElementEvents' Id="5010" LabelTitle="Element Events"></Command>
+        <Command Name='cmdControlAttachEvent' Id='5011' LabelTitle='Attach Event'>
+            <Command.TooltipTitle>Attach the selected events to elements.</Command.TooltipTitle>
+            <Command.TooltipDescription>Using this command you can attach the elements select in the right most button to the events in the middle button. The buttons open menus with checkboxes. You can select as many events and elements as you like.&#xA;&#xA;Check event tips for more information.</Command.TooltipDescription>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/magic_wand.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/magic_wand.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdControlEventNames' LabelTitle='Events'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/magic_wand2.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/magic_wand2.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdControlElementNames' Id='5012' LabelTitle='Element Types'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/TabControl.CodeView.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/TabControl.CodeView.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdControlElementNameA' Id='5013' LabelTitle='Anchor A'></Command>
+        <Command Name='cmdControlElementNameIMG' Id='5014' LabelTitle='Image IMG'></Command>
+        <Command Name='cmdControlElementNameDIV' Id='5015' LabelTitle='Division DIV'></Command>
+        <Command Name='cmdControlElementNameBUTTON' Id='5016' LabelTitle='Button BUTTON'></Command>
+
+        <Command Name='cmdControlEventNamesGroupMouse' LabelTitle='Mouse Events' />
+        <Command Name='cmdControlEventNameClick' Id='5021' LabelTitle='Click' />
+        <Command Name='cmdControlEventNameDblClick' Id='5022' LabelTitle='Double Click' />
+        <Command Name='cmdControlEventNameMouseDown' Id='5023' LabelTitle='Down' />
+        <Command Name='cmdControlEventNameMouseEnter' Id='5024' LabelTitle='Enter' />
+        <Command Name='cmdControlEventNameMouseLeave' Id='5025' LabelTitle='Leave' />
+        <Command Name='cmdControlEventNameMouseOut' Id='5026' LabelTitle='Out' />
+        <Command Name='cmdControlEventNameMouseUp' Id='5027' LabelTitle='Up' />
+        <Command Name='cmdControlEventNameMouseWheel' Id='5028' LabelTitle='Wheel' />
+
+        <Command Name='cmdControlEventNamesGroupEdit' LabelTitle='Edit Events' />
+        <Command Name='cmdControlEventNameBeforeCut' Id='5029' LabelTitle='Before Cut' />
+        <Command Name='cmdControlEventNameCut' Id='5030' LabelTitle='Cut' />
+        <Command Name='cmdControlEventNameBeforeCopy' Id='5031' LabelTitle='Before Copy' />
+        <Command Name='cmdControlEventNameCopy' Id='5032' LabelTitle='Copy' />
+        <Command Name='cmdControlEventNameBeforePaste' Id='5033' LabelTitle='Before Paste' />
+        <Command Name='cmdControlEventNamePaste' Id='5034' LabelTitle='Paste' />
+
+        <Command Name='cmdControlEventNamesGroupResize' LabelTitle='Resize Events' />
+        <Command Name='cmdControlEventNameResize' Id='5035' LabelTitle='Resize' TooltipTitle='Resize Event' TooltipDescription='This event fires quite often an can decrease performance drastically. Use with caution.' />
+        <Command Name='cmdControlEventNameResizeEnd' Id='5036' LabelTitle='End' />
+        <Command Name='cmdControlEventNameResizeStart' Id='5037' LabelTitle='Start' />
+
+        <Command Name='cmdControlEventNamesGroupMove' LabelTitle='Move Events' />
+        <Command Name='cmdControlEventNameMove' Id='5038' LabelTitle='Move'  TooltipTitle='Move Event' TooltipDescription='This event fires quite often an can decrease performance drastically. Use with caution.'/>
+        <Command Name='cmdControlEventNameMoveEnd' Id='5039' LabelTitle='End' />
+        <Command Name='cmdControlEventNameMoveStart' Id='5040' LabelTitle='Start' />
+
+        <Command Name='cmdControlEventNamesGroupDrag' LabelTitle='Drag and Drop Events' />
+        <Command Name='cmdControlEventNameDrag' Id='5041' LabelTitle='Drag'  TooltipTitle='Drag Event' TooltipDescription='This event fires quite often an can decrease performance drastically. Use with caution.'/>
+        <Command Name='cmdControlEventNameDragEnd' Id='5042' LabelTitle='End' />
+        <Command Name='cmdControlEventNameDragEnter' Id='5043' LabelTitle='Enter' />
+        <Command Name='cmdControlEventNameDragLeave' Id='5044' LabelTitle='Leave' />
+        <Command Name='cmdControlEventNameDragStart' Id='5045' LabelTitle='Start' />
+        <Command Name='cmdControlEventNameDragOver' Id='5046' LabelTitle='Over'  TooltipTitle='Drag Over Event' TooltipDescription='This event fires quite often an can decrease performance drastically. Use with caution.'/>
+        <Command Name='cmdControlEventNameDrop' Id='5047' LabelTitle='Drop' />
+
+        <Command Name='cmdControlEventNamesGroupSelect' LabelTitle='Select Events' />
+        <Command Name='cmdControlEventNameControlSelect' Id='5048' LabelTitle='Control Select' />
+        <Command Name='cmdControlEventNameSelect' Id='5049' LabelTitle='Text Select' />
+        <Command Name='cmdControlEventNameSelectStart' Id='5050' LabelTitle='Select Start' />
+
+        <Command Name='cmdControlEventNamesGroupChange' LabelTitle='Change Events' />
+        <Command Name='cmdControlEventNameChange' Id='5051' LabelTitle='Change' />
+        <Command Name='cmdControlEventNameSelectionChange' Id='5052' LabelTitle='Selection Change' />
+
+        <Command Name='cmdControlEventNamesGroupFocus' LabelTitle='Focus Events' />
+        <Command Name='cmdControlEventNameFocus' Id='5053' LabelTitle='Focus' />
+        <Command Name='cmdControlEventNameFocusin' Id='5054' LabelTitle='In' />
+        <Command Name='cmdControlEventNameFocusout' Id='5055' LabelTitle='Out' />
+        <Command Name='cmdControlEventNameBlur' Id='5056' LabelTitle='Blur' />
+
+        <Command Name='cmdGroupControlBehavior' Id="5100" LabelTitle="Document Event Model"></Command>
+        <Command Name='cmdControlShowEvent' Id='5101' LabelTitle='Document Event Window'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/magic_wand.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/magic_wand.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdGroupControlDOM' Id="5200" LabelTitle="Document Object Model"></Command>
+        <Command Name="cmdControlToggleOutline" Id="5210" LabelTitle="Document Outline Window">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/text_tree.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/text_tree.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name="cmdTabText" Id="6000" LabelTitle="Text" Keytip="T"></Command>
+        <Command Name="cmdGroupTextHighlightText" Id="6010" LabelTitle="Hightlight Text"></Command>
+        <Command Name='cmdTextHighLightInvoke' Id="6011" LabelTitle="Hightlight Text">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/lightbulb_on.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/lightbulb_on.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTextHighLightColor' Id="6012" LabelTitle="Line Color">
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTextHighLightTextColor' Id="6013" LabelTitle="Text Fore Color">
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTextHighLightBackColor' Id="6014" LabelTitle="Text Background Color">
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdTextHighLightText' Id="6015" LabelTitle="Search for">
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/find_text.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTextHighLightPattern' Id="6016" LabelTitle="Line Pattern">
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/bookmark_blue.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdTextHighLightPatternColor" LabelTitle="Pattern Colors"></Command>
+        <Command Name='cmdTextHighLightRemove' Id="6017" LabelTitle="Remove Highlight">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/delete.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/delete.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTextHighLightPatternLineThrough' LabelTitle='Style Type Line Through' />
+        <Command Name='cmdTextHighLightPatternLineThroughSingle' Id='6151' LabelTitle='Single' />
+        <Command Name='cmdTextHighLightPatternLineThroughDouble' Id='6152' LabelTitle='Double' />
+        <Command Name='cmdTextHighLightPatternUnderline'  LabelTitle='Style Type Underline'/>
+        <Command Name='cmdTextHighLightPatternUnderLineDash' Id='6153' LabelTitle='Dash' />
+        <Command Name='cmdTextHighLightPatternUnderLineDotDash' Id='6154' LabelTitle='Dot Dash' />
+        <Command Name='cmdTextHighLightPatternUnderLineDotDotDash' Id='6155' LabelTitle='Dot Dot Dash'/>
+        <Command Name='cmdTextHighLightPatternUnderLineDotted' Id='6156' LabelTitle='Dotted'/>
+        <Command Name='cmdTextHighLightPatternUnderLineSingle' Id='6157' LabelTitle='Single'/>
+        <Command Name='cmdTextHighLightPatternUnderLineThick' Id='6158' LabelTitle='Thick'/>
+        <Command Name='cmdTextHighLightPatternUnderLineThickDash' Id='6159' LabelTitle='Thick Dash'/>
+        <Command Name='cmdTextHighLightPatternUnderLineWave' Id='6160' LabelTitle='Wave'/>
+        <Command Name='cmdTextHighLightPatternUnderLineWords' Id='6161' LabelTitle='Words'/>
+        <Command Name='cmdTextHighLightPatternUnderlineList' Id='6162' LabelTitle='Underline Styles' />
+
+        <Command Name='cmdGroupTextManipulateText' Id="6020" LabelTitle="Manipulate Text"></Command>
+        <Command Name="cmdTextManipulationAllLowercase" Id="6021" LabelTitle="Word Lower Case">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document_text.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document_text.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdTextManipulationAllUppercase" Id="6022" LabelTitle="Word Upper Case">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document_up.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document_up.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name="cmdTextManipulationUppercase" Id="6023" LabelTitle="Word Title Case">
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/document_preferences.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/document_preferences.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdGroupTextSelection' Id="6030" LabelTitle="Text Selection"></Command>
+        <Command Name='cmdGroupTextShowSelection' Id="6031" LabelTitle="Show Selection"></Command>
+        <Command Name='cmdGroupTextSelectWord' Id="6032" LabelTitle="Select Word"></Command>
+        <Command Name='cmdGroupTextSelectSentence' Id="6033" LabelTitle="Select Sentence"></Command>
+        <Command Name='cmdGroupTextSelectParagraph' Id="6034" LabelTitle="Select Paragraph"></Command>
+        <Command Name='cmdGroupTextSelectAll' Id="6035" LabelTitle="Select All"></Command>
+        
+        <Command Name='cmdGroupTextManipulatePointer' Id="6050" LabelTitle="Markup Pointer"></Command>
+
+        <Command Name="cmdTabStyles" Id="7000" LabelTitle="Styles" Keytip="S"></Command>
+        <Command Name='cmdGroupStyles' Id='7010' LabelTitle='Styles'></Command>
+        <Command Name='cmdStylesLinkedStylesEnabled' Id='7011' LabelTitle='Enable LINKed Stylesheet'></Command>
+        <Command Name='cmdStylesEditBodyStyle' Id='7012' LabelTitle='Edit Current Element Style'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Style.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Style.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdGroupStyleOptions' Id='7020' LabelTitle='Style Options'></Command>
+
+        <Command Name='cmdTabGroupTableTools' Id='8000' LabelTitle='Table Tools' Keytip='O'></Command>
+        <Command Name='cmdTabGroupTableAction' Id='8001' LabelTitle='Table Options'></Command>
+        <Command Name='cmdTabTableTool' Id='8002' LabelTitle='Table Commands'></Command>
+        <Command Name='cmdTabTableOptions' Id='8003' LabelTitle='Tabledesigner Options'></Command>
+        <Command Name='cmdTabGroupTableOptions' LabelTitle='Designer Behavior'></Command>
+        <Command Name='cmdTabGroupInsertOptions' Id='8004' LabelTitle='Insert Options'></Command>
+        <Command Name='cmdTabGroupTableSliderOptions' Id='8005' LabelTitle='Slider Options'></Command>
+        <Command Name='cmdTabGroupTableParameterOptions' LabelTitle='Designer Help'></Command>
+
+        <Command Name='cmdDeleteRow' Id='8100' LabelTitle='Delete Row'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.DeleteRow.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.DeleteRow.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdDeleteColumn' Id='8101' LabelTitle='Delete Column'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.DeleteColumn.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.DeleteColumn.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdInsertRow' Id='8102' LabelTitle='Insert Row'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.InsertRow.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.InsertRow.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdInsertColumn' Id='8103' LabelTitle='Insert Column'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.InsertColumn.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.InsertColumn.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdMergeCells' Id='8104' LabelTitle='Merge Cells'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.MergeCells.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.MergeCells.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdMergeDown' Id='8105' LabelTitle='Merge Down'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.MergeDown.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.MergeDown.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdMergeUp' Id='8106' LabelTitle='Merge Up'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.MergeUp.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.MergeUp.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdMergeLeft' Id='8107' LabelTitle='Merge Left'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.MergeLeft.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.MergeLeft.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdMergeRight' Id='8108' LabelTitle='Merge Right'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/Table.MergeRight.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/Table.MergeRight.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSplitCellHorizontal' Id='8109' LabelTitle='Split Cell Horizontally'></Command>
+        <Command Name='cmdSplitCellVertical' Id='8110' LabelTitle='Split Cell Verticall'></Command>
+        <Command Name='cmdTableInsertAfter' Id='8120' LabelTitle='Insert After Current Cell Position'></Command>
+
+        <Command Name='cmdTableSliderActive' Id='8121' LabelTitle='Activate Slider'></Command>
+        <Command Name='cmdTableSliderAddMode' Id='8122' LabelTitle='Slider Add Mode'></Command>
+        <Command Name='cmdTableSliderColor' Id='8127' LabelTitle='Slider Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdTableWithCellSelection' Id='8123' LabelTitle='Cell Selection'></Command>
+        <Command Name='cmdTableProcessTabKey' Id='8124' LabelTitle='Process TAB Key'></Command>
+        <Command Name='cmdTableStaticBehavior' Id='8125' LabelTitle='Static Behavior'></Command>
+        <Command Name='cmdTableAdvancedParameter' Id='8126' LabelTitle='Show Advanced Parameters'></Command>
+        <Command Name='cmdTableBorderColor' Id='8128' LabelTitle='Border Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdTableCellColor' Id='8129' LabelTitle='Cell Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+        <Command Name='cmdSpellerTools' Id='9000' LabelTitle='Spellchecker Tools'></Command>
+        <Command Name='cmdTabSpeller' Id='9001' LabelTitle='Spellchecker'></Command>
+        <Command Name='cmdSpellerGroupDictionary' Id='9002' LabelTitle='Dictionary'></Command>
+        <Command Name='cmdSpellerDictionary' Id='9020' LabelTitle='Language'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/flag_generic.bmp</Image>
+            </Command.SmallImages>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/flag_generic.bmp</Image>
+            </Command.LargeImages>
+        </Command>
+
+        <Command Name='cmdSpellerGroupOptions' Id='9003' LabelTitle='Options'></Command>
+        <Command Name='cmdSpellerIgnoreHtml' Id='9021' LabelTitle='Ignore HTML'></Command>
+        <Command Name='cmdSpellerIgnoreWordsWithDigits' Id='9022' LabelTitle='Ignore Words with Digits'></Command>
+        <Command Name='cmdSpellermaxSuggestionsCount' Id='9023' LabelTitle='Suggestions'></Command>
+        <Command Name='cmdSpellerignoreUpperCaseWords' Id='9024' LabelTitle='Ignore Upper Case'></Command>
+        <Command Name='cmdSpellerSuggestionEnum' Id='9025' LabelTitle='Suggestions Type'></Command>
+        <Command Name='cmdSpellerGroupHighlight' Id='9004' LabelTitle='Highlight Style'></Command>
+        <Command Name='cmdSpellerHighlightColor' Id='9030' LabelTitle='Color'>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/colors_rgb.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSpellerHighlightUnderlineStyle' Id='9031' LabelTitle='Style'></Command>
+        <Command Name='cmdSpellerCommands' Id='9005' LabelTitle='Spellchecker Commands'></Command>
+        <Command Name='cmdSpellerCommandBackground' Id='9050' LabelTitle='Run in Background'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/spellcheck.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/spellcheck.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSpellerCommandCheckWordStart' Id='9051' LabelTitle='Start Dialog'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/step_add.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/step_add.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSpellerCommandCheckWordStop' Id='9052' LabelTitle='Stop Dialog'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/step_delete.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/step_delete.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSpellerCommandRemoveHighlight' Id='9053' LabelTitle='Remove Highlight'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/clipboard_next_down.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/clipboard_next_down.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+        <Command Name='cmdSpellerCommandClearBuffer' Id='9054' LabelTitle='Clear Buffer'>
+            <Command.LargeImages>
+                <Image>Resources/Icons/32x32/clipboard_delete.bmp</Image>
+            </Command.LargeImages>
+            <Command.SmallImages>
+                <Image>Resources/Icons/16x16/clipboard_delete.bmp</Image>
+            </Command.SmallImages>
+        </Command>
+
+    </Application.Commands>
+    <Application.Views>
+        <Ribbon>
+            <Ribbon.ApplicationMenu>
+                <ApplicationMenu CommandName="cmdApplicationMenu">
+                    <ApplicationMenu.RecentItems>
+                        <RecentItems CommandName="cmdRecentFiles" EnablePinning="true" MaxCount="10"/>
+                    </ApplicationMenu.RecentItems>
+                    <MenuGroup>
+                        <Button CommandName='cmdButtonNew' />
+                        <Button CommandName='cmdButtonOpen' />
+                        <Button CommandName='cmdButtonSave' />
+                        <Button CommandName='cmdButtonPrint' />
+                    </MenuGroup>
+                    <MenuGroup>
+                        <Button CommandName='cmdButtonProperties' />
+                    </MenuGroup>
+                    <MenuGroup>
+                        <Button CommandName='cmdButtonExit' />
+                    </MenuGroup>
+                </ApplicationMenu>
+            </Ribbon.ApplicationMenu>
+
+            <Ribbon.QuickAccessToolbar>
+                <QuickAccessToolbar CommandName='cmdQAT' CustomizeCommandName='cmdCustomizeQAT'>
+                    <QuickAccessToolbar.ApplicationDefaults>
+                        <Button CommandName="cmdButtonNew" ApplicationDefaults.IsChecked="true" />
+                        <Button CommandName="cmdButtonOpen" ApplicationDefaults.IsChecked="false" />
+                        <Button CommandName="cmdButtonSave" ApplicationDefaults.IsChecked="true" />
+                        <Button CommandName="cmdButtonUndo" ApplicationDefaults.IsChecked="true" />
+                        <Button CommandName="cmdButtonRedo" ApplicationDefaults.IsChecked="true" />
+                    </QuickAccessToolbar.ApplicationDefaults>
+                </QuickAccessToolbar>
+            </Ribbon.QuickAccessToolbar>
+
+            <Ribbon.HelpButton>
+                <HelpButton CommandName="cmdHelp" />
+            </Ribbon.HelpButton>
+
+            <Ribbon.SizeDefinitions>
+                <SizeDefinition Name="ScrollbarLayout">
+                    <ControlNameMap>
+                        <ControlNameDefinition Name="buttonEnabled" />
+                        <ControlNameDefinition Name="buttonColor" />
+                        <ControlNameDefinition Name="buttonUp" />
+                        <ControlNameDefinition Name="buttonDown" />
+                        <ControlNameDefinition Name="buttonLeft" />
+                        <ControlNameDefinition Name="buttonRight" />
+                        <ControlNameDefinition Name="buttonX" />
+                        <ControlNameDefinition Name="buttonY" />
+                    </ControlNameMap>
+                    <GroupSizeDefinition Size="Large">
+                        <ControlSizeDefinition ControlName="buttonEnabled" IsLabelVisible="true" />
+                        <ControlSizeDefinition ControlName="buttonColor" IsLabelVisible="true" />
+                        <ColumnBreak/>
+                        <ControlSizeDefinition ControlName="buttonLeft" IsLabelVisible="false" />
+                        <ControlSizeDefinition ControlName="buttonUp" IsLabelVisible="false" />
+                        <ControlSizeDefinition ControlName="buttonDown" IsLabelVisible="false" />
+                        <ControlSizeDefinition ControlName="buttonRight" IsLabelVisible="false" />
+                        <ColumnBreak/>
+                        <Row>
+                            <ControlGroup>
+                                <ControlSizeDefinition ControlName="buttonX" IsLabelVisible="true" />
+                            </ControlGroup>
+                        </Row>
+                        <Row>
+                            <ControlGroup>
+                                <ControlSizeDefinition ControlName="buttonY" IsLabelVisible="true" />
+                            </ControlGroup>
+                        </Row>
+                    </GroupSizeDefinition>
+                </SizeDefinition>
+            </Ribbon.SizeDefinitions>
+
+            <Ribbon.Tabs>
+                <Tab CommandName="cmdTabEdit">
+                    <Tab.ScalingPolicy>
+                        <ScalingPolicy>
+                            <ScalingPolicy.IdealSizes>
+                                <Scale Group="cmdGroupClipboard" Size="Medium"/>
+                                <Scale Group="cmdGroupFont" Size="Large"/>
+                                <Scale Group="cmdGroupParagraph" Size="Large"/>
+                            </ScalingPolicy.IdealSizes>
+                            <Scale Group="cmdGroupClipboard" Size="Small"/>
+                            <Scale Group="cmdGroupClipboard" Size="Popup"/>
+                            <Scale Group="cmdGroupFont" Size="Medium"/>
+                            <Scale Group="cmdGroupFont" Size="Popup"/>
+                            <Scale Group="cmdGroupParagraph" Size="Popup"/>
+                        </ScalingPolicy>
+                    </Tab.ScalingPolicy>
+                    <Group CommandName="cmdHelpEditGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpEdit"></Button>
+                    </Group>
+                    <Group CommandName="cmdGroupDesignMode" SizeDefinition="OneButton">
+                        <ToggleButton CommandName="cmdDesignMode" />
+                    </Group>
+                    <Group CommandName="cmdGroupClipboard" SizeDefinition="FourButtons">
+                        <Button CommandName="cmdButtonPaste" />
+                        <Button CommandName="cmdButtonCut" />
+                        <Button CommandName="cmdButtonCopy" />
+                        <Button CommandName="cmdButtonPasteImage" />
+                    </Group>
+                    <Group CommandName="cmdGroupFont" SizeDefinition="OneFontControl">
+                        <FontControl CommandName="cmdFont" FontType="RichFont" />
+                    </Group>
+                    <Group CommandName="cmdGroupParagraph">
+                        <SizeDefinition>
+                            <ControlNameMap>
+                                <ControlNameDefinition Name="buttonAlignLeft"/>
+                                <ControlNameDefinition Name="buttonAlignRight"/>
+                                <ControlNameDefinition Name="buttonAlignCenter"/>
+                                <ControlNameDefinition Name="buttonAlignFull"/>
+                                <ControlNameDefinition Name="buttonAlignUL"/>
+                                <ControlNameDefinition Name="buttonAlignOL"/>
+                                <ControlNameDefinition Name="buttonAlignOut"/>
+                                <ControlNameDefinition Name="buttonAlignIn"/>
+                            </ControlNameMap>
+                            <GroupSizeDefinition Size="Large">
+                                <Row>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName="buttonAlignLeft"/>
+                                        <ControlSizeDefinition ControlName="buttonAlignRight"/>
+                                        <ControlSizeDefinition ControlName="buttonAlignCenter"/>
+                                        <ControlSizeDefinition ControlName="buttonAlignFull"/>
+                                    </ControlGroup>
+                                </Row>
+                                <Row>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName="buttonAlignUL"/>
+                                        <ControlSizeDefinition ControlName="buttonAlignOL"/>
+                                    </ControlGroup>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName="buttonAlignOut"/>
+                                        <ControlSizeDefinition ControlName="buttonAlignIn"/>
+                                    </ControlGroup>
+                                </Row>
+                            </GroupSizeDefinition>
+                        </SizeDefinition>
+                        <Button CommandName="cmdButtonAlignLeft" />
+                        <Button CommandName="cmdButtonAlignRight" />
+                        <Button CommandName="cmdButtonAlignCenter" />
+                        <Button CommandName="cmdButtonAlignFull" />
+                        <Button CommandName="cmdButtonInsertUL" />
+                        <Button CommandName="cmdButtonInsertOL" />
+                        <Button CommandName="cmdButtonInsertOutdent" />
+                        <Button CommandName="cmdButtonInsertIndent" />
+                    </Group>
+                    <Group CommandName="cmdGroupInRibbonGallery">
+                        <SizeDefinition>
+                            <ControlNameMap>
+                                <ControlNameDefinition Name="buttonSource"/>
+                                <ControlNameDefinition Name="buttonGlyphVariant"/>
+                                <ControlNameDefinition Name="buttonKind"/>
+                            </ControlNameMap>
+                            <GroupSizeDefinition Size="Large">
+                                <ControlSizeDefinition ControlName="buttonSource" ImageSize="Large" />
+                                <ColumnBreak />
+                                <Row>
+                                    <ControlSizeDefinition ControlName="buttonGlyphVariant"/>
+                                </Row>
+                                <Row>
+                                    <ControlSizeDefinition ControlName="buttonKind"/>
+                                </Row>
+                            </GroupSizeDefinition>
+                        </SizeDefinition>
+                        <ToggleButton CommandName="cmdButtonViewSource" />
+                        <SplitButtonGallery CommandName="cmdGlyphsVariant" 
+                                            TextPosition="Hide" Type="Commands" HasLargeItems="true">
+                            <Button CommandName="cmdGlyphVariantNone"></Button>
+                            <Button CommandName="cmdGlyphVariantStandard"></Button>
+                            <Button CommandName="cmdGlyphVariantColored"></Button>
+                        </SplitButtonGallery>
+                        <ComboBox CommandName="cmdGlyphKind" IsEditable="false" IsAutoCompleteEnabled="true" ResizeType="NoResize"></ComboBox>
+                    </Group>
+                    <Group CommandName='cmdGroupSearchReplace' SizeDefinition="TwoButtons">
+                        <Button CommandName="cmdButtonSearch" />
+                        <Button CommandName="cmdButtonReplace" />
+                    </Group>
+                    <Group CommandName="cmdUndoRedo" >
+                        <Button CommandName="cmdUndoStep" ></Button>
+                        <Button CommandName="cmdRedoStep" ></Button>
+                        <ComboBox CommandName="cmdUndoStack"  IsEditable='false' IsAutoCompleteEnabled='false' ResizeType='NoResize'></ComboBox>
+                        <Button CommandName="cmdUndoAddPackedStack" ></Button>
+                    </Group>
+                </Tab>
+                <Tab CommandName="cmdTabInsert">
+                    <Group CommandName="cmdHelpElementGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpElement"></Button>
+                    </Group>
+                    <Group CommandName="cmdGroupParagraphElements" SizeDefinition="ThreeButtons">
+                        <DropDownGallery CommandName='cmdGroupParagraphElementsHeader'
+                           TextPosition='Right' HasLargeItems='true' ItemHeight='32' ItemWidth='32'
+                           Type='Items'>
+                            <DropDownGallery.MenuLayout>
+                                <FlowMenuLayout Columns='1' Rows='6' Gripper='None' />
+                            </DropDownGallery.MenuLayout>
+                            <DropDownGallery.MenuGroups>
+                                <MenuGroup>
+                                    <Button CommandName='cmdGroupParagraphElementsPre' />
+                                    <Button CommandName='cmdGroupParagraphElementsCode' />
+                                </MenuGroup>
+                            </DropDownGallery.MenuGroups>
+                        </DropDownGallery>
+                        <Button CommandName='cmdRemoveFormat'></Button>
+                        <Button CommandName='cmdRemoveInlineFormat'></Button>
+                    </Group>
+                    <!--<Group CommandName='cmdGroupInsertCommonElements'>
+                    </Group>-->
+                    <Group CommandName='cmdGroupInsertTable' SizeDefinition='OneButton'>
+                        <Button CommandName="cmdInsertTABLE" />
+                    </Group>
+                </Tab>
+                <Tab CommandName="cmdTabDisplay">
+                    <Group CommandName="cmdHelpDisplayGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpDisplay"></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupDisplayGrid' >
+                        <SizeDefinition>
+                            <ControlNameMap>
+                                <ControlNameDefinition Name='buttonGridShow'/>
+                                <ControlNameDefinition Name='buttonGridSize'/>
+                                <ControlNameDefinition Name='buttonGridColor'/>
+                                <ControlNameDefinition Name='buttonGridStyle'/>
+                            </ControlNameMap>
+                            <GroupSizeDefinition Size='Large'>
+                                <ControlGroup>
+                                    <ControlSizeDefinition ControlName='buttonGridShow' ImageSize='Large'/>
+                                </ControlGroup>
+                                <ColumnBreak></ColumnBreak>
+                                <Row>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName='buttonGridSize'/>
+                                        <ControlSizeDefinition ControlName='buttonGridColor'/>
+                                    </ControlGroup>
+                                </Row>
+                                <Row>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName='buttonGridStyle'/>
+                                    </ControlGroup>
+                                </Row>
+                            </GroupSizeDefinition>
+                        </SizeDefinition>
+                        <ToggleButton CommandName='cmdGridShow'></ToggleButton>
+                        <Spinner CommandName='cmdGridSize'></Spinner>
+                        <DropDownColorPicker CommandName='cmdGridColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false' ></DropDownColorPicker>
+                        <ComboBox CommandName='cmdGridStyle' IsEditable='false' IsAutoCompleteEnabled='false' ResizeType='NoResize'></ComboBox>
+                    </Group>
+                    <Group CommandName='cmdGroupDisplayPositioning' SizeDefinition='ThreeButtons-OneBigAndTwoSmall'>
+                        <ToggleButton CommandName='cmdPositionAbsolute'></ToggleButton>
+                        <Button CommandName='cmdPositionToFront'></Button>
+                        <Button CommandName='cmdPositionToBack'></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupDisplayPositioningOptions' SizeDefinition='OneButton'>
+                        <ToggleButton CommandName='cmdPositionMultipleSelection'></ToggleButton>
+                    </Group>
+                    <Group CommandName='cmdGroupDisplayScrollbars' SizeDefinition='ScrollbarLayout'>
+                        <ToggleButton CommandName='cmdScrollbarsEnabled'></ToggleButton>
+                        <DropDownColorPicker CommandName='cmdScrollbarColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                        <Button CommandName='cmdScrollbarLeft'></Button>
+                        <Button CommandName='cmdScrollbarUp'></Button>
+                        <Button CommandName='cmdScrollbarDown'></Button>
+                        <Button CommandName='cmdScrollbarRight'></Button>
+                        <Spinner CommandName='cmdScrollbarX' ></Spinner>
+                        <Spinner CommandName='cmdScrollbarY' ></Spinner>
+                    </Group>
+                </Tab>
+                <Tab CommandName="cmdTabControl">
+                    <Group CommandName="cmdHelpControlGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpControl"></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupControlElementEvents' SizeDefinition='ThreeButtons-OneBigAndTwoSmall'>
+                        <ToggleButton CommandName='cmdControlAttachEvent'></ToggleButton>
+                        <DropDownButton CommandName='cmdControlEventNames'>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupMouse'>
+                                <CheckBox CommandName='cmdControlEventNameClick' />
+                                <CheckBox CommandName='cmdControlEventNameDblClick' />
+                                <CheckBox CommandName='cmdControlEventNameMouseDown' />
+                                <CheckBox CommandName='cmdControlEventNameMouseEnter' />
+                                <CheckBox CommandName='cmdControlEventNameMouseLeave' />
+                                <CheckBox CommandName='cmdControlEventNameMouseOut' />
+                                <CheckBox CommandName='cmdControlEventNameMouseUp' />
+                                <CheckBox CommandName='cmdControlEventNameMouseWheel' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupEdit'>
+                                <CheckBox CommandName='cmdControlEventNameBeforeCut' />
+                                <CheckBox CommandName='cmdControlEventNameCut' />
+                                <CheckBox CommandName='cmdControlEventNameBeforeCopy' />
+                                <CheckBox CommandName='cmdControlEventNameCopy' />
+                                <CheckBox CommandName='cmdControlEventNameBeforePaste' />
+                                <CheckBox CommandName='cmdControlEventNamePaste' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupResize'>
+                                <CheckBox CommandName='cmdControlEventNameResize' />
+                                <CheckBox CommandName='cmdControlEventNameResizeEnd' />
+                                <CheckBox CommandName='cmdControlEventNameResizeStart' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupMove'>
+                                <CheckBox CommandName='cmdControlEventNameMove' />
+                                <CheckBox CommandName='cmdControlEventNameMoveEnd' />
+                                <CheckBox CommandName='cmdControlEventNameMoveStart' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupDrag'>
+                                <CheckBox CommandName='cmdControlEventNameDrag' />
+                                <CheckBox CommandName='cmdControlEventNameDragEnd' />
+                                <CheckBox CommandName='cmdControlEventNameDragEnter' />
+                                <CheckBox CommandName='cmdControlEventNameDragLeave' />
+                                <CheckBox CommandName='cmdControlEventNameDragStart' />
+                                <CheckBox CommandName='cmdControlEventNameDragOver' />
+                                <CheckBox CommandName='cmdControlEventNameDrop' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupSelect'>
+                                <CheckBox CommandName='cmdControlEventNameControlSelect' />
+                                <CheckBox CommandName='cmdControlEventNameSelect' />
+                                <CheckBox CommandName='cmdControlEventNameSelectStart' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupChange'>
+                                <CheckBox CommandName='cmdControlEventNameChange' />
+                                <CheckBox CommandName='cmdControlEventNameSelectionChange' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdControlEventNamesGroupFocus'>
+                                <CheckBox CommandName='cmdControlEventNameFocus' />
+                                <CheckBox CommandName='cmdControlEventNameFocusin' />
+                                <CheckBox CommandName='cmdControlEventNameFocusout' />
+                                <CheckBox CommandName='cmdControlEventNameBlur' />
+                            </MenuGroup>
+                        </DropDownButton>
+                        <DropDownButton CommandName='cmdControlElementNames'>
+                            <CheckBox CommandName='cmdControlElementNameA'></CheckBox>
+                            <CheckBox CommandName='cmdControlElementNameIMG'></CheckBox>
+                            <CheckBox CommandName='cmdControlElementNameDIV'></CheckBox>
+                            <CheckBox CommandName='cmdControlElementNameBUTTON'></CheckBox>
+                        </DropDownButton>
+                    </Group>
+                    <Group CommandName='cmdGroupControlDOM' SizeDefinition='OneButton'>
+                        <ToggleButton CommandName='cmdControlToggleOutline'></ToggleButton>
+                    </Group>
+                    <Group CommandName='cmdGroupControlBehavior' SizeDefinition='OneButton'>
+                        <ToggleButton CommandName='cmdControlShowEvent'></ToggleButton>
+                    </Group>
+                </Tab>
+                <Tab CommandName="cmdTabText">
+                    <Group CommandName="cmdHelpTextGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpText"></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupTextHighlightText'>
+                        <SizeDefinition>
+                            <ControlNameMap>
+                                <ControlNameDefinition Name='buttonHighLightInvoke'/>
+                                <ControlNameDefinition Name='buttonHighLightRemove'/>
+                                <ControlNameDefinition Name='buttonHighLightText'/>
+                                <ControlNameDefinition Name='buttonHighLightPattern'/>
+                            </ControlNameMap>
+                            <GroupSizeDefinition>
+                                <ControlSizeDefinition ControlName='buttonHighLightInvoke'/>
+                                <ControlSizeDefinition ControlName='buttonHighLightRemove'/>
+                                <ColumnBreak />
+                                <Row>
+                                    <ControlSizeDefinition ControlName='buttonHighLightPattern'/>
+                                </Row>
+                                <Row>
+                                    <ControlSizeDefinition ControlName='buttonHighLightText'/>
+                                </Row>
+                            </GroupSizeDefinition>
+                        </SizeDefinition>
+                        <Button CommandName='cmdTextHighLightInvoke'></Button>
+                        <Button CommandName='cmdTextHighLightRemove'></Button>
+                        <ComboBox CommandName='cmdTextHighLightText' IsAutoCompleteEnabled='true' IsEditable='true' ResizeType='VerticalResize'></ComboBox>
+                        <DropDownButton CommandName='cmdTextHighLightPattern'>
+                            <MenuGroup CommandName='cmdTextHighLightPatternColor'>
+                                <DropDownColorPicker CommandName='cmdTextHighLightColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false' ></DropDownColorPicker>
+                                <DropDownColorPicker CommandName='cmdTextHighLightTextColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false' ></DropDownColorPicker>
+                                <DropDownColorPicker CommandName='cmdTextHighLightBackColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false' ></DropDownColorPicker>
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdTextHighLightPatternLineThrough'>
+                                <CheckBox CommandName='cmdTextHighLightPatternLineThroughSingle' />
+                                <CheckBox CommandName='cmdTextHighLightPatternLineThroughDouble' />
+                            </MenuGroup>
+                            <MenuGroup CommandName='cmdTextHighLightPatternUnderline'>
+                                <DropDownButton  CommandName='cmdTextHighLightPatternUnderlineList'>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineDash' />
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineDotDash' />
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineDotDotDash'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineDotted'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineSingle'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineThick'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineThickDash'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineWave'/>
+                                    <CheckBox CommandName='cmdTextHighLightPatternUnderLineWords'/>
+                                </DropDownButton>
+                            </MenuGroup>
+                        </DropDownButton>
+                    </Group>
+                    <Group CommandName='cmdGroupTextManipulateText' SizeDefinition='ThreeButtons'>
+                        <Button CommandName="cmdTextManipulationAllLowercase"></Button>
+                        <Button CommandName="cmdTextManipulationAllUppercase"></Button>
+                        <Button CommandName="cmdTextManipulationUppercase"></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupTextSelection' SizeDefinition='FiveButtons'>
+                        <Button CommandName='cmdGroupTextShowSelection' ></Button>
+                        <Button CommandName='cmdGroupTextSelectWord' ></Button>
+                        <Button CommandName='cmdGroupTextSelectSentence' ></Button>
+                        <Button CommandName='cmdGroupTextSelectParagraph' ></Button>
+                        <Button CommandName='cmdGroupTextSelectAll' ></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupTextManipulatePointer'>
+
+                    </Group>
+                </Tab>
+                <Tab CommandName="cmdTabStyles">
+                    <Group CommandName="cmdHelpStylesGroup" SizeDefinition="OneButton">
+                        <Button CommandName="cmdHelpStyles"></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupStyles'>
+                        <ToggleButton CommandName='cmdStylesLinkedStylesEnabled'></ToggleButton>
+                        <Button CommandName='cmdStylesEditBodyStyle'></Button>
+                    </Group>
+                    <Group CommandName='cmdGroupStyleOptions'>
+
+                    </Group>
+                </Tab>
+            </Ribbon.Tabs>
+
+            <Ribbon.ContextualTabs>
+                <TabGroup CommandName='cmdTabGroupTableTools'>
+                    <Tab CommandName='cmdTabTableTool'>
+                        <Group CommandName="cmdHelpTableEditorGroup" SizeDefinition="OneButton">
+                            <Button CommandName="cmdHelpTableEditor"></Button>
+                        </Group>
+                        <Group CommandName='cmdTabGroupTableAction' SizeDefinition='ElevenButtons'>
+                            <!-- TODO: Group and Add Split Button -->
+                            <Button CommandName='cmdDeleteRow'></Button>
+                            <Button CommandName='cmdDeleteColumn'></Button>
+                            <Button CommandName='cmdInsertRow'></Button>
+                            <Button CommandName='cmdInsertColumn'></Button>
+                            <Button CommandName='cmdMergeCells'></Button>
+                            <Button CommandName='cmdMergeDown'></Button>
+                            <Button CommandName='cmdMergeUp'></Button>
+                            <Button CommandName='cmdMergeLeft'></Button>
+                            <Button CommandName='cmdMergeRight'></Button>
+                            <Button CommandName='cmdSplitCellHorizontal'></Button>
+                            <Button CommandName='cmdSplitCellVertical'></Button>
+                        </Group>
+                        <Group CommandName='cmdTabGroupInsertOptions'>
+                            <CheckBox CommandName='cmdTableInsertAfter'></CheckBox>
+                        </Group>
+                    </Tab>
+                    <Tab CommandName='cmdTabTableOptions'>
+                        <Group CommandName="cmdHelpTableOptionsGroup" SizeDefinition="OneButton">
+                            <Button CommandName="cmdHelpTableOptions"></Button>
+                        </Group>
+                        <Group CommandName='cmdTabGroupTableOptions'>
+                            <SizeDefinition>
+                                <ControlNameMap>
+                                    <ControlNameDefinition Name='buttonTableProcessTabKey' />
+                                    <ControlNameDefinition Name='buttonTableStaticBehavior' />
+                                    <ControlNameDefinition Name='buttonTableBorderColor' />
+                                    <ControlNameDefinition Name='buttonTableCellColor'/>
+                                </ControlNameMap>
+                                <GroupSizeDefinition>
+                                    <Row>
+                                        <ControlSizeDefinition ControlName='buttonTableBorderColor'/>
+                                        <ControlSizeDefinition ControlName='buttonTableCellColor'/>
+                                    </Row>
+                                    <Row>
+                                        <ControlSizeDefinition ControlName='buttonTableProcessTabKey'/>
+                                        <ControlSizeDefinition ControlName='buttonTableStaticBehavior'/>
+                                    </Row>
+                                </GroupSizeDefinition>
+                            </SizeDefinition>
+                            <CheckBox CommandName='cmdTableProcessTabKey'></CheckBox>
+                            <CheckBox CommandName='cmdTableStaticBehavior'></CheckBox>
+                            <DropDownColorPicker CommandName='cmdTableBorderColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                            <DropDownColorPicker CommandName='cmdTableCellColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                        </Group>
+                        <Group CommandName='cmdTabGroupTableParameterOptions'>
+                            <CheckBox CommandName='cmdTableWithCellSelection'></CheckBox>
+                            <CheckBox CommandName='cmdTableAdvancedParameter'></CheckBox>
+                        </Group>
+                        <Group CommandName='cmdTabGroupTableSliderOptions'>
+                            <CheckBox CommandName='cmdTableSliderActive'></CheckBox>
+                            <CheckBox CommandName='cmdTableSliderAddMode'></CheckBox>
+                            <DropDownColorPicker CommandName='cmdTableSliderColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                        </Group>
+                    </Tab>
+                </TabGroup>
+                <TabGroup CommandName='cmdHelplineTools'>
+                    <Tab CommandName='cmdTabHelpline'>
+                        <Group CommandName="cmdHelpHelplineGroup" SizeDefinition="OneButton">
+                            <Button CommandName="cmdHelpHelpline"></Button>
+                        </Group>
+                        <Group CommandName='cmdGroupDisplayHelpline' SizeDefinition='HelplineLayout'>
+                            <SizeDefinition>
+                                <ControlNameMap>
+                                    <ControlNameDefinition Name="buttonHelpLineA" />
+                                    <ControlNameDefinition Name="buttonHelpLineALineColor" />
+                                    <ControlNameDefinition Name="buttonHelpLineALineDash" />
+                                    <ControlNameDefinition Name="buttonHelpLineALineSize" />
+                                    <ControlNameDefinition Name="buttonHelpLineALineX" />
+                                    <ControlNameDefinition Name="buttonHelpLineALineY" />
+                                    <ControlNameDefinition Name="buttonHelpLineAPositionX" />
+                                    <ControlNameDefinition Name="buttonHelpLineAPositionY" />
+                                    <ControlNameDefinition Name="buttonHelpLineASnap" />
+                                    <ControlNameDefinition Name="buttonHelpLineASnapToGrid" />
+                                    <ControlNameDefinition Name="buttonHelpLineAGridSize" />
+                                    <ControlNameDefinition Name="buttonHelpLineB" />
+                                </ControlNameMap>
+                                <GroupSizeDefinition Size="Large">
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName="buttonHelpLineA" IsLabelVisible="true" ImageSize="Large" />
+                                    </ControlGroup>
+                                    <ColumnBreak/>
+                                    <Row>
+                                        <ControlGroup>
+                                            <ControlSizeDefinition ControlName="buttonHelpLineALineX" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineAPositionX" IsLabelVisible="true" />
+                                        </ControlGroup>
+                                        <ControlGroup>
+                                            <ControlSizeDefinition ControlName="buttonHelpLineALineColor" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineALineDash" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineALineSize" IsLabelVisible="true"/>
+                                        </ControlGroup>
+                                    </Row>
+                                    <Row>
+                                        <ControlGroup>
+                                            <ControlSizeDefinition ControlName="buttonHelpLineALineY" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineAPositionY" IsLabelVisible="true" />
+                                        </ControlGroup>
+                                        <ControlGroup>
+                                            <ControlSizeDefinition ControlName="buttonHelpLineASnap" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineASnapToGrid" IsLabelVisible="true" />
+                                            <ControlSizeDefinition ControlName="buttonHelpLineAGridSize" IsLabelVisible="true" />
+                                        </ControlGroup>
+                                    </Row>
+                                    <ColumnBreak/>
+                                    <ControlGroup>
+                                        <ControlSizeDefinition ControlName="buttonHelpLineB" IsLabelVisible="true" ImageSize="Large" />
+                                    </ControlGroup>
+                                </GroupSizeDefinition>
+                            </SizeDefinition>
+                            <!-- Block 1 -->
+                            <ToggleButton CommandName='cmdHelpLine_A'></ToggleButton>
+                            <!-- Block 2 Row A -->
+                            <CheckBox CommandName='cmdHelpLineX_A'></CheckBox>
+                            <Spinner CommandName='cmdHelpLinePositionX_A'></Spinner>
+                            <!-- Block 3 Row A -->
+                            <DropDownColorPicker CommandName='cmdHelpLineColor_A' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                            <ComboBox CommandName='cmdHelpLineLineDash_A' IsEditable='false' IsAutoCompleteEnabled='false' ResizeType='NoResize'></ComboBox>
+                            <Spinner CommandName='cmdHelpLineLineSize_A'></Spinner>
+                            <!-- Block 2 Row B -->
+                            <CheckBox CommandName='cmdHelpLineY_A'></CheckBox>
+                            <Spinner CommandName='cmdHelpLinePositionY_A'></Spinner>
+                            <!-- Block 3 Row B -->
+                            <CheckBox CommandName='cmdHelpLineSnap_A'></CheckBox>
+                            <CheckBox CommandName='cmdHelpLineSnapToGrid_A'></CheckBox>
+                            <Spinner CommandName='cmdHelpLineSnapGridSize_A'></Spinner>
+                            <!-- Block 4-->
+                            <ToggleButton CommandName='cmdHelpLine_B'></ToggleButton>
+                        </Group>
+                        <Group CommandName='cmdGroupDisplayPositioning' SizeDefinition='TwoButtons'>
+                            <ToggleButton CommandName='cmdPositionAbsolute'></ToggleButton>
+                            <ToggleButton CommandName='cmdGridShow'></ToggleButton>
+                        </Group>
+                        <Group CommandName='cmdGroupRuler' SizeDefinition='OneButton'>
+                            <ToggleButton CommandName='cmdRuler'></ToggleButton>
+                        </Group>
+                    </Tab>
+                </TabGroup>
+                <TabGroup CommandName='cmdSpellerTools'>
+                    <Tab CommandName='cmdTabSpeller'>
+                        <Group CommandName="cmdHelpSpellerGroup" SizeDefinition="OneButton">
+                            <Button CommandName="cmdHelpSpeller"></Button>
+                        </Group>
+                        <Group CommandName='cmdSpellerCommands' SizeDefinition='FiveButtons'>
+                            <ToggleButton CommandName='cmdSpellerCommandBackground'></ToggleButton>
+                            <Button CommandName='cmdSpellerCommandCheckWordStart'></Button>
+                            <Button CommandName='cmdSpellerCommandCheckWordStop'></Button>
+                            <Button CommandName='cmdSpellerCommandRemoveHighlight'></Button>
+                            <Button CommandName='cmdSpellerCommandClearBuffer'></Button>
+                        </Group>
+                        <Group CommandName='cmdSpellerGroupDictionary'>
+                            <DropDownGallery CommandName='cmdSpellerDictionary'>
+                                <DropDownGallery.MenuLayout>
+                                    <VerticalMenuLayout Rows='6' Gripper='None'></VerticalMenuLayout>
+                                </DropDownGallery.MenuLayout>
+                            </DropDownGallery>
+                        </Group>
+                        <Group CommandName='cmdSpellerGroupOptions'>
+                            <CheckBox CommandName='cmdSpellerIgnoreHtml'></CheckBox>
+                            <CheckBox CommandName='cmdSpellerIgnoreWordsWithDigits'></CheckBox>
+                            <Spinner CommandName='cmdSpellermaxSuggestionsCount'></Spinner>
+                            <CheckBox CommandName='cmdSpellerignoreUpperCaseWords'></CheckBox>
+                            <ComboBox CommandName='cmdSpellerSuggestionEnum'></ComboBox>
+                        </Group>
+                        <Group CommandName='cmdSpellerGroupHighlight'>
+                            <DropDownColorPicker CommandName='cmdSpellerHighlightColor' ColorTemplate='StandardColors'  IsAutomaticColorButtonVisible='false'></DropDownColorPicker>
+                            <ComboBox CommandName='cmdSpellerHighlightUnderlineStyle' IsEditable='false' IsAutoCompleteEnabled='false' ResizeType='NoResize'></ComboBox>
+                        </Group>
+                    </Tab>
+                </TabGroup>
+            </Ribbon.ContextualTabs>
+
+        </Ribbon>
+    </Application.Views>
+</Application>

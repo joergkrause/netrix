@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+        </style>
+	</head>
+	<body>
+	    <h1>Table Editor</h1>
+        <p>
+        The table editor supports all kind of table manipulation. Once activated, the user can move cell borders with the mouse and invoke
+        commands to split or merge cells, add or remove columns and rows. The table editor can mark several cells and invoke a command to
+        any of them.
+        </p>
+        <h1>
+            Insert a Table</h1>
+        <p>
+            To insert a table a dialog is appropriate. You can also create a default grid 
+            and let the user modify it later.</p>
+        <pre style="font-family: consolas"><span style="color: blue">private</span>&nbsp;<span 
+            style="color: #2b91af">InsertTable</span>&nbsp;tableDialog;
+ 
+<span style="color: blue">void</span>&nbsp;_buttonInsertTable_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;CALL&nbsp;Insert&nbsp;Dialog</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(tableDialog&nbsp;==&nbsp;<span style="color: blue">null</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tableDialog&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InsertTable</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(tableDialog.ShowDialog(<span 
+            style="color: blue">this</span>)&nbsp;==&nbsp;System.Windows.Forms.<span 
+            style="color: #2b91af">DialogResult</span>.OK)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;insert</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">IElement</span>&nbsp;newTable&nbsp;=&nbsp;EditorDocument.HtmlEditor.Document.InsertTable(tableDialog.Rows,&nbsp;tableDialog.Columns,&nbsp;<span 
+            style="color: #a31515">&quot;&quot;</span>,&nbsp;(<span style="color: blue">int</span>)tableDialog.BorderWidth.Value);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;and&nbsp;set&nbsp;more&nbsp;properties</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(newTable&nbsp;!=&nbsp;<span style="color: blue">null</span>&nbsp;&amp;&amp;&nbsp;newTable&nbsp;<span 
+            style="color: blue">is</span>&nbsp;<span style="color: #2b91af">TableElement</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">TableElement</span>)newTable).cellPadding&nbsp;=&nbsp;tableDialog.CellPadding;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">TableElement</span>)newTable).cellSpacing&nbsp;=&nbsp;tableDialog.CellSpacing;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>
+            Here the InsertTable method is used, which supports some predefined attributes. 
+            Evereything else can be set by using the freshly created object (newTable).</p>
+        <h1>Properties</h1>
+        <p>
+        Several properties apply in design mode only. They do not persist in the document. This is just to support a sophisticated design time
+        experience. In code, this looks like this:</p>
+        <pre style="font-family: consolas">EditorDocument.TableDesigner.GetTableDesigner(EditorDocument.HtmlEditor).CellSelectionColor&nbsp;=&nbsp;_colorpickerTableCellColor.Color;</pre>
+        <p>
+            The GetTableDesigner calls pulls the right property bag from the plug-in. All 
+            plug-ins are implemented as extender providers and hence the caller must take 
+            care to reference the current editor control.
+        </p>
+        <h1>Commands</h1>
+        <p>Commands are method calls exposed by a plug-in. For example, merge a cell to the 
+            one at thr right requires this call:</p>
+        <pre style="font-family: consolas">EditorDocument.HtmlEditor.InvokeCommand(EditorDocument.TableDesigner.Commands.MergeRight);</pre>
+        <p>Note that the call goes to the editor, but the command is read from the plug-in. 
+            The editor routes it to the right destination for invocation.</p>
+	</body>
+</html>

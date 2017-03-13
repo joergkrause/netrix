@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+    <Application.Commands>
+        <Command Name="cmdFileMenu"/>
+        <Command Name="cmdTab1">
+            <Command.LabelTitle>
+                <String Id ="200">Tab 1</String>
+            </Command.LabelTitle>
+        </Command>
+        <Command Name="cmdGroup1">
+            <Command.LabelTitle>
+                <String Id ="210">Group One</String>
+            </Command.LabelTitle>
+        </Command>
+        <Command Name="cmdbutton1">
+            <Command.LabelTitle>
+                <String Id ="220">Button 1</String>
+            </Command.LabelTitle>
+        </Command>
+        <Command Name="cmdQat"/>
+    </Application.Commands>
+    <Application.Views>
+        <Ribbon>
+            <Ribbon.ApplicationMenu>
+                <ApplicationMenu CommandName="cmdFileMenu">
+                </ApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <Ribbon.Tabs>
+                <Tab CommandName="cmdTab1">
+                    <Group CommandName="cmdGroup1" SizeDefinition="OneButton">
+                        <Button CommandName="cmdbutton1" />
+                    </Group>
+                </Tab>
+            </Ribbon.Tabs>
+            <Ribbon.QuickAccessToolbar>
+                <QuickAccessToolbar CommandName="cmdQat" />
+            </Ribbon.QuickAccessToolbar>
+        </Ribbon>
+    </Application.Views>
+</Application>

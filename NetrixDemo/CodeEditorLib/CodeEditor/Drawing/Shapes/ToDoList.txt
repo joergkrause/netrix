@@ -1,0 +1,16 @@
+ShapeArc
+OK-ShapePolygon
+OK-ShapeClosedCurve
+ShapePie(da finire)
+ShapeChord
+ShapeStar(da finire)
+ShapeText
+ShapeFrame
+ShapeCustom
+ShapeXml
+
+ShapeCollection
+
+IShapeContainer
+OK-IDrawable
+OK-IFillable

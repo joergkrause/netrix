@@ -1,0 +1,119 @@
+<HTML XMLNS:IE>
+<HEAD>
+<?IMPORT NAMESPACE="IE" IMPLEMENTATION="#default">
+<STYLE TYPE="text/css">
+.lorstyle
+{
+    width:5.5in;
+    height:8in;
+    margin:1in;
+    background:white;   
+    border:1 dashed gray;
+}
+.pagestyle
+{ 
+    background:white;
+    border-left:1 solid black;
+    border-top:1 solid black;
+    border-right:4 solid black;
+    border-bottom:4 solid black;
+    width:8.5in;
+    height:11in;
+    margin:10px;
+    overflow:hidden;
+}
+.headerstyle
+{
+    position:absolute;
+    top:.25in;
+    width:5.5in;
+    left:1in;
+}
+.footerstyle
+{
+    position:absolute;
+    top:10.5in;
+    width:5.5in;
+    left:1in;
+}
+</STYLE>
+<SCRIPT LANGUAGE="JScript">
+var iNextPageToCreate = 1;
+
+function AddFirstPage()
+{
+    newHTML  = "<IE:DEVICERECT ID='page1' MEDIA='print' CLASS='pagestyle'>";
+    newHTML += "<IE:LAYOUTRECT ID='layoutrect1' CONTENTSRC='document' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect2' CLASS='lorstyle'/>";
+    newHTML += "</IE:DEVICERECT>";
+
+    pagecontainer.insertAdjacentHTML("afterBegin", newHTML);
+
+    headfoot.textHead = printer.header;
+    headfoot.textFoot = printer.footer;
+    headfoot.url = dialogArguments.__IE_BrowseDocument.URL;
+    headfoot.title = dialogArguments.__IE_BrowseDocument.title;
+    headfoot.page = 1;
+    AddHeaderAndFooterToPage(1);
+
+    iNextPageToCreate = 2;
+}
+
+function OnRectComplete()
+{
+    if (event.contentOverflow == true)
+        AddNewPage();
+    else
+    {
+        headfoot.pageTotal = document.all.tags("DEVICERECT").length;
+        
+        for (i = 1; i <= headfoot.pageTotal; i++)
+            AddPageTotalToPages(i);
+    }
+}
+
+function AddNewPage()
+{
+    document.all("layoutrect" + (iNextPageToCreate - 1)).onlayoutcomplete = null;
+    headfoot.page = iNextPageToCreate;
+    
+    newHTML  = "<IE:DEVICERECT ID='page" + iNextPageToCreate +  "' MEDIA='print' CLASS='pagestyle'>";
+    newHTML += "<IE:LAYOUTRECT ID='layoutrect" + iNextPageToCreate + "' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect" + (iNextPageToCreate + 1) + "'  CLASS='lorstyle'/>";
+    newHTML += "</IE:DEVICERECT>";
+
+    pagecontainer.insertAdjacentHTML("beforeEnd", newHTML);
+    AddHeaderAndFooterToPage(iNextPageToCreate);
+    iNextPageToCreate++;
+}
+
+function AddHeaderAndFooterToPage(pageNum)
+{
+    newHeader = "<DIV CLASS='headerstyle'>" + headfoot.htmlHead + "</DIV>";
+    newFooter = "<DIV CLASS='footerstyle'>" +headfoot.htmlFoot + "</DIV>";
+    
+    document.all("page" + pageNum).insertAdjacentHTML("afterBegin", newHeader); 
+    document.all("page" + pageNum).insertAdjacentHTML("beforeEnd", newFooter);
+}
+
+function AddPageTotalToPages()
+{
+    oSpanCollection = document.all.tags("span");
+    for (i = 0; i < oSpanCollection.length; i++)
+    {
+        if (oSpanCollection[i].className == "hfPageTotal")
+            oSpanCollection[i].innerText = headfoot.pageTotal;
+    }
+}
+</SCRIPT>
+</HEAD>
+
+<BODY ONLOAD="AddFirstPage()">
+
+<IE:TEMPLATEPRINTER ID="printer"/>
+<IE:HEADERFOOTER ID="headfoot"/>
+
+<DIV ID="pagecontainer">
+<!-- Dynamically created pages go here. -->
+</DIV>
+
+</BODY>
+</HTML>

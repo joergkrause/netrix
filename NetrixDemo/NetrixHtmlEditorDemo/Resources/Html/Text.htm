@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+            .style1
+            {
+                text-decoration: underline;
+            }
+            .style2
+            {
+                font-family: "Courier New", Courier, monospace;
+            }
+        </style>
+	</head>
+	<body>
+	    <h1>Text</h1>
+        <p>
+        Netrix supports some advanced features to manipulate and highlight text.
+        </p>
+        <ul>
+            <li>Highlight text (words) by changing color, background, or add lines. All this does not use styles and 
+                <span class="style1">does not</span> change the document.</li>
+            <li>Manipulate text by characters, words, sentences, and paragraphs. This 
+                <span class="style1">changes</span> the documents's content.</li>
+            <li>Move the caret (insertion point) and the virtual pointers behind it (display and markup pointer)</li>
+        </ul>
+        <h2>Manipulate Text</h2>
+        <p>Using the TextSelector class you can easily manipulate text. The class supports 
+            several ways to deal with parts of text. Before start using it, you should 
+            understand the basic concepts.</p>
+        <p>First, there are two views onto a document: </p>
+        <ol>
+            <li>Content View</li>
+            <li>Display View</li>
+        </ol>
+        <p>The content view works with the real content. Moving to a character, for example, 
+            moves to a character as defined in the documents markup. In display view, the 
+            rendered text determines what and where the character is. While in content view 
+            there is no such concept such as a line break, in display view it is. Markup 
+            might force a line break (BR) but in display view virtual line breaks are added 
+            depending on the actual window size.</p>
+        <p>The most text manipulation operations work with the content view. Here we need 
+            ways to get and write text. To select text from a document, pointers are used. 
+            Instead of the caret, that points to a specific position and usually reflects 
+            mouse operations, a selection needs to points - an endpoint and a startpoint. 
+            Internally these pointers are called MarkupPointers and named FirstPointer and 
+            SecondPointer. </p>
+        <p>To deal with whatever is between pointers, a range can be defined. Operations 
+            such as highlighting work with ranges. A range is an active selection between 
+            pointers.</p>
+        <p>The following example shows a common function that changes the current word&#39;s 
+            case (in MS Word, use the Shift-F3 hotkey for same). </p>
+        <pre style="font-family: consolas"><span style="color: blue">private</span>&nbsp;<span 
+            style="color: blue">void</span>&nbsp;SetTextCase(<span style="color: blue">string</span>&nbsp;tocase)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">ITextSelector</span>&nbsp;ts&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextSelector;
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MovePointersToCaret();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveFirstPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevWordBegin);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevWordEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.NextWordEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">string</span>&nbsp;word&nbsp;=&nbsp;ts.GetTextBetweenPointers();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">switch</span>&nbsp;(tocase)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;upper&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;word&nbsp;=&nbsp;word.ToUpper();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">break</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;lower&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;word&nbsp;=&nbsp;word.ToLower();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">break</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;title&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;word&nbsp;=&nbsp;(word.Length&nbsp;&gt;&nbsp;0)&nbsp;?&nbsp;word[0].ToString().ToUpper()&nbsp;+&nbsp;word.Substring(1)&nbsp;:&nbsp;word;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">break</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;ts.SetTextBetweenPointers(word);
+}</pre>
+        <p>First, an instance of the TextSelector class is retrieved. Then, the pointers are 
+            both moved to the caret&#39;s position. Then, the pointers select the current word 
+            by being moved around. Then, the text is read. After some custom operation the 
+            text is written back to the pointers area. In this example there is no range 
+            used, because the text is changed immediately and not selected.</p>
+        <p>In spellchecker the same technique is used to move from one word to another and 
+            highlight it if not found in the dictionary.</p>
+        <h2>Highlight Text</h2>
+        <p>Here we highlight text using this code:</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_buttonTextHighLightInvoke_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;remove&nbsp;first,&nbsp;we&nbsp;can&nbsp;store&nbsp;one&nbsp;collection&nbsp;of&nbsp;pattern&nbsp;only</span>
+&nbsp;&nbsp;&nbsp;&nbsp;_buttonTextHighLightRemove_ExecuteEvent(sender,&nbsp;e);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;reset&nbsp;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;textHighlightSegments&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+            style="color: #2b91af">List</span>&lt;<span style="color: #2b91af">IHighLightSegment</span>&gt;();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;set&nbsp;properties</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">string</span>&nbsp;searchFor&nbsp;=&nbsp;_comboboxTextHighLightText.StringValue.Trim();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(<span style="color: #2b91af">String</span>.IsNullOrEmpty(searchFor))
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">MessageBox</span>.Show(<span style="color: blue">this</span>,&nbsp;<span 
+            style="color: #a31515">&quot;You&nbsp;cannot&nbsp;invoke&nbsp;this&nbsp;method&nbsp;because&nbsp;there&nbsp;is&nbsp;no&nbsp;text&nbsp;to&nbsp;look&nbsp;for.&quot;</span>,&nbsp;<span 
+            style="color: #a31515">&quot;Error&nbsp;Using&nbsp;Function&quot;</span>,&nbsp;<span 
+            style="color: #2b91af">MessageBoxButtons</span>.OK,&nbsp;<span 
+            style="color: #2b91af">MessageBoxIcon</span>.Error);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;search&nbsp;and&nbsp;highlight</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextSelector.SetHighLightStyle(currentStyle);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">while</span>&nbsp;(EditorDocument.HtmlEditor.TextSelector.FindTextBetweenPointers(searchFor,&nbsp;<span 
+            style="color: blue">false</span>,&nbsp;<span style="color: blue">false</span>,&nbsp;<span 
+            style="color: blue">true</span>))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextSelector.HighLightRange();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textHighlightSegments.Add(EditorDocument.HtmlEditor.TextSelector.LastSegment);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>The idea is to show user positions in the text without changing the markup. Each 
+            range found can be stored as a so-called Segment and this segment can be used to 
+            keep a list of selections and subsequently removing the highlights properly.</p>
+        <h2>Selection</h2>
+        <p>The selection option are based on three classes: HtmlSelection (to retrieve), 
+            HtmlFormatting (to invoke SelectAll method), and TextSelector (all more advanced 
+            options). In this example you can programmatically retrieve the current 
+            selection the user has made and set the selection to a word, sentence, 
+            paragraph, or whole document.&nbsp;The code for all these options is very 
+            straight forward (<span class="style2">ExecuteEvent</span> handler being invoked 
+            by the ribbon):</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_buttonGroupTextSelectAll_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.TextFormatting.SelectAll();
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonGroupTextSelectParagraph_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">ITextSelector</span>&nbsp;ts&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextSelector;
+&nbsp;&nbsp;&nbsp;&nbsp;ts.ResetRangePointers();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MovePointersToCaret();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveFirstPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevBlock);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.NextBlock);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.SelectPointerRange(<span style="color: blue">true</span>);
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonGroupTextSelectSentence_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">ITextSelector</span>&nbsp;ts&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextSelector;
+&nbsp;&nbsp;&nbsp;&nbsp;ts.ResetRangePointers();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MovePointersToCaret();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveFirstPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevSentence);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.NextSentence);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevClusterEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.SelectPointerRange(<span style="color: blue">true</span>);
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonGroupTextSelectWord_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">ITextSelector</span>&nbsp;ts&nbsp;=&nbsp;EditorDocument.HtmlEditor.TextSelector;
+&nbsp;&nbsp;&nbsp;&nbsp;ts.ResetRangePointers();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MovePointersToCaret();
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveFirstPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevWordBegin);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.PrevWordEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.MoveSecondPointer(<span style="color: #2b91af">MoveTextPointer</span>.NextWordEnd);
+&nbsp;&nbsp;&nbsp;&nbsp;ts.SelectPointerRange(<span style="color: blue">true</span>);
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonGroupTextShowSelection_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(EditorDocument.HtmlEditor.Selection.HasTextSelection)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">MessageBox</span>.Show(<span style="color: blue">this</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">String</span>.Format(<span 
+            style="color: #a31515">&quot;Current&nbsp;selection&nbsp;in&nbsp;the&nbsp;document&nbsp;is:\n\n{0}&quot;</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Selection.Text),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #a31515">&quot;Selection&quot;</span>,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">MessageBoxButtons</span>.OK);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>The <span class="style2" style="color: #2b91af">MoveTextPointer</span> enum 
+            gives the available options to move the pointers subsequently used to create the 
+            selection. The pointers mark the selection&#39;s boundaries, then. The select 
+            the exact boundaries of the text&#39;s fragment you&#39;re looking for it&#39;s often 
+            necessary to move the pointer twice. For example, to get the beginning of a 
+            word, the PrevXXX and NextXXX options would move away from the current word 
+            (because of the lack of a &quot;CurrentXXX&quot; option). Hence, you have to move to the 
+            word before and to the right position of the next word (which is the former 
+            &quot;current&quot; word), then. The word selection code shows exactly this.</p>
+        <h1>Exercise</h1>
+        <p>Add a search text, usually a word found one or more times in the document in the textbox on the ribbon. Set a line pattern you like. Click "Highlight Text", then.</p>
+        <p>For manipulate text operation, click a word and click a button, then.</p>
+        <p>For selection place cursor inside the text and click the options. To retrieve the 
+            selection, select a text fragment and click the button.</p>
+	</body>
+</html>

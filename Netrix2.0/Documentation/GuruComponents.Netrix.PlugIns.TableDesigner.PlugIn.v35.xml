@@ -1,0 +1,2860 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuruComponents.Netrix.PlugIns.TableDesigner.v40.Demo</name>
+    </assembly>
+    <members>
+        <member name="T:GuruComponents.Netrix.TableDesigner.BaseHighLightCell">
+            <summary>
+            The base class for highlighted cells. The highlighted collection contain objects derived from this type.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.BaseHighLightCell.Col">
+            <summary>
+            The column in which the cell resides. This property does not recognize span attributes. 
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.BaseHighLightCell.Row">
+            <summary>
+            The row in which the cell resides. This property does not recognize span attributes. 
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.BaseHighLightCell.GetHashCode">
+            <summary>
+            We need to override this because otherwise the collection will not operate correctly due
+            to the com interface which generates new hashes on each request.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior">
+            <summary>
+            Set cell background and border to mark highlighted cells during selection processes.
+            </summary>
+            <remarks>
+            This class cannot be inherited. The behavior can be controlled by setting the properties for background 
+            brush and border pen.
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior._cellBrush">
+            <summary>
+            The current brush used to draw the cell background.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior._borderPen">
+            <summary>
+            The current pen used to draw the cell border.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior.BorderPen">
+            <summary>
+            Set the border pen style for selected cells. Defaults to black, 2 pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior.CellBrush">
+            <summary>
+            Set the background style for selected cells. Defaults to a solid pink rectangle.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior.#ctor(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            The constructor used to build the highlight object.
+            </summary>
+            <remarks>
+            This constructor sets various defaults:
+            <list>
+                <item>CellBrush is set to <see cref="P:System.Drawing.Color.Pink"/></item>
+                <item>BorderPen is set to <see cref="T:System.Drawing.Pen"/> with Color.Black and a width of 2 pixels.</item>
+                <item>HtmlPaintFlag is set to TRANSPARENT</item>
+                <item>HtmlZOrderFlag is set to BELOW_CONTENT</item>
+                <item>BorderMargin is set to 0 on all borders.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCellBehavior.Draw(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            This method draws the cell background and border by using GDI+ function calls. 
+            </summary>
+            <remarks>
+            <para>
+            Not for implementors: This is a time critical method. To avoid perfomance flaws please do not insert
+            complex graphical operations here.
+            </para>
+            </remarks>
+            <param name="leftBounds"></param>
+            <param name="topBounds"></param>
+            <param name="rightBounds"></param>
+            <param name="bottomBounds"></param>
+            <param name="gr"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCellColor">
+            <summary>
+            Purpose of this class is provide highlight cell with specific brush and pen (for border).
+            Making the border the same color as the background the border is not visible. 
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCellColor.#ctor(System.Drawing.Color,System.Drawing.Color,GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell,GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Constructor, sets the base values for highlighting.
+            </summary>
+            <param name="HighLightColor">Background color</param>
+            <param name="HighLightBorderColor">Border color</param>
+            <param name="Cell">Cell to which the highlight should added</param>
+            <param name="htmlEditor"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCellComparer">
+            <summary>
+            This class sorts the ArrayList of highlighted cells first rowwise and second columnwise.
+            </summary>
+            <remarks>
+            If the cell code is r,c the order is 0,1; 0,2; 0,3; 1,1; 1,2; 1,3.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCellList">
+            <summary>
+            An overwritten version of ArrayList to provide additional cell access and
+            have a more type safe access.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCellList.Item(System.Int32,System.Int32)">
+            <summary>
+            Returns the cell at the specified position or null if no cell found.
+            This indexer is read only.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCellList.GetRowCollection(System.Int32)">
+            <summary>
+            Return all cells form a specified column.
+            </summary>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCellList.GetColCollection(System.Int32)">
+            <summary>
+            Return all cells from a specified row.
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCellList.ColumnIndices">
+            <summary>
+            Returns all column's indices which do have a cell in it.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCellList.RowIndices">
+            <summary>
+            Returns all row's indices which do have a cell in it.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCells">
+            <summary>
+            Purpose of this class is to provide highlight service for table cells. Each highlight action follows a
+            mouse action and sets a start and an end cell. The highlight area is between these two cells, if row or
+            column selection is used. To select a cell area each cell is separatly added to the collection and there
+            is no specific start and end cell.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.HighLightCells.m_Cells">
+            <summary>
+            Store of highlight cells.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.HighLightCells.m_Tab">
+            <summary>
+            The table the cell collection is from.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.AddHighLightCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Add a cell to the collection of highlighted cells.
+            </summary>
+            <param name="Cell">The base cell</param>
+            <returns>The highlighted cell</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.AddCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Method to add a new cell to the collection.
+            </summary>
+            <param name="Cell">The cell to add.</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.HighLightCells.HighLightCellCollection">
+            <summary>
+            Provide collection of highlight cells to methods doing something with the selection, like merging.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.GetFirstCell">
+            <summary>
+            Returns the first cell in the collection which is used to calculate "cell rectangles".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.RemoveHighLight">
+            <summary>
+            Remove highlight cells. This method removes the behavior and clears the stack completely.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.RemoveHighLight(System.Boolean)">
+            <summary>
+            Remove highlight cells and protect the first cell. This method removes the behavior and clears the stack completely.
+            </summary>
+            <param name="PreserveFirst"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.HighLightCells.HaveHighLightCells">
+            <summary>
+            If highlight cells present then return true or false else.
+            </summary>
+            <returns>Status of Highlighting</returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.HighLightCellFactory">
+            <summary>
+            Purpose of this class is create instance of highlighted cell for the table. It stores
+            the background color and the color of highlight border.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.ResizeBehavior">
+            <summary>
+            This class controls the table appearance during design time.
+            </summary>
+            <remarks>
+            It contains the draw method to draw the white background and
+            the solid border around the whole table. It also draw the activator icon in the upper left corner.
+            It has a predefined implementation of an advanced resizing technique. The default drawing conditions
+            are TRANSPARENT (does not change existing pixels) and BELOW_CONTENT (Content is dominant, all
+            drawings are behind the text/borders/images).
+            <para>As of version 1.0 the drawing style is hard coded. Future version may have a configuration option here.</para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ResizeBehavior.#ctor(GuruComponents.Netrix.TableDesigner.TableEditDesigner,GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Instantiates a new table designer behavior and sets some defaults.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ResizeBehavior.Name">
+            <summary>
+            The name of this behavior.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ResizeBehavior.EffectColor">
+            <summary>
+            Sets the table background color in design mode.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ResizeBehavior.Draw(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            The drawing method which produces the border and the background using GDI+. The parameters are the 
+            rectangle area which is currently drawn.
+            </summary>
+            <param name="leftBounds">Left border</param>
+            <param name="topBounds">Top border</param>
+            <param name="rightBounds">Right border</param>
+            <param name="bottomBounds">Bottom border</param>
+            <param name="gr">The graphics context object.</param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.ESizeType">
+            <summary>
+            Internally (in table designer) used enumaration to control the type of value for width and height attributes.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesignerBehavior">
+            <summary>
+            This class controls the table appearance during design time.
+            </summary>
+            <remarks>
+            It contains the draw method to draw the white background and
+            the solid border around the whole table. It also draw the activator icon in the upper left corner.
+            It has a predefined implementation of an advanced resizing technique. The default drawing conditions
+            are TRANSPARENT (does not change existing pixels) and BELOW_CONTENT (Content is dominant, all
+            drawings are behind the text/borders/images).
+            <para>As of version 1.0 the drawing style is hard coded. Future version may have a configuration option here.</para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerBehavior.#ctor(GuruComponents.Netrix.TableDesigner.TableEditDesigner,GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Instantiates a new table designer behavior and sets some defaults.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerBehavior.Name">
+            <summary>
+            The name of this behavior.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerBehavior.TableBackground">
+            <summary>
+            Sets the table background color in design mode.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerBehavior.Draw(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            The drawing method which produces the border and the background using GDI+. The parameters are the 
+            rectangle area which is currently drawn.
+            </summary>
+            <param name="leftBounds">Left border</param>
+            <param name="topBounds">Top border</param>
+            <param name="rightBounds">Right border</param>
+            <param name="bottomBounds">Bottom border</param>
+            <param name="gr">The graphics context object.</param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior">
+            <summary>
+            This class draws the line which helps the positioning of table sliders related to a ruler.
+            </summary>
+            <remarks>
+            The line also indicates that the slider is in slide state and will change cell width.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.#ctor(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Creates an instances of TableSliderLineBehavior.
+            </summary>
+            <remarks>
+            Sets default properties: brown line with 1px width, line style is dashed, and line appears above content.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.Name">
+            <summary>
+            Unique behavior name (constant).
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.LinePen">
+            <summary>
+            Sets a different Pen to draw the slider line.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.X">
+            <summary>
+            The X coordinate where the vertical line is drawn. Invalidate designer area if value changes.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.Y">
+            <summary>
+            The Y coordinate where the horizontal line is drawn. Invalidate designer area if value changes.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.IsVertical">
+            <summary>
+            Set true if vertical line is drawn, otherwise a horizontal line appears
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableSliderLineBehavior.Draw(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            Draw method which draws the line.
+            </summary>
+            <param name="leftBounds"></param>
+            <param name="topBounds"></param>
+            <param name="rightBounds"></param>
+            <param name="bottomBounds"></param>
+            <param name="gr"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.ITableFormatter">
+            <summary>
+            Represention of a table. Provides table operations like merge, split, delete, and add.
+            </summary>
+            <remarks>
+            The table formatter is a tool which manipulates the table's rows and columns in various 
+            ways. All commands supplied here are synchronous and change the table's DOM immediately.
+            All commands watch the table to hold it in well formed state. Supposedly one calls a method
+            which would result in wrong rendering the command is going to be ignored.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.TableInfo">
+            <summary>
+            Returns an object which contains internal information about the table layout.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.PrevCellPosition(GuruComponents.Netrix.WebEditing.Elements.TableCellElement)">
+            <summary>
+            Takes the current cell and set the caret to previous one. 
+            </summary>
+            <remarks>
+            The caret stops at first cell.
+            If the caret is in the first column and the current row is not the first one, the caret
+            jumps to the last cell of the previous row.
+            </remarks>
+            <returns>True, if successfull, false in case on error</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.NextCellPosition(GuruComponents.Netrix.WebEditing.Elements.TableCellElement)">
+            <summary>
+            Takes the current cell and set the caret to next possible cell. 
+            </summary>
+            <remarks>
+            If there is
+            no cell anymore, a new row is created and the caret is placed in the first column
+            of the new row.
+            </remarks>
+            <returns>True, if successfull, false in case on error</returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.Table">
+            <summary>
+            Get or set the table the formatter works with.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.RebuildTable(System.Int32,System.Int32)">
+            <summary>
+            Deletes the current table and creates a new one with the give parameters.
+            All content will be lost.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.RebuildTable(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Deletes the current table and creates a new one with the give parameters.
+            All content will be lost.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.RebuildTable(System.Int32,System.Int32,System.Int32,System.Web.UI.WebControls.Unit)">
+            <summary>
+            Deletes the current table and creates a new one with the give parameters.
+            All content will be lost.
+            </summary>
+            <param name="rows"></param>
+            <param name="cols"></param>
+            <param name="border"></param>
+            <param name="width"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanInsertTableRow">
+            <summary>
+            Inserting of a table is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanInsertTableColumn">
+            <summary>
+            Inserting of new column is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanDeleteTableRow">
+            <summary>
+            Deleting of Row is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanDeleteTableColumn">
+            <summary>
+            Deleting of column is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanMergeLeft">
+            <summary>
+            Left merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanMergeRight">
+            <summary>
+            Right merging is possible
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanMergeUp">
+            <summary>
+            Upwards merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanMergeCells">
+            <summary>
+            Determines whether the current cellstack is a rectangular are which can merge 
+            without destroying table structure.
+            </summary>
+            <remarks>
+            See class implementation 
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanMergeDown">
+            <summary>
+            Down merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanSplitHorizontal">
+            <summary>
+            Horizontal splitting is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CanSplitVertical">
+            <summary>
+            Vertical splitting is possible.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.AddCaption">
+            <summary>
+            Add the given caption element to the current table. If no caption exists it will be created.
+            </summary>
+            <returns>The new created <see cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement"/> object.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.RemoveCaption">
+            <summary>
+            Removes the caption element from the current table.
+            </summary>
+            <remarks>
+            Does nothing if no <see cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement"/> exists.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.DeleteTableRow">
+            <summary>
+            Delete the current row from the table.
+            </summary>
+            <remarks>
+            The current row is determined by the cell in which the user has placed the caret before the operation starts.
+            After the operation the caret is placed in the first cell of the previous row. If the first row is deleted
+            the caret is placed in the first cell of the first row.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.DeleteTableColumn">
+            <summary>
+            Deletes the current column from table.
+            </summary>
+            <remarks>
+            The current column is determined by the cell in which the user has placed the caret before the operation starts.
+            After the operation the caret is placed in the first cell of the previous column. If the first column is deleted
+            the caret is placed in the first cell of the first column.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.InsertTableRow">
+            <overloads>Inserts a new row after the current row.</overloads>
+            <summary>
+            Inserts a new row after the current row.
+            </summary>
+            <remarks>
+            <para>
+            The new row beeing inserted follows the structure of the current row. That means that any merged or splitted cells
+            will be merged or splitted in the new row too.
+            </para>
+            <para>
+            Inserting a new row can also be done by the TAB key. If the property 
+            <see cref="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.ProcessTABKey">ProcessTABKey</see> is on and
+            the user hits TAB in the last cell of the last row a new row will be inserted.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.InsertTableRow(System.Boolean)">
+            <summary>
+            Inserts a new row before or after the current row.
+            </summary>
+            <param name="After">Set this parameter to <c>false</c> to insert the row before the current one.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.InsertTableColumn">
+            <summary>
+            Insert a new column in the current table after the current column.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.InsertTableColumn(System.Boolean)">
+            <summary>
+            Insert a new column in the current table
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeLeft">
+            <summary>
+            Merge the current cell with the cell left of these.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeRight">
+            <summary>
+            Merge the current cell with the cell right of these.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeCells">
+            <overloads>Merge the currently selected cells.</overloads>
+            <summary>
+            Merge the currently selected cells and preserve the content.
+            </summary>
+            <remarks>
+            The merging works as expected only if the given cell collection is a rectangle. Otherwise the method
+            will do nothing. Needs at least two cells. The content of the merged cells be rewritten into the resulting cell.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeCells(System.Boolean)">
+            <summary>
+            Merge the currently selected cells. Controls content preservation by parameter.
+            </summary>
+            <param name="SaveCellContent">if True the content of the merged cells will be saved, otherwise deleted.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeUp">
+            <summary>
+            Merge the cell the caret is in with the cell above these.
+            </summary>
+            <remarks>
+            Does nothing if there is no cell above
+            the current one.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.MergeDown">
+            <summary>
+            Merge the cell the caret is in with the cell below these.
+            </summary>
+            <remarks>
+            Does nothing if there is no cell above
+            the current one.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.InsertCell">
+            <summary>
+            Inserts a cell in the current row right from the current cell.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.DeleteCell">
+            <summary>
+            Removes the selected Cell from the cell collection of the current row.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.SplitHorizontal">
+            <summary>
+            Split the cell where the caret is currently in.
+            </summary>
+            <remarks>
+            Does nothing if the caret is not inside a table.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableFormatter.SplitVertical">
+            <summary>
+            Split the current cell vertical.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableFormatter.CellCollection">
+            <summary>
+            Gets or sets the cells for actions which are based on cells, like <see cref="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeCells"/>.
+            </summary>
+            <remarks>
+            This property gets or sets cell collection, which must belong to the current table. If set
+            by user action the cells are highlighted, though, this option does not highlight the cells
+            but subsequent operations will operate on this collection like highlighted cells would be.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo">
+            <summary>
+            Gives information about the table layout and provides table manipulation methods.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.Table">
+            <summary>
+            Gives access to the underlaying table structure
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.AddCell(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Adds a cell to the specified row
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.Item(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the cell at given coordinates
+            </summary>
+            <param name="row">row index</param>
+            <param name="col">column index</param>
+            <returns>cell element</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.GetRowNumber">
+            <summary>
+            Total number of rows.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.GetColNumber(System.Int32)">
+            <summary>
+            Total number of cols in the given row.
+            </summary>
+            <param name="row">Row number to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.CellCollectionFromRow(System.Int32)">
+            <summary>
+            Returns the real cells of a specific row. This method behaves on the
+            real number of cells, which is sometimes smaller than the absolute number 
+            due to rowspan attributes in previous rows.
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.CellCollectionFromCol(System.Int32)">
+            <summary>
+            Returns the real cells of a specific column. This method behaves on the
+            real number of cells, which is sometimes smaller than the absolute number 
+            due to colspan attributes in previous rows.
+            </summary>
+            <param name="col">Column from which the collection is retrieved.</param>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.Cells">
+            <summary>
+            Cell collection to be used elsewhere.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.GetCellPoint(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell,System.Int32@,System.Int32@)">
+            <summary>
+            Returns the coordinates of a given cell element
+            </summary>
+            <param name="cell">Cell element to check</param>
+            <param name="row">row index</param>
+            <param name="col">column index</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.ITableLayoutInfo.ToString">
+            <summary>
+            Returns a string representation of the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.ResizeModeEnum">
+            <summary>
+            Currently used resize mode, e.g. the direction of handle the user is moving.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.ResizeModeEnum.None">
+            <summary>
+            No resizing
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.ResizeModeEnum.WE">
+            <summary>
+            West East. Handle: middle right border.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.ResizeModeEnum.NS">
+            <summary>
+            North South. Handle: middle bottom border.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.ResizeModeEnum.NWSE">
+            <summary>
+            Diagonal, from North West to South East. Handle: lower right corner.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableCommands">
+            <summary>
+            Zusammenfassung für TableCommands.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableCommands.CommandGroup">
+            <summary>
+            Designer support: Returns command group for this plugin.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.AddCaption">
+            <summary>
+            Add caption to table.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.RemoveCaption">
+            <summary>
+            Remove caption.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.DeleteTableRow">
+            <summary>
+            Delete current row.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.DeleteTableColumn">
+            <summary>
+            Delete current column.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.InsertTableRow">
+            <summary>
+            Insert row before current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.InsertTableRowAfter">
+            <summary>
+            Insert row after current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.InsertTableColumn">
+            <summary>
+            Insert column before current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.InsertTableColumnAfter">
+            <summary>
+            Insert columns after current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeLeft">
+            <summary>
+            Merge current cell with left one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeRight">
+            <summary>
+            Merge current cell with right one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeCells">
+            <summary>
+            Merge selected cells.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeCellsPreserveContent">
+            <summary>
+            Merge selected cells and preserve content.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeUp">
+            <summary>
+            Merge current cell with up one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.MergeDown">
+            <summary>
+            Merge current cell with down one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.InsertCell">
+            <summary>
+            Insert cell right of current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.DeleteCell">
+            <summary>
+            Delete current cell.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.SplitHorizontal">
+            <summary>
+            Split cells horizontally.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.SplitVertical">
+            <summary>
+            Split cells vertically.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.AddBehaviors">
+            <summary>
+            Add default behaviors to current table.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.RemoveBehaviors">
+            <summary>
+            Remove default behaviors from current table.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.Activate">
+            <summary>
+            Activate the designer globally.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableCommands.DeActivate">
+            <summary>
+            Deactivate the designer globally.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesigner">
+            <summary>
+            The TableDesigner Extender Provider.
+            </summary>
+            <remarks>
+            The TableDesigner plug-in provides advanced designer features in interactive as well as programmatic mode.
+            To activate the designer add the component from toolbox to your form and view the properties in the
+            Property Grid. 
+            <para>
+            In case you want or need set the properties directly, without the VS.NET designer, the following code shows the basic way:
+            <code>
+            this.tableDesigner1 = new GuruComponents.Netrix.TableDesigner.TableDesigner(this.components);
+            TableDesignerProperties tp = new TableDesignerProperties();
+            tp.Active = true;
+            tp.ProcessTABKey = true;
+            tp.SliderActivated = false;
+            tp.SliderAddMode = false;
+            tp.TableBackground = Color.Empty;
+            tp.StaticBehavior = true;
+            tp.WithCellSelection = false;
+            tp.TableBorder = new TableDesignerProperties.TableBorderBehavior(Color.Gray, 1, System.Drawing.Drawing2D.DashStyle.Solid);
+            tp.CellBorder = new TableDesignerProperties.CellBorderBehavior(Color.Silver, 1, System.Drawing.Drawing2D.DashStyle.Dot);
+            this.tableDesigner1.SetTableDesigner(htmlEditor, tp);
+            </code>
+            To get more information about the properties, watch the <see cref="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties"/> class. Instead of using the
+            property bag at runtime you can also call the several Set-Methods available in this class to set the values. All settings
+            have immediate effect on the current table and effect other tables once the screen refresh requires a redraw.
+            </para>
+            The table designer has two basic features:
+            <list type="bullet">
+                <item>Editing tables interactively, by user using the mouse or key.</item>
+                <item>Editing tables programmatically, by sending commands to the TableDesigner plugin.</item>
+            </list>
+            In both usage scenarios it's recommended to add a few basic features to your editor project:
+            <example>
+            Activating the editor and making tables visible by using build-in functionality:
+            <code>
+            this.htmlEditor.InvokeCommand(this.tableDesigner1.Commands.Activate);
+            this.htmlEditor.InvokeCommand(this.tableDesigner1.Commands.AddBehaviors);
+            this.htmlEditor.BordersVisible = false;
+            this.tableDesigner1.TableBecomesInactive -= new GuruComponents.Netrix.TableDesigner.TableEventBecomesInactiveHandler(this.tableDesigner1_TableBecomesInactive);
+            this.tableDesigner1.TableBecomesActive -= new GuruComponents.Netrix.TableDesigner.TableEventBecomesActiveHandler(this.tableDesigner1_TableBecomesActive);
+            this.tableDesigner1.TableBecomesInactive += new GuruComponents.Netrix.TableDesigner.TableEventBecomesInactiveHandler(this.tableDesigner1_TableBecomesInactive);
+            this.tableDesigner1.TableBecomesActive += new GuruComponents.Netrix.TableDesigner.TableEventBecomesActiveHandler(this.tableDesigner1_TableBecomesActive);
+            </code>
+            The commands invokes first activate the designer and the build-in border behavior makes the tables visible, even with no borders.
+            Then, the internal (default) table border feature of the NetRix control is switched off. Otherwise both borders will overlap,
+            which is usually not very helpful.
+            Finally, two events being attached to interact with the table designer. The handler usually activate/deactive tools, menu items
+            or dialogs used to invoke table related commands. If the user clicks a menu item or tool, you need to invoke a command to 
+            perform the required action against a table:
+            <code>
+            this.htmlEditor.InvokeCommand(this.tableDesigner1.Commands.InsertTableRowAfter);
+            </code>
+            Invoking commands is done via the NetRix editor, which holds the current table. That way we support multiple editors on a
+            form with one instance of the table designer only. The commands collection contains available commands. These are being send
+            using the editor's InvokeCommand method. Available commands are described <see cref="T:GuruComponents.Netrix.TableDesigner.TableCommands">here</see>.
+            </example>
+            Note: More information about user driven designer features are available in the manual.
+            </remarks>
+            <seealso cref="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties"/>
+            <seealso cref="T:GuruComponents.Netrix.TableDesigner.TableCommands"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.#ctor">
+            <summary>
+            Default constructor supports design time behavior.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            This constructor supports design time behavior.
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.OnShowContextMenu(System.Int32,System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLElement,GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Called if the context menu is up to show.
+            </summary>
+            <remarks>Fires the <see cref="E:GuruComponents.Netrix.TableDesigner.TableDesigner.ShowContextMenu"/> event, if not overriden in derived classes.</remarks>
+            <seealso cref="T:GuruComponents.Netrix.Events.ShowContextMenuEventArgs"/>
+            <param name="clientX">X coordinate of mouse.</param>
+            <param name="clientY">Y coodinate of mouse.</param>
+            <param name="t">Element causing the context menu to show up.</param>
+            <param name="key">Reference to HTML editor causes the event within the table designer.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.OnTableBecomesActive(GuruComponents.Netrix.TableDesigner.TableEventArgs)">
+            <summary>
+            Called if a table becomes active.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.OnTableBecomesInactive(GuruComponents.Netrix.TableDesigner.TableEventArgs)">
+            <summary>
+            Called if a table becomes inactive. 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.OnTableCellSelection(GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs)">
+            <summary>
+            Called after cell seletions.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.OnTableCellSelectionRemoved(GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs)">
+            <summary>
+            Called after cell selection is being removed.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableCellSelection">
+            <summary>
+            Will fire if the user has made a cell selection. 
+            </summary>
+            <remarks>
+            This informs the handler that operations based 
+            on selections are now possible.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableCellSelectionRemoved">
+            <summary>
+            Will fire if the selection was removed from the table and the cellstack is cleared.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableBecomesActive">
+            <summary>
+            Fired if a table becomes active in table designer mode.
+            </summary>
+            <remarks>
+            This happens by key operations inside the table only. 
+            The event is fired on time after entering the table with caret. See <see cref="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableBecomesInactive"/> for a related event.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableBecomesInactive">
+            <summary>
+            Fired if the currently active table becomes inactive.
+            </summary>
+            <remarks>
+            The occurence of this events means that the caret is placed outside the table. If the caret
+            left the current table and enters another one the event is still fired.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesigner.ShowContextMenu">
+            <summary>
+            Fired if the user tries to show up the context menu above a table.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.GetTableDesigner(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Designer method, returns the properties of the attached editor.
+            </summary>
+            <param name="htmlEditor">The HtmlEditor to what the table designer belongs to.</param>
+            <returns>The property object.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetTableDesigner(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.TableDesigner.TableDesignerProperties)">
+            <summary>
+            Designer method, sets the properties for given editor.
+            </summary>
+            <param name="htmlEditor">The HtmlEditor to what the table designer belongs to.</param>
+            <param name="Properties">The Property object.</param>
+            <returns>The property object.</returns>		
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetActive(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="active">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetFastResizeMode(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's fast resize mode.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="mode">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetProcessTABKey(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's tab key mode.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="recognizeTAB">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetSliderActivated(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's slider mode.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="active">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetAddMode(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's add mode.
+            </summary>
+            <remarks>
+            The add mode determines how the resize of the right most column and the right outer border.
+            Usually the table is not being resized if the last column width is being changed. If the add mode
+            is activated, the right most column will grow and the table width is growing accordingly.
+            </remarks>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="addMode">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetAdvancedMode(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's advanced mode.
+            </summary>
+            <remarks>
+            The advanced mode shows additional properties concerning the current cell properties as well as 
+            rulers and other information about table dimensions. This option requires higher performance (we
+            recommend at least 2 GHz).
+            </remarks>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="advModeOn">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetSliderLine(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty)">
+            <summary>
+            Activates of deactivates the table designer's slider line properties.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="sliderLine">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetTableBackGround(GuruComponents.Netrix.IHtmlEditor,System.Drawing.Color)">
+            <summary>
+            Activates of deactivates the table designer's background properties.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="backGround">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetWithCellSelection(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's cell selection properties.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="withSelection">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetTableBorder(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior)">
+            <summary>
+            Activates of deactivates the table designer's border properties.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="tableBorder">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetCellBorder(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior)">
+            <summary>
+            Activates of deactivates the table designer's cell properties.
+            </summary>
+            <remarks>
+            This belongs to cell in non selected mode.
+            </remarks>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="cellBorder">The .</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetStaticBehavior(GuruComponents.Netrix.IHtmlEditor,System.Boolean)">
+            <summary>
+            Activates of deactivates the table designer's static mode.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="staticBehavior">The mode to select (<c>true</c> = activated, <c>false</c> = deactivated).</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetCellSelectionBorderColor(GuruComponents.Netrix.IHtmlEditor,System.Drawing.Color)">
+            <summary>
+            Activates of deactivates the table designer's cell selection border color.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="cellBorder">The cell border color for selected mode.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetCellSelectionColor(GuruComponents.Netrix.IHtmlEditor,System.Drawing.Color)">
+            <summary>
+            Activates of deactivates the table designer's cell selection color.
+            </summary>
+            <param name="htmlEditor">The editor this designer instance belongs too.</param>
+            <param name="cellSelection">The cell color in selected mode.</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.Commands">
+            <summary>
+            Gives access to the commands the table designer accepts via the Invoke call.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.SetFormatter(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.WebEditing.Elements.TableElement,GuruComponents.Netrix.WebEditing.Elements.TableCellElement)">
+            <summary>
+            Sets the current table and cell explicitly.
+            </summary>
+            <remarks>
+            The host can use this method to force setting the current table and cell to allow
+            any table formatting operation issued by the table designer working with that table,
+            instead of the user selected one.
+            <para>
+            Setting the cell is necessary, because many commands use the current cell as a starting
+            point for there operation.
+            </para>
+            <para>
+            Calling this method will not fire the <see cref="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableBecomesActive"/> event. Additionally,
+            the designer and the formatter stay no longer in sync regarding the used table.
+            </para>
+            </remarks>
+            <param name="editor">The editor instance, from which the table element comes.</param>
+            <param name="table">The table, which has to be set.</param>
+            <param name="cell">The cell within the table.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.IsInTable(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Detects whether the editor has a current table.
+            </summary>
+            <remarks>
+            This information is useful to update related menu items or toolbars.
+            </remarks>
+            <param name="editor">The editor this operation refers to.</param>
+            <returns>Returns <c>true</c>, if the table designer has a current table.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.ResetFormatter(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Put the formatter back into automatic detection mode.
+            </summary>
+            <remarks>
+            Any caller of the <see cref="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CurrentTable"/> or <see cref="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CurrentCell"/> is supposed to call this method to
+            put the formatter back into detection mode. This means, that the current table follows the
+            mouse and as soon as a mouse move appears on top of a table the current table changes.
+            </remarks>
+            <param name="editor"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.GetFormatter(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Gets direct access to the formatter.
+            </summary>
+            <param name="editor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.NotifyReadyStateCompleted(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Called by the main control to inform the plug-in that the content is now ready.
+            </summary>
+            <remarks>THIS METHOD MUST NOT BE CALLED FROM USER CODE.</remarks>
+            <param name="editor"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.Version">
+            <summary>
+            Version of Plug-in Assembly.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.ShouldSerializeTableDesigner(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Indicated whether the designer should serialize the property object.
+            </summary>
+            <param name="htmlEditor">Reference to editor the designer belongs to.</param>
+            <returns>True in any case (constant value).</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.CanExtend(System.Object)">
+            <summary>
+            Indicates that the plugin can extend the NetRix HTML editor component.
+            </summary>
+            <param name="extendee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.ToString">
+            <summary>
+            Designer support.
+            </summary>
+            <returns>String visible in PropertyGrid.</returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.Name">
+            <summary>
+            Name of the Plugin, constant "TableDesigner".
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.IsExtenderProvider">
+            <summary>
+            Informs that this is an ExtenderProvider. Always true.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.Type">
+            <summary>
+            Type of component.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.GetElementExtenders(GuruComponents.Netrix.WebEditing.Elements.IElement)">
+            <summary>
+            List of element types, which the extender plugin extends.
+            </summary>
+            <remarks>
+            See <see cref="M:GuruComponents.Netrix.PlugIns.IPlugIn.GetElementExtenders(GuruComponents.Netrix.WebEditing.Elements.IElement)"/> for background information.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesigner.Features">
+            <summary>
+            Returns element specific features this plug-in supports.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.GuruComponents#Netrix#PlugIns#IPlugIn#GetSupportedNamespaces(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Returns supported namespaces.
+            </summary>
+            <returns>Returns null, the table designer does not support namespaces.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesigner.GuruComponents#Netrix#PlugIns#IPlugIn#CreateElement(System.String,GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Creates an element.
+            </summary>
+            <remarks>
+            Throws always a <see cref="T:System.NotSupportedException"/>.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">The table designer cannot create elements that way.</exception>
+            <param name="tagName"></param>
+            <param name="editor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties">
+            <summary>
+            This class builds a property object to control the overall behavior of the table designer.
+            </summary>
+            <remarks>
+            The constructor sets some defaults:
+            <list type="table">
+                <listheader><item>Property</item><item>Value</item></listheader>
+                <item><term>SliderActivated</term><description>true</description></item>
+                <item><term>SliderAddMode</term><description>false</description></item>
+                <item><term>SliderLine</term><description>brown, dashed, 1px</description></item>
+                <item><term>WithCellSelection</term><description>true</description></item>
+                <item><term>CellSelectionColor</term><description>silver</description></item>
+                <item><term>CellBorderBehavior</term><description>black, dotted, 1px</description></item>
+                <item><term>TableBorderBehavior</term><description>black, solid, 1px</description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.#ctor">
+            <summary>
+            This constructor sets the designer properties. 
+            </summary>
+            <remarks>
+            It sets various default values for the table:
+            All values can be changed using the various properties this class provides.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.FormatterProperties">
+            <summary>
+            Changes the default Table Formatter properties.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.Active">
+            <summary>
+            Activate Table Designer and Behaviors.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderActivated">
+            <summary>
+            Activates / Deactivates the slider mode.
+            </summary>
+            <remarks>
+            It is recommended to turn it off on slow systems (500 MHz and less).
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.StaticBehavior">
+            <summary>
+            If true, all tables on page will render as table mode, otherwise only the active (current) table.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.AdvancedParameters">
+            <summary>
+            Shows advanced information during cell resize like Visual Studio or Dreamweaver.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.FastResizeMode">
+            <summary>
+            Activates / Deactivates the fast resize mode.
+            </summary>
+            <remarks>
+            Normally the resize mode works in a WYSIWYG manner and shows the result of the next step 
+            immediately. With large tables this can be a huge performance flaw. The host application
+            should enable fast resize mode when a table has more than 10 rows or columns and complex
+            content or embedded tables. In that case the slider is automatically turned on and shows
+            the final cell position. The table is redrawn only once after the user releases the mouse 
+            button. 
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.ProcessTABKey">
+            <summary>
+            If true the TAB key will move the caret inside the table.
+            </summary>
+            <remarks>
+            This will prevent the TAB key
+            from beeing moved around through the controls collection of the form. To get the normal
+            behavior of the TAB key this option must be set to false.
+            <para>
+            If the table designer is not activated the TAB key has always there normal behavior.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderAddMode">
+            <summary>
+            The <see cref="T:System.Boolean"/> used to modify the slider behavior.
+            </summary>
+            <remarks>
+            If true the current
+            column or row will grow/shrink and the previous column or row will not change their widht
+            or height, respectively. This results in a growing/shrinking table.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty">
+            <summary>
+            Class which is used to collect properties of the slider
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty.#ctor(System.Drawing.Color,System.Int32,System.Drawing.Drawing2D.DashStyle)">
+            <summary>
+            Sets default properties fpor slider.
+            </summary>
+            <param name="color"></param>
+            <param name="width"></param>
+            <param name="style"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty.SliderLineColor">
+            <summary>
+            The <see cref="T:System.Drawing.Pen"/> used to draw the slider line.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty.SliderLineWidth">
+            <summary>
+            Width of slider.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty.SliderLineDashStyle">
+            <summary>
+            Line style of slider.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLineProperty.ToString">
+            <summary>
+            Designer support.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.SliderLine">
+            <summary>
+            Properties of the slider.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.WithCellSelection">
+            <summary>
+            The value used to activate cell selection (highlighting).
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBackground">
+            <summary>
+            The background color of the whole table used during design mode.
+            </summary>
+            <remarks>
+            This property defaults to white. It's recommended to set the value
+            accordingly to the <see cref="P:GuruComponents.Netrix.WebEditing.Elements.Element.EffectiveStyle">EffectiveStyle</see> 
+            background color property of the table to avoid text visible problems, if the text is also white.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellSelectionBorderColor">
+            <summary>
+            The <see cref="T:System.Drawing.Color">Color</see> used to highlight cell border during selection.
+            </summary>            
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellSelectionColor">
+            <summary>
+            The <see cref="T:System.Drawing.Color"/> used to highlight cell background during selection.
+            </summary>            
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior">
+            <summary>
+            Covers several options for cell border appearance.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.#ctor(System.Drawing.Color,System.Int32,System.Drawing.Drawing2D.DashStyle)">
+            <summary>
+            Creates a new appearance object with the given properties.
+            </summary>
+            <param name="color">Default border color.</param>
+            <param name="width">Default border width.</param>
+            <param name="style">Default border style.</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.CellBorderColor">
+            <summary>
+            The <see cref="T:System.Drawing.Pen"/> used to draw the slider line.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.CellBorderWidth">
+            <summary>
+            The border width of the cell.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.CellBorderDashStyle">
+            <summary>
+            The dash style of the cell.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.ToString">
+            <summary>
+            Overwritten to support property browser.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.OnPropertyChanged(System.String)">
+            <summary>
+            Called internally for the PropertyChanged event.
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorderBehavior.PropertyChanged">
+            <summary>
+            Fired if a property has been changed.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.CellBorder">
+            <summary>
+            Sets the border appearance.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior">
+            <summary>
+            Class which containts information about table border layout.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.#ctor(System.Drawing.Color,System.Int32,System.Drawing.Drawing2D.DashStyle)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="color"></param>
+            <param name="width"></param>
+            <param name="style"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.TableBorderColor">
+            <summary>
+            Color of table border.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.TableBorderWidth">
+            <summary>
+            Width of table border.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.TableBorderDashStyle">
+            <summary>
+            Style of table border.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.ToString">
+            <summary>
+            Overwritten to support property browser.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.OnPropertyChanged(System.String)">
+            <summary>
+            Called internally for the PropertyChanged event.
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorderBehavior.PropertyChanged">
+            <summary>
+            Fired if a property has been changed.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.TableBorder">
+            <summary>
+            Layout of table border.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.ToString">
+            <summary>
+            Supports the propertygrid element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.OnPropertyChanged(System.String)">
+            <summary>
+            Called internally for the PropertyChanged event.
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="E:GuruComponents.Netrix.TableDesigner.TableDesignerProperties.PropertyChanged">
+            <summary>
+            Fired if a property has been changed.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEditDesigner">
+            <summary>
+            The TableDesigner class realises all mouse and key related operations against tables.
+            </summary>
+            <remarks>
+            It recognizes
+            keystrokes to set current cell, move caret with TAB key, detect mouse over cell borders to do 
+            cell width and height changes, table resize, and cell selection.
+            <para>
+            See also <see cref="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.TableFormatter"/> for additonal table operations based on the cell collection the
+            table designer can store based on cell selection operations.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ZONEROW">
+            <summary>
+            Number of pixels where the mouse detects Row marker
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ZONECOL">
+            <summary>
+            Number of pixels where the mouse detects Col marker
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.DZONECOL">
+            <summary>
+            Right shift of pixels where the mouse detects Cell marker. Should set to double of ZONECOL or more.
+            If this value is to high and cells are very small, it is impossible to place the caret inside the
+            cell because the cell marker detection area occupies the whole cell surface.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ZONECELL">
+            <summary>
+            Number of pixels where the mouse detects Cell marker
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ZONESLW">
+            <summary>
+            Slider area width; negative values detects before cell area
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ZONESLT">
+            <summary>
+            Slider area height; negative values detects before cell area
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.HANDLESIZE">
+            <summary>
+            CONFIG: Width and height of handles for table resizing
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.PreDesignMode">
+            <summary>
+            The predesign mode, which is active (true) if the mouse hovers the activation icon
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.PreResizeMode">
+            <summary>
+            The preresize mode, which is active if the mouse is over a resize handle
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.isResizeMode">
+            <summary>
+            The resize mode is entered, if true. During resizing the mouse moves the table handles. 
+            See <see cref="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ResizeDirection">GuruComponents.Netrix.WebEditing.Behaviors.TableDesigner.Table.</see> for current resize type.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.lastCell">
+            <summary>
+            Last cell in simple cell selection mode
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.WidthSliderCellList">
+            <summary>
+            The list of cell pairs which are part of the current width slider operation
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.HeightSliderCellList">
+            <summary>
+            The list of cell pairs which are part of the current height slider operation
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ResizeDirection">
+            <summary>
+            This field contains a information about the current resizing process
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SliderWasMoved">
+            <summary>
+            True if the previous operation was a succesfully finished slider operation
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.LeftTopBorder">
+            <summary>
+            The current borders, where the silder stops
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.RightBottomBorder">
+            <summary>
+            The current borders, where the silder stops
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSpacing">
+            <summary>
+            The cellspacing, used to correct the calculation of active areas and borders 
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.x">
+            <summary>
+            The current x coordinate of the mouse pointer
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.y">
+            <summary>
+            The current y coordinate of the mouse pointer
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.htmlEditor">
+            <summary>
+            A reference to the host control. Gets access to exec methods.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.preHandleReturnState">
+            <summary>
+            The return state of the current operation, prevents other designers from being called if set to S_OK.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner._isActivated">
+            <summary>
+            Controls the activation state. If activated the behaviors will applied, if not they will removed.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.currentTable">
+            <summary>
+            The table, associated with this designer. Only one table is associated at the time.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.OldCurrentTable">
+            <summary>
+            The table that was selected before the current table becomes active, used to deal with nested tables.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.LEFT">
+            <summary>
+            Left mouse button
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.RIGHT">
+            <summary>
+            Right mouse button
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.NONE">
+            <summary>
+            No mouse button
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.TAB">
+            <summary>
+            TAB key code
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner._singletonTableBehavior">
+            <summary>
+            The behavior which draw the rectangle around the whole table
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner._singletonHighLightBehavior">
+            <summary>
+            A single instance of the table cell highlight behavior, which draws the highlighted background
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.astrCursorsName">
+            <summary>
+            The images used a mouse pointer for cell/row/col selections.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.BodySliderBehavior">
+            <summary>
+            The behavior which draws the dashed line to align the slider with the ruler.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.body">
+            <summary>
+            These elements are the base areas for getting scroll positions, body for standard elements, document for frames.
+            </summary> 
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.cellStack">
+            <summary>
+            Contains the currently highlighted cells and offers various methods to deal with
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.zt">
+            <summary>
+            The type of selection for cell/row/col selections with highlightmode. Used via <see cref="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ztTableZone"/> property.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.sliderAddMode">
+            <summary>
+            If true the width/height slider will only add space, which make the table growing during slider operations.
+            The <see cref="T:GuruComponents.Netrix.TableDesigner.TableDesignerProperties"/> class sets this value to false per default.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.sliderActivated">
+            <summary>
+            If true the slider line will drawn. This drawing is critical on slow systems because the complete screen is
+            refreshing after each step.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.advancedParameters">
+            <summary>
+            Shows advanced cell width and height values during resize.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.fastResizeMode">
+            <summary>
+            If true the slider is and the resize does not use WYSIWYG to increase speed.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.withCellSelection">
+            <summary>
+            This field holds the configured state of the cell selection feature. If false, no selection is possible.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsInCellSelection">
+            <summary>
+            This struct controls the cell selection feature.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsInSlider">
+            <summary>
+            This struct controls the cell slider feature.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.cellSelectionColor">
+            <summary>
+            The color used to draw a background for selected cells.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.cellSelectionBorderColor">
+            <summary>
+            The color used to draw the border. If equals to <see cref="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.cellSelectionColor"/> the border is unvisible.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.batchedUndoUnit">
+            <summary>
+            Stores the undo steps during slider operations to reset slider state with one undo command.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.sliderCookie">
+            <summary>
+            Stores a reference to the current slider behavior, if any.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.elementCookie">
+            <summary>
+            Stores references to behaviors for cells.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSelectionStruct">
+            <summary>
+            Holds data for the current cell selection process.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSelectionStruct.InCellSelection">
+            <summary>
+            True if currently a selection was made.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSelectionStruct.CurrentRow">
+            <summary>
+            Current Row
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSelectionStruct.CurrentCol">
+            <summary>
+            Current Column
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellSelectionStruct.StartCellSelection">
+            <summary>
+            This field controls the cell selection feature. It is true if the designer allows a cell selection.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellMoveStruct">
+            <summary>
+            Holds data for the current cell moving process.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellMoveStruct.isDuringWidthSliderOperation">
+            <summary>
+            True during the slider operation
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellMoveStruct.isDuringHeightSliderOperation">
+            <summary>
+            True during the slider operation
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellMoveStruct.IsInHeightSlider">
+            <summary>
+            True if the mouse cursors is a split cursor an the table can switch to slider mode. 
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellMoveStruct.IsInWidthSlider">
+            <summary>
+            True if the mouse cursors is a split cursor an the table can switch to slider mode. 
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEditDesigner.TableCellBorderBehavior">
+            <summary>
+            Behavior to draw a customizable border around any cell during table design time.
+            </summary>
+            <remarks>
+            This behavior is used instead the ZEROBORDERATDESIGNTIME command to may other
+            table designer functions better visible.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEditDesigner.TableCellHighLightBehavior">
+            <summary>
+            Set cell background to mark highlighting
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.TableFormatter">
+            <summary>
+            Returns the current table formatter instance.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.#ctor(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.TableDesigner.TableDesignerProperties,GuruComponents.Netrix.TableDesigner.TableDesigner)">
+            <summary>
+            TableDesigner constructor.
+            </summary>
+            <remarks>
+            Called during ActivateTableDesigner call. Under normal circumstances
+            this constructor should never called directly from user code. It cannot work without adding as
+            edit host designer, which is impossible from users code due to security restrictions.
+            </remarks>
+            <param name="host">The host component which the designer is related too.</param>
+            <param name="properties">The property object.</param>
+            <param name="designer">The designer.</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ztTableZone">
+            <summary>
+            Gets or sets the selection for cell/row/col selections with highlightmode.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ParentOffsetLeft">
+            <summary>
+            Loop recursivly through parent elements and collect offsets. Needed to operate with
+            nested tables correctly. This property returns the left offset.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ParentOffsetTop">
+            <summary>
+            Loop recursivly through parent elements and collect offsets. Needed to operate with
+            nested tables correctly. This property returns the top offset. 
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.L">
+            <summary>
+            Left offset of table including any subsequent offset for nested tables
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.T">
+            <summary>
+            Top offset of table including any subsequent offset for nested tables
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.H">
+            <summary>
+            Height of table
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.W">
+            <summary>
+            Width of table. Returns the real width, not the width or style attribute
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.R">
+            <summary>
+            Absolute right border (x) including any offset calculated on base of left border.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.B">
+            <summary>
+            Absolute bottom border (y) including any offset calculated on base of left border.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableEditDesigner.DelayedCellReset">
+            <summary>
+            This field is true if a cell should loose their style attribute before a new slider operation
+            sets a new start value. This is delayed from the cell collection gather method to the SetRow/SetCol
+            methods to avoid flicker.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsDuringWidthSliderOperation">
+            <summary>
+            Registers the current state of the slider. Is true during slider move.
+            In case of begin the moved columns are retrieved.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsDuringHeightSliderOperation">
+            <summary>
+            Registers the current state of the slider. Is true during slider move.
+            In case of begin the moved columns are retrieved.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsInSliderArea(System.Int32,System.Int32)">
+            <summary>
+            Detects the slider area and return the column or row number or -1 if no inside the area.
+            As column is always the left one returned (as row the top one), even if the left area of the right cell was detected, 
+            or the top area of the bottom cell, respectively.
+            </summary>
+            <param name="x">X coordinate of mouse</param>
+            <param name="y">Y coordinate of mouse</param>
+            <returns>True if inside the area, false else.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetSelection(System.Int32,System.Int32)">
+            <summary>
+            This method detects the cell selection area (left zone in cell to cell selection, top of columns
+            for column selection and right zone of left column for row selection).
+            The method will overwrite the CurrentRow or CurrentCol properties to set the right values for
+            subsequent parts of the designer.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>true if found a hit zone.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetTableBehavior">
+            <summary>
+            This method returns the table designers binary behavior.
+            </summary>
+            <returns>BaseBehavior part of the designer</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetCellHighLightBehavior">
+            <summary>
+            This Method returns the instance of <c>CellHighLightbehavior</c>. It is a singleton instance, only
+            one instance per TableDesigner may exist.
+            </summary>
+            <returns>TableCellHighLightBehavior instance as <see cref="T:GuruComponents.Netrix.WebEditing.Behaviors.BaseBehavior"/></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SliderReset">
+            <summary>
+            Reset the slider state but does not leave design mode.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CellStack">
+            <summary>
+            Gets the cellstack and creates the stack object on first call.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.FireTableCellSelection">
+            <summary>
+            Set the cellstack in the formatter object. Merge operations are based on the stack there. To give
+            the table formatter access to the right table the CurrentTable is send. Even fired if the collection
+            is empty to inform external handler that there is nothing left to do.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsActivated">
+            <summary>
+            Get the current state of the table designer.
+            </summary>
+            <remarks>
+            Always returns <c>false</c> if the NetRix component is not ready yet.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetProperties(GuruComponents.Netrix.TableDesigner.TableDesignerProperties,System.String)">
+            <summary>
+            Set the current state of the table designer.
+            </summary>
+            <remarks>
+            The additonal setter method prevents users of this class to set the state from outside, which results in an unpredictable 
+            program state. The preferred call is from constructor and from ExtenderProvider class.
+            </remarks>
+            <param name="properties">Sets the designer properties</param>
+            <param name="property">The name of the property.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.RemoveBehaviors(GuruComponents.Netrix.ComInterop.Interop.IHTMLTable)">
+            <summary>
+            Remove the beaviors from all cells.
+            </summary>
+            <param name="el"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.AddBehaviors(GuruComponents.Netrix.ComInterop.Interop.IHTMLTable)">
+            <summary>
+            Add the designer behaviors to the table. Sets white background and dotted cell borders for all tables.
+            </summary>
+            <param name="el">Table element which the behaviors are attached to</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.AddBehaviors">
+            <summary>
+            Add the current behavior to all tables on the page. 
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.RemoveBehaviors">
+            <summary>
+            Add the current behavior to all tables on the page. 
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.Activate(System.Boolean)">
+            <summary>
+            Activate/Deactivate the designer using extender command.
+            </summary>
+            <param name="active"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsOnActivator(System.Int32,System.Int32)">
+            <summary>
+            Detects the mouse in the activator icon to support entering the advanced designer mode
+            </summary>
+            <param name="x">X coordinate of mouse</param>
+            <param name="y">Y coordinate of mouse</param>
+            <returns>True, if mouse is over activator icon</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsOnResize(System.Int32,System.Int32)">
+            <summary>
+            Detects the mouse over a resizing handle. This method detects the build in handles in the lower right corner,
+            the middle handle on the right side and the middle handle on the bottom side. It does not change the mouse 
+            cursor. 
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CreateWidthSliderCellList(System.Int32,System.Boolean)">
+            <summary>
+            Creates a list of cells which are set during the slider operation.
+            </summary>
+            <param name="LastColumn"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.CreateHeightSliderCellList(System.Int32,System.Boolean)">
+            <summary>
+            Creates a list of cells which are set during the slider operation.
+            </summary>
+            <param name="LastRow"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SwapHighVariables(System.Int32@,System.Int32@)">
+            <summary>
+            This method swaps two variables so the second one has always the bigger value.
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns>true, if the values are different, false if the are equal.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks id a value is between to boundaries (including the boundary value).
+            </summary>
+            <param name="check">Value to check</param>
+            <param name="min">Lower boundary</param>
+            <param name="max">Upper boundary</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetMousePointer(System.Windows.Forms.Cursor)">
+            <summary>
+            Froze old mouse pointer and reload with a different one
+            </summary>
+            <param name="cursor"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetMousePointer">
+            <summary>
+            Reset mousepointer from frozen state and activate original one
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetMouseCursor(GuruComponents.Netrix.TableDesigner.MouseCursorTypeEnum)">
+            <summary>
+            Loads mouse pointer from resource
+            </summary>
+            <param name="MouseType">Cursor needed</param>
+            <returns>Cursor returns</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ParentTable">
+            <summary>
+            Get the table the current element is in. If the element is not in a table the method returns null.
+            </summary>
+            <returns>Table element or null if no table found.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SizeType(System.String)">
+            <summary>
+            Checks a value for the size type, pixel or percent.
+            </summary>
+            <param name="p_Size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.StringToPixel(System.String)">
+            <summary>
+            Converts a string into a pixel value by adding "px".
+            </summary>
+            <param name="p_Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SizeInPixel(System.String,System.Int32)">
+            <summary>
+            Sets a new value and preserve the previously used type.
+            </summary>
+            <param name="p_Size"></param>
+            <param name="p_ParentSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.StringToPercent(System.String)">
+            <summary>
+            Set a percentage value.
+            </summary>
+            <param name="p_Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.PixelToString(System.Int32)">
+            <summary>
+            Convert a numeric value in the pixel representation by adding "px" and returning as string.
+            </summary>
+            <param name="p_Data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetCssWidth(GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            The width from style:width attribute.
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetCellWidth(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            The real cell width.
+            </summary>
+            <param name="value"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetCellHeight(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            The real cell height.
+            </summary>
+            <param name="value"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetCssWidth(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            Set the width by using the style:width attribute.
+            </summary>
+            <param name="value"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ResetCssWidth(GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            Remove the style:width attribute.
+            </summary>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ResetCssHeight(GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            Remove the style:height attribute.
+            </summary>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GetCssHeight(GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            The style:height attribute value.
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetCssHeight(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLElement)">
+            <summary>
+            Set the style:height value.
+            </summary>
+            <param name="value"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetColumn(System.Int32,System.Int32)">
+            <summary>
+            Set the Column to the last position of the slider after each mouse move.
+            </summary>
+            <param name="Column">Column, one based. If -1 suppress changing left cell.</param>
+            <param name="XPosition">Position in Client coordinates</param>
+            <returns>The last real position of the slider. Used to set the dashed line.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetRow(System.Int32,System.Int32)">
+            <summary>
+            Set the Row to the last position of the slider after each mouse move.
+            </summary>
+            <param name="Row">Row, one based</param>
+            <param name="YPosition">Position in Client coordinates</param>
+            <returns>The last real position of the slider. Used to set the dashed line.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.ResizeTable(System.Int32,System.Int32)">
+            <summary>
+            This method operates the table resizing by changing the width and height style.
+            </summary>
+            <param name="newX"></param>
+            <param name="newY"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.SetCaretToCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Sets the caret to a specific cell using MarkupServices.
+            </summary>
+            <param name="nextCell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GuruComponents#Netrix#ComInterop#Interop#IHTMLEditDesigner#PreHandleEvent(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLEventObj)">
+            <summary>
+            The implementation of <c>PreHandleEvent</c>. This method is called as a callback before an event is processed
+            by other hosts or MSHTML.
+            <para>
+            This method does only cover mouse related operations. To set the current table for formatting options the
+            <see cref="T:GuruComponents.Netrix.MSHTMLSite"/> class covers key and click events and sets the current table only when the caret is
+            inside the table. That means that table formatting depends on the caret, whereas table resizing depends on
+             the mouse position. There is one exception from this rule: If the user selects cells with the highlight service
+             this means that cells are well defined, even when the caret is outside the table. In that special case
+             the current table is set too and the formatter options can applied to the selection.
+            </para>
+            <seealso cref="T:GuruComponents.Netrix.ComInterop.Interop.IHTMLEditDesigner"/>
+            </summary>
+            <param name="dispId">The basic event type</param>
+            <param name="e">The event object, which contains details about event source and type</param>
+            <returns>S_OK if no further processing needed, S_FALSE else.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GuruComponents#Netrix#ComInterop#Interop#IHTMLEditDesigner#PostHandleEvent(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLEventObj)">
+            <summary>
+            Fired after the event was handled.
+            </summary>
+            <param name="dispId"></param>
+            <param name="eventObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GuruComponents#Netrix#ComInterop#Interop#IHTMLEditDesigner#TranslateAccelerator(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLEventObj)">
+            <summary>
+            Fired after a key event occurs to implement a way to change the key behavior. 
+            </summary>
+            <param name="dispId"></param>
+            <param name="eventObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableEditDesigner.GuruComponents#Netrix#ComInterop#Interop#IHTMLEditDesigner#PostEditorEventNotify(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLEventObj)">
+            <summary>
+            The interface implementation. Looks for the current element and set the table state. If the caret is
+            inside a table the TAB key is activated to mode the caret between cells.
+            </summary>
+            <param name="dispId"></param>
+            <param name="eventObj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs">
+            <summary>
+            Event argument used for the TableCellSelection event.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs.Table">
+            <summary>
+            This property gives access to the table which the cells collection comes from.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs.TableCellCollection">
+            <summary>
+            This property gives access to the currently highlighted cells.
+            </summary>
+            <remarks>
+            It takes the Interop cell
+            objects and creates or retrieves the native <see cref="T:GuruComponents.Netrix.WebEditing.Elements.TableCellElement"/> objects for
+            usage in the host application.
+            <para>
+            <b>Callers:</b> The collection becomes invalid if the table structure has changed after getting
+            these values. Invalid cells are zombies, they have no conjunction with the underlying 
+            document anymore. Manipulating them can result in unpredictable effects.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableCellSelectionEventArgs.CellCount">
+            <summary>
+            Number of cells in the collection.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableCellSelectionEventHandler">
+            <summary>
+            This defines an event which is fired when the user has made a cell selection.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEventArgs">
+            <summary>
+            Sends the current table after OnFocus or OnBlur events to the event handler.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableEventArgs.TableElement">
+            <summary>
+            Gets the table element which causes the event.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEventBecomesActiveHandler">
+            <summary>
+            This defines an event which is fired when the table becomes active.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableEventBecomesInactiveHandler">
+            <summary>
+            This defines an event which is fired when the table becomes inactive.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableFormatter">
+            <summary>
+            Represention of a table. Provides table operations like merge, split, delete, and add.
+            </summary>
+            <remarks>
+            This class is not for direct instantiation. It is necessary to use the 
+            <see cref="T:GuruComponents.Netrix.TableDesigner.TableFormatter">TableFormatter</see> property
+            of the <see cref="T:GuruComponents.Netrix.WebEditing.Elements.TableElement">TableElement</see> class instead. To
+            support public access to this class the type 
+            <see cref="T:GuruComponents.Netrix.TableDesigner.ITableFormatter">ITableFormatter</see> has to
+            be used.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CurrentElement">
+            <summary>
+            The current element, from which the action starts
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CurrentCell">
+            <summary>
+            The current cell, from which the action starts.
+            </summary>
+            <remarks>
+            Be carefully by setting this property and assure that the cell belongs to the table which is actually
+            available from <see cref="P:GuruComponents.Netrix.TableDesigner.TableFormatter.Table"/> property. However, once set the cell, the class tries to figure out
+            what table the cell belongs to and forces this table to be set as current table.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.Table">
+            <summary>
+            Gives access to the table currently being formatted.
+            </summary>
+            <remarks>
+            The property will return <c>null</c> (<c>Nothing</c> in VB.NET) if there is no related table.
+            <para>
+            The setting will be overwritten, if the caret is placed inside a table by user action. If there is no
+            user action, you can set the table the formatter belongs to by using this property.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CurrentTable">
+            <summary>
+            Gives access to the table structure of the underlying table currently being formatted.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.IsInTable">
+            <summary>
+            Is <c>true</c> if a table is associated with the formatter. 
+            </summary>
+            <remarks>
+            If the formatter is being used interactional and the caret is outside a table the table field is null and
+            the property returns <c>false</c>. However, if set programmatically, the property will always return <c>true</c>.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.TableInfo">
+            <summary>
+            The <see cref="T:GuruComponents.Netrix.TableDesigner.TableLayoutInfo"/> class provides structural information about the table in multiple ways. 
+            This getter returns the singleton instance of <see cref="T:GuruComponents.Netrix.TableDesigner.TableLayoutInfo"/> class.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.IsLastCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell,System.Int32,System.Int32)">
+            <summary>
+            Detects if the given cell is the last one in that row.
+            </summary>
+            <param name="cell">Cell to be checked</param>
+            <param name="row">Row to check for</param>
+            <param name="col">Column to check for</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.IsLastRowCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell,System.Int32,System.Int32)">
+            <summary>
+            Detects if the given cell is in the last row and in the last column (last cell other all).
+            </summary>
+            <param name="cell"></param>
+            <param name="row">Row to check for</param>
+            <param name="col">Column to check for</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.NextCellPosition(GuruComponents.Netrix.WebEditing.Elements.TableCellElement)">
+            <summary>
+            Takes the current cell and set the caret to next possible cell. 
+            </summary>
+            <remarks>
+            If there is
+            no cell anymore, a new row is created and the caret is placed in the first column
+            of the new row.
+            </remarks>
+            <returns>True, if successfull, false in case on error</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.PrevCellPosition(GuruComponents.Netrix.WebEditing.Elements.TableCellElement)">
+            <summary>
+            Takes the current cell and set the caret to previous one. 
+            </summary>
+            <remarks>
+            The caret stops at first cell.
+            If the caret is in the first column and the current row is not the first one, the caret
+            jumps to the last cell of the previous row.
+            </remarks>
+            <returns>True, if successfull, false in case on error</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.SetCaretToCell(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Sets the caret to a specific cell using MarkupServices. This allows the user to use multiple
+            table operations in a row without setting the caret manually by keystrokes or mouse hits.
+            </summary>
+            <param name="nextCell">The cell to which the caret should be set.</param>
+            <returns>Returns false, if setting fails.</returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanInsertTableRow">
+            <summary>
+            Inserting of a table is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanInsertTableColumn">
+            <summary>
+            Inserting of new column is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanDeleteTableRow">
+            <summary>
+            Deleting of Row is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanDeleteTableColumn">
+            <summary>
+            Deleting of column is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanMergeLeft">
+            <summary>
+            Left merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanMergeRight">
+            <summary>
+            Right merging is possible
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanMergeUp">
+            <summary>
+            Upwards merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanMergeDown">
+            <summary>
+            Down merging is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanMergeCells">
+            <summary>
+            Determines whether the current cellstack is a rectangular are which can merge 
+            without destroying table structure.
+            </summary>
+            <remarks>
+            The MergeCells method will always try to merge the cells available
+            in the stack. However, this might destroy table structure and result in weird
+            table layout. Even if it's possible to correct this, the way depends on desired
+            behavior of the host application. To avoid this, check whether the collection
+            is rectangular using this property.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanSplitHorizontal">
+            <summary>
+            Horizontal splitting is possible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CanSplitVertical">
+            <summary>
+            Vertical splitting is possible.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.RebuildTable(System.Int32,System.Int32)">
+            <overloads/>
+            <summary>
+            Re-Creates the current table setting a complete new structure.
+            </summary>
+            <remarks>
+            This ,ethod will destroy the current content re-creates a new empty table,
+            using the given number of rows and columns.
+            </remarks>
+            <param name="rows"></param>
+            <param name="cols"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.RebuildTable(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Re-Creates the current table setting a complete new structure.
+            </summary>
+            <param name="rows"></param>
+            <param name="cols"></param>
+            <param name="border"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.RebuildTable(System.Int32,System.Int32,System.Int32,System.Web.UI.WebControls.Unit)">
+            <summary>
+            Re-Creates the current table setting a complete new structure.
+            </summary>
+            <param name="rows"></param>
+            <param name="cols"></param>
+            <param name="border"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.AddCaption">
+            <summary>
+            Add the given caption element to the current table. 
+            </summary>
+            <remarks>If no caption exists it will be created. To remove an existing caption, use the
+            <see cref="M:GuruComponents.Netrix.TableDesigner.TableFormatter.RemoveCaption">RemoveCaption</see>
+            method.
+            <seealso cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement">CaptionElement</seealso>
+            </remarks>
+            <returns>The new created <see cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement"/> object.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.RemoveCaption">
+            <summary>
+            Removes the caption element from the current table. 
+            </summary>
+            <remarks>
+            Does nothing if no <see cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement">CaptionElement</see> exists.
+            <seealso cref="M:GuruComponents.Netrix.TableDesigner.TableFormatter.AddCaption">AddCaption</seealso>
+            <seealso cref="T:GuruComponents.Netrix.WebEditing.Elements.CaptionElement">CaptionElement</seealso>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.DeleteTableRow">
+            <summary>
+            Delete the current row from table.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.DeleteTableColumn">
+            <summary>
+            Deletes a column from table.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.InsertTableRow">
+            <summary>
+            Inserts a new row before or after the current row, depending on last operation (repeats last).
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.InsertTableRow(System.Boolean)">
+            <summary>
+            Inserts a new row before or after the current row depending on parameter.
+            </summary>
+            <param name="After"><c>True</c> to insert after current row, otherwise its being inserted before.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.InsertTableColumn">
+            <summary>
+            Insert a new column in the current table after the current column.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.InsertTableColumn(System.Boolean)">
+            <summary>
+            Insert a new column in the current table
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeLeft">
+            <summary>
+            Merge the current cell with the cell left of these.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeRight">
+            <summary>
+            Merge the current cell with the cell right of these.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeCells">
+            <summary>
+            Merge the currently selected cells if the given cell collection is a rectangle. Otherwise the method
+            will do nothing. Needs at least two cells. The content of the merged cells be rewritten into the resulting cell.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeCells(System.Boolean)">
+            <summary>
+            Merge the currently selected cells if the given cell collection is a rectangle. Otherwise the method
+            will do nothing. Needs at least two cells.
+            </summary>
+            <param name="SaveCellContent">if True the content of the merged cells will be saved, otherwise deleted.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeUp">
+            <summary>
+            Merge the cell the caret is in with the cell above these. Does nothing if there is no cell above
+            the current one.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeDown">
+            <summary>
+            Merge the cell the caret is in with the cell below these.  Does nothing if there is no cell above
+            the current one.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.InsertCell">
+            <summary>
+            Inserts a cell in the current row right from the current cell
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.DeleteCell">
+            <summary>
+            Removes the selected Cell from the cell collection of the current row.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.SplitHorizontal">
+            <summary>
+            Split the cell where the caret is currently in. Does nothing if the caret is not inside a table.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.SplitVertical">
+            <summary>
+            Split the current cell vertical
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatter.CellCollection">
+            <summary>
+            Gets or sets the cells for actions which are based on cells, like <see cref="M:GuruComponents.Netrix.TableDesigner.TableFormatter.MergeCells"/>.
+            </summary>
+            <remarks>
+            This property gets or sets cell collection, which must belong to the current table. If set
+            by user action the cells are highlighted, though, this option does not highlight the cells
+            but subsequent operations will operate on this collection like highlighted cells would be.
+            <para>Returns <c>null</c> (<c>Nothing</c> in VB.NET) if there is no current selection.</para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatter.OnTableCellSelection(GuruComponents.Netrix.ComInterop.Interop.IHTMLTable,GuruComponents.Netrix.TableDesigner.HighLightCellList)">
+            <summary>
+            Fires the <see cref="E:GuruComponents.Netrix.TableDesigner.TableDesigner.TableCellSelection"/> event handler and set the internal cell stack.
+            </summary>
+            <param name="t">The table which the selection contains</param>
+            <param name="cellStack">The collection of cells within the selection</param>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.CaretPosition">
+            <summary>
+            Used to determine the position of caret after cell, row, or column deletion.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.CaretPosition.Before">
+            <summary>
+            After removing of a cell, row, or column the caret is placed in the cell, row, or column before (in order) of the deleted cell.
+            </summary>
+            <remarks>
+            If the first cell of a row, the first row, or the first column is removed the caret stays in the new first cell, row, or column.
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.CaretPosition.After">
+            <summary>
+            After removing of a cell, row, or column the caret is placed in the cell, row, or column after (in order) of the deleted cell.
+            </summary>
+            <remarks>
+            If the last cell of a row, the last row, or the last column is removed the caret stays in the new last cell, row, or column.
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.CaretPosition.First">
+            <summary>
+            The caret is positioned in the first row or column regardless which row has been removed.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.CaretPosition.Last">
+            <summary>
+            The caret is positioned in the last row or column regardless which row has been removed.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.InsertPosition">
+            <summary>
+            Used to determine the position of the new cell, row, or column elements.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.InsertPosition.Before">
+            <summary>
+            When adding a cell, row, or column the new elements are placed in the cell, row, or column before (in order) the current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.InsertPosition.After">
+            <summary>
+            When adding a cell, row, or column the new elements are placed in the cell, row, or column after (in order) the current one.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.InsertPosition.First">
+            <summary>
+            When adding a cell, row, or column the new elements are placed in the first cell, row, or column.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.InsertPosition.Last">
+            <summary>
+            When adding a cell, row, or column the new elements are placed in the last cell, row, or column.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableFormatterProperties">
+            <summary>
+            Properties that influence the table formatter behavior.
+            </summary>
+            <remarks>
+            This class was added in 2.0 (2010).
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.#ctor">
+            <summary>
+            Creates an instance of a property bag, that influence the table formatter behavior.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.CaretAfterDeletion">
+            <summary>
+            Gets or sets how the caret is positioned if the caret was in the cell, row, or column that has been removed.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.NewElementPosition">
+            <summary>
+            Gets or sets how where new element appears following the position of the caret.
+            </summary>
+            <remarks>
+            The options <see cref="T:GuruComponents.Netrix.TableDesigner.InsertPosition">After</see> and <see cref="T:GuruComponents.Netrix.TableDesigner.InsertPosition">Before</see> refer to the caret's position.
+            The options <see cref="T:GuruComponents.Netrix.TableDesigner.InsertPosition">First</see> and <see cref="T:GuruComponents.Netrix.TableDesigner.InsertPosition">Last</see> ignore the caret's position and
+            add the element at the respective positions.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.KeepOppositePosition">
+            <summary>
+            Gets or sets how the caret is set according to current row if a column has been deleted, or to current column, if a row has been deleted.
+            </summary>
+            <remarks>
+            In a grid-like table you can remove cells, rows, or columns, like this:
+            <para>
+            [ 1 ]|[ 4 ]|[ 7 ]        
+            [ 2 ]|[ 5 ]|[ 8 ]        
+            [ 3 ]|[ 6 ]|[ 9 ]
+            </para>
+            Say the caret is in cell 6 and the user calls the DeleteRow method with property <see cref="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.CaretAfterDeletion"/> set to <c>Before</c>.
+            This command removes cells 3, 6, and 9. The cursor is placed in the row before, which consists of cells 2, 5, and 8 respectively.
+            If <c>KeepOppositePosition</c> is <c>true</c>, the caret appears in cell 5. If it is <c>false</c>, it would appear in 2.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.BeforeText">
+            <summary>
+            If the caret is placed in the new cell after a delete operation, this properties determines where it appears. If true, it appears before the text, otherwise at the end.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.DeleteFollowsSelection">
+            <summary>
+            If the caret is placed in the new cell after a delete operation, this properties determines where it appears. If true, it appears before the text, otherwise at the end.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableFormatterProperties.ToString">
+            <summary>
+            Supports the propertygrid element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.TableDesigner.TableLayoutInfo">
+            <summary>
+            This class builds a complete description of the current table with information
+            about the cells, merge / split conditions. It contains methods to check the
+            number of cells per row and per columns and some helper properties.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableLayoutInfo._cells">
+            <summary>
+            The cell collection, Keys are cells, Values are <see cref="T:System.Web.UI.Pair"/> objects
+            containing row and col information.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableLayoutInfo._rows">
+            <summary>
+            The list of rows, each contains a list of cells.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.CellCoordinates">
+            <summary>
+            The cell coordinates, used to check for mouse pointer selection much faster
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.TableDesigner.TableLayoutInfo._table">
+            <summary>
+            The underlying table this object belongs to.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.Table">
+            <summary>
+            Gives access to the underlaying table structure
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.AddCell(System.Int32,GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell)">
+            <summary>
+            Adds a cell to the specified row
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.#ctor(GuruComponents.Netrix.ComInterop.Interop.IHTMLTable)">
+            <summary>
+            Creates the internal table layout from current table
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.EnsureIndex(System.Collections.ArrayList,System.Int32)">
+            <summary>
+            Enhances the current list with null elements to increase capacity
+            </summary>
+            <param name="list"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.Item(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the cell at given coordinates
+            </summary>
+            <param name="row">row index</param>
+            <param name="col">column index</param>
+            <returns>cell element</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.GetRowNumber">
+            <summary>
+            Total number of rows.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.GetColNumber(System.Int32)">
+            <summary>
+            Total number of cols in the given row.
+            </summary>
+            <param name="row">Row number to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.CellCollectionFromRow(System.Int32)">
+            <summary>
+            Returns the real cells of a specific row. This method behaves on the
+            real number of cells, which is sometimes smaller than the absolute number 
+            due to rowspan attributes in previous rows.
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.CellCollectionFromCol(System.Int32)">
+            <summary>
+            Returns the real cells of a specific column. This method behaves on the
+            real number of cells, which is sometimes smaller than the absolute number 
+            due to colspan attributes in previous rows.
+            </summary>
+            <param name="col">Column from which the collection is retrieved.</param>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.Cells">
+            <summary>
+            Cell collection to be used elsewhere.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.GetCellPoint(GuruComponents.Netrix.ComInterop.Interop.IHTMLTableCell,System.Int32@,System.Int32@)">
+            <summary>
+            Returns the coordinates of a given cell element
+            </summary>
+            <param name="cell">Cell element to check</param>
+            <param name="row">row index</param>
+            <param name="col">column index</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.TableDesigner.TableLayoutInfo.ToString">
+            <summary>
+            Returns a string representation of the table
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95E9E07C-53AE-4557-8BCB-6E7023B245C3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Resources\ToolBox.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.PlugIns.AspDotNetDesigner.v40.Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix.AspDotNetDesigner</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET40;FORDEMO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>602,612,618</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DOTNET40;</DefineConstants>
+    <DocumentationFile>..\..\Documentation\GuruComponents.Netrix.PlugIns.AspDotNetDesigner.V40.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>618</NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspDotNetDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Behavior\BehaviorEventHandler.cs" />
+    <Compile Include="Behavior\GlobalEvents.cs" />
+    <Compile Include="DesignerProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Designer\ControlDirective.cs" />
+    <Compile Include="Designer\DictionaryService.cs" />
+    <Compile Include="Designer\Directive.cs" />
+    <Compile Include="Designer\EmbeddedPersister.cs" />
+    <Compile Include="Designer\EmbeddedSerializer.cs" />
+    <Compile Include="Behavior\DesignTimeBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behavior\ErrorControl.cs" />
+    <Compile Include="Behavior\EventSink.cs" />
+    <Compile Include="Designer\NameCreationService.cs" />
+    <Compile Include="Designer\PageDirective.cs" />
+    <Compile Include="Designer\RegisterDirective.cs" />
+    <Compile Include="Designer\RegisterDirectiveCollection.cs" />
+    <Compile Include="Designer\UserControlTypeResolution.cs" />
+    <Compile Include="Designer\WebFormsReferenceManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebEditing\Designer\ElementDesigner.cs" />
+    <Compile Include="WebEditing\ElementEventHandler.cs" />
+    <Compile Include="WebEditing\Elements\AscxElement.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\AscxTagInfo.cs" />
+    <Compile Include="WebEditing\Elements\AspTagInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\ElementEventArgs.cs" />
+    <Compile Include="WebEditing\Elements\ExtendedProperties.cs" />
+    <Compile Include="WebEditing\Elements\GenericElement.cs" />
+    <EmbeddedResource Include="AspDotNetDesigner.resx">
+      <DependentUpon>AspDotNetDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Behavior.ico" />
+    <EmbeddedResource Include="Resources\ToolBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ObjectAnchor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ToolBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SecondEdition\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core2010.v40.ForDemo.csproj">
+      <Project>{03C1FE95-E23E-42C0-9D0C-C27A48A2EC2F}</Project>
+      <Name>Core2010.v40.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixMain\NetRix2010.v40.ForDemo.csproj">
+      <Project>{5C4D1229-1114-470E-8A94-F07E0931F784}</Project>
+      <Name>NetRix2010.v40.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixUI\NetRixUI2010.v40.ForDemo.csproj">
+      <Project>{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}</Project>
+      <Name>NetRixUI2010.v40.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlFormatter\HtmlFormatter2010.v40.ForDemo.csproj">
+      <Project>{7504FB79-389D-40C9-B61C-79F4F01E8DCC}</Project>
+      <Name>HtmlFormatter2010.v40.ForDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

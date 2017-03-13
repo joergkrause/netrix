@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+            .style1
+            {
+                color: #006600;
+            }
+            .style2
+            {
+                font-family: "Courier New", Courier, monospace;
+            }
+        </style>
+	</head>
+	<body>
+	    <h1>Drag Drop Support</h1>
+        <p>
+        In this section we're going to examine drag drop operations. 
+        </p>
+        <h1>Toolbox Support</h1>
+        <p>In this example the code to support the toolbox looks like this:</p>
+        <pre style="font-family: consolas"><span style="color: blue">private</span>&nbsp;<span 
+            style="color: blue">void</span>&nbsp;button_StartDragDrop(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">MouseEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">IElement</span>&nbsp;el;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">string</span>&nbsp;tagName&nbsp;=&nbsp;((<span style="color: #2b91af">Label</span>)sender).Tag.ToString();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">DataObject</span>&nbsp;d&nbsp;=&nbsp;&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+            style="color: #2b91af">DataObject</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">switch</span>&nbsp;(tagName)
+&nbsp;&nbsp;&nbsp;&nbsp;{</pre>
+        <pre style="font-family: consolas">         <span class="style1">// This is how you can create elements with predefined settings</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;TEXTAREA&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;_editor.CreateElement(<span style="color: #a31515">&quot;TEXTAREA&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">TextAreaElement</span>)el).cols&nbsp;=&nbsp;10;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">TextAreaElement</span>)el).rows&nbsp;=&nbsp;3;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;LISTBOX&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;_editor.CreateElement(<span style="color: #a31515">&quot;SELECT&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">SelectElement</span>)el).multiple&nbsp;=&nbsp;<span 
+            style="color: blue">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">SelectElement</span>)el).size&nbsp;=&nbsp;3;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;</pre>
+        <pre style="font-family: consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;button&quot;</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputButtonElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;image&quot;</span>:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputImageElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;submit&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputSubmitElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;checkbox&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputCheckboxElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;radio&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputRadioElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;text&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputTextElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;password&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputPasswordElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&nbsp;hidden&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span style="color: #2b91af">InputHiddenElement</span>(_editor);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
+            style="color: blue">goto case</span>&nbsp;<span style="color: #a31515">&quot;INPUT&quot;</span>;
+</pre>
+        <pre style="font-family: consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span 
+            style="color: #a31515">&quot;INPUT&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d.SetData(<span style="color: blue">typeof</span>(<span 
+            style="color: #2b91af">IElement</span>),&nbsp;el);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">break</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;((<span style="color: #2b91af">Label</span>)sender).DoDragDrop(d,&nbsp;<span 
+            style="color: #2b91af">DragDropEffects</span>.Copy);
+
+}</pre>
+        <p>The button &quot;MouseDown&quot; event is used to initiate this, because this is the most 
+            intuitive way to begin a drag operation. In the Html Editor the property 
+            AllowDrop is set to true. All other part of this operation is handled 
+            internally. The data format <span style="color: #2b91af" class="style2">DataFormats</span><span 
+                class="style2">.Html</span> 
+            is used only in case the internal operation does not support the element sent. 
+            It will fall back to drop regular HTML. Only difference is, that the Drop event 
+            does not recognize the element as an object. If this doesn&#39;t matter, pure HTML 
+            is just fine.</p>
+        <h2>Drag Drop Events</h2>
+        <p>Several events are supported. Especially to treat a dropped element afterwards 
+            the DragDrop event is crucial. In the example code the handler looks like this:</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;ToolWindow_DragDrop(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">DragEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">foreach</span>&nbsp;(<span style="color: blue">string</span>&nbsp;format&nbsp;<span 
+            style="color: blue">in</span>&nbsp;e.Data.GetFormats())
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">switch</span>&nbsp;(format)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">case</span>&nbsp;<span style="color: #a31515">&quot;GuruComponents.Netrix.WebEditing.Elements.IElement&quot;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">AnchorElement</span>&nbsp;a&nbsp;=&nbsp;(<span 
+            style="color: #2b91af">AnchorElement</span>)e.Data.GetData(<span 
+            style="color: blue">typeof</span>(<span style="color: #2b91af">IElement</span>));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.href&nbsp;=&nbsp;<span style="color: #a31515">&quot;http://www.netrixcomponent.net&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.InnerText&nbsp;=&nbsp;<span style="color: #a31515">&quot;Netrix&nbsp;Component&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">break</span>;
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>Because the element sent is of type IElement we look for the appropriate type. 
+            The former type can be restored just by a cast. Once the element object is 
+            present, you can set any properties you like.</p>
+        <p>&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,3839 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuruComponents.Netrix.PlugIns.SpellChecker.v40</name>
+    </assembly>
+    <members>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling">
+            <summary>
+            Common access to all public NetSpell features and methods.
+            </summary>
+            <remarks>
+            This is a netspell specific access interface and does not handle any calls if an external
+            spellchecker is being used.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.DeleteWord">
+            <summary>
+                Deletes the CurrentWord from the Text Property
+            </summary>
+            <remarks>
+            	Note, calling ReplaceWord with the ReplacementWord property set to 
+            	an empty string has the same behavior as DeleteWord.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.EditDistance(System.String,System.String,System.Boolean)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <param name="positionPriority" type="bool">
+                <para>
+                    set to true if the first and last char should have priority
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.EditDistance(System.String,System.String)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+            <remarks>
+            	This method automatically gives priority to matching the first and last char
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.GetWordIndexFromTextIndex(System.Int32)">
+            <summary>
+            	Gets the word index from the text index.  Use this method to 
+            	find a word based on the text position.
+            </summary>
+            <param name="textIndex">
+            	<para>
+                    The index to search for
+                </para>
+            </param>
+            <returns>
+            	The word index that the text index falls on
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreAllWord">
+            <summary>
+            Ignores all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceAllWord(System.String)">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceAllWord">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceWord(System.String)">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceWord">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck(System.String)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/> position. This overload takes in the 
+                text to spell check
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck(System.Int32,System.Int32)">
+            <summary>
+                Spell checks a range of words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/> position and ending at endWordIndex. 
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <param name="endWordIndex" type="int">
+                <para>
+                    The index of the word to end checking with. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck(System.String,System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/> position. This overload takes in 
+                the text to check and the WordIndex to start checking from.
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck(System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/> position. This overload takes in the
+                WordIndex to start checking from.
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/> position.
+            </summary>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggest(System.String)">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggestions"/> property with word suggestions
+                for the word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to generate suggestions on
+                </para>
+            </param>
+            <remarks>
+            	This method sets the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text"/> property to the word. 
+            	Then calls <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TestWord(System.String)"/> on the word to generate the need
+            	information for suggestions. Note that the Text, CurrentWord and WordIndex 
+            	properties are set when calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggest">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggestions"/> property with word suggestions
+                for the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            </summary>
+            <remarks>
+            	<see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TestWord(System.String)"/> must have been called before calling this method
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TestWord(System.String)">
+            <summary>
+                Checks to see if the word is in the dictionary
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to check
+                </para>
+            </param>
+            <returns>
+                Returns true if word is found in dictionary
+            </returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.AlertComplete">
+            <summary>
+                Display the 'Spell Check Complete' alert.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord">
+            <summary>
+                The current word being spell checked from the text property
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Dictionary">
+            <summary>
+                The WordDictionary object to use when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreAllCapsWords">
+            <summary>
+                Ignore words with all capital letters when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreHtml">
+            <summary>
+                Ignore html tags when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreList">
+            <summary>
+                List of words to automatically ignore
+            </summary>
+            <remarks>
+            	When <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreAllWord"/> is clicked, the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/> is added to this list
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.IgnoreWordsWithDigits">
+            <summary>
+                Ignore words with digits when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.MaxSuggestions">
+            <summary>
+                The maximum number of suggestions to generate
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceList">
+            <summary>
+                List of words and replacement values to automatically replace
+            </summary>
+            <remarks>
+            	When <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplaceAllWord"/> is clicked, the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.CurrentWord"/> is added to this list
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.ReplacementWord">
+            <summary>
+            The word that is being replaced.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellcheckerForm">
+            <summary>
+            Gets or sets the internal spelling suggestions dialog form.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SuggestionMode">
+            <summary>
+                The suggestion strategy to use when generating suggestions
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggestions">
+            <summary>
+                An array of word suggestions for the correct spelling of the misspelled word
+            </summary>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Suggest"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.SpellCheck"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.MaxSuggestions"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.Text">
+            <summary>
+                The text to spell check
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.TextIndex">
+            <summary>
+                TextIndex is the index of the current text being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordCount">
+            <summary>
+                The number of words being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ISpelling.WordIndex">
+            <summary>
+                WordIndex is the index of the current word being spell checked
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.SuggestionEnum">
+            <summary>
+                The suggestion strategy to use when generating suggestions
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.NetSpell.SuggestionEnum.PhoneticNearMiss">
+            <summary>
+                Combines the phonetic and near miss strategies
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.NetSpell.SuggestionEnum.Phonetic">
+            <summary>
+                The phonetic strategy generates suggestions by word sound
+            </summary>
+            <remarks>
+            	This technique was developed by the open source project ASpell.net
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.NetSpell.SuggestionEnum.NearMiss">
+            <summary>
+                The near miss strategy generates suggestion by replacing, 
+                removing, adding chars to make words
+            </summary>
+            <remarks>
+                This technique was developed by the open source spell checker ISpell
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog">
+            <summary>
+            Public interface a form must implement to be accepted as an internal dialog.
+            </summary>
+            <remarks>
+            The dialog is shown modal.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog.Action">
+            <summary>
+            Action fired by the dialog. The form's DialogResult property determines what happens next.
+            </summary>
+            <remarks>
+            Implementers should close the dialog and return one of these dialog results:
+            <list type="bullet">
+                <item>OK: Replace the word with the new one (<see cref="P:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog.NewWord"/>)</item>
+                <item>Abort: Abort and close the dialog without further action.</item>
+                <item>Cancel: Same as Abort</item>
+                <item>Ignore: Ignore the word and proceed with next one.</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog.NewWord">
+            <summary>
+            The word used to replace the current one.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog.Suggestions">
+            <summary>
+            A list of suggestions the form can present.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.ISpellcheckerDialog.WrongWord">
+            <summary>
+            The word not found in the dictionary to be shown on the form.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.ReplacedWordEventHandler">
+            <summary>
+            Delegate that supports the spell checker events.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker">
+            <summary>
+            This realizes the basic spell checker API using callback methods.
+            </summary>
+            <remarks>
+            See <see cref="N:GuruComponents.Netrix.SpellChecker"/> class for more information.
+            </remarks>
+            <seealso cref="N:GuruComponents.Netrix.SpellChecker"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordUnderPointer">
+            <summary>
+            Returns the word the caret is on on nearby.
+            </summary>
+            <returns>The recognized word, or <c>null</c>, if nothing was recognized.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceWordUnderPointer(System.String)">
+            <summary>
+            Replaces the word the caret is currently in with other text.
+            </summary>
+            <param name="replaceWith">Text for replacement.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceWordUnderPointer(System.Boolean,System.String)">
+            <summary>
+            Replaces the word the caret is currently in with other text.
+            </summary>
+            <param name="withHtml">If set to <c>true</c> it's allowed to add HTML.</param>
+            <param name="replaceWith">Text or HTML for replacement.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordUnderPointer(System.Boolean)">
+            <summary>
+            Returns the word with or without inline HTML the caret is on on nearby.
+            </summary>
+            <param name="withHtml">If true the method returns any embedded HTML too, otherwise HTML is stripped out.</param>
+            <returns>The recognized HTML, or <c>null</c>, if nothing was recognized.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TestWord(System.String)">
+            <summary>
+                Checks to see if the word is in the dictionary.
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to check.
+                </para>
+            </param>
+            <returns>
+                Returns true if word is found in dictionary.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggest(System.String)">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggestions"/> property with word suggestions.
+                for the word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to generate suggestions on.
+                </para>
+            </param>
+            <remarks>
+            	This method sets the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property to the word. 
+            	Then calls <see cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TestWord(System.String)"/> on the word to generate the need
+            	information for suggestions. Note that the Text, CurrentWord and WordIndex 
+            	properties are set when calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggest">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggestions"/> property with word suggestions.
+            </summary>
+            <remarks>
+            	<see cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TestWord(System.String)"/> must have been called before calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DeleteWord">
+            <summary>
+                Deletes the CurrentWord from the Text Property
+            </summary>
+            <remarks>
+            	Note, calling ReplaceWord with the ReplacementWord property set to 
+            	an empty string has the same behavior as DeleteWord.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.EditDistance(System.String,System.String,System.Boolean)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <param name="positionPriority" type="bool">
+                <para>
+                    set to true if the first and last char should have priority
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.EditDistance(System.String,System.String)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+            <remarks>
+            	This method automatically gives priority to matching the first and last char
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.GetWordIndexFromTextIndex(System.Int32)">
+            <summary>
+            	Gets the word index from the text index.  Use this method to 
+            	find a word based on the text position.
+            </summary>
+            <param name="textIndex">
+            	<para>
+                    The index to search for
+                </para>
+            </param>
+            <returns>
+            	The word index that the text index falls on
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.IgnoreAllWord">
+            <summary>
+            Ignores all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.IgnoreWord">
+            <summary>
+            Ignores the instances of the CurrentWord in the Text Property.
+            </summary>
+            <remarks>
+            Must call SpellCheck after call this method to resume spell checking.
+            Forces the IgnoredWord event on Speller plug-in. Host application must handle.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceAllWord">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceAllWord(System.String)">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceWord">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.ReplaceWord(System.String)">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/> position.
+            </summary>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck(System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/> position. This overload takes in the
+                WordIndex to start checking from.
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck(System.Int32,System.Int32)">
+            <summary>
+                Spell checks a range of words in the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/> position and ending at endWordIndex. 
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <param name="endWordIndex" type="int">
+                <para>
+                    The index of the word to end checking with. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck(System.String)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/> position. This overload takes in the 
+                text to spell check
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck(System.String,System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/> position. This overload takes in 
+                the text to check and the WordIndex to start checking from.
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.RemoveWordCheckingHighlights">
+            <summary>
+            Remove the highlighted sections from the whole document.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoWordCheckingHighlights">
+            <summary>
+            Checks the complete document and highlight any wrong word using default highlight style.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoWordCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle)">
+            <summary>
+            Checks the complete document and highlight any wrong word. Search and spell call back on word base.</summary>
+            <remarks>
+            The method calls a callback method the host application
+            must provide and which returns a boolean value to control the behavior of the highlighter.
+            </remarks>
+            <param name="highLightStyle">The style used to mark wrong words</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoWordCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle,System.Boolean)">
+            <summary>
+            Checks the complete document and highlight any wrong word. Search and spell call back on word base. 
+            </summary>
+            <remarks>
+            The method calls a callback method the host application
+            must provide and which returns a boolean value to control the behavior of the highlighter.
+            </remarks>
+            <param name="highLightStyle">The style used to mark wrong word</param>
+            <param name="backgroundService">If true the service runs as a endless background process until the WordStop callback handler returns true.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoBlockCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle)">
+            <summary>
+            Checks the complete document and highlight any wrong word. Search and spell call back on sentence base.
+            </summary>
+            <param name="highLightStyle"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoBlockCheckingSelected">
+            <summary>
+            Checks the complete document interactively and tags the current word in default selection style.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.DoWordCheckingSelected">
+            <summary>
+            Checks the complete document and select any wrong word with the standard selection.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.HighLightStyle">
+            <summary>
+            Gets or sets the <see cref="T:GuruComponents.Netrix.WebEditing.HighLighting.HighLightStyle"/> for the
+            spell checker.
+            </summary>
+            <remarks>
+            The style is used to highlight words marked as wrong.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.BackgroundService">
+            <summary>
+            Activates or deactivates the background service.
+            </summary>
+            <remarks>
+            This service runs through the document and restarts
+            at the end automatically. Setting this property to <c>false</c> will stop the service.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordChecker">
+            <summary>
+            Event fired for each word found.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordCheckerStop">
+            <summary>
+            Event fired for each word found. The return value of the callback function is used to stop the checking
+            process immediately.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordCheckerFinished">
+            <summary>
+            Event fired once the word checking is done.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordOnContext">
+            <summary>
+            Event fired if the suer has right clicked the word and the caret has moved.
+            </summary>
+            <remarks>
+            This event is later than
+            ContextMenu because it is necessary to being delayed to set the caret to the final position before
+            an attached context menu opens.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.MisSpelledWords">
+            <summary>
+            Returns the collection of misspelled words.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.CheckInternal">
+            <summary>
+            Gets or sets a value that activates the internal NetSpell spell checker.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SuggestionMode">
+            <summary>
+                The suggestion strategy to use when generating suggestions
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggestions">
+            <summary>
+                An array of word suggestions for the correct spelling of the misspelled word
+            </summary>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Suggest"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.SpellCheck"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Text">
+            <summary>
+                The text to spell check
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.TextIndex">
+            <summary>
+                TextIndex is the index of the current text being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordCount">
+            <summary>
+                The number of words being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.WordIndex">
+            <summary>
+                WordIndex is the index of the current word being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker.Dictionary">
+            <summary>
+                The WordDictionary object to use when spell checking.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Controls.NativeMethods">
+            <summary>
+            Summary description for NativeMethods.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry">
+            <summary>
+            	Rule Entry for expanding base words
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry.AddCharacters">
+            <summary>
+                The characters to add to the string
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry.Condition">
+            <summary>
+                The condition to be met in order to add characters
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry.StripCharacters">
+            <summary>
+                The characters to remove before adding characters
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry.ConditionCount">
+            <summary>
+                The number of conditions that must be met
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection">
+            <summary>
+                A collection that stores 'AffixEntry' objects.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.#ctor">
+            <summary>
+                Initializes a new instance of 'AffixEntryCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection)">
+            <summary>
+                Initializes a new instance of 'AffixEntryCollection' based on an already existing instance.
+            </summary>
+            <param name='value'>
+                A 'AffixEntryCollection' from which the contents is copied
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry[])">
+            <summary>
+                Initializes a new instance of 'AffixEntryCollection' with an array of 'AffixEntry' objects.
+            </summary>
+            <param name='value'>
+                An array of 'AffixEntry' objects with which to initialize the collection
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.Add(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Adds a 'AffixEntry' item with the specified value to the 'AffixEntryCollection'
+            </summary>
+            <param name='value'>
+                The 'AffixEntry' to add.
+            </param>
+            <returns>
+                The index at which the new element was inserted.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.AddRange(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry[])">
+            <summary>
+                Copies the elements of an array at the end of this instance of 'AffixEntryCollection'.
+            </summary>
+            <param name='value'>
+                An array of 'AffixEntry' objects to add to the collection.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.AddRange(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection)">
+            <summary>
+                Adds the contents of another 'AffixEntryCollection' at the end of this instance.
+            </summary>
+            <param name='value'>
+                A 'AffixEntryCollection' containing the objects to add to the collection.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.Contains(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Gets a value indicating whether the 'AffixEntryCollection' contains the specified value.
+            </summary>
+            <param name='value'>
+                The item to locate.
+            </param>
+            <returns>
+                True if the item exists in the collection; false otherwise.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.CopyTo(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry[],System.Int32)">
+            <summary>
+                Copies the 'AffixEntryCollection' values to a one-dimensional System.Array
+                instance starting at the specified array index.
+            </summary>
+            <param name='array'>
+                The one-dimensional System.Array that represents the copy destination.
+            </param>
+            <param name='index'>
+                The index in the array where copying begins.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.IndexOf(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Returns the index of a 'AffixEntry' object in the collection.
+            </summary>
+            <param name='value'>
+                The 'AffixEntry' object whose index will be retrieved.
+            </param>
+            <returns>
+                If found, the index of the value; otherwise, -1.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.Insert(System.Int32,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Inserts an existing 'AffixEntry' into the collection at the specified index.
+            </summary>
+            <param name='index'>
+                The zero-based index where the new item should be inserted.
+            </param>
+            <param name='value'>
+                The item to insert.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.GetEnumerator">
+            <summary>
+                Returns an enumerator that can be used to iterate through
+                the 'AffixEntryCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.Remove(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Removes a specific item from the 'AffixEntryCollection'.
+            </summary>
+            <param name='value'>
+                The item to remove from the 'AffixEntryCollection'.
+            </param>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection.Item(System.Int32)">
+            <summary>
+                Represents the 'AffixEntry' item at the specified index position.
+            </summary>
+            <param name='index'>
+                The zero-based index of the entry to locate in the collection.
+            </param>
+            <value>
+                The entry at the specified index of the collection.
+            </value>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator">
+            <summary>
+                A strongly typed enumerator for 'AffixEntryCollection'
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryCollection)">
+            <summary>
+                Enumerator constructor
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.MoveNext">
+            <summary>
+                Advances the enumerator to the next element of the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.System#Collections#IEnumerator#MoveNext">
+            <summary>
+                Advances the enumerator to the next element of the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.Reset">
+            <summary>
+                Sets the enumerator to the first element in the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.System#Collections#IEnumerator#Reset">
+            <summary>
+                Sets the enumerator to the first element in the collection
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.Current">
+            <summary>
+                Gets the current element from the collection (strongly typed)
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntryEnumerator.System#Collections#IEnumerator#Current">
+            <summary>
+                Gets the current element from the collection
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule">
+            <summary>
+            	Rule for expanding base words
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule.AllowCombine">
+            <summary>
+                Allow combining prefix and suffix
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule.AffixEntries">
+            <summary>
+                Collection of text entries that make up this rule
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule.Name">
+            <summary>
+                Name of the Affix rule
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection">
+            <summary>
+                A dictionary collection that stores 'AffixRule' objects.
+            </summary>	
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.innerHash">
+            <summary>
+                Internal Hashtable
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="original" type="AffixRuleCollection">
+                <para>
+                    A 'AffixRuleCollection' from which the contents is copied
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Collections.IDictionary)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="dictionary" type="System.Collections.IDictionary">
+                <para>
+                    The IDictionary to copy to a new 'AffixRuleCollection'.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Int32)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="capacity" type="int">
+                <para>
+                    The approximate number of elements that the 'AffixRuleCollection' can initially contain.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Collections.IDictionary,System.Single)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="dictionary" type="System.Collections.IDictionary">
+                <para>
+                    The IDictionary to copy to a new 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="loadFactor" type="float">
+                <para>
+                    A number in the range from 0.1 through 1.0 indicating the maximum ratio of elements to buckets.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Collections.IHashCodeProvider,System.Collections.IComparer)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="codeProvider" type="System.Collections.IHashCodeProvider">
+                <para>
+                    The IHashCodeProvider that supplies the hash codes for all keys in the 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="comparer" type="System.Collections.IComparer">
+                <para>
+                    The IComparer to use to determine whether two keys are equal.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="capacity" type="int">
+                <para>
+                    The approximate number of elements that the 'AffixRuleCollection' can initially contain.
+                </para>
+            </param>
+            <param name="loadFactor" type="int">
+                <para>
+                    A number in the range from 0.1 through 1.0 indicating the maximum ratio of elements to buckets.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Collections.IDictionary,System.Collections.IHashCodeProvider,System.Collections.IComparer)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="dictionary" type="System.Collections.IDictionary">
+                <para>
+                    The IDictionary to copy to a new 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="codeProvider" type="System.Collections.IHashCodeProvider">
+                <para>
+                    The IHashCodeProvider that supplies the hash codes for all keys in the 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="comparer" type="System.Collections.IComparer">
+                <para>
+                    The IComparer to use to determine whether two keys are equal.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Int32,System.Collections.IHashCodeProvider,System.Collections.IComparer)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="capacity" type="int">
+                <para>
+                    The approximate number of elements that the 'AffixRuleCollection' can initially contain.
+                </para>
+            </param>
+            <param name="codeProvider" type="System.Collections.IHashCodeProvider">
+                <para>
+                    The IHashCodeProvider that supplies the hash codes for all keys in the 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="comparer" type="System.Collections.IComparer">
+                <para>
+                    The IComparer to use to determine whether two keys are equal.
+                </para>
+            </param>		
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Collections.IDictionary,System.Single,System.Collections.IHashCodeProvider,System.Collections.IComparer)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="dictionary" type="System.Collections.IDictionary">
+                <para>
+                    The IDictionary to copy to a new 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="loadFactor" type="float">
+                <para>
+                    A number in the range from 0.1 through 1.0 indicating the maximum ratio of elements to buckets.
+                </para>
+            </param>
+            <param name="codeProvider" type="System.Collections.IHashCodeProvider">
+                <para>
+                    The IHashCodeProvider that supplies the hash codes for all keys in the 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="comparer" type="System.Collections.IComparer">
+                <para>
+                    The IComparer to use to determine whether two keys are equal.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.#ctor(System.Int32,System.Single,System.Collections.IHashCodeProvider,System.Collections.IComparer)">
+            <summary>
+                Initializes a new instance of 'AffixRuleCollection'.
+            </summary>
+            <param name="capacity" type="int">
+                <para>
+                    The approximate number of elements that the 'AffixRuleCollection' can initially contain. 
+                </para>
+            </param>
+            <param name="loadFactor" type="float">
+                <para>
+                    A number in the range from 0.1 through 1.0 indicating the maximum ratio of elements to buckets.
+                </para>
+            </param>
+            <param name="codeProvider" type="System.Collections.IHashCodeProvider">
+                <para>
+                    The IHashCodeProvider that supplies the hash codes for all keys in the 'AffixRuleCollection'.
+                </para>
+            </param>
+            <param name="comparer" type="System.Collections.IComparer">
+                <para>
+                    The IComparer to use to determine whether two keys are equal. 
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.GetEnumerator">
+            <summary>
+                Returns an enumerator that can be used to iterate through the 'AffixRuleCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Remove(System.String)">
+            <summary>
+                Removes the element with the specified key from the AffixRuleCollection.
+            </summary>
+            <param name="key" type="string">
+                <para>
+                    The key of the element to remove
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Contains(System.String)">
+            <summary>
+                Determines whether the AffixRuleCollection contains an element with the specified key.
+            </summary>
+            <param name="key" type="string">
+                <para>
+                    The key to locate in the AffixRuleCollection.
+                </para>
+            </param>
+            <returns>
+                true if the AffixRuleCollection contains an element with the key; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Clear">
+            <summary>
+                removes all elements from the AffixRuleCollection.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Add(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule)">
+            <summary>
+                adds an element with the provided key and value to the AffixRuleCollection.
+            </summary>
+            <param name="key" type="string">
+                <para>
+                    The string Object to use as the key of the element to add.
+                </para>
+            </param>
+            <param name="value" type="AffixRule">
+                <para>
+                    The AffixRule Object to use as the value of the element to add.
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+                copies the elements of the AffixRuleCollection to an Array, starting at a particular Array index.
+            </summary>
+            <param name="array" type="System.Array">
+                <para>
+                    The one-dimensional Array that is the destination of the elements copied from AffixRuleCollection. The Array must have zero-based indexing. 
+                </para>
+            </param>
+            <param name="index" type="int">
+                <para>
+                    The zero-based index in array at which copying begins. 
+                </para>
+            </param>		
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Clone">
+            <summary>
+                Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>
+                A new object that is a copy of this instance.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.ContainsKey(System.String)">
+            <summary>
+                Determines whether the AffixRuleCollection contains a specific key.
+            </summary>
+            <param name="key" type="string">
+                <para>
+                    The key to locate in the AffixRuleCollection.
+                </para>
+            </param>
+            <returns>
+                true if the AffixRuleCollection contains an element with the specified key; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.ContainsValue(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule)">
+            <summary>
+                Determines whether the AffixRuleCollection contains a specific value.
+            </summary>
+            <param name="value" type="AffixRule">
+                <para>
+                    The value to locate in the AffixRuleCollection. The value can be a null reference (Nothing in Visual Basic).
+                </para>
+            </param>
+            <returns>
+                true if the AffixRuleCollection contains an element with the specified value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Synchronized(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection)">
+            <summary>
+                Returns a synchronized (thread-safe) wrapper for the AffixRuleCollection.
+            </summary>
+            <param name="nonSync" type="AffixRuleCollection">
+                <para>
+                    The AffixRuleCollection to synchronize.
+                </para>
+            </param>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.IsReadOnly">
+            <summary>
+                gets a value indicating whether the AffixRuleCollection is read-only.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Item(System.String)">
+            <summary>
+                Gets or sets the element with the specified key.
+            </summary>
+            <value>
+                <para>
+                    The key of the element to get or set.
+                </para>
+            </value>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Values">
+            <summary>
+                gets an ICollection containing the values in the AffixRuleCollection.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Keys">
+            <summary>
+                gets an ICollection containing the keys of the AffixRuleCollection.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.IsFixedSize">
+            <summary>
+                gets a value indicating whether the AffixRuleCollection has a fixed size.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.IsSynchronized">
+            <summary>
+                Gets a value indicating whether access to the AffixRuleCollection is synchronized (thread-safe).
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.Count">
+            <summary>
+                Gets the number of elements contained in the AffixRuleCollection.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleCollection.SyncRoot">
+            <summary>
+                Gets an object that can be used to synchronize access to the AffixRuleCollection.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator">
+            <summary>
+                A strongly typed enumerator for 'AffixRuleCollection'
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.Reset">
+            <summary>
+                Sets the enumerator to the first element in the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.MoveNext">
+            <summary>
+                Advances the enumerator to the next element of the collection
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.Key">
+            <summary>
+                 gets the key of the current AffixRuleCollection entry.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.Value">
+            <summary>
+                gets the value of the current AffixRuleCollection entry.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.Entry">
+            <summary>
+                 gets both the key and the value of the current AffixRuleCollection entry.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRuleEnumerator.Current">
+            <summary>
+                Gets the current element from the collection
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility">
+            <summary>
+            Summary description for AffixUtility.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.AddPrefix(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule)">
+            <summary>
+                Adds a prefix to a word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to add the prefix to
+                </para>
+            </param>
+            <param name="rule" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule">
+                <para>
+                    The AffixRule to use when adding the prefix
+                </para>
+            </param>
+            <returns>
+                The word with the prefix added
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.AddSuffix(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule)">
+            <summary>
+                Adds a suffix to a word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to get the suffix added to
+                </para>
+            </param>
+            <param name="rule" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixRule">
+                <para>
+                    The AffixRule to use when adding the suffix
+                </para>
+            </param>
+            <returns>
+                The word with the suffix added
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.EncodeConditions(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Generates the condition character array
+            </summary>
+            <param name="conditionText" type="string">
+                <para>
+                    the text form of the conditions
+                </para>
+            </param>
+            <param name="entry" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry">
+                <para>
+                    The AffixEntry to add the condition array to
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.RemovePrefix(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Removes the affix prefix rule entry for the word if valid
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to be modified
+                </para>
+            </param>
+            <param name="entry" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry">
+                <para>
+                    The affix rule entry to use
+                </para>
+            </param>
+            <returns>
+                The word after affix removed.  Will be the same word if affix could not be removed.
+            </returns>
+            <remarks>
+            	This method does not verify that the returned word is a valid word, only that the affix can be removed
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixUtility.RemoveSuffix(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry)">
+            <summary>
+                Removes the affix suffix rule entry for the word if valid
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to be modified
+                </para>
+            </param>
+            <param name="entry" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Affix.AffixEntry">
+                <para>
+                    The affix rule entry to use
+                </para>
+            </param>
+            <returns>
+                The word after affix removed.  Will be the same word if affix could not be removed.
+            </returns>
+            <remarks>
+            	This method does not verify that the returned word is a valid word, only that the affix can be removed
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule">
+            <summary>
+            	This class hold the settings for a phonetic rule
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.BeginningOnly">
+            <summary>
+                True if this rule should be applied to the beginning only
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.Condition">
+            <summary>
+                The ascii condition array
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.ConditionCount">
+            <summary>
+                The number of conditions
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.ConsumeCount">
+            <summary>
+                The number of chars to consume with this rule
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.EndOnly">
+            <summary>
+                True if this rule should be applied to the end only
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.Priority">
+            <summary>
+                The priority of this rule
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.ReplaceMode">
+            <summary>
+                True if this rule should run in replace mode
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule.ReplaceString">
+            <summary>
+                The string to use when replacing
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection">
+            <summary>
+                A collection that stores 'PhoneticRule' objects.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.#ctor">
+            <summary>
+                Initializes a new instance of 'PhoneticRuleCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection)">
+            <summary>
+                Initializes a new instance of 'PhoneticRuleCollection' based on an already existing instance.
+            </summary>
+            <param name='value'>
+                A 'PhoneticRuleCollection' from which the contents is copied
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule[])">
+            <summary>
+                Initializes a new instance of 'PhoneticRuleCollection' with an array of 'PhoneticRule' objects.
+            </summary>
+            <param name='value'>
+                An array of 'PhoneticRule' objects with which to initialize the collection
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.Add(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule)">
+            <summary>
+                Adds a 'PhoneticRule' item with the specified value to the 'PhoneticRuleCollection'
+            </summary>
+            <param name='value'>
+                The 'PhoneticRule' to add.
+            </param>
+            <returns>
+                The index at which the new element was inserted.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.AddRange(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule[])">
+            <summary>
+                Copies the elements of an array at the end of this instance of 'PhoneticRuleCollection'.
+            </summary>
+            <param name='value'>
+                An array of 'PhoneticRule' objects to add to the collection.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.AddRange(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection)">
+            <summary>
+                Adds the contents of another 'PhoneticRuleCollection' at the end of this instance.
+            </summary>
+            <param name='value'>
+                A 'PhoneticRuleCollection' containing the objects to add to the collection.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.Contains(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule)">
+            <summary>
+                Gets a value indicating whether the 'PhoneticRuleCollection' contains the specified value.
+            </summary>
+            <param name='value'>
+                The item to locate.
+            </param>
+            <returns>
+                True if the item exists in the collection; false otherwise.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.CopyTo(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule[],System.Int32)">
+            <summary>
+                Copies the 'PhoneticRuleCollection' values to a one-dimensional System.Array
+                instance starting at the specified array index.
+            </summary>
+            <param name='array'>
+                The one-dimensional System.Array that represents the copy destination.
+            </param>
+            <param name='index'>
+                The index in the array where copying begins.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.IndexOf(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule)">
+            <summary>
+                Returns the index of a 'PhoneticRule' object in the collection.
+            </summary>
+            <param name='value'>
+                The 'PhoneticRule' object whose index will be retrieved.
+            </param>
+            <returns>
+                If found, the index of the value; otherwise, -1.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.Insert(System.Int32,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule)">
+            <summary>
+                Inserts an existing 'PhoneticRule' into the collection at the specified index.
+            </summary>
+            <param name='index'>
+                The zero-based index where the new item should be inserted.
+            </param>
+            <param name='value'>
+                The item to insert.
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.GetEnumerator">
+            <summary>
+                Returns an enumerator that can be used to iterate through
+                the 'PhoneticRuleCollection'.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.Remove(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule)">
+            <summary>
+                Removes a specific item from the 'PhoneticRuleCollection'.
+            </summary>
+            <param name='value'>
+                The item to remove from the 'PhoneticRuleCollection'.
+            </param>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection.Item(System.Int32)">
+            <summary>
+                Represents the 'PhoneticRule' item at the specified index position.
+            </summary>
+            <param name='index'>
+                The zero-based index of the entry to locate in the collection.
+            </param>
+            <value>
+                The entry at the specified index of the collection.
+            </value>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator">
+            <summary>
+                A strongly typed enumerator for 'PhoneticRuleCollection'
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.#ctor(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleCollection)">
+            <summary>
+                Enumerator constructor
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.MoveNext">
+            <summary>
+                Advances the enumerator to the next element of the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.System#Collections#IEnumerator#MoveNext">
+            <summary>
+                Advances the enumerator to the next element of the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.Reset">
+            <summary>
+                Sets the enumerator to the first element in the collection
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.System#Collections#IEnumerator#Reset">
+            <summary>
+                Sets the enumerator to the first element in the collection
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.Current">
+            <summary>
+                Gets the current element from the collection (strongly typed)
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRuleEnumerator.System#Collections#IEnumerator#Current">
+            <summary>
+                Gets the current element from the collection
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticUtility">
+            <summary>
+            	This class holds helper methods for phonetic encoding
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticUtility.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticUtility.EncodeRule(System.String,GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule@)">
+            <summary>
+                Converts the rule text in to a PhoneticRule class
+            </summary>
+            <param name="ruleText" type="string">
+                <para>
+                    The text to convert
+                </para>
+            </param>
+            <param name="rule" type="ref GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Phonetic.PhoneticRule">
+                <para>
+                    The object that will hold the conversion data
+                </para>
+            </param>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word">
+            <summary>
+            The Word class represents a base word in the dictionary
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The string for the base word
+                </para>
+            </param>
+            <param name="affixKeys" type="string">
+                <para>
+                    The affix keys that can be applied to this base word
+                </para>
+            </param>
+            <param name="phoneticCode" type="string">
+                <para>
+                    The phonetic code for this word
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor(System.String,System.String)">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The string for the base word
+                </para>
+            </param>
+            <param name="affixKeys" type="string">
+                <para>
+                    The affix keys that can be applied to this base word
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The string for the base word
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The string for the word
+                </para>
+            </param>
+            <param name="index" type="int">
+                <para>
+                    The position index of this word
+                </para>
+            </param>
+            <param name="height" type="int">
+                <para>
+                    The line height of this word
+                </para>
+            </param>
+            <returns>
+                A void value...
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.#ctor(System.String,System.Int32)">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The string for the base word
+                </para>
+            </param>
+            <param name="editDistance" type="int">
+                <para>
+                    The edit distance from the misspelled word
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.CompareTo(System.Object)">
+            <summary>
+                Sorts a collection of words by EditDistance
+            </summary>
+            <remarks>
+            	The compare sorts in desc order, largest EditDistance first
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.ToString">
+            <summary>
+                Converts the word object to a string
+            </summary>
+            <returns>
+            	Returns the Text Property contents
+            </returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.AffixKeys">
+            <summary>
+                The affix keys that can be applied to this base word
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.Index">
+            <summary>
+                The index position of where this word appears
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.PhoneticCode">
+            <summary>
+                The phonetic code for this word
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.Text">
+            <summary>
+                The string for the base word
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.EditDistance">
+            <summary>
+                Used for sorting suggestions by its edit distance for 
+                the misspelled word
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word.Height">
+            <summary>
+                The line height of this word
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary">
+            <summary>
+            The WordDictionary class contains all the logic for managing the word list.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.#ctor">
+            <summary>
+                Initializes a new instance of the class
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.LoadUserFile">
+            <summary>
+                Loads the user dictionary file
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.SaveUserFile">
+            <summary>
+                Saves the user dictionary file
+            </summary>
+            <remarks>
+            	If the file does not exist, it will be created
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.VerifyAffixKey(System.String,System.Char)">
+            <summary>
+                Verifies the base word has the affix key
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    Base word to check
+                </para>
+            </param>
+            <param name="affixKey" type="string">
+                <para>
+                    Affix key to check 
+                </para>
+            </param>
+            <returns>
+                True if word contains affix key
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Add(System.String)">
+            <summary>
+                Adds a word to the user list
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to add
+                </para>
+            </param>
+            <remarks>
+            	This method is only affects the user word list
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Clear">
+            <summary>
+                Clears the user list of words
+            </summary>
+            <remarks>
+            	This method is only affects the user word list
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Contains(System.String)">
+            <summary>
+                Searches all contained word lists for word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to search for
+                </para>
+            </param>
+            <returns>
+                Returns true if word is found
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.ExpandWord(GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word)">
+            <summary>
+                Expands an affix compressed base word
+            </summary>
+            <param name="word" type="GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.Word">
+                <para>
+                    The word to expand
+                </para>
+            </param>
+            <returns>
+                A System.Collections.ArrayList of words expanded from base word
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Initialize">
+            <summary>
+                Initializes the dictionary by loading and parsing the
+                dictionary file and the user file.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.PhoneticCode(System.String)">
+            <summary>
+                Generates a phonetic code of how the word sounds
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to generated the sound code from
+                </para>
+            </param>
+            <returns>
+                A code of how the word sounds
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Remove(System.String)">
+            <summary>
+                Removes a word from the user list
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to remove
+                </para>
+            </param>
+            <remarks>
+            	This method is only affects the user word list
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.BaseWords">
+            <summary>
+                The collection of base words for the dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Copyright">
+            <summary>
+                Copyright text for the dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.DictionaryFile">
+            <summary>
+                The file name for the main dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.DictionaryFolder">
+            <summary>
+                Folder containing the dictionaries
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.EnableUserFile">
+            <summary>
+                Set this to true to automaticly create a user dictionary when
+                a word is added.
+            </summary>
+            <remarks>
+            	This should be set to false in a web environment
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.Initialized">
+            <summary>
+                True if the dictionary has been initialized
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.PhoneticRules">
+            <summary>
+                Collection of phonetic rules for this dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.PrefixRules">
+            <summary>
+                Collection of affix prefixes for the base words in this dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.ReplaceCharacters">
+            <summary>
+                List of characters to use when generating suggestions using the near miss stratigy
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.SuffixRules">
+            <summary>
+                Collection of affix suffixes for the base words in this dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.TryCharacters">
+            <summary>
+                List of characters to try when generating suggestions using the near miss stratigy
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.UserFile">
+            <summary>
+                The file name for the user word list for this dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.UserWords">
+            <summary>
+                List of user entered words in this dictionary
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Dictionary.WordDictionary.PossibleBaseWords">
+            <summary>
+                List of text saved from when 'Contains' is called. 
+                This list is used to generate suggestions from if Contains
+                doesn't find a word.
+            </summary>
+            <remarks>
+            	These are not actual words.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.ReplaceWordEventArgs">
+            <summary>
+            Summary description for ReplaceWordEventArgs.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs">
+            <summary>
+                Class sent to the event handler when the DoubleWord or 
+                MisspelledWord event occurs
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs.#ctor(System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
+            <summary>
+                Constructor used to pass in properties
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs.TextIndex">
+            <summary>
+                Text index of the WordEvent
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs.Word">
+            <summary>
+                Word that caused the WordEvent
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs.WordIndex">
+            <summary>
+                Word index of the WordEvent
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs.Suggestions">
+            <summary>
+            Suggestions for this misspelled word.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.ReplaceWordEventArgs.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+                Class sent to the event handler when the ReplacedWord Event is fired
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.ReplaceWordEventArgs.ReplacementWord">
+            <summary>
+                The word to use in replacing the misspelled word
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling">
+            <summary>
+            	The Spelling class encapsulates the functions necessary to check
+            	the spelling of inputted text.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnDeletedWord(GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnDoubledWord(GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnEndOfText(System.EventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnIgnoredWord(GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnMisspelledWord(GuruComponents.Netrix.SpellChecker.NetSpell.SpellingEventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.OnReplacedWord(GuruComponents.Netrix.SpellChecker.NetSpell.ReplaceWordEventArgs)">
+            <summary>
+                This is the method that is responsible for notifying
+                receivers that the event occurred
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.#ctor">
+            <summary>
+                Initializes a new instance of the SpellCheck class
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CalculateWords">
+            <summary>
+                Calculates the words from the Text property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CheckString(System.String)">
+            <summary>
+                Determines if the string should be spell checked
+            </summary>
+            <param name="characters" type="string">
+                <para>
+                    The Characters to check
+                </para>
+            </param>
+            <returns>
+                Returns true if the string should be spell checked
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.MarkHtml">
+            <summary>
+                Calculates the position of html tags in the Text property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Reset">
+            <summary>
+                Resets the public properties
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.BadChar(System.Collections.ArrayList@)">
+            <summary>
+            	swap out each char one by one and try all the tryme
+            	chars in its place to see if that makes a good word
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ExtraChar(System.Collections.ArrayList@)">
+            <summary>
+                try omitting one char of word at a time
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ForgotChar(System.Collections.ArrayList@)">
+            <summary>
+                try inserting a tryme character before every letter
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceChars(System.Collections.ArrayList@)">
+            <summary>
+                suggestions for a typical fault of spelling, that
+            	differs with more, than 1 letter from the right form.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SwapChar(System.Collections.ArrayList@)">
+            <summary>
+                try swapping adjacent chars one by one
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TwoWords(System.Collections.ArrayList@)">
+            <summary>
+                split the string into two pieces after every char
+            	if both pieces are good words make them a suggestion
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.DeleteWord">
+            <summary>
+                Deletes the CurrentWord from the Text Property
+            </summary>
+            <remarks>
+            	Note, calling ReplaceWord with the ReplacementWord property set to 
+            	an empty string has the same behavior as DeleteWord.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.EditDistance(System.String,System.String,System.Boolean)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <param name="positionPriority" type="bool">
+                <para>
+                    set to true if the first and last char should have priority
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.EditDistance(System.String,System.String)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+            <remarks>
+            	This method automatically gives priority to matching the first and last char
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.GetWordIndexFromTextIndex(System.Int32)">
+            <summary>
+            	Gets the word index from the text index.  Use this method to 
+            	find a word based on the text position.
+            </summary>
+            <param name="textIndex">
+            	<para>
+                    The index to search for
+                </para>
+            </param>
+            <returns>
+            	The word index that the text index falls on
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreAllWord">
+            <summary>
+            Ignores all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreWord">
+            <summary>
+            Ignores the instances of the CurrentWord in the Text Property.
+            </summary>
+            <remarks>
+            Must call SpellCheck after call this method to resume spell checking.
+            Forces the IgnoredWord event on Speller plug-in. Host application must handle.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceAllWord">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceAllWord(System.String)">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceWord">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceWord(System.String)">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/> position.
+            </summary>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck(System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/> position. This overload takes in the
+                WordIndex to start checking from.
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck(System.Int32,System.Int32)">
+            <summary>
+                Spell checks a range of words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/> position and ending at endWordIndex. 
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <param name="endWordIndex" type="int">
+                <para>
+                    The index of the word to end checking with. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck(System.String)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/> position. This overload takes in the 
+                text to spell check
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck(System.String,System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/> position. This overload takes in 
+                the text to check and the WordIndex to start checking from.
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggest(System.String)">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggestions"/> property with word suggestions
+                for the word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to generate suggestions on
+                </para>
+            </param>
+            <remarks>
+            	This method sets the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text"/> property to the word. 
+            	Then calls <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TestWord(System.String)"/> on the word to generate the need
+            	information for suggestions. Note that the Text, CurrentWord and WordIndex 
+            	properties are set when calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggest">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggestions"/> property with word suggestions
+                for the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            </summary>
+            <remarks>
+            	<see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TestWord(System.String)"/> must have been called before calling this method
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TestWord(System.String)">
+            <summary>
+                Checks to see if the word is in the dictionary
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to check
+                </para>
+            </param>
+            <returns>
+                Returns true if word is found in dictionary
+            </returns>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.DeletedWord">
+            <summary>
+                This event is fired when a word is deleted
+            </summary>
+            <remarks>
+            	Use this event to update the parent text
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.DoubledWord">
+            <summary>
+                This event is fired when word is detected two times in a row
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.EndOfText">
+            <summary>
+                This event is fired when the spell checker reaches the end of
+                the text in the Text property
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoredWord">
+            <summary>
+                This event is fired when a word is skipped
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.MisspelledWord">
+            <summary>
+                This event is fired when the spell checker finds a word that 
+                is not in the dictionaries
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplacedWord">
+            <summary>
+                This event is fired when a word is replace
+            </summary>
+            <remarks>
+            	Use this event to update the parent text
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.AlertComplete">
+            <summary>
+                Display the 'Spell Check Complete' alert.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord">
+            <summary>
+                The current word being spell checked from the text property
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Dictionary">
+            <summary>
+                The WordDictionary object to use when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreAllCapsWords">
+            <summary>
+                Ignore words with all capital letters when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreHtml">
+            <summary>
+                Ignore html tags when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreList">
+            <summary>
+                List of words to automatically ignore
+            </summary>
+            <remarks>
+            	When <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreAllWord"/> is clicked, the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/> is added to this list
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoreWordsWithDigits">
+            <summary>
+                Ignore words with digits when spell checking
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.MaxSuggestions">
+            <summary>
+                The maximum number of suggestions to generate
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceList">
+            <summary>
+                List of words and replacement values to automatically replace
+            </summary>
+            <remarks>
+            	When <see cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceAllWord"/> is clicked, the <see cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.CurrentWord"/> is added to this list
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplacementWord">
+            <summary>
+                The word to used when replacing the misspelled word
+            </summary>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceAllWord"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplaceWord"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ShowDialog">
+            <summary>
+                Determines if the spell checker should use an attached dialog.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellcheckerForm">
+            <summary>
+            Gets or sets the dialog form that is shown internally.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SuggestionMode">
+            <summary>
+                The suggestion strategy to use when generating suggestions
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggestions">
+            <summary>
+                An array of word suggestions for the correct spelling of the misspelled word
+            </summary>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Suggest"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.SpellCheck(System.String)"/>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.MaxSuggestions"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.Text">
+            <summary>
+                The text to spell check
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.TextIndex">
+            <summary>
+                TextIndex is the index of the current text being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordCount">
+            <summary>
+                The number of words being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.WordIndex">
+            <summary>
+                WordIndex is the index of the current word being spell checked
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.DeletedWordEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.DoubledWordEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.EndOfTextEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.IgnoredWordEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.MisspelledWordEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.NetSpell.Spelling.ReplacedWordEventHandler">
+            <summary>
+                This represents the delegate method prototype that
+                event receivers must implement
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordEventHandler">
+            <summary>
+            Delegate that supports the spell checker events.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.SpellCommands">
+            <summary>
+            Speller Commands this extender provides.
+            </summary>
+            <remarks>
+            You must invoke the commands using the <c>Invoke</c> method in the HtmlEditor base class.
+            Commands can not have parameters. In fact, one must set the speller properties accordingly before issuing a command.
+            </remarks>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StartWordByWord">
+            <summary>
+            Start spelling word by word.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StopWordByWord">
+            <summary>
+            Stop spelling word by word.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StartBackground">
+            <summary>
+            Start spelling as-you-type.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StopBackground">
+            <summary>
+            Stop spelling as-you-type.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StartBlock">
+            <summary>
+            Start spelling within the currently selected block of text.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.StopBlock">
+            <summary>
+            Stop spelling within the currently selected block of text.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.RemoveHighLight">
+            <summary>
+            Remove all highlight segments.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.SpellChecker.SpellCommands.ClearBuffer">
+            <summary>
+            Clear the word buffer.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCommands.CommandGroup">
+            <summary>
+            The command group's GUID this plugin supports.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.SpellControlDesigner">
+            <summary>
+            Adds the license manager verb (action) to context menu at VS.NET design time.
+            </summary>
+            <remarks>
+            THIS CLASS CANNOT BE USED FROM USER CODE. IT SUPPORTS THE NETRIX DESIGN TIME INFRASTRUCTURE ONLY.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.SpellControlDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Intitializes the commponent.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.SpellControlDesigner.PostFilterProperties(System.Collections.IDictionary)">
+            <summary>
+            Filters the list of properties in the property grid.
+            </summary>
+            <remarks>
+            THIS METHOD CANNOT BE USED FROM USER CODE. IT SUPPORTS THE NETRIX DESIGN TIME INFRASTRUCTURE ONLY.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellControlDesigner.Verbs">
+            <summary>
+            Creates a new collection of designer verbs.
+            </summary>
+            <remarks>
+            THIS PROPERTY CANNOT BE USED FROM USER CODE. IT SUPPORTS THE NETRIX DESIGN TIME INFRASTRUCTURE ONLY.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellControlDesigner.ActionLists">
+            <summary>
+            Supports the popertygrid.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.Speller">
+             <summary>
+             The Spellchecker ExtenderProvider component.
+             </summary>
+             <remarks>
+             To use this plug-in simply add the component to the toolbox and drag drop to the current window.
+             It will extend all available editor instances there. This component is based on the common NetSpell classes
+             and the OpenOffice based dictionaries. Dictionaries are available as files so they can simply replaced by
+             newer or specialized versions.
+             <para>
+             Several methods need the current HtmlEditor instance. This is necessary because the Speller PlugIn exists only once and
+             
+             </para>
+             <para>
+             The spellchecker supports both "as-you-type" (background checking) and interactive spell checking. Both methods
+             are event based and very fast.
+             </para>
+             <example>
+             First the recommended way to implement background spellchecking. Assume <c>backgroundOn</c> is set by some sort of
+             command or menu item click:
+             <code> 
+            if (backgroundOn)
+            {
+                htmlEditor1.InvokeCommand(speller1.Commands.StartBackground);
+            }
+            else
+            {
+                htmlEditor1.InvokeCommand(speller1.Commands.StopBackground);
+                htmlEditor1.InvokeCommand(speller1.Commands.RemoveHighLight);
+            }
+             </code>
+             You can see that we invoke commands against an extender by calling the editor instance. This way we can deal with
+             many different instances, even if only one extender exists.
+             <para>
+             To change the current dictionary and start interactive spelling the following code gives you a starter:
+             </para>
+             <code>
+             switch (dicName)
+            {
+                case "Deutsch":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("de-DE");
+                    break;
+                case "English (US)":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("en-US");
+                    break;
+                case "English (UK)":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("en-UK")
+                    break;
+                case "Spanish":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("es-ES");
+                    break;
+                case "French":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("fr-FR");
+                    break;
+                case "Italian":
+                    speller1.Speller.GetSpellChecker(htmlEditor1).LanguageType = new CultureInfo("it-IT");
+                    break;
+            }
+            htmlEditor1.InvokeCommand(speller1.Commands.StartWordByWord);
+             </code>
+             <para>
+             However, all these examples will not work properly without attaching the appropriate events. First, operating with a context menu:
+             </para>
+             <code>
+             this.speller1.WordOnContext += new GuruComponents.Netrix.PlugIns.SpellChecker.WordOnContextHandler(this.speller1_WordOnContext);
+             </code>
+             It's necessary to use this event because it appears at a different time than the usual OnContextMenu event. This is necessary to first place
+             the caret on the word and open the menu, then. This makes it possible to get suggestions for the current word.
+             <code>
+             private void speller1_WordOnContext(object sender, GuruComponents.Netrix.PlugIns.SpellChecker.WordOnContextEventArgs e)
+             {
+                 contextMenu1.MenuItems.Clear();
+                 contextMenu1.MenuItems.Add(e.Word, new EventHandler(this.contextMenu_Word));
+             }
+             </code>
+             Here we simply add the word to the context menu, but the <c>e.Suggestions</c> property will provide suggestions, if any.
+             <para>
+             </para>
+             Various other events helps building sophisticated spell checker enabled applications.
+             </example>
+             <para>
+             The spellchecker will operate with defaults here, that means wrong spelled words have red waved lines.
+             </para>
+             <para>
+             Recommended readings regarding NetSpell are:
+             <list type="bullet">
+                 <item>How to create a custom dictionary: http://www.loresoft.com/Applications/NetSpell/Articles/246.aspx </item>
+                 <item>Overview NetSpell: http://www.loresoft.com/Applications/NetSpell/Articles/152.aspx </item>
+             </list>
+             </para>
+             </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.#ctor">
+            <summary>
+            Default Constructor supports design time behavior.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Constructor supports design time behavior.
+            </summary>
+            <param name="parent">Forms container the extender belongs to.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.GetSpellChecker(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Returns the instance of base spell checker module for the given editor instance.
+            </summary>
+            <remarks>
+            This instance provides access to the commands as regular method calls. It's recommended to use the commands and HtmlEditor's Invoke
+            method. You may consider using this instance for advanced implementions that use more than just the common features.
+            </remarks>
+            <param name="key">The editor we reference to.</param>
+            <returns>The base spellchecker instance this extender uses.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.GetSpeller(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Support the designer infrastructure.
+            </summary>
+            <param name="htmlEditor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.SetSpeller(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.SpellChecker.SpellCheckerProperties)">
+            <summary>
+            Support the designer infrastructure.
+            </summary>
+            <param name="htmlEditor"></param>
+            <param name="props"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.NotifyReadyStateCompleted(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Informs the extender that the containing control is ready.
+            </summary>
+            <param name="editor"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.CanExtend(System.Object)">
+            <summary>
+            Informs the designer that the currently selected control can be extended by the Speller.
+            </summary>
+            <remarks>
+            To make the Speller available the component must derive from <see cref="T:GuruComponents.Netrix.IHtmlEditor"/>.
+            </remarks>
+            <param name="extendee">Control which tries to adopt the Speller. Expected control is NetRix HtmlEditor only.</param>
+            <returns>Returns <c>true</c> in case of NetRix component, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.GetExtendee(GuruComponents.Netrix.SpellChecker.Speller)">
+            <summary>
+            Return the editor which the given instance actually extends.
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.GetSupportedNamespaces(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            The Spellchecker control does not support any namespaces.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.Speller.GetElementExtenders(GuruComponents.Netrix.WebEditing.Elements.IElement)">
+            <summary>
+            List of element types, which the extender plugin extends.
+            </summary>
+            <remarks>
+            See <see cref="M:GuruComponents.Netrix.PlugIns.IPlugIn.GetElementExtenders(GuruComponents.Netrix.WebEditing.Elements.IElement)"/> for background information.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.IsInCheck">
+            <summary>
+            Indicates that a spell check operation is currently in progress.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.IsInBackground">
+            <summary>
+            Indicates that the spell checker runs in background ('as you type') mode.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.Commands">
+            <summary>
+            Returns the definitions for commands accepted by the Speller extender.
+            </summary>
+            <remarks>
+            The <see cref="T:GuruComponents.Netrix.SpellChecker.SpellCommands"/> class defines the commands, which the extender registers 
+            within the base control. The host application is supposed to issue the commands via the base component
+            instead of calling the Speller directly to assure that multiple instances of the NetRox component are
+            invoked properly.
+            <seealso cref="T:GuruComponents.Netrix.SpellChecker.SpellCommands"/>
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.WordChecker">
+            <summary>
+            Event fired for each word found. The event is disabled if the internal spell checker is being used (default).
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.WordCheckerStop">
+            <summary>
+            Event fired for each word found. The event is disabled if the internal spell checker is being used (default).
+            </summary>
+            <remarks>
+            The return value of the callback function is used to stop the checking
+            process immediately. In case of internal spell checker the event doesn't fire. One can use the
+            StopWordByWord command as well as the StopBackground command. Issuing commands is based on the 
+            <see cref="M:GuruComponents.Netrix.IHtmlEditor.InvokeCommand(System.ComponentModel.Design.CommandID)"/>
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.WordCheckerFinished">
+            <summary>
+            Event fired once the word checking is done. 
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.WordOnContext">
+            <summary>
+            Event fired if the user has right clicked the word and the caret has moved.
+            </summary>
+            <remarks>
+            This event is later than
+            ContextMenu because it is necessary to being delayed to set the caret to the final position before
+            an attached context menu opens.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.DeletedWord">
+            <summary>
+                This event is fired when a word is deleted.
+            </summary>
+            <remarks>
+            	Use this event to update the parent text.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.DoubledWord">
+            <summary>
+                This event is fired when word is detected two times in a row.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.EndOfText">
+            <summary>
+                This event is fired when the spell checker reaches the end of
+                the text in the Text property.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.IgnoredWord">
+            <summary>
+                This event is fired when a word is skipped.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.MisspelledWord">
+            <summary>
+                This event is fired when the spell checker finds a word that. 
+                is not in the dictionaries
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.Speller.ReplacedWord">
+            <summary>
+            This event is fired when a word is replaced.
+            </summary>
+            <remarks>
+            Use this event to update the parent text.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.Version">
+            <summary>
+            Returns the current assembly version number.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.Name">
+            <summary>
+            Internal name
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.IsExtenderProvider">
+            <summary>
+            Extends Netrix
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.Speller.Features">
+            <summary>
+            The Spellchecker does not support any extender features.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties">
+            <summary>
+            This class collects the properties used to configure the spell checker as well as the spell checker dialog.
+            </summary>
+            <remarks>
+            The direct usage of this class is not recommended. Instead, the Extenderprovider class <see cref="N:GuruComponents.Netrix.SpellChecker"/>
+            should be used to set the properties using the VS.NET designer. The properties will appear in the NetRix Component
+            group as "SpellChecker on spellchecker1" behind the plus sign (other languages may have other descriptions and
+            the name depends on the name the developer gave the extender). 
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.#ctor(GuruComponents.Netrix.SpellChecker.IDocumentSpellChecker)">
+            <summary>
+            Constructor for properties with backreference parameter to spellchecker instance.
+            </summary>
+            <param name="documentSpellChecker">Spellchecker instance this property instance refers to.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.ToString">
+            <summary>
+            Overridden to support design time features.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.MainMenuVisible">
+            <summary>
+            Set main menu.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.ToolStripVisible">
+            <summary>
+            Set toolstrip.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.Dictionary">
+            <summary>
+            Path to the dictionary being used for current spell process.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.ReplaceList">
+            <summary>
+            List of words being automatically replaced.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.IgnoreList">
+            <summary>
+            List of words being ignored during check procedure.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.IgnoreHtml">
+            <summary>
+                Ignore html tags when spell checking.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.LanguageType">
+            <summary>
+            Language (Culture) from list of supported languages.
+            </summary>
+            <remarks>
+            The component will seek for a dictionary according to the settings. If the culture is set to
+            "de-DE" the component will look for "de-DE.dic" in the default or defined folder. There is no
+            fallback to another language or base language.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.DictionaryPath">
+            <summary>
+            Path to the dictionaries.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.IgnoreWordsWithDigits">
+            <summary>
+            Ignore words with digits when spell checking.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.IgnoreUpperCaseWords">
+            <summary>
+            Whether or not ognore uppercase words.
+            </summary>
+            <remarks>
+            If set to <c>true</c> the speller will ignore words which consists of upper case letters only.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.MaxSuggestionsCount">
+            <summary>
+            The maximum number of suggestions to generate. Default is 25.
+            </summary>
+            <remarks>
+            Suggestions can be used to create a context menu or dialog where the user could choose
+            suggestions from. Suggestions are create based on current word and pulled from the current
+            dictionary.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.HighLightStyle">
+            <summary>
+            The style used to format wrongly spelled words.
+            </summary>
+            <remarks>
+            By default a red waved line is being used.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.SuggestionType">
+            <summary>
+            The suggestion strategy to use when generating suggestions.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.SpellCheckerProperties.CheckInternal">
+             <summary>
+             Activates the internal spell checker, based on NetSpell.
+             </summary>
+            <remarks>
+             If the internal spell checker is used the NetRix Spell events are disabled. 
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker">
+            <summary>
+            This realizes the spell checker API using callback methods.
+            </summary>
+            <remarks>
+            <para>
+            Usage instructions: To use this class add the SpellChecker component to the form where the NetRix HtmlEditor
+            component is used. It will extend the editor by adding commands and properties for spell checking. The various
+            properties can be set within the designer. For more information have a look at <see cref="T:GuruComponents.Netrix.SpellChecker.Speller">Speller</see>
+            class.
+            </para>
+            This module does implement any spell checking feature but it supports word selection and
+            highlighting. This allows third party developers to attach there own spell checker and commercial
+            dictionaries.
+            <para>
+            Currently the module supports word checking only. That means that the text fragments returned are clipped
+            on word boundaries.
+            </para>
+            <seealso cref="T:GuruComponents.Netrix.SpellChecker.Speller">Speller</seealso>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.#ctor(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Constructor, creates an instance. Used internally through plug-in.
+            </summary>
+            <param name="editor">The associated editor.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.RemoveWordCheckingHighlights">
+            <summary>
+            Remove the highlighted sections from the whole document.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoWordCheckingHighlights">
+            <summary>
+            Checks the complete document and highlight any wrong word using default highlight style.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoWordCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle)">
+            <summary>
+            Checks the complete document and highlight any wrong word.
+            </summary>
+            <remarks>
+            The method calls a callback method the host application
+            must provide and which returns a boolean value to control the behavior of the highlighter.
+            </remarks>
+            <param name="highLightStyle">The style used to mark wrong words</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoWordCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle,System.Boolean)">
+            <summary>
+            Checks the complete document and highlight any wrong word.
+            </summary>
+            <remarks>
+            The method calls a callback method the host application
+            must provide and which returns a boolean value to control the behavior of the highlighter.
+            </remarks>
+            <param name="highLightStyle">The style used to mark wrong word</param>
+            <param name="backgroundService">If true the service runs as a endless background process until the WordStop callback handler returns true.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoWordCheckingSelected">
+            <summary>
+            Checks the complete document and select any wrong word with the standard selection.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoBlockCheckingHighlights(GuruComponents.Netrix.WebEditing.HighLighting.IHighLightStyle)">
+            <summary>
+            Checks a block (normally, a sentence) and forwards the block to the spellchecker callback.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="highLightStyle">The style being used to highlight (select) the current block.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoBlockCheckingSelected">
+            <summary>
+            Checks the complete document interactively and tags the current word in default selection style.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.GetCurrentWord(System.Boolean,System.Boolean)">
+            <summary>
+            Get the current word left, right or under caret, depending on movement and punctuation.
+            </summary>
+            <param name="expand"></param>
+            <param name="onReturn"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.CheckWord">
+            <summary>
+            Check current word, if exists.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordUnderPointer">
+            <summary>
+            Returns the word the caret is on on nearby.
+            </summary>
+            <returns>The recognized word, or <c>null</c>, if nothing was recognized.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceWordUnderPointer(System.String)">
+            <summary>
+            Replaces the word the caret is currently in with other text.
+            </summary>
+            <param name="replaceWith">Text for replacement.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TestWord(System.String)">
+            <summary>
+                Checks to see if the word is in the dictionary.
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to check.
+                </para>
+            </param>
+            <returns>
+                Returns true if word is found in dictionary.
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggest(System.String)">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggestions"/> property with word suggestions.
+                for the word
+            </summary>
+            <param name="word" type="string">
+                <para>
+                    The word to generate suggestions on.
+                </para>
+            </param>
+            <remarks>
+            	This method sets the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property to the word. 
+            	Then calls <see cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TestWord(System.String)"/> on the word to generate the need
+            	information for suggestions. Note that the Text, CurrentWord and WordIndex 
+            	properties are set when calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggest">
+            <summary>
+                Populates the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggestions"/> property with word suggestions.
+                for the current word.
+            </summary>
+            <remarks>
+            	<see cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TestWord(System.String)"/> must have been called before calling this method.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggestions"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TestWord(System.String)"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DeleteWord">
+            <summary>
+                Deletes the CurrentWord from the Text Property
+            </summary>
+            <remarks>
+            	Note, calling ReplaceWord with the ReplacementWord property set to 
+            	an empty string has the same behavior as DeleteWord.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.EditDistance(System.String,System.String,System.Boolean)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <param name="positionPriority" type="bool">
+                <para>
+                    set to true if the first and last char should have priority
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.EditDistance(System.String,System.String)">
+            <summary>
+                Calculates the minimum number of change, inserts or deletes
+                required to change firstWord into secondWord
+            </summary>
+            <param name="source" type="string">
+                <para>
+                    The first word to calculate
+                </para>
+            </param>
+            <param name="target" type="string">
+                <para>
+                    The second word to calculate
+                </para>
+            </param>
+            <returns>
+                The number of edits to make firstWord equal secondWord
+            </returns>
+            <remarks>
+            	This method automatically gives priority to matching the first and last char
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.GetWordIndexFromTextIndex(System.Int32)">
+            <summary>
+            	Gets the word index from the text index.  Use this method to 
+            	find a word based on the text position.
+            </summary>
+            <param name="textIndex">
+            	<para>
+                    The index to search for
+                </para>
+            </param>
+            <returns>
+            	The word index that the text index falls on
+            </returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.IgnoreAllWord">
+            <summary>
+            Ignores all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.IgnoreWord">
+            <summary>
+            Ignores the instances of the CurrentWord in the Text Property.
+            </summary>
+            <remarks>
+            Must call SpellCheck after call this method to resume spell checking.
+            Forces the IgnoredWord event on Speller plug-in. Host application must handle.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceAllWord">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceAllWord(System.String)">
+            <summary>
+                Replaces all instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceWord">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceWord(System.String)">
+            <summary>
+                Replaces the instances of the CurrentWord in the Text Property
+            </summary>
+            <param name="replacementWord" type="string">
+                <para>
+                    The word to replace the CurrentWord with
+                </para>
+            </param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/> position.
+            </summary>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck(System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/> position. This overload takes in the
+                WordIndex to start checking from.
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck(System.Int32,System.Int32)">
+            <summary>
+                Spell checks a range of words in the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/> position and ending at endWordIndex. 
+            </summary>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from. 
+                </para>
+            </param>
+            <param name="endWordIndex" type="int">
+                <para>
+                    The index of the word to end checking with. 
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck(System.String)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/> position. This overload takes in the 
+                text to spell check
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck(System.String,System.Int32)">
+            <summary>
+                Spell checks the words in the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text"/> property starting
+                at the <see cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/> position. This overload takes in 
+                the text to check and the WordIndex to start checking from.
+            </summary>
+            <param name="text" type="string">
+                <para>
+                    The text to spell check
+                </para>
+            </param>
+            <param name="startWordIndex" type="int">
+                <para>
+                    The index of the word to start checking from
+                </para>
+            </param>
+            <returns>
+                Returns true if there is a word found in the text 
+                that is not in the dictionaries
+            </returns>
+            <seealso cref="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex"/>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplaceWordUnderPointer(System.Boolean,System.String)">
+            <summary>
+            Replaces the word the caret is currently in with other text.
+            </summary>
+            <param name="withHtml">If set to <c>true</c> it's allowed to add HTML.</param>
+            <param name="replaceWith">Text or HTML for replacement.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordUnderPointer(System.Boolean)">
+            <summary>
+            Returns the word with or without inline HTML the caret is on or nearby.
+            </summary>
+            <param name="withHtml">If true the method returns any embedded HTML too, otherwise HTML is stripped out.</param>
+            <returns>The recognized HTML, or <c>null</c>, if nothing was recognized.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ToString">
+            <summary>
+            Overwritten for PropertyGrid Designtime support.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.NetSpell">
+            <summary>
+            Access to the underlying NetSpell instance.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DeletedWord">
+            <summary>
+                This event is fired when a word is deleted.
+            </summary>
+            <remarks>
+            	Use this event to update the parent text.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.DoubledWord">
+            <summary>
+                This event is fired when word is detected two times in a row.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.EndOfText">
+            <summary>
+                This event is fired when the spell checker reaches the end of
+                the text in the Text property.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.IgnoredWord">
+            <summary>
+                This event is fired when a word is skipped.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.MisspelledWord">
+            <summary>
+                This event is fired when the spell checker finds a word that. 
+                is not in the dictionaries
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReplacedWord">
+            <summary>
+            This event is fired when a word is replaced.
+            </summary>
+            <remarks>
+            Use this event to update the parent text.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordChecker">
+            <summary>
+            Event fired for each word found.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordCheckerStop">
+            <summary>
+            Event fired for each word found. The return value of the callback function is used to stop the checking
+            process immediately.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordCheckerFinished">
+            <summary>
+            Event fired once the word checking is done.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordOnContext">
+            <summary>
+            Event fired if the suer has right clicked the word and the caret has moved.
+            </summary>
+            <remarks>
+            This event is later than
+            ContextMenu because it is necessary to being delayed to set the caret to the final position before
+            an attached context menu opens.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.HighLightStyle">
+            <summary>
+            Gets or sets the <see cref="T:GuruComponents.Netrix.WebEditing.HighLighting.HighLightStyle"/> for the
+            spell checker.
+            </summary>
+            <remarks>
+            The style is used to highlight words marked as wrong.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.BackgroundService">
+            <summary>
+            Activates or deactivates the background service.
+            </summary>
+            <remarks>
+            This service runs through the document and restarts
+            at the end automatically. Setting this property to <c>false</c> will stop the service.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.MisSpelledWords">
+            <summary>
+            Returns the collection of misspelled words.
+            </summary>
+            <remarks>
+            This collection contains objects of type <see cref="T:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SegmentStore"/>, a struct, which contains
+            the misspelled word and the reference to the highlight engine. You can call
+            <see cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SegmentStore.RemoveHighlight"/> to remove the highlighting of a specific word.
+            <para>
+            <b>Important:</b> This property is only available if background spelling is enabled.  
+            </para>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.ReformatHtml">
+            <summary>
+            Try to persist the inline HTML at the exact position it was before the word was replaced.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.MinCharCount">
+            <summary>
+            The minimum number of characters a word must have to being checked.
+            </summary>
+            <remarks>
+            This property applies to both, spellchecker and background spellchecker.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.CheckInternal">
+            <summary>
+            Gets or sets a value that activates the internal NetSpell spell checker.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SuggestionMode">
+            <summary>
+                The suggestion strategy to use when generating suggestions
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggestions">
+            <summary>
+                An array of word suggestions for the correct spelling of the misspelled word
+            </summary>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Suggest"/>
+            <seealso cref="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SpellCheck"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Text">
+            <summary>
+                The text to spell check
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.TextIndex">
+            <summary>
+                TextIndex is the index of the current text being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordCount">
+            <summary>
+                The number of words being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.WordIndex">
+            <summary>
+                WordIndex is the index of the current word being spell checked
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Dictionary">
+            <summary>
+                The WordDictionary object to use when spell checking.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.Spelling">
+            <summary>
+            Access to the underyling NetSpell instance. For internal use only.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SegmentStore">
+            <summary>
+            Allows access to the collection of misspelled words during background checking.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SegmentStore.RemoveHighlight">
+            <summary>
+            Remove the highlighting from associated word.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.DocumentSpellChecker.SegmentStore.Word">
+            <summary>
+            Misspelled word.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordEventArgs">
+            <summary>
+            Event arguments used for the various speller handler.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.WordEventArgs.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="word"></param>
+            <param name="html"></param>
+            <param name="count"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordEventArgs.ReplacementWord">
+            <summary>
+            Word which replaces the current word.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordEventArgs.Word">
+            <summary>
+            Word recognizes as wrongly spelled.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordEventArgs.Html">
+            <summary>
+            Word with HTML formatting recognizes as wrongly spelled.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordEventArgs.WordCount">
+            <summary>
+            Number of words currently counted in the document.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordCheckerEventArgs">
+            <summary>
+            The event arguments for the <see cref="T:GuruComponents.Netrix.SpellChecker.WordCheckerFinishedHandler"/>.
+            </summary>
+            <remarks>
+            The event arguments contain information about the number of words in the document and the
+            list of segments as <see cref="T:System.Collections.ArrayList">ArrayList</see>.
+            </remarks>
+            <seealso cref="T:GuruComponents.Netrix.SpellChecker.WordCheckerFinishedHandler"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordCheckerEventArgs.WordCount">
+            <summary>
+            Gets the number of word the document contains.
+            </summary> 
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordCheckerEventArgs.Segments">
+            <summary>
+            Gets the list of highlighted segments.
+            </summary>
+            <remarks>
+            This property supports the NetRix infrastructure
+            and cannot be used to manipulate the highlighting later on.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordCheckerFinishedHandler">
+            <summary>
+            Event, fired if the word checker is ready with whole document.
+            </summary>
+            <remarks>
+            During background checking processes the event is fired after each run through the document.
+            </remarks>
+            <seealso cref="T:GuruComponents.Netrix.SpellChecker.WordCheckerEventArgs"/>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordCheckerHandler">
+            <summary>
+            The callback function attached here is called for any word found.
+            </summary>
+            <remarks>
+            The handler
+            should return true if the word is ok or false if it is wrong.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs">
+            <summary>
+            The arguments used with <see cref="E:GuruComponents.Netrix.SpellChecker.Speller.WordOnContext"/> event, which is fired after right click on word.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs.#ctor(System.String,System.String,System.Drawing.Point)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="word"></param>
+            <param name="html"></param>
+            <param name="pos"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs.Suggestions">
+            <summary>
+            A list of suggestions for the word.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs.Word">
+            <summary>
+            The word (text) currently recognized as under pointer.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs.Html">
+            <summary>
+            The word (with HTML formatting) recognized as under pointer.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.SpellChecker.WordOnContextEventArgs.Position">
+            <summary>
+            The location of the contextmenu following the current mouse spot.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordOnContextHandler">
+            <summary>
+            The handler is used with WordOnContext event, which is fired after right click on word.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.SpellChecker.WordCheckerStopHandler">
+            <summary>
+            The handler should return true if the word checker must stop.
+            </summary>
+        </member>
+    </members>
+</doc>

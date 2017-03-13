@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<text comment="This file contains widely used standard phrases for the XML documentation">
+    <WebEditing>
+        <Elements name="ElementInsertion">
+            <para>
+            This class should never be instatiated directly. The recommended way to insert an element is to use
+            the <see cref="GuruComponents.Netrix.HtmlEditor.Document">Document</see> property of the base class
+            <see cref="GuruComponents.Netrix.HtmlEditor"/>. This class provides provides various insertion methods. Each
+            method will return an object of type <see cref="GuruComponents.Netrix.WebEditing.Elements.IElement">IElement</see>, 
+            which can be casted in the created element (but no other). 
+            </para>
+        </Elements>
+        <Elements name="HorizontalAlign">
+        <summary>
+        Horizontal alignment (left, center, right) within the surrounding block element.
+        </summary>
+        <remarks>
+        This attributes allows the horizontal alignment within the surrounding block element. The options
+        and there behavior differs slightly between the elements. The property allows the list provided
+        by the <see cref="System.Web.UI.WebControls.HorizontalAlign">HorizontalAlign</see> enumeration.
+        </remarks>
+        </Elements>
+        <Elements name="TargetAttribute">
+            <summary>
+            TARGET controls where the new document will be displayed when the user follows a link.
+            </summary>
+            <remarks>
+            Most of the time, clicking on a link simply loads a new document in the same window where the link was. However, with TARGET, you can have the new document open in a new window, or if you are using frames, in another frame. 
+            You can target a frame by a name you have assigned it. TARGET also has four predefined values, which can be used as if certain windows and frames already have names without you having to assign them: 
+            <list>
+                <item>_blank</item>
+                <item>_parent</item>
+                <item>_self</item>
+                <item>_top</item>
+            </list>
+            A predefined list of targets is provides to the <see cref="System.Windows.Forms.PropertyGrid"/> using the 
+            UI assembly (not available in the light edition of NetRix). The base definition can be found in 
+            <see cref="System.Web.UI.WebControls.TargetConverter"/>.
+            <para>
+            Note that each of predefined names starts with an underscore ("_"). They also must be in all lower-case letters. 
+            You can also use TARGET with &lt;IFRAME ...&gt; and the NAME attribute.
+            </para>
+            </remarks>
+        </Elements>  
+        <Elements name="ColorAttributes">
+        <remarks>
+        To remove this attribute from the collection of attributes and from the tag definition you can assign
+        <see cref="System.Drawing.Color.Empty">Color.Empty</see>. 
+        </remarks>
+        </Elements>    
+        <Elements name="PublicElementConstructor">
+            <summary>Internal constructor of the element.</summary>        
+            <remarks>
+            This constructor supports the NetRix infrastructure and should be used from user code. Various collection editors
+            expect public constructors, used to instantiate objects using reflection. The call of this public constructor is
+            useless from user code. Use the various insertion method to create and insert new elements instead.
+            </remarks>
+        </Elements>  
+    </WebEditing>
+</text>

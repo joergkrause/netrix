@@ -1,0 +1,1754 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Attribute.href" type="System.String">
+		<value>الارتساء</value>
+	</data>
+	<data name="Attribute.name" type="System.String">
+		<value>الاسم</value>
+	</data>
+	<data name="Attribute.accessKey" type="System.String">
+		<value>مفتاح الدخول</value>
+	</data>
+	<data name="Attribute.id" type="System.String">
+		<value>المعرّف</value>
+	</data>
+	<data name="Attribute.(id)" type="System.String">
+		<value>المعرّف</value>
+	</data>
+	<data name="Attribute.class" type="System.String">
+		<value>فئة النمط</value>
+	</data>
+	<data name="Attribute.style" type="System.String">
+		<value>نمط مضمن</value>
+	</data>
+	<data name="Attribute.src" type="System.String">
+		<value>ملفّ مصدري</value>
+	</data>
+	<data name="Attribute.width" type="System.String">
+		<value>العرض</value>
+	</data>
+	<data name="Attribute.height" type="System.String">
+		<value>الارتفاع</value>
+	</data>
+	<data name="Exception.accesskey" type="System.String">
+		<value>يمكنك تعيين مفتاح واحد فقط (حرف أو رقم) هنا.</value>
+	</data>
+	<data name="Attribute.disabled" type="System.String">
+		<value>معتلّ</value>
+	</data>
+	<data name="Attribute.hideFocus" type="System.String">
+		<value>اخفاء التركيز</value>
+	</data>
+	<data name="Description.hideFocus" type="System.String">
+		<value>يحدّد اخفاء مستطيل التركيز عندما يتمّ تعيين هذا الكائن</value>
+	</data>
+	<data name="Description.disabled" type="System.String">
+		<value>صحيح ان كان الحقل معتلاً</value>
+	</data>
+	<data name="Description.accesskey" type="System.String">
+		<value>المفتاح المختزل لهذا الكائن</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus" type="System.String">
+		<value>التركيز</value>
+	</data>
+	<data name="Description.ScriptOnFocus" type="System.String">
+		<value>برز الحدث لدى اختيار هذا الكائن</value>
+	</data>
+	<data name="Description.ScriptOnKeyPress" type="System.String">
+		<value>برز الحدث بعد أن طبع المستخدم الحرف أ لدى اختيار هذا الكائن</value>
+	</data>
+	<data name="Attribute.ScriptOnKeyPress" type="System.String">
+		<value>الضغط على المفتاح</value>
+	</data>
+	<data name="Description.tabIndex" type="System.String">
+		<value>فهرس الجدولة لهذا الكائن</value>
+	</data>
+	<data name="Attribute.tabIndex" type="System.String">
+		<value>فهرس المجدولة</value>
+	</data>
+	<data name="Attribute.ScriptOnClick" type="System.String">
+		<value>النقر</value>
+	</data>
+	<data name="Description.ScriptOnClick" type="System.String">
+		<value>برز الحدث عندما نقر المستخدم على الكائن</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOver" type="System.String">
+		<value>دخول الفأرة</value>
+	</data>
+	<data name="Description.ScriptOnMouseOver" type="System.String">
+		<value>برز الحدث عندما دخل مؤشّر الفأرة منطقة هذا الكائن</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOut" type="System.String">
+		<value>خروج الفأرة</value>
+	</data>
+	<data name="Description.ScriptOnMouseOut" type="System.String">
+		<value>برز الحدث عندما خرج مؤشّر الفأرة من منطقة هذا الكائن</value>
+	</data>
+	<data name="Attribute.title" type="System.String">
+		<value>العنوان</value>
+	</data>
+	<data name="Description.title" type="System.String">
+		<value>عنوان الكائن، الذي يستعمل كوصف لأداته.</value>
+	</data>
+	<data name="Description.title_Acronym" type="System.String">
+		<value>النص هذه التسمية الأوائلية هي لأجل</value>
+	</data>
+	<data name="Description.href" type="System.String">
+		<value>محدّد موقع المعلومات الذي يرتبط به الارتساء</value>
+	</data>
+	<data name="Description.name" type="System.String">
+		<value>الارتساء كهدف لارتباطات نسبية</value>
+	</data>
+	<data name="Description.ScriptOnMouseUp" type="System.String">
+		<value>برز الحدث عندما انتهى نقر الفأرة على هذا الكائن.</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseUp" type="System.String">
+		<value>صعود الفأرة</value>
+	</data>
+	<data name="Attribute.target" type="System.String">
+		<value>اطار الهدف</value>
+	</data>
+	<data name="Description.target" type="System.String">
+		<value>هدف هذا الرابط</value>
+	</data>
+	<data name="Attribute.nohref" type="System.String">
+		<value>الارتساء البديل</value>
+	</data>
+	<data name="Description.nohref" type="System.String">
+		<value>يحدّد منطقة غير حسّاسة في الخريطة المصوّرة</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus_Area" type="System.String">
+		<value>التركيز</value>
+	</data>
+	<data name="Description.ScriptOnFocus_Area" type="System.String">
+		<value>يتمّ اطلاقه اذا حصلت هذه المنطقة على التركيز (تصبح نشطة)</value>
+	</data>
+	<data name="Description.ScriptOnBlur_Area" type="System.String">
+		<value>يتمّ اطلاقه اذا فقدت هذه المنطقة التركيز (تصبح غير نشطة)</value>
+	</data>
+	<data name="Attribute.ScriptOnBlur_Area" type="System.String">
+		<value>غير واضح</value>
+	</data>
+	<data name="Attribute.alt" type="System.String">
+		<value>النصّ البديل</value>
+	</data>
+	<data name="Description.alt" type="System.String">
+		<value>يظهر النصّ عندما لا تكون الصورة الأساسية مرئية. ويظهر النصّ ذاته في فقاعة رسالة منبثقة اذا توقّفت الفأرة في المنطقة.</value>
+	</data>
+	<data name="Attribute.coords" type="System.String">
+		<value>احداثيات المنطقة المحدّدة</value>
+	</data>
+	<data name="Description.coords" type="System.String">
+		<value>قائمة يالاحداثيات المتعامدة التي تحدّد مضلع المنطقة. المستطيل: س أيسر، ص علوي، س أيمن، ص سفلي. الدائرة: س في الوسط، ص في الوسط، الشعاع. ملاحظة. عندما تكون قيمة الشعاع بنسبة مئوية، على وكلاء المستخدم احتساب قيمة الشعاع النهائية على أساس عرض وارتفاع الكائن معاً. يجب أن يكون اشعاع القيمة الأصغر من بينهما. لالمضلع: س 1، ص 1، س 2، ص 2، ...، س ان، ص ان. يجب أن يكون أول زوج احداثية س و ص مماثلاً للأخير لاقفال المضلع. عندما لا تكون قيم الاحداثية هذه مماثلة، على الوكلاء استدلال زوج احداثية اضافي لاقفال المضلع.</value>
+	</data>
+	<data name="Attribute.shape" type="System.String">
+		<value>شكل المنطقة</value>
+	</data>
+	<data name="Description.shape" type="System.String">
+		<value>قائمة بالاحداثيات المتعامدة التي تحدّد مضلع المنطقة. الاعداد الافتراضي: يحدّد المنطقة بكاملها. المستطيل: يحدّد منطقة مستطيلة. الدائرة: تحدّد منطقة دائرية. المضلع: يحدّد منطقة مضلعية.</value>
+	</data>
+	<data name="Attribute.color" type="System.String">
+		<value>اللون</value>
+	</data>
+	<data name="Description.color" type="System.String">
+		<value>اللون السابق للعنصر</value>
+	</data>
+	<data name="Attribute.face" type="System.String">
+		<value>رموز الطباعة</value>
+	</data>
+	<data name="Description.face" type="System.String">
+		<value>قائمة بالخطوط بينها فاصلات. سيعرض المستعرض أول خطّ في القائمة الموجودة في نظام المستخدم.</value>
+	</data>
+	<data name="Attribute.size" type="System.String">
+		<value>الحجم</value>
+	</data>
+	<data name="Description.size" type="System.String">
+		<value>حجم العنصر بوحدات رموز الطباعة</value>
+	</data>
+	<data name="Attribute.ScriptOnSubmit" type="System.String">
+		<value>زرّ الارسال</value>
+	</data>
+	<data name="Description.ScriptOnSubmit" type="System.String">
+		<value>برز الحدث عندما تمّ تقديم البيانات من هذه الاستمارة</value>
+	</data>
+	<data name="Attribute.ScriptOnReset" type="System.String">
+		<value>زرّ اعادة التعيين</value>
+	</data>
+	<data name="Description.ScriptOnReset" type="System.String">
+		<value>برز الحدث عندما تمّ اعادة تعيين البيانات في هذه الاستمارة الى حالتها الأولى</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>اسم الاستمارة لاستعمالها مع برنامج جافاسكريبت</value>
+	</data>
+	<data name="Attribute.frameBorder" type="System.String">
+		<value>الحاشية حول الاطار</value>
+	</data>
+	<data name="Description.frameBorder" type="System.String">
+		<value>يحدّد اذا ما كان يجب رسم حاشية حول الاطار</value>
+	</data>
+	<data name="Attribute.noResize" type="System.String">
+		<value>غير قابل لاعادة تعيين الحجم</value>
+	</data>
+	<data name="Description.noResize" type="System.String">
+		<value>يعني ان كان يمكن للمستخدم اعادة تعيين حجم الاطار بواسطة الفأرة</value>
+	</data>
+	<data name="Attribute.Scrolling" type="System.String">
+		<value>التمرير</value>
+	</data>
+	<data name="Description.Scrolling" type="System.String">
+		<value>يحدّد ظهور أعمدة التمرير حول الاطار</value>
+	</data>
+	<data name="Attribute.marginHeight" type="System.String">
+		<value>الهامش الأعلى/الأسفل</value>
+	</data>
+	<data name="Description.marginHeight" type="System.String">
+		<value>مقاس الهوامش العليا والسفلى</value>
+	</data>
+	<data name="Attribute.marginWidth" type="System.String">
+		<value>الهامش الأيمن/الأيسر</value>
+	</data>
+	<data name="Description.marginWidth" type="System.String">
+		<value>مقاس الهوامش اليسرى واليمنى</value>
+	</data>
+	<data name="Attribute.name_Frame" type="System.String">
+		<value>اسم الاطار</value>
+	</data>
+	<data name="Description.name_Frame" type="System.String">
+		<value>اسم الاطار. يستعمل كاسم سمات هدف الارتباط التشعّبي</value>
+	</data>
+	<data name="Attribute.ScriptOnActivate" type="System.String">
+		<value>التنشيط</value>
+	</data>
+	<data name="Description.ScriptOnActivate" type="System.String">
+		<value>برز الحدث عندما أصبح الاطار كائناً فعالاً في الصفحة</value>
+	</data>
+	<data name="Description.ScriptOnDeactivate" type="System.String">
+		<value>برز الحدث عندما لم يعد الاطار كائناً فعالاً في الصفحة</value>
+	</data>
+	<data name="Attribute.ScriptOnDeactivate" type="System.String">
+		<value>الغاء التنشيط</value>
+	</data>
+	<data name="Attribute.ScriptOnLoad" type="System.String">
+		<value>التحميل</value>
+	</data>
+	<data name="Description.ScriptOnLoad" type="System.String">
+		<value>برز الحدث بعد تحميل الاطار</value>
+	</data>
+	<data name="Attribute.ScriptOnScroll" type="System.String">
+		<value>التمرير</value>
+	</data>
+	<data name="Description.ScriptOnScroll" type="System.String">
+		<value>برز الحدث عندما غيّر المستخدم وضع التمرير لهذا الكائن</value>
+	</data>
+	<data name="Attribute.align" type="System.String">
+		<value>المحاذاة</value>
+	</data>
+	<data name="Description.align" type="System.String">
+		<value>محاذاة عنصر الكتلة</value>
+	</data>
+	<data name="Attribute.noshade" type="System.String">
+		<value>بلا تظليل</value>
+	</data>
+	<data name="Description.noshade" type="System.String">
+		<value>يحدّد ان يجب رسم القاعدة الأفقية مع تظليل ثلاثي الأبعاد</value>
+	</data>
+	<data name="Attribute.size_Hr" type="System.String">
+		<value>السماكة</value>
+	</data>
+	<data name="Description.size_Hr" type="System.String">
+		<value>سماكة هذه القاعدة الأفقية</value>
+	</data>
+	<data name="Attribute.charset" type="System.String">
+		<value>مجموعة أحرف</value>
+	</data>
+	<data name="Description.charset" type="System.String">
+		<value>شيفرة المستند المرتبط</value>
+	</data>
+	<data name="Attribute.media" type="System.String">
+		<value>الوسائط</value>
+	</data>
+	<data name="Description.media" type="System.String">
+		<value>وسائط الهدف التي يحتاج اليها المستند المرتبط</value>
+	</data>
+	<data name="Attribute.rel" type="System.String">
+		<value>العلاقة</value>
+	</data>
+	<data name="Description.rel" type="System.String">
+		<value>العلاقة بالهدف. ان القيم العامة هي: "صفحة الأنماط"، "التالي"، "السابق"، "الفهرس".</value>
+	</data>
+	<data name="Attribute.rev" type="System.String">
+		<value>المرجع</value>
+	</data>
+	<data name="Description.rev" type="System.String">
+		<value>المرجع من مستند الهدف</value>
+	</data>
+	<data name="Attribute.type" type="System.String">
+		<value>النوع</value>
+	</data>
+	<data name="Description.type" type="System.String">
+		<value>نوع المستند المرتبط كرمز مايم MIME.استعمل 'text/css'لأوراق الأنماط.</value>
+	</data>
+	<data name="Attribute.type_Ol" type="System.String">
+		<value>نوع القائمة</value>
+	</data>
+	<data name="Description.type_Ol" type="System.String">
+		<value>نوع الأعداد التي ستُعرض في قائمة متسلسلة</value>
+	</data>
+	<data name="Attribute.type_Ul" type="System.String" mimetype="	">
+		<value>نوع القائمة</value>
+	</data>
+	<data name="Description.type_Ul" type="System.String">
+		<value>نوع التعداد النقطي الذي سيستعمل في قائمة غير متسلسلة أو نظام الأرقام في قائمة متسلسلة</value>
+	</data>
+	<data name="Attribute.type_Script" type="System.String">
+		<value>نوع مايم MIME</value>
+	</data>
+	<data name="Description.type_Script" type="System.String">
+		<value>نوع مايم للمحتوى، مثلا 'text/javascript'. خياري. يكتب فوق سمة "اللغة".</value>
+	</data>
+	<data name="Attribute.language" type="System.String">
+		<value>لغة البرنامج النصّي</value>
+	</data>
+	<data name="Description.language" type="System.String">
+		<value>لغة البرنامج النصّي التي تصف المحتوى، مثلاً جافاسكريبت و في.بي سكريبت</value>
+	</data>
+	<data name="Attribute.ScriptContent" type="System.String">
+		<value>محتوى البرنامج النصّي</value>
+	</data>
+	<data name="Description.ScriptContent" type="System.String">
+		<value>محتوى البرنامج النصّي. أنقر على القطع الناقص لبدء محرّر البرنامج النصّي المتكامل</value>
+	</data>
+	<data name="Attribute.noWrap" type="System.String">
+		<value>حذف الالتفاف</value>
+	</data>
+	<data name="Description.noWrap" type="System.String">
+		<value>يحدّد التفاف خطوط النصّ الطويلة</value>
+	</data>
+	<data name="Attribute.clear" type="System.String">
+		<value>مسح الموقع</value>
+	</data>
+	<data name="Description.clear" type="System.String">
+		<value>سلوك عوم النصّ حول الفاصل</value>
+	</data>
+	<data name="Attribute.vSpace" type="System.String">
+		<value>المسافة العمودية</value>
+	</data>
+	<data name="Description.vSpace" type="System.String">
+		<value>المسافة أو النطاق العمودي (الأيمن والأيسر) حول الصورة</value>
+	</data>
+	<data name="Attribute.hSpace" type="System.String">
+		<value>المسافة الأفقية</value>
+	</data>
+	<data name="Description.hSpace" type="System.String">
+		<value>المسافة أو النطاق الأفقي (الأيمن والأيسر) حول الصورة</value>
+	</data>
+	<!-- GUI -->
+	<data name="StyleEditor.fontPickerFont.Title" type="System.String">
+		<value>الخطوط</value>
+	</data>
+	<data name="StyleEditor.groupbox3.Text" type="System.String">
+		<value>أنماط الخطّ</value>
+	</data>
+	<data name="StyleEditor.label3.Text" type="System.String">
+		<value>تحويل الرسالة</value>
+	</data>
+	<data name="StyleEditor.label2.Text" type="System.String">
+		<value>سماكة</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" type="System.String">
+		<value>أحرف استهلالية صغيرة</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontStyleItalic.Text" type="System.String">
+		<value>مائل</value>
+	</data>
+	<data name="StyleEditor.groupBox2.Text" type="System.String">
+		<value>سمات الخطّ</value>
+	</data>
+	<data name="StyleEditor.label36.Text" type="System.String">
+		<value>حجم الخطّ المحدّد أو العام:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeAbsolute.Text" type="System.String">
+		<value>اسم الحجم:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeUnit.Text" type="System.String">
+		<value>الحجم المحدّد:</value>
+	</data>
+	<data name="StyleEditor.label1.Text" type="System.String">
+		<value>لون النصّ</value>
+	</data>
+	<data name="StyleEditor.groupBox1.Text" type="System.String">
+		<value>عائلة الخط</value>
+	</data>
+	<data name="StyleEditor.label50.Text" type="System.String">
+		<value>يمكن أن يكون أي عدد من الخطوط أو الخطوط العامة. يأخذ المستعرض أول خط محلّي من القائمة</value>
+	</data>
+	<data name="StyleEditor.label49.Text" type="System.String">
+		<value>قائمة بعائلة الخط</value>
+	</data>
+	<data name="StyleEditor.label52.Text" type="System.String">
+		<value>بالاشتراك مع عنصر الحاوية</value>
+	</data>
+	<data name="StyleEditor.groupBox5.Text" type="System.String">
+		<value>صورة الخلفية</value>
+	</data>
+	<data name="Attribute.HttpEquiv" type="System.String">
+		<value>HTTP Equiv</value>
+	</data>
+	<data name="Description.HttpEquiv" type="System.String">
+		<value>يحدّد أن هذه العلامة تنشىء ترويسة لبروتوكول نقل ملفات تشعبيّة.</value>
+	</data>
+	<data name="Attribute.name_Meta" type="System.String">
+		<value>الاسم</value>
+	</data>
+	<data name="Description.name_Meta" type="System.String">
+		<value>سمة اسم علامة ميتا META</value>
+	</data>
+	<data name="Attribute.Content" type="System.String">
+		<value>المحتوى</value>
+	</data>
+	<data name="Description.Content" type="System.String">
+		<value>ان المحتوى، المعنى محدّد بواسطة الاسم أو علامة HttpEquiv</value>
+	</data>
+	<data name="StyleEditor.label9.Text" type="System.String">
+		<value>كيف يمكن تعيين موضع الصورة؟</value>
+	</data>
+	<data name="StyleEditor.label8.Text" type="System.String">
+		<value>عمودي:</value>
+	</data>
+	<data name="StyleEditor.label7.Text" type="System.String">
+		<value>أفقي:</value>
+	</data>
+	<data name="StyleEditor.label6.Text" type="System.String">
+		<value>التثبيت</value>
+	</data>
+	<data name="StyleEditor.label5.Text" type="System.String">
+		<value>العنوان</value>
+	</data>
+	<data name="StyleEditor.label4.Text" type="System.String">
+		<value>حدّد الصورة من القرص:</value>
+	</data>
+	<data name="StyleEditor.buttonBackgroundImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.groupBox4.Text" type="System.String">
+		<value>لون الخلفية</value>
+	</data>
+	<data name="StyleEditor.label27.Text" type="System.String">
+		<value>لون الخلفية:</value>
+	</data>
+	<data name="StyleEditor.checkBox6.Text" type="System.String">
+		<value>الشفافية</value>
+	</data>
+	<data name="StyleEditor.groupBox18.Text" type="System.String">
+		<value>الهامش، النطاق، النمط ذو الحدّ</value>
+	</data>
+	<data name="StyleEditor.label56.Text" type="System.String">
+		<value>النطاق</value>
+	</data>
+	<data name="StyleEditor.label55.Text" type="System.String">
+		<value>عرض الحدّ</value>
+	</data>
+	<data name="StyleEditor.label54.Text" type="System.String">
+		<value>النمط ذو الحدّ</value>
+	</data>
+	<data name="StyleEditor.label53.Text" type="System.String">
+		<value>لون الحدّ</value>
+	</data>
+	<data name="StyleEditor.label17.Text" type="System.String">
+		<value>الهامش</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>الحدّ الأعلى</value>
+	</data>
+	<data name="StyleEditor.groupBox25.Text" type="System.String">
+		<value>كافة الحدود</value>
+	</data>
+	<data name="StyleEditor.groupBox24.Text" type="System.String">
+		<value>الحدّ الأيسر</value>
+	</data>
+	<data name="StyleEditor.groupBox17.Text" type="System.String">
+		<value>الحدّ الأيمن</value>
+	</data>
+	<data name="StyleEditor.groupBox12.Text" type="System.String">
+		<value>الحدّ السفلي</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>كافة الحدود</value>
+	</data>
+	<data name="StyleEditor.tabPageAll.Text" type="System.String">
+		<value>كافة</value>
+	</data>
+	<data name="StyleEditor.tabPageLeft.Text" type="System.String">
+		<value>أيسر</value>
+	</data>
+	<data name="StyleEditor.tabPageRight.Text" type="System.String">
+		<value>أيمن</value>
+	</data>
+	<data name="StyleEditor.tabPageTop.Text" type="System.String">
+		<value>أعلى</value>
+	</data>
+	<data name="StyleEditor.tabPageBottom.Text" type="System.String">
+		<value>أسفل</value>
+	</data>
+	<data name="StyleEditor.groupBox21.Text" type="System.String">
+		<value>زخرفة النصّ</value>
+	</data>
+	<data name="StyleEditor.label67.Text" type="System.String">
+		<value>يحدّد طريقة عرض النصّ وصفات الخطّ</value>
+	</data>
+	<data name="StyleEditor.groupBox8.Text" type="System.String">
+		<value>الاتجاه والمسافة البادئة</value>
+	</data>
+	<data name="StyleEditor.label68.Text" type="System.String">
+		<value>يحدّد طريقة محاذاة النصّ داخل كتلة.</value>
+	</data>
+	<data name="StyleEditor.label29.Text" type="System.String">
+		<value>الاتجاه:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRemove.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="StyleEditor.label51.Text" type="System.String">
+		<value>المسافة البادئة للكتلة:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRtl.Text" type="System.String">
+		<value>من اليمين الى اليسار</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionLtr.Text" type="System.String">
+		<value>من اليسار الى اليمين</value>
+	</data>
+	<data name="StyleEditor.groupBox7.Text" type="System.String">
+		<value>مساحة الحرف والسطر</value>
+	</data>
+	<data name="StyleEditor.label66.Text" type="System.String">
+		<value>تحدّد هذه الخيارات طريقة عرض النصّ العائم. وتكون النتيجة حسب الخطّ المختار.</value>
+	</data>
+	<data name="StyleEditor.label37.Text" type="System.String">
+		<value>الكلمات:</value>
+	</data>
+	<data name="StyleEditor.label11.Text" type="System.String">
+		<value>ارتفاع السطر:</value>
+	</data>
+	<data name="StyleEditor.label12.Text" type="System.String">
+		<value>الحروف:</value>
+	</data>
+	<data name="StyleEditor.groupBox6.Text" type="System.String">
+		<value>المحاذاة</value>
+	</data>
+	<data name="StyleEditor.groupBox19.Text" type="System.String">
+		<value>المحاذاة الأفقية</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignDisable.Text" type="System.String">
+		<value>ازالة الخيار من الورقة</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignJustify.Text" type="System.String">
+		<value>الضبط</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignLeft.Text" type="System.String">
+		<value>يسار</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignCenter.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignRight.Text" type="System.String">
+		<value>يمين</value>
+	</data>
+	<data name="StyleEditor.label10.Text" type="System.String">
+		<value>وسط</value>
+	</data>
+	<data name="StyleEditor.groupBox20.Text" type="System.String">
+		<value>المحاذاة العمودية</value>
+	</data>
+	<data name="StyleEditor.label65.Text" type="System.String">
+		<value>تحدّد طريقة محاذاة العنصر همودياً. يُستعمل ذلك عادةً في الجداول والخانات.</value>
+	</data>
+	<data name="StyleEditor.groupBox10.Text" type="System.String">
+		<value>خيارات عوم النصّ</value>
+	</data>
+	<data name="StyleEditor.label48.Text" type="System.String">
+		<value>معالجة فاصل الأسطر</value>
+	</data>
+	<data name="StyleEditor.label47.Text" type="System.String">
+		<value>الفائض</value>
+	</data>
+	<data name="StyleEditor.label45.Text" type="System.String">
+		<value>العرض</value>
+	</data>
+	<data name="StyleEditor.groupBox9.Text" type="System.String">
+		<value>نمط تحديد موقع هدف</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRemove.Text" type="System.String">
+		<value>ازالة الخيار من الورقة</value>
+	</data>
+	<data name="StyleEditor.label16.Text" type="System.String">
+		<value>من الحدّ الأيسر:</value>
+	</data>
+	<data name="StyleEditor.label15.Text" type="System.String">
+		<value>من الحدّ الأعلى</value>
+	</data>
+	<data name="StyleEditor.label14.Text" type="System.String">
+		<value>العرض</value>
+	</data>
+	<data name="StyleEditor.label13.Text" type="System.String">
+		<value>الارتفاع</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionAbsolute.Text" type="System.String">
+		<value>مطلق</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRelative.Text" type="System.String">
+		<value>النصّ العائم</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionFixed.Text" type="System.String">
+		<value>نسبيّ غير عائم</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionNone.Text" type="System.String">
+		<value>لا شيء</value>
+	</data>
+	<data name="StyleEditor.groupBox14.Text" type="System.String">
+		<value>تحديد قائمة مظهر الفقرة</value>
+	</data>
+	<data name="StyleEditor.label69.Text" type="System.String">
+		<value>تحدّد هذه الخيارات مظهر القوائم غير المتسلسلة. تكون النتيجة النهائية أيضاً حسب النصّ المكتوب، الخطّ وصفات التباعد.</value>
+	</data>
+	<data name="StyleEditor.buttonListStyleImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.label22.Text" type="System.String">
+		<value>الموضع:</value>
+	</data>
+	<data name="StyleEditor.label23.Text" type="System.String">
+		<value>حدّد الصورة من القرص:</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletImage.Text" type="System.String">
+		<value>مع الرمز النقطي المحدّد للمستخدم (حدّد الصورة).</value>
+	</data>
+	<data name="StyleEditor.textBoxListStyleImage.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.label21.Text" type="System.String">
+		<value>النمط</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletStyle.Text" type="System.String">
+		<value>مع رموز نقطية قياسية (اختر النمط والموضع):</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletNone.Text" type="System.String">
+		<value>بدون رموز نقطية</value>
+	</data>
+	<data name="StyleEditor.groupBox23.Text" type="System.String">
+		<value>الأعمدة والقواعد</value>
+	</data>
+	<data name="StyleEditor.label42.Text" type="System.String">
+		<value>عرض القاعدة:</value>
+	</data>
+	<data name="StyleEditor.label41.Text" type="System.String">
+		<value>نمط القاعدة</value>
+	</data>
+	<data name="StyleEditor.label40.Text" type="System.String">
+		<value>لون القاعدة</value>
+	</data>
+	<data name="StyleEditor.label39.Text" type="System.String">
+		<value>الأعمدة</value>
+	</data>
+	<data name="StyleEditor.groupBox16.Text" type="System.String">
+		<value>الجداول</value>
+	</data>
+	<data name="StyleEditor.label44.Text" type="System.String">
+		<value>مدى الصفّ</value>
+	</data>
+	<data name="StyleEditor.label43.Text" type="System.String">
+		<value>مدى العمود</value>
+	</data>
+	<data name="StyleEditor.label38.Text" type="System.String">
+		<value>موضع التسمية التوضيحية</value>
+	</data>
+	<data name="StyleEditor.linkLabel1.Text" type="System.String">
+		<value>أنقر هنا للتعيين</value>
+	</data>
+	<data name="StyleEditor.label71.Text" type="System.String">
+		<value>يتمّ اختيار الارتفاع والعرض في علامة تبويب الموضع:</value>
+	</data>
+	<data name="StyleEditor.tabPageFonts.Text" type="System.String">
+		<value>الخطّ</value>
+	</data>
+	<data name="StyleEditor.tabPageBackground.Text" type="System.String">
+		<value>الخلفية</value>
+	</data>
+	<data name="StyleEditor.tabPageBorders.Text" type="System.String">
+		<value>الحدود</value>
+	</data>
+	<data name="StyleEditor.tabPageLayout.Text" type="System.String">
+		<value>التخطيط</value>
+	</data>
+	<data name="StyleEditor.tabPagePosition.Text" type="System.String">
+		<value>الموضع</value>
+	</data>
+	<data name="StyleEditor.tabPageLists.Text" type="System.String">
+		<value>القوائم</value>
+	</data>
+	<data name="StyleEditor.tabPageTables.Text" type="System.String">
+		<value>الجداول</value>
+	</data>
+	<data name="StyleEditor.tabPageMisc.Text" type="System.String">
+		<value>متفرقات</value>
+	</data>
+	<data name="StyleEditor.groupBox15.Text" type="System.String">
+		<value>واجهة المستخدم</value>
+	</data>
+	<data name="StyleEditor.label70.Text" type="System.String">
+		<value>ان خيارات المؤشّر وشريط التمرير غير متوفّرة حالياً لمستعرض غير انترنت سبلورير Internet Explorer</value>
+	</data>
+	<data name="StyleEditor.label64.Text" type="System.String">
+		<value>المسار</value>
+	</data>
+	<data name="StyleEditor.label63.Text" type="System.String">
+		<value>ضوء ثلاثي الأبعاد</value>
+	</data>
+	<data name="StyleEditor.label62.Text" type="System.String">
+		<value>التمييز</value>
+	</data>
+	<data name="StyleEditor.label61.Text" type="System.String">
+		<value>الظلّ القاتم</value>
+	</data>
+	<data name="StyleEditor.label60.Text" type="System.String">
+		<value>الظلّ</value>
+	</data>
+	<data name="StyleEditor.label59.Text" type="System.String">
+		<value>القاعدة</value>
+	</data>
+	<data name="StyleEditor.label26.Text" type="System.String">
+		<value>الوجه</value>
+	</data>
+	<data name="StyleEditor.label25.Text" type="System.String">
+		<value>ألوان عناصر شريط التمرير:</value>
+	</data>
+	<data name="StyleEditor.label24.Text" type="System.String">
+		<value>المؤشّر:</value>
+	</data>
+	<data name="StyleEditor.comboBoxCursor.Text" type="System.String">
+		<value>المؤشّر</value>
+	</data>
+	<data name="StyleEditor.label58.Text" type="System.String">
+		<value>السهم</value>
+	</data>
+	<data name="StyleEditor.groupBox22.Text" type="System.String">
+		<value>الرؤية</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisiblityRemove.Text" type="System.String">
+		<value>ازالة الخيار من الورقة</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityNone.Text" type="System.String">
+		<value>لا شيء</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityHidden.Text" type="System.String">
+		<value>المخفي</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityVisible.Text" type="System.String">
+		<value>المرئي</value>
+	</data>
+	<data name="StyleEditor.label31.Text" type="System.String">
+		<value>ان كان العنصر محدداً كغير مرئي (الرؤية = الخفاء)، من الضروري تغيير السلوك مع البرناج النصّي لاظهاره لاحقاً. ان لم تكن هناك قدرات برنامج نصّي مستعملة حدّد "لا شيء" أو "ازالة"</value>
+	</data>
+	<data name="StyleEditor.button1.Text" type="System.String">
+		<value>تزامن القيمة اليسرى، اليمنى والسفلية مع العلوية. </value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonNo.Text" type="System.String">
+		<value>القياسي</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonCont.Text" type="System.String">
+		<value>المتابعة</value>
+	</data>
+	<data name="ColorPanelUserControl.groupBox2.Text" type="System.String">
+		<value>تصنيف الخيارات</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonBrightness.Text" type="System.String">
+		<value>السطوع</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonName.Text" type="System.String">
+		<value>الاسم</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonDistance.Text" type="System.String">
+		<value>المسافة</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonSaturation.Text" type="System.String">
+		<value>اشباعي</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonWeb.Text" type="System.String">
+		<value>الشبكة</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonCustom.Text" type="System.String">
+		<value>التخصيص</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonSystem.Text" type="System.String">
+		<value>النظام</value>
+	</data>
+	<data name="ColorPanelUserControl.label1.Text" type="System.String">
+		<value>أضغط على زرّ ESC للالغاء</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonNoColor.Text" type="System.String">
+		<value>بدون لون</value>
+	</data>
+	<data name="MetaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>حدّد علامة تعريف META للتحرير:</value>
+	</data>
+	<data name="AreaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>حدّد علامة منطقة AREA للتحرير:</value>
+	</data>
+	<data name="ScriptCollectionEditor.memberLabel.Text" type="System.String">
+		<value>حدّد كتلة برنامج نصّي للتحرير:</value>
+	</data>
+	<data name="StylesheetCollectionEditor.memberLabel.Text" type="System.String">
+		<value>حدّد علامة صفحة الأنماط المرتبطة للتحرير:</value>
+	</data>
+	<data name="MetaCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="StylesheetCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="ScriptCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="AreaCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="MetaCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="ScriptCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="StylesheetCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="AreaCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="UnitEditor.radioButtonPercent.Text" type="System.String">
+		<value>%</value>
+	</data>
+	<data name="UnitEditor.radioButtonPixel.Text" type="System.String">
+		<value>بيكسل</value>
+	</data>
+	<data name="UnitEditor.radioButtonOff.Text" type="System.String">
+		<value>ايقاف</value>
+	</data>
+	<data name="Description.aLink" type="System.String">
+		<value>لون الارتباطات النشطة في هذه الصفحة</value>
+	</data>
+	<data name="Description.bgProperties" type="System.String">
+		<value>يحدّد ان كانت صورة الخلفية ثابتة أو اذا ما يجب تمريرها</value>
+	</data>
+	<data name="Description.backGround" type="System.String">
+		<value>محدّد موقع المعلومات لصورة الخلفية المستعمل في هذه الصفحة</value>
+	</data>
+	<data name="Description.bgColor" type="System.String">
+		<value>لون خلفية الصفحة</value>
+	</data>
+	<data name="Description.bottomMargin" type="System.String">
+		<value>حجم الهامش السفلي بالبيكسل</value>
+	</data>
+	<data name="Description.leftMargin" type="System.String">
+		<value>حجم الهامش الأيسر بالبيكسل</value>
+	</data>
+	<data name="Description.link" type="System.String">
+		<value>لون الارتباطات في الصفحة</value>
+	</data>
+	<data name="Description.rightMargin" type="System.String">
+		<value>حجم الهامش الأيمن بالبيكسل</value>
+	</data>
+	<data name="Description.scroll" type="System.String">
+		<value>يشير الى عرض أشرطة التمرير</value>
+	</data>
+	<data name="Description.text" type="System.String">
+		<value>اللون الأمامي للنصّ في هذه الصفحة</value>
+	</data>
+	<data name="Description.topMargin" type="System.String">
+		<value>حجم هامش الصفحة الأعلى بالبيكسل</value>
+	</data>
+	<data name="Description.vLink" type="System.String">
+		<value>لون الارتباطات التي تمّ زيارتها في هذه الصفحة</value>
+	</data>
+	<data name="Attribute.aLink" type="System.String">
+		<value>لون الارتباط النشط</value>
+	</data>
+	<data name="Attribute.bgProperties" type="System.String">
+		<value>خاصية الخلفية</value>
+	</data>
+	<data name="Attribute.background" type="System.String">
+		<value>صورة الخلفية</value>
+	</data>
+	<data name="Attribute.bgColor" type="System.String">
+		<value>لون الخلفية</value>
+	</data>
+	<data name="Attribute.bottomMargin" type="System.String">
+		<value>الهامش السفلي</value>
+	</data>
+	<data name="Attribute.leftMargin" type="System.String">
+		<value>الهامش الأيسر</value>
+	</data>
+	<data name="Attribute.link" type="System.String">
+		<value>لون الارتباط</value>
+	</data>
+	<data name="Attribute.rightMargin" type="System.String">
+		<value>الهامش الأيمن</value>
+	</data>
+	<data name="Attribute.scroll" type="System.String">
+		<value>أشرطة التمرير</value>
+	</data>
+	<data name="Attribute.text" type="System.String">
+		<value>لون النصّ</value>
+	</data>
+	<data name="Attribute.topMargin" type="System.String">
+		<value>الهامش الأعلى</value>
+	</data>
+	<data name="Attribute.vLink" type="System.String">
+		<value>لون الارتباط الذي تمّت زيارته</value>
+	</data>
+	<data name="Description.ScriptBlocks" type="System.String">
+		<value>الوصول الى محرّر كتلة البرنامج النصّي</value>
+	</data>
+	<data name="Attribute.ScriptBlocks" type="System.String">
+		<value>كتل البرنامج النصّي</value>
+	</data>
+	<data name="Description.NamedMetaTags" type="System.String">
+		<value>تحرير علامات ميتا META القياسية في المحرّر</value>
+	</data>
+	<data name="Attribute.NamedMetaTags" type="System.String">
+		<value>META اسم ميتا</value>
+	</data>
+	<data name="Description.HttpEquivMetaTags" type="System.String">
+		<value>تحرير علامات ميتا META القياسية في المحرّر</value>
+	</data>
+	<data name="Attribute.HttpEquivMetaTags" type="System.String">
+		<value>META httpEquiv</value>
+	</data>
+	<data name="Description.LinkedStylesheets" type="System.String">
+		<value>تحرير الارتباطات بمستندات الأنماط المرتبطة</value>
+	</data>
+	<data name="Attribute.LinkedStylesheets" type="System.String">
+		<value>صفحات الأنماط المرتبطة</value>
+	</data>
+	<data name="Description.Title_Body" type="System.String">
+		<value>يعرّف الاسم محتويات المستند ويُعرض في عمود العناوين في النافذة. انّه هام لمحرّك البحث.
+</value>
+	</data>
+	<data name="Attribute.Title_Body" type="System.String">
+		<value>العنوان</value>
+	</data>
+	<data name="Description.URL" type="System.String">
+		<value>معرّف المواد الكليّة URL أو المسار الذي تمّ تحميل المستند منه.</value>
+	</data>
+	<data name="Attribute.URL" type="System.String">
+		<value>URLمعرّفات المواد الكليّة</value>
+	</data>
+	<data name="Description.LoadTime56K" type="System.String">
+		<value>معدّل وقت تحميل المستند مع مودم 56 ك. معلوماتيّ.</value>
+	</data>
+	<data name="Attribute.LoadTime56K" type="System.String">
+		<value>وقت التحميل (56 ك)</value>
+	</data>
+	<data name="Description.FileSize" type="System.String">
+		<value>الحجم الحالي للملفّ بالبايت</value>
+	</data>
+	<data name="Attribute.FileSize" type="System.String">
+		<value>حجم الملفّ</value>
+	</data>
+	<data name="Description.FileLastModified" type="System.String">
+		<value>الطابع الزمني عندما عدّل المستند آخر مرّة</value>
+	</data>
+	<data name="Attribute.FileLastModified" type="System.String">
+		<value>عدّل آخر مرّة</value>
+	</data>
+	<data name="Description.NumberOfFrames" type="System.String">
+		<value>العدد المطلق للاطارات، بغضّ النظر عن بنية التصميم</value>
+	</data>
+	<data name="Attribute.NumberOfFrames" type="System.String">
+		<value>عدد الاطارات</value>
+	</data>
+	<data name="Description.NumberOfStylesheets" type="System.String">
+		<value>عدد صفحات الأنماط المرتبطة</value>
+	</data>
+	<data name="Attribute.NumberOfStylesheets" type="System.String">
+		<value>عدد صفحات الأنماط</value>
+	</data>
+	<data name="Description.NumberOfImages" type="System.String">
+		<value>عدد الصور في المستند.</value>
+	</data>
+	<data name="Attribute.NumberOfImages" type="System.String">
+		<value>عدد الصور</value>
+	</data>
+	<data name="Description.NumberOfScriptBlocks" type="System.String">
+		<value>عدد كتل البرنامج النصّي</value>
+	</data>
+	<data name="Attribute.NumberOfScriptBlocks" type="System.String">
+		<value>عدد البرنامج النصّي</value>
+	</data>
+	<data name="Description.NumberOfMetaTags" type="System.String">
+		<value>عدد علامات ميتا META</value>
+	</data>
+	<data name="Attribute.NumberOfMetaTags" type="System.String">
+		<value>عدد ميتا META</value>
+	</data>
+	<data name="Attribute.cellPadding" type="System.String">
+		<value>نطاق الخلية</value>
+	</data>
+	<data name="Description.cellPadding" type="System.String">
+		<value>النطاق بين الحدّ ومحتويات كلّ خلية في الجدول.</value>
+	</data>
+	<data name="Attribute.cellSpacing" type="System.String">
+		<value>المسافة بين الخلايا</value>
+	</data>
+	<data name="Description.cellSpacing" type="System.String">
+		<value>المسافة بين خلايا الجدول</value>
+	</data>
+	<data name="Description.rules" type="System.String">
+		<value>القواعد هي مناطق بين الأعمدة. تحدّد هذه الخاصية مظهر القواعد.</value>
+	</data>
+	<data name="Attribute.rules" type="System.String">
+		<value>القواعد</value>
+	</data>
+	<data name="Description.borderColor" type="System.String">
+		<value>لون الحدّ لكل خليّة في الجدول</value>
+	</data>
+	<data name="Attribute.borderColor" type="System.String">
+		<value>لون الحدّ</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>العدد الاجمالي للصفوف في الجدول. لا يحسب سمات النطاق. معلوماتيّ فقط.</value>
+	</data>
+	<data name="Attribute.rows" type="System.String">
+		<value>عدد الصفوف</value>
+	</data>
+	<data name="Description.valign" type="System.String">
+		<value>المحاذاة العمودية لمحتويات الخليّة.</value>
+	</data>
+	<data name="Attribute.valign" type="System.String">
+		<value>المحاذاة العمودية</value>
+	</data>
+	<data name="Description.colspan" type="System.String">
+		<value>عدد الأعمدة الممتدة في الخلية</value>
+	</data>
+	<data name="Attribute.colSpan" type="System.String">
+		<value>امتداد العمود</value>
+	</data>
+	<data name="Description.rowspan" type="System.String">
+		<value>عدد الصفوف الممتدة في الخلية</value>
+	</data>
+	<data name="Attribute.rowSpan" type="System.String">
+		<value>امتداد الصفّ</value>
+	</data>
+	<data name="Description.cells" type="System.String">
+		<value>عدد الخلايا الاجمالي في هذا الصفّ. يمكن أن يختلف من صفّ الى آخر بسبب سمة امتداد الصفّ في خلايا صفوف أخرى.</value>
+	</data>
+	<data name="Attribute.cells" type="System.String">
+		<value>عدد الخلايا</value>
+	</data>
+	<data name="FontPickerUserControl.ff.Text" type="System.String">
+		<value>مربّع تحديد الخطّ</value>
+	</data>
+	<data name="FontForm.buttonOK.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="FontForm.buttonCancel.Text" type="System.String">
+		<value>الغاء</value>
+	</data>
+	<data name="FontForm.label1.Text" type="System.String">
+		<value>أكتب كل الخطوط الضرورية سطراً بسطر</value>
+	</data>
+	<data name="FontForm.tabPage4.Text" type="System.String">
+		<value>خطوط المستخدم</value>
+	</data>
+	<data name="FontForm.textBoxFreeFont.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="FontForm.tabPage1.Text" type="System.String">
+		<value>النظام</value>
+	</data>
+	<data name="FontForm.tabPage2.Text" type="System.String">
+		<value>الشبكة</value>
+	</data>
+	<data name="FontForm.tabPage3.Text" type="System.String">
+		<value>العام</value>
+	</data>
+	<data name="Attribute.border" type="System.String">
+		<value>الحدّ</value>
+	</data>
+	<data name="Description.border" type="System.String">
+		<value>عرض الحدّ بالبيكسل. ان كان العنصر داخل الارتباط المتشعّب يجب تحديد هذه القيمة الى صفر لازالة حدود الانشاء تلقائياً.</value>
+	</data>
+	<data name="Attribute.dateTime" type="System.String">
+		<value>التاريخ والوقت</value>
+	</data>
+	<data name="Description.dateTime" type="System.String">
+		<value>المعلومات القياسية حول التاريخ والوقت عندما يتمّ تغيير العنصر لآخر مرّة. الشكل المتوقّع: السنة-الشهر-اليوم الوقت: الساعة-الدقيقة-الثانية</value>
+	</data>
+	<data name="Attribute.cite" type="System.String">
+		<value>التعليق</value>
+	</data>
+	<data name="Description.cite" type="System.String">
+		<value>تعليق حول المحتوى</value>
+	</data>
+	<data name="HtmlDocumentStructure.ToString" type="System.String">
+		<value>[المستند]</value>
+	</data>
+	<data name="CustomPropertyTab.Tooltip" type="System.String">
+		<value>أسماء السمة</value>
+	</data>
+	<!-- Categories -->
+	<data name="Category.Element Behavior" type="System.String">
+		<value>السلوك</value>
+	</data>
+	<data name="Category.Standard Values" type="System.String">
+		<value>القيم الأساسية</value>
+	</data>
+	<data name="Category.Javascript Events" type="System.String">
+		<value>أحداث جافا سكريبت</value>
+	</data>
+	<data name="Category.Element Layout" type="System.String">
+		<value>التصميم</value>
+	</data>
+	<data name="Category.Element Appearance" type="System.String">
+		<value>المظهر</value>
+	</data>
+	<data name="Category.Content" type="System.String">
+		<value>المضمون</value>
+	</data>
+	<data name="Category.Information" type="System.String">
+		<value>المعلومات</value>
+	</data>
+	<!-- End Categories -->
+	<data name="Attribute.ScriptOnResize" type="System.String">
+		<value>تغيير الحجم</value>
+	</data>
+	<data name="Description.ScriptOnResize" type="System.String">
+		<value>ينطلق اذا غيّر المستخدم حجم العنصر باستعمال البرنامج النصّي</value>
+	</data>
+	<data name="Attribute.ScriptOnChange" type="System.String">
+		<value>التغيير</value>
+	</data>
+	<data name="Description.ScriptOnChange" type="System.String">
+		<value>ينطلق اذا غيّر المستخدم محتوى التحكّم.</value>
+	</data>
+	<data name="Attribute.cols" type="System.String">
+		<value>الأعمدة</value>
+	</data>
+	<data name="Description.cols" type="System.String">
+		<value>عدد الأعمدة المقاسة بأحرف العرض القياسي.</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>عدد الصفوف للأحرف مع خطّ قياسي.</value>
+	</data>
+	<data name="Attribute.type_LI" type="System.String">
+		<value>قائمة بنوع العنصر</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseDown" type="System.String">
+		<value>الفأرة الى الأسفل</value>
+	</data>
+	<data name="Description.ScriptOnMouseDown" type="System.String">
+		<value>ينطلق اذا نقر المستخدم على زرّ الفأرة مباشرة بعد الضغط على الزرّ وقبل اطلاقه.</value>
+	</data>
+	<data name="Description.id" type="System.String">
+		<value>المعرّف لاستعمال العنصر من ضمن رمز جافا سكريبت أو كهدف النمط.</value>
+	</data>
+	<data name="Description.style" type="System.String">
+		<value>نمط مضمن. استعمل القطع الناقص (...) لبدء محرّر نمط متكامل.</value>
+	</data>
+	<data name="Description.class" type="System.String">
+		<value>فئة النمط (CSS)، تحدّد العلاقة بتعريف فئة النمط، باستعمال ".name"في ملفّات أو علامات CSS.</value>
+	</data>
+	<data name="Attribute.ScriptOnDblClick" type="System.String">
+		<value>النقر المزدوج</value>
+	</data>
+	<data name="StyleEditor.groupBox11.Text" type="System.String">
+		<value>التسمية التوضيحية للجدول</value>
+	</data>
+	<data name="StyleEditor.fontPickerFont.Caption" type="System.String">
+		<value>مربّع تعيين الخط</value>
+	</data>
+	<data name="StyleEditor.Combos.NoValue" type="System.String">
+		<value>لا قيمة</value>
+	</data>
+	<data name="StyleEditor.Combos.Inherit" type="System.String">
+		<value>الوراثة</value>
+	</data>
+	<data name="StyleEditor.Combos.Normal" type="System.String">
+		<value>القياسي</value>
+	</data>
+	<data name="StyleEditor.Combos.None" type="System.String">
+		<value>لا شيء</value>
+	</data>
+	<data name="StyleEditor.Combos.Solid" type="System.String">
+		<value>متّصل</value>
+	</data>
+	<data name="StyleEditor.Combos.Double" type="System.String">
+		<value>مزدوج</value>
+	</data>
+	<data name="StyleEditor.Combos.Dotted" type="System.String">
+		<value>منقّط</value>
+	</data>
+	<data name="StyleEditor.Combos.Dashed" type="System.String">
+		<value>متقطّع</value>
+	</data>
+	<data name="StyleEditor.Combos.OutSet" type="System.String">
+		<value>مجموعة خارجية</value>
+	</data>
+	<data name="StyleEditor.Combos.Groove" type="System.String">
+		<value>أخدود</value>
+	</data>
+	<data name="StyleEditor.Combos.InSet" type="System.String">
+		<value>مجموعة داخلية</value>
+	</data>
+	<data name="StyleEditor.Combos.Ridge" type="System.String">
+		<value>نتوء</value>
+	</data>
+	<data name="StyleEditor.Combos.Hidden" type="System.String">
+		<value>مخفي</value>
+	</data>
+	<data name="StyleEditor.Combos.Pixel" type="System.String">
+		<value>بيكسل</value>
+	</data>
+	<data name="StyleEditor.Combos.Point" type="System.String">
+		<value>نقطة</value>
+	</data>
+	<data name="StyleEditor.Combos.Percentage" type="System.String">
+		<value>النسبة المئوية</value>
+	</data>
+	<data name="StyleEditor.Combos.Pica" type="System.String">
+		<value>Picaبيكا</value>
+	</data>
+	<data name="StyleEditor.Combos.Millimeter" type="System.String">
+		<value>ملّيمتر</value>
+	</data>
+	<data name="StyleEditor.Combos.Centimeter" type="System.String">
+		<value>سنتمتر</value>
+	</data>
+	<data name="StyleEditor.Combos.m-Size" type="System.String">
+		<value>حجم م</value>
+	</data>
+	<data name="StyleEditor.Combos.x-Height" type="System.String">
+		<value>ارتفاع س</value>
+	</data>
+	<data name="StyleEditor.Combos.Bold" type="System.String">
+		<value>غامق</value>
+	</data>
+	<data name="StyleEditor.Combos.Bolder" type="System.String">
+		<value>أغمق</value>
+	</data>
+	<data name="StyleEditor.Combos.Lighter" type="System.String">
+		<value>أفتح</value>
+	</data>
+	<data name="StyleEditor.Combos.CapitalLetter" type="System.String">
+		<value>حرف كبير</value>
+	</data>
+	<data name="StyleEditor.Combos.Uppercase" type="System.String">
+		<value>أحرف كبيرة</value>
+	</data>
+	<data name="StyleEditor.Combos.Lowercase" type="System.String">
+		<value>أحرف صغيرة</value>
+	</data>
+	<data name="StyleEditor.Combos.Top" type="System.String">
+		<value>أعلى</value>
+	</data>
+	<data name="StyleEditor.Combos.Center" type="System.String">
+		<value>في الوسط</value>
+	</data>
+	<data name="StyleEditor.Combos.Bottom" type="System.String">
+		<value>أسفل</value>
+	</data>
+	<data name="StyleEditor.Combos.Absolute" type="System.String">
+		<value>مطلق</value>
+	</data>
+	<data name="StyleEditor.Combos.AsBlock" type="System.String">
+		<value>كتلة</value>
+	</data>
+	<data name="StyleEditor.Combos.InlineText" type="System.String">
+		<value>نصّ موضعي</value>
+	</data>
+	<data name="StyleEditor.Combos.ListItem" type="System.String">
+		<value>عنصر للقائمة</value>
+	</data>
+	<data name="StyleEditor.Combos.Middle" type="System.String">
+		<value>الأوسط</value>
+	</data>
+	<data name="StyleEditor.Combos.Baseline" type="System.String">
+		<value>الخطّ الأساسي</value>
+	</data>
+	<data name="StyleEditor.Combos.Sub" type="System.String">
+		<value>الفرعي</value>
+	</data>
+	<data name="StyleEditor.Combos.Super" type="System.String">
+		<value>مرتفع</value>
+	</data>
+	<data name="StyleEditor.Combos.TopOfText" type="System.String">
+		<value>أعلى النصّ</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomOfText" type="System.String">
+		<value>أسفل النصّ</value>
+	</data>
+	<data name="StyleEditor.Combos.Underline" type="System.String">
+		<value>سطّر</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOver" type="System.String">
+		<value>عليه خطّ</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOut" type="System.String">
+		<value>حوله خطّ</value>
+	</data>
+	<data name="StyleEditor.Combos.BlinkText" type="System.String">
+		<value>ومض</value>
+	</data>
+	<data name="StyleEditor.Combos.Visible" type="System.String">
+		<value>مرئي</value>
+	</data>
+	<data name="StyleEditor.Combos.NotVisible" type="System.String">
+		<value>غير مرئي</value>
+	</data>
+	<data name="StyleEditor.Combos.ScrollableArea" type="System.String">
+		<value>قابل للتمرير</value>
+	</data>
+	<data name="StyleEditor.Combos.Automatic" type="System.String">
+		<value>تلقائي</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndLeft" type="System.String">
+		<value>الأعلى والأيسر</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndRight" type="System.String">
+		<value>الأعلى والأيمن</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndLeft" type="System.String">
+		<value>الأسفل والأيسر</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndRight" type="System.String">
+		<value>الأسفل والأيمن</value>
+	</data>
+	<data name="StyleEditor.Combos.Repeat" type="System.String">
+		<value>التكرار</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatRows" type="System.String">
+		<value>تكرار الصفوف</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatColumns" type="System.String">
+		<value>تكرار الأعمدة</value>
+	</data>
+	<data name="StyleEditor.Combos.NoRepeat" type="System.String">
+		<value>لا تكرار</value>
+	</data>
+	<data name="StyleEditor.Combos.Standard" type="System.String">
+		<value>القياسي</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtremSmall" type="System.String">
+		<value>صغير للغاية</value>
+	</data>
+	<data name="StyleEditor.Combos.VerySmall" type="System.String">
+		<value>صغير جداً</value>
+	</data>
+	<data name="StyleEditor.Combos.small" type="System.String">
+		<value>صغير</value>
+	</data>
+	<data name="StyleEditor.Combos.Medium" type="System.String">
+		<value>أوسط</value>
+	</data>
+	<data name="StyleEditor.Combos.Large" type="System.String">
+		<value>كبير</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtraLarge" type="System.String">
+		<value>كبير جداً</value>
+	</data>
+	<data name="StyleEditor.Combos.XXL" type="System.String">
+		<value>كبير للغاية</value>
+	</data>
+	<data name="StyleEditor.Combos.Inside List" type="System.String">
+		<value>قائمة داخلية</value>
+	</data>
+	<data name="StyleEditor.Combos.Outside List" type="System.String">
+		<value>قائمة خارجية</value>
+	</data>
+	<data name="StyleEditor.Combos.Square" type="System.String">
+		<value>مربّع</value>
+	</data>
+	<data name="StyleEditor.Combos.Disc" type="System.String">
+		<value>قرص</value>
+	</data>
+	<data name="StyleEditor.Combos.Circle" type="System.String">
+		<value>دائرة</value>
+	</data>
+	<data name="StyleEditor.Combos.Thin" type="System.String">
+		<value>رفيع</value>
+	</data>
+	<data name="StyleEditor.Combos.Thick" type="System.String">
+		<value>سميك</value>
+	</data>
+	<data name="StyleEditor.Combos.Auto" type="System.String">
+		<value>تلقائي</value>
+	</data>
+	<data name="StyleEditor.Combos.Cross" type="System.String">
+		<value>تقاطع</value>
+	</data>
+	<data name="StyleEditor.Combos.Hand" type="System.String">
+		<value>يدوي</value>
+	</data>
+	<data name="StyleEditor.Combos.HandIE5Only" type="System.String">
+		<value>يدوي (انترنت اكسبلورير الاصدار 5 فقط)</value>
+	</data>
+	<data name="StyleEditor.Combos.MoveObject" type="System.String">
+		<value>التحريك</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeRightBorder" type="System.String">
+		<value>تغيير الحجم الأيمن</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperRightCorner" type="System.String">
+		<value>تغيير الحجم العلوي الأيمن</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperLeftCorner" type="System.String">
+		<value>تغيير الحجم العلوي الأيسر</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeTopBorder" type="System.String">
+		<value>تغيير الحجم العلوي</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerRightCorner" type="System.String">
+		<value>تغيير الحجم السفلي الأيمن</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerLeftCorner" type="System.String">
+		<value>تغيير الحجم السفلي الأيسر</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeBottomBorder" type="System.String">
+		<value>تغيير الحجم السفلي</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLeftBorder" type="System.String">
+		<value>تغيير الحجم الأيسر</value>
+	</data>
+	<data name="StyleEditor.Combos.InsideTextbox" type="System.String">
+		<value>النصّ (I-Beam)</value>
+	</data>
+	<data name="StyleEditor.Combos.Wait(Hourglass)" type="System.String">
+		<value>انتظر (الساعة الرملية)</value>
+	</data>
+	<data name="StyleEditor.Combos.Help" type="System.String">
+		<value>المساعدة</value>
+	</data>
+	<data name="StyleEditor.Combos.Scroll" type="System.String">
+		<value>التمرير</value>
+	</data>
+	<data name="StyleEditor.Combos.Fixed" type="System.String">
+		<value>الثابت</value>
+	</data>
+	<data name="StyleEditor.Combos.Pre" type="System.String">
+		<value>منسّق مسبقاً</value>
+	</data>
+	<data name="StyleEditor.Combos.NoWrap" type="System.String">
+		<value>بدون التفاف</value>
+	</data>
+	<data name="PropertyGrid.BackgroundPropertyType" type="System.String">
+		<value>مرّر,ثابت</value>
+	</data>
+	<data name="PropertyGrid.ScrollType" type="System.String">
+		<value>أجل,لا,تلقائي</value>
+	</data>
+	<data name="PropertyGrid.Boolean" type="System.String">
+		<value>أجل,لا</value>
+	</data>
+	<data name="PropertyGrid.AreaShape" type="System.String">
+		<value>قياسي,مستطيل,دائرة,مضلع</value>
+	</data>
+	<data name="PropertyGrid.BreakClearEnum" type="System.String">
+		<value>لا شيء,يسار,يمين,كلّه</value>
+	</data>
+	<data name="PropertyGrid.HorizontalAlign" type="System.String">
+		<value>غير معيّن,يسار,في الوسط,يمين,ضبط</value>
+	</data>
+	<data name="PropertyGrid.VerticalAlign" type="System.String">
+		<value>غير معيّن,أعلى,أوسط,أسفل</value>
+	</data>
+	<data name="PropertyGrid.FontUnit" type="System.String">
+		<value>لا قيمة,صغير للغاية,صغير جداً,صغير,وسط,كبير,كبير جداً,كبير للغاية,أصغر,أكبر</value>
+	</data>
+	<data name="PropertyGrid.LinkElementMedia" type="System.String">
+		<value>كلّه,الشاشة,TTY,TV,العرض,محمول,طبع,طريقة بْريْل,سمعيّ</value>
+	</data>
+	<data name="PropertyGrid.UnorderedListType" type="System.String">
+		<value>قياسي,دائرة,قرص,مربّع</value>
+	</data>
+	<data name="PropertyGrid.ListType" type="System.String">
+		<value>قياسي,عددي,أحرف صغرى,أحرف كبرى,رقم روماني بحرف صغير,رقم روماني بحرف كبير,قرص,دائرة,مربّع</value>
+	</data>
+	<data name="Description.AreaTags" type="System.String">
+		<value>مجموعة من المناطق الحوارية المسجّلة في هذه الخريطة.</value>
+	</data>
+	<data name="Attribute.AreaTags" type="System.String">
+		<value>مناطق</value>
+	</data>
+	<data name="Attribute.index" type="System.String">
+		<value>موضع</value>
+	</data>
+	<data name="Description.index" type="System.String">
+		<value>موضع ترتيبي لعنصر الخيار هذا في مربّع القائمة.</value>
+	</data>
+	<data name="PropertyGrid.OrderedListType" type="System.String">
+		<value>قياسي,عددي,أحرف صغيرة,أحرف كبيرة,رقم روماني بحرف صغير,رقم روماني بحرف كبير</value>
+	</data>
+	<data name="PropertyGrid.RulesType" type="System.String">
+		<value>غير معيّن,لا شيء,مجموعات,صفوف,أعمدة,كلّها</value>
+	</data>
+	<data name="Attribute.maxLength" type="System.String">
+		<value>طول الحقل الأقصى</value>
+	</data>
+	<data name="Attribute.readOnly" type="System.String">
+		<value>للقراءة فقط</value>
+	</data>
+	<data name="Attribute.value" type="System.String">
+		<value>قيمة</value>
+	</data>
+	<data name="Description.maxLength" type="System.String">
+		<value>العدد الأقصى للأحرف التي يمكن للمستخدم ادخالها في هذا الحقل.</value>
+	</data>
+	<data name="Description.ScriptOnDblClick" type="System.String">
+		<value>ينطلق في حال نقر المستخدم مرّتين على منطقة العناصر المنشّطة.</value>
+	</data>
+	<data name="Description.readOnly" type="System.String">
+		<value>ان محتوى الحقل للقراءة فقط، فلا يمكن للمستخدم مثلاً أن يغيّر المحتوى.</value>
+	</data>
+	<data name="Description.value" type="System.String">
+		<value>القيمة التي سترسلها البيانات الاستمارة. بالنسبة للأزرار هذا النصّ الاضافي على سطح العناصر.</value>
+	</data>
+	<data name="Attribute.checked" type="System.String">
+		<value>محدّد</value>
+	</data>
+	<data name="Attribute.selected" type="System.String">
+		<value>معيّن</value>
+	</data>
+	<data name="Attribute.text_Field" type="System.String">
+		<value>نصّ خيار</value>
+	</data>
+	<data name="Description.checked" type="System.String">
+		<value>ان حقل خانة الاختيار أو زرّ الخيار منشّط (محدّد)</value>
+	</data>
+	<data name="Description.selected" type="System.String">
+		<value>تمّ تعيين الحقل بشكل افتراضي.</value>
+	</data>
+	<data name="Description.text_Field" type="System.String">
+		<value>النصّ الذي يمكن أن يراه المستخدم في القائمة المنسدلة. ان لم يتمّ تحديد أية قيمة، يتمّ ارسال هذا النصّ أيضاً.</value>
+	</data>
+	<data name="StyleEditorForm.Text" type="System.String">
+		<value>محرّر النمط</value>
+	</data>
+	<data name="StyleEditorForm.buttonOK.Text" type="System.String">
+		<value>موافق</value>
+	</data>
+	<data name="Description.src" type="System.String">
+		<value>ملفّ المصدر أو معرّف المواد الكليّة</value>
+	</data>
+	<data name="OptionCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة</value>
+	</data>
+	<data name="OptionCollectionEditor.memberLabel.Text" type="System.String">
+		<value>تعيين خيار للتحرير:</value>
+	</data>
+	<data name="OptionCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة</value>
+	</data>
+	<data name="Attribute.multiple" type="System.String">
+		<value>العديد</value>
+	</data>
+	<data name="Description.multiple" type="System.String">
+		<value>يحدّد ان كان يمكن للمستخدم أو لا تعيين عنصريّ خيار أو أكثر واستعمال مفتاح التحكّم CTRL في نفس الوقت.</value>
+	</data>
+	<data name="Attribute.Options" type="System.String">
+		<value>خيارات</value>
+	</data>
+	<data name="Description.Options" type="System.String">
+		<value>مجموعة الخيارات التي تؤلّف القائمة.</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" type="System.String">
+		<value>صورة الخلفية</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" type="System.String">
+		<value>ملفات صور(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|جميع الملفات (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Title" type="System.String">
+		<value>صورة لعنصر القائمة</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Filter" type="System.String">
+		<value>ملفات صور(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|جميع الملفات (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.labelColumnGap.Text" type="System.String">
+		<value>المدى بين العواميد:</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerRoman" type="System.String">
+		<value>حرف روماني صغير</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperRoman" type="System.String">
+		<value>حرف روماني كبير</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerAlpha" type="System.String">
+		<value>حرف ألفا صغير</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperAlpha" type="System.String">
+		<value>حرف ألفا كبير</value>
+	</data>
+	<data name="StyleEditor.Combos.Decimal" type="System.String">
+		<value>رقم عشري</value>
+	</data>
+	<data name="StyleEditor.Combos.DecimalZero" type="System.String">
+		<value>رقم عشري، بادىء بالصفر</value>
+	</data>
+	<data name="StyleEditor.Combos.Left" type="System.String">
+		<value>يسار</value>
+	</data>
+	<data name="StyleEditor.Combos.Right" type="System.String">
+		<value>يمين</value>
+	</data>
+	<data name="PropertyGrid.TableColumnHorizontalAlign" type="System.String">
+		<value>غير محدّد,اليسار,اليمين,الوسط,Char,الضبط</value>
+	</data>
+	<data name="Attribute.char" type="System.String">
+		<value>رمز المحاذاة</value>
+	</data>
+	<data name="Attribute.charoff" type="System.String">
+		<value>نطاق رمز المحاذاة</value>
+	</data>
+	<data name="Description.char" type="System.String">
+		<value>الحرف الستعمل لمحاذاة عنصر المحتوى له.</value>
+	</data>
+	<data name="Description.charoff" type="System.String">
+		<value>النطاق (المسافة) بين الرمز المحاذي للمحتوى والحدّ الأيمن للعنصر.</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.memberLabel.Text" type="System.String">
+		<value>تحرير عناصر النمط</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.addButton.Text" type="System.String">
+		<value>اضافة المحدّد</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.removeButton.Text" type="System.String">
+		<value>ازالة المحدّد</value>
+	</data>
+	<data name="Attribute.StylesheetContent" type="System.String">
+		<value>محتوى ورقة النمط</value>
+	</data>
+	<data name="Description.StylesheetContent" type="System.String">
+		<value>تسمح هذه الخاصية الاذن بالوصول الى المحتوى في محتوى ملفّ النمط المرتبط</value>
+	</data>
+	<data name="Attribute.usemap" type="System.String">
+		<value>استعمل الخريطة</value>
+	</data>
+	<data name="Description.usemap" type="System.String">
+		<value>استعمل تعريف المخطط هذا لانشاء  مخطط الصورة الذي يمكن النقر عليه (موقع الكومبيوتر العميل)</value>
+	</data>
+	<data name="Attribute.action" type="System.String">
+		<value>الاجراء</value>
+	</data>
+	<data name="Attribute.encType" type="System.String">
+		<value>نوع الترميز</value>
+	</data>
+	<data name="Attribute.method" type="System.String">
+		<value>الطريقة</value>
+	</data>
+	<data name="Attribute.name_Form" type="System.String">
+		<value>اسم الاستمارة</value>
+	</data>
+	<data name="Description.action" type="System.String">
+		<value>المسار النسبي أو الكامل لمعرّفات المواد الكليّة التي تُطلب لدى ارسال البيانات الاستمارة</value>
+	</data>
+	<data name="Description.encType" type="System.String">
+		<value>نوع الترميز. تستند هذه القيمة على المحتوى المرسل. لتحميلات الملفّ استعمل الجزء المتعدّد.</value>
+	</data>
+	<data name="Description.method" type="System.String">
+		<value>أسلوب بروتوكول نقل الملفّات التشعبيّة التي يستعملها المستعرض لارسال البيانات الاستمارة. تُرسل الاستمارات القياسية بواسطة اختبار التشغيل الذتي.</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>اسم الاستمارة لاستعمالها في بيئات البرنامج النصّي.</value>
+	</data>
+	<data name="Attribute.size_Select" type="System.String">
+		<value>خيارات مرئية</value>
+	</data>
+	<data name="Description.size_Select" type="System.String">
+		<value>عدد الخيارات المرئية. ان كانت هناك خيارات أكثر من مرئية تنشىء القيمة 1 قائمة منسدلة حيث تقوم قيم أكبر من 1 بانشاء مربّع قائمة. ان كانت هناك خيارات اضافية يكون لمربّع القائمة عمود تمرير.</value>
+	</data>
+	<data name="Attribute.label" type="System.String">
+		<value>العلامة</value>
+	</data>
+	<data name="Description.label" type="System.String">
+		<value>النصّ في عنصر التحديد الظاهر للمستخدم ان لم يتمّ استعمال محتوى الخيار.</value>
+	</data>
+	<!-- NEW -->
+	<data name="Attribute.Selector" type="System.String">
+		<value>المحدّد</value>
+	</data>
+	<data name="Description.Selector" type="System.String">
+		<value>ان قاعدة ورقة النمط المستعملة لتحديد نوع واحد من النمط. حدّد النوع المناسب لخاصية نوع المحدّد. يتمّ ضبط التحديد المسبق وفقاً لذلك.</value>
+	</data>
+	<data name="Attribute.SelectorType" type="System.String">
+		<value>نوع المحدّد</value>
+	</data>
+	<data name="Description.SelectorType" type="System.String">
+		<value>نوع المحدّد، مثلاً الفئة، النطاق، قاعدة الكتلة، أو العام (الرمز *). بالنسبة للنوع القياسي، أكتب أسماء علامة بروتوكول نقل الملفّات التشعبيّة.</value>
+	</data>
+	<data name="Attribute.SelectorName" type="System.String">
+		<value>اسم المحدّد</value>
+	</data>
+	<data name="Description.SelectorName" type="System.String">
+		<value>اسم المحدّد. اختر سواء اسماً مجانياً أو اسم عنصر من بروتوكول نقل الملفّات التشعبيّة.</value>
+	</data>
+	<data name="Attribute.EmbeddedStylesheets" type="System.String">
+		<value>أنماط مضمنة</value>
+	</data>
+	<data name="Description.EmbeddedStylesheets" type="System.String">
+		<value>عنصر النمط ضمن قسم الرأس في المستند الذي يحتوي تعريفات النمط المضمن.</value>
+	</data>
+	<data name="Attribute.Caption" type="System.String">
+		<value>التسمية التوضيحية</value>
+	</data>
+	<data name="Description.Caption" type="System.String">
+		<value>التسمية التوضيحية للجدول. استعمل خيار "مع تسمية توضيحية" لاضلافة أية تسمية توضيحية أو الغائها.</value>
+	</data>
+	<data name="Attribute.WithCaption" type="System.String">
+		<value>التسمية التوضيحية موجودة</value>
+	</data>
+	<data name="Description.WithCaption" type="System.String">
+		<value>ان تمّ تعيين "أجل" سيكون للجدول تسمية توضيحية يمكن تنسيقهاومحاذاتها.</value>
+	</data>
+	<data name="PropertyGrid.StyleRuleType" type="System.String">
+		<value>القياسي,الفئة,النطاق,شبه,العام</value>
+	</data>
+	<data name="Description.height" type="System.String">
+		<value>العليا </value>
+	</data>
+</root>

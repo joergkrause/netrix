@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+            .style1
+            {
+                text-decoration: underline;
+            }
+        </style>
+	</head>
+	<body>
+	    <h1>Netrix Editor Component</h1>
+        <p>
+        Welcome to the Editor Component's demo application.  
+        </p>
+        <h2>Why this?</h2>
+        <p>
+            The Netrix editor is an amazing complex and multi-functional component that 
+            allows users to edit and show HTML pages. A complete set of functions delivers 
+            everything to create a sophisticated HTML editor application. Several plug-ins 
+            extend the component and have been seperated into its own assemblies to keep the 
+            core lean.</p>
+        <p>
+            The demo is delivered for free including all sources. The purpose is to give 
+            developers a way to learn from existing code. The demo was written by the same 
+            guy who wrote the editor itself, <a href="http://www.joergkrause.de">Joerg</a>. 
+            Hence, you can expect that the way the demo deals with the component is the 
+            recommended way. For more information, have a look at
+            <a href="http://www.netrixcomponent.net">http://www.netrixcomponent.net</a>. </p>
+        <h2>
+            How this?</h2>
+        <p>
+            This demo uses these open source libraries:</p>
+        <ol>
+            <li>Weifen Luo&#39;s Winforms UI that provides the <span class="style1">docking 
+                functionality</span>. Find more here:
+                <a href="http://sourceforge.net/projects/dockpanelsuite/">
+                http://sourceforge.net/projects/dockpanelsuite/</a></li>
+            <li>Arik Poznanski&#39;s <span class="style1">ribbon</span> wrapper, that makes the 
+                Windows 7 Ribbon available for .NET. See
+                <a href="http://windowsribbon.codeplex.com/">http://windowsribbon.codeplex.com/</a></li>
+            <li>A part from the Fireball project, found at 
+                <a href="http://dotnetfireball.codeplex.com/">
+               http://dotnetfireball.codeplex.com/</a>. This project is now inactive, but we 
+                used the <span class="style1">code editor</span> and added some own code.
+            </li>
+        </ol>
+        <p>
+            <strong style="color: #FF0066">Note: To use the links shown above put the demo in browse mode, 
+            while all others appear better in design mode.</strong></p>
+        <h2>
+            What is it?</h2>
+        <p>
+            The demo has no specific purpose but showing how to work with the component. 
+            It&#39;s not exactly an HTML editor, it&#39;s just a collection of functions. You find 
+            each theme of functions grouped onto one tab of the ribbon. Each ribbon has a 
+            help button at the left that loads a short explanation of what you can do and 
+            how it works internally. We recommend first clicking onto the help button and 
+            read the text before start clicking the various ribbon buttons.</p>
+        <p>
+            The functions <span class="style1">on the ribbon</span> at a glance are:</p>
+        <ul>
+            <li>Edit. You can:<ul>
+                <li>Use the clipboard</li>
+                <li>Use undo/redo operations</li>
+                <li>Format text using the Font properties</li>
+                <li>Format a paragraph by aligning the block</li>
+                <li>View the markup in the code editor </li>
+                <li>Show editing glyphs, small images that appear where the tags are in design view</li>
+                <li>Use the search and replace functions</li>
+                </ul>
+            </li>
+            <li>Insert. You can:<ul>
+                <li>Format a block using H1 to H6 tags</li>
+                <li>Remove block formats</li>
+                <li>Remove inline formats, such as fonts</li>
+                <li>Add a table</li>
+                </ul>
+            </li>
+            <li>Display. You can:<ul>
+                <li>Shows the grid that helps positioning elements</li>
+                <li>Style the grid with width, color and line pattern</li>
+                <li>Activate absolute positioning, together with some functions that apply in this 
+                    mode only</li>
+                <li>Enable and format scrollbars (requires reloading the document)</li>
+                <li>Move the scrollbar programmatically and retrieve the current position</li>
+                </ul>
+            </li>
+            <li>Control. You can:<ul>
+                <li>Attach events to elements and watch they firing</li>
+                <li>Show the outline (document tree)</li>
+                <li>Show document (global) events in a window</li>
+                </ul>
+            </li>
+            <li>Text. You can:<ul>
+                <li>Highlight text without changing the content</li>
+                <li>Style the highlight pattern</li>
+                <li>Manipulate text (make a word uppercase, lowercase)</li>
+                </ul>
+            </li>
+            <li>Styles. You can:<ul>
+                <li>Enable or add a linked stylesheet</li>
+                <li>Edit the current document&#39;s style using the embedded style editor control</li>
+                </ul>
+            </li>
+            <li>Helpline Tools<ul>
+                <li>As a contextual tab you find the functions of the helpline plug-in. You can:<ul>
+                    <li>Add two helplines</li>
+                    <li>Format one of these helplines with various options</li>
+                    <li>Show ruler (Tip: works well with absolute positioning and the grid)</li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            <li>Spellchecker Tools<ul>
+                <li>As a contextual tab you find the functions of the spellchecker plug-in. You can:<ul>
+                    <li>Change the dictionary</li>
+                    <li>Invoke either background (As you type) or interactive checking</li>
+                    <li>Format the highlight style</li>
+                    <li>Set some options</li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            <li>Table Tools<ul>
+                <li>As a contextual tab you find the functions of the table editor plug-in. You can:<ul>
+                    <li>Add and remove rows, columns or cells</li>
+                    <li>Format the table by moving cell borders with the mouse</li>
+                    <li>Split cells</li>
+                    <li>Style the slider&#39;s color</li>
+                    <li>Set several options that change the editor&#39;s behavior </li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Apart from this the demo shows <span class="style1">several windows</span>, some 
+            of them are optional:</p>
+        <ul>
+            <li>The main window shows the editor&#39;s content and is, hence, the editor window.</li>
+            <li>To the left a toolbox appears. This box demonstrates the drag &#39;n drop 
+                functionality.</li>
+            <li>To the right the property window appears. This is to show how the propertygrid 
+                can be used to manipulate elements.</li>
+            <li>Optional you can show a window that catches events. This is performance critical 
+                if you hook into all available events at once.</li>
+            <li>The document outline window shows the document&#39;s structure as a tree.</li>
+        </ul>
+        <img src="dotnet://NetrixHtmlEditorDemo.exe:Resources.Icons.16x16.undo.png" />
+        <p>
+            Additionally, the applications <span class="style1">backstage area</span> has 
+            some basic editor functions:</p>
+        <ul>
+            <li>Load from file</li>
+            <li>Save to file</li>
+            <li>Print</li>
+            <li>Show all editor properties and change them (even if not on the ribbon)</li>
+            <li>Create a new empty document</li>
+            <li>Exit the application</li>
+        </ul>
+        <p>
+            <strong>Note that these functions shown are just a subset and Netrix has many, 
+            many more features you can use in your application. Check out our website 
+            regularly to keep a new demo with more features implemented.</strong></p>
+	</body>
+</html>

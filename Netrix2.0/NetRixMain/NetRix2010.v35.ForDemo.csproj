@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.Professional.Editor.v35.Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET35;FORDEMO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>602,612,618</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DOTNET35;FORDEMO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DocumentorIncludes.xml" />
+    <EmbeddedResource Include="Resources\Loader\DocX2Html.xslt" />
+    <!--
+    <EmbeddedResource Include="HtmlEditor.UI.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HtmlEditor.UI.cs</DependentUpon>
+    </EmbeddedResource>
+    -->
+    <EmbeddedResource Include="HtmlEditor.UI.resx">
+      <DependentUpon>HtmlEditor.UI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\App.ico" />
+    <Content Include="Resources\BannerBitmap.bmp" />
+    <Content Include="Resources\DragCursors\WSIconFileButton.ico" />
+    <Content Include="Resources\DragCursors\WSIconResetButton.ico" />
+    <Compile Include="NetRix\CssTextFormatting.cs" />
+    <Compile Include="NetRix\Designer\NameCreationService.cs" />
+    <Compile Include="NetRix\WebEditing\DragDrop\DropInfo.cs" />
+    <Compile Include="NetRix\WebEditing\DragDrop\IDataObjectConverter.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\EventSink.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\VideoElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\SourceElementsCollection.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\ArticleElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\AsideElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\AudioElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\CanvasElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\TimeElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\SourceElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\SectionElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\NavElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\MarkElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\HGroupElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\HeaderElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\FigCaptionElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\FigureElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\CommandElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\CommandType_Enum.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\Html5Base.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\Preload_Enum.cs" />
+    <Compile Include="NetRix\WebEditing\UndoRedo\BatchedUndoUnit.cs" />
+    <Compile Include="NetRix\WebEditing\UndoRedo\UndoObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EditPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HtmlEditor.Events.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlEditor.Methods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElementFactory.cs" />
+    <Compile Include="HtmlEditor.Properties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="HtmlEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlEditor.UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\FrameEvents.cs" />
+    <Compile Include="NetRix\Designer\CommandService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\DesignerHost.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\DesignSite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\ElementDescriptorAttribute.cs" />
+    <Compile Include="NetRix\Designer\Elements\ElementDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\Elements\ElementPropertyEditor.cs" />
+    <Compile Include="NetRix\Designer\Elements\RectAreaDesigner.cs" />
+    <Compile Include="NetRix\Designer\EventBindingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\EventPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\EventTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\NamespaceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\PropertyValueUIService.cs" />
+    <Compile Include="NetRix\Designer\UIService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Designer\WebFormsRootDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\ToolClickedCancelEventHandler.cs" />
+    <Compile Include="NetRix\Events\ToolClickedCancelEventArgs.cs" />
+    <Compile Include="NetRix\Events\EventBinding.cs" />
+    <Compile Include="NetRix\Events\BeforeNavigateEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\BeforeNavigateEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\BeforeReplaceEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\BeforeReplaceEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\BeforeResourceLoadEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\BeforeResourceLoadEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\CurrentElementChanged_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\DocumentOnPropertyGridHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\GetResourceEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Events\GetResourceEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\HtmlDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\HtmlSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\HtmlTextFormatting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\InternetConnectState_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\MSHTMLSite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\NetRixControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\ClientSite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\InternetSessionFactory.cs" />
+    <Compile Include="NetRix\Networking\FileProtocolHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\FileProtocolHandlerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\HttpBase.cs" />
+    <Compile Include="NetRix\Networking\HttpProtocolHandlerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\HttpRequestResponse.cs" />
+    <Compile Include="NetRix\Networking\MhtBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\MhtNotBuiltException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\Networking\SecurityManager.cs" />
+    <Compile Include="NetRix\WebEditing\Behaviors\CommonBehaviors\ElementSelectedBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Behaviors\CommonBehaviors\MapAreaBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Behaviors\HtmlGrid\HtmlGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Behaviors\HtmlGrid\SnapElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\CollectionEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\FrameElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\LinkElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\MetaElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\ScriptElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\DocumentCollections\StyleElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\HtmlDocumentStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\HtmlFrameSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\HtmlTimer.cs" />
+    <Compile Include="NetRix\WebEditing\Documents\HtmlWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Documents\MetaTagType_Enum.cs" />
+    <Compile Include="NetRix\WebEditing\DragDrop\DataObjectConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\DragDrop\DataObjectConverterInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\DragDrop\DragDropCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\DragDrop\DropTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AbbreviationElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\AcronymElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AddressElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AnchorElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AppletElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AreaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AreaElementsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\AreaShape_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BackgroundPropertyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BdoElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BigElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BlockquoteElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BodyElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BoldElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\BreakElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\CenterElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\CiteElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\CodeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\CommentElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DefinitionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DefinitionListDefinitionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DefinitionListEntryElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DefinitionListTermElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DeletedElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DirElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\DivElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\EmbeddedBaseElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Html5\EmbedElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\EmphasisElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\EncodingType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\BodyElementExt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\Element.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\ElementAdjacency_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\ElementDom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\ExtendedProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\TextElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\TextNodeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\WebControlPropertyDescriptor.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\FontElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\ButtonElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\FieldSetElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\FormElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputButtonElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputCheckboxElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputFileElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputHiddenElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputImageElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputPasswordElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputRadioElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputResetElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputSubmitElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\InputTextElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\IOptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\LabelElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\LegendElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\ListBoxElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\OptGroupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\OptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\OptionElementsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\OptionOnlyElementsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\SelectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormElements\TextAreaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FormMethod_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FrameElements\FrameElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FrameElements\FrameSetElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\FrameElements\IFrameElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\FrameElements\NoframeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\BaseElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\BgSoundElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\HeadElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\NoScriptElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\TitleElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\HtmlElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\LinkElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\LinkElementMedia_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\MetaElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\ScriptElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\StyleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\StyleRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\StyleRuleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeadElements\StyleRuleType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\HeaderElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Header_Enum.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\HorizontalRuleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ImageElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\InsertedElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ItalicElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\KeyboardElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ListItemElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ListType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\MapElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\MarqueeElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\MenuElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\NoBreakElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\ObjectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\OrderedListElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\OrderedListType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\PanelElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ParagraphElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ParamElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ParameterElementsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\PreformattedElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\ScrollType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SelectableElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SimpleInlineElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SmallElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SpanElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\StrikeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\StrongElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\StyledElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SubElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\SupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\CaptionAlignment_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\CaptionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\ColElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Tables\ColgroupElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Tables\ExpandCaptionConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\RulesType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableBodyElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableCellElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableCellElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableColumnHorizontalAlign_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableFootElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableHeadElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableHeaderElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableRowElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableRowElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\Tables\TableSectionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\TeletypeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\UnderlineElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\UnorderedListElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\UnorderedListType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Elements\VariableElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Exceptions\CommandUnavailableException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Exceptions\DocumentNotReadyException.cs" />
+    <Compile Include="NetRix\WebEditing\Exceptions\HtmlControlExceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Exceptions\SelectionNotPossibleException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\HighLighting\DisplayPointer.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\DisplayService.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\HighLightColor.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\HighLightSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\HighLighting\HighLightStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\HighLighting\HtmlCaret.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\HtmlTextRange.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\LineInfo.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\MarkupContainer.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\MarkupPointer.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\MarkupService.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\MyExpandableObjectConverter.cs" />
+    <Compile Include="NetRix\WebEditing\HighLighting\TextSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\MoveCaret_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRix\WebEditing\Styles\ElementStyle.cs" />
+    <Compile Include="NetRix\WebEditing\Styles\CssStyle.cs" />
+    <Compile Include="NetRix\WebEditing\Styles\IStyleSheet.cs" />
+    <Compile Include="NetRix\WebEditing\Styles\StyleSheet.cs" />
+    <Compile Include="NetRix\WebEditing\UndoRedo\ChangeManager.cs" />
+    <Compile Include="NetRix\WebEditing\UndoRedo\ChangeSink.cs" />
+    <Compile Include="NetRix\WindowEvents.cs" />
+    <EmbeddedResource Include="NetRix\WebEditing\Documents\HtmlDocumentStructure.resx">
+      <DependentUpon>HtmlDocumentStructure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Cursors\DiagonalArrow.cur" />
+    <EmbeddedResource Include="Resources\Cursors\DownArrow.cur" />
+    <EmbeddedResource Include="Resources\Cursors\InputText.cur" />
+    <EmbeddedResource Include="Resources\Cursors\RightArrow.cur" />
+    <EmbeddedResource Include="Resources\DragCursors\DefaultCopy.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\DefaultMove.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\DefaultNot.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconAnchor.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconBreak.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconButton.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconDIV.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconDropDownList.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconForm.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconHRule.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconImage.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputCheckBox.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputHidden.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputImage.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputPassW.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputRadioButton.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconInputText.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconOK2Button.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconParagraph.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconSelectList.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconTable.ico" />
+    <EmbeddedResource Include="Resources\DragCursors\WSIconTextArea.ico" />
+    <EmbeddedResource Include="Resources\PropertyGridDocumentTab.ico" />
+    <EmbeddedResource Include="Resources\TableDesigner\TableActivator.ico" />
+    <EmbeddedResource Include="Resources\ToolBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Printing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core2010.v35.ForDemo.csproj">
+      <Project>{BFFD7795-5295-428C-8C15-DAF8028DA532}</Project>
+      <Name>Core2010.v35.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetRixUI\NetRixUI2010.v35.ForDemo.csproj">
+      <Project>{A66482E3-DB0F-4F53-884E-B538595DFBD8}</Project>
+      <Name>NetRixUI2010.v35.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\HtmlFormatter\HtmlFormatter2010.v35.ForDemo.csproj">
+      <Project>{72CE54FB-A6F7-4DA4-8506-E106EAF48076}</Project>
+      <Name>HtmlFormatter2010.v35.ForDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

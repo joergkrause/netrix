@@ -1,0 +1,263 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace GuruComponents.EditorDemo.Commands
+{
+    public enum RibbonCommands : uint
+    {
+
+        cmdHelpEdit = 101,
+        cmdHelpElement = 102,
+        cmdHelpDisplay = 103,
+        cmdHelpControl = 104,
+        cmdHelpText = 105,
+        cmdHelpStyles = 106,
+        cmdHelpHelpline = 107,
+        cmdHelpSpeller = 108,
+        cmdHelpTableEditor = 109,
+        cmdHelpTableOptions = 110,
+        cmdApplicationMenu = 900,
+        cmdRecentFiles = 901,
+        cmdHelp = 902,
+
+        cmdTabEdit = 1000,
+
+        cmdButtonNew = 1001,
+        cmdButtonOpen = 1002,
+        cmdButtonSave = 1003,
+        cmdButtonPrint = 1004,
+        cmdButtonProperties = 1005,
+
+        cmdButtonExit = 1100,
+        cmdGroupClipboard = 2000,
+        cmdButtonPaste = 2001,
+        cmdButtonCut = 2002,
+        cmdButtonCopy = 2003,
+        cmdButtonUndo = 2004,
+        cmdButtonRedo = 2005,
+        cmdButtonPasteImage = 2006,
+        cmdGroupFont = 2010,
+        cmdFont = 2011,
+        cmdGroupParagraph = 2020,
+        cmdButtonInsertUL = 2021,
+        cmdButtonInsertOL = 2022,
+        cmdButtonInsertOutdent = 2023,
+        cmdButtonInsertIndent = 2024,
+        cmdButtonAlignLeft = 2025,
+        cmdButtonAlignRight = 2026,
+        cmdButtonAlignCenter = 2027,
+        cmdButtonAlignFull = 2028,
+
+        cmdGroupDesignMode=2040,
+        cmdDesignMode=2041,
+
+        cmdGlyphsVariant = 2051,
+        cmdGlyphVariantNone = 2052,
+        cmdGlyphVariantStandard = 2053,
+        cmdGlyphVariantColored = 2054,
+        cmdGlyphKind = 2055,
+
+        cmdButtonViewSource = 2059,
+        cmdGroupSearchReplace = 2060,
+        cmdButtonSearch = 2061,
+        cmdButtonReplace = 2062,
+
+        cmdUndoRedo = 2100,
+        cmdUndoStack = 2101,
+        cmdUndoStep = 2102,
+        cmdRedoStep = 2103,
+        cmdUndoAddPackedStack = 2104,
+
+        cmdTabInsert = 3000,
+        // ELEMENTS
+        cmdInRibbonGalleryInsertElement = 3011,
+        cmdGroupParagraphElementsHeader = 3012,
+        cmdGroupParagraphElementsPre = 3013,
+        cmdGroupParagraphElementsCode = 3014,
+        cmdRemoveFormat = 3015,
+        cmdRemoveInlineFormat = 3016,
+        // TABLE
+        cmdInsertTABLE = 3031,
+        // GRID
+        cmdTabDisplay = 4000,
+        cmdTabHelpline = 4002, // Context Sensual
+        cmdRuler = 4004,
+        cmdGridShow = 4011,
+        cmdGridSize = 4012,
+        cmdGridColor = 4013,
+        cmdGridStyle = 4014,
+        cmdPositionMultipleSelection = 4015,
+        // HELPLINE
+        cmdHelplineTools = 4001,
+        cmdHelpLine_A = 4020,
+        cmdHelpLineX_A = 4021,
+        cmdHelpLineY_A = 4022,
+        cmdHelpLinePositionX_A = 4023,
+        cmdHelpLinePositionY_A = 4024,
+        cmdHelpLineSnap_A = 4025,
+        cmdHelpLineColor_A = 4026,
+        cmdHelpLineLineSize_A = 4027,
+        cmdHelpLineLineDash_A = 4028,
+        cmdHelpLineSnapToGrid_A = 4029,
+        cmdHelpLineSnapGridSize_A = 4030,
+        cmdHelpLine_B = 4031,
+        // SCROLLBAR
+        cmdGroupDisplayScrollbars = 4140,
+        cmdScrollbarColor = 4141,
+        cmdScrollbarUp = 4142,
+        cmdScrollbarDown = 4143,
+        cmdScrollbarLeft = 4144,
+        cmdScrollbarRight = 4145,
+        cmdScrollbarsEnabled = 4146,
+        cmdScrollbarX = 4147,
+        cmdScrollbarY = 4148,
+        // POSITION
+        cmdPositionAbsolute = 4131,
+        cmdPositionToFront = 4132,
+        cmdPositionToBack = 4133,
+        // CONTROL EVENTS
+        cmdTabControl = 5000,
+        cmdControlShowEvent=5101,
+        cmdControlAttachEvent = 5011,
+        cmdControlElementNames = 5012,
+        cmdControlElementNameA = 5013,
+        cmdControlElementNameIMG = 5014,
+        cmdControlElementNameDIV = 5015,
+        cmdControlElementNameBUTTON = 5016,
+
+        cmdControlEventNameClick = 5021,
+        cmdControlEventNameDblClick = 5022,
+        cmdControlEventNameMouseDown = 5023,
+        cmdControlEventNameMouseEnter = 5024,
+        cmdControlEventNameMouseLeave = 5025,
+        cmdControlEventNameMouseOut = 5026,
+        cmdControlEventNameMouseUp = 5027,
+        cmdControlEventNameMouseWheel = 5028,
+
+        cmdControlEventNameBeforeCut = 5029,
+        cmdControlEventNameCut = 5030,
+        cmdControlEventNameBeforeCopy = 5031,
+        cmdControlEventNameCopy = 5032,
+        cmdControlEventNameBeforePaste = 5033,
+        cmdControlEventNamePaste = 5034,
+
+        cmdControlEventNameResize = 5035,
+        cmdControlEventNameResizeEnd = 5036,
+        cmdControlEventNameResizeStart = 5037,
+
+        cmdControlEventNameMove = 5038,
+        cmdControlEventNameMoveEnd = 5039,
+        cmdControlEventNameMoveStart = 5040,
+
+        cmdControlEventNameDrag = 5041,
+        cmdControlEventNameDragEnd = 5042,
+        cmdControlEventNameDragEnter = 5043,
+        cmdControlEventNameDragLeave = 5044,
+        cmdControlEventNameDragStart = 5045,
+        cmdControlEventNameDragOver = 5046,
+        cmdControlEventNameDrop = 5047,
+
+        cmdControlEventNameControlSelect = 5048,
+        cmdControlEventNameSelect = 5049,
+        cmdControlEventNameSelectStart = 5050,
+
+        cmdControlEventNameChange = 5051,
+        cmdControlEventNameSelectionChange = 5052,
+
+        cmdControlEventNameFocus = 5053,
+        cmdControlEventNameFocusin = 5054,
+        cmdControlEventNameFocusout = 5055,
+        cmdControlEventNameBlur = 5056,
+
+        cmdControlToggleOutline = 5210,
+        // TEXT HIGHLIGHT
+        cmdTabText = 6000,
+
+        cmdTextHighLightInvoke = 6011,
+        cmdTextHighLightColor = 6012,
+        cmdTextHighLightTextColor = 6013,
+        cmdTextHighLightBackColor = 6014,
+        cmdTextHighLightText = 6015,
+        cmdTextHighLightPattern = 6016,
+        cmdTextHighLightRemove = 6017,
+
+        cmdTextManipulationAllLowercase=6021,
+        cmdTextManipulationAllUppercase=6022,
+        cmdTextManipulationUppercase=6023,
+
+        cmdGroupTextShowSelection=6031,
+        cmdGroupTextSelectWord=6032,
+        cmdGroupTextSelectSentence=6033,
+        cmdGroupTextSelectParagraph=6034,
+        cmdGroupTextSelectAll=6035,
+        
+        cmdTextHighLightPatternLineThroughSingle = 6151,
+        cmdTextHighLightPatternLineThroughDouble = 6152,
+        cmdTextHighLightPatternUnderLineDash = 6153,
+        cmdTextHighLightPatternUnderLineDotDash = 6154,
+        cmdTextHighLightPatternUnderLineDotDotDash = 6155,
+        cmdTextHighLightPatternUnderLineDotted = 6156,
+        cmdTextHighLightPatternUnderLineSingle = 6157,
+        cmdTextHighLightPatternUnderLineThick = 6158,
+        cmdTextHighLightPatternUnderLineThickDash = 6159,
+        cmdTextHighLightPatternUnderLineWave = 6160,
+        cmdTextHighLightPatternUnderLineWords = 6161,
+        cmdTextHighLightPatternUnderlineList = 6162,
+        // STYLES
+        cmdTabStyles = 7000,
+        cmdStylesLinkedStylesEnabled = 7011,
+        cmdStylesEditBodyStyle = 7012,
+
+        // TABLE
+        cmdTabGroupTableTools = 8000,
+        cmdTabGroupTableAction = 8001,
+        cmdTabTableTool = 8002,
+        cmdTabTableOptions = 8003,
+        cmdDeleteRow = 8100,
+        cmdDeleteColumn = 8101,
+        cmdInsertRow = 8102,
+        cmdInsertColumn = 8103,
+        cmdMergeCells = 8104,
+        cmdMergeDown = 8105,
+        cmdMergeUp = 8106,
+        cmdMergeLeft = 8107,
+        cmdMergeRight = 8108,
+        cmdSplitCellHorizontal = 8109,
+        cmdSplitCellVertical = 8110,
+        cmdTableInsertAfter = 8120,
+        cmdTableSliderActive = 8121,
+        cmdTableSliderAddMode = 8122,
+        cmdTableWithCellSelection = 8123,
+        cmdTableProcessTabKey = 8124,
+        cmdTableStaticBehavior = 8125,
+        cmdTableAdvancedParameter = 8126,
+        cmdTableSliderColor = 8127,
+        cmdTableBorderColor = 8128,
+        cmdTableCellColor = 8129,
+
+        // SPELLER
+        cmdSpellerTools = 9000,
+        cmdTabSpeller = 9001,
+        cmdSpellerGroupDictionary = 9002,
+        cmdSpellerDictionary = 9020,
+        cmdSpellerGroupOptions = 9003,
+        cmdSpellerIgnoreHtml = 9021,
+        cmdSpellerIgnoreWordsWithDigits = 9022,
+        cmdSpellermaxSuggestionsCount = 9023,
+        cmdSpellerignoreUpperCaseWords = 9024,
+        cmdSpellerSuggestionEnum = 9025,
+        cmdSpellerGroupHighlight = 9004,
+        cmdSpellerHighlightColor = 9030,
+        cmdSpellerHighlightUnderlineStyle = 9031,
+        cmdSpellerCommandBackground = 9050,
+        cmdSpellerCommandCheckWordStart = 9051,
+        cmdSpellerCommandCheckWordStop = 9052,
+        cmdSpellerCommandRemoveHighlight = 9053,
+        cmdSpellerCommandClearBuffer = 9054
+
+
+
+    }
+}

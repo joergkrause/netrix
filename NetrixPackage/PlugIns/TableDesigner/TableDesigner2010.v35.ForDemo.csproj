@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BFD19C7-3850-4714-9D77-74DDC561ABA4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.PlugIns.TableDesigner.v35</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix.TableDesigner</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET35;FORDEMO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DOTNET35;FORDEMO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\BaseHighLightCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCellBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCellColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCellComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCellList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\HighLightCellsFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\ResizeBehavior.cs" />
+    <Compile Include="Behaviors\SizeType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\TableDesignerBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Behaviors\TableSliderLineBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITableFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITableLayoutInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MouseCursorTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResizeModeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TableDesignerProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEditDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEvents\TableCellSelectionEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEvents\TableCellSelectionEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEvents\TableEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEvents\TableEventBecomesActiveHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableEvents\TableEventBecomesInactiveHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableFormatterProperties.cs" />
+    <Compile Include="TableLayoutInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ZoneTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Resources\DiagonalArrow.cur" />
+    <EmbeddedResource Include="Resources\DownArrow.cur">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InputText.cur" />
+    <EmbeddedResource Include="Resources\RightArrow.cur" />
+    <EmbeddedResource Include="Resources\TableActivator.ico" />
+    <EmbeddedResource Include="Resources\TableDesigner.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core2010.v35.ForDemo.csproj">
+      <Project>{03C1FE95-E23E-42C0-9D0C-C27A48A2EC2F}</Project>
+      <Name>Core2010.v35.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixMain\NetRix2010.v35.ForDemo.csproj">
+      <Project>{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}</Project>
+      <Name>NetRix2010.v35.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixUI\NetRixUI2010.v35.ForDemo.csproj">
+      <Project>{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}</Project>
+      <Name>NetRixUI2010.v35.ForDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

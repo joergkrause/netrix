@@ -1,0 +1,1714 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Attribute.href" type="System.String">
+		<value>アンカー</value>
+	</data>
+	<data name="Attribute.name" type="System.String">
+		<value>名前</value>
+	</data>
+	<data name="Attribute.accessKey" type="System.String">
+		<value>アクセスキー</value>
+	</data>
+	<data name="Attribute.id" type="System.String">
+		<value>識別子</value>
+	</data>
+	<data name="Attribute.(id)" type="System.String">
+		<value>識別子</value>
+	</data>
+	<data name="Attribute.class" type="System.String">
+		<value>スタイル クラス</value>
+	</data>
+	<data name="Attribute.style" type="System.String">
+		<value>インライン スタイル</value>
+	</data>
+	<data name="Attribute.src" type="System.String">
+		<value>ソース ファイル</value>
+	</data>
+	<data name="Attribute.width" type="System.String">
+		<value>幅</value>
+	</data>
+	<data name="Attribute.height" type="System.String">
+		<value>高さ</value>
+	</data>
+	<data name="Exception.accesskey" type="System.String">
+		<value>ここに 1 つだけキー（英数字）を指定できます。</value>
+	</data>
+	<data name="Attribute.disabled" type="System.String">
+		<value>無効</value>
+	</data>
+	<data name="Attribute.hideFocus" type="System.String">
+		<value>フォーカスの非表示</value>
+	</data>
+	<data name="Description.hideFocus" type="System.String">
+		<value>このオブジェクトが選択されたときに矩形のフォーカスを表示しないかどうかを指定します。</value>
+	</data>
+	<data name="Description.disabled" type="System.String">
+		<value>このフィールドが無効の場合に真</value>
+	</data>
+	<data name="Description.accesskey" type="System.String">
+		<value>このオブジェクトのショートカットキー</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus" type="System.String">
+		<value>フォーカスを当てる</value>
+	</data>
+	<data name="Description.ScriptOnFocus" type="System.String">
+		<value>このオブジェクトが選択されるとイベントは発生します。</value>
+	</data>
+	<data name="Description.ScriptOnKeyPress" type="System.String">
+		<value>このオブジェクトが選択されて、ユーザーが 1 文字を入力すると、イベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnKeyPress" type="System.String">
+		<value>オンキーを押す</value>
+	</data>
+	<data name="Description.tabIndex" type="System.String">
+		<value>このオブジェクトのタブ インデックス</value>
+	</data>
+	<data name="Attribute.tabIndex" type="System.String">
+		<value>タブ インデックス</value>
+	</data>
+	<data name="Attribute.ScriptOnClick" type="System.String">
+		<value>オン クリック</value>
+	</data>
+	<data name="Description.ScriptOnClick" type="System.String">
+		<value>ユーザーがこのオブジェクトをクリックするとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOver" type="System.String">
+		<value>オン マウス オーバー</value>
+	</data>
+	<data name="Description.ScriptOnMouseOver" type="System.String">
+		<value>マウス ポインタがこのオブジェクト部分に置かれるとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOut" type="System.String">
+		<value>オン マウス アウト</value>
+	</data>
+	<data name="Description.ScriptOnMouseOut" type="System.String">
+		<value>このオブジェクト部分からマウス ポインタを離すとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.title" type="System.String">
+		<value>タイトル</value>
+	</data>
+	<data name="Description.title" type="System.String">
+		<value>「ツール チップ」の説明で使用されるオブジェクトのタイトル</value>
+	</data>
+	<data name="Description.title_Acronym" type="System.String">
+		<value>この省略文字の意味</value>
+	</data>
+	<data name="Description.href" type="System.String">
+		<value>アンカーがリンクする URL</value>
+	</data>
+	<data name="Description.name" type="System.String">
+		<value>相対リンクの対象となるアンカー名</value>
+	</data>
+	<data name="Description.ScriptOnMouseUp" type="System.String">
+		<value>このオブジェクトをマウスでクリックし終わるとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseUp" type="System.String">
+		<value>オン マウス アップ</value>
+	</data>
+	<data name="Attribute.target" type="System.String">
+		<value>対象フレーム</value>
+	</data>
+	<data name="Description.target" type="System.String">
+		<value>このリンクの対象</value>
+	</data>
+	<data name="Attribute.nohref" type="System.String">
+		<value>代替アンカー</value>
+	</data>
+	<data name="Description.nohref" type="System.String">
+		<value>画像マップの非焦点部分を定義します。</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus_Area" type="System.String">
+		<value>オンフォーカス</value>
+	</data>
+	<data name="Description.ScriptOnFocus_Area" type="System.String">
+		<value>この部分にフォーカスが当てられると起動します（有効になります）。</value>
+	</data>
+	<data name="Description.ScriptOnBlur_Area" type="System.String">
+		<value>ここからフォーカスが移動するとと起動します（無効になります）。</value>
+	</data>
+	<data name="Attribute.ScriptOnBlur_Area" type="System.String">
+		<value>オン ブラー</value>
+	</data>
+	<data name="Attribute.alt" type="System.String">
+		<value>代替テキスト</value>
+	</data>
+	<data name="Description.alt" type="System.String">
+		<value>アンダーレイした画像が見えなくなるとこのテキストが表示されます。この部分にマウスを持ってくるとポップアップ画面に同じテキストが表示されます。</value>
+	</data>
+	<data name="Attribute.coords" type="System.String">
+		<value>指定済み部分の座標</value>
+	</data>
+	<data name="Description.coords" type="System.String">
+		<value>部分のポリゴンを示す XY 座標リスト。四角: 左-x、 上-y、右-x、下-y。円: 中心-x, 中心-y, 半径。注記。もし半径の値がパーセントで表示される場合は、ユーザーのエージェントが関連するオブジェクトの幅と高さに基ずいて最終的な半径を計算する必要があります。半径は 2 つのうち小さいほうを使用します。ポリゴン: x1、y1、x2、 y2、..., xN、 yN。最初の x 軸と y 軸の組み合わせと最後の座標が同じにならないとポリゴンを閉じることができません。もし、この 2 つの値が違う場合には、ユーザーエージェントがポリゴンを閉じることができる座標を推測します。</value>
+	</data>
+	<data name="Attribute.shape" type="System.String">
+		<value>部分の形</value>
+	</data>
+	<data name="Description.shape" type="System.String">
+		<value>範囲のポリゴンを定義する XY 座標のリスト。既定値: すべての範囲を指定します。矩形: 矩形の部分を定義します。円: 円の部分を定義します。 ポリゴン: ポリゴン部分を定義します。</value>
+	</data>
+	<data name="Attribute.color" type="System.String">
+		<value>色</value>
+	</data>
+	<data name="Description.color" type="System.String">
+		<value>要素の前景色</value>
+	</data>
+	<data name="Attribute.face" type="System.String">
+		<value>フォント</value>
+	</data>
+	<data name="Description.face" type="System.String">
+		<value>カンマで区切ったフォントのリスト。ブラウザはユーザーシステムで表示されるリストの最初のフォントを表示します。</value>
+	</data>
+	<data name="Attribute.size" type="System.String">
+		<value>サイズ</value>
+	</data>
+	<data name="Description.size" type="System.String">
+		<value>フォント単位の要素サイズ</value>
+	</data>
+	<data name="Attribute.ScriptOnSubmit" type="System.String">
+		<value>送信ボタン</value>
+	</data>
+	<data name="Description.ScriptOnSubmit" type="System.String">
+		<value>このフォームのデーターが送信されるときにイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnReset" type="System.String">
+		<value>リセット ボタン</value>
+	</data>
+	<data name="Description.ScriptOnReset" type="System.String">
+		<value>このフォームのデータが初期設定値にリセットされるときにイベントが発生します。</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>JavaScript で使用される使用されるフォーム名</value>
+	</data>
+	<data name="Attribute.frameBorder" type="System.String">
+		<value>フレーム周囲境界線</value>
+	</data>
+	<data name="Description.frameBorder" type="System.String">
+		<value>フレーム周囲に境界線を引くかどうか指定します。</value>
+	</data>
+	<data name="Attribute.noResize" type="System.String">
+		<value>サイズ変更不可</value>
+	</data>
+	<data name="Description.noResize" type="System.String">
+		<value>ユーザーがマウスでフレーム サイズを変更できるかどうかを示します。</value>
+	</data>
+	<data name="Attribute.Scrolling" type="System.String">
+		<value>スクロール</value>
+	</data>
+	<data name="Description.Scrolling" type="System.String">
+		<value>フレーム周囲のスクロールバー外観を定義します。</value>
+	</data>
+	<data name="Attribute.marginHeight" type="System.String">
+		<value>上下の余白</value>
+	</data>
+	<data name="Description.marginHeight" type="System.String">
+		<value>上下余白サイズ</value>
+	</data>
+	<data name="Attribute.marginWidth" type="System.String">
+		<value>左右余白</value>
+	</data>
+	<data name="Description.marginWidth" type="System.String">
+		<value>左右余白サイズ</value>
+	</data>
+	<data name="Attribute.name_Frame" type="System.String">
+		<value>フレーム名</value>
+	</data>
+	<data name="Description.name_Frame" type="System.String">
+		<value>フレーム名。ハイパーリンク対象属性の名前として使用されます。</value>
+	</data>
+	<data name="Attribute.ScriptOnActivate" type="System.String">
+		<value>オン アクティベート</value>
+	</data>
+	<data name="Description.ScriptOnActivate" type="System.String">
+		<value>ページのフレームがアクティブ オブジェクトになるとイベントが発生します。</value>
+	</data>
+	<data name="Description.ScriptOnDeactivate" type="System.String">
+		<value>ページのフレームがアクティブ オブジェクトでなくなるとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnDeactivate" type="System.String">
+		<value>オン ディアクティベート</value>
+	</data>
+	<data name="Attribute.ScriptOnLoad" type="System.String">
+		<value>オン ロード</value>
+	</data>
+	<data name="Description.ScriptOnLoad" type="System.String">
+		<value>フレームがロードされるときにイベントが発生します。</value>
+	</data>
+	<data name="Attribute.ScriptOnScroll" type="System.String">
+		<value>オン スクロール</value>
+	</data>
+	<data name="Description.ScriptOnScroll" type="System.String">
+		<value>ユーザーがこのオブジェクトのスクロール位置を変更するとイベントが発生します。</value>
+	</data>
+	<data name="Attribute.align" type="System.String">
+		<value>揃え整列</value>
+	</data>
+	<data name="Description.align" type="System.String">
+		<value>ブロック要素の揃え</value>
+	</data>
+	<data name="Attribute.noshade" type="System.String">
+		<value>影なし</value>
+	</data>
+	<data name="Description.noshade" type="System.String">
+		<value>3D 影付き横ルールを引くか否か指定します。</value>
+	</data>
+	<data name="Attribute.size_Hr" type="System.String">
+		<value>濃度</value>
+	</data>
+	<data name="Description.size_Hr" type="System.String">
+		<value>横ルールの濃度</value>
+	</data>
+	<data name="Attribute.charset" type="System.String">
+		<value>文字セット</value>
+	</data>
+	<data name="Description.charset" type="System.String">
+		<value>リンクしたドキュメントの文字セット</value>
+	</data>
+	<data name="Attribute.media" type="System.String">
+		<value>メディア</value>
+	</data>
+	<data name="Description.media" type="System.String">
+		<value>リンクした文書が必要とする対象メディア</value>
+	</data>
+	<data name="Attribute.rel" type="System.String">
+		<value>関連付け</value>
+	</data>
+	<data name="Description.rel" type="System.String">
+		<value>対象へ関連付け。一般的な値: 「スタイルシート」、「次へ」「前へ」「目次」</value>
+	</data>
+	<data name="Attribute.rev" type="System.String">
+		<value>参照</value>
+	</data>
+	<data name="Description.rev" type="System.String">
+		<value>対象ドキュメントに参照</value>
+	</data>
+	<data name="Attribute.type" type="System.String">
+		<value>タイプ</value>
+	</data>
+	<data name="Description.type" type="System.String">
+		<value>MIME コードを使用したリンク済みドキュメントのタイプ。スタイルシートに「text/css」を使用します。</value>
+	</data>
+	<data name="Attribute.type_Ol" type="System.String">
+		<value>リストタイプ</value>
+	</data>
+	<data name="Description.type_Ol" type="System.String">
+		<value>箇条書きの数字タイプ</value>
+	</data>
+	<data name="Attribute.type_Ul" type="System.String" mimetype="	">
+		<value>リストタイプ</value>
+	</data>
+	<data name="Description.type_Ul" type="System.String">
+		<value>箇条書きの数字または文字タイプ</value>
+	</data>
+	<data name="Attribute.type_Script" type="System.String">
+		<value>MIME タイプ</value>
+	</data>
+	<data name="Description.type_Script" type="System.String">
+		<value>「text/javascript」などのコンテンツの MIME タイプ。オプション。「言語」属性を上書きします。</value>
+	</data>
+	<data name="Attribute.language" type="System.String">
+		<value>スクリプト言語</value>
+	</data>
+	<data name="Description.language" type="System.String">
+		<value>「JavaScript」や「VBScript」などコンテンツを記述するスクリプト言語。</value>
+	</data>
+	<data name="Attribute.ScriptContent" type="System.String">
+		<value>スクリプト コンテンツ</value>
+	</data>
+	<data name="Description.ScriptContent" type="System.String">
+		<value>スクリプト コンテンツ。統合型スクリプト エディターを起動するには楕円形をクリックします。</value>
+	</data>
+	<data name="Attribute.noWrap" type="System.String">
+		<value>ワードラップ禁止</value>
+	</data>
+	<data name="Description.noWrap" type="System.String">
+		<value>長い文字列を行がえするかどうかを定義します。</value>
+	</data>
+	<data name="Attribute.clear" type="System.String">
+		<value>サイト クリア</value>
+	</data>
+	<data name="Description.clear" type="System.String">
+		<value>文字の境界線のフローティング効果</value>
+	</data>
+	<data name="Attribute.vSpace" type="System.String">
+		<value>縦スペース</value>
+	</data>
+	<data name="Description.vSpace" type="System.String">
+		<value>縦スペースまたは画像周囲のパディング（上下）</value>
+	</data>
+	<data name="Attribute.hSpace" type="System.String">
+		<value>横スペース</value>
+	</data>
+	<data name="Description.hSpace" type="System.String">
+		<value>横スペースまたは画像周囲のパディング (左右) </value>
+	</data>
+	<!-- GUI -->
+	<data name="StyleEditor.fontPickerFont.Title" type="System.String">
+		<value>フォント</value>
+	</data>
+	<data name="StyleEditor.groupbox3.Text" type="System.String">
+		<value>フォント スタイル</value>
+	</data>
+	<data name="StyleEditor.label3.Text" type="System.String">
+		<value>文字の変更</value>
+	</data>
+	<data name="StyleEditor.label2.Text" type="System.String">
+		<value>濃度</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" type="System.String">
+		<value>小文字</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontStyleItalic.Text" type="System.String">
+		<value>イタリック</value>
+	</data>
+	<data name="StyleEditor.groupBox2.Text" type="System.String">
+		<value>フォントの属性</value>
+	</data>
+	<data name="StyleEditor.label36.Text" type="System.String">
+		<value>特定または一般フォントサイズ:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeAbsolute.Text" type="System.String">
+		<value>サイズ種類:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeUnit.Text" type="System.String">
+		<value>特定サイズ:</value>
+	</data>
+	<data name="StyleEditor.label1.Text" type="System.String">
+		<value>テキスト色</value>
+	</data>
+	<data name="StyleEditor.groupBox1.Text" type="System.String">
+		<value>フォント ファミリ</value>
+	</data>
+	<data name="StyleEditor.label50.Text" type="System.String">
+		<value>いくつでも特定または一般なフォントを指定できます。ブラウザでリストの最初のフォントを表示します。</value>
+	</data>
+	<data name="StyleEditor.label49.Text" type="System.String">
+		<value>フォント ファミリ リスト</value>
+	</data>
+	<data name="StyleEditor.label52.Text" type="System.String">
+		<value>コンテナー要素との関連</value>
+	</data>
+	<data name="StyleEditor.groupBox5.Text" type="System.String">
+		<value>背景画像</value>
+	</data>
+	<data name="Attribute.HttpEquiv" type="System.String">
+		<value>HTTP Equiv</value>
+	</data>
+	<data name="Description.HttpEquiv" type="System.String">
+		<value>このタグで HTTP ヘッダを作成するかどうか定義します。</value>
+	</data>
+	<data name="Attribute.name_Meta" type="System.String">
+		<value>名前</value>
+	</data>
+	<data name="Description.name_Meta" type="System.String">
+		<value>META タグの name 属性</value>
+	</data>
+	<data name="Attribute.Content" type="System.String">
+		<value>コンテンツ</value>
+	</data>
+	<data name="Description.Content" type="System.String">
+		<value>コンテンツ。名前または HttpEquiv タグで意味が決定されます。</value>
+	</data>
+	<data name="StyleEditor.label9.Text" type="System.String">
+		<value>画像の位置決め</value>
+	</data>
+	<data name="StyleEditor.label8.Text" type="System.String">
+		<value>縦:</value>
+	</data>
+	<data name="StyleEditor.label7.Text" type="System.String">
+		<value>横:</value>
+	</data>
+	<data name="StyleEditor.label6.Text" type="System.String">
+		<value>固定</value>
+	</data>
+	<data name="StyleEditor.label5.Text" type="System.String">
+		<value>タイル</value>
+	</data>
+	<data name="StyleEditor.label4.Text" type="System.String">
+		<value>ディスクから画像の選択:</value>
+	</data>
+	<data name="StyleEditor.buttonBackgroundImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.groupBox4.Text" type="System.String">
+		<value>背景色</value>
+	</data>
+	<data name="StyleEditor.label27.Text" type="System.String">
+		<value>背景色:</value>
+	</data>
+	<data name="StyleEditor.checkBox6.Text" type="System.String">
+		<value>透明度</value>
+	</data>
+	<data name="StyleEditor.groupBox18.Text" type="System.String">
+		<value>余白、パディング、境界線スタイル</value>
+	</data>
+	<data name="StyleEditor.label56.Text" type="System.String">
+		<value>パディング</value>
+	</data>
+	<data name="StyleEditor.label55.Text" type="System.String">
+		<value>境界線の幅</value>
+	</data>
+	<data name="StyleEditor.label54.Text" type="System.String">
+		<value>境界線のスタイル</value>
+	</data>
+	<data name="StyleEditor.label53.Text" type="System.String">
+		<value>境界線の色</value>
+	</data>
+	<data name="StyleEditor.label17.Text" type="System.String">
+		<value>余白</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>上境界線</value>
+	</data>
+	<data name="StyleEditor.groupBox25.Text" type="System.String">
+		<value>周囲の境界線</value>
+	</data>
+	<data name="StyleEditor.groupBox24.Text" type="System.String">
+		<value>左境界線</value>
+	</data>
+	<data name="StyleEditor.groupBox17.Text" type="System.String">
+		<value>右境界線</value>
+	</data>
+	<data name="StyleEditor.groupBox12.Text" type="System.String">
+		<value>下境界線</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>上境界線</value>
+	</data>
+	<data name="StyleEditor.tabPageAll.Text" type="System.String">
+		<value>周囲</value>
+	</data>
+	<data name="StyleEditor.tabPageLeft.Text" type="System.String">
+		<value>左</value>
+	</data>
+	<data name="StyleEditor.tabPageRight.Text" type="System.String">
+		<value>右</value>
+	</data>
+	<data name="StyleEditor.tabPageTop.Text" type="System.String">
+		<value>上</value>
+	</data>
+	<data name="StyleEditor.tabPageBottom.Text" type="System.String">
+		<value>下</value>
+	</data>
+	<data name="StyleEditor.groupBox21.Text" type="System.String">
+		<value>テキストの装飾</value>
+	</data>
+	<data name="StyleEditor.label67.Text" type="System.String">
+		<value>フォントの特徴に加えてどのようにテキストを装飾するかを定義します。</value>
+	</data>
+	<data name="StyleEditor.groupBox8.Text" type="System.String">
+		<value>方向とインデント</value>
+	</data>
+	<data name="StyleEditor.label68.Text" type="System.String">
+		<value>ブロック内テキストの位置を指定します。</value>
+	</data>
+	<data name="StyleEditor.label29.Text" type="System.String">
+		<value>方向:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRemove.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="StyleEditor.label51.Text" type="System.String">
+		<value>ブロックのインデント:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRtl.Text" type="System.String">
+		<value>右から左</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionLtr.Text" type="System.String">
+		<value>左から右</value>
+	</data>
+	<data name="StyleEditor.groupBox7.Text" type="System.String">
+		<value>線と文字のスペース</value>
+	</data>
+	<data name="StyleEditor.label66.Text" type="System.String">
+		<value>これらのオプションでフローティング テキストをどのように表示するかを指定します。選択したフォントにより表示結果が異なります。</value>
+	</data>
+	<data name="StyleEditor.label37.Text" type="System.String">
+		<value>単語:</value>
+	</data>
+	<data name="StyleEditor.label11.Text" type="System.String">
+		<value>線の高さ:</value>
+	</data>
+	<data name="StyleEditor.label12.Text" type="System.String">
+		<value>文字:</value>
+	</data>
+	<data name="StyleEditor.groupBox6.Text" type="System.String">
+		<value>位置調整</value>
+	</data>
+	<data name="StyleEditor.groupBox19.Text" type="System.String">
+		<value>横位置</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignDisable.Text" type="System.String">
+		<value>シートからオプションの削除</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignJustify.Text" type="System.String">
+		<value>両端</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignLeft.Text" type="System.String">
+		<value>左端</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignCenter.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignRight.Text" type="System.String">
+		<value>右端</value>
+	</data>
+	<data name="StyleEditor.label10.Text" type="System.String">
+		<value>中央</value>
+	</data>
+	<data name="StyleEditor.groupBox20.Text" type="System.String">
+		<value>横位置</value>
+	</data>
+	<data name="StyleEditor.label65.Text" type="System.String">
+		<value>要素の横位置を指定します。通常、表やボックスで使用します。</value>
+	</data>
+	<data name="StyleEditor.groupBox10.Text" type="System.String">
+		<value>テキストのフローティング オプション</value>
+	</data>
+	<data name="StyleEditor.label48.Text" type="System.String">
+		<value>改行処理</value>
+	</data>
+	<data name="StyleEditor.label47.Text" type="System.String">
+		<value>はみ出し処理</value>
+	</data>
+	<data name="StyleEditor.label45.Text" type="System.String">
+		<value>表示</value>
+	</data>
+	<data name="StyleEditor.groupBox9.Text" type="System.String">
+		<value>オブジェクトの位置</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRemove.Text" type="System.String">
+		<value>シートからオプションの削除</value>
+	</data>
+	<data name="StyleEditor.label16.Text" type="System.String">
+		<value>左端の位置:</value>
+	</data>
+	<data name="StyleEditor.label15.Text" type="System.String">
+		<value>上端の位置</value>
+	</data>
+	<data name="StyleEditor.label14.Text" type="System.String">
+		<value>幅</value>
+	</data>
+	<data name="StyleEditor.label13.Text" type="System.String">
+		<value>高さ</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionAbsolute.Text" type="System.String">
+		<value>絶対座標</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRelative.Text" type="System.String">
+		<value>フローティング</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionFixed.Text" type="System.String">
+		<value>相対座標</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionNone.Text" type="System.String">
+		<value>なし</value>
+	</data>
+	<data name="StyleEditor.groupBox14.Text" type="System.String">
+		<value>リスト項目の概観を定義します。</value>
+	</data>
+	<data name="StyleEditor.label69.Text" type="System.String">
+		<value>このオプションで番号なしリストの概観を定義します。最後の結果は、書かれたテキスト、フォント、文字間隔によります。</value>
+	</data>
+	<data name="StyleEditor.buttonListStyleImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.label22.Text" type="System.String">
+		<value>位置:</value>
+	</data>
+	<data name="StyleEditor.label23.Text" type="System.String">
+		<value>ディスクから画像の選択:</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletImage.Text" type="System.String">
+		<value>カスタム段落（画像の選択）(choose image):</value>
+	</data>
+	<data name="StyleEditor.textBoxListStyleImage.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.label21.Text" type="System.String">
+		<value>スタイル</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletStyle.Text" type="System.String">
+		<value>標準段落 (スタイプと位置の選択):</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletNone.Text" type="System.String">
+		<value>段落なし</value>
+	</data>
+	<data name="StyleEditor.groupBox23.Text" type="System.String">
+		<value>段とルール</value>
+	</data>
+	<data name="StyleEditor.label42.Text" type="System.String">
+		<value>ルール幅:</value>
+	</data>
+	<data name="StyleEditor.label41.Text" type="System.String">
+		<value>ルール スタイル</value>
+	</data>
+	<data name="StyleEditor.label40.Text" type="System.String">
+		<value>ルール色</value>
+	</data>
+	<data name="StyleEditor.label39.Text" type="System.String">
+		<value>段</value>
+	</data>
+	<data name="StyleEditor.groupBox16.Text" type="System.String">
+		<value>表</value>
+	</data>
+	<data name="StyleEditor.label44.Text" type="System.String">
+		<value>行の結合</value>
+	</data>
+	<data name="StyleEditor.label43.Text" type="System.String">
+		<value>列の結合</value>
+	</data>
+	<data name="StyleEditor.label38.Text" type="System.String">
+		<value>キャプション位置</value>
+	</data>
+	<data name="StyleEditor.linkLabel1.Text" type="System.String">
+		<value>ここをクリックして設定します。</value>
+	</data>
+	<data name="StyleEditor.label71.Text" type="System.String">
+		<value>高さと幅を位置タブで選択します。:</value>
+	</data>
+	<data name="StyleEditor.tabPageFonts.Text" type="System.String">
+		<value>フォント</value>
+	</data>
+	<data name="StyleEditor.tabPageBackground.Text" type="System.String">
+		<value>背景</value>
+	</data>
+	<data name="StyleEditor.tabPageBorders.Text" type="System.String">
+		<value>境界線</value>
+	</data>
+	<data name="StyleEditor.tabPageLayout.Text" type="System.String">
+		<value>レイアウト</value>
+	</data>
+	<data name="StyleEditor.tabPagePosition.Text" type="System.String">
+		<value>位置</value>
+	</data>
+	<data name="StyleEditor.tabPageLists.Text" type="System.String">
+		<value>リスト</value>
+	</data>
+	<data name="StyleEditor.tabPageTables.Text" type="System.String">
+		<value>表</value>
+	</data>
+	<data name="StyleEditor.tabPageMisc.Text" type="System.String">
+		<value>その他</value>
+	</data>
+	<data name="StyleEditor.groupBox15.Text" type="System.String">
+		<value>ユーザーインタフェース</value>
+	</data>
+	<data name="StyleEditor.label70.Text" type="System.String">
+		<value>Internet Explorer 以外のブラウザでは現在、カーソルとスクロールバーに使用できません。</value>
+	</data>
+	<data name="StyleEditor.label64.Text" type="System.String">
+		<value>レールの色</value>
+	</data>
+	<data name="StyleEditor.label63.Text" type="System.String">
+		<value>3D ライト</value>
+	</data>
+	<data name="StyleEditor.label62.Text" type="System.String">
+		<value>バーの光</value>
+	</data>
+	<data name="StyleEditor.label61.Text" type="System.String">
+		<value>カーソルの色</value>
+	</data>
+	<data name="StyleEditor.label60.Text" type="System.String">
+		<value>影の色</value>
+	</data>
+	<data name="StyleEditor.label59.Text" type="System.String">
+		<value>基本の色</value>
+	</data>
+	<data name="StyleEditor.label26.Text" type="System.String">
+		<value>表面の色</value>
+	</data>
+	<data name="StyleEditor.label25.Text" type="System.String">
+		<value>スクロールバー要素の色:</value>
+	</data>
+	<data name="StyleEditor.label24.Text" type="System.String">
+		<value>カーソル:</value>
+	</data>
+	<data name="StyleEditor.comboBoxCursor.Text" type="System.String">
+		<value>カーソル</value>
+	</data>
+	<data name="StyleEditor.label58.Text" type="System.String">
+		<value>矢印</value>
+	</data>
+	<data name="StyleEditor.groupBox22.Text" type="System.String">
+		<value>表示/非表示</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisiblityRemove.Text" type="System.String">
+		<value>シートからオプションを削除します。</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityNone.Text" type="System.String">
+		<value>なし</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityHidden.Text" type="System.String">
+		<value>非表示</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityVisible.Text" type="System.String">
+		<value>表示</value>
+	</data>
+	<data name="StyleEditor.label31.Text" type="System.String">
+		<value>要素を非表示（表示/非表示 = 非表示) に設定した後に、表示する場合は、スクリプトで挙動の変更をする必要があります。スクリプト機能がない場合は、「しない」または「削除」を設定します。</value>
+	</data>
+	<data name="StyleEditor.button1.Text" type="System.String">
+		<value>左右上下を同期します。 </value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonNo.Text" type="System.String">
+		<value>標準</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonCont.Text" type="System.String">
+		<value>連続</value>
+	</data>
+	<data name="ColorPanelUserControl.groupBox2.Text" type="System.String">
+		<value>ソート オプション</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonBrightness.Text" type="System.String">
+		<value>輝度</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonName.Text" type="System.String">
+		<value>種類</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonDistance.Text" type="System.String">
+		<value>距離</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonSaturation.Text" type="System.String">
+		<value>彩度</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonWeb.Text" type="System.String">
+		<value>ウェブ</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonCustom.Text" type="System.String">
+		<value>カスタム</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonSystem.Text" type="System.String">
+		<value>システム</value>
+	</data>
+	<data name="ColorPanelUserControl.label1.Text" type="System.String">
+		<value>キャンセルは「ESC」</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonNoColor.Text" type="System.String">
+		<value>無色</value>
+	</data>
+	<data name="MetaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>META タグの選択:</value>
+	</data>
+	<data name="AreaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>AREA タグの選択:</value>
+	</data>
+	<data name="ScriptCollectionEditor.memberLabel.Text" type="System.String">
+		<value>スクリプト ブロックの選択:</value>
+	</data>
+	<data name="StylesheetCollectionEditor.memberLabel.Text" type="System.String">
+		<value>リンクしたスタイルシートの選択:</value>
+	</data>
+	<data name="MetaCollectionEditor.removeButton.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="StylesheetCollectionEditor.removeButton.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="ScriptCollectionEditor.removeButton.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="AreaCollectionEditor.removeButton.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="MetaCollectionEditor.addButton.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="ScriptCollectionEditor.addButton.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="StylesheetCollectionEditor.addButton.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="AreaCollectionEditor.addButton.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="UnitEditor.radioButtonPercent.Text" type="System.String">
+		<value>%</value>
+	</data>
+	<data name="UnitEditor.radioButtonPixel.Text" type="System.String">
+		<value>ピクセル</value>
+	</data>
+	<data name="UnitEditor.radioButtonOff.Text" type="System.String">
+		<value>オフ</value>
+	</data>
+	<data name="Description.aLink" type="System.String">
+		<value>このページのクリック時の色</value>
+	</data>
+	<data name="Description.bgProperties" type="System.String">
+		<value>背景画像を固定するかスクロールするかを定義します。</value>
+	</data>
+	<data name="Description.backGround" type="System.String">
+		<value>このページで使用する背景画像の URL </value>
+	</data>
+	<data name="Description.bgColor" type="System.String">
+		<value>ページの背景画像の色</value>
+	</data>
+	<data name="Description.bottomMargin" type="System.String">
+		<value>下余白のピクセル数</value>
+	</data>
+	<data name="Description.leftMargin" type="System.String">
+		<value>左余白のピクセル数</value>
+	</data>
+	<data name="Description.link" type="System.String">
+		<value>ページのリンクの色</value>
+	</data>
+	<data name="Description.rightMargin" type="System.String">
+		<value>右余白のピクセル数</value>
+	</data>
+	<data name="Description.scroll" type="System.String">
+		<value>スクロールバーを表示するかしないか示します。</value>
+	</data>
+	<data name="Description.text" type="System.String">
+		<value>このページのテキスト前景色</value>
+	</data>
+	<data name="Description.topMargin" type="System.String">
+		<value>上余白のピクセル数</value>
+	</data>
+	<data name="Description.vLink" type="System.String">
+		<value>このページのリンク済みの色</value>
+	</data>
+	<data name="Attribute.aLink" type="System.String">
+		<value>クリック時の色</value>
+	</data>
+	<data name="Attribute.bgProperties" type="System.String">
+		<value>背景プロパティ</value>
+	</data>
+	<data name="Attribute.background" type="System.String">
+		<value>背景画像</value>
+	</data>
+	<data name="Attribute.bgColor" type="System.String">
+		<value>背景色</value>
+	</data>
+	<data name="Attribute.bottomMargin" type="System.String">
+		<value>下余白</value>
+	</data>
+	<data name="Attribute.leftMargin" type="System.String">
+		<value>左余白</value>
+	</data>
+	<data name="Attribute.link" type="System.String">
+		<value>リンク色</value>
+	</data>
+	<data name="Attribute.rightMargin" type="System.String">
+		<value>右余白</value>
+	</data>
+	<data name="Attribute.scroll" type="System.String">
+		<value>スクロールバー</value>
+	</data>
+	<data name="Attribute.text" type="System.String">
+		<value>テキスト色</value>
+	</data>
+	<data name="Attribute.topMargin" type="System.String">
+		<value>上余白</value>
+	</data>
+	<data name="Attribute.vLink" type="System.String">
+		<value>リンク済みの色</value>
+	</data>
+	<data name="Description.ScriptBlocks" type="System.String">
+		<value>スクリプト ブロック エディタへのアクセス</value>
+	</data>
+	<data name="Attribute.ScriptBlocks" type="System.String">
+		<value>スクリプト ブロック</value>
+	</data>
+	<data name="Description.NamedMetaTags" type="System.String">
+		<value>エディタの標準 META タグを編集します。</value>
+	</data>
+	<data name="Attribute.NamedMetaTags" type="System.String">
+		<value>META 名</value>
+	</data>
+	<data name="Description.HttpEquivMetaTags" type="System.String">
+		<value>エディタの標準 META タグを編集します。</value>
+	</data>
+	<data name="Attribute.HttpEquivMetaTags" type="System.String">
+		<value>META httpEquiv</value>
+	</data>
+	<data name="Description.LinkedStylesheets" type="System.String">
+		<value>リンクしたスタイル文書へのリンクを編集します。</value>
+	</data>
+	<data name="Attribute.LinkedStylesheets" type="System.String">
+		<value>リンクしたスタイルシート</value>
+	</data>
+	<data name="Description.Title_Body" type="System.String">
+		<value>文書内容を識別するタイトルはウィンドウのヘッダーバーに表示されます。検索エンジンに必要です。
+</value>
+	</data>
+	<data name="Attribute.Title_Body" type="System.String">
+		<value>タイトル</value>
+	</data>
+	<data name="Description.URL" type="System.String">
+		<value>文書をロードする URL またはパス</value>
+	</data>
+	<data name="Attribute.URL" type="System.String">
+		<value>URL</value>
+	</data>
+	<data name="Description.LoadTime56K" type="System.String">
+		<value>56K モデムで文書をロードした平均時間。参照。</value>
+	</data>
+	<data name="Attribute.LoadTime56K" type="System.String">
+		<value>ロード時間 (56K)</value>
+	</data>
+	<data name="Description.FileSize" type="System.String">
+		<value>バイト単位の現在のファイル サイズ</value>
+	</data>
+	<data name="Attribute.FileSize" type="System.String">
+		<value>ファイル サイズ</value>
+	</data>
+	<data name="Description.FileLastModified" type="System.String">
+		<value>文書の最終更新タイムスタンプ</value>
+	</data>
+	<data name="Attribute.FileLastModified" type="System.String">
+		<value>最終更新</value>
+	</data>
+	<data name="Description.NumberOfFrames" type="System.String">
+		<value>構造に関わるないフレームの絶対値です。</value>
+	</data>
+	<data name="Attribute.NumberOfFrames" type="System.String">
+		<value>フレーム数</value>
+	</data>
+	<data name="Description.NumberOfStylesheets" type="System.String">
+		<value>リンクしたスタイルシート数</value>
+	</data>
+	<data name="Attribute.NumberOfStylesheets" type="System.String">
+		<value>スタイルシート数</value>
+	</data>
+	<data name="Description.NumberOfImages" type="System.String">
+		<value>文書内画像数</value>
+	</data>
+	<data name="Attribute.NumberOfImages" type="System.String">
+		<value>画像数</value>
+	</data>
+	<data name="Description.NumberOfScriptBlocks" type="System.String">
+		<value>スクリプト ブロック数</value>
+	</data>
+	<data name="Attribute.NumberOfScriptBlocks" type="System.String">
+		<value>スクリプト数</value>
+	</data>
+	<data name="Description.NumberOfMetaTags" type="System.String">
+		<value>META タグ数</value>
+	</data>
+	<data name="Attribute.NumberOfMetaTags" type="System.String">
+		<value>META 数</value>
+	</data>
+	<data name="Attribute.cellPadding" type="System.String">
+		<value>セル パディング</value>
+	</data>
+	<data name="Description.cellPadding" type="System.String">
+		<value>表内の境界線とセル内容の空白</value>
+	</data>
+	<data name="Attribute.cellSpacing" type="System.String">
+		<value>セル間隔</value>
+	</data>
+	<data name="Description.cellSpacing" type="System.String">
+		<value>表のセル間の間隔</value>
+	</data>
+	<data name="Description.rules" type="System.String">
+		<value>ルールとは列間の、このプロパティでルールの外観を定義します。</value>
+	</data>
+	<data name="Attribute.rules" type="System.String">
+		<value>ルール</value>
+	</data>
+	<data name="Description.borderColor" type="System.String">
+		<value>表内セルの境界線色</value>
+	</data>
+	<data name="Attribute.borderColor" type="System.String">
+		<value>境界線色</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>表の総列数。 span 属性を計算しません。参考のみ。</value>
+	</data>
+	<data name="Attribute.rows" type="System.String">
+		<value>列数</value>
+	</data>
+	<data name="Description.valign" type="System.String">
+		<value>セル内部文字列の横位置揃え</value>
+	</data>
+	<data name="Attribute.valign" type="System.String">
+		<value>横位置揃え</value>
+	</data>
+	<data name="Description.colspan" type="System.String">
+		<value>セルを結合する列数</value>
+	</data>
+	<data name="Attribute.colSpan" type="System.String">
+		<value>列の結合</value>
+	</data>
+	<data name="Description.rowspan" type="System.String">
+		<value>セルを結合する行数</value>
+	</data>
+	<data name="Attribute.rowSpan" type="System.String">
+		<value>行の結合</value>
+	</data>
+	<data name="Description.cells" type="System.String">
+		<value>セルの総行数。他の行のセルを rowspan 属性で行ごとに定義します。</value>
+	</data>
+	<data name="Attribute.cells" type="System.String">
+		<value>セル数</value>
+	</data>
+	<data name="FontPickerUserControl.ff.Text" type="System.String">
+		<value>フォント選択ボックス</value>
+	</data>
+	<data name="FontForm.buttonOK.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="FontForm.buttonCancel.Text" type="System.String">
+		<value>キャンセル</value>
+	</data>
+	<data name="FontForm.label1.Text" type="System.String">
+		<value>必要に応じて行ごとにフォントを定義します。</value>
+	</data>
+	<data name="FontForm.tabPage4.Text" type="System.String">
+		<value>設定フォント</value>
+	</data>
+	<data name="FontForm.textBoxFreeFont.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="FontForm.tabPage1.Text" type="System.String">
+		<value>システム</value>
+	</data>
+	<data name="FontForm.tabPage2.Text" type="System.String">
+		<value>ウェブ</value>
+	</data>
+	<data name="FontForm.tabPage3.Text" type="System.String">
+		<value>一般</value>
+	</data>
+	<data name="Attribute.border" type="System.String">
+		<value>境界線</value>
+	</data>
+	<data name="Description.border" type="System.String">
+		<value>ピクセルで境界線を定義します。要素がパイバーリンク内にある場合、明確に 0 設定すると、ビルド境界線が自動的に削除されます。</value>
+	</data>
+	<data name="Attribute.dateTime" type="System.String">
+		<value>日付時刻</value>
+	</data>
+	<data name="Description.dateTime" type="System.String">
+		<value>この要素を変更しないでいると標準時刻情報に設定されます。表示される形式は次のようになります。: JJJJ-MM-DDThh:mm:ssTZD</value>
+	</data>
+	<data name="Attribute.cite" type="System.String">
+		<value>引用</value>
+	</data>
+	<data name="Description.cite" type="System.String">
+		<value>内容のコメント</value>
+	</data>
+	<data name="HtmlDocumentStructure.ToString" type="System.String">
+		<value>[DOCUMENT]</value>
+	</data>
+	<data name="CustomPropertyTab.Tooltip" type="System.String">
+		<value>属性名</value>
+	</data>
+	<!-- Categories -->
+	<data name="Category.Element Behavior" type="System.String">
+		<value>ビヘイビア</value>
+	</data>
+	<data name="Category.Standard Values" type="System.String">
+		<value>ベース値</value>
+	</data>
+	<data name="Category.Javascript Events" type="System.String">
+		<value>JavaScript イベント</value>
+	</data>
+	<data name="Category.Element Layout" type="System.String">
+		<value>レイアウト</value>
+	</data>
+	<data name="Category.Element Appearance" type="System.String">
+		<value>外観</value>
+	</data>
+	<data name="Category.Content" type="System.String">
+		<value>内容</value>
+	</data>
+	<data name="Category.Information" type="System.String">
+		<value>情報</value>
+	</data>
+	<!-- End Categories -->
+	<data name="Attribute.ScriptOnResize" type="System.String">
+		<value>オン リサイズ</value>
+	</data>
+	<data name="Description.ScriptOnResize" type="System.String">
+		<value>ユーザーがスクリプティングを使用して要素サイズを変更すると起動されます。</value>
+	</data>
+	<data name="Attribute.ScriptOnChange" type="System.String">
+		<value>オン チェンジ</value>
+	</data>
+	<data name="Description.ScriptOnChange" type="System.String">
+		<value>ユーザーがコントロール内容を変更すると起動されます。</value>
+	</data>
+	<data name="Attribute.cols" type="System.String">
+		<value>列数</value>
+	</data>
+	<data name="Description.cols" type="System.String">
+		<value>標準幅の文字で表わした列数</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>標準フォントの文字で表わした行数</value>
+	</data>
+	<data name="Attribute.type_LI" type="System.String">
+		<value>リスト要素タイプ</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseDown" type="System.String">
+		<value>オン マウス ダウン</value>
+	</data>
+	<data name="Description.ScriptOnMouseDown" type="System.String">
+		<value>ユーザがマウス クリックでボタンを押して離す前に起動します。</value>
+	</data>
+	<data name="Description.id" type="System.String">
+		<value>JavaScript やスタイル対象で要素に使用する識別子</value>
+	</data>
+	<data name="Description.style" type="System.String">
+		<value>組み込み型スタイル。楕円 [...]  を使用して、統合型スタイル エディタを起動します。</value>
+	</data>
+	<data name="Description.class" type="System.String">
+		<value>CSS ファイルまたはタグの 「.name」構文を使用してスタイル クラス関連性を定義するスタイル クラス (CSS)  </value>
+	</data>
+	<data name="Attribute.ScriptOnDblClick" type="System.String">
+		<value>オン ダブルクリック</value>
+	</data>
+	<data name="StyleEditor.groupBox11.Text" type="System.String">
+		<value>表キャプション</value>
+	</data>
+	<data name="StyleEditor.fontPickerFont.Caption" type="System.String">
+		<value>フォント選択ボックス</value>
+	</data>
+	<data name="StyleEditor.Combos.NoValue" type="System.String">
+		<value>未指定</value>
+	</data>
+	<data name="StyleEditor.Combos.Inherit" type="System.String">
+		<value>継承</value>
+	</data>
+	<data name="StyleEditor.Combos.Normal" type="System.String">
+		<value>標準</value>
+	</data>
+	<data name="StyleEditor.Combos.None" type="System.String">
+		<value>なし</value>
+	</data>
+	<data name="StyleEditor.Combos.Solid" type="System.String">
+		<value>実線</value>
+	</data>
+	<data name="StyleEditor.Combos.Double" type="System.String">
+		<value>二重線</value>
+	</data>
+	<data name="StyleEditor.Combos.Dotted" type="System.String">
+		<value>点線</value>
+	</data>
+	<data name="StyleEditor.Combos.Dashed" type="System.String">
+		<value>破線</value>
+	</data>
+	<data name="StyleEditor.Combos.OutSet" type="System.String">
+		<value>はみ出た</value>
+	</data>
+	<data name="StyleEditor.Combos.Groove" type="System.String">
+		<value>くぼみ</value>
+	</data>
+	<data name="StyleEditor.Combos.InSet" type="System.String">
+		<value>はめ込む</value>
+	</data>
+	<data name="StyleEditor.Combos.Ridge" type="System.String">
+		<value>隆起</value>
+	</data>
+	<data name="StyleEditor.Combos.Hidden" type="System.String">
+		<value>非表示</value>
+	</data>
+	<data name="StyleEditor.Combos.Pixel" type="System.String">
+		<value>ピクセル</value>
+	</data>
+	<data name="StyleEditor.Combos.Point" type="System.String">
+		<value>ポイント</value>
+	</data>
+	<data name="StyleEditor.Combos.Percentage" type="System.String">
+		<value>パーセント</value>
+	</data>
+	<data name="StyleEditor.Combos.Pica" type="System.String">
+		<value>パイカ</value>
+	</data>
+	<data name="StyleEditor.Combos.Millimeter" type="System.String">
+		<value>ミリメートル</value>
+	</data>
+	<data name="StyleEditor.Combos.Centimeter" type="System.String">
+		<value>センチメートル</value>
+	</data>
+	<data name="StyleEditor.Combos.m-Size" type="System.String">
+		<value>M-サイズ</value>
+	</data>
+	<data name="StyleEditor.Combos.x-Height" type="System.String">
+		<value>X-高さ</value>
+	</data>
+	<data name="StyleEditor.Combos.Bold" type="System.String">
+		<value>太字</value>
+	</data>
+	<data name="StyleEditor.Combos.Bolder" type="System.String">
+		<value>太く</value>
+	</data>
+	<data name="StyleEditor.Combos.Lighter" type="System.String">
+		<value>細く</value>
+	</data>
+	<data name="StyleEditor.Combos.CapitalLetter" type="System.String">
+		<value>キャピタライズ</value>
+	</data>
+	<data name="StyleEditor.Combos.Uppercase" type="System.String">
+		<value>大文字</value>
+	</data>
+	<data name="StyleEditor.Combos.Lowercase" type="System.String">
+		<value>小文字</value>
+	</data>
+	<data name="StyleEditor.Combos.Top" type="System.String">
+		<value>上詰め</value>
+	</data>
+	<data name="StyleEditor.Combos.Center" type="System.String">
+		<value>中央</value>
+	</data>
+	<data name="StyleEditor.Combos.Bottom" type="System.String">
+		<value>下詰め</value>
+	</data>
+	<data name="StyleEditor.Combos.Absolute" type="System.String">
+		<value>絶対</value>
+	</data>
+	<data name="StyleEditor.Combos.AsBlock" type="System.String">
+		<value>ブロック単位</value>
+	</data>
+	<data name="StyleEditor.Combos.InlineText" type="System.String">
+		<value>インライン テキスト</value>
+	</data>
+	<data name="StyleEditor.Combos.ListItem" type="System.String">
+		<value>リスト アイテム</value>
+	</data>
+	<data name="StyleEditor.Combos.Middle" type="System.String">
+		<value>中央</value>
+	</data>
+	<data name="StyleEditor.Combos.Baseline" type="System.String">
+		<value>通常位置</value>
+	</data>
+	<data name="StyleEditor.Combos.Sub" type="System.String">
+		<value>下付</value>
+	</data>
+	<data name="StyleEditor.Combos.Super" type="System.String">
+		<value>上付</value>
+	</data>
+	<data name="StyleEditor.Combos.TopOfText" type="System.String">
+		<value>テキストの上</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomOfText" type="System.String">
+		<value>テキストの下</value>
+	</data>
+	<data name="StyleEditor.Combos.Underline" type="System.String">
+		<value>下線</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOver" type="System.String">
+		<value>ストライク オーバー</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOut" type="System.String">
+		<value>ストライク アウト</value>
+	</data>
+	<data name="StyleEditor.Combos.BlinkText" type="System.String">
+		<value>ブリンク</value>
+	</data>
+	<data name="StyleEditor.Combos.Visible" type="System.String">
+		<value>表示</value>
+	</data>
+	<data name="StyleEditor.Combos.NotVisible" type="System.String">
+		<value>非表示</value>
+	</data>
+	<data name="StyleEditor.Combos.ScrollableArea" type="System.String">
+		<value>スクロール</value>
+	</data>
+	<data name="StyleEditor.Combos.Automatic" type="System.String">
+		<value>自動</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndLeft" type="System.String">
+		<value>左上</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndRight" type="System.String">
+		<value>右上</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndLeft" type="System.String">
+		<value>左下</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndRight" type="System.String">
+		<value>右下</value>
+	</data>
+	<data name="StyleEditor.Combos.Repeat" type="System.String">
+		<value>繰り返し</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatRows" type="System.String">
+		<value>行の繰り返し</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatColumns" type="System.String">
+		<value>列の繰り返し</value>
+	</data>
+	<data name="StyleEditor.Combos.NoRepeat" type="System.String">
+		<value>繰り返さない</value>
+	</data>
+	<data name="StyleEditor.Combos.Standard" type="System.String">
+		<value>標準</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtremSmall" type="System.String">
+		<value>極々小</value>
+	</data>
+	<data name="StyleEditor.Combos.VerySmall" type="System.String">
+		<value>極小</value>
+	</data>
+	<data name="StyleEditor.Combos.small" type="System.String">
+		<value>小</value>
+	</data>
+	<data name="StyleEditor.Combos.Medium" type="System.String">
+		<value>中間</value>
+	</data>
+	<data name="StyleEditor.Combos.Large" type="System.String">
+		<value>大</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtraLarge" type="System.String">
+		<value>特大</value>
+	</data>
+	<data name="StyleEditor.Combos.XXL" type="System.String">
+		<value>特特大</value>
+	</data>
+	<data name="StyleEditor.Combos.Inside List" type="System.String">
+		<value>リストの外側</value>
+	</data>
+	<data name="StyleEditor.Combos.Outside List" type="System.String">
+		<value>リストの内側</value>
+	</data>
+	<data name="StyleEditor.Combos.Square" type="System.String">
+		<value>四角</value>
+	</data>
+	<data name="StyleEditor.Combos.Disc" type="System.String">
+		<value>黒丸</value>
+	</data>
+	<data name="StyleEditor.Combos.Circle" type="System.String">
+		<value>円</value>
+	</data>
+	<data name="StyleEditor.Combos.Thin" type="System.String">
+		<value>薄い</value>
+	</data>
+	<data name="StyleEditor.Combos.Thick" type="System.String">
+		<value>濃い</value>
+	</data>
+	<data name="StyleEditor.Combos.Auto" type="System.String">
+		<value>自動</value>
+	</data>
+	<data name="StyleEditor.Combos.Cross" type="System.String">
+		<value>十字</value>
+	</data>
+	<data name="StyleEditor.Combos.Hand" type="System.String">
+		<value>手形</value>
+	</data>
+	<data name="StyleEditor.Combos.HandIE5Only" type="System.String">
+		<value>手形 (IE 5 のみ)</value>
+	</data>
+	<data name="StyleEditor.Combos.MoveObject" type="System.String">
+		<value>移動</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeRightBorder" type="System.String">
+		<value>右サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperRightCorner" type="System.String">
+		<value>右上サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperLeftCorner" type="System.String">
+		<value>左上サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeTopBorder" type="System.String">
+		<value>上部サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerRightCorner" type="System.String">
+		<value>右下サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerLeftCorner" type="System.String">
+		<value>左下サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeBottomBorder" type="System.String">
+		<value>下部サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLeftBorder" type="System.String">
+		<value>左サイズの変更</value>
+	</data>
+	<data name="StyleEditor.Combos.InsideTextbox" type="System.String">
+		<value>テキスト (アイビーム)</value>
+	</data>
+	<data name="StyleEditor.Combos.Wait(Hourglass)" type="System.String">
+		<value>待ち時間　(砂時計)</value>
+	</data>
+	<data name="StyleEditor.Combos.Help" type="System.String">
+		<value>ヘルプ</value>
+	</data>
+	<data name="StyleEditor.Combos.Scroll" type="System.String">
+		<value>スクロール</value>
+	</data>
+	<data name="StyleEditor.Combos.Fixed" type="System.String">
+		<value>固定</value>
+	</data>
+	<data name="StyleEditor.Combos.Pre" type="System.String">
+		<value>調整済み</value>
+	</data>
+	<data name="StyleEditor.Combos.NoWrap" type="System.String">
+		<value>ワードラップしない</value>
+	</data>
+	<data name="PropertyGrid.BackgroundPropertyType" type="System.String">
+		<value>スクロール,固定</value>
+	</data>
+	<data name="PropertyGrid.ScrollType" type="System.String">
+		<value>はい,いいえ,自動</value>
+	</data>
+	<data name="PropertyGrid.Boolean" type="System.String">
+		<value>はい,いいえ</value>
+	</data>
+	<data name="PropertyGrid.AreaShape" type="System.String">
+		<value>既定,矩形,円,ポリゴン</value>
+	</data>
+	<data name="PropertyGrid.BreakClearEnum" type="System.String">
+		<value>なし,左寄せ回り込み解除,右寄せ回り込み解除、すべての割り込み解除</value>
+	</data>
+	<data name="PropertyGrid.HorizontalAlign" type="System.String">
+		<value>なし、左揃え、中央揃え、右揃え、両端揃え</value>
+	</data>
+	<data name="PropertyGrid.VerticalAlign" type="System.String">
+		<value>なし,上詰め,中央,下詰め</value>
+	</data>
+	<data name="PropertyGrid.FontUnit" type="System.String">
+		<value>なし,極々小,極小,小,中間,大,特大,特特大,より小さく,より大きく </value>
+	</data>
+	<data name="PropertyGrid.LinkElementMedia" type="System.String">
+		<value>すべての端末、普通のパソコンモニタ、、固定ピッチの端末,低解像度の端末,映写機のような整形モデルを有する端末、制限つき端末、印刷などの整形モデルの媒体用端末、点字を再現する端末、音声合成用端末</value>
+	</data>
+	<data name="PropertyGrid.UnorderedListType" type="System.String">
+		<value>既定,円,黒丸,四角</value>
+	</data>
+	<data name="PropertyGrid.ListType" type="System.String">
+		<value>既定,数字,大小ローマ数字,大小アルファベット,黒丸,円,四角</value>
+	</data>
+	<data name="Description.AreaTags" type="System.String">
+		<value>このマップに登録したインタラクティブ部分の集合体</value>
+	</data>
+	<data name="Attribute.AreaTags" type="System.String">
+		<value>範囲</value>
+	</data>
+	<data name="Attribute.index" type="System.String">
+		<value>位置</value>
+	</data>
+	<data name="Description.index" type="System.String">
+		<value>リスト ボックスのこのオプション ボックスを標準位置に置きます。</value>
+	</data>
+	<data name="PropertyGrid.OrderedListType" type="System.String">
+		<value>既定,数値,小文字,大文字、英小文字、英語大文字</value>
+	</data>
+	<data name="PropertyGrid.RulesType" type="System.String">
+		<value>なし,行,列,全画面</value>
+	</data>
+	<data name="Attribute.maxLength" type="System.String">
+		<value>最大フィールド サイズ</value>
+	</data>
+	<data name="Attribute.readOnly" type="System.String">
+		<value>書込み禁止</value>
+	</data>
+	<data name="Attribute.value" type="System.String">
+		<value>値</value>
+	</data>
+	<data name="Description.maxLength" type="System.String">
+		<value>このフィールドのユーザーの最大入力文字数</value>
+	</data>
+	<data name="Description.ScriptOnDblClick" type="System.String">
+		<value>ユーザーがこの要素のアクティブ範囲をダブルクリックすると起動します。</value>
+	</data>
+	<data name="Description.readOnly" type="System.String">
+		<value>このフィールドの内容は表示だけで、書き込みできません。</value>
+	</data>
+	<data name="Description.value" type="System.String">
+		<value>フォーミュラを送信する値。要素サーフェスのテキスト用のボタンです。</value>
+	</data>
+	<data name="Attribute.checked" type="System.String">
+		<value>確認済み</value>
+	</data>
+	<data name="Attribute.selected" type="System.String">
+		<value>選択済み</value>
+	</data>
+	<data name="Attribute.text_Field" type="System.String">
+		<value>オプション テキスト</value>
+	</data>
+	<data name="Description.checked" type="System.String">
+		<value>ラジオボタンのチェックボックスにチェックを付けて有効にします。（チェックを付ける）。</value>
+	</data>
+	<data name="Description.selected" type="System.String">
+		<value>このフィールドは初期設定されています。</value>
+	</data>
+	<data name="Description.text_Field" type="System.String">
+		<value>送信するテキストがないときにドロップダウン リストで表示されるテキスト。</value>
+	</data>
+	<data name="StyleEditorForm.Text" type="System.String">
+		<value>スタイル エディタ</value>
+	</data>
+	<data name="StyleEditorForm.buttonOK.Text" type="System.String">
+		<value>OK</value>
+	</data>
+	<data name="Description.src" type="System.String">
+		<value>ソース ファイルまたは URL</value>
+	</data>
+	<data name="OptionCollectionEditor.addButton.Text" type="System.String">
+		<value>追加</value>
+	</data>
+	<data name="OptionCollectionEditor.memberLabel.Text" type="System.String">
+		<value>編集するオプションを選択します。:</value>
+	</data>
+	<data name="OptionCollectionEditor.removeButton.Text" type="System.String">
+		<value>削除</value>
+	</data>
+	<data name="Attribute.multiple" type="System.String">
+		<value>複数</value>
+	</data>
+	<data name="Description.multiple" type="System.String">
+		<value>CTRL キーとともに複数のオプションを使用するかどうかを定義します。</value>
+	</data>
+	<data name="Attribute.Options" type="System.String">
+		<value>オプション</value>
+	</data>
+	<data name="Description.Options" type="System.String">
+		<value>リスト id ビルドからのオプションの集合体</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" type="System.String">
+		<value>背景画像</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" type="System.String">
+		<value>画像ファイル(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Title" type="System.String">
+		<value>リスト要素の画像</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Filter" type="System.String">
+		<value>画像ファイル(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.labelColumnGap.Text" type="System.String">
+		<value>列の間隔:</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerRoman" type="System.String">
+		<value>小文字ローマ数字</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperRoman" type="System.String">
+		<value>大文字ローマ数字</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerAlpha" type="System.String">
+		<value>小文字アルファベット</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperAlpha" type="System.String">
+		<value>大文字アルファベット</value>
+	</data>
+	<data name="StyleEditor.Combos.Decimal" type="System.String">
+		<value>数字</value>
+	</data>
+	<data name="StyleEditor.Combos.DecimalZero" type="System.String">
+		<value>小数点</value>
+	</data>
+	<data name="StyleEditor.Combos.Left" type="System.String">
+		<value>左</value>
+	</data>
+	<data name="StyleEditor.Combos.Right" type="System.String">
+		<value>右</value>
+	</data>
+	<data name="PropertyGrid.TableColumnHorizontalAlign" type="System.String">
+		<value>なし,左,右,中央,文字,両端揃え</value>
+	</data>
+	<data name="Attribute.char" type="System.String">
+		<value>文字列揃え</value>
+	</data>
+	<data name="Attribute.charoff" type="System.String">
+		<value>文字のパディング揃え</value>
+	</data>
+	<data name="Description.char" type="System.String">
+		<value>要素内容を揃えるために使用する文字</value>
+	</data>
+	<data name="Description.charoff" type="System.String">
+		<value>文字と内容のパディング（距離）と右揃え</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.memberLabel.Text" type="System.String">
+		<value>スタイル要素の編集</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.addButton.Text" type="System.String">
+		<value>セレクタの追加</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.removeButton.Text" type="System.String">
+		<value>セレクタの削除</value>
+	</data>
+	<data name="Attribute.StylesheetContent" type="System.String">
+		<value>スタイルシートのコンテンツ</value>
+	</data>
+	<data name="Description.StylesheetContent" type="System.String">
+		<value>このプロパティでリンクしたスタイルシートのコンテンツにアクセスします。</value>
+	</data>
+	<data name="Attribute.usemap" type="System.String">
+		<value>マップの使用</value>
+	</data>
+	<data name="Description.usemap" type="System.String">
+		<value>このマップ定義を使用して、クリックできるビルド画像マップを作成します。（クライアントサイト）</value>
+	</data>
+	<data name="Attribute.action" type="System.String">
+		<value>アクション</value>
+	</data>
+	<data name="Attribute.encType" type="System.String">
+		<value>エンコーティング タイプ</value>
+	</data>
+	<data name="Attribute.method" type="System.String">
+		<value>メソッド</value>
+	</data>
+	<data name="Attribute.name_Form" type="System.String">
+		<value>フォーム名</value>
+	</data>
+	<data name="Description.action" type="System.String">
+		<value>フォーミュラを送信して読み込む URL への絶対または相対パス</value>
+	</data>
+	<data name="Description.encType" type="System.String">
+		<value>エンコーティング タイプ。この値は送信されるコンテンツにより異なります。ファイルのアップロードにはマルチパートを使用します。</value>
+	</data>
+	<data name="Description.method" type="System.String">
+		<value>フォーミューラを送信するためにブラウザで使用する HTTP メソッド。標準フォームはポストを使用して送信されます。</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>スクリプティング環境で使用されるフォーム名</value>
+	</data>
+	<data name="Attribute.size_Select" type="System.String">
+		<value>表示オプション</value>
+	</data>
+	<data name="Description.size_Select" type="System.String">
+		<value>表示するオプション数。1 の値以上の複数オプションにはドロップダウン リストが、複数のドロップダウン数には、リスト ボックスが作成されます。リストボックスにはスクロールバーも作成されます。</value>
+	</data>
+	<data name="Attribute.label" type="System.String">
+		<value>ラベル</value>
+	</data>
+	<data name="Description.label" type="System.String">
+		<value>オプション コンテンツが使用されない場合にユーザーに表示される選択要素のテキスト</value>
+	</data>
+	<data name="Description.height" type="System.String">
+		<value></value>
+	</data>
+</root>

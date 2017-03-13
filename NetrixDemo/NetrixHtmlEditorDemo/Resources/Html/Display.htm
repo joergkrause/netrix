@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+            .style1
+            {
+                font-family: "Courier New", Courier, monospace;
+            }
+            .style2
+            {
+                font-weight: normal;
+            }
+        </style>
+	</head>
+	<body>
+	    <h1>Display and Editing Functions</h1>
+        <p>
+        This tab summarizes some display and editing functions:
+        </p>
+        <ul>
+            <li>Grid: Display a grid that overlays the editor. User can use this to precisely align objects. Usually this is used in absolute position mode.</li>
+            <li>Absolute Positioning: Put the control in a mode where objects can be positioned at specific positions, not in the document flow.</li>
+            <li>Scrollbars: Some options that control scrollbars. Enabling or disabling scrollbars requires that the document is loaded again.</li>
+        </ul>
+        <h1>Function</h1>
+        <p>This sections axplains the various functions.</p>
+        <h2>Grid</h2>
+        <p>
+        The grid overlays the current document. It does not persist in the document. Changing grid properties does not change the content.
+        </p>
+        <ul>
+            <li>Show Grid: Switch the grid on and off</li>
+            <li>Size: The distance between grid lines in pixel</li>
+            <li>Color: The grid appears as dots or lines. This option sets the dots or lines color.</li>
+            <li>Style: The style of the grid. Either dots, small crosses, or lines.</li>
+        </ul>
+        <p>
+            The following snippet from demo code shows how the ribbon controls set the 
+            various Grid options through the Html Editor&#39;s <span class="style1">Grid</span> 
+            property.</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_spinnerGridSize_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Grid.GridSize&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+            style="color: #2b91af">Size</span>((<span style="color: blue">int</span>)_spinnerGridSize.DecimalValue,&nbsp;(<span 
+            style="color: blue">int</span>)_spinnerGridSize.DecimalValue);
+}
+ 
+<span style="color: blue">void</span>&nbsp;_buttonShowGrid_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Grid.GridVisible&nbsp;=&nbsp;_togglebuttonShowGrid.BooleanValue;
+&nbsp;&nbsp;&nbsp;&nbsp;_spinnerGridSize.Enabled&nbsp;=&nbsp;_togglebuttonShowGrid.BooleanValue;
+&nbsp;&nbsp;&nbsp;&nbsp;_comboboxGridStyle.Enabled&nbsp;=&nbsp;_togglebuttonShowGrid.BooleanValue;
+&nbsp;&nbsp;&nbsp;&nbsp;_dropdownGridColor.Enabled&nbsp;=&nbsp;_togglebuttonShowGrid.BooleanValue;
+}
+ 
+<span style="color: blue">void</span>&nbsp;_comboboxGridStyle_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Grid.GridVisualisation&nbsp;=&nbsp;(GuruComponents.Netrix.WebEditing.Behaviors.<span 
+            style="color: #2b91af">GridType</span>)<span style="color: #2b91af">Enum</span>.Parse(<span 
+            style="color: blue">typeof</span>(GuruComponents.Netrix.WebEditing.Behaviors.<span 
+            style="color: #2b91af">GridType</span>),&nbsp;_comboboxGridStyle.StringValue);
+}
+ 
+<span style="color: blue">void</span>&nbsp;_dropdownGridColor_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.Grid.GridColor&nbsp;=&nbsp;_dropdownGridColor.Color;
+}</pre>
+        <p style="font-weight: 700">
+            Hint:<span class="style2"> You can show the Grid&#39;s properties in the 
+            PropertyGrid control to access all properties at once.</span></p>
+        <h2>Positioning</h2>
+        <p>In absolute position mode the editor runs in what we call "Grid Layout". Once you have few objects that overlay each other, you can set the order by several options. 
+            The HtmlSelection class exposes several features, such as BringToFront or 
+            SendToBack, as shown in the demo. Several more are available as public methods.</p>
+        <h2>Options</h2>
+        <p>
+            Among the various options the demo shows the <span class="style1">
+            MultipleSelectionAllowed</span> property. If on, the user can select more than 
+            one element and move, resize, or change its z-order.</p>
+        <h2>Scrollbars</h2>
+        <p>You can turn scrollbars on and off, set the color, retrieve the scroll position 
+            and set the current scroll position programmatically. Scrolling appears if the 
+            document size exceeds the available space. If the content fits into the window, 
+            you cannot scroll, neither using the scrollbar not programmatically.</p>
+	</body>
+</html>

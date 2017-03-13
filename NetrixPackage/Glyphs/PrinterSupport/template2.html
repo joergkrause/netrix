@@ -1,0 +1,93 @@
+<HTML XMLNS:IE>
+<HEAD>
+<?IMPORT NAMESPACE="IE" IMPLEMENTATION="#default">
+<STYLE TYPE="text/css">
+.lorstyle
+{
+    width:5.5in;
+    height:8in;
+    margin:1in;
+    background:white;   
+    border:1 dashed gray;
+}
+.pagestyle
+{ 
+    width:8.5in;
+    height:11in;
+    background:#FFFF99;   
+	border-left:1 solid black;
+	border-top:1 solid black;
+	border-right:4 solid black;
+	border-bottom:4 solid black;
+    margin:10px;
+}
+</STYLE>
+<SCRIPT LANGUAGE="JScript">
+function CheckPrint()
+{
+	switch (dialogArguments.__IE_PrintType)
+	{
+		case "Prompt":
+			if (printer.showPrintDialog()) 
+				PrintPrep();
+			break;
+		case "NoPrompt":
+			PrintPrep();
+			break;
+		case "Preview":
+		default:
+			break;
+	}
+}
+
+function PrintPrep()
+{
+	if (layoutrect1.contentDocument.readyState == "complete")
+	{
+		// This block will be called when printing with user prompt
+		// because the Print dialog box gives time for the content
+		// document to complete loading
+		PrintNow();
+	}
+	else
+	{
+		// This block will usually be called when printing w/o user prompt
+		// and sets an event handler that listens for the loading of the content
+		// document before printing. Sometimes, however, the content document
+		// will be loaded in time for the previous block to execute
+		layoutrect1.contentDocument.onreadystatechange = PrintWhenContentDocComplete;
+	}
+}
+
+function PrintWhenContentDocComplete()
+{
+	if (layoutrect1.contentDocument.readyState == "complete")
+	{
+		layoutrect1.contentDocument.onreadystatechange = null;
+		PrintNow();
+	}
+}
+
+function PrintNow()
+{
+	printer.startDoc("Printing from Tmplt2.htm");
+	printer.printPage(page1);	
+	printer.printPage(page2);
+	printer.stopDoc();
+}
+</SCRIPT>
+<IE:TEMPLATEPRINTER ID="printer"/>
+</HEAD>
+
+<BODY>
+
+<IE:DEVICERECT ID="page1" CLASS="pagestyle" MEDIA="print">
+	<IE:LAYOUTRECT ID="layoutrect1" CONTENTSRC="document" CLASS="lorstyle" NEXTRECT="layoutrect2"/>
+</IE:DEVICERECT>
+
+<IE:DEVICERECT ID="page2" CLASS="pagestyle" MEDIA="print">
+	<IE:LAYOUTRECT ID="layoutrect2" CLASS="lorstyle" ONLAYOUTCOMPLETE="setTimeout('CheckPrint()', 100)"/>
+</IE:DEVICERECT>
+
+</BODY>
+</HTML>

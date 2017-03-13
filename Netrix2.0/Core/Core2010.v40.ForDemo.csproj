@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03C1FE95-E23E-42C0-9D0C-C27A48A2EC2F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.Professional.Core.v40.Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET40</DefineConstants>
+    <DocumentationFile>..\Documentation\GuruComponents.Netrix.Professional.Core.v35.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>602,612,618</NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DOTNET35</DefineConstants>
+    <DocumentationFile>bin\Release\GuruComponents.Netrix.Professional.Core.v40.Demo.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>602,612,618</NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alignment_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BlockDefaultType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComInterop\ComStream.cs" />
+    <Compile Include="ComInterop\ConnectionPointCookie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComInterop\DispId.cs" />
+    <Compile Include="ComInterop\Interop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComInterop\Scripting.cs" />
+    <Compile Include="ComInterop\Win32.cs" />
+    <Compile Include="Designer\CommandWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Designer\DirectiveEventArgs.cs" />
+    <Compile Include="Designer\DirectiveEventHandler.cs" />
+    <Compile Include="Designer\EventDisplay.cs" />
+    <Compile Include="Designer\IDesignSite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Designer\IDesignTimeBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Designer\IDirective.cs" />
+    <Compile Include="Designer\INamespaceManager.cs" />
+    <Compile Include="Designer\IReferenceManager.cs" />
+    <Compile Include="Designer\IRegisterDirective.cs" />
+    <Compile Include="Designer\IRegisterDirectiveCollection.cs" />
+    <Compile Include="Designer\IUIService.cs" />
+    <Compile Include="Events\AfterSnapRectEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\AfterSnapRectEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\BeforeShortcutEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\BeforeShortcutEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\BeforeSnapRectEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\BeforeSnapRectEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ContentModifiedEventArgs.cs" />
+    <Compile Include="Events\ContentModifiedHandler.cs" />
+    <Compile Include="Events\ScriptExternalEventArgs.cs" />
+    <Compile Include="Events\ScriptExternalEventHandler.cs" />
+    <Compile Include="Events\EventDisplayEventArgs.cs" />
+    <Compile Include="Events\EventDisplayHandler.cs" />
+    <Compile Include="Events\EventFilterEventArgs.cs" />
+    <Compile Include="Events\EventFilterHandler.cs" />
+    <Compile Include="Events\DhtmlEventType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\DocumentEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\DocumentEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\EventBinding_Delegates.cs" />
+    <Compile Include="Events\EventManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\EventObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\FrameActivatedHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\FrameEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlElementChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlElementChangedHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlKeyEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlKeyEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlMouseEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\HtmlMouseEventHandlers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\IEventBinding.cs" />
+    <Compile Include="Events\LoadEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\LoadSaveHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PostEditorEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PostEditorEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PropertyDisplayEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PropertyDisplayHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PropertyFilterEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\PropertyFilterHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ReadyStateChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ReadyStateChangedHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\SaveEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\SelectionChangedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ShowContextMenuEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ShowContextMenuEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ShowErrorEventArgs.cs" />
+    <Compile Include="Events\ShowErrorEventHandler.cs" />
+    <Compile Include="Events\ShowMessageEventArgs.cs" />
+    <Compile Include="Events\ShowMessageHandler.cs" />
+    <Compile Include="Events\UpdateUIHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\WebExceptionEventArgs.cs" />
+    <Compile Include="Events\WebExceptionEventHandler.cs" />
+    <Compile Include="HtmlCommandInfo_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlFormat_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEditorInstanceService.cs" />
+    <Compile Include="IHtmlEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ISelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITextFormatting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NetRixServiceProvider.cs" />
+    <Compile Include="Networking\ClassFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Networking\GenericProtocolHandler.cs" />
+    <Compile Include="Networking\HttpProtocolInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Networking\InternetSession.cs" />
+    <Compile Include="Networking\InternetSessionRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Networking\IProtocolFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlugIns\CommandExtender.cs" />
+    <Compile Include="PlugIns\PlugInElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlugIns\Feature.cs" />
+    <Compile Include="PlugIns\IPlugIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlugIns\NetRixConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebEditing\UndoRedo\BatchedUndoType_Enum.cs" />
+    <Compile Include="WebEditing\Behaviors\BaseBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\BehaviorNotifyEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\BehaviorNotifyEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\BehaviorNotifyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\GridLineType_Enum.cs" />
+    <Compile Include="WebEditing\Behaviors\GridType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\HtmlPainter_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\HtmlZorder_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\IBaseBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\IHtmlGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\SnapMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Behaviors\SnapZone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Documents\ICollectionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Documents\IDocumentStructure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Documents\IFrameSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Documents\IFrameWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Documents\IHtmlWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\BreakClear_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\ElementBehavior.cs" />
+    <Compile Include="WebEditing\Elements\ElementCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\ElementComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\EventVisibleAttribute.cs" />
+    <Compile Include="WebEditing\Elements\GenericElementFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\IElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\IElementBehavior.cs" />
+    <Compile Include="WebEditing\Elements\IElementDom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\IElementFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\IExtendedProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\InsertWhere_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Elements\ScrollAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\Elements\ElementTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\Elements\FormattingFlagsEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\Elements\ITagInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\Elements\WhiteSpaceTypeEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\EntityFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\HtmlFormatterCase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\IHtmlFormatter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Formatting\IHtmlFormatterOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Glyphs\BuildGlyphs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Glyphs\EnumResources.cs" />
+    <Compile Include="WebEditing\Glyphs\GlyphVariant_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Glyphs\HtmlGlyphs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Glyphs\HtmlGlyphsKind.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Glyphs\HtmlGlyphsType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\ColorType.cs" />
+    <Compile Include="WebEditing\HightLighting\CompareUnit_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\ContextType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\FontUnit_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\IHighlightColor.cs" />
+    <Compile Include="WebEditing\HightLighting\IHighLightSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\IHighLightStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\ITextSelector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\LineThroughStyle_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\LineType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\MoveTextPointer_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\MoveUnit_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\PointerGravity_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\PointerInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\PointerSelection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HightLighting\UnderlineStyle_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\HtmlSelectionType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\UndoRedo\IUndoObject.cs" />
+    <Compile Include="WebEditing\UndoRedo\ParentUndoUnit.cs" />
+    <Compile Include="WebEditing\UndoRedo\UndoEventArgs.cs" />
+    <Compile Include="WebEditing\UndoRedo\UndoUnit.cs" />
+    <Compile Include="WebEditing\UndoRedo\IUndoStack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\ReadyState.cs" />
+    <Compile Include="WebEditing\Styles\BackgroundRepeat_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\BackgroundStyles_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\ClearStyles_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\ClipFormat_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\ClipStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IBackground.cs" />
+    <Compile Include="WebEditing\Styles\IBorder.cs" />
+    <Compile Include="WebEditing\Styles\IElementStyle.cs" />
+    <Compile Include="WebEditing\Styles\CssEffectiveStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\DisplayStyles_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IClipStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IEffectiveStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IEffectiveStyle_SubInterfaces.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IFont.cs" />
+    <Compile Include="WebEditing\Styles\IMargin.cs" />
+    <Compile Include="WebEditing\Styles\IPadding.cs" />
+    <Compile Include="WebEditing\Styles\IStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\IStyleRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\ITextDecoration.cs" />
+    <Compile Include="WebEditing\Styles\ListStylePosition_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\ListStyleType_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\PageBreakStyles_Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebEditing\Styles\StyleType_Enum.cs" />
+    <Compile Include="WebEditing\Styles\TextAlign.cs" />
+    <Compile Include="WebEditing\Styles\WordWrap_Enum.cs" />
+    <Compile Include="WebEditing\TypeConverters\DropAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="IHtmlEditor.resx">
+      <DependentUpon>IHtmlEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebEditing\Documents\IDocumentStructure.resx">
+      <DependentUpon>IDocumentStructure.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="ComInterop\mshtml.idl" />
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licensing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

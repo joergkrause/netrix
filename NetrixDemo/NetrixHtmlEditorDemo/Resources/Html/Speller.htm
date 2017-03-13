@@ -1,0 +1,219 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        code
+        {
+            font-family: Courier New;
+            font-size: 10pt;
+        }
+        .style1
+        {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .style2
+        {
+            color: #339933;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        About Spellchecker</h1>
+    <h2>Netspell</h2>
+        The NetSpell project is a spell checking engine written entirely in managed C# .NET
+        code. NetSpell's suggestions for a misspelled word are generated using phonetic
+        (sounds like) matching and ranked by a typographical (looks like) score. NetSpell
+        supports multiple languages and the dictionaries are based on the OpenOffice Affix
+        compression format. The library can be used in Windows or Web Form projects. The
+        download includes an English dictionary with dictionaries for other languages available
+        for download on the project web site. NetSpell also supports user added words and
+        automatic creation of user dictionaries. It also includes a dictionary build tool
+        to build custom dictionaries. 
+        <h2>The Dictionary</h2>
+        The root of all spell checkers is a
+        word list, aka the dictionary. The dictionary contains a list of common words for
+        a language. For example, the US English dictionary that comes with this package
+        contains 162,573 words. When designing the dictionary for NetSpell I wanted the
+        dictionary to be a single file, be as small as possible and load extremely fast.
+        I experimented with many different ways to save and load the large word lists. Techniques
+        I tried ranged from a saved dataset to a binary serialized collection, all of which
+        proved to be too slow. I ended up using the good old UTF8 text file. Loading and
+        parsing a text file proved to be extremely fast.
+    <br />
+    <h1>
+        Exercise</h1>
+        <p>
+        To check the module out go these steps:</p>
+        <ul>
+            <li>Select the appropriate language for the loaded text. For this demo text, choose "en-US".</li>
+            <li>Click "Run in Backround". Spellchecker starts and checks the whole text.</li>
+        </ul>
+        <p>
+        Alternatively you can check using a non-modal dialog. To do so, cancel background spellchecking first.
+        Then, hit "Start Dialog".
+        </p>
+        <h1>Basic Features</h1>
+    <p>
+        The spellchecker is made as a plug-in. That means, you can remove the assembly from 
+        your project if you don't need this. You can even remove all dictionary not in use.</p>
+        <p>
+        The features at a glance:
+        </p>
+        <ul>
+            <li>Background spellchecker (like Word)</li>
+            <li>Word by Word checking (dialogs must be provided by host application)</li>
+            <li>Changing color and style of highlighting (default: red wave line)</li>
+            <li>You can use several events to intercepts the mechanism</li>
+            <li>Several options are available to modify the spellcheckers behavior</li>
+            <li>It's possible to create new dictionaries based on OpenOffice libraries</li>
+        </ul>
+    <h1>
+        Code</h1>
+    The spellchecker has two modes: Background (aka &quot;As you type&quot;) and Dialog. The 
+    background mode checks the documents completely for the first time and looks for 
+    specific events after, such as key strokes and mouse moves. If the caret is 
+    moved away from a word the checker looks up just this one word in the 
+    dictionary. That way the spellchecker is able to check huge documents without 
+    noticible delay.<br />
+    Before you can start the spellchecker, you have to set a dictionary. There are 
+    severel dictionaries available. The following code snippet shows the procedure:<br />
+    <pre style="font-family: consolas"><span style="color: blue">object</span>&nbsp;item;
+_dropdownSpellerDictionary.ItemsSource.GetItem(_dropdownSpellerDictionary.SelectedItem,&nbsp;<span 
+        style="color: blue">out</span>&nbsp;item);
+<span style="color: green">//&nbsp;assume&nbsp;we&nbsp;keep&nbsp;the&nbsp;default&nbsp;path</span>
+EditorDocument.SpellChecker.GetSpeller(EditorDocument.HtmlEditor).DictionaryPath&nbsp;=&nbsp;<span 
+        style="color: #a31515">&quot;Dictionary&quot;</span>;
+<span style="color: green">//&nbsp;and&nbsp;get&nbsp;the&nbsp;dictionary&nbsp;name&nbsp;from&nbsp;drop&nbsp;down</span>
+EditorDocument.SpellChecker.GetSpeller(EditorDocument.HtmlEditor).Dictionary&nbsp;=&nbsp;<span 
+        style="color: #2b91af">String</span>.Format(<span style="color: #a31515">&quot;{0}.dic&quot;</span>,&nbsp;((<span 
+        style="color: #2b91af">GalleryItemPropertySet</span>)item).Label);
+<span style="color: green">//&nbsp;stop&nbsp;current&nbsp;checking,&nbsp;remove&nbsp;all&nbsp;segments&nbsp;and&nbsp;restart&nbsp;immediately</span>
+EditorDocument.HtmlEditor.InvokeCommand(EditorDocument.SpellChecker.Commands.StopBackground);
+EditorDocument.HtmlEditor.InvokeCommand(EditorDocument.SpellChecker.Commands.RemoveHighLight);
+EditorDocument.HtmlEditor.InvokeCommand(EditorDocument.SpellChecker.Commands.ClearBuffer);
+EditorDocument.HtmlEditor.InvokeCommand(EditorDocument.SpellChecker.Commands.StartBackground);</pre>
+    The Label returned from ribbon contains a simple culture string, such as &quot;en-US&quot; 
+    or &quot;de-DE&quot;. After the dictionary has been set, the background spellchecker is 
+    activated.<br />
+    <br />
+    The commands supported by this plug-in are exposed in the <span class="style1">
+    Commands</span> property. Use <span class="style1">InvokeCommand</span> to 
+    activate the command.<br />
+    <br />
+    Several settings are available. All settings can be reached through the property 
+    bag. The ribbon commands in the demo application invoke these properties like 
+    this:<br />
+    <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_comboboxSpellerHighlightUnderlineStyle_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;GuruComponents.Netrix.WebEditing.HighLighting.<span style="color: #2b91af">UnderlineStyle</span>&nbsp;style&nbsp;=&nbsp;(GuruComponents.Netrix.WebEditing.HighLighting.<span 
+        style="color: #2b91af">UnderlineStyle</span>)<span style="color: #2b91af">Enum</span>.Parse(<span 
+        style="color: blue">typeof</span>(GuruComponents.Netrix.WebEditing.HighLighting.<span 
+        style="color: #2b91af">UnderlineStyle</span>),&nbsp;_comboboxSpellerHighlightUnderlineStyle.StringValue);
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.SpellChecker.GetSpellChecker(EditorDocument.HtmlEditor).HighLightStyle.UnderlineStyle&nbsp;=&nbsp;style;
+}
+ 
+<span style="color: blue">void</span>&nbsp;_colorpickerSpellerHighlightColor_ExecuteEvent(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.SpellChecker.GetSpellChecker(EditorDocument.HtmlEditor).HighLightStyle.LineColor.ColorValue&nbsp;=&nbsp;_colorpickerSpellerHighlightColor.Color;
+}</pre>
+    One typical scenario is the usage of a context menu with suggestions. The 
+    following event handler creates a context menu with some static items and adds a 
+    list of suggestions:<br />
+    <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;speller1_WordOnContext(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;GuruComponents.Netrix.SpellChecker.<span 
+        style="color: #2b91af">WordOnContextEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;contextMenuTabPage.Items.Clear();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;Add&nbsp;Spellchecker&nbsp;suggestions</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(speller1.GetSpellChecker(htmlEditor1).BackgroundService)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;speller1.GetSpellChecker(htmlEditor1).Suggest(e.Word);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">List</span>&lt;<span style="color: blue">string</span>&gt;&nbsp;suggestions&nbsp;=&nbsp;speller1.GetSpellChecker(htmlEditor1).Suggestions;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(suggestions&nbsp;!=&nbsp;<span 
+        style="color: blue">null</span>&nbsp;&amp;&amp;&nbsp;suggestions.Count&nbsp;&gt;&nbsp;0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">foreach</span>&nbsp;(<span style="color: blue">string</span>&nbsp;suggestion&nbsp;<span 
+        style="color: blue">in</span>&nbsp;suggestions)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contextMenuTabPage.Items.Add(suggestion,&nbsp;<span style="color: blue">null</span>,&nbsp;(o,&nbsp;ea)&nbsp;=&gt;&nbsp;speller1.GetSpellChecker(htmlEditor1).ReplaceWord(suggestion));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">ToolStripItem</span>&nbsp;noSuggestion&nbsp;=&nbsp;contextMenuTabPage.Items.Add(<span 
+        style="color: #a31515">&quot;No&nbsp;Suggestions&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noSuggestion.Enabled&nbsp;=&nbsp;<span style="color: blue">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;</span><span 
+        class="style2">Show add desired position (Plug-in delivers the suggested position)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;contextMenuTabPage.Show(e.Position);
+}</pre>
+    You have to call the method <span class="style1">Suggest</span> first. You can 
+    retrieve all suggestions through the <span class="style1">Suggestions</span> 
+    property, then. The explicit call is necessary to avoid the creation of 
+    suggestions all the time, because it is time consuming.<p 
+        style="font-weight: 700">
+        Note: It&#39;s necessary to use the speller&#39;s context menu call, because the regular 
+        context menu event appears to early and the speller has not yet pulled out the 
+        current word. This is the reason why the speller has its own context menu event.
+    </p>
+    <h2>
+        Dialog Spell Checker</h2>
+    The dialog spellchecker is implemented as a number of events. There is no dialog 
+    integrated. You can use the dialog from demo application as a suggestion. The 
+    following code shows how the dialog interacts with the events:<br />
+    <pre style="font-family: consolas"><span style="color: green">//&nbsp;Dialog&nbsp;for&nbsp;word&nbsp;by&nbsp;word&nbsp;checking</span>
+<span style="color: blue">private</span>&nbsp;<span style="color: #2b91af">Spellchecker</span>&nbsp;SpellCheckerDialog;
+ 
+<span style="color: green">//&nbsp;Get&nbsp;an&nbsp;instance&nbsp;once&nbsp;required</span>
+<span style="color: blue">private</span>&nbsp;<span style="color: #2b91af">Spellchecker</span>&nbsp;GetSpellCheckerDialog()
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(SpellCheckerDialog&nbsp;==&nbsp;<span 
+        style="color: blue">null</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpellCheckerDialog&nbsp;=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+        style="color: #2b91af">Spellchecker</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpellCheckerDialog.TopMost&nbsp;=&nbsp;<span style="color: blue">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpellCheckerDialog.FormClosed&nbsp;+=&nbsp;<span style="color: blue">new</span>&nbsp;<span 
+        style="color: #2b91af">FormClosedEventHandler</span>(SpellCheckerDialog_FormClosed);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpellCheckerDialog.Show(<span style="color: blue">this</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;SpellCheckerDialog;
+}
+ 
+<span style="color: blue">void</span>&nbsp;SpellCheckerDialog_FormClosed(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">FormClosedEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;SpellCheckerDialog&nbsp;=&nbsp;<span style="color: blue">null</span>;
+}
+ 
+<span style="color: blue">void</span>&nbsp;speller1_DoubledWord(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;GuruComponents.Netrix.SpellChecker.NetSpell.<span 
+        style="color: #2b91af">SpellingEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;GetSpellCheckerDialog().WrongWord&nbsp;=&nbsp;e.Word;
+}
+ 
+<span style="color: blue">void</span>&nbsp;speller1_EndOfText(<span style="color: blue">object</span>&nbsp;sender,&nbsp;GuruComponents.Netrix.SpellChecker.NetSpell.<span 
+        style="color: #2b91af">SpellingEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">MessageBox</span>.Show(<span 
+        style="color: #a31515">&quot;Reached&nbsp;end&nbsp;of&nbsp;text.&quot;</span>,&nbsp;<span 
+        style="color: #a31515">&quot;Spellchecker&quot;</span>,&nbsp;<span style="color: #2b91af">MessageBoxButtons</span>.OK);
+}
+ 
+<span style="color: blue">void</span>&nbsp;speller1_MisspelledWord(<span 
+        style="color: blue">object</span>&nbsp;sender,&nbsp;GuruComponents.Netrix.SpellChecker.NetSpell.<span 
+        style="color: #2b91af">SpellingEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;GetSpellCheckerDialog().WrongWord&nbsp;=&nbsp;e.Word;
+}</pre>
+    <br />
+    <br />
+</body>
+</html>

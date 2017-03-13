@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuruComponents.Netrix.PlugIns.HelpLine.v40</name>
+    </assembly>
+    <members>
+        <member name="T:GuruComponents.Netrix.HelpLine.Events.HelplineMovedEventArgs">
+            <summary>
+            HelplineMovedEventArgs used on HelpLineMoved event. </summary><remarks>This informs
+            the handler about the final position the helpline has reached.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.Events.HelplineMovedEventArgs.FinalPosition">
+            <summary>
+            The Point where the final position of the helpline is.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.Events.HelplineMovedEventArgs.X">
+            <summary>
+            The X coordinate of the Point.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.Events.HelplineMovedEventArgs.Y">
+            <summary>
+            The Y coordinate of the Point.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.Events.HelpLineMoved">
+            <summary>
+            This event is fired after the helpline was moved. It can be used to update a position display.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.Events.HelpLineMoving">
+            <summary>
+            This event is fired during the helpline moving. It can be used to update a position display.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.HelpLine">
+            <summary>
+            Designer for HelpLine support.
+            </summary>
+            <remarks>
+            Checks for mouse over cross, moves and draws the
+            helpline. This designer may work if it is attached as behavior to body and as edit designer
+            to mshtml site. The host application may switch on/off the behavior but never removes the designer. 
+            <para>
+            Additional features available for helplines:
+            <list type="bullet">
+            <item>
+            <term>Snap helpline to grid (default: On)</term>
+            <description>You can define a (invisible) grid which the helpline snaps into. The grids default distance is 16 pixels.</description>
+            <term>Snap Elements to helpline (Default: On)</term>
+            <description>If the control is in 2D (absolute) position mode the elements can be snapped to the line. The magnetic zone is 4 pixels.</description>
+            <term>Change the Color and Width of the Pen (Default: Blue, width 1 pixel)</term>
+            <description>You can use a <see cref="T:System.Drawing.Pen">Pen</see> object to change the style of the lines.</description>
+            </item>
+            </list>
+            The helpline can be moved using the mouse either on the cross (changes x and y coordinates the same time) or on each
+            line (moves only x or y, respectively). During the move with the cross the mouse pointer becomes a hand and the Ctrl-Key
+            can be used to modify the behavior.
+            </para>
+            <para>
+            <b>Usage instructions:</b>
+            </para>
+            <para>
+            To use the helpline you must retrieve an instance of that class using the property
+            <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine">HelpLine</see>. The returned object can be changed
+            in any way. After changing must use the command 
+            <see cref="F:GuruComponents.Netrix.HelpLine.HelplineCommands.Activate">Activate</see> to make the lines visible.
+            The behavior can changed at any time. The object returned from <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine">HelpLine</see>
+            is always the same (singleton).
+            </para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.#ctor">
+            <summary>
+            Default Constructor supports design time behavior
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Ctor used from designer
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.OnHelpLineMoved(GuruComponents.Netrix.IHtmlEditor,System.Drawing.Point)">
+            <summary>
+            Method to fire the helpline moved event, if any handler is attached. This method
+            is called from the HelpLine designer host class if the user releases the mouse (mouse up)
+            and the HelpLine is fixed at the final position. The position is the EventArgs.
+            </summary>
+            <param name="htmlEditor"></param>
+            <param name="xy"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.OnHelpLineMoving(GuruComponents.Netrix.IHtmlEditor,System.Drawing.Point)">
+            <summary>
+            Method to fire the helpline moving event, if any handler is attached. This method
+            is called from the HelpLine designer host class if the user moves the mouse and HelpLine.
+            </summary>
+            <param name="htmlEditor"></param>
+            <param name="xy"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.GetHelpLine(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Support the extender infrastructure.
+            </summary>
+            <remarks>Should not be called directly from user code.</remarks>
+            <param name="htmlEditor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.SetHelpLine(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.HelpLine.HelpLineProperties)">
+            <summary>
+            Support the extender infrastructure.
+            </summary>
+            <remarks>Should not be called directly from user code.</remarks>
+            <param name="htmlEditor"></param>
+            <param name="Properties"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.RemoveBehavior(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Removes the current behavior for the specified editor.
+            </summary>
+            <param name="htmlEditor">The editor the helpline is attached to.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.ShouldSerializeHelpLine(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Ensures properties and returns <c>true</c>.
+            </summary>
+            <param name="htmlEditor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.CanExtend(System.Object)">
+            <summary>
+            Controls the behavior of the extender.
+            </summary>
+            <param name="extendee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.NotifyReadyStateCompleted(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            By calling this method the plugin gets notified that the control is ready.
+            </summary>
+            <remarks>Should not be called from user code.</remarks>
+            <param name="editor">Editor component reference.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.ToString">
+            <summary>
+            Supports propertsgrid.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.GetSupportedNamespaces(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Returns supported namespaces.
+            </summary>
+            <remarks>This Plugin does not supprt namespaces and hence this method always returns <c>null</c>.
+            </remarks>
+            <param name="key">Editor component reference.</param>
+            <returns>Always returns <c>null</c>.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLine.GetElementExtenders(GuruComponents.Netrix.WebEditing.Elements.IElement)">
+            <summary>
+            List of element types, which the extender plugin extends.
+            </summary>
+            <remarks>
+            See <see cref="T:GuruComponents.Netrix.PlugIns.CommandExtender">CommandExtender</see> for background information.
+            <para>
+            For this plugin the method always returns <c>null</c>.
+            </para>
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.HelpLine.HelpLine.HelpLineMoved">
+            <summary>
+            Fired if the mouse is released at the final position of the HelpLine.
+            </summary>
+            <remarks>
+            Normally this event is used to update an display which informs the user about the final position of the helpline.
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.HelpLine.HelpLine.HelpLineMoving">
+            <summary>
+            Fired during the helpline move at any mouse move step to update an display that shows the
+            current position of the HelpLine.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.Commands">
+            <summary>
+            Returns the available commands.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.Version">
+            <summary>
+            Current assembly version
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.Name">
+            <summary>
+            Name of Plug-in.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.IsExtenderProvider">
+            <summary>
+            Indicates whether this is an extender.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLine.GuruComponents#Netrix#PlugIns#IPlugIn#Features">
+            <summary>
+            Editor features.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.HelpLineBehavior">
+            <summary>
+            Edit designer for HelpLine support.
+            </summary>
+            <remarks>
+            Checks for mouse over cross, moves and draws the
+            helpline. This designer may work if it is attached as behavior to body and as edit designer
+            to mshtml site. The host application may switch on/off the behavior but never removes the designer. 
+            <para>
+            Additional features available for helplines:
+            <list type="bullet">
+            <item>
+            <term>Snap helpline to grid (default: On)</term>
+            <description>You can define a (invisible) grid which the helpline snaps into. The grids default distance is 16 pixels.</description>
+            <term>Snap Elements to helpline (Default: On)</term>
+            <description>If the control is in 2D (absolute) position mode the elements can be snapped to the line. The magnetic zone is 4 pixels.</description>
+            <term>Change the Color and Width of the Pen (Default: Blue, width 1 pixel)</term>
+            <description>You can use a <see cref="T:System.Drawing.Pen">Pen</see> object to change the style of the lines.</description>
+            </item>
+            </list>
+            The helpline can be moved using the mouse either on the cross (changes x and y coordinates the same time) or on each
+            line (moves only x or y, respectively). During the move with the cross the mouse pointer becomes a hand and the Ctrl-Key
+            can be used to modify the behavior.
+            </para>
+            <para>
+            <b>Usage instructions:</b>
+            </para>
+            <para>
+            To use the helpline you must retrieve an instance of that class using the property
+            <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine">HelpLine</see>. The returned object can be changed
+            in any way. After changing you must use the 
+            <see cref="F:GuruComponents.Netrix.HelpLine.HelplineCommands.Activate">Activate</see> command to make the lines visible.
+            The behavior can changed at any time. The object returned from <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine">HelpLine</see>
+            is always the same (singleton).
+            </para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineBehavior.#ctor(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.HelpLine.HelpLineProperties,GuruComponents.Netrix.HelpLine.HelpLine)">
+            <summary>
+            This constructor builds a new helpline object with given coordinates.
+            </summary>
+            <param name="host">The related control</param>
+            <param name="helpLine">Properties</param>
+            <param name="extender">Reference to editor component.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineBehavior.Draw(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Graphics)">
+            <summary>
+            The draw method used to draw to helpline.
+            </summary>
+            <remarks>
+            This method supports the NetRix infrastructure and cannot be called from user code.
+            </remarks>
+            <param name="leftBounds"></param>
+            <param name="topBounds"></param>
+            <param name="rightBounds"></param>
+            <param name="bottomBounds"></param>
+            <param name="gr">The graphics object the line is drawn into.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SetXY(System.Drawing.Point)">
+            <summary>
+            Sets an existing helpline to specific point.
+            </summary>
+            <param name="origin"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineBehavior.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks id a value is between to boundaries (including the boundary value).
+            </summary>
+            <param name="check">Value to check</param>
+            <param name="min">Lower boundary</param>
+            <param name="max">Upper boundary</param>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.Name">
+            <summary>
+            The name of the behavior. This value is used to distinguesh between behaviors and to remove 
+            a behavior later without touching other ones.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.PenStyle">
+            <summary>
+            Pen used to draw both lines.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapZone">
+            <summary>
+            Gets or sets the snap zone in which the helpline is magnetic. Defaults to 12 pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapOnResize">
+            <summary>
+            Gets or sets the snap on resize feature. If on the helpline will be magnetic during element resizing.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.LineXEnabled">
+            <summary>
+            Enables the X line. Default is On.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.LineYEnabled">
+            <summary>
+            Enables the Y line. Default is On.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.CrossEnabled">
+            <summary>
+            Enables the cross sign. Default is On.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.LineStyle">
+            <summary>
+            Sets the style used to draw the helpline and the border of the cross.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.LineVisible">
+            <summary>
+            Make the helpline temporarily invisble.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.X">
+            <summary>
+            Gets or sets the current X coordinate.
+            </summary>
+            <remarks>
+            Setting the point outside the area make the helpline invisible. The user cannot
+            move the helpline anymore. The host application should provide a technique to 
+            replace the helpline to a visible point.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.Y">
+            <summary>
+            Gets or sets the current Y coordinate.
+            </summary>
+            <remarks>
+            Setting the point outside the area make the helpline invisible. The user cannot
+            move the helpline anymore. The host application should provide a technique to 
+            replace the helpline to a visible point.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapEnabled">
+            <summary>
+            Gets or sets the snap function.
+            </summary>
+            <remarks>
+            If the Helpline snap feature is turned on the helpline jumps 
+            from point to point within a grid. The grid is defined with the
+            <see cref="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapGrid">SnapGrid</see> property.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapElements">
+            <summary>
+            Let elements snap to the current helpline during move or resize.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineBehavior.SnapGrid">
+            <summary>
+            Gets or sets the distance in pixels between a virtual grid.
+            </summary>
+            <remarks>
+            The grid is used to snap the helpline to fixed points. It should match
+            the visible grid, but can be set independently if required.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.HelplineCommands">
+            <summary>
+            HelplineCommands this extender provides.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelplineCommands.#ctor">
+            <summary>
+            Ctor for helpline commands class.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HelpLine.HelplineCommands.Activate">
+            <summary>
+            Command used to activate the helpline.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HelpLine.HelplineCommands.Deactivate">
+            <summary>
+            Command used to deactivate the helpline.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelplineCommands.CommandGroup">
+            <summary>
+            The identifier for the command group built to support the helpline's commands.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.HelpLineProperties">
+            <summary>
+            Properties for HelpLine Extender Provider.
+            </summary>
+            <remarks>
+            In code, you can set the properties that way:
+            <code>
+            // Prepare Properties
+            hp1.Active = true;
+            hp1.LineColor = Color.Blue;
+            hp1.CrossEnabled = false;
+            hp1.LineYEnabled = false;
+            hp1.LineXEnabled = false;
+            hp1.SnapElements = false;
+            hp1.SnapOnResize = false;
+            hp1.SnapEnabled = false;
+            hp1.X = (int)(210/25.4)*DPI;
+            // Create extender
+            this.helpLineA4 = new HelpLine(this.components);
+            // hook events (optional)
+            this.helpLineA4.HelpLineMoving += new HelpLineMoving(this.helpLineA4_HelpLineMoving);
+            this.helpLineA4.HelpLineMoved += new HelpLineMoved(this.helpLineA4_HelpLineMoved);
+            // Assign properties and editor
+            this.helpLineA4.SetHelpLine(this.htmlEditor, hp1);
+            // ... some more code
+            </code>
+            <para>
+            This way you have to create one <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine"/> object per line (in fact, it's a pair of line). This can be assigned
+            to one or more editor controls. This means, if you need four editors, each with two lines, you need to create exactly two
+            <see cref="T:GuruComponents.Netrix.HelpLine.HelpLine"/> extenders, assigned to each of the four editors. The extender can manage the properties for such an
+            multiple assignment.
+            </para>
+            <para>
+            Finally, you can change the properties on the fly. This needs access to the assigned properties. Therefore, you cannot
+            access the (in the example above) <c>h1</c> variable. Instead, you must retrieve the assigned version:
+            <code>
+            helpLineA4.GetHelpLine(htmlEditor).LineXEnabled = true;
+            </code>
+            You may also 'refresh' your local property object from extender:
+            <code>
+            h1 = helpLineA4.GetHelpLine(htmlEditor);
+            h1.LineColor = Color.Red;
+            // ... more properties
+            </code>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineProperties.#ctor">
+            <summary>
+            Ctor for properties.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.HelpLineProperties.ToString">
+            <summary>
+            Supports propertygrid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.Active">
+            <summary>
+            Current status of the event management.
+            </summary>
+            <remarks>
+            By default the helpline is active. If this property is set to <c>false</c> the control stops firing events and receiving mouse control.
+            The user is no longer able to move the helpline around. The helpline remains visible.
+            </remarks>
+            <seealso cref="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineVisible"/>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.X">
+            <summary>
+            Current X position in pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.Y">
+            <summary>
+            Current Y position in pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineColor">
+            <summary>
+            Color of help lines.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineWidth">
+            <summary>
+            Width of line in pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineDash">
+            <summary>
+            Dashstyle of line.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineVisible">
+            <summary>
+            Make the helpline temporarily invisible.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.SnapZone">
+            <summary>
+            Gets or sets the snap zone in which the helpline is magnetic. Defaults to 12 pixel.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.SnapOnResize">
+            <summary>
+            Gets or sets the snap on resize feature. If on the helpline will be magnetic during element resizing.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.SnapToGrid">
+            <summary>
+            Gets or sets the snap to grid feature. If on the helpline will be magnetic against a virtual grid.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineXEnabled">
+            <summary>
+            Enables the X line. Default is On.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.LineYEnabled">
+            <summary>
+            Enables the Y line. Default is On.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.CrossEnabled">
+            <summary>
+            Enables the cross sign. 
+            </summary>
+            <remarks>
+            Default is On, if both lines are visible, otherwise it's not visible.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.SnapElements">
+            <summary>
+            Let elements snap to the helpline.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HelpLine.HelpLineProperties.SnapGrid">
+            <summary>
+            Gets or sets the distance in pixels between the grid.
+            </summary>
+            <remarks>
+            The grid is used to snap the helpline to fixed points. It has no relation to the Grid property
+            exposed by the NetRix base control. However, it's recommended to set both, the virtual helpine grid and
+            the visible grid to the same distance for best user experience.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.HelpLine.Snap">
+            <summary>
+            Snap provides a static function to calculate the snap rectangle of current element depending on current helpline settings.
+            </summary>	
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.Snap.SnapRectToHelpLine(System.Drawing.Rectangle@,GuruComponents.Netrix.WebEditing.Behaviors.SnapZone,GuruComponents.Netrix.HelpLine.HelpLineProperties,System.Drawing.Point)">
+            <summary>
+            Calculate the snap position based on the given properties.
+            </summary>
+            <param name="rect">Snap position.</param>
+            <param name="pVar">Zone control.</param>
+            <param name="properties">Read properties that influence the calculation.</param>
+            <param name="scrollPos">Current scroll position used to correct the snap's position.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HelpLine.Snap.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Checks id a value is between to boundaries (including the boundary value).
+            </summary>
+            <param name="check">Value to check</param>
+            <param name="min">Lower boundary</param>
+            <param name="max">Upper boundary</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

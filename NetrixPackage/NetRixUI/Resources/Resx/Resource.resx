@@ -1,0 +1,1766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Attribute.href" xml:space="preserve">
+    <value>Anchor</value>
+  </data>
+  <data name="Attribute.name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Attribute.accessKey" xml:space="preserve">
+    <value>Access Key</value>
+  </data>
+  <data name="Attribute.id" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="Attribute.(id)" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="Attribute.class" xml:space="preserve">
+    <value>Style Class</value>
+  </data>
+  <data name="Attribute.style" xml:space="preserve">
+    <value>Inline Style</value>
+  </data>
+  <data name="Attribute.src" xml:space="preserve">
+    <value>Source File</value>
+  </data>
+  <data name="Attribute.width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="Attribute.height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="Exception.accesskey" xml:space="preserve">
+    <value>You can only assign one key (letter or number) here.</value>
+  </data>
+  <data name="Attribute.disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Attribute.hideFocus" xml:space="preserve">
+    <value>Hide Focus</value>
+  </data>
+  <data name="Description.hideFocus" xml:space="preserve">
+    <value>Specifies whether to hide the focus rectangle when this object is selected</value>
+  </data>
+  <data name="Description.disabled" xml:space="preserve">
+    <value>True if the field is disabled</value>
+  </data>
+  <data name="Description.accesskey" xml:space="preserve">
+    <value>The shortcut key for this object</value>
+  </data>
+  <data name="Attribute.ScriptOnFocus" xml:space="preserve">
+    <value>On Focus</value>
+  </data>
+  <data name="Description.ScriptOnFocus" xml:space="preserve">
+    <value>Event raised when this object is selected</value>
+  </data>
+  <data name="Description.ScriptOnKeyPress" xml:space="preserve">
+    <value>Event raised after the user types a character while this object is selected</value>
+  </data>
+  <data name="Attribute.ScriptOnKeyPress" xml:space="preserve">
+    <value>On Key Pressed</value>
+  </data>
+  <data name="Description.tabIndex" xml:space="preserve">
+    <value>The tab index for this object</value>
+  </data>
+  <data name="Attribute.tabIndex" xml:space="preserve">
+    <value>Tabulator Index</value>
+  </data>
+  <data name="Attribute.ScriptOnClick" xml:space="preserve">
+    <value>On Click</value>
+  </data>
+  <data name="Description.ScriptOnClick" xml:space="preserve">
+    <value>Event raised when the user clicks on this object</value>
+  </data>
+  <data name="Attribute.ScriptOnMouseOver" xml:space="preserve">
+    <value>On Mouse Over</value>
+  </data>
+  <data name="Description.ScriptOnMouseOver" xml:space="preserve">
+    <value>Event raised when the mouse pointer enters the area over this object</value>
+  </data>
+  <data name="Attribute.ScriptOnMouseOut" xml:space="preserve">
+    <value>On Mouse Out</value>
+  </data>
+  <data name="Description.ScriptOnMouseOut" xml:space="preserve">
+    <value>Event raised when the mouse pointer leaves the area over this object</value>
+  </data>
+  <data name="Attribute.title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Description.title" xml:space="preserve">
+    <value>The title of the object, which is used as its 'ToolTip' description</value>
+  </data>
+  <data name="Description.title_Acronym" xml:space="preserve">
+    <value>The text this acronym is for</value>
+  </data>
+  <data name="Description.href" xml:space="preserve">
+    <value>The URL to which this anchor links</value>
+  </data>
+  <data name="Description.name" xml:space="preserve">
+    <value>The name of the anchor as target of relative links</value>
+  </data>
+  <data name="Description.ScriptOnMouseUp" xml:space="preserve">
+    <value>Event raised when a mouse click ends over this object</value>
+  </data>
+  <data name="Attribute.ScriptOnMouseUp" xml:space="preserve">
+    <value>On Mouse Up</value>
+  </data>
+  <data name="Attribute.target" xml:space="preserve">
+    <value>Target Frame</value>
+  </data>
+  <data name="Description.target" xml:space="preserve">
+    <value>The target of this link</value>
+  </data>
+  <data name="Attribute.nohref" xml:space="preserve">
+    <value>Alternative Anchor</value>
+  </data>
+  <data name="Description.nohref" xml:space="preserve">
+    <value>Defines an non sensitive area in the image map</value>
+  </data>
+  <data name="Attribute.ScriptOnFocus_Area" xml:space="preserve">
+    <value>On Focus</value>
+  </data>
+  <data name="Description.ScriptOnFocus_Area" xml:space="preserve">
+    <value>Fired if this area gets the focus (becomes active).</value>
+  </data>
+  <data name="Description.ScriptOnBlur_Area" xml:space="preserve">
+    <value>Fired if this area loses the focus (becomes inactive).</value>
+  </data>
+  <data name="Attribute.ScriptOnBlur_Area" xml:space="preserve">
+    <value>On Blur</value>
+  </data>
+  <data name="Attribute.alt" xml:space="preserve">
+    <value>Alternative Text</value>
+  </data>
+  <data name="Description.alt" xml:space="preserve">
+    <value>The text appears when the underlaying image is not visible. The same text appears in a popup bubble if the mouse stops over the area.</value>
+  </data>
+  <data name="Attribute.coords" xml:space="preserve">
+    <value>Coordinates of the specific area</value>
+  </data>
+  <data name="Description.coords" xml:space="preserve">
+    <value>List of XY coordinates which define the polygon of the area. Rectangle: left-x, top-y, right-x, bottom-y. Circle: center-x, center-y, radius. Note. When the radius value is a percentage value, user agents should calculate the final radius value based on the associated object's width and height. The radius should be the smaller value of the two. Polygon: x1, y1, x2, y2, ..., xN, yN. The first x and y coordinate pair and the last should be the same to close the polygon. When these coordinate values are not the same, user agents should infer an additional coordinate pair to close the polygon.</value>
+  </data>
+  <data name="Attribute.shape" xml:space="preserve">
+    <value>Shape of Area</value>
+  </data>
+  <data name="Description.shape" xml:space="preserve">
+    <value>List of XY coordinates which define the polygon of the area. Default: Specifies the entire region. Rectangle: Define a rectangular region. Circle: Define a circular region. Polygon: Define a polygonal region</value>
+  </data>
+  <data name="Attribute.color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Description.color" xml:space="preserve">
+    <value>The fore color of the element</value>
+  </data>
+  <data name="Attribute.face" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+  <data name="Description.face" xml:space="preserve">
+    <value>Comma separated list of fonts. The browser will display the first font in the list which is present on the users system.</value>
+  </data>
+  <data name="Attribute.size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Description.size" xml:space="preserve">
+    <value>Size of the element in font units</value>
+  </data>
+  <data name="Attribute.ScriptOnSubmit" xml:space="preserve">
+    <value>On Submit Button</value>
+  </data>
+  <data name="Description.ScriptOnSubmit" xml:space="preserve">
+    <value>Event raised when the data from this form is submitted</value>
+  </data>
+  <data name="Attribute.ScriptOnReset" xml:space="preserve">
+    <value>On Reset Button</value>
+  </data>
+  <data name="Description.ScriptOnReset" xml:space="preserve">
+    <value>Event raised when the data on this form is reset back to its initial state.</value>
+  </data>
+  <data name="Description.name_Form" xml:space="preserve">
+    <value>The name of the form for usage in scripting environments.</value>
+  </data>
+  <data name="Attribute.frameBorder" xml:space="preserve">
+    <value>Border around Frame</value>
+  </data>
+  <data name="Description.frameBorder" xml:space="preserve">
+    <value>Specifies whether to draw a border around the frame</value>
+  </data>
+  <data name="Attribute.noResize" xml:space="preserve">
+    <value>No Resizable</value>
+  </data>
+  <data name="Description.noResize" xml:space="preserve">
+    <value>Indicates whether the user can resize the frame with the mouse</value>
+  </data>
+  <data name="Attribute.Scrolling" xml:space="preserve">
+    <value>Scrolling</value>
+  </data>
+  <data name="Description.Scrolling" xml:space="preserve">
+    <value>Defines the appearance of scrollbars around the frame</value>
+  </data>
+  <data name="Attribute.marginHeight" xml:space="preserve">
+    <value>Top/Bottom Margin</value>
+  </data>
+  <data name="Description.marginHeight" xml:space="preserve">
+    <value>The size of the top and bottom margins</value>
+  </data>
+  <data name="Attribute.marginWidth" xml:space="preserve">
+    <value>Left/Right Margin</value>
+  </data>
+  <data name="Description.marginWidth" xml:space="preserve">
+    <value>The size of the left and right margins</value>
+  </data>
+  <data name="Attribute.name_Frame" xml:space="preserve">
+    <value>Frame Name</value>
+  </data>
+  <data name="Description.name_Frame" xml:space="preserve">
+    <value>The name of the frame. Used as name for hyperlink target Attributes.</value>
+  </data>
+  <data name="Attribute.ScriptOnActivate" xml:space="preserve">
+    <value>On Activate</value>
+  </data>
+  <data name="Description.ScriptOnActivate" xml:space="preserve">
+    <value>Event raised when the frame becomes the active object on the page</value>
+  </data>
+  <data name="Description.ScriptOnDeactivate" xml:space="preserve">
+    <value>Event raised when the frame is no longer the active object on the page</value>
+  </data>
+  <data name="Attribute.ScriptOnDeactivate" xml:space="preserve">
+    <value>On Deactivate</value>
+  </data>
+  <data name="Attribute.ScriptOnLoad" xml:space="preserve">
+    <value>On Load</value>
+  </data>
+  <data name="Description.ScriptOnLoad" xml:space="preserve">
+    <value>Event raised after the frame has been loaded</value>
+  </data>
+  <data name="Attribute.ScriptOnScroll" xml:space="preserve">
+    <value>On Scroll</value>
+  </data>
+  <data name="Description.ScriptOnScroll" xml:space="preserve">
+    <value>Event raised when the user changes the scrolling position of this object</value>
+  </data>
+  <data name="Attribute.align" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="Description.align" xml:space="preserve">
+    <value>The alignment of the block element</value>
+  </data>
+  <data name="Attribute.noshade" xml:space="preserve">
+    <value>No Shading</value>
+  </data>
+  <data name="Description.noshade" xml:space="preserve">
+    <value>Specifies whether to draw the horizontal rule with 3-D shading</value>
+  </data>
+  <data name="Attribute.size_Hr" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="Description.size_Hr" xml:space="preserve">
+    <value>The thickness of this horizontal rule</value>
+  </data>
+  <data name="Attribute.charset" xml:space="preserve">
+    <value>Character Set</value>
+  </data>
+  <data name="Description.charset" xml:space="preserve">
+    <value>Charset of linked document</value>
+  </data>
+  <data name="Attribute.media" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="Description.media" xml:space="preserve">
+    <value>Target media the linked document needs</value>
+  </data>
+  <data name="Attribute.rel" xml:space="preserve">
+    <value>Relation</value>
+  </data>
+  <data name="Description.rel" xml:space="preserve">
+    <value>Relation to target. Typical values are: 'stylesheet', 'next', 'prev', 'index'.</value>
+  </data>
+  <data name="Attribute.rev" xml:space="preserve">
+    <value>Reference</value>
+  </data>
+  <data name="Description.rev" xml:space="preserve">
+    <value>Reference back from target document</value>
+  </data>
+  <data name="Attribute.type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Description.type" xml:space="preserve">
+    <value>Type of linked document as MIME code. Use 'text/css' for stylesheets.</value>
+  </data>
+  <data name="Attribute.type_Ol" xml:space="preserve">
+    <value>Listtype</value>
+  </data>
+  <data name="Description.type_Ol" xml:space="preserve">
+    <value>The type of numerals to display in an ordered list</value>
+  </data>
+  <data name="Attribute.type_Ul" mimetype="	">
+    <value>Listtype</value>
+  </data>
+  <data name="Description.type_Ul" xml:space="preserve">
+    <value>The type of bullets to use in an unordered list or numbering scheme in an ordered list</value>
+  </data>
+  <data name="Attribute.type_Script" xml:space="preserve">
+    <value>MIME Type</value>
+  </data>
+  <data name="Description.type_Script" xml:space="preserve">
+    <value>The MIME type of the content, e.g. 'text/javascript'. Optional. Overwrites the 'language' attribute.</value>
+  </data>
+  <data name="Attribute.language" xml:space="preserve">
+    <value>Script Language</value>
+  </data>
+  <data name="Description.language" xml:space="preserve">
+    <value>The scripting language which describes the content, e.g. 'JavaScript' or 'VBScript'.</value>
+  </data>
+  <data name="Attribute.ScriptContent" xml:space="preserve">
+    <value>Script Content</value>
+  </data>
+  <data name="Description.ScriptContent" xml:space="preserve">
+    <value>The script content. Click on the ellipses to start the integrated script editor.</value>
+  </data>
+  <data name="Attribute.noWrap" xml:space="preserve">
+    <value>Supress Wrapping</value>
+  </data>
+  <data name="Description.noWrap" xml:space="preserve">
+    <value>Specifies whether long lines of text should be wrapped.</value>
+  </data>
+  <data name="Attribute.clear" xml:space="preserve">
+    <value>Clear Site</value>
+  </data>
+  <data name="Description.clear" xml:space="preserve">
+    <value>The text floating behavior around the break</value>
+  </data>
+  <data name="Attribute.vSpace" xml:space="preserve">
+    <value>Vertical Space</value>
+  </data>
+  <data name="Description.vSpace" xml:space="preserve">
+    <value>Vertical space or padding (top and bottom) around the image</value>
+  </data>
+  <data name="Attribute.hSpace" xml:space="preserve">
+    <value>Horizontal Space</value>
+  </data>
+  <data name="Description.hSpace" xml:space="preserve">
+    <value>Horizontal space or padding (left and right) around the image</value>
+  </data>
+  <data name="StyleEditor.fontPickerFont.Title" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+  <data name="StyleEditor.groupbox3.Text" xml:space="preserve">
+    <value>Font Styles</value>
+  </data>
+  <data name="StyleEditor.label3.Text" xml:space="preserve">
+    <value>Letter Transformation</value>
+  </data>
+  <data name="StyleEditor.label2.Text" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" xml:space="preserve">
+    <value>Small Caps</value>
+  </data>
+  <data name="StyleEditor.checkBoxFontStyleItalic.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="StyleEditor.groupBox2.Text" xml:space="preserve">
+    <value>Font Attributes</value>
+  </data>
+  <data name="StyleEditor.label36.Text" xml:space="preserve">
+    <value>Specific or generic font size:</value>
+  </data>
+  <data name="StyleEditor.radioButtonFontSizeAbsolute.Text" xml:space="preserve">
+    <value>Size Name:</value>
+  </data>
+  <data name="StyleEditor.radioButtonFontSizeUnit.Text" xml:space="preserve">
+    <value>Specific size:</value>
+  </data>
+  <data name="StyleEditor.label1.Text" xml:space="preserve">
+    <value>Text Color</value>
+  </data>
+  <data name="StyleEditor.groupBox1.Text" xml:space="preserve">
+    <value>Font Family</value>
+  </data>
+  <data name="StyleEditor.label50.Text" xml:space="preserve">
+    <value>Can be any number of fonts or generic fonts. The browser takes the first local available font from the list.</value>
+  </data>
+  <data name="StyleEditor.label49.Text" xml:space="preserve">
+    <value>Font Family List</value>
+  </data>
+  <data name="StyleEditor.label52.Text" xml:space="preserve">
+    <value>In Association with the container element</value>
+  </data>
+  <data name="StyleEditor.groupBox5.Text" xml:space="preserve">
+    <value>Background Image</value>
+  </data>
+  <data name="Attribute.HttpEquiv" xml:space="preserve">
+    <value>HTTP Equiv</value>
+  </data>
+  <data name="Description.HttpEquiv" xml:space="preserve">
+    <value>Determines that this tag creates an HTTP header.</value>
+  </data>
+  <data name="Attribute.name_Meta" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Description.name_Meta" xml:space="preserve">
+    <value>The name attribute of the META tag</value>
+  </data>
+  <data name="Attribute.Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Description.Content" xml:space="preserve">
+    <value>The content, the meaning is determined by the Name or HttpEquiv tag.</value>
+  </data>
+  <data name="StyleEditor.label9.Text" xml:space="preserve">
+    <value>How to position the image?</value>
+  </data>
+  <data name="StyleEditor.label8.Text" xml:space="preserve">
+    <value>Vertical:</value>
+  </data>
+  <data name="StyleEditor.label7.Text" xml:space="preserve">
+    <value>Horizontal:</value>
+  </data>
+  <data name="StyleEditor.label6.Text" xml:space="preserve">
+    <value>Fixing</value>
+  </data>
+  <data name="StyleEditor.label5.Text" xml:space="preserve">
+    <value>Tile</value>
+  </data>
+  <data name="StyleEditor.label4.Text" xml:space="preserve">
+    <value>Select Image from disk:</value>
+  </data>
+  <data name="StyleEditor.buttonBackgroundImage.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="StyleEditor.groupBox4.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="StyleEditor.label27.Text" xml:space="preserve">
+    <value>Background Color:</value>
+  </data>
+  <data name="StyleEditor.checkBox6.Text" xml:space="preserve">
+    <value>Transparency</value>
+  </data>
+  <data name="StyleEditor.groupBox18.Text" xml:space="preserve">
+    <value>Margin, Padding, and Border Style</value>
+  </data>
+  <data name="StyleEditor.label56.Text" xml:space="preserve">
+    <value>Padding</value>
+  </data>
+  <data name="StyleEditor.label55.Text" xml:space="preserve">
+    <value>Border Width</value>
+  </data>
+  <data name="StyleEditor.label54.Text" xml:space="preserve">
+    <value>Border Style</value>
+  </data>
+  <data name="StyleEditor.label53.Text" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="StyleEditor.label17.Text" xml:space="preserve">
+    <value>Margin</value>
+  </data>
+  <data name="StyleEditor.groupBox13.Text" xml:space="preserve">
+    <value>Top Borders</value>
+  </data>
+  <data name="StyleEditor.groupBox25.Text" xml:space="preserve">
+    <value>All Borders</value>
+  </data>
+  <data name="StyleEditor.groupBox24.Text" xml:space="preserve">
+    <value>Left Border</value>
+  </data>
+  <data name="StyleEditor.groupBox17.Text" xml:space="preserve">
+    <value>Right Border</value>
+  </data>
+  <data name="StyleEditor.groupBox12.Text" xml:space="preserve">
+    <value>Bottom Border</value>
+  </data>
+  <data name="StyleEditor.tabPageAll.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="StyleEditor.tabPageLeft.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="StyleEditor.tabPageRight.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="StyleEditor.tabPageTop.Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="StyleEditor.tabPageBottom.Text" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="StyleEditor.groupBox21.Text" xml:space="preserve">
+    <value>Text Decoration</value>
+  </data>
+  <data name="StyleEditor.label67.Text" xml:space="preserve">
+    <value>Determines how text is displayed in addition to font characteristics.</value>
+  </data>
+  <data name="StyleEditor.groupBox8.Text" xml:space="preserve">
+    <value>Direction and Indentation</value>
+  </data>
+  <data name="StyleEditor.label68.Text" xml:space="preserve">
+    <value>Determine how text inside a block is aligned</value>
+  </data>
+  <data name="StyleEditor.label29.Text" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="StyleEditor.radioButtonDirectionRemove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="StyleEditor.label51.Text" xml:space="preserve">
+    <value>Block Indentation:</value>
+  </data>
+  <data name="StyleEditor.radioButtonDirectionRtl.Text" xml:space="preserve">
+    <value>right to left</value>
+  </data>
+  <data name="StyleEditor.radioButtonDirectionLtr.Text" xml:space="preserve">
+    <value>left to right</value>
+  </data>
+  <data name="StyleEditor.groupBox7.Text" xml:space="preserve">
+    <value>Line and Character Space</value>
+  </data>
+  <data name="StyleEditor.label66.Text" xml:space="preserve">
+    <value>These options determine how floating text is displayed. The result depends on the coosen font.</value>
+  </data>
+  <data name="StyleEditor.label37.Text" xml:space="preserve">
+    <value>Words:</value>
+  </data>
+  <data name="StyleEditor.label11.Text" xml:space="preserve">
+    <value>Line Height:</value>
+  </data>
+  <data name="StyleEditor.label12.Text" xml:space="preserve">
+    <value>Characters:</value>
+  </data>
+  <data name="StyleEditor.groupBox6.Text" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="StyleEditor.groupBox19.Text" xml:space="preserve">
+    <value>Horizontal Alignment</value>
+  </data>
+  <data name="StyleEditor.radioButtonTextAlignDisable.Text" xml:space="preserve">
+    <value>Remove Option from Sheet</value>
+  </data>
+  <data name="StyleEditor.radioButtonTextAlignJustify.Text" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="StyleEditor.radioButtonTextAlignLeft.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="StyleEditor.radioButtonTextAlignCenter.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StyleEditor.radioButtonTextAlignRight.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="StyleEditor.label10.Text" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="StyleEditor.groupBox20.Text" xml:space="preserve">
+    <value>Vertical Alignment</value>
+  </data>
+  <data name="StyleEditor.label65.Text" xml:space="preserve">
+    <value>Determine how the element is align vertically. This is commonly used in tables and boxes.</value>
+  </data>
+  <data name="StyleEditor.groupBox10.Text" xml:space="preserve">
+    <value>Text Floating Options</value>
+  </data>
+  <data name="StyleEditor.label48.Text" xml:space="preserve">
+    <value>Linebreak Handling</value>
+  </data>
+  <data name="StyleEditor.label47.Text" xml:space="preserve">
+    <value>Overflow</value>
+  </data>
+  <data name="StyleEditor.label45.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="StyleEditor.groupBox9.Text" xml:space="preserve">
+    <value>Position Mode of an Object</value>
+  </data>
+  <data name="StyleEditor.radioButtonPositionRemove.Text" xml:space="preserve">
+    <value>Remove option from sheet</value>
+  </data>
+  <data name="StyleEditor.label16.Text" xml:space="preserve">
+    <value>From left border:</value>
+  </data>
+  <data name="StyleEditor.label15.Text" xml:space="preserve">
+    <value>From top border</value>
+  </data>
+  <data name="StyleEditor.label14.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="StyleEditor.label13.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="StyleEditor.radioButtonPositionAbsolute.Text" xml:space="preserve">
+    <value>Absolute</value>
+  </data>
+  <data name="StyleEditor.radioButtonPositionRelative.Text" xml:space="preserve">
+    <value>Text Floating</value>
+  </data>
+  <data name="StyleEditor.radioButtonPositionFixed.Text" xml:space="preserve">
+    <value>Relative non floating</value>
+  </data>
+  <data name="StyleEditor.radioButtonPositionNone.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="StyleEditor.groupBox14.Text" xml:space="preserve">
+    <value>Define List Item Appearance</value>
+  </data>
+  <data name="StyleEditor.label69.Text" xml:space="preserve">
+    <value>These options determine the appearance of unordered lists.  The final result depends also from written text, font and spacing characteristics.</value>
+  </data>
+  <data name="StyleEditor.buttonListStyleImage.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="StyleEditor.label22.Text" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="StyleEditor.label23.Text" xml:space="preserve">
+    <value>Select Image from disk:</value>
+  </data>
+  <data name="StyleEditor.radioButtonListBulletImage.Text" xml:space="preserve">
+    <value>With user specific bullet (choose image):</value>
+  </data>
+  <data name="StyleEditor.textBoxListStyleImage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StyleEditor.label21.Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="StyleEditor.radioButtonListBulletStyle.Text" xml:space="preserve">
+    <value>With standard bullets (choose style and position):</value>
+  </data>
+  <data name="StyleEditor.radioButtonListBulletNone.Text" xml:space="preserve">
+    <value>Without bullets</value>
+  </data>
+  <data name="StyleEditor.groupBox23.Text" xml:space="preserve">
+    <value>Columns and Rules</value>
+  </data>
+  <data name="StyleEditor.label42.Text" xml:space="preserve">
+    <value>Rule Width:</value>
+  </data>
+  <data name="StyleEditor.label41.Text" xml:space="preserve">
+    <value>Rule Style</value>
+  </data>
+  <data name="StyleEditor.label40.Text" xml:space="preserve">
+    <value>Rule Color</value>
+  </data>
+  <data name="StyleEditor.label39.Text" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="StyleEditor.groupBox16.Text" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="StyleEditor.label44.Text" xml:space="preserve">
+    <value>Row Span</value>
+  </data>
+  <data name="StyleEditor.label43.Text" xml:space="preserve">
+    <value>Column Span</value>
+  </data>
+  <data name="StyleEditor.label38.Text" xml:space="preserve">
+    <value>Caption Position</value>
+  </data>
+  <data name="StyleEditor.linkLabel1.Text" xml:space="preserve">
+    <value>Click here to set</value>
+  </data>
+  <data name="StyleEditor.label71.Text" xml:space="preserve">
+    <value>Height and Width is choosen on Position Tab:</value>
+  </data>
+  <data name="StyleEditor.tabPageFonts.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="StyleEditor.tabPageBackground.Text" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="StyleEditor.tabPageBorders.Text" xml:space="preserve">
+    <value>Borders</value>
+  </data>
+  <data name="StyleEditor.tabPageLayout.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="StyleEditor.tabPagePosition.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="StyleEditor.tabPageLists.Text" xml:space="preserve">
+    <value>Lists</value>
+  </data>
+  <data name="StyleEditor.tabPageTables.Text" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="StyleEditor.tabPageMisc.Text" xml:space="preserve">
+    <value>Miscellenous</value>
+  </data>
+  <data name="StyleEditor.groupBox15.Text" xml:space="preserve">
+    <value>User Interface</value>
+  </data>
+  <data name="StyleEditor.label70.Text" xml:space="preserve">
+    <value>Cursor and Scrollbar options are currently not available for browser other then Internet Explorer.</value>
+  </data>
+  <data name="StyleEditor.label64.Text" xml:space="preserve">
+    <value>Track</value>
+  </data>
+  <data name="StyleEditor.label63.Text" xml:space="preserve">
+    <value>3D light</value>
+  </data>
+  <data name="StyleEditor.label62.Text" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="StyleEditor.label61.Text" xml:space="preserve">
+    <value>Darkshadow</value>
+  </data>
+  <data name="StyleEditor.label60.Text" xml:space="preserve">
+    <value>Shadow</value>
+  </data>
+  <data name="StyleEditor.label59.Text" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="StyleEditor.label26.Text" xml:space="preserve">
+    <value>Face</value>
+  </data>
+  <data name="StyleEditor.label25.Text" xml:space="preserve">
+    <value>Colors of Scrollbar elements:</value>
+  </data>
+  <data name="StyleEditor.label24.Text" xml:space="preserve">
+    <value>Cursor:</value>
+  </data>
+  <data name="StyleEditor.comboBoxCursor.Text" xml:space="preserve">
+    <value>cursor</value>
+  </data>
+  <data name="StyleEditor.label58.Text" xml:space="preserve">
+    <value>Arrow</value>
+  </data>
+  <data name="StyleEditor.groupBox22.Text" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="StyleEditor.radioButtonVisiblityRemove.Text" xml:space="preserve">
+    <value>Remove option from sheet</value>
+  </data>
+  <data name="StyleEditor.radioButtonVisibilityNone.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="StyleEditor.radioButtonVisibilityHidden.Text" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="StyleEditor.radioButtonVisibilityVisible.Text" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="StyleEditor.label31.Text" xml:space="preserve">
+    <value>If element set as unvisible (Visiblity = Hidden) it's necessary to change the behavior with scripting to show it later. If no scripting capabilites used set to 'None' or 'Remove'.</value>
+  </data>
+  <data name="StyleEditor.button1.Text" xml:space="preserve">
+    <value>Synchronize left, right, and bottom values with top. </value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonNo.Text" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonCont.Text" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ColorPanelUserControl.groupBox2.Text" xml:space="preserve">
+    <value>Sort Options</value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonBrightness.Text" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonDistance.Text" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ColorPanelUserControl.radioButtonSaturation.Text" xml:space="preserve">
+    <value>Saturational</value>
+  </data>
+  <data name="ColorPanelUserControl.buttonWeb.Text" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="ColorPanelUserControl.buttonCustom.Text" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="ColorPanelUserControl.buttonSystem.Text" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="ColorPanelUserControl.label1.Text" xml:space="preserve">
+    <value>Hit ESC to cancel</value>
+  </data>
+  <data name="ColorPanelUserControl.buttonNoColor.Text" xml:space="preserve">
+    <value>No Color</value>
+  </data>
+  <data name="MetaCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Select a META tag to edit:</value>
+  </data>
+  <data name="AreaCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Select a AREA tag to edit:</value>
+  </data>
+  <data name="ScriptCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Select a script block to edit:</value>
+  </data>
+  <data name="StylesheetCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Select a linked stylesheet tag to edit:</value>
+  </data>
+  <data name="MetaCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="StylesheetCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ScriptCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="AreaCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="MetaCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ScriptCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="StylesheetCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AreaCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UnitEditor.radioButtonPercent.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="UnitEditor.radioButtonPixel.Text" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="UnitEditor.radioButtonOff.Text" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Description.aLink" xml:space="preserve">
+    <value>The color of active links on this page</value>
+  </data>
+  <data name="Description.bgProperties" xml:space="preserve">
+    <value>Specifies whether the background image is fixed or should scroll</value>
+  </data>
+  <data name="Description.backGround" xml:space="preserve">
+    <value>The URL of background image used on this page</value>
+  </data>
+  <data name="Description.bgColor" xml:space="preserve">
+    <value>The color of the page background</value>
+  </data>
+  <data name="Description.bottomMargin" xml:space="preserve">
+    <value>The size in pixels of the bottom margin</value>
+  </data>
+  <data name="Description.leftMargin" xml:space="preserve">
+    <value>The size in pixels of the left margin</value>
+  </data>
+  <data name="Description.link" xml:space="preserve">
+    <value>The color of links on the page</value>
+  </data>
+  <data name="Description.rightMargin" xml:space="preserve">
+    <value>The size in pixels of the right margin</value>
+  </data>
+  <data name="Description.scroll" xml:space="preserve">
+    <value>Indicates whether to display scroll bars</value>
+  </data>
+  <data name="Description.text" xml:space="preserve">
+    <value>The foreground color of text on this page</value>
+  </data>
+  <data name="Description.topMargin" xml:space="preserve">
+    <value>The size in pixels of this page's top margin</value>
+  </data>
+  <data name="Description.vLink" xml:space="preserve">
+    <value>The color of visited links on this page</value>
+  </data>
+  <data name="Attribute.aLink" xml:space="preserve">
+    <value>Active Link Color</value>
+  </data>
+  <data name="Attribute.bgProperties" xml:space="preserve">
+    <value>Background Property</value>
+  </data>
+  <data name="Attribute.background" xml:space="preserve">
+    <value>Background Image</value>
+  </data>
+  <data name="Attribute.bgColor" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="Attribute.bottomMargin" xml:space="preserve">
+    <value>Bottom margin</value>
+  </data>
+  <data name="Attribute.leftMargin" xml:space="preserve">
+    <value>Left margin</value>
+  </data>
+  <data name="Attribute.link" xml:space="preserve">
+    <value>Link Color</value>
+  </data>
+  <data name="Attribute.rightMargin" xml:space="preserve">
+    <value>Right margin</value>
+  </data>
+  <data name="Attribute.scroll" xml:space="preserve">
+    <value>Scroll bars</value>
+  </data>
+  <data name="Attribute.text" xml:space="preserve">
+    <value>Text Color</value>
+  </data>
+  <data name="Attribute.topMargin" xml:space="preserve">
+    <value>Top margin</value>
+  </data>
+  <data name="Attribute.vLink" xml:space="preserve">
+    <value>Visited link color</value>
+  </data>
+  <data name="Description.ScriptBlocks" xml:space="preserve">
+    <value>Access to the script block editor</value>
+  </data>
+  <data name="Attribute.ScriptBlocks" xml:space="preserve">
+    <value>Script Blocks</value>
+  </data>
+  <data name="Description.NamedMetaTags" xml:space="preserve">
+    <value>Edit standard META tags in the editor</value>
+  </data>
+  <data name="Attribute.NamedMetaTags" xml:space="preserve">
+    <value>META name</value>
+  </data>
+  <data name="Description.HttpEquivMetaTags" xml:space="preserve">
+    <value>Edit standard META tags in the editor</value>
+  </data>
+  <data name="Attribute.HttpEquivMetaTags" xml:space="preserve">
+    <value>META httpEquiv</value>
+  </data>
+  <data name="Description.LinkedStylesheets" xml:space="preserve">
+    <value>Edit links to linked style documents</value>
+  </data>
+  <data name="Attribute.LinkedStylesheets" xml:space="preserve">
+    <value>Linked Stylesheets</value>
+  </data>
+  <data name="Description.Title_Body" xml:space="preserve">
+    <value>The title identifies the contents of the document and is displayed in the header bar of the window. Important for search engines.
+</value>
+  </data>
+  <data name="Attribute.Title_Body" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Description.URL" xml:space="preserve">
+    <value>The URL or path the document was loaded from</value>
+  </data>
+  <data name="Attribute.URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="Description.LoadTime56K" xml:space="preserve">
+    <value>Average time to load the document with 56K Modem. Informational.</value>
+  </data>
+  <data name="Attribute.LoadTime56K" xml:space="preserve">
+    <value>Load Time (56K)</value>
+  </data>
+  <data name="Description.FileSize" xml:space="preserve">
+    <value>Current size of the file in bytes</value>
+  </data>
+  <data name="Attribute.FileSize" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="Description.FileLastModified" xml:space="preserve">
+    <value>Timestamp when the document was last modified</value>
+  </data>
+  <data name="Attribute.FileLastModified" xml:space="preserve">
+    <value>Last Modified</value>
+  </data>
+  <data name="Description.NumberOfFrames" xml:space="preserve">
+    <value>Absolute number of frames, regardless the structure the lay on.</value>
+  </data>
+  <data name="Attribute.NumberOfFrames" xml:space="preserve">
+    <value>Number Of Frames</value>
+  </data>
+  <data name="Description.NumberOfStylesheets" xml:space="preserve">
+    <value>Number of linked stylesheets</value>
+  </data>
+  <data name="Attribute.NumberOfStylesheets" xml:space="preserve">
+    <value>Number of Stylesheets</value>
+  </data>
+  <data name="Description.NumberOfImages" xml:space="preserve">
+    <value>Number of Images within the document.</value>
+  </data>
+  <data name="Attribute.NumberOfImages" xml:space="preserve">
+    <value>Number of images</value>
+  </data>
+  <data name="Description.NumberOfScriptBlocks" xml:space="preserve">
+    <value>Number of script blocks</value>
+  </data>
+  <data name="Attribute.NumberOfScriptBlocks" xml:space="preserve">
+    <value>Number of SCRIPT</value>
+  </data>
+  <data name="Description.NumberOfMetaTags" xml:space="preserve">
+    <value>Number of META tags</value>
+  </data>
+  <data name="Attribute.NumberOfMetaTags" xml:space="preserve">
+    <value>Number of META</value>
+  </data>
+  <data name="Attribute.cellPadding" xml:space="preserve">
+    <value>Cell Padding</value>
+  </data>
+  <data name="Description.cellPadding" xml:space="preserve">
+    <value>The padding between the border and the contents for each cell in the table</value>
+  </data>
+  <data name="Attribute.cellSpacing" xml:space="preserve">
+    <value>Cell Spacing</value>
+  </data>
+  <data name="Description.cellSpacing" xml:space="preserve">
+    <value>The spacing between the cells in the table</value>
+  </data>
+  <data name="Description.rules" xml:space="preserve">
+    <value>Rules are areas between columns. This property defines the appearance of the rules</value>
+  </data>
+  <data name="Attribute.rules" xml:space="preserve">
+    <value>Rules</value>
+  </data>
+  <data name="Description.borderColor" xml:space="preserve">
+    <value>The color of the border of each cell of the table</value>
+  </data>
+  <data name="Attribute.borderColor" xml:space="preserve">
+    <value>Border Color</value>
+  </data>
+  <data name="Description.rows" xml:space="preserve">
+    <value>Number of rows for characters with of standard font.</value>
+  </data>
+  <data name="Attribute.rows" xml:space="preserve">
+    <value>Number Of Rows</value>
+  </data>
+  <data name="Description.valign" xml:space="preserve">
+    <value>The vertical alignment of the content inside the cell.</value>
+  </data>
+  <data name="Attribute.valign" xml:space="preserve">
+    <value>Vertical Alignment</value>
+  </data>
+  <data name="Description.colspan" xml:space="preserve">
+    <value>The number of columns the cell spans.</value>
+  </data>
+  <data name="Attribute.colSpan" xml:space="preserve">
+    <value>Column Span</value>
+  </data>
+  <data name="Description.rowspan" xml:space="preserve">
+    <value>The number of rows the cell spans.</value>
+  </data>
+  <data name="Attribute.rowSpan" xml:space="preserve">
+    <value>Row Span</value>
+  </data>
+  <data name="Description.cells" xml:space="preserve">
+    <value>The total number of cells in this row. May very row by row due to rowspan attribute on cells in other rows.</value>
+  </data>
+  <data name="Attribute.cells" xml:space="preserve">
+    <value>Number Of Cells</value>
+  </data>
+  <data name="FontPickerUserControl.ff.Text" xml:space="preserve">
+    <value>Font Selection Box</value>
+  </data>
+  <data name="FontForm.buttonOK.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="FontForm.buttonCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FontForm.label1.Text" xml:space="preserve">
+    <value>Type as many fonts as necessary line by line.</value>
+  </data>
+  <data name="FontForm.tabPage4.Text" xml:space="preserve">
+    <value>User Fonts</value>
+  </data>
+  <data name="FontForm.textBoxFreeFont.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FontForm.tabPage1.Text" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="FontForm.tabPage2.Text" xml:space="preserve">
+    <value>Web</value>
+  </data>
+  <data name="FontForm.tabPage3.Text" xml:space="preserve">
+    <value>Generic</value>
+  </data>
+  <data name="Attribute.border" xml:space="preserve">
+    <value>Border</value>
+  </data>
+  <data name="Description.border" xml:space="preserve">
+    <value>With of border in pixel. If element is inside a hyperlink this value must explicitly set to 0 to remove automatically build borders.</value>
+  </data>
+  <data name="Attribute.dateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="Description.dateTime" xml:space="preserve">
+    <value>Standard datetime information about when the element was last changed. Expected Format: JJJJ-MM-DDThh:mm:ssTZD</value>
+  </data>
+  <data name="Attribute.cite" xml:space="preserve">
+    <value>Cite</value>
+  </data>
+  <data name="Description.cite" xml:space="preserve">
+    <value>Comment about the content</value>
+  </data>
+  <data name="HtmlDocumentStructure.ToString" xml:space="preserve">
+    <value>[DOCUMENT]</value>
+  </data>
+  <data name="CustomPropertyTab.Tooltip" xml:space="preserve">
+    <value>Attribute Names</value>
+  </data>
+  <data name="Category.Element Style" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="Category.Element Behavior" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="Category.Standard Values" xml:space="preserve">
+    <value>Base Values</value>
+  </data>
+  <data name="Category.Javascript Events" xml:space="preserve">
+    <value>JavaScript Events</value>
+  </data>
+  <data name="Category.Element Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Category.Element Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Category.Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Category.Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Attribute.ScriptOnResize" xml:space="preserve">
+    <value>On Resize</value>
+  </data>
+  <data name="Description.ScriptOnResize" xml:space="preserve">
+    <value>Fired if the user resizes the element using scripting.</value>
+  </data>
+  <data name="Attribute.ScriptOnChange" xml:space="preserve">
+    <value>On Change</value>
+  </data>
+  <data name="Description.ScriptOnChange" xml:space="preserve">
+    <value>Fired if the content of the control was changed by the user.</value>
+  </data>
+  <data name="Attribute.cols" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Description.cols" xml:space="preserve">
+    <value>Number of Columns measured in character of standard width.</value>
+  </data>
+  <data name="Attribute.type_LI" xml:space="preserve">
+    <value>List element type</value>
+  </data>
+  <data name="Attribute.ScriptOnMouseDown" xml:space="preserve">
+    <value>On Mouse Down</value>
+  </data>
+  <data name="Description.ScriptOnMouseDown" xml:space="preserve">
+    <value>Fired if the user clicks a mouse button immeditaly after the button goes down and before the button is released.</value>
+  </data>
+  <data name="Description.id" xml:space="preserve">
+    <value>Identifier to use the element from within JavaScript code or as style target.</value>
+  </data>
+  <data name="Description.style" xml:space="preserve">
+    <value>Embedded style. use the ellipses [...] to start the integrated style editor.</value>
+  </data>
+  <data name="Description.class" xml:space="preserve">
+    <value>Style class (CSS), defines a relation to a style class definition, using ".name" syntax in CSS files or tags.</value>
+  </data>
+  <data name="Attribute.ScriptOnDblClick" xml:space="preserve">
+    <value>On Double Click</value>
+  </data>
+  <data name="StyleEditor.groupBox11.Text" xml:space="preserve">
+    <value>Table Caption</value>
+  </data>
+  <data name="StyleEditor.fontPickerFont.Caption" xml:space="preserve">
+    <value>Font Selection Box</value>
+  </data>
+  <data name="StyleEditor.Combos.NoValue" xml:space="preserve">
+    <value>No Value</value>
+  </data>
+  <data name="StyleEditor.Combos.Inherit" xml:space="preserve">
+    <value>Inherit</value>
+  </data>
+  <data name="StyleEditor.Combos.Normal" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="StyleEditor.Combos.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="StyleEditor.Combos.Solid" xml:space="preserve">
+    <value>Solid</value>
+  </data>
+  <data name="StyleEditor.Combos.Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="StyleEditor.Combos.Dotted" xml:space="preserve">
+    <value>Dotted</value>
+  </data>
+  <data name="StyleEditor.Combos.Dashed" xml:space="preserve">
+    <value>Dashed</value>
+  </data>
+  <data name="StyleEditor.Combos.OutSet" xml:space="preserve">
+    <value>Outset</value>
+  </data>
+  <data name="StyleEditor.Combos.Groove" xml:space="preserve">
+    <value>Groove</value>
+  </data>
+  <data name="StyleEditor.Combos.InSet" xml:space="preserve">
+    <value>Inset</value>
+  </data>
+  <data name="StyleEditor.Combos.Ridge" xml:space="preserve">
+    <value>Ridge</value>
+  </data>
+  <data name="StyleEditor.Combos.Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="StyleEditor.Combos.Pixel" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="StyleEditor.Combos.Point" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="StyleEditor.Combos.Percentage" xml:space="preserve">
+    <value>Percent</value>
+  </data>
+  <data name="StyleEditor.Combos.Pica" xml:space="preserve">
+    <value>Pica</value>
+  </data>
+  <data name="StyleEditor.Combos.Millimeter" xml:space="preserve">
+    <value>Millimeter</value>
+  </data>
+  <data name="StyleEditor.Combos.Centimeter" xml:space="preserve">
+    <value>Centimeter</value>
+  </data>
+  <data name="StyleEditor.Combos.m-Size" xml:space="preserve">
+    <value>M-Size</value>
+  </data>
+  <data name="StyleEditor.Combos.x-Height" xml:space="preserve">
+    <value>X-Height</value>
+  </data>
+  <data name="StyleEditor.Combos.Bold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="StyleEditor.Combos.Bolder" xml:space="preserve">
+    <value>Bolder</value>
+  </data>
+  <data name="StyleEditor.Combos.Lighter" xml:space="preserve">
+    <value>Lighter</value>
+  </data>
+  <data name="StyleEditor.Combos.CapitalLetter" xml:space="preserve">
+    <value>Capital Letter</value>
+  </data>
+  <data name="StyleEditor.Combos.Uppercase" xml:space="preserve">
+    <value>Uppercase</value>
+  </data>
+  <data name="StyleEditor.Combos.Lowercase" xml:space="preserve">
+    <value>Lowercase</value>
+  </data>
+  <data name="StyleEditor.Combos.Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="StyleEditor.Combos.Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="StyleEditor.Combos.Bottom" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="StyleEditor.Combos.Absolute" xml:space="preserve">
+    <value>Absolute</value>
+  </data>
+  <data name="StyleEditor.Combos.AsBlock" xml:space="preserve">
+    <value>As Block</value>
+  </data>
+  <data name="StyleEditor.Combos.InlineText" xml:space="preserve">
+    <value>Inline Text</value>
+  </data>
+  <data name="StyleEditor.Combos.ListItem" xml:space="preserve">
+    <value>List Item</value>
+  </data>
+  <data name="StyleEditor.Combos.Middle" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="StyleEditor.Combos.Baseline" xml:space="preserve">
+    <value>Baseline</value>
+  </data>
+  <data name="StyleEditor.Combos.Sub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="StyleEditor.Combos.Super" xml:space="preserve">
+    <value>Super</value>
+  </data>
+  <data name="StyleEditor.Combos.TopOfText" xml:space="preserve">
+    <value>Top of text</value>
+  </data>
+  <data name="StyleEditor.Combos.BottomOfText" xml:space="preserve">
+    <value>Bottom of Text</value>
+  </data>
+  <data name="StyleEditor.Combos.Underline" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="StyleEditor.Combos.StrikeOver" xml:space="preserve">
+    <value>Strike Over</value>
+  </data>
+  <data name="StyleEditor.Combos.StrikeOut" xml:space="preserve">
+    <value>Strike Out</value>
+  </data>
+  <data name="StyleEditor.Combos.BlinkText" xml:space="preserve">
+    <value>Blink</value>
+  </data>
+  <data name="StyleEditor.Combos.Visible" xml:space="preserve">
+    <value>Visible</value>
+  </data>
+  <data name="StyleEditor.Combos.NotVisible" xml:space="preserve">
+    <value>Not Visible</value>
+  </data>
+  <data name="StyleEditor.Combos.ScrollableArea" xml:space="preserve">
+    <value>Scrollable</value>
+  </data>
+  <data name="StyleEditor.Combos.Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="StyleEditor.Combos.TopAndLeft" xml:space="preserve">
+    <value>Top and Left</value>
+  </data>
+  <data name="StyleEditor.Combos.TopAndRight" xml:space="preserve">
+    <value>Top and Right</value>
+  </data>
+  <data name="StyleEditor.Combos.BottomAndLeft" xml:space="preserve">
+    <value>Bottom and Left</value>
+  </data>
+  <data name="StyleEditor.Combos.BottomAndRight" xml:space="preserve">
+    <value>Bottom and Right</value>
+  </data>
+  <data name="StyleEditor.Combos.Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="StyleEditor.Combos.RepeatRows" xml:space="preserve">
+    <value>Repeat Rows</value>
+  </data>
+  <data name="StyleEditor.Combos.RepeatColumns" xml:space="preserve">
+    <value>Repeat Columns</value>
+  </data>
+  <data name="StyleEditor.Combos.NoRepeat" xml:space="preserve">
+    <value>No Repeating</value>
+  </data>
+  <data name="StyleEditor.Combos.Standard" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="StyleEditor.Combos.ExtremSmall" xml:space="preserve">
+    <value>Extreme Small</value>
+  </data>
+  <data name="StyleEditor.Combos.VerySmall" xml:space="preserve">
+    <value>Very Small</value>
+  </data>
+  <data name="StyleEditor.Combos.small" xml:space="preserve">
+    <value>Small</value>
+  </data>
+  <data name="StyleEditor.Combos.Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="StyleEditor.Combos.Large" xml:space="preserve">
+    <value>Large</value>
+  </data>
+  <data name="StyleEditor.Combos.ExtraLarge" xml:space="preserve">
+    <value>Extra Large</value>
+  </data>
+  <data name="StyleEditor.Combos.XXL" xml:space="preserve">
+    <value>Extreme Large</value>
+  </data>
+  <data name="StyleEditor.Combos.Inside List" xml:space="preserve">
+    <value>Inside List</value>
+  </data>
+  <data name="StyleEditor.Combos.Outside List" xml:space="preserve">
+    <value>Outside List</value>
+  </data>
+  <data name="StyleEditor.Combos.Square" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="StyleEditor.Combos.Disc" xml:space="preserve">
+    <value>Disc</value>
+  </data>
+  <data name="StyleEditor.Combos.Circle" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="StyleEditor.Combos.Thin" xml:space="preserve">
+    <value>Thin</value>
+  </data>
+  <data name="StyleEditor.Combos.Thick" xml:space="preserve">
+    <value>Thick</value>
+  </data>
+  <data name="StyleEditor.Combos.Auto" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="StyleEditor.Combos.Cross" xml:space="preserve">
+    <value>Cross</value>
+  </data>
+  <data name="StyleEditor.Combos.Hand" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="StyleEditor.Combos.HandIE5Only" xml:space="preserve">
+    <value>Hand (IE 5 only)</value>
+  </data>
+  <data name="StyleEditor.Combos.MoveObject" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeRightBorder" xml:space="preserve">
+    <value>Right Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeUpperRightCorner" xml:space="preserve">
+    <value>Upper Right Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeUpperLeftCorner" xml:space="preserve">
+    <value>Upper Left Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeTopBorder" xml:space="preserve">
+    <value>Top Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeLowerRightCorner" xml:space="preserve">
+    <value>Bottom Right Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeLowerLeftCorner" xml:space="preserve">
+    <value>Bottom Left Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeBottomBorder" xml:space="preserve">
+    <value>Bottom Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.ResizeLeftBorder" xml:space="preserve">
+    <value>Left Resize</value>
+  </data>
+  <data name="StyleEditor.Combos.InsideTextbox" xml:space="preserve">
+    <value>Text (I-Beam)</value>
+  </data>
+  <data name="StyleEditor.Combos.Wait(Hourglass)" xml:space="preserve">
+    <value>Wait (Hourglass)</value>
+  </data>
+  <data name="StyleEditor.Combos.Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="StyleEditor.Combos.Scroll" xml:space="preserve">
+    <value>Scroll</value>
+  </data>
+  <data name="StyleEditor.Combos.Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="StyleEditor.Combos.Pre" xml:space="preserve">
+    <value>Preformatted</value>
+  </data>
+  <data name="StyleEditor.Combos.NoWrap" xml:space="preserve">
+    <value>No wrapping</value>
+  </data>
+  <data name="PropertyGrid.BackgroundPropertyType" xml:space="preserve">
+    <value>Scroll,Fixed</value>
+  </data>
+  <data name="PropertyGrid.ScrollType" xml:space="preserve">
+    <value>Yes,No,Auto</value>
+  </data>
+  <data name="PropertyGrid.Boolean" xml:space="preserve">
+    <value>Yes,No</value>
+  </data>
+  <data name="PropertyGrid.AreaShape" xml:space="preserve">
+    <value>Default,Rectangle,Circle,Polygon</value>
+  </data>
+  <data name="PropertyGrid.BreakClearEnum" xml:space="preserve">
+    <value>None,Left,Right,All</value>
+  </data>
+  <data name="PropertyGrid.HorizontalAlign" xml:space="preserve">
+    <value>Not set,Left,Center,Right,Justify</value>
+  </data>
+  <data name="PropertyGrid.VerticalAlign" xml:space="preserve">
+    <value>Not Set,Top,Middle,Bottom</value>
+  </data>
+  <data name="PropertyGrid.FontUnit" xml:space="preserve">
+    <value>No Value,Extrem small,Very small,Small,Middle,Large,Very large,Extrem large,Smaller,Larger</value>
+  </data>
+  <data name="PropertyGrid.LinkElementMedia" xml:space="preserve">
+    <value>All,Screen,TTY,TV,Projection,Handheld,Print,Braille,Aural</value>
+  </data>
+  <data name="PropertyGrid.UnorderedListType" xml:space="preserve">
+    <value>Default,Circle,Disc,Square</value>
+  </data>
+  <data name="PropertyGrid.ListType" xml:space="preserve">
+    <value>Default,Numeric,Lower case,Upper case,Lower case Roman numeral,Upper case Roman numeral,Disc,Circle,Square</value>
+  </data>
+  <data name="PropertyGrid.CaptionAlignment" xml:space="preserve">
+    <value>Top,Top and Left,Top and Right,Bottom</value>
+  </data>
+  <data name="Description.AreaTags" xml:space="preserve">
+    <value>Collection of interactive areas registered is this MAP.</value>
+  </data>
+  <data name="Attribute.AreaTags" xml:space="preserve">
+    <value>Areas</value>
+  </data>
+  <data name="Attribute.index" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Description.index" xml:space="preserve">
+    <value>Ordinal position of this option element in the list box.</value>
+  </data>
+  <data name="PropertyGrid.OrderedListType" xml:space="preserve">
+    <value>Default,Numeric,Lower case,Upper case,Lower case Roman numeral,Upper case Roman numeral</value>
+  </data>
+  <data name="PropertyGrid.RulesType" xml:space="preserve">
+    <value>Not Set,None,Groups,Rows,Columns,All</value>
+  </data>
+  <data name="Attribute.maxLength" xml:space="preserve">
+    <value>Max field length</value>
+  </data>
+  <data name="Attribute.readOnly" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="Attribute.value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Description.maxLength" xml:space="preserve">
+    <value>The maximum number of characters the user can enter in this field.</value>
+  </data>
+  <data name="Description.ScriptOnDblClick" xml:space="preserve">
+    <value>Fired if the user double clicks the elements active area.</value>
+  </data>
+  <data name="Description.readOnly" xml:space="preserve">
+    <value>The fields content is read only, e.g. the user cannot change the content.</value>
+  </data>
+  <data name="Description.value" xml:space="preserve">
+    <value>The value the formular will send. For buttons this is additionally the text on the elements surface.</value>
+  </data>
+  <data name="Attribute.checked" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="Attribute.selected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="Attribute.text_Field" xml:space="preserve">
+    <value>Option text</value>
+  </data>
+  <data name="Description.checked" xml:space="preserve">
+    <value>The checkbox or radiobutton field is activated (checked).</value>
+  </data>
+  <data name="Description.selected" xml:space="preserve">
+    <value>The field is selected by default.</value>
+  </data>
+  <data name="Description.text_Field" xml:space="preserve">
+    <value>The text the user can see in the dropdown list. If no value is set this text is sent, too.</value>
+  </data>
+  <data name="StyleEditorForm.Text" xml:space="preserve">
+    <value>Style Editor</value>
+  </data>
+  <data name="StyleEditorForm.buttonOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Description.src" xml:space="preserve">
+    <value>Source file or URL</value>
+  </data>
+  <data name="OptionCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="OptionCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Select an option to edit:</value>
+  </data>
+  <data name="OptionCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Attribute.multiple" xml:space="preserve">
+    <value>Multiple</value>
+  </data>
+  <data name="Description.multiple" xml:space="preserve">
+    <value>Determines whether or not the user can select two or more option elements at the same time using CTRL key.</value>
+  </data>
+  <data name="Attribute.Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Description.Options" xml:space="preserve">
+    <value>Collection of Options the list id built from.</value>
+  </data>
+  <data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" xml:space="preserve">
+    <value>Image for Background</value>
+  </data>
+  <data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" xml:space="preserve">
+    <value>Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+  </data>
+  <data name="StyleEditor.OpenFileDialog.ListImage.Title" xml:space="preserve">
+    <value>Image for Listelement</value>
+  </data>
+  <data name="StyleEditor.OpenFileDialog.ListImage.Filter" xml:space="preserve">
+    <value>Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+  </data>
+  <data name="StyleEditor.labelColumnGap.Text" xml:space="preserve">
+    <value>Gap between Columns:</value>
+  </data>
+  <data name="StyleEditor.Combos.LowerRoman" xml:space="preserve">
+    <value>Lower Roman</value>
+  </data>
+  <data name="StyleEditor.Combos.UpperRoman" xml:space="preserve">
+    <value>Upper Roman</value>
+  </data>
+  <data name="StyleEditor.Combos.LowerAlpha" xml:space="preserve">
+    <value>Lower Alpha</value>
+  </data>
+  <data name="StyleEditor.Combos.UpperAlpha" xml:space="preserve">
+    <value>Upper Alpha</value>
+  </data>
+  <data name="StyleEditor.Combos.Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="StyleEditor.Combos.DecimalZero" xml:space="preserve">
+    <value>Decimal, Leading Zero</value>
+  </data>
+  <data name="StyleEditor.Combos.Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="StyleEditor.Combos.Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="PropertyGrid.TableColumnHorizontalAlign" xml:space="preserve">
+    <value>Not Set,Left,Right,Center,Char,Justify</value>
+  </data>
+  <data name="Attribute.char" xml:space="preserve">
+    <value>Align Char</value>
+  </data>
+  <data name="Attribute.charoff" xml:space="preserve">
+    <value>Align Char Padding</value>
+  </data>
+  <data name="Description.char" xml:space="preserve">
+    <value>The character used to align the content of element to.</value>
+  </data>
+  <data name="Description.charoff" xml:space="preserve">
+    <value>The padding (distance) between the char the content is align to and the right border of the element.</value>
+  </data>
+  <data name="StyleSelectorCollectionEditor.memberLabel.Text" xml:space="preserve">
+    <value>Edit Style Elements</value>
+  </data>
+  <data name="StyleSelectorCollectionEditor.addButton.Text" xml:space="preserve">
+    <value>Add Selector</value>
+  </data>
+  <data name="StyleSelectorCollectionEditor.removeButton.Text" xml:space="preserve">
+    <value>Remove Selector</value>
+  </data>
+  <data name="Attribute.StylesheetContent" xml:space="preserve">
+    <value>Stylesheet Content</value>
+  </data>
+  <data name="Description.StylesheetContent" xml:space="preserve">
+    <value>This Property gives access to the content of the content of the linked style file.</value>
+  </data>
+  <data name="Attribute.usemap" xml:space="preserve">
+    <value>Use Map</value>
+  </data>
+  <data name="Description.usemap" xml:space="preserve">
+    <value>Use this MAP definition to build a clickable image map (client site)</value>
+  </data>
+  <data name="Attribute.action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Attribute.encType" xml:space="preserve">
+    <value>Encoding Type</value>
+  </data>
+  <data name="Attribute.method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="Attribute.name_Form" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="Description.action" xml:space="preserve">
+    <value>Full or relative path to an URL which is called upon sending the formular.</value>
+  </data>
+  <data name="Description.encType" xml:space="preserve">
+    <value>The encoding type. This value depends on the content beeing send. For file uploads use Multipart.</value>
+  </data>
+  <data name="Description.method" xml:space="preserve">
+    <value>The HTTP method the browser uses to send the formular. Standard forms are sent via POST.</value>
+  </data>
+  <data name="Attribute.size_Select" xml:space="preserve">
+    <value>Visible Options</value>
+  </data>
+  <data name="Description.size_Select" xml:space="preserve">
+    <value>Number of visible options. If there are more options than visible a value of 1 will produce a drop down list whereas values greater than 1 will produce a list box. If there are more options the list box will have a scrollbar.</value>
+  </data>
+  <data name="Attribute.label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Description.label" xml:space="preserve">
+    <value>The text in the select element shown to the user if the option content is not used.</value>
+  </data>
+  <data name="Attribute.Selector" xml:space="preserve">
+    <value>Selector</value>
+  </data>
+  <data name="Description.Selector" xml:space="preserve">
+    <value>The stylesheet rule used to define one type of style. Choose the appropritiate type from the SelectorType property. The prefix will be set accordingly.</value>
+  </data>
+  <data name="Attribute.SelectorType" xml:space="preserve">
+    <value>Selector Type</value>
+  </data>
+  <data name="Description.SelectorType" xml:space="preserve">
+    <value>The type of selector, e.g. class, id, block rule, or global (asterisk). For standard type write HTML tag names.</value>
+  </data>
+  <data name="Attribute.SelectorName" xml:space="preserve">
+    <value>Selector Name</value>
+  </data>
+  <data name="Description.SelectorName" xml:space="preserve">
+    <value>The name of the selector. Choose either a free name or a HTML element name.</value>
+  </data>
+  <data name="Attribute.EmbeddedStylesheets" xml:space="preserve">
+    <value>Embedded Styles</value>
+  </data>
+  <data name="Description.EmbeddedStylesheets" xml:space="preserve">
+    <value>Style elements within the Head section of the document containing embedded style definitions.</value>
+  </data>
+  <data name="Attribute.Caption" xml:space="preserve">
+    <value>Caption</value>
+  </data>
+  <data name="Description.Caption" xml:space="preserve">
+    <value>Caption of the table. Use option WithCaption to add or remove the caption.</value>
+  </data>
+  <data name="Attribute.WithCaption" xml:space="preserve">
+    <value>Has Caption</value>
+  </data>
+  <data name="Description.WithCaption" xml:space="preserve">
+    <value>If set to Yes the table will have a caption which can be formatted and aligned.</value>
+  </data>
+  <data name="PropertyGrid.StyleRuleType" xml:space="preserve">
+    <value>Standard,Class,ID,Pseudo,Global</value>
+  </data>
+  <data name="Description.height" xml:space="preserve">
+    <value>Height of element in pixel.</value>
+  </data>
+</root>

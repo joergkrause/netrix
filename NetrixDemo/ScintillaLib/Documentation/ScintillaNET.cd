@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ScintillaNet.AutoComplete" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wIBAAQACQwgAYkABFTJAIAAQCAQECSQESISkAoEiEJY=</HashCode>
+      <FileName>AutoComplete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.CallTip" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hSAgAQAAQSAAAAAAFIAIAQCBAggEAQEAEDwiIAAJAAA=</HashCode>
+      <FileName>CallTip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.OverloadList" Collapsed="true">
+    <Position X="103.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEACAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CallTip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.CaretInfo" Collapsed="true">
+    <Position X="31.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAADgFAAABACAAmACCIEWAUCACAAwAABAAgoAQAAoI=</HashCode>
+      <FileName>Caret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Clipboard" Collapsed="true">
+    <Position X="38.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQARAAAAAAAggAAAAABAAAAAgAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Clipboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Commands" Collapsed="true">
+    <Position X="47.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAQCAEAAAAICQAAgAAABgEAgAAAAQgA=</HashCode>
+      <FileName>Commands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Constants" Collapsed="true">
+    <Position X="103.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>////////83///76+/////+//7P/v+//v/7/3/3//vf8=</HashCode>
+      <FileName>Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DocumentHandler" Collapsed="true">
+    <Position X="67.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Document" Collapsed="true">
+    <Position X="76.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAABAAAgAAAAAAAAAAAAIIAAAAAABAAAAA=</HashCode>
+      <FileName>Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DocumentNavigation" Collapsed="true">
+    <Position X="83.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBIgAAAKAAJAAAAAMCAQlAAAACAWRIAAQgACABAQA=</HashCode>
+      <FileName>DocumentNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DropMarkers" Collapsed="true">
+    <Position X="88" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAgAQQAgBACAAAQAAAEAAAAIAAAAAhAAAAAAA=</HashCode>
+      <FileName>DropMarker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DropMarkerList" Collapsed="true">
+    <Position X="107.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DropMarker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DropMarker" Collapsed="true">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACBAAgQAAACAAEAAgAAAAAQAgAAAAAAIAAA=</HashCode>
+      <FileName>DropMarker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.EndOfLine" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIAQGAAAAAAAAAAQAAAAAAIAAAAoABAAQAE=</HashCode>
+      <FileName>EndOfLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.DropMarkerCollectEventArgs" Collapsed="true">
+    <Position X="105.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.CallTipClickEventArgs" Collapsed="true">
+    <Position X="96.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAQQAAAAAAFAAAgQAAAAgAAABAAAggAAABEAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.CharAddedEventArgs" Collapsed="true">
+    <Position X="98.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.FoldChangedEventArgs" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAEBAAAAAAAAAAAACAAAAAARAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.LinesNeedShownEventArgs" Collapsed="true">
+    <Position X="102" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAABAAAAAAAAQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.MarkerChangedEventArgs" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.ModifiedEventArgs" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAIAAAAAAAAAAAIAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.NativeScintillaEventArgs" Collapsed="true">
+    <Position X="102" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAABAAAAAAAAABAAIAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.ScintillaMouseEventArgs" Collapsed="true">
+    <Position X="102" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAgAAAAAAAAAAAAAAAAAAAAgAAAYAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.StyleChangedEventArgs" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAABAAAAAAAAABAAAgAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.StyleNeededEventArgs" Collapsed="true">
+    <Position X="105.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.TextModifiedEventArgs" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAIAAAAAEAAAlACgAAIBAAAAAAAAIBAAAiAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.UriDroppedEventArgs" Collapsed="true">
+    <Position X="107.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.AutoCompleteAcceptedEventArgs" Collapsed="true">
+    <Position X="95" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAAAIAAAAAAAAACAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.MarginClickEventArgs" Collapsed="true">
+    <Position X="105.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAhAABAgAAAAAgACABAAAAAAAAAAEBAAAAgAABAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.MacroRecordEventArgs" Collapsed="true">
+    <Position X="103.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.UserListItemSelected" Collapsed="true">
+    <Position X="95" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAEAAAAAAAAAACAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.FileDropEventArgs" Collapsed="true">
+    <Position X="95" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.FindReplace" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAABACAKgCIBQQAAQCUAYABwgBMAAABABAmLgAgAMA=</HashCode>
+      <FileName>FindReplace\FindReplace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.FindReplaceDialog" Collapsed="true">
+    <Position X="96.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UKgoSQKwyGqSAdrCBESRoUwCFcYBJLTgxBIdSgAABYE=</HashCode>
+      <FileName>FindReplace\FindReplaceDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.IncrementalSearcher" Collapsed="true">
+    <Position X="105.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoAICQCAACAoAiAWAAhASAIAAAAIAAIAAAAAABAA=</HashCode>
+      <FileName>FindReplace\IncrementalSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Folding" Collapsed="true">
+    <Position X="40.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAiAACAABAACAAMAAAAIAAAAAQAAQQAiAAEAAAA=</HashCode>
+      <FileName>Folding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.GoTo" Collapsed="true">
+    <Position X="49.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAABAAA=</HashCode>
+      <FileName>GoTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.GoToDialog" Collapsed="true">
+    <Position X="103.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIBQKAUAAUBAASQAIACGAAAAEACAAAAAAQACQA=</HashCode>
+      <FileName>GoToDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.HotspotStyle" Collapsed="true">
+    <Position X="63.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIQAgBAQAAAIAAIAAACQAAAQAAAJAAAQAgAgQAAACEo=</HashCode>
+      <FileName>HotspotStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Indentation" Collapsed="true">
+    <Position X="79" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAJIAAggAAEQAQAAAAgAAKAABAIEABEBgSgAAAEAgQ=</HashCode>
+      <FileName>Indentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.IndicatorCollection" Collapsed="true">
+    <Position X="85.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Indicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Indicator" Collapsed="true">
+    <Position X="90.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAADgAEAEAAEABAAAAAAIAABAAhgABgIAI=</HashCode>
+      <FileName>Indicator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Lexing" Collapsed="true">
+    <Position X="92.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GgCAQABMAQBgAAIGCAgECAAEJgFICAEHCJAgQAoAgBA=</HashCode>
+      <FileName>Lexing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.KeywordCollection" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAQACAAAAAAAAAAAAAAACCAAQAAAAAA=</HashCode>
+      <FileName>Lexing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Line" Collapsed="true">
+    <Position X="20.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACQAQQFAIAGgAUgECkCAFAQhhIAIAQkACESQBQAJA=</HashCode>
+      <FileName>Line.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.LinesCollection" Collapsed="true">
+    <Position X="29.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAABAAHACAEAQAAACEAAAAAIAYAAAAIAA=</HashCode>
+      <FileName>LinesCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScintillaNet.LineWrap" Collapsed="true">
+    <Position X="34" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAABAAAIACQAAAAABABAAAABAAAIggAAAqAAAAQAE=</HashCode>
+      <FileName>LineWrap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.LongLines" Collapsed="true">
+    <Position X="43" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAqAAAIBAA=</HashCode>
+      <FileName>LongLines.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Margin" Collapsed="true">
+    <Position X="52" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAxAACIAAARACECEAAAEAAggAAAoACAQCkIBBAAAg=</HashCode>
+      <FileName>Margins.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.MarginCollection" Collapsed="true">
+    <Position X="56.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACYIABAAEAAARBAQGAAIhD4AAQAEQIAQCACgAB9QIgA=</HashCode>
+      <FileName>Margins.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScintillaNet.MarkerCollection" Collapsed="true">
+    <Position X="65.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KgAQQAAAQACGBAAgCAAgAAhAAIgAQAEEAACkEAAABAg=</HashCode>
+      <FileName>Markers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Marker" Collapsed="true">
+    <Position X="70" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAACAAABAAEAGAAAAGAAgAAARAAAGAiAABhGAE=</HashCode>
+      <FileName>Markers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.MarkerInstance" Collapsed="true">
+    <Position X="81.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAACAAQAAAAEAAAIAAAAAAAABAAA=</HashCode>
+      <FileName>Markers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.NativeMethods" Collapsed="true">
+    <Position X="100.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAEAASAAAAAAAAABEAAEAAAAAAAARAAACAA=</HashCode>
+      <FileName>NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.PageInformation" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAACBCAIAgAAAEAAAQQAAAAAAAEACAiAgAAKAAA=</HashCode>
+      <FileName>Printing\PageInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.HeaderInformation" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAgABgEAAAQAAAQEAAgAAAAAAEAAEACACgABAKAgA=</HashCode>
+      <FileName>Printing\PageInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.FooterInformation" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAgABgEAAAQAAAQEAAgAAAAAAEAAEACACgABAKAgA=</HashCode>
+      <FileName>Printing\PageInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.PageSettings" Collapsed="true">
+    <Position X="105.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BJFABBgMCAAUAAAoAECAABAEAAQEAAAEAEAggCAYQgY=</HashCode>
+      <FileName>Printing\PageSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.PrintDocument" Collapsed="true">
+    <Position X="107.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBABECBCAAAEAAAAAQAAAAAAAAAAMAREAAAgAAAgAgA=</HashCode>
+      <FileName>Printing\PrintDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Printing" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAECAIAAAAAAAAAAIQAAiAAAAAAAAAAAgAAAEAAA=</HashCode>
+      <FileName>Printing\Printing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Range" Collapsed="true">
+    <Position X="25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIIAkAQAAKAAkASEgIAAEAJQEgAQAIBAAIAASAwAARA=</HashCode>
+      <FileName>Range.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScintillaNet.ManagedRange" Collapsed="true">
+    <Position X="25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACBAAEAAAAAAAAAAAAAAAIQAAAAAAAAIAAA=</HashCode>
+      <FileName>Range.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScintillaNet.Scintilla" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="98.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/v////////////f////f//f/////93////////vf/+4=</HashCode>
+      <FileName>Scintilla.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ScintillaNet.ScintillaDesigner" Collapsed="true">
+    <Position X="100.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScintillaDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.ScintillaHelperBase" Collapsed="true">
+    <Position X="48.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAIAQCAAAQAAQAAAABGAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScintillaHelperBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ScintillaNet.Scrolling" Collapsed="true">
+    <Position X="58.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAACAAAAABCAAAgADAACAAAIABAAAAAgQABAAAE=</HashCode>
+      <FileName>Scrolling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Selection" Collapsed="true">
+    <Position X="72.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIwAQACAKwoCAAAABIAAQDAAAQABQAAAAA6SAJFKCE=</HashCode>
+      <FileName>Selection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Snippet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="103.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEAAACAAAAAwAAAAgAACARAAICCIAAAAAAAAgCAA=</HashCode>
+      <FileName>Snippets\Snippet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ScintillaNet.SnippetChooser" Collapsed="true">
+    <Position X="105.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYEMAQCAAAAICCACBABACAAAAAAAQAAAgACAAAAA=</HashCode>
+      <FileName>Snippets\SnippetChooser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.SnippetLinkEnd" Collapsed="true">
+    <Position X="27.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACBAAAAAAAAAAAAAAAAAAAQAAAAAAAAIAAA=</HashCode>
+      <FileName>Snippets\SnippetLinkEnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.SnippetLinkCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="95" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CGIAIEAAAAAEQBASGoEABAQAAAABIAABCAAgAABQIAA=</HashCode>
+      <FileName>Snippets\SnippetLinks.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ScintillaNet.SnippetLink" Collapsed="true">
+    <Position X="107.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAQAAACAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Snippets\SnippetLinks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.SnippetLinkRange" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAQAAACAQAAQAAAAAAAgAAASAAAAAAA=</HashCode>
+      <FileName>Snippets\SnippetLinks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.SnippetList" Collapsed="true">
+    <Position X="96.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAAAAAAAAACEAAAQAQAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Snippets\SnippetList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.SnippetManager" Collapsed="true">
+    <Position X="36.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBkCAgSBAKEgAYAgkAEChAFKEwHAuQQBQxSgCQIAgDI=</HashCode>
+      <FileName>Snippets\SnippetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.StyleCollection" Collapsed="true">
+    <Position X="45.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQACAggRkABAJACgAYIAAAAAAAQJAABIUoQAAASAA=</HashCode>
+      <FileName>Style.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Style" Collapsed="true">
+    <Position X="54.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>goCggUhAGBAQlKAEAJQgAgCSYoQIAwIgAiFyAhADIAE=</HashCode>
+      <FileName>Style.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.UndoRedo" Collapsed="true">
+    <Position X="61" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAAAAABACABAAAAAAAAAABAAQAAAIAAACgAAEAAAA=</HashCode>
+      <FileName>UndoRedo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Utilities" Collapsed="true">
+    <Position X="96.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAIAAAAAAAAAAQCAAAAAAAiAAEAACAABAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.WhiteSpace" Collapsed="true">
+    <Position X="74.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAYgAAIAAAAAAAAAAAADAAABAIQAAAAAuAAABAAE=</HashCode>
+      <FileName>WhiteSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.WhiteSpaceStringConverter" Collapsed="true">
+    <Position X="98.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAAAAgAAAAAAAAABCAAAAIgAAAAAAA=</HashCode>
+      <FileName>WhiteSpaceStringConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.CommandBindingConfigList" Collapsed="true">
+    <Position X="100.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAEAABAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\CommandConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.Configuration" Collapsed="true">
+    <Position X="102" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>7uGNxT7VqTWwfXFb3d4tLVXRSi5jvFyCPjuB2NNxWQ8=</HashCode>
+      <FileName>Configuration\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.ConfigurationManager" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DIDA2hAuCEABDQABQEFARCJQIIgQgABCIQAiIAEARAA=</HashCode>
+      <FileName>Configuration\ConfigurationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.IndicatorConfigList" Collapsed="true">
+    <Position X="95" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\IndicatorsConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.IndicatorConfig" Collapsed="true">
+    <Position X="107.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAIAAAAAIAAAAAEAABAAAAAAAAIAABAAAgCBAAAA=</HashCode>
+      <FileName>Configuration\IndicatorsConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.KeyWordConfigList" Collapsed="true">
+    <Position X="98.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\KeyWordConfigList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.KeyWordConfig" Collapsed="true">
+    <Position X="96.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAQAAgAAAAAAI=</HashCode>
+      <FileName>Configuration\KeyWordConfigList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.LexerPropertiesConfig" Collapsed="true">
+    <Position X="100.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\LexerProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.MarginConfigList" Collapsed="true">
+    <Position X="95" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAEAAEIAIBAAAAAAAAQgACACAAAAAAAA=</HashCode>
+      <FileName>Configuration\MarginConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.MarginConfig" Collapsed="true">
+    <Position X="107.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAACAAAgAAQAQACEAABEAAABAAAAACAQAEAABAAAA=</HashCode>
+      <FileName>Configuration\MarginConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.MarkersConfig" Collapsed="true">
+    <Position X="96.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIQAAAACAAAAEAEAABAQAAIAAABAQAAAAAABBCAA=</HashCode>
+      <FileName>Configuration\MarkersConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.MarkersConfigList" Collapsed="true">
+    <Position X="98.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\MarkersConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.SnippetsConfigList" Collapsed="true">
+    <Position X="100.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAgSAAIAAAYAAAAEABAEAEAEAqAQBAQAACAAAAAA=</HashCode>
+      <FileName>Configuration\SnippetsConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.SnippetsConfig" Collapsed="true">
+    <Position X="98.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEAAAAAAAAAAAAAAgAACABAAAACAAAAAAAAAgCAA=</HashCode>
+      <FileName>Configuration\SnippetsConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.StyleConfigList" Collapsed="true">
+    <Position X="103.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAAAAAAAQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\StyleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.StyleConfig" Collapsed="true">
+    <Position X="102" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ApCAIUAAgACAkSAkAMAABAwTAAAAAAAYAAAAIQJBAAE=</HashCode>
+      <FileName>Configuration\StyleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Configuration.ResolvedStyleList" Collapsed="true">
+    <Position X="95" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Configuration\StyleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Design.FlagCheckedListBox" Collapsed="true">
+    <Position X="98.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAAIEACAAAACAAACAAAAGAAAAAIAAAACEAAIAAAA=</HashCode>
+      <FileName>FlagsDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Design.FlagCheckedListBoxItem" Collapsed="true">
+    <Position X="100.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAEIAAAAAAAAACAAAAAAAAgAAAA=</HashCode>
+      <FileName>FlagsDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Design.FlagEnumUIEditor" Collapsed="true">
+    <Position X="102" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>FlagsDesigner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScintillaNet.Properties.Resources" Collapsed="true">
+    <Position X="96.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAAAAAAAAAAQAAAAABEAAAAQAAAAoAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XpmConverter" Collapsed="true">
+    <Position X="100.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>XpmAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ScintillaNet.KeyBinding" Collapsed="true">
+    <Position X="98.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAABAAAAgAAEgAAAAAAAAAAAAIAAAAAAAAAACAA=</HashCode>
+      <FileName>Commands.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.UndoRedoFlags" Collapsed="true">
+    <Position X="98.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAIAAAAAAAAAAEAAAEEAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.CharacterRange" Collapsed="true">
+    <Position X="95" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.TextRange" Collapsed="true">
+    <Position X="95" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.TextToFind" Collapsed="true">
+    <Position X="96.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAAgAAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.RangeToFormat" Collapsed="true">
+    <Position X="103.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAIAAAAAAAgAAAAAAABAAAAAAABAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.PrintRectangle" Collapsed="true">
+    <Position X="102" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAACACAAAAAAAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.NotifyHeader" Collapsed="true">
+    <Position X="100.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAwAAAAAAAAAAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.SCNotification" Collapsed="true">
+    <Position X="107.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhEAAAIAAAAAAAAQBEAAIAAACQCAAAIIAABgACAAACQ=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.RECT" Collapsed="true">
+    <Position X="105.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAgBAAAAIQAEAAAAAIAIAgCACAABAAAAA=</HashCode>
+      <FileName>NativeStructs.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ScintillaNet.Configuration.CommandBindingConfig" Collapsed="true">
+    <Position X="96.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\CommandConfig.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="ScintillaNet.INativeScintilla" Collapsed="true">
+    <Position X="95" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>f73/7d/8/m/7v/7//P+///jf/8//9P/t/n+37/9v/NM=</HashCode>
+      <FileName>INativeScintilla.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ScintillaNet.VOID" Collapsed="true">
+    <Position X="107.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CaretStyle" Collapsed="true">
+    <Position X="100.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.Lexer" Collapsed="true">
+    <Position X="98.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ixoC2WWARimkpBKEUHQEIAiAACiYWFBIACLEpAiGIig=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.WhiteSpaceMode" Collapsed="true">
+    <Position X="95" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAIAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.EndOfLineMode" Collapsed="true">
+    <Position X="96.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAACACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.MarkerSymbol" Collapsed="true">
+    <Position X="105.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAAAEEABBAgJMMQAABAooQAAAAAKoiAAAACAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.MarkerOutline" Collapsed="true">
+    <Position X="103.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAYACAAAAAAAAAAAAAAAAAAAAAAAAAEAAABAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.MarginType" Collapsed="true">
+    <Position X="102" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAACAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.StylesCommon" Collapsed="true">
+    <Position X="105.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAgABAAAAAAAAAIIAAAAAAAABAABAQAAAAACAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CharacterSet" Collapsed="true">
+    <Position X="102" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIASAAAJCABEACAEAAICAQABAAAAAAAIAAECAIiAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.StyleCase" Collapsed="true">
+    <Position X="103.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAACAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.IndicatorStyle" Collapsed="true">
+    <Position X="107.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAISAAAAAgAAAAIEAAQ=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.PrintColorMode" Collapsed="true">
+    <Position X="96.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgAAAAAAAAAAAAAAABIAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.FindOption" Collapsed="true">
+    <Position X="100.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAACAAACAAAAAAAAEAAAAAAQAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.FoldLevel" Collapsed="true">
+    <Position X="103.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAACAAAAAAEAAAAgAAAgAAAAAAIAAAAAAAACQAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.FoldFlag" Collapsed="true">
+    <Position X="102" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAEAACAIgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.WrapMode" Collapsed="true">
+    <Position X="96.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.WrapVisualFlag" Collapsed="true">
+    <Position X="98.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.WrapVisualLocation" Collapsed="true">
+    <Position X="100.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.LineCache" Collapsed="true">
+    <Position X="100.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgCAAAAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.EdgeMode" Collapsed="true">
+    <Position X="95" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEBAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CursorShape" Collapsed="true">
+    <Position X="107.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CaretPolicy" Collapsed="true">
+    <Position X="98.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.SelectionMode" Collapsed="true">
+    <Position X="100.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAoAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.ModificationFlags" Collapsed="true">
+    <Position X="107.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAEAAEBAAAAAAAAAAJAAAAgAACCAUAAAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.KeyMod" Collapsed="true">
+    <Position X="96.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAoAAAQAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.Events" Collapsed="true">
+    <Position X="98.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQqECgAEAAAAAAAhEAKAAQAQAIAAAAAECQACgCAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CopyFormat" Collapsed="true">
+    <Position X="105.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAACAAAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.CallTipArrow" Collapsed="true">
+    <Position X="96.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.BindableCommand" Collapsed="true">
+    <Position X="95" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QpQvZNK9/CNwL67NaQ6TOAiD88TgdqCFCAaDL7BMiNI=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.FoldMarkerScheme" Collapsed="true">
+    <Position X="105.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAIABAAAAAAAAAAAAAAAAAAAAgAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.SmartIndent" Collapsed="true">
+    <Position X="102" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAACAAAQAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.PageInformationBorder" Collapsed="true">
+    <Position X="95" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAIIAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Printing\PageInformation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.InformationType" Collapsed="true">
+    <Position X="95" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Printing\PageInformation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.SearchFlags" Collapsed="true">
+    <Position X="98.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAIACAAACAAAAAAAAEAAAAAAQAA=</HashCode>
+      <FileName>SearchFlags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ScintillaNet.Configuration.ConfigurationLoadOrder" Collapsed="true">
+    <Position X="103.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAQAAgABAAAAAAAggAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\ConfigurationManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

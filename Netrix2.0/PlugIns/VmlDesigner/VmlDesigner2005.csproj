@@ -1,0 +1,354 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3653EE0-FE00-48CD-B162-71845726CEF2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.NetRix.PlugIns.VmlDesigner</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix.VmlDesigner</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>C:\Documents and Settings\sachink\Desktop\dll\2005\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET20</DefineConstants>
+    <DocumentationFile>C:\Documents and Settings\sachink\Desktop\dll\2005\GuruComponents.NetRix.PlugIns.VmlDesigner.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>C:\Documents and Settings\sachink\Desktop\All Dll\2005\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DOTNET20</DefineConstants>
+    <DocumentationFile>C:\Documents and Settings\sachink\Desktop\All Dll\2005\GuruComponents.NetRix.PlugIns.VmlDesigner.XML</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DeployIsolated_HtmlFormatter_Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugDemoForm|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Comzept.Genesis.NetRix.VgxDraw, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b5ce1ce3fa49a2c4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>COM\Comzept.Genesis.NetRix.VgxDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\..\Core\Core2005.csproj">
+      <Name>Core2005</Name>
+      <Project>{ECBC8A51-DB2A-4F69-AC98-B61680198650}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixMain\NetRix2005.csproj">
+      <Project>{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}</Project>
+      <Name>NetRix2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixUI\NetRixUI2005.csproj">
+      <Project>{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}</Project>
+      <Name>NetRixUI2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\ElementBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\Enums\LineDashStyle.cs" />
+    <Compile Include="DataTypes\Enums\ThreeDColorMode.cs" />
+    <Compile Include="DataTypes\Enums\FillType.cs" />
+    <Compile Include="DataTypes\VgAdjustments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgDashStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgDashStyleArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgFillFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgFixedRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgGradientColorArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VGLength.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgPoints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgPointsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgShadow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgSkewMatrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgSkewOffset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgStroke.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\Enums\TriState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgVector2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypes\VgVector3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\BaseShapeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\CollectionEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\CommonShapeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\ElementDom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\OtherElements\ConnectorElement.cs" />
+    <Compile Include="Elements\OtherElements\IConnector.cs" />
+    <Compile Include="Elements\PredefinedElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\ArcElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\CurveElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\ExtrusionElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\GroupElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\ImageElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\LineElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\OvalElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\PolyLineElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\RectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\RoundRectElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\ShapeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\PredefinedShapes\ShapetypeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\BackgroundElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\FElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\FillElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\FormulasElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\HandleElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\HElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\ImagedataElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\PathElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\ShadowElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\StrokeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\TextboxElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\SubElements\TextpathElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\TextNodeElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\VmlBaseElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\VmlTagInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\EqnNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\PathCommandSequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VmlDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VmlDesignerBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VmlDesignerCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VmlDesignerProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Resources\Rotate.cur" />
+    <EmbeddedResource Include="Resources\VmlDesigner.ico" />
+    <EmbeddedResource Include="VmlDesigner.resx">
+      <DependentUpon>VmlDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Comzept.licenses" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "$(SolutionDir)..\03 NetRix Help\ProPluginsDemo\Assemblies\*" /S /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

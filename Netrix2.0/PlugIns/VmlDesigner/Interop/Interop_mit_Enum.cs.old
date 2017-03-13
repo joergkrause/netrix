@@ -1,0 +1,2282 @@
+using System;
+using System.Collections;
+using System.Reflection;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.CustomMarshalers;
+using System.Runtime.CompilerServices;
+
+using Comzept.Genesis.NetRix.ComInterop;
+
+namespace Comzept.Genesis.NetRix.VgxDraw
+{
+    [ComImport, TypeLibType(0x10d0), Guid("000D0300-0000-0000-C000-000000000046")]
+    public interface _IVgDispObj
+    { 
+        [DispId(0x60020000)]
+        object Application { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0x60020000)] get; }
+        [DispId(0x60020001)]
+        int Creator { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x60020001), TypeLibFunc(0x41)] get; }
+    }
+
+    [ComImport, Guid("000D0310-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgAdjustments : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0)]
+        int this[int Index] 
+        { 
+            [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] 
+            get; 
+            [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] 
+            set; 
+        }
+        
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(3)] 
+        VgTriState get_Item();
+
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] 
+        void set_Item(VgTriState item);        
+
+        [DispId(4)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(4)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(4)] set; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0350-0000-0000-C000-000000000046")]
+    public interface IVgBackground : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        IVgColor fillcolor { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        IVgFill fill { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        [DispId(0x66)]
+        VgBlackWhiteMode bwmode { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        VgBlackWhiteMode bwpure { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        VgTriState bwnormal { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), DefaultMember("value"), Guid("000D0312-0000-0000-C000-000000000046")]
+    public interface IVgColor : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgRGBType"), DispId(100)]
+        int RGB { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgRGBType")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgRGBType")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x67)]
+        int R { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        int G { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        int B { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x66)]
+        VgColorType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+    }
+
+    [ComImport, Guid("000D035B-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgDashStyleArray : _IVgDispObj
+    {
+        [DispId(0)]
+        int this[int Index] { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object parentDashStyle { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] set; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0351-0000-0000-C000-000000000046")]
+    public interface IVgEquation : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentEquations { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(0x65)]
+        VgEquationOperationType operation { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        int param1 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        VgFormulaParamType paramtype1 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        int param2 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        VgFormulaParamType paramtype2 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        int Val { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        VgFormulaParamType valtype { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] set; }
+    }
+
+    [ComImport, Guid("000D0321-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgExtrusion : _IVgDispObj
+    {
+        [DispId(150)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(150)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(150)] set; }
+        [DispId(0x67)]
+        VgExtrusionType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        IVgVector2D viewpointorigin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; }
+        [DispId(0x69)]
+        Vg3DExtrudePlane plane { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees"), DispId(0x6a)]
+        double skewangle { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPercentage"), DispId(0x6b)]
+        double skewamt { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPercentage")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPercentage")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] set; }
+        [DispId(0x6c), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")]
+        double foredepth { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] set; }
+        [DispId(0x6d), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")]
+        double backdepth { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees"), DispId(0x6f)]
+        double orientationangle { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] set; }
+        [DispId(0x70)]
+        IVgVector3D rotationcenter { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] get; }
+        [DispId(0x71)]
+        IVgVector2D rotationangle { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] get; }
+        [DispId(0x72)]
+        IVgColor color { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72)] get; }
+        [DispId(0x73)]
+        int shininess { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber"), DispId(0x74)]
+        double specularity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] set; }
+        [DispId(0x76)]
+        VgTriState metal { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] set; }
+        [DispId(0x77), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")]
+        double edge { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77)] set; }
+        [DispId(120), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")]
+        double facet { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(120)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(120)] set; }
+        [DispId(0x79)]
+        VgTriState lightface { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber"), DispId(0x7a)]
+        double brightness { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] set; }
+        [DispId(0x7b)]
+        IVgVector3D lightposition { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7b)] get; }
+        [DispId(0x7c)]
+        int lightlevel { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7c)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7c)] set; }
+        [DispId(0x7d)]
+        VgTriState lightharsh { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7d)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7d)] set; }
+        [DispId(0x7e)]
+        IVgVector3D lightposition2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7e)] get; }
+        [DispId(0x7f)]
+        int lightlevel2 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7f)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7f)] set; }
+        [DispId(0x80)]
+        VgTriState lightharsh2 { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x80)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x80)] set; }
+        [DispId(0x81)]
+        Vg3DRenderMode render { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x81)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x81)] set; }
+        [DispId(130)]
+        Vg3DColorMode colormode { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(130)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(130)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber"), DispId(0x83)]
+        double diffusity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x83)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x83)] set; }
+        [DispId(0x84)]
+        IVgVector3D viewpoint { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x84)] get; }
+        [DispId(0x85)]
+        IVgVector3D orientation { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x85)] get; }
+        [DispId(0x86)]
+        VgTriState lockrotationcenter { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x86)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x86)] set; }
+        [DispId(0x87)]
+        VgTriState autorotationcenter { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x87)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x87)] set; }
+        [DispId(0x88)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x88)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x88)] set; }
+    }
+
+    [ComImport, Guid("000D0314-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgFill : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(10)]
+        void Background();
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(11)]
+        void OneColorGradient([In] VgGradientStyle Style, [In] int Variant, [In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] double Degree);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x10)]
+        void TwoColorGradient([In] VgGradientStyle Style, [In] int Variant);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x11)]
+        void Picture([In, MarshalAs(UnmanagedType.BStr)] string PictureFile);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x12)]
+        void Textured([In, MarshalAs(UnmanagedType.BStr)] string TextureFile);
+        [DispId(100)]
+        IVgColor color { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        IVgColor color2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x6f)]
+        double opacity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x73)]
+        double opacity2 { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] set; }
+        [DispId(0x70)]
+        VgFillType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] set; }
+        [DispId(0x71)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] set; }
+        [DispId(0x6d)]
+        string src { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] set; }
+        [DispId(0x9b)]
+        IVgVector2D size { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9b)] get; }
+        [DispId(0x74)]
+        IVgVector2D origin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] get; }
+        [DispId(0x75)]
+        IVgVector2D position { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x75)] get; }
+        [DispId(0x76)]
+        IVgVector2D focussize { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] get; }
+        [DispId(0x77)]
+        IVgVector2D focusposition { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77)] get; }
+        [DispId(120)]
+        IVgGradientColorArray colors { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(120)] get; }
+        [DispId(0x79)]
+        VgSigmaType method { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees"), DispId(0x7a)]
+        double angle { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgSignedPercentage"), DispId(0x7b)]
+        double focus { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgSignedPercentage")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7b)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgSignedPercentage")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7b)] set; }
+        [DispId(0x7c)]
+        VgAspectType aspect { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7c)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7c)] set; }
+        [DispId(0x7d)]
+        VgTriState alignshape { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7d)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7d)] set; }
+        [DispId(0x7e)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7e)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7e)] set; }
+    }
+    [ComImport, DefaultMember("value"), Guid("000D0355-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgFixedRectangle : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(100)]
+        double left { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        double top { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        double right { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        double bottom { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+    }
+
+    [ComImport, Guid("000D0354-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgFixedRectangleArray : _IVgDispObj//, IEnumerable
+    {
+        [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalType="", MarshalTypeRef=typeof(EnumeratorToEnumVariantMarshaler), MarshalCookie="")]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(-4), TypeLibFunc(0x41)]
+        new IEnumerator GetEnumerator();
+        [DispId(0)]
+        IVgFixedRectangle this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+        [DispId(100)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+    }
+
+    [ComImport, Guid("000D0349-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgFormula : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentFormulas { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        IVgEquation eqn { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0348-0000-0000-C000-000000000046")]
+    public interface IVgFormulas : _IVgDispObj//, IEnumerable
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalType="", MarshalTypeRef=typeof(EnumeratorToEnumVariantMarshaler), MarshalCookie="")]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(-4), TypeLibFunc(0x41)]
+        new IEnumerator GetEnumerator();
+        [DispId(0)]
+        IVgFormula this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+    }
+
+    [ComImport, Guid("000D0344-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgGradientColorArray : _IVgDispObj//, IEnumerable
+    {
+        [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalType="", MarshalTypeRef=typeof(EnumeratorToEnumVariantMarshaler), MarshalCookie="")]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(-4)]
+        new IEnumerator GetEnumerator();
+        [DispId(0)]
+        IVgGradientColorArrayItem this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        [return: MarshalAs(UnmanagedType.Interface)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)]
+        IVgColor addColor([In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] double percent);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)]
+        void removeColor([In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] double percent);
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D035A-0000-0000-C000-000000000046")]
+    public interface IVgGradientColorArrayItem : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentGradientColorArray { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(100)]
+        double rangeEndPoint { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        IVgColor color { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)]
+        void remove();
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0316-0000-0000-C000-000000000046")]
+    public interface IVgGroupShapes : _IVgDispObj//, IEnumerable
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0)]
+        IVgShape this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+        [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalType="", MarshalTypeRef=typeof(EnumeratorToEnumVariantMarshaler), MarshalCookie="")]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(-4), TypeLibFunc(0x400)]
+        new IEnumerator GetEnumerator();
+    }
+    [ComImport, Guid("000D031A-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgImageData : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(100)]
+        double blacklevel { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber"), DispId(0x66)]
+        double gain { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x67)]
+        double cropbottom { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")]
+        double cropleft { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x69)]
+        double cropright { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x6a)]
+        double croptop { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(110)]
+        string src { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] set; }
+        [DispId(0x6f)]
+        IVgColor embosscolor { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x70)]
+        double gamma { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] set; }
+        [DispId(0x71)]
+        IVgColor chromakey { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] get; }
+        [DispId(0x72)]
+        VgTriState grayscale { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72)] set; }
+        [DispId(0x73)]
+        VgTriState bilevel { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] set; }
+        [DispId(0x74)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] set; }
+    }
+
+    [ComImport, Guid("000D0359-0000-0000-C000-000000000046"), TypeLibType(0x10d0), DefaultMember("value")]
+    public interface IVgLineDashStyle : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        VgLineDashStyle presetStyle { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        IVgDashStyleArray array { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+    }
+
+    [ComImport, DefaultMember("value"), Guid("000D0343-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgPath : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(0x65)]
+        IVgFixedRectangleArray textboxrect { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        [DispId(0x66)]
+        IVgVector2D limo { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+        [DispId(0x67)]
+        string v { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        IVgSegments segments { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; }
+        [DispId(0x69)]
+        VgTriState arrowok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        VgTriState shadowok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        VgTriState extrusionok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] set; }
+        [DispId(0x6c)]
+        VgTriState strokeok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] set; }
+        [DispId(0x6d)]
+        VgTriState textpathok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)] set; }
+        [DispId(110)]
+        VgTriState gradientshapeok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] set; }
+        [DispId(0x6f)]
+        VgTriState fillok { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] set; }
+        [DispId(0x70)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] set; }
+    }
+
+    [ComImport, Guid("000D0363-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgPoints : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0)]
+        IVgVector2D this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+        [return: MarshalAs(UnmanagedType.Interface)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)]
+        IVgVector2D add([In] uint insertionIndex);
+        [DispId(100)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+    }
+
+    [ComImport, Guid("000D0370-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgReturnedPointArray : _IVgDispObj
+    {
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0x65)]
+        double this[int Index] { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; }
+        
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)]
+        double get_item(int Index);
+    }
+
+    [ComImport, Guid("000D0369-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgRuntimeStyle : _IVgDispObj
+    {
+        [DispId(0x65)]
+        string left { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x65)] set; }
+        [DispId(0x66)]
+        string top { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66), TypeLibFunc(0x40)] set; }
+        [DispId(0x67)]
+        string width { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x67)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x67)] set; }
+        [DispId(0x68)]
+        string height { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x68)] set; }
+        [DispId(0x69)]
+        string marginLeft { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x69)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69), TypeLibFunc(0x40)] set; }
+        [DispId(0x6a)]
+        string marginTop { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        string marginRight { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x6b)] set; }
+        [DispId(0x6c)]
+        string dir { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c), TypeLibFunc(0x40)] set; }
+        [DispId(0x6d)]
+        string right { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x6d)] set; }
+        [DispId(110)]
+        string flip { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110), TypeLibFunc(0x40)] set; }
+        [DispId(0x6f)]
+        string rotation { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f), TypeLibFunc(0x40)] set; }
+        [DispId(0x71)]
+        string msoPositionHorizontal { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x71)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71), TypeLibFunc(0x40)] set; }
+        [DispId(0x72)]
+        string msoPositionHorizontalRelative { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x72)] set; }
+        [DispId(0x73)]
+        string msoPositionVertical { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x73)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x73)] set; }
+        [DispId(0x74)]
+        string msoPositionVerticalRelative { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x74)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74), TypeLibFunc(0x40)] set; }
+        [DispId(0x75)]
+        string msoWrapDistanceTop { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x75)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x75), TypeLibFunc(0x40)] set; }
+        [DispId(0x76)]
+        string msoWrapDistanceLeft { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x76)] set; }
+        [DispId(0x77)]
+        string msoWrapDistanceRight { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x77)] set; }
+        [DispId(120)]
+        string msoWrapDistanceBottom { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(120)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(120)] set; }
+        [DispId(0x79)]
+        string antialias { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79), TypeLibFunc(0x40)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x79)] set; }
+        [DispId(0x7a)]
+        string position { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x7a)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a), TypeLibFunc(0x40)] set; }
+        [DispId(0x7b)]
+        string visibility { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x7b)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x7b)] set; }
+        [DispId(0x7c)]
+        string display { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x7c)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7c), TypeLibFunc(0x40)] set; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7d), TypeLibFunc(0x40)]
+        void commit();
+    }
+
+    [ComImport, Guid("000D0361-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgSegment : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentPath { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        VgSegmentCommandType command { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] 
+        double get_item(int Index); 
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] 
+        void set_item(int Index, double val); 
+
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] 
+        double get_item2(int Index);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] 
+        void set_item2(int Index, double val); 
+
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] 
+        VgSegmentCommandParamType get_param(int Index);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] 
+        void set_param(int Index, double val); 
+
+        [DispId(0x68)]
+        VgSegmentCommandParamType this[int Index] { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        int vertexCount { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; }
+        [DispId(0x6a)]
+        int vertexGroupCount { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; }
+        [DispId(0x6f)]
+        int numberVerticiesPerGroup { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)]
+        void addVertexGroup([In] int groupIndexToInsertBefore);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)]
+        void removeVertexGroup([In] int groupIndexToDestroy);
+        [return: MarshalAs(UnmanagedType.Interface)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6d)]
+        IVgSegment insertAdjacentSegment([In] VgSegmentInsertionPosition pos, [In] VgSegmentCommandType Type);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)]
+        void remove();
+    }
+
+    [ComImport, Guid("000D0360-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgSegments : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentPath { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0)]
+        IVgSegment this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D031B-0000-0000-C000-000000000046")]
+    public interface IVgShadow : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        IVgColor color { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        VgTriState obscured { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        IVgSkewOffset offset { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+        [DispId(0x67)]
+        IVgVector2D offset2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x68)]
+        double opacity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        VgShadowType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        IVgColor color2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; }
+        [DispId(0x6c)]
+        IVgVector2D origin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] get; }
+        [DispId(110)]
+        IVgSkewMatrix matrix { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] get; }
+        [DispId(0x6f)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] set; }
+    }
+    [ComImport, Guid("000D031C-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgShape : _IVgDispObj
+    {
+        [DispId(100)]
+        IVgAdjustments adj { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x83)]
+        string alt { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x83)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x83)] set; }
+        [DispId(150)]
+        IVgPath path { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(150)] get; }
+        [DispId(0x97)]
+        string href { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x97)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x97)] set; }
+        [DispId(0x98), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")]
+        double opacity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x98), TypeLibFunc(0x41)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0x98)] set; }
+        [DispId(0x99)]
+        IVgColor chromakey { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0x99)] get; }
+        [DispId(0x9a)]
+        IVgStroke stroke { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9a)] get; }
+        [DispId(0x9b)]
+        IVgColor strokecolor { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9b)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength"), DispId(0x9c)]
+        double strokeweight { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9c)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9c)] set; }
+        [DispId(0x9d)]
+        IVgFill fill { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9d)] get; }
+        [DispId(0x9e)]
+        string spt { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9e), TypeLibFunc(0x41)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0x9e)] set; }
+        [DispId(0x9f)]
+        VgTriState oned { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9f)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x9f)] set; }
+        [DispId(160)]
+        IVgColor fillcolor { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(160)] get; }
+        [DispId(0xa1)]
+        VgTriState print { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa1)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa1)] set; }
+        [DispId(0xa2)]
+        IVgVector2D coordsize { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa2)] get; }
+        [DispId(0xa3)]
+        IVgVector2D coordorigin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa3)] get; }
+        [DispId(0xa4)]
+        IVgVector2D scale { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xa4)] get; }
+        [DispId(0xa5)]
+        VgTriState button { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa5)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa5)] set; }
+        [DispId(0xa6)]
+        VgBlackWhiteMode bwmode { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa6)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa6)] set; }
+        [DispId(0xa7)]
+        VgBlackWhiteMode bwpure { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa7)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa7)] set; }
+        [DispId(0xa8)]
+        VgBlackWhiteMode bwnormal { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa8)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xa8)] set; }
+        [DispId(0xa9)]
+        VgTriState forcedash { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xa9)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xa9)] set; }
+        [DispId(190)]
+        IVgShadow shadow { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(190)] get; }
+        [DispId(0xbf)]
+        IVgExtrusion extrusion { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xbf)] get; }
+        [DispId(0xc0)]
+        IVgTextPath textpath { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xc0)] get; }
+        [DispId(0xc2)]
+        IVgSkew skew { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xc2)] get; }
+        [DispId(0xc3)]
+        IVgFormulas formulas { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xc3)] get; }
+        [DispId(0x76)]
+        IVgImageData imagedata { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] get; }
+        [DispId(200)]
+        VgTriState filled { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(200)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(200)] set; }
+        [DispId(0xc9)]
+        VgTriState stroked { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xc9)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xc9)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees"), DispId(0xca)]
+        double rotation { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xca)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xca)] set; }
+        [DispId(0xcd)]
+        string version { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xcd)] get; }
+        [DispId(0xcf)]
+        string Type { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xcf)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xcf)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure"), DispId(0xd0)]
+        double left { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd0), TypeLibFunc(0x41)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd0), TypeLibFunc(0x41)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure"), DispId(0xd1)]
+        double top { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xd1)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd1), TypeLibFunc(0x41)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure"), DispId(210)]
+        double width { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(210)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(210)] set; }
+        [DispId(0xd3), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")]
+        double height { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd3), TypeLibFunc(0x41)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgMeasure")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd3), TypeLibFunc(0x41)] set; }
+        [DispId(0xd4)]
+        VgFlipOrientation flip { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd4), TypeLibFunc(0x41)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xd4)] set; }
+        [DispId(0x6c)]
+        IVgShapes childShapes { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] get; }
+        [DispId(0xd6)]
+        IVgVector2D from { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd6)] get; }
+        [DispId(0xd7)]
+        IVgVector2D to { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd7)] get; }
+        [DispId(0xd8)]
+        IVgPoints points { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd8)] get; }
+        [DispId(0xd9)]
+        IVgVector2D control1 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xd9)] get; }
+        [DispId(0xda)]
+        IVgVector2D control2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xda)] get; }
+        [DispId(0xdb), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")]
+        double startAngle { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xdb)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xdb)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees"), DispId(220)]
+        double endAngle { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(220)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgAngleInDegrees")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(220)] set; }
+        [DispId(0xdd), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")]
+        double arcSize { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(0xdd)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xdd), TypeLibFunc(0x41)] set; }
+        [DispId(0xde), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")]
+        double blacklevel { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xde)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xde)] set; }
+        [DispId(0xdf), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")]
+        double gain { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xdf)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xdf)] set; }
+        [DispId(0xe0), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")]
+        double cropbottom { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe0)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe0)] set; }
+        [DispId(0xe1), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")]
+        double cropleft { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe1)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe1)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber"), DispId(0xe2)]
+        double cropright { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe2)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe2)] set; }
+        [DispId(0xe3), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")]
+        double croptop { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe3)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe3)] set; }
+        [DispId(0xe4)]
+        string src { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe4)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe4)] set; }
+        [DispId(0xe5)]
+        IVgColor embosscolor { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe5)] get; }
+        [DispId(230), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")]
+        double gamma { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(230)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(230)] set; }
+        [DispId(0xe9)]
+        VgTriState grayscale { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe9)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xe9)] set; }
+        [DispId(0xea)]
+        VgTriState bilevel { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xea)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xea)] set; }
+        [DispId(270)]
+        IVgShape shapeType { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(270)] get; }
+        [DispId(250)]
+        IVgShape _shape { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(250), TypeLibFunc(0x40)] get; }
+        [DispId(0xfb)]
+        IVgRuntimeStyle _vgRuntimeStyle { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xfb), TypeLibFunc(0x40)] get; }
+        [DispId(0xfc)]
+        IVgReturnedPointArray _anchorRect { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xfc), TypeLibFunc(0x40)] get; }
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(11)]
+        void Delete();
+        [return: MarshalAs(UnmanagedType.Interface)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(12)]
+        IVgShape Duplicate();
+        [DispId(0x10f)]
+        IVgTextBox textbox { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x10f)] get; }
+        [DispId(0xeb)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xeb)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xeb)] set; }
+        [DispId(0xec)]
+        int this[int Index] { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0xec)] get; }
+    }
+
+    [ComImport, Guid("000D031E-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgShapes : _IVgDispObj//, IEnumerable
+    {
+        [DispId(1)]
+        object Parent { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(2)]
+        int length { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get; }
+        [DispId(0)]
+        IVgShape this[int Index] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; }
+        [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalType="", MarshalTypeRef=typeof(EnumeratorToEnumVariantMarshaler), MarshalCookie="")]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(-4), TypeLibFunc(0x400)]
+        new IEnumerator GetEnumerator();
+    }
+
+    [ComImport, Guid("000D0345-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgSkew : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x66)]
+        IVgSkewOffset offset { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+        [DispId(0x67)]
+        IVgVector2D origin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; }
+        [DispId(0x68)]
+        IVgSkewMatrix matrix { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; }
+        [DispId(0x69)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+    }
+    [ComImport, TypeLibType(0x10d0), Guid("000D0346-0000-0000-C000-000000000046"), DefaultMember("value")]
+    public interface IVgSkewMatrix : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(100)]
+        double xtox { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        double ytox { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        double xtoy { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        double ytoy { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        double perspectivex { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        double perspectivey { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        VgSkewTransformType transformtype { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; }
+    }
+
+    [ComImport, DefaultMember("value"), Guid("000D035C-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgSkewOffset : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object parentSkew { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        double x { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        double y { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        VgSkewTransformType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0317-0000-0000-C000-000000000046")]
+    public interface IVgStroke : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        IVgColor color2 { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; }
+        [DispId(0x65)]
+        VgArrowheadLength startarrowlength { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        VgArrowheadStyle startarrow { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        VgArrowheadWidth startarrowwidth { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        IVgLineDashStyle dashstyle { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; }
+        [DispId(0x69)]
+        VgArrowheadLength endarrowlength { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        VgArrowheadStyle endarrow { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        VgArrowheadWidth endarrowwidth { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] set; }
+        [DispId(0x6c)]
+        IVgColor color { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6c)] get; }
+        [DispId(110)]
+        VgLineStyle linestyle { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(110)] set; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction"), DispId(0x6f)]
+        double opacity { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgFraction")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6f)] set; }
+        [DispId(0x70)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x70)] set; }
+        [DispId(0x71), ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")]
+        double weight { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgLength")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x71)] set; }
+        [DispId(0x72)]
+        VgTriState imagealignshape { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x72)] set; }
+        [DispId(0x73)]
+        IVgVector2D imagesize { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x73)] get; }
+        [ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber"), DispId(0x74)]
+        double miterlimit { [return: ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] get; [param: In, ComAliasName("Comzept.Genesis.NetRix.VgxDraw.VgPositiveNumber")] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x74)] set; }
+        [DispId(0x75)]
+        VgLineJoinStyle joinstyle { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x75)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x75)] set; }
+        [DispId(0x76)]
+        VgLineEndCapStyle endcap { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x76)] set; }
+        [DispId(0x77)]
+        VgLineFillType filltype { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x77)] set; }
+        [DispId(120)]
+        string src { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(120)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(120)] set; }
+        [DispId(0x79)]
+        VgAspectType imageaspect { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x79)] set; }
+        [DispId(0x7a)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x7a)] set; }
+    }
+
+    [ComImport, Guid("000D036A-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgTextBox : _IVgDispObj
+    {
+        [DispId(0x65)]
+        string inset { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        double insetleft { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        double insettop { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        double insetright { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        double insetbottom { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+    }
+
+    [ComImport, Guid("000D031F-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgTextPath : _IVgDispObj
+    {
+        [DispId(1)]
+        object parentShape { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x41), DispId(1)] get; }
+        [DispId(100)]
+        VgTriState on { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        VgTriState filleachchar { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65), TypeLibFunc(0x41)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65), TypeLibFunc(0x41)] set; }
+        [DispId(0x66)]
+        VgTriState fitshape { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        VgTriState fitpath { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] set; }
+        [DispId(0x68)]
+        VgTriState trim { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] set; }
+        [DispId(0x69)]
+        string @string { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] set; }
+        [DispId(0x6a)]
+        VgTriState xscale { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6a)] set; }
+        [DispId(0x6b)]
+        string template { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x6b)] set; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), DefaultMember("value"), Guid("000D0342-0000-0000-C000-000000000046")]
+    public interface IVgVector2D : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object Parent { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        double x { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        double y { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        VgVectorType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+    }
+
+    [ComImport, DefaultMember("value"), Guid("000D0347-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgVector3D : _IVgDispObj
+    {
+        [DispId(0)]
+        string value { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0)] set; }
+        [DispId(1)]
+        object Parent { [return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1), TypeLibFunc(0x41)] get; }
+        [DispId(100)]
+        double x { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        double y { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        double Z { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] set; }
+        [DispId(0x67)]
+        VgVectorType Type { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; }
+    }
+    [ComImport, Guid("000D036B-0000-0000-C000-000000000046"), TypeLibType(0x10d0)]
+    public interface IVgView : _IVgDispObj
+    {
+        [DispId(0x65)]
+        string left { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x65)] get; }
+        [DispId(0x66)]
+        string top { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66), TypeLibFunc(0x40)] get; }
+        [DispId(0x67)]
+        string width { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), TypeLibFunc(0x40), DispId(0x67)] get; }
+        [DispId(0x68)]
+        string height { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68), TypeLibFunc(0x40)] get; }
+    }
+
+    [ComImport, TypeLibType(0x10d0), Guid("000D0364-0000-0000-C000-000000000046")]
+    public interface IVgVMLCanvas : _IVgDispObj
+    {
+        [DispId(100)]
+        VgTriState clip { [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] get; [param: In] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(100)] set; }
+        [DispId(0x65)]
+        string src { [return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] get; [param: In, MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x65)] set; }
+        [DispId(0x66)]
+        IVgVector2D origin { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x66)] get; }
+        [DispId(0x67)]
+        IVgVector2D size { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x67)] get; }
+        [DispId(0x68)]
+        IVgShape this[string value] { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x68)] get; }
+        [DispId(0x69)]
+        IVgShape hitShape { [return: MarshalAs(UnmanagedType.Interface)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(0x69)] get; }
+    }
+    public enum Vg3DColorMode
+    {
+        // Fields
+        vg3DColorModeAuto = 1,
+        vg3DColorModeCustom = 2,
+        vg3DColorModeMixed = -2
+    }
+
+    public enum Vg3DExtrudePlane
+    {
+        // Fields
+        vg3DExtrudePlaneMixed = -2,
+        vg3DExtrudePlaneXY = 1,
+        vg3DExtrudePlaneYZ = 3,
+        vg3DExtrudePlaneZX = 2
+    }
+
+    public enum Vg3DRenderMode
+    {
+        // Fields
+        vg3DRenderModeBoundingCube = 3,
+        vg3DRenderModeMixed = -2,
+        vg3DRenderModeSolid = 1,
+        vg3DRenderModeWireFrame = 2
+    }
+
+    public enum VgArrowheadLength
+    {
+        // Fields
+        vgArrowheadLengthLong = 3,
+        vgArrowheadLengthMedium = 2,
+        vgArrowheadLengthMixed = -2,
+        vgArrowheadLengthShort = 1
+    }
+
+    public enum VgArrowheadStyle
+    {
+        // Fields
+        vgArrowheadStyleBlock = 2,
+        vgArrowheadStyleChevron = 7,
+        vgArrowheadStyleClassic = 3,
+        vgArrowheadStyleDiamond = 4,
+        vgArrowheadStyleDoubleChevron = 8,
+        vgArrowheadStyleMixed = -2,
+        vgArrowheadStyleNone = 1,
+        vgArrowheadStyleOpen = 6,
+        vgArrowheadStyleOval = 5
+    }
+
+    public enum VgArrowheadWidth
+    {
+        // Fields
+        vgArrowheadWidthMedium = 2,
+        vgArrowheadWidthMixed = -2,
+        vgArrowheadWidthNarrow = 1,
+        vgArrowheadWidthWide = 3
+    }
+
+    public enum VgAspectType
+    {
+        // Fields
+        vgAspectAtLeast = 2,
+        vgAspectAtMost = 3,
+        vgAspectIgnore = 1,
+        vgAspectMixed = -2
+    }
+
+    public enum VgBlackWhiteMode
+    {
+        // Fields
+        vgBlackWhiteAuto = 1,
+        vgBlackWhiteBlack = 9,
+        vgBlackWhiteBlackTextAndLines = 7,
+        vgBlackWhiteColor = 2,
+        vgBlackWhiteGrayOutline = 6,
+        vgBlackWhiteGrayScale = 3,
+        vgBlackWhiteHighContrast = 8,
+        vgBlackWhiteInverseGray = 5,
+        vgBlackWhiteLightGrayScale = 4,
+        vgBlackWhiteMixed = -2,
+        vgBlackWhiteUndrawn = 11,
+        vgBlackWhiteWhite = 10
+    }
+
+    public enum VgColorType
+    {
+        // Fields
+        vgColorTypeMixed = -2,
+        vgColorTypeNamed = 3,
+        vgColorTypeRGB = 1,
+        vgColorTypeScheme = 2
+    }
+
+    public enum VgEquationOperationType
+    {
+        // Fields
+        vgEquationOperationAbs = 5,
+        vgEquationOperationATan2 = 10,
+        vgEquationOperationCos = 12,
+        vgEquationOperationCosATan2 = 13,
+        vgEquationOperationEllipse = 0x11,
+        vgEquationOperationIf = 8,
+        vgEquationOperationMax = 7,
+        vgEquationOperationMid = 4,
+        vgEquationOperationMin = 6,
+        vgEquationOperationMixed = -2,
+        vgEquationOperationMod = 9,
+        vgEquationOperationProduct = 3,
+        vgEquationOperationSin = 11,
+        vgEquationOperationSinATan2 = 14,
+        vgEquationOperationSqrt = 15,
+        vgEquationOperationSum = 2,
+        vgEquationOperationSumAngle = 0x10,
+        vgEquationOperationTan = 0x12,
+        vgEquationOperationVal = 1
+    }
+
+    public enum VgExtrusionType
+    {
+        // Fields
+        vgExtrusionTypeMixed = -2,
+        vgExtrusionTypeParallel = 1,
+        vgExtrusionTypePerspective = 2
+    }
+
+    public enum VgFillType
+    {
+        // Fields
+        vgFillBackground = 10,
+        vgFillFrame = 4,
+        vgFillGradient = 5,
+        vgFillGradientCenter = 7,
+        vgFillGradientRadial = 8,
+        vgFillGradientTitle = 9,
+        vgFillGradientUnscaled = 6,
+        vgFillMixed = -2,
+        vgFillPattern = 2,
+        vgFillSolid = 1,
+        vgFillTile = 3
+    }
+
+    public enum VgFlipOrientation
+    {
+        // Fields
+        vgFlipMixed = -2,
+        vgFlipX = 1,
+        vgFlipXY = 3,
+        vgFlipY = 2,
+        vgFlipYX = 4
+    }
+
+    public enum VgFormulaParamType
+    {
+        // Fields
+        vgFormulaParamTypeAdjustmentReference = 2,
+        vgFormulaParamTypeFormulaReference = 3,
+        vgFormulaParamTypeMixed = -2,
+        vgFormulaParamTypeValue = 1
+    }
+
+    public enum VgGradientColorType
+    {
+        // Fields
+        vgGradientColorMixed = -2,
+        vgGradientOneColor = 1,
+        vgGradientPresetColors = 3,
+        vgGradientTwoColors = 2
+    }
+
+    public enum VgGradientStyle
+    {
+        // Fields
+        vgGradientDiagonalDown = 4,
+        vgGradientDiagonalUp = 3,
+        vgGradientFromCenter = 7,
+        vgGradientFromCorner = 5,
+        vgGradientFromTitle = 6,
+        vgGradientHorizontal = 1,
+        vgGradientMixed = -2,
+        vgGradientVertical = 2
+    }
+
+    public enum VgLineDashStyle
+    {
+        // Fields
+        vgLineDashStyleCustom = 0,
+        vgLineDashStyleDash = 7,
+        vgLineDashStyleDashDot = 9,
+        vgLineDashStyleDot = 6,
+        vgLineDashStyleLongDash = 8,
+        vgLineDashStyleLongDashDot = 10,
+        vgLineDashStyleLongDashDotDot = 11,
+        vgLineDashStyleMixed = -2,
+        vgLineDashStyleShortDash = 2,
+        vgLineDashStyleShortDashDot = 4,
+        vgLineDashStyleShortDashDotDot = 5,
+        vgLineDashStyleShortDot = 3,
+        vgLineDashStyleSolid = 1
+    }
+
+    public enum VgLineEndCapStyle
+    {
+        // Fields
+        vgLineEndCapFlat = 1,
+        vgLineEndCapMixed = -2,
+        vgLineEndCapRound = 3,
+        vgLineEndCapSquare = 2
+    }
+
+    public enum VgLineFillType
+    {
+        // Fields
+        vgLineFillFrame = 4,
+        vgLineFillMixed = -2,
+        vgLineFillPattern = 3,
+        vgLineFillSolid = 1,
+        vgLineFillTile = 2
+    }
+
+    public enum VgLineJoinStyle
+    {
+        // Fields
+        vgLineJoinBevel = 2,
+        vgLineJoinMiter = 3,
+        vgLineJoinMixed = -2,
+        vgLineJoinRound = 1
+    }
+
+    public enum VgLineStyle
+    {
+        // Fields
+        vgLineStyleMixed = -2,
+        vgLineStyleSingle = 1,
+        vgLineStyleThickBetweenThin = 5,
+        vgLineStyleThickThin = 4,
+        vgLineStyleThinThick = 3,
+        vgLineStyleThinThin = 2
+    }
+
+    public enum VgMixedType
+    {
+        // Fields
+        vgIntegerMixed = -2147483648,
+        vgSingleMixed = -2147483648
+    }
+
+    public enum VgSegmentCommandParamType
+    {
+        // Fields
+        VgSegmentCommandParamAdjustmentReference = 0,
+        VgSegmentCommandParamCoordinate = -1,
+        VgSegmentCommandParamFormulaReference = 1,
+        VgSegmentCommandParamMixed = -2
+    }
+
+    public enum VgSegmentCommandType
+    {
+        // Fields
+        VgSegemntCommandTypeMixed = -2,
+        VgSegmentCommandTypeAngleElipse = 7,
+        VgSegmentCommandTypeAngleElipseTo = 6,
+        VgSegmentCommandTypeArc = 9,
+        VgSegmentCommandTypeArcTo = 8,
+        VgSegmentCommandTypeClockwiseArc = 11,
+        VgSegmentCommandTypeClockwiseArcTo = 10,
+        VgSegmentCommandTypeClose = 2,
+        VgSegmentCommandTypeCurveTo = 1,
+        VgSegmentCommandTypeElipticalQuadrantX = 12,
+        VgSegmentCommandTypeElipticalQuadrantY = 13,
+        VgSegmentCommandTypeEnd = 3,
+        VgSegmentCommandTypeExtension = 0x100,
+        VgSegmentCommandTypeLineTo = 0,
+        VgSegmentCommandTypeMoveTo = -1,
+        VgSegmentCommandTypeNoFill = 4,
+        VgSegmentCommandTypeNoStroke = 5,
+        VgSegmentCommandTypeQuadraticBezier = 14
+    }
+
+    public enum VgSegmentInsertionPosition
+    {
+        // Fields
+        VgSegmentInsertionPositionAfter = 2,
+        VgSegmentInsertionPositionBefore = 1,
+        VgSegmentInsertionPositionMixed = -2
+    }
+
+    public enum VgSegmentType
+    {
+        // Fields
+        vgSegmentCurve = 1,
+        vgSegmentLine = 0,
+        VgSegmentMixed = -2
+    }
+
+    public enum VgShadowType
+    {
+        // Fields
+        vgShadowDouble = 2,
+        vgShadowDrawingRelative = 5,
+        vgShadowEmboss = 6,
+        vgShadowMixed = -2,
+        vgShadowPerspective = 3,
+        vgShadowShapeRelative = 4,
+        vgShadowSingle = 1
+    }
+
+    public enum VgSigmaType
+    {
+        // Fields
+        vgSigmaAny = 3,
+        vgSigmaLinear = 1,
+        vgSigmaMixed = -2,
+        vgSigmaNone = 0,
+        vgSigmaSigma = 2
+    }
+
+    public enum VgSkewTransformType
+    {
+        // Fields
+        vgSkewTransformAbsolute = 2,
+        vgSkewTransformMixed = -2,
+        vgSkewTransformShapeRelative = 1
+    }
+
+    public enum VgTriState
+    {
+        // Fields
+        vgTriStateCTrue = 1,
+        vgTriStateF = 0,
+        vgTriStateFalse = 0,
+        vgTriStateMixed = -2,
+        vgTriStateT = -1,
+        vgTriStateToggle = -3,
+        vgTriStateTrue = -1
+    }
+
+    public enum VgVectorType
+    {
+        // Fields
+        vgVectorTypeAngleInDegrees = 3,
+        vgVectorTypeFraction = 4,
+        vgVectorTypeInteger = 7,
+        vgVectorTypeLength = 2,
+        vgVectorTypeMeasure = 1,
+        vgVectorTypeMixed = -2,
+        vgVectorTypeNumber = 5,
+        vgVectorTypePercentage = 6,
+        vgVectorTypePositiveInteger = 8
+    }
+
+    [ComImport()]
+    [Guid("3050f563-98b5-11cf-bb82-00aa00bdce0b")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    public interface IHTMLGenericElement
+    {
+        [DispId(Interop.DISPID_IHTMLELEMENT_SETATTRIBUTE)]
+        void setAttribute( System.String strAttributeName,  System.Object AttributeValue,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_GETATTRIBUTE)]
+        System.Object getAttribute( System.String strAttributeName,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_REMOVEATTRIBUTE)]
+        System.Boolean removeAttribute( System.String strAttributeName,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_SCROLLINTOVIEW)]
+        void scrollIntoView( System.Object varargStart);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_CONTAINS)]
+        System.Boolean contains( Interop.IHTMLElement pChild);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_INSERTADJACENTHTML)]
+        void insertAdjacentHTML( System.String where,  System.String html);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_INSERTADJACENTTEXT)]
+        void insertAdjacentText( System.String where,  System.String text);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_CLICK)]
+        void click();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_TOSTRING)]
+        System.String toString();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_SETCAPTURE)]
+        void setCapture( System.Boolean containerCapture);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_RELEASECAPTURE)]
+        void releaseCapture();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_COMPONENTFROMPOINT)]
+        System.String componentFromPoint( System.Int32 x,  System.Int32 y);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_DOSCROLL)]
+        void doScroll( System.Object component);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETCLIENTRECTS)]
+        IHTMLRectCollection getClientRects();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)]
+        Interop.IHTMLRect getBoundingClientRect();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_SETEXPRESSION)]
+        void setExpression( System.String propname,  System.String expression,  System.String language);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETEXPRESSION)]
+        System.Object getExpression( System.String propname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)]
+        System.Boolean removeExpression( System.String propname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_FOCUS)]
+        void focus();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_BLUR)]
+        void blur();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ADDFILTER)]
+        void addFilter( System.Object pUnk);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEFILTER)]
+        void removeFilter( System.Object pUnk);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ATTACHEVENT)]
+        System.Boolean attachEvent( System.String @event,  System.Object pDisp);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_DETACHEVENT)]
+        void detachEvent( System.String @event,  System.Object pDisp);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_CREATECONTROLRANGE)]
+        System.Object createControlRange();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_CLEARATTRIBUTES)]
+        void clearAttributes();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_INSERTADJACENTELEMENT)]
+        Interop.IHTMLElement insertAdjacentElement( System.String where,  Interop.IHTMLElement insertedElement);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_APPLYELEMENT)]
+        Interop.IHTMLElement applyElement( Interop.IHTMLElement apply,  System.String where);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETADJACENTTEXT)]
+        System.String getAdjacentText( System.String where);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REPLACEADJACENTTEXT)]
+        System.String replaceAdjacentText( System.String where,  System.String newText);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ADDBEHAVIOR)]
+        System.Int32 addBehavior( System.String bstrUrl,  System.Object pvarFactory);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEBEHAVIOR)]
+        System.Boolean removeBehavior( System.Int32 cookie);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETELEMENTSBYTAGNAME)]
+        Interop.IHTMLElementCollection getElementsByTagName( System.String v);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_MERGEATTRIBUTES)]
+        void mergeAttributes( Interop.IHTMLElement mergeThis,  System.Object pvarFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_SETACTIVE)]
+        void setActive();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_FIREEVENT)]
+        System.Boolean fireEvent( System.String bstrEventName,  System.Object pvarEventObject);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_DRAGDROP)]
+        System.Boolean dragDrop();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_NORMALIZE)]
+        void normalize();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_GETATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute getAttributeNode( System.String bstrname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_SETATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute setAttributeNode( Interop.IHTMLDOMAttribute pattr);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_REMOVEATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute removeAttributeNode( Interop.IHTMLDOMAttribute pattr);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_HASCHILDNODES)]
+        System.Boolean hasChildNodes();
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_INSERTBEFORE)]
+        Interop.IHTMLDOMNode insertBefore( Interop.IHTMLDOMNode newChild,  System.Object refChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REMOVECHILD)]
+        Interop.IHTMLDOMNode removeChild( Interop.IHTMLDOMNode oldChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REPLACECHILD)]
+        Interop.IHTMLDOMNode replaceChild( Interop.IHTMLDOMNode newChild,  Interop.IHTMLDOMNode oldChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_CLONENODE)]
+        Interop.IHTMLDOMNode cloneNode( System.Boolean fDeep);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REMOVENODE)]
+        Interop.IHTMLDOMNode removeNode( System.Boolean fDeep);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_SWAPNODE)]
+        Interop.IHTMLDOMNode swapNode( Interop.IHTMLDOMNode otherNode);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REPLACENODE)]
+        Interop.IHTMLDOMNode replaceNode( Interop.IHTMLDOMNode replacement);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_APPENDCHILD)]
+        Interop.IHTMLDOMNode appendChild( Interop.IHTMLDOMNode newChild);
+
+        [DispId(Interop.DISPID_IHTMLGENERICELEMENT_NAMEDRECORDSET)]
+        System.Object namedRecordset( System.String dataMember,  System.Object hierarchy);
+
+        System.Object onbeforepaste
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREPASTE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREPASTE)]
+            set;
+        }
+        System.String outerText
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERTEXT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERTEXT)]
+            set;
+        }
+        Interop.IHTMLStyle style
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_STYLE)]
+            get;
+        }
+        Interop.IHTMLElement parentElement
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_PARENTELEMENT)]
+            get;
+        }
+        System.Object onhelp
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONHELP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONHELP)]
+            set;
+        }
+        System.Object ondataavailable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATAAVAILABLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATAAVAILABLE)]
+            set;
+        }
+        System.Object onfilterchange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONFILTERCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONFILTERCHANGE)]
+            set;
+        }
+        System.Object ondblclick
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDBLCLICK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDBLCLICK)]
+            set;
+        }
+        System.String tagName
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_TAGNAME)]
+            get;
+        }
+        System.Boolean inflateBlock
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_INFLATEBLOCK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_INFLATEBLOCK)]
+            set;
+        }
+        Interop.IHTMLDOMNode firstChild
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_FIRSTCHILD)]
+            get;
+        }
+        System.Object oncontextmenu
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCONTEXTMENU)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCONTEXTMENU)]
+            set;
+        }
+        System.Object onmousedown
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEDOWN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEDOWN)]
+            set;
+        }
+        System.Int32 clientWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTWIDTH)]
+            get;
+        }
+        System.Int32 scrollTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLTOP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLTOP)]
+            set;
+        }
+        System.Object onmouseover
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOVER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOVER)]
+            set;
+        }
+        System.Int32 readyStateValue
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_READYSTATEVALUE)]
+            get;
+        }
+        System.String language
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANGUAGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANGUAGE)]
+            set;
+        }
+        System.Object onpaste
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPASTE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPASTE)]
+            set;
+        }
+        System.Object onmouseenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSEENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSEENTER)]
+            set;
+        }
+        System.String nodeName
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODENAME)]
+            get;
+        }
+        System.Int16 tabIndex
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TABINDEX)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TABINDEX)]
+            set;
+        }
+        System.Object onresizestart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZESTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZESTART)]
+            set;
+        }
+        System.Object onresize
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONRESIZE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONRESIZE)]
+            set;
+        }
+        Interop.IHTMLDOMNode nextSibling
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NEXTSIBLING)]
+            get;
+        }
+        System.String title
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_TITLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_TITLE)]
+            set;
+        }
+        System.Object childNodes
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_CHILDNODES)]
+            get;
+        }
+        System.Object onmouseleave
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSELEAVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSELEAVE)]
+            set;
+        }
+        System.String dir
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_DIR)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_DIR)]
+            set;
+        }
+        System.Object onbeforeupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONBEFOREUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONBEFOREUPDATE)]
+            set;
+        }
+        System.Object onlosecapture
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONLOSECAPTURE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONLOSECAPTURE)]
+            set;
+        }
+        System.Object onselectstart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONSELECTSTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONSELECTSTART)]
+            set;
+        }
+        System.Object onactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONACTIVATE)]
+            set;
+        }
+        System.Object nodeValue
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODEVALUE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODEVALUE)]
+            set;
+        }
+        System.Object oncut
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCUT)]
+            set;
+        }
+        System.Object ondeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONDEACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONDEACTIVATE)]
+            set;
+        }
+        System.Int32 offsetHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETHEIGHT)]
+            get;
+        }
+        System.Object onrowexit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWEXIT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWEXIT)]
+            set;
+        }
+        System.Int32 sourceIndex
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_SOURCEINDEX)]
+            get;
+        }
+        System.Int32 clientLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTLEFT)]
+            get;
+        }
+        System.String lang
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANG)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANG)]
+            set;
+        }
+        System.Object onmouseup
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEUP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEUP)]
+            set;
+        }
+        System.Object oncellchange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCELLCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCELLCHANGE)]
+            set;
+        }
+        System.Object onkeypress
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYPRESS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYPRESS)]
+            set;
+        }
+        Interop.IHTMLElement offsetParent
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETPARENT)]
+            get;
+        }
+        System.String outerHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERHTML)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERHTML)]
+            set;
+        }
+        System.Int32 scrollWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLWIDTH)]
+            get;
+        }
+        System.Object ondrop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDROP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDROP)]
+            set;
+        }
+        System.Boolean isDisabled
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISDISABLED)]
+            get;
+        }
+        System.Object onmouseout
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOUT)]
+            set;
+        }
+        System.Boolean isTextEdit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ISTEXTEDIT)]
+            get;
+        }
+        System.Object ondragend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGEND)]
+            set;
+        }
+        System.Object recordNumber
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_RECORDNUMBER)]
+            get;
+        }
+        System.Object attributes
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_ATTRIBUTES)]
+            get;
+        }
+        System.Int32 offsetLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETLEFT)]
+            get;
+        }
+        System.Object recordset
+        {
+            [DispId(Interop.DISPID_IHTMLGENERICELEMENT_RECORDSET)]
+            get;
+        }
+        System.Object ondrag
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAG)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAG)]
+            set;
+        }
+        System.Boolean canHaveChildren
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CANHAVECHILDREN)]
+            get;
+        }
+        System.Object oncontrolselect
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONCONTROLSELECT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONCONTROLSELECT)]
+            set;
+        }
+        System.Object onbeforedeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONBEFOREDEACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONBEFOREDEACTIVATE)]
+            set;
+        }
+        System.Object onmove
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVE)]
+            set;
+        }
+        System.Object onrowsdelete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSDELETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSDELETE)]
+            set;
+        }
+        System.Int32 uniqueNumber
+        {
+            [DispId(Interop.DISPID_IHTMLUNIQUENAME_UNIQUENUMBER)]
+            get;
+        }
+        System.Object onfocusin
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSIN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSIN)]
+            set;
+        }
+        Interop.IHTMLElement parentTextEdit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_PARENTTEXTEDIT)]
+            get;
+        }
+        System.Object onkeyup
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYUP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYUP)]
+            set;
+        }
+        System.String className
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_CLASSNAME)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_CLASSNAME)]
+            set;
+        }
+        System.String id
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ID)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ID)]
+            set;
+        }
+        System.Object ondragenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGENTER)]
+            set;
+        }
+        System.Object onbeforecopy
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECOPY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECOPY)]
+            set;
+        }
+        System.Object onafterupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONAFTERUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONAFTERUPDATE)]
+            set;
+        }
+        System.Object onerrorupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONERRORUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONERRORUPDATE)]
+            set;
+        }
+        System.String contentEditable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CONTENTEDITABLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CONTENTEDITABLE)]
+            set;
+        }
+        System.Object onfocusout
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSOUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSOUT)]
+            set;
+        }
+        System.Boolean hideFocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_HIDEFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_HIDEFOCUS)]
+            set;
+        }
+        System.Int32 clientHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTHEIGHT)]
+            get;
+        }
+        System.Object onbeforecut
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECUT)]
+            set;
+        }
+        System.String scopeName
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCOPENAME)]
+            get;
+        }
+        System.Object onbeforeeditfocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREEDITFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREEDITFOCUS)]
+            set;
+        }
+        System.Int32 scrollLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLLEFT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLLEFT)]
+            set;
+        }
+        System.Object onpage
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONPAGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONPAGE)]
+            set;
+        }
+        System.Int32 clientTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTTOP)]
+            get;
+        }
+        System.Object ondragover
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGOVER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGOVER)]
+            set;
+        }
+        System.Object onlayoutcomplete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONLAYOUTCOMPLETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONLAYOUTCOMPLETE)]
+            set;
+        }
+        System.Object onmovestart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVESTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVESTART)]
+            set;
+        }
+        System.Object ondatasetchanged
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCHANGED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCHANGED)]
+            set;
+        }
+        System.Object ownerDocument
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE2_OWNERDOCUMENT)]
+            get;
+        }
+        System.Object onrowenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWENTER)]
+            set;
+        }
+        System.Int32 scrollHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLHEIGHT)]
+            get;
+        }
+        System.Object onbeforeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONBEFOREACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONBEFOREACTIVATE)]
+            set;
+        }
+        System.Object children
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_CHILDREN)]
+            get;
+        }
+        System.Int32 nodeType
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODETYPE)]
+            get;
+        }
+        System.String accessKey
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ACCESSKEY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ACCESSKEY)]
+            set;
+        }
+        System.Int32 offsetWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETWIDTH)]
+            get;
+        }
+        System.Object onresizeend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZEEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZEEND)]
+            set;
+        }
+        System.Object onclick
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONCLICK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONCLICK)]
+            set;
+        }
+        System.Object onreadystatechange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONREADYSTATECHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONREADYSTATECHANGE)]
+            set;
+        }
+        System.Object behaviorUrns
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_BEHAVIORURNS)]
+            get;
+        }
+        System.Object document
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_DOCUMENT)]
+            get;
+        }
+        System.String uniqueID
+        {
+            [DispId(Interop.DISPID_IHTMLUNIQUENAME_UNIQUEID)]
+            get;
+        }
+        System.Object onmousemove
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEMOVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEMOVE)]
+            set;
+        }
+        Interop.IHTMLCurrentStyle currentStyle
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CURRENTSTYLE)]
+            get;
+        }
+        System.Object oncopy
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCOPY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCOPY)]
+            set;
+        }
+        System.Boolean disabled
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_DISABLED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_DISABLED)]
+            set;
+        }
+        System.Object onmousewheel
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONMOUSEWHEEL)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONMOUSEWHEEL)]
+            set;
+        }
+        System.String tagUrn
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TAGURN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TAGURN)]
+            set;
+        }
+        System.Object onscroll
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONSCROLL)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONSCROLL)]
+            set;
+        }
+        System.Object onkeydown
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYDOWN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYDOWN)]
+            set;
+        }
+        System.Object readyState
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_READYSTATE)]
+            get;
+        }
+        System.Object ondragstart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDRAGSTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDRAGSTART)]
+            set;
+        }
+        Interop.IHTMLDOMNode parentNode
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_PARENTNODE)]
+            get;
+        }
+        System.Object all
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ALL)]
+            get;
+        }
+        Interop.IHTMLStyle runtimeStyle
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_RUNTIMESTYLE)]
+            get;
+        }
+        System.String innerText
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERTEXT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERTEXT)]
+            set;
+        }
+        Interop.IHTMLDOMNode lastChild
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_LASTCHILD)]
+            get;
+        }
+        System.Boolean canHaveHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CANHAVEHTML)]
+            get;
+        }
+        System.Object onrowsinserted
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSINSERTED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSINSERTED)]
+            set;
+        }
+        System.Object onpropertychange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE)]
+            set;
+        }
+        System.Object ondatasetcomplete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCOMPLETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCOMPLETE)]
+            set;
+        }
+        System.Object ondragleave
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGLEAVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGLEAVE)]
+            set;
+        }
+        System.Object onblur
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBLUR)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBLUR)]
+            set;
+        }
+        Interop.IHTMLDOMNode previousSibling
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_PREVIOUSSIBLING)]
+            get;
+        }
+        System.Int32 glyphMode
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_GLYPHMODE)]
+            get;
+        }
+        System.String innerHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERHTML)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERHTML)]
+            set;
+        }
+        System.Object onfocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONFOCUS)]
+            set;
+        }
+        System.Int32 offsetTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETTOP)]
+            get;
+        }
+        Interop.IHTMLFiltersCollection filters
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_FILTERS)]
+            get;
+        }
+        System.Boolean isContentEditable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISCONTENTEDITABLE)]
+            get;
+        }
+        System.Object onmoveend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVEEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVEEND)]
+            set;
+        }
+        System.Boolean isMultiLine
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISMULTILINE)]
+            get;
+        }
+    }
+
+    [ComImport()]
+    [Guid("3050f4a4-98b5-11cf-bb82-00aa00bdce0b")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    public interface IHTMLRectCollection
+    {
+        [DispId(Interop.DISPID_IHTMLRECTCOLLECTION_ITEM)]
+        System.Object item( System.Object pvarIndex);
+
+        System.Int32 length
+        {
+            [DispId(Interop.DISPID_IHTMLRECTCOLLECTION_LENGTH)]
+            get;
+        }
+        System.Object _newEnum
+        {
+            [DispId(Interop.DISPID_IHTMLRECTCOLLECTION__NEWENUM)]
+            get;
+        }
+    }
+
+
+}

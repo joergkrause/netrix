@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+        </style>
+	</head>
+	<body>
+	    <h1>Element Events</h1>
+        <p>
+        In this section we're going to examine element events. Each element in a page can fire (or invoke) a variety of events. By default neither
+        of these events is attached. You've to add an event handler explicitly. To add a handler you need to have an element's instance first.
+        </p>
+        <p>
+        To get the instance you retrieve an element through these ways:
+        </p>
+        <ul>
+            <li>Use the <code>GetElementsByTagName</code> method to get all elements of specific type (such as, all hyperlinks).</li>
+            <li>Use the <code>GetElementById</code> method, to get a specific element. That implies the element has its <code>Id</code> attribute set.</li>
+            <li>Use the <code>ElementDom</code> property to walk the document object model's hierarchy to reach the element you want.</li>
+        </ul>
+        <h1>Exercise</h1>
+        <p>In this exercise you use the Tab [Control], group [Element Events] to attach events to elements below:</p>
+        <div style="width:250px; height:50px; border:1px solid blue; text-align:center">This DIV can fire events</div>
+        <ol>
+            <li>A Hyperlink: <a href="http://www.google.com">Google</a></li>
+            <li>A Hyperlink: <a href="http://www.microsoft.com">Microsoft</a></li>
+            <li>A Hyperlink: <a href="http://www.apple.com">Apple</a></li>
+        </ol>
+        A button can even fire in design mode: <button title="My Button" value="Button1"></button>
+	</body>
+</html>

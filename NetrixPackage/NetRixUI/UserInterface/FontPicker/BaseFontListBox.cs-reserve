@@ -1,0 +1,243 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Windows.Forms;
+
+namespace Comzept.Genesis.WebEditing.TypeEditors.UserInterface.FontPickerControl
+{	
+	/// <summary>
+	/// Tells the FontListBox what Font list to load. The user list is filled by
+	/// the client application.
+	/// </summary>
+	public enum FontFamilyType
+	{
+		System,
+		Web,
+		Generic,
+		User
+	}
+
+	/// <summary>
+	/// Tells the FontListBox how to show the fonts (with or without Sample)
+	/// </summary>
+	public enum ListBoxType
+	{
+		FontName,
+		FontSample,
+		FontNameAndSample
+	}
+
+	/// <summary>
+	/// Creates a list box with sample fonts.
+	/// </summary>
+	public class BaseFontListBox : System.Windows.Forms.ListBox
+	{
+		private const int imageWidth = 16;
+		private Font nfont;
+		private ListBoxType _listtype = ListBoxType.FontNameAndSample;
+		private int maxwid = 0;
+		private string samplestr = " - NET.RIX";
+		private FontFamilyType type = FontFamilyType.System;
+		private string[] _userfonts = null;
+
+		public BaseFontListBox()
+		{				
+			IntegralHeight = false;
+			Sorted = false;
+			DrawMode = DrawMode.OwnerDrawVariable;	
+			base.SelectionMode = SelectionMode.MultiExtended;
+		}
+
+		public string SampleString
+		{
+			set
+			{
+				samplestr = value;
+			}
+			get
+			{
+				return samplestr;
+			}
+		}
+
+		public FontFamilyType FamilyType
+		{
+			set
+			{
+				type = value;
+			}
+			get
+			{
+				return type;
+			}
+		}
+
+		public string[] UserFonts
+		{
+			set
+			{
+				_userfonts = value;
+			}
+			get
+			{
+				return _userfonts;
+			}
+		}
+
+		public ListBoxType ListType
+		{
+			set
+			{
+				_listtype = value;
+			}
+			get
+			{
+				return _listtype;
+			}
+		}
+
+		public void Populate()
+		{
+			switch (type)
+			{
+				case FontFamilyType.Generic:
+					Items.Clear();
+					Items.AddRange(new string[] {"Sans-Serif", "Monospace", "Serif"});
+					break;
+				case FontFamilyType.System:
+				FontFamilyTypeSystem:
+					Items.Clear();
+					foreach (FontFamily ff in FontFamily.Families)
+					{
+						if(ff.IsStyleAvailable(FontStyle.Regular))
+							Items.Add(ff.Name);												
+					}
+					break;
+				case FontFamilyType.Web:
+					Items.Clear();
+					Items.AddRange(new string[] {"Verdana", "Tahoma", "Courier New", "Times"});
+					break;
+				case FontFamilyType.User:
+					Items.Clear();
+					if (UserFonts != null)
+					{
+						Items.AddRange(UserFonts);
+					}
+					break;
+				default:
+					goto FontFamilyTypeSystem;
+			}			
+			if(Items.Count > 0)
+				SelectedIndex=0;
+		}
+
+		protected override void OnMeasureItem(System.Windows.Forms.MeasureItemEventArgs e)
+		{	
+			if(e.Index > -1 && Items.Count > 0)
+			{
+				int w = 0;
+				string fontstring = Items[e.Index].ToString();						
+				Graphics g = CreateGraphics();
+				e.ItemHeight = (int)g.MeasureString(fontstring, new Font(fontstring,10)).Height;
+				w = (int)g.MeasureString(fontstring, new Font(fontstring,10)).Width;
+				if(ListType == ListBoxType.FontNameAndSample)
+				{
+					int h1 = (int)g.MeasureString(samplestr, new Font(fontstring,10)).Height;
+					int h2 = (int)g.MeasureString(Items[e.Index].ToString(), new Font("Arial",10)).Height;
+					int w1 = (int)g.MeasureString(samplestr, new Font(fontstring,10)).Width;
+					int w2 = (int)g.MeasureString(Items[e.Index].ToString(), new Font("Arial",10)).Width;
+					if(h1 > h2 )
+						h2 = h1;
+					e.ItemHeight = h2;
+					w = w1 + w2;
+				}
+				w += imageWidth * 2;
+				if(w > maxwid)
+					maxwid=w;
+				if(e.ItemHeight > 20)
+					e.ItemHeight = 20;
+			}						
+			base.OnMeasureItem(e);
+		}
+
+		protected override void OnDrawItem(System.Windows.Forms.DrawItemEventArgs e)
+		{	
+			if(e.Index > -1 && Items.Count > 0)
+			{
+				string fontstring = Items[e.Index].ToString();
+				switch (type)
+				{
+					case FontFamilyType.Generic:
+						switch (fontstring)
+						{
+							case "Sans-Serif":
+								nfont = new Font("Arial",10);
+								break;
+							case "Serif":
+								nfont = new Font("Times New Roman",10);
+								break;
+							case "Monospace":
+								nfont = new Font("Courier New",10);
+								break;
+						}
+						break;
+					case FontFamilyType.System:
+						nfont = new Font(fontstring, 10);
+						break;
+					case FontFamilyType.Web:
+						nfont = new Font(fontstring, 10);
+						break;
+				}
+				Font afont = new Font("Arial",10);
+				switch (ListType)
+				{
+					case ListBoxType.FontNameAndSample:
+						Graphics g = CreateGraphics();
+						int w = (int)g.MeasureString(fontstring, afont).Width;
+
+						if((e.State & DrawItemState.Selected)==0)
+						{
+							e.Graphics.FillRectangle(new SolidBrush(SystemColors.Window),
+								e.Bounds.X + imageWidth,e.Bounds.Y,e.Bounds.Width,e.Bounds.Height);
+							e.Graphics.DrawString(fontstring,afont,new SolidBrush(SystemColors.WindowText),
+								e.Bounds.X + imageWidth,e.Bounds.Y);	
+							e.Graphics.DrawString(samplestr,nfont,new SolidBrush(SystemColors.WindowText),
+								e.Bounds.X+w + imageWidth,e.Bounds.Y);	
+						}
+						else
+						{
+							e.Graphics.FillRectangle(new SolidBrush(SystemColors.Highlight),
+								e.Bounds.X + imageWidth,e.Bounds.Y,e.Bounds.Width,e.Bounds.Height);
+							e.Graphics.DrawString(fontstring,afont,new SolidBrush(SystemColors.HighlightText),
+								e.Bounds.X + imageWidth,e.Bounds.Y);
+							e.Graphics.DrawString(samplestr,nfont,new SolidBrush(SystemColors.HighlightText),
+								e.Bounds.X+w + imageWidth,e.Bounds.Y);
+						}	
+						break;
+					case ListBoxType.FontSample:
+						if((e.State & DrawItemState.Selected)==0)
+						{
+							e.Graphics.FillRectangle(new SolidBrush(SystemColors.Window),
+								e.Bounds.X + imageWidth,e.Bounds.Y,e.Bounds.Width,e.Bounds.Height);
+							e.Graphics.DrawString(fontstring,nfont,new SolidBrush(SystemColors.WindowText),
+								e.Bounds.X + imageWidth,e.Bounds.Y);
+					
+						}
+						else
+						{
+							e.Graphics.FillRectangle(new SolidBrush(SystemColors.Highlight),
+								e.Bounds.X + imageWidth,e.Bounds.Y,e.Bounds.Width,e.Bounds.Height);
+							e.Graphics.DrawString(fontstring,nfont,new SolidBrush(SystemColors.HighlightText),
+								e.Bounds.X + imageWidth,e.Bounds.Y);
+						}
+						break;
+				}
+				//e.Graphics.DrawImage(image, new Point(e.Bounds.X, e.Bounds.Y)); 
+			}
+			base.OnDrawItem(e);
+		}
+	}
+}

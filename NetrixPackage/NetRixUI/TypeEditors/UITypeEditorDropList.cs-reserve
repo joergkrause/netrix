@@ -1,0 +1,93 @@
+using System;
+using System.IO;
+using System.Windows.Forms;
+using System.Windows.Forms.Design;
+using System.ComponentModel;
+using System.Collections;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Design;
+
+
+namespace Comzept.Genesis.NetRix.WebEditing.TypeEditors
+{
+	/// <summary>
+	/// This type editor presents a list box.
+	/// </summary>
+	public class UITypeEditorDropList : System.Drawing.Design.UITypeEditor
+	{
+		private System.Windows.Forms.Design.IWindowsFormsEditorService service;
+
+        public static UIDropListEditor UIEditorCallback = null;
+
+		public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object val)
+		{
+            string value = val.ToString();
+			if (context != null && context.Instance != null && provider != null)
+			{
+				service = (IWindowsFormsEditorService) provider.GetService(typeof(IWindowsFormsEditorService));
+                if (service != null)
+				{
+                    bool StartOver = true;
+                    // look for a delegate attached by host app
+                    if (UITypeEditorDropList.UIEditorCallback != null)
+                    {           
+                        StartOver = false;        
+                        string oldVal = value;
+                        DialogResult result = UITypeEditorDropList.UIEditorCallback(context, ref value);
+                        if (result != DialogResult.OK)
+                        {
+                            value = oldVal;
+                            if (result == DialogResult.Ignore)
+                            {
+                                StartOver = true;
+                            }
+                        }
+                    } 
+                    if (StartOver)
+                    {
+                        ListBox lb = new ListBox();
+                        if (context.PropertyDescriptor.PropertyType.UnderlyingSystemType is System.Enum)
+                        {
+                            lb.Items.AddRange((object[]) Enum.GetValues(context.PropertyDescriptor.PropertyType));
+                        }
+                        lb.BorderStyle = BorderStyle.None;
+                        if (val is string)
+                        {
+                            lb.SelectedIndex = lb.FindStringExact(val.ToString(), 0);
+                        }
+                        lb.SelectedIndexChanged += new System.EventHandler(this.ValueChanged);
+                        // show list
+                        service.DropDownControl(lb);
+                        if (lb.SelectedItem == null)
+                        {
+                            value = "";
+                        } 
+                        else 
+                        {
+                            value = lb.SelectedItem.ToString();
+                        }
+                    }
+				}
+			}
+			return value;
+		}
+
+		public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+		{
+			if (context != null && context.Instance != null)
+			{
+				return UITypeEditorEditStyle.DropDown;
+			}
+			return this.GetEditStyle(context);
+		}
+
+		private void ValueChanged(object sender, EventArgs e)
+		{
+			if (service != null)
+			{
+				service.CloseDropDown();
+			}
+		}
+	}
+}

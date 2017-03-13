@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.Professional.UI.v40.Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix.UserInterface</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET40</DefineConstants>
+    <DocumentationFile>..\Documentation\GuruComponents.Netrix.Professional.UI.v35.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;LICENSED</DefineConstants>
+    <DocumentationFile>Comzept.Genesis.NetRix.UI.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Resx\ToolBox\Toolbox.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignBottom.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignCenterHor.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignCenterVert.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignLeft.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignRight.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignToBack.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignToFront.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DAlignTop.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DGridlayout.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\2DPosition.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\AutoLink.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\BringToBack.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\BringToFront.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\cell-split.gif" />
+    <EmbeddedResource Include="Resources\Toolstrip\Commands.bmp" />
+    <EmbeddedResource Include="Resources\Toolstrip\deletecell.gif" />
+    <EmbeddedResource Include="Resources\Toolstrip\DesignMode.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Copy.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Cut.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Delete.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Paste.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Redo.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Edit.Undo.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\File.New.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\File.Open.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\File.Print.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\File.Save.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Font.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Align.Center.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Align.Left.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Align.Right.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Bold.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Italic.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Sub.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Sup.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Format.Underline.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Glyphs.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Grid.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\HelpLine.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Indent.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\insertcell.gif" />
+    <EmbeddedResource Include="Resources\Toolstrip\MessageBoxIcon.Information.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Multiselection.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\NewDocument.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\OrderedList.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Outdent.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\row-split.gif" />
+    <EmbeddedResource Include="Resources\Toolstrip\Search.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Snap.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\SourceCode.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\SpiltVertical.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Style.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.ColumnSplit.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.DeleteCell.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.DeleteColumn.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.DeleteRow.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.InsertCell.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.InsertColumn.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.InsertRow.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.MergeCells.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.MergeDown.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.MergeLeft.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.MergeRight.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.MergeUp.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\Table.RowSplit.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\TableDesigner.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\UnOrderedList.ico" />
+    <EmbeddedResource Include="Resources\Toolstrip\ZeroBorders.ico" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\UserInterface\AddFont.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\BorderAll.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\BorderBottom.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\BorderLeft.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\BorderRight.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\BorderTop.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\CollectionEditorAddImage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\ColorPickerPopUpButton.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\FontDown.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\FontPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\FontUp.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\LayoutPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\ListsPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\OtherPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\PositionPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\PropertyGridCustomTab.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\RemoveFont.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Columns.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Layout_DirectionLtr.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Layout_DirectionRtl.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Lists_Position.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Lists_Style.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Lists_Without.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Misc_Arrows.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_PaddingMargin.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Position_Center.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Position_Justify.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Position_Left.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Position_Right.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Tables_CaptionPos.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Tables_ColSpan.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Tables_RowSpan.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\StyleEditor_Tables_RuleStyle.bmp" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\TablesPage.ico" />
+    <EmbeddedResource Include="Resources\Resx\UserInterface\TextPage.ico" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TypeEditors\AreaCollectionEditor.cs" />
+    <Compile Include="TypeEditors\UITypeEditorPixel.cs" />
+    <Compile Include="TypeEditors\UITypeEditorAngle.cs" />
+    <Compile Include="TypeEditors\Customizing\CustomPropertyDescriptor.cs" />
+    <Compile Include="TypeEditors\Customizing\DisplayNameAttribute.cs" />
+    <Compile Include="TypeEditors\LinkCollectionEditor.cs" />
+    <Compile Include="TypeEditors\MetaCollectionEditor.cs" />
+    <Compile Include="TypeEditors\OptionCollectionEditor.cs" />
+    <Compile Include="TypeEditors\OptionOnlyCollectionEditor.cs" />
+    <Compile Include="TypeEditors\ParamCollectionEditor.cs" />
+    <Compile Include="TypeEditors\ScriptCollectionEditor.cs" />
+    <Compile Include="TypeEditors\StyleCollectionEditor.cs" />
+    <Compile Include="TypeEditors\StyleSelectorEditor.cs" />
+    <Compile Include="TypeEditors\UITypeConverterColor.cs" />
+    <Compile Include="TypeEditors\UITypeConverterDropList.cs" />
+    <Compile Include="TypeEditors\UITypeConverterDropSelection.cs" />
+    <Compile Include="TypeEditors\UITypeConverterFile.cs" />
+    <Compile Include="TypeEditors\UITypeConverterInt.cs" />
+    <Compile Include="TypeEditors\UITypeConverterMetaEnum.cs" />
+    <Compile Include="TypeEditors\UITypeEditorColor.cs" />
+    <Compile Include="TypeEditors\UITypeEditorComment.cs" />
+    <Compile Include="TypeEditors\UITypeEditorFont.cs" />
+    <Compile Include="TypeEditors\UITypeEditorInt.cs" />
+    <Compile Include="TypeEditors\UITypeEditorScript.cs" />
+    <Compile Include="TypeEditors\UITypeEditorString.cs" />
+    <Compile Include="TypeEditors\UITypeEditorStyleStyle.cs" />
+    <Compile Include="TypeEditors\UITypeEditorUnit.cs" />
+    <Compile Include="TypeEditors\UITypeEditorUrl.cs" />
+    <Compile Include="UIControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AngleEditorControl\AngleChangedEventArgs.cs" />
+    <Compile Include="UserInterface\AngleEditorControl\AngleChangedEventHandler.cs" />
+    <Compile Include="UserInterface\AngleEditorControl\AngleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AngleEditorControl\AngleUserControl.Designer.cs">
+      <DependentUpon>AngleUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\ColorCancelHandler.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\ColorChangedHandler.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanelUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\Color_Enumerations.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\Utils.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\WellInfo\ColorComparer.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\WellInfo\ColorWellHelper.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPanel\WellInfo\ColorWellInfo.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorPickerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorSlider\ColorSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorSlider\ColorSliderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ColorPickerEx\ColorSlider\PixelData.cs" />
+    <Compile Include="UserInterface\ColorPickerEx\ColorSlider\UnsafeBitmap.cs" />
+    <Compile Include="UserInterface\FontPicker\ContentChangedEventHandler.cs" />
+    <Compile Include="UserInterface\FontPicker\FontForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FontPicker\FontListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FontPicker\FontPickerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FontPicker\FontPicker_Enum.cs" />
+    <Compile Include="UserInterface\PixelEditorUserControl\PixelEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\RulerControl\ScaleMode_Enum.cs">
+    </Compile>
+    <Compile Include="UserInterface\RulerControl\RulerAlignment_Enum.cs">
+    </Compile>
+    <Compile Include="UserInterface\RulerControl\Orientation_Enum.cs">
+    </Compile>
+    <Compile Include="UserInterface\RulerControl\Msg_Enum.cs">
+    </Compile>
+    <Compile Include="UserInterface\RulerControl\RulerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\StyleEditor\StyleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\StyleEditor\StyleEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\StyleEditor\UnitPair.cs" />
+    <Compile Include="UserInterface\ToolBox\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ToolBox\ItemPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ToolBox\Toolbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ToolBox\ToolboxEventArgs.cs" />
+    <Compile Include="UserInterface\ToolBox\ToolboxEventHandler.cs" />
+    <Compile Include="UserInterface\ToolBox\ToolboxItem.cs" />
+    <Compile Include="UserInterface\ToolBox\ToolboxTab.cs" />
+    <Compile Include="UserInterface\UIDelegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\UnitEditorUserControl\UnitEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <None Include="make.bat" />
+    <EmbeddedResource Include="Resources\Resx\Resource.ar.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\Resource.zh-CHS.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resx\NoColor.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Alphabetical.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Alphabetical_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Alphabetical_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Categorized.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Categorized_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Categorized_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Document.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Document_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Document_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Events.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Events_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Events_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_at.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_at_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_at_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_au.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_au_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_au_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_be.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_be_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_be_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_bz.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_bz_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_bz_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ca.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ca_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ca_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ch.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_chs.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_chs_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_chs_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ch_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ch_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_de.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_de_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_de_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_dk.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_dk_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_dk_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_eg.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_eg_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_eg_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_es.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_es_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_es_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fi.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fi_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fi_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fr.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fr_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_fr_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_it.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_it_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_it_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ja.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ja_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ja_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_pt.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_pt_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_pt_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ru.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ru_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_ru_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_uk.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_uk_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_uk_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_us.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_us_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Flag_us_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Standard.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Standard_Hover.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBar\Standard_Selected.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\AngleEditor.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\ColorEditor.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\ColorPicker.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\FontPicker.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\PixelEditor.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\PropertyGrid.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\Ruler.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\StyleEditor.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\StyleEditorForm.ico" />
+    <EmbeddedResource Include="Resources\Resx\ToolBox\UnitEditor.ico" />
+    <EmbeddedResource Include="Resources\Resx\WrongColor.ico" />
+    <EmbeddedResource Include="TypeEditors\UITypeEditorColor.resx">
+      <DependentUpon>UITypeEditorColor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeEditors\UITypeEditorDropList.resx" />
+    <EmbeddedResource Include="TypeEditors\UITypeEditorFont.resx">
+      <DependentUpon>UITypeEditorFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeEditors\UITypeEditorStyleStyle.resx">
+      <DependentUpon>UITypeEditorStyleStyle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\AngleEditorControl\AngleUserControl.resx">
+      <DependentUpon>AngleUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanel.resx">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanelForm.resx">
+      <DependentUpon>ColorPanelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorPanel\ColorPanelUserControl.resx">
+      <DependentUpon>ColorPanelUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorPickerUserControl.resx">
+      <DependentUpon>ColorPickerUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorSlider\ColorSlider.resx">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ColorPickerEx\ColorSlider\ColorSliderForm.resx">
+      <DependentUpon>ColorSliderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FontPicker\FontForm.resx">
+      <DependentUpon>FontForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FontPicker\FontPickerUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FontPickerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\PixelEditorUserControl\PixelEditor.resx">
+      <DependentUpon>PixelEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\RulerControl\RulerControl.resx">
+      <DependentUpon>RulerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\StyleEditor\StyleControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\StyleEditor\StyleEditorForm.resx">
+      <DependentUpon>StyleEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ToolBox\Toolbox.resx">
+      <DependentUpon>Toolbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\UnitEditorUserControl\UnitEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnitEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NetRixMain.key" />
+    <None Include="TypeEditors\UITypeEditorDropList.cs-reserve" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core2012.v45.ForDemo.csproj">
+      <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
+      <Name>Core2012.v45.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\HtmlFormatter\HtmlFormatter2012.v45.ForDemo.csproj">
+      <Project>{7504fb79-389d-40c9-b61c-79f4f01e8dcc}</Project>
+      <Name>HtmlFormatter2012.v45.ForDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

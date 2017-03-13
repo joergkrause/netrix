@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BDC113C-FC8A-4AEE-A94B-7C5DD23756F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuruComponents.EditorDemo</RootNamespace>
+    <AssemblyName>GuruComponents.EditorDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NetrixHtmlEditorDemo.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GuruComponents.Netrix.Resources">
+      <HintPath>E:\Dropbox\p\cats\Netrix\Netrix2.0\Glyphs\Release\GuruComponents.Netrix.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\DotNetResourceHandler.cs" />
+    <Compile Include="Commands\DotNetResourceHandlerFactory.cs" />
+    <Compile Include="Commands\RibbonCommands.cs" />
+    <Compile Include="Dialogs\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EditStyles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EditStyles.Designer.cs">
+      <DependentUpon>EditStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormatterOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormatterOptions.Designer.cs">
+      <DependentUpon>FormatterOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\IHtmleditor.cs" />
+    <Compile Include="Dialogs\InsertTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InsertTable.Designer.cs">
+      <DependentUpon>InsertTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Properties.Designer.cs">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SearchReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SearchReplace.Designer.cs">
+      <DependentUpon>SearchReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Spellchecker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Spellchecker.Designer.cs">
+      <DependentUpon>Spellchecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Ribbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\OutlineWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\OutlineWindow.Designer.cs">
+      <DependentUpon>OutlineWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ElementEventWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ElementEventWindow.Designer.cs">
+      <DependentUpon>ElementEventWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EventWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EventWindow.Designer.cs">
+      <DependentUpon>EventWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HtmlDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\HtmlDoc.Designer.cs">
+      <DependentUpon>HtmlDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HelpAndExplainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\HelpAndExplainWindow.Designer.cs">
+      <DependentUpon>HelpAndExplainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\PropertyWindow.Designer.cs">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialogs\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EditStyles.resx">
+      <DependentUpon>EditStyles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormatterOptions.resx">
+      <DependentUpon>FormatterOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InsertTable.resx">
+      <DependentUpon>InsertTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Properties.resx">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SearchReplace.resx">
+      <DependentUpon>SearchReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Spellchecker.resx">
+      <DependentUpon>Spellchecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Windows\OutlineWindow.resx">
+      <DependentUpon>OutlineWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ElementEventWindow.resx">
+      <DependentUpon>ElementEventWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EventWindow.resx">
+      <DependentUpon>EventWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\HtmlDoc.resx">
+      <DependentUpon>HtmlDoc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\HelpAndExplainWindow.resx">
+      <DependentUpon>HelpAndExplainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\PropertyWindow.resx">
+      <DependentUpon>PropertyWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="RibbonMarkup.ribbon">
+      <DependentUpon>RibbonMarkup.xml</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Syntaxfile\HTML.syn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Syntaxfile\JavaScript.syn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Html\Control.htm" />
+    <EmbeddedResource Include="Resources\Html\Edit.htm" />
+    <EmbeddedResource Include="Resources\Html\Styles.htm" />
+    <EmbeddedResource Include="Resources\Html\Helpline.htm" />
+    <EmbeddedResource Include="Resources\Html\Speller.htm" />
+    <EmbeddedResource Include="Resources\Html\Common.htm" />
+    <EmbeddedResource Include="Resources\Html\Text.htm" />
+    <EmbeddedResource Include="Resources\Html\Elements.htm" />
+    <EmbeddedResource Include="Resources\Html\Display.htm" />
+    <EmbeddedResource Include="Resources\Html\TableEditor.htm" />
+    <EmbeddedResource Include="Resources\Html\TableOptions.htm" />
+    <EmbeddedResource Include="Resources\Html\DragDrop.htm" />
+    <Content Include="Resources\Css\LinkedStylesheet.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RibbonMarkup.xml">
+      <Generator>RibbonGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>RibbonMarkup.log</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Icons\16x16\" />
+    <Folder Include="Resources\Icons\32x32\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Netrix2.0\Core\Core2015.v46.ForDemo.csproj">
+      <Project>{bffd7795-5295-428c-8c15-daf8028da532}</Project>
+      <Name>Core2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\Glyphs\ResourceLibrary2015.vcxproj">
+      <Project>{4485fb2d-3ae5-4f7e-a1cb-a334b2ec9d16}</Project>
+      <Name>ResourceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\NetRixMain\NetRix2015.v46.ForDemo.csproj">
+      <Project>{0d20b7bc-3b10-4849-8ce2-aeb260d6a352}</Project>
+      <Name>NetRix2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\NetRixUI\NetRixUI2015.v46.ForDemo.csproj">
+      <Project>{a66482e3-db0f-4f53-884e-b538595dfbd8}</Project>
+      <Name>NetRixUI2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HelpLine\HelpLine2015.v46.ForDemo.csproj">
+      <Project>{e53f5ec3-5464-4cd7-be38-67e79c09b470}</Project>
+      <Name>HelpLine2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HtmlFormatter\HtmlFormatter2015.v46.ForDemo.csproj">
+      <Project>{72ce54fb-a6f7-4da4-8506-e106eaf48076}</Project>
+      <Name>HtmlFormatter2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\SpellChecker\SpellChecker2015.v46.ForDemo.csproj">
+      <Project>{83186904-7ab3-483c-b602-83471c38bfa7}</Project>
+      <Name>SpellChecker2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\TableDesigner\TableDesigner2015.v46.ForDemo.csproj">
+      <Project>{5bfd19c7-3850-4714-9d77-74ddc561aba4}</Project>
+      <Name>TableDesigner2015.v46.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeEditorLib\CodeEditor\CodeEditor2015.v46.csproj">
+      <Project>{6f4aafee-3a1f-4d43-953e-f3e26f48c2f3}</Project>
+      <Name>CodeEditor2015.v46</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DockPanelLib\WinFormsUI\WinFormsUI2015.v46.csproj">
+      <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
+      <Name>WinFormsUI2015.v46</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RibbonLib\Ribbon\Ribbon2015.v46.csproj">
+      <Project>{0d4f3c14-b605-4471-b581-79784a89675c}</Project>
+      <Name>Ribbon2015.v46</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin\UICC.exe" "$(ProjectDir)RibbonMarkup.xml" "$(ProjectDir)RibbonMarkup.bml" /res:"$(ProjectDir)RibbonMarkup.rc" 
+
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin\rc.exe" /v "$(ProjectDir)RibbonMarkup.rc" 
+
+cmd /c "("C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\vcvars32.bat") &amp;&amp; ("C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe" /VERBOSE /NOENTRY /DLL /OUT:"$(ProjectDir)RibbonMarkup.ribbon" "$(ProjectDir)RibbonMarkup.res")"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

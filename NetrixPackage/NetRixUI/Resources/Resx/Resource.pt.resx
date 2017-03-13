@@ -1,0 +1,1757 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Attribute.href" type="System.String">
+		<value>Link</value>
+	</data>
+	<data name="Attribute.name" type="System.String">
+		<value>Nome</value>
+	</data>
+	<data name="Attribute.accessKey" type="System.String">
+		<value>Chave de Acesso</value>
+	</data>
+	<data name="Attribute.id" type="System.String">
+		<value>Identificador</value>
+	</data>
+	<data name="Attribute.(id)" type="System.String">
+		<value>Identificador</value>
+	</data>
+	<data name="Attribute.class" type="System.String">
+		<value>Classe de Estilo</value>
+	</data>
+	<data name="Attribute.style" type="System.String">
+		<value>Estilo</value>
+	</data>
+	<data name="Attribute.src" type="System.String">
+		<value>Arquivo de Fonte</value>
+	</data>
+	<data name="Attribute.width" type="System.String">
+		<value>Largura</value>
+	</data>
+	<data name="Attribute.height" type="System.String">
+		<value>Altura</value>
+	</data>
+	<data name="Exception.accesskey" type="System.String">
+		<value>Você somente pode escolher uma tecla (letra ou número) aqui.</value>
+	</data>
+	<data name="Attribute.disabled" type="System.String">
+		<value>Desabilitado</value>
+	</data>
+	<data name="Attribute.hideFocus" type="System.String">
+		<value>Foco Oculto</value>
+	</data>
+	<data name="Description.hideFocus" type="System.String">
+		<value>Especifica se é para ocultar o retângulo de foco quando esse objeto for selecionado</value>
+	</data>
+	<data name="Description.disabled" type="System.String">
+		<value>Verdadeiro se o campo estiver desabilitado</value>
+	</data>
+	<data name="Description.accesskey" type="System.String">
+		<value>A tecla de atalho para esse objeto</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus" type="System.String">
+		<value>Foco</value>
+	</data>
+	<data name="Description.ScriptOnFocus" type="System.String">
+		<value>Evento que ocorre quando esse objeto for selecionado</value>
+	</data>
+	<data name="Description.ScriptOnKeyPress" type="System.String">
+		<value>Evento que ocorre depois que o usuário teclar um caracter enquanto esse objeto estiver selecionado</value>
+	</data>
+	<data name="Attribute.ScriptOnKeyPress" type="System.String">
+		<value>Pressão de Tecla</value>
+	</data>
+	<data name="Description.tabIndex" type="System.String">
+		<value>O índice de tabulação para esse objeto</value>
+	</data>
+	<data name="Attribute.tabIndex" type="System.String">
+		<value>Índice Tabulador</value>
+	</data>
+	<data name="Attribute.ScriptOnClick" type="System.String">
+		<value>Clique</value>
+	</data>
+	<data name="Description.ScriptOnClick" type="System.String">
+		<value>Evento que ocorre quando o usuário clicar neste objeto</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOver" type="System.String">
+		<value>Sob a Cobertura do Mouse</value>
+	</data>
+	<data name="Description.ScriptOnMouseOver" type="System.String">
+		<value>Evento que ocorre quando o ponteiro do mouse entrar na área sob esse objeto</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOut" type="System.String">
+		<value>Perda da Cobertura do Mouse</value>
+	</data>
+	<data name="Description.ScriptOnMouseOut" type="System.String">
+		<value>Evento que ocorre quando o ponteiro do mouse deixar a área sob esse objeto</value>
+	</data>
+	<data name="Attribute.title" type="System.String">
+		<value>Título</value>
+	</data>
+	<data name="Description.title" type="System.String">
+		<value>O título desse objeto, que é utilizado como sua descrição do tipo 'ToolTip'</value>
+	</data>
+	<data name="Description.title_Acronym" type="System.String">
+		<value>Esse acrônimo é para o texto</value>
+	</data>
+	<data name="Description.href" type="System.String">
+		<value>A página para o qual esse link se liga</value>
+	</data>
+	<data name="Description.name" type="System.String">
+		<value>O nome do link usado como alvo para os links correlatos</value>
+	</data>
+	<data name="Description.ScriptOnMouseUp" type="System.String">
+		<value>Evento que ocorre quando o botão do mouse é solto quando sob esse objeto</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseUp" type="System.String">
+		<value>Sob A Soltura do Botão do Mouse</value>
+	</data>
+	<data name="Attribute.target" type="System.String">
+		<value>Frame Alvo</value>
+	</data>
+	<data name="Description.target" type="System.String">
+		<value>O alvo desse link</value>
+	</data>
+	<data name="Attribute.nohref" type="System.String">
+		<value>Sem Link</value>
+	</data>
+	<data name="Description.nohref" type="System.String">
+		<value>Define uma área não sensível no mapa da imagem</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus_Area" type="System.String">
+		<value>Sob Foco</value>
+	</data>
+	<data name="Description.ScriptOnFocus_Area" type="System.String">
+		<value>Disparado se essa área adquirir foco (torna-se ativo).</value>
+	</data>
+	<data name="Description.ScriptOnBlur_Area" type="System.String">
+		<value>Disparado se essa área perder o foco (torna-se inativo).</value>
+	</data>
+	<data name="Attribute.ScriptOnBlur_Area" type="System.String">
+		<value>Sem Foco</value>
+	</data>
+	<data name="Attribute.alt" type="System.String">
+		<value>Texto Alternativo</value>
+	</data>
+	<data name="Description.alt" type="System.String">
+		<value>O texto que aparece quando a imagem por detrás não é visível. O mesmo texto aparece em uma janela tipo popup se o mouse parar sob a área.</value>
+	</data>
+	<data name="Attribute.coords" type="System.String">
+		<value>Coordenadas da área específica</value>
+	</data>
+	<data name="Description.coords" type="System.String">
+		<value>Lista de coordenadas XY que definem o polígono da área. Retângulo: x-esquerdo, y-topo, x-direito, y-base. Círculo: x-centro, y-centro, raio. Nota. Quando o valor do raio é um valor em porcentagem, o usuário deve calcular o valor do raio final baseado na largura e altura do objeto associado. O raio deve ser o menor valor dos dois. Polígono: x1, y1, x2, y2, ..., xN, yN. O primeiro par de coordenadas x e y e o último devem ser os mesmos para fechar o polígono. Quando esses valores de coordenadas não são os mesmos, o usuário deve criar um par de coordenadas adicional para fechar o polígono.</value>
+	</data>
+	<data name="Attribute.shape" type="System.String">
+		<value>Forma de Área</value>
+	</data>
+	<data name="Description.shape" type="System.String">
+		<value>Lista de coordenadas XY que definem o polígono da área. Default: Especifica a região inteira. Retângulo: Define uma região retangular. Círculo: Define uma região circular. Polígono: Define uma região poligonal</value>
+	</data>
+	<data name="Attribute.color" type="System.String">
+		<value>Cor</value>
+	</data>
+	<data name="Description.color" type="System.String">
+		<value>A cor frontal do elemento</value>
+	</data>
+	<data name="Attribute.face" type="System.String">
+		<value>Fontes</value>
+	</data>
+	<data name="Description.face" type="System.String">
+		<value>Lista de fontes separadas por vírgula. O browser mostrará a primeira fonte na lista que estiver presente no sistema dos usuários.</value>
+	</data>
+	<data name="Attribute.size" type="System.String">
+		<value>Tamanho</value>
+	</data>
+	<data name="Description.size" type="System.String">
+		<value>Tamanho do elemento em unidades de fonte</value>
+	</data>
+	<data name="Attribute.ScriptOnSubmit" type="System.String">
+		<value>Enviar</value>
+	</data>
+	<data name="Description.ScriptOnSubmit" type="System.String">
+		<value>Evento que ocorre quando as informações deste formulário são enviadas</value>
+	</data>
+	<data name="Attribute.ScriptOnReset" type="System.String">
+		<value>Apagar</value>
+	</data>
+	<data name="Description.ScriptOnReset" type="System.String">
+		<value>Evento que ocorre quando as informações deste formulário são resetadas ao seu estado inicial.</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>Nome do formulário para uso com JavaScript</value>
+	</data>
+	<data name="Attribute.frameBorder" type="System.String">
+		<value>Borda ao redor do Frame</value>
+	</data>
+	<data name="Description.frameBorder" type="System.String">
+		<value>Especifica se é para desenhar uma borda ao redor do frame</value>
+	</data>
+	<data name="Attribute.noResize" type="System.String">
+		<value>Não Redimensionável</value>
+	</data>
+	<data name="Description.noResize" type="System.String">
+		<value>Indica se o usuário pode redimensionar o frame com o mouse</value>
+	</data>
+	<data name="Attribute.Scrolling" type="System.String">
+		<value>Rolagem</value>
+	</data>
+	<data name="Description.Scrolling" type="System.String">
+		<value>Define a aparência das barras de rolagem ao redor do frame</value>
+	</data>
+	<data name="Attribute.marginHeight" type="System.String">
+		<value>Margem de Topo/Base</value>
+	</data>
+	<data name="Description.marginHeight" type="System.String">
+		<value>O tamanho das margens de topo e base</value>
+	</data>
+	<data name="Attribute.marginWidth" type="System.String">
+		<value>Margem Esquerda/Direita</value>
+	</data>
+	<data name="Description.marginWidth" type="System.String">
+		<value>O tamanho das margens esquerda e direita</value>
+	</data>
+	<data name="Attribute.name_Frame" type="System.String">
+		<value>Nome do Frame</value>
+	</data>
+	<data name="Description.name_Frame" type="System.String">
+		<value>O nome do frame. Usado como nome para Atributos de alvo para links.</value>
+	</data>
+	<data name="Attribute.ScriptOnActivate" type="System.String">
+		<value>Ativação</value>
+	</data>
+	<data name="Description.ScriptOnActivate" type="System.String">
+		<value>Evento que ocorre quando um frame torna-se o objeto ativo na página</value>
+	</data>
+	<data name="Description.ScriptOnDeactivate" type="System.String">
+		<value>Evento que ocorre quando o frame não é mais o objeto ativo na página</value>
+	</data>
+	<data name="Attribute.ScriptOnDeactivate" type="System.String">
+		<value>Desativação</value>
+	</data>
+	<data name="Attribute.ScriptOnLoad" type="System.String">
+		<value>Frame Carregado</value>
+	</data>
+	<data name="Description.ScriptOnLoad" type="System.String">
+		<value>Evento que ocorre depois que o frame for carregado</value>
+	</data>
+	<data name="Attribute.ScriptOnScroll" type="System.String">
+		<value>Sob Rolagem</value>
+	</data>
+	<data name="Description.ScriptOnScroll" type="System.String">
+		<value>Evento que ocorre quando o usuário troca a posição de rolagem deste objeto</value>
+	</data>
+	<data name="Attribute.align" type="System.String">
+		<value>Alinhamento</value>
+	</data>
+	<data name="Description.align" type="System.String">
+		<value>O alinhamento do elemento de bloco</value>
+	</data>
+	<data name="Attribute.noshade" type="System.String">
+		<value>Sem Sombra</value>
+	</data>
+	<data name="Description.noshade" type="System.String">
+		<value>Especifica se é para desenhar uma régua horizontal com sombra 3-D</value>
+	</data>
+	<data name="Attribute.size_Hr" type="System.String">
+		<value>Espessura</value>
+	</data>
+	<data name="Description.size_Hr" type="System.String">
+		<value>A espessura da régua horizontal</value>
+	</data>
+	<data name="Attribute.charset" type="System.String">
+		<value>Conjunto de Caracteres</value>
+	</data>
+	<data name="Description.charset" type="System.String">
+		<value>Conjunto de Caracteres de um documento linkado</value>
+	</data>
+	<data name="Attribute.media" type="System.String">
+		<value>Mídia</value>
+	</data>
+	<data name="Description.media" type="System.String">
+		<value>Mídia Alvo que o documento linkado precisa</value>
+	</data>
+	<data name="Attribute.rel" type="System.String">
+		<value>Relação</value>
+	</data>
+	<data name="Description.rel" type="System.String">
+		<value>Relação com o alvo. Valores típicos são: 'stylesheet', 'next (próximo)', 'prev (anterior)', 'index (índice)'.</value>
+	</data>
+	<data name="Attribute.rev" type="System.String">
+		<value>Referência</value>
+	</data>
+	<data name="Description.rev" type="System.String">
+		<value>Referência retroativa ao documento alvo</value>
+	</data>
+	<data name="Attribute.type" type="System.String">
+		<value>Tipo</value>
+	</data>
+	<data name="Description.type" type="System.String">
+		<value>Tipo de documento linkado como código MIME. Use 'text/css' para stylesheets.</value>
+	</data>
+	<data name="Attribute.type_Ol" type="System.String">
+		<value>Tipo de Lista</value>
+	</data>
+	<data name="Description.type_Ol" type="System.String">
+		<value>O tipo de numerais para mostrar em uma lista ordenada</value>
+	</data>
+	<data name="Attribute.type_Ul" type="System.String" mimetype="	">
+		<value>Tipo de Lista</value>
+	</data>
+	<data name="Description.type_Ul" type="System.String">
+		<value>O tipo de marcadores para usar em uma lista não-ordenada ou esquema numérico em uma lista ordenada</value>
+	</data>
+	<data name="Attribute.type_Script" type="System.String">
+		<value>Tipo MIME</value>
+	</data>
+	<data name="Description.type_Script" type="System.String">
+		<value>O tipo MIME do conteúdo, por exemplo 'text/javascript'. Opcional. Sobrescreve o atributo 'language (linguagem)'.</value>
+	</data>
+	<data name="Attribute.language" type="System.String">
+		<value>Linguagem de Script</value>
+	</data>
+	<data name="Description.language" type="System.String">
+		<value>A linguagem de scripting que descreve o conteúdo, por exemplo 'JavaScript' ou 'VBScript'.</value>
+	</data>
+	<data name="Attribute.ScriptContent" type="System.String">
+		<value>Conteúdo de Script</value>
+	</data>
+	<data name="Description.ScriptContent" type="System.String">
+		<value>O conteúdo de script. Clique nas elípses para iniciar um editor integrado de script.</value>
+	</data>
+	<data name="Attribute.noWrap" type="System.String">
+		<value>Suprime Mudança Automática de Linha</value>
+	</data>
+	<data name="Description.noWrap" type="System.String">
+		<value>Especifica se linhas longas de textos devem sofrer mudança automática de linha.</value>
+	</data>
+	<data name="Attribute.clear" type="System.String">
+		<value>Site de Limpeza</value>
+	</data>
+	<data name="Description.clear" type="System.String">
+		<value>O comportamento de flutuação do texto ao redor do break (da parada)</value>
+	</data>
+	<data name="Attribute.vSpace" type="System.String">
+		<value>Espaço Vertical</value>
+	</data>
+	<data name="Description.vSpace" type="System.String">
+		<value>Espaço ou beirada vertical (topo e base) ao redor da imagem</value>
+	</data>
+	<data name="Attribute.hSpace" type="System.String">
+		<value>Espaço Horizontal</value>
+	</data>
+	<data name="Description.hSpace" type="System.String">
+		<value>Espaço ou beirada horizontal (esquerda e direita) ao redor da imagem</value>
+	</data>
+	<!-- GUI -->
+	<data name="StyleEditor.fontPickerFont.Title" type="System.String">
+		<value>Fontes</value>
+	</data>
+	<data name="StyleEditor.groupbox3.Text" type="System.String">
+		<value>Estilos de Fontes</value>
+	</data>
+	<data name="StyleEditor.label3.Text" type="System.String">
+		<value>Transformação de Letra</value>
+	</data>
+	<data name="StyleEditor.label2.Text" type="System.String">
+		<value>Espessura</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" type="System.String">
+		<value>Letra Minúscula</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontStyleItalic.Text" type="System.String">
+		<value>Itálico</value>
+	</data>
+	<data name="StyleEditor.groupBox2.Text" type="System.String">
+		<value>Atributos de Fonte</value>
+	</data>
+	<data name="StyleEditor.label36.Text" type="System.String">
+		<value>Tamanho específico ou genérico de fonte:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeAbsolute.Text" type="System.String">
+		<value>Nome do Tamanho:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeUnit.Text" type="System.String">
+		<value>Tamanho específico:</value>
+	</data>
+	<data name="StyleEditor.label1.Text" type="System.String">
+		<value>Cor do Texto</value>
+	</data>
+	<data name="StyleEditor.groupBox1.Text" type="System.String">
+		<value>Família de Fontes</value>
+	</data>
+	<data name="StyleEditor.label50.Text" type="System.String">
+		<value>Pode ser qualquer número de fontes ou fontes genéricas. O browser usa a primeira fonte local disponível da lista.</value>
+	</data>
+	<data name="StyleEditor.label49.Text" type="System.String">
+		<value>Lista Fam. de Fontes</value>
+	</data>
+	<data name="StyleEditor.label52.Text" type="System.String">
+		<value>Em Associação com o elemento tipo container</value>
+	</data>
+	<data name="StyleEditor.groupBox5.Text" type="System.String">
+		<value>Imagem de Fundo</value>
+	</data>
+	<data name="Attribute.HttpEquiv" type="System.String">
+		<value>HTTP Equiv</value>
+	</data>
+	<data name="Description.HttpEquiv" type="System.String">
+		<value>Determina que essa tag cria um cabeçalho HTTP.</value>
+	</data>
+	<data name="Attribute.name_Meta" type="System.String">
+		<value>Nome</value>
+	</data>
+	<data name="Description.name_Meta" type="System.String">
+		<value>O atributo do nome da tag META</value>
+	</data>
+	<data name="Attribute.Content" type="System.String">
+		<value>Conteúdo</value>
+	</data>
+	<data name="Description.Content" type="System.String">
+		<value>O conteúdo, o significado é determinado pela tag de Nome ou HttpEquiv.</value>
+	</data>
+	<data name="StyleEditor.label9.Text" type="System.String">
+		<value>Como posicionar a imagem?</value>
+	</data>
+	<data name="StyleEditor.label8.Text" type="System.String">
+		<value>Vertical:</value>
+	</data>
+	<data name="StyleEditor.label7.Text" type="System.String">
+		<value>Horizontal:</value>
+	</data>
+	<data name="StyleEditor.label6.Text" type="System.String">
+		<value>Fixação</value>
+	</data>
+	<data name="StyleEditor.label5.Text" type="System.String">
+		<value>Tile</value>
+	</data>
+	<data name="StyleEditor.label4.Text" type="System.String">
+		<value>Seleção de Imagem do disco:</value>
+	</data>
+	<data name="StyleEditor.buttonBackgroundImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.groupBox4.Text" type="System.String">
+		<value>Cor de Fundo</value>
+	</data>
+	<data name="StyleEditor.label27.Text" type="System.String">
+		<value>Cor de Fundo:</value>
+	</data>
+	<data name="StyleEditor.checkBox6.Text" type="System.String">
+		<value>Transparência</value>
+	</data>
+	<data name="StyleEditor.groupBox18.Text" type="System.String">
+		<value>Estilo de Margem, Beirada e Borda</value>
+	</data>
+	<data name="StyleEditor.label56.Text" type="System.String">
+		<value>Beirada</value>
+	</data>
+	<data name="StyleEditor.label55.Text" type="System.String">
+		<value>Largura de Borda</value>
+	</data>
+	<data name="StyleEditor.label54.Text" type="System.String">
+		<value>Estilo de Borda</value>
+	</data>
+	<data name="StyleEditor.label53.Text" type="System.String">
+		<value>Cor de Borda</value>
+	</data>
+	<data name="StyleEditor.label17.Text" type="System.String">
+		<value>Margem</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>Borda de Topo</value>
+	</data>
+	<data name="StyleEditor.groupBox25.Text" type="System.String">
+		<value>Todas as Bordas</value>
+	</data>
+	<data name="StyleEditor.groupBox24.Text" type="System.String">
+		<value>Borda Esquerda</value>
+	</data>
+	<data name="StyleEditor.groupBox17.Text" type="System.String">
+		<value>Borda Direita</value>
+	</data>
+	<data name="StyleEditor.groupBox12.Text" type="System.String">
+		<value>Borda da Base</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>Todas as Bordas</value>
+	</data>
+	<data name="StyleEditor.tabPageAll.Text" type="System.String">
+		<value>Tudo</value>
+	</data>
+	<data name="StyleEditor.tabPageLeft.Text" type="System.String">
+		<value>Esquerdo</value>
+	</data>
+	<data name="StyleEditor.tabPageRight.Text" type="System.String">
+		<value>Direito</value>
+	</data>
+	<data name="StyleEditor.tabPageTop.Text" type="System.String">
+		<value>Topo</value>
+	</data>
+	<data name="StyleEditor.tabPageBottom.Text" type="System.String">
+		<value>Base</value>
+	</data>
+	<data name="StyleEditor.groupBox21.Text" type="System.String">
+		<value>Decoração de Texto</value>
+	</data>
+	<data name="StyleEditor.label67.Text" type="System.String">
+		<value>Determina como o texto é mostrado em complemento às características da fonte.</value>
+	</data>
+	<data name="StyleEditor.groupBox8.Text" type="System.String">
+		<value>Direção e Indentação</value>
+	</data>
+	<data name="StyleEditor.label68.Text" type="System.String">
+		<value>Determina como o texto dentro do bloco é alinhado</value>
+	</data>
+	<data name="StyleEditor.label29.Text" type="System.String">
+		<value>Direção:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRemove.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="StyleEditor.label51.Text" type="System.String">
+		<value>Indentação de Bloco:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRtl.Text" type="System.String">
+		<value>dir. p/ esq.</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionLtr.Text" type="System.String">
+		<value>esq. p/ dir.</value>
+	</data>
+	<data name="StyleEditor.groupBox7.Text" type="System.String">
+		<value>Espaço de Linha e Caracter</value>
+	</data>
+	<data name="StyleEditor.label66.Text" type="System.String">
+		<value>Essas opções determinam como o texto flutuante é mostrado. O resultado depende da fonte escolhida.</value>
+	</data>
+	<data name="StyleEditor.label37.Text" type="System.String">
+		<value>Palavras:</value>
+	</data>
+	<data name="StyleEditor.label11.Text" type="System.String">
+		<value>Altura da Linha:</value>
+	</data>
+	<data name="StyleEditor.label12.Text" type="System.String">
+		<value>Caracteres:</value>
+	</data>
+	<data name="StyleEditor.groupBox6.Text" type="System.String">
+		<value>Alinhamento</value>
+	</data>
+	<data name="StyleEditor.groupBox19.Text" type="System.String">
+		<value>Alinhamento Horizontal</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignDisable.Text" type="System.String">
+		<value>Remove Opção</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignJustify.Text" type="System.String">
+		<value>Justifica</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignLeft.Text" type="System.String">
+		<value>Esquerdo</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignCenter.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignRight.Text" type="System.String">
+		<value>Direito</value>
+	</data>
+	<data name="StyleEditor.label10.Text" type="System.String">
+		<value>Centro</value>
+	</data>
+	<data name="StyleEditor.groupBox20.Text" type="System.String">
+		<value>Alinhamento Vertical</value>
+	</data>
+	<data name="StyleEditor.label65.Text" type="System.String">
+		<value>Determina como o elemento é alinhado verticalmente. Esse é comumente utilizado em tabelas e caixas.</value>
+	</data>
+	<data name="StyleEditor.groupBox10.Text" type="System.String">
+		<value>Opções de Flutuação de Texto</value>
+	</data>
+	<data name="StyleEditor.label48.Text" type="System.String">
+		<value>Suporte à Quebra de Linha</value>
+	</data>
+	<data name="StyleEditor.label47.Text" type="System.String">
+		<value>Estouro</value>
+	</data>
+	<data name="StyleEditor.label45.Text" type="System.String">
+		<value>Display</value>
+	</data>
+	<data name="StyleEditor.groupBox9.Text" type="System.String">
+		<value>Modo de Posição de um Objeto</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRemove.Text" type="System.String">
+		<value>Remove opção</value>
+	</data>
+	<data name="StyleEditor.label16.Text" type="System.String">
+		<value>Da borda esquerda:</value>
+	</data>
+	<data name="StyleEditor.label15.Text" type="System.String">
+		<value>Da borda do topo</value>
+	</data>
+	<data name="StyleEditor.label14.Text" type="System.String">
+		<value>Largura</value>
+	</data>
+	<data name="StyleEditor.label13.Text" type="System.String">
+		<value>Altura</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionAbsolute.Text" type="System.String">
+		<value>Absoluto</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRelative.Text" type="System.String">
+		<value>Flutuação de Texto</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionFixed.Text" type="System.String">
+		<value>Relativa sem flutuação</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionNone.Text" type="System.String">
+		<value>Nenhum</value>
+	</data>
+	<data name="StyleEditor.groupBox14.Text" type="System.String">
+		<value>Define Aparência de Ítem da Lista</value>
+	</data>
+	<data name="StyleEditor.label69.Text" type="System.String">
+		<value>Essas opções determinam a aparência de listas não-ordenadas. O resultado final depende também do texto escrito, da fonte e das características de espaçamento.</value>
+	</data>
+	<data name="StyleEditor.buttonListStyleImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.label22.Text" type="System.String">
+		<value>Posição:</value>
+	</data>
+	<data name="StyleEditor.label23.Text" type="System.String">
+		<value>Seleção de Imagem do disco:</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletImage.Text" type="System.String">
+		<value>Com marcador específico do usuário (escolha imagem):</value>
+	</data>
+	<data name="StyleEditor.textBoxListStyleImage.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.label21.Text" type="System.String">
+		<value>Estilo</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletStyle.Text" type="System.String">
+		<value>Com marcadores padrão (escolha estilo e posição):</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletNone.Text" type="System.String">
+		<value>Sem marcadores</value>
+	</data>
+	<data name="StyleEditor.groupBox23.Text" type="System.String">
+		<value>Colunas e Réguas</value>
+	</data>
+	<data name="StyleEditor.label42.Text" type="System.String">
+		<value>Largura da Régua:</value>
+	</data>
+	<data name="StyleEditor.label41.Text" type="System.String">
+		<value>Estilo da Régua</value>
+	</data>
+	<data name="StyleEditor.label40.Text" type="System.String">
+		<value>Cor da Régua</value>
+	</data>
+	<data name="StyleEditor.label39.Text" type="System.String">
+		<value>Colunas</value>
+	</data>
+	<data name="StyleEditor.groupBox16.Text" type="System.String">
+		<value>Tabelas</value>
+	</data>
+	<data name="StyleEditor.label44.Text" type="System.String">
+		<value>Comprimento da Linha</value>
+	</data>
+	<data name="StyleEditor.label43.Text" type="System.String">
+		<value>Comprimento da Coluna</value>
+	</data>
+	<data name="StyleEditor.label38.Text" type="System.String">
+		<value>Posição da Legenda</value>
+	</data>
+	<data name="StyleEditor.linkLabel1.Text" type="System.String">
+		<value>Clique aqui para ajustar</value>
+	</data>
+	<data name="StyleEditor.label71.Text" type="System.String">
+		<value>Altura e Largura são escolhidas na Tabulação de Posição:</value>
+	</data>
+	<data name="StyleEditor.tabPageFonts.Text" type="System.String">
+		<value>Fonte</value>
+	</data>
+	<data name="StyleEditor.tabPageBackground.Text" type="System.String">
+		<value>Fundo</value>
+	</data>
+	<data name="StyleEditor.tabPageBorders.Text" type="System.String">
+		<value>Bordas</value>
+	</data>
+	<data name="StyleEditor.tabPageLayout.Text" type="System.String">
+		<value>Layout</value>
+	</data>
+	<data name="StyleEditor.tabPagePosition.Text" type="System.String">
+		<value>Posição</value>
+	</data>
+	<data name="StyleEditor.tabPageLists.Text" type="System.String">
+		<value>Listas</value>
+	</data>
+	<data name="StyleEditor.tabPageTables.Text" type="System.String">
+		<value>Tabelas</value>
+	</data>
+	<data name="StyleEditor.tabPageMisc.Text" type="System.String">
+		<value>Miscelâneas</value>
+	</data>
+	<data name="StyleEditor.groupBox15.Text" type="System.String">
+		<value>Interface do Usuário</value>
+	</data>
+	<data name="StyleEditor.label70.Text" type="System.String">
+		<value>Opções de Cursor e Barra de Rolagem não estão disponíveis neste momento para nenhum browser diferente do Internet Explorer.</value>
+	</data>
+	<data name="StyleEditor.label64.Text" type="System.String">
+		<value>Trilha</value>
+	</data>
+	<data name="StyleEditor.label63.Text" type="System.String">
+		<value>Luz 3D</value>
+	</data>
+	<data name="StyleEditor.label62.Text" type="System.String">
+		<value>Destaque</value>
+	</data>
+	<data name="StyleEditor.label61.Text" type="System.String">
+		<value>Sombra Intensa</value>
+	</data>
+	<data name="StyleEditor.label60.Text" type="System.String">
+		<value>Sombra</value>
+	</data>
+	<data name="StyleEditor.label59.Text" type="System.String">
+		<value>Base</value>
+	</data>
+	<data name="StyleEditor.label26.Text" type="System.String">
+		<value>Face (Fonte)</value>
+	</data>
+	<data name="StyleEditor.label25.Text" type="System.String">
+		<value>Cores dos elementos de Barra de Rolagem:</value>
+	</data>
+	<data name="StyleEditor.label24.Text" type="System.String">
+		<value>Cursor:</value>
+	</data>
+	<data name="StyleEditor.comboBoxCursor.Text" type="System.String">
+		<value>cursor</value>
+	</data>
+	<data name="StyleEditor.label58.Text" type="System.String">
+		<value>Seta</value>
+	</data>
+	<data name="StyleEditor.groupBox22.Text" type="System.String">
+		<value>Visibilidade</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisiblityRemove.Text" type="System.String">
+		<value>Remove opção da folha</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityNone.Text" type="System.String">
+		<value>Nenhum</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityHidden.Text" type="System.String">
+		<value>Oculto</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityVisible.Text" type="System.String">
+		<value>Visível</value>
+	</data>
+	<data name="StyleEditor.label31.Text" type="System.String">
+		<value>Se o elemento estiver invisível (Visibilidade = Oculto) é necessário trocar o comportamento com o scripting para mostrá-lo mais tarde. Se não houver ferramentas de scripting utilizadas, ajuste para 'None (Nenhum)' ou 'Remove'.</value>
+	</data>
+	<data name="StyleEditor.button1.Text" type="System.String">
+		<value>Sincroniza valores esquerdo, direito e de base com o de topo. </value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonNo.Text" type="System.String">
+		<value>Padrão</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonCont.Text" type="System.String">
+		<value>Contínuo</value>
+	</data>
+	<data name="ColorPanelUserControl.groupBox2.Text" type="System.String">
+		<value>Opções de Tipos</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonBrightness.Text" type="System.String">
+		<value>Brilho</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonName.Text" type="System.String">
+		<value>Nome</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonDistance.Text" type="System.String">
+		<value>Distância</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonSaturation.Text" type="System.String">
+		<value>Saturação</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonWeb.Text" type="System.String">
+		<value>Web</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonCustom.Text" type="System.String">
+		<value>Pessoal</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonSystem.Text" type="System.String">
+		<value>Sistema</value>
+	</data>
+	<data name="ColorPanelUserControl.label1.Text" type="System.String">
+		<value>ESC p/ cancelar</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonNoColor.Text" type="System.String">
+		<value>Sem Cor</value>
+	</data>
+	<data name="MetaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Seleciona uma tag META para editar:</value>
+	</data>
+	<data name="AreaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Seleciona uma tag AREA para editar:</value>
+	</data>
+	<data name="ScriptCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Seleciona um bloco de script para editar:</value>
+	</data>
+	<data name="StylesheetCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Seleciona um tag de stylesheet linkada para editar:</value>
+	</data>
+	<data name="MetaCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="StylesheetCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="ScriptCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="AreaCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="MetaCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="ScriptCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="StylesheetCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="AreaCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="UnitEditor.radioButtonPercent.Text" type="System.String">
+		<value>%</value>
+	</data>
+	<data name="UnitEditor.radioButtonPixel.Text" type="System.String">
+		<value>Pixel</value>
+	</data>
+	<data name="UnitEditor.radioButtonOff.Text" type="System.String">
+		<value>Desligado</value>
+	</data>
+	<data name="Description.aLink" type="System.String">
+		<value>A cor dos links ativos nessa página</value>
+	</data>
+	<data name="Description.bgProperties" type="System.String">
+		<value>Especifica se a imagem de fundo deve ser fixa ou rolável</value>
+	</data>
+	<data name="Description.backGround" type="System.String">
+		<value>A URL da imagem de fundo nesta página</value>
+	</data>
+	<data name="Description.bgColor" type="System.String">
+		<value>A cor do fundo da página</value>
+	</data>
+	<data name="Description.bottomMargin" type="System.String">
+		<value>O tamanho em pixels da margem da base</value>
+	</data>
+	<data name="Description.leftMargin" type="System.String">
+		<value>O tamanho em pixels da margem esquerda</value>
+	</data>
+	<data name="Description.link" type="System.String">
+		<value>A cor dos links na página</value>
+	</data>
+	<data name="Description.rightMargin" type="System.String">
+		<value>O tamanho em pixels da margem direita</value>
+	</data>
+	<data name="Description.scroll" type="System.String">
+		<value>Indica se é para mostrar as barras de rolagem</value>
+	</data>
+	<data name="Description.text" type="System.String">
+		<value>A cor de frente do texto nessa página</value>
+	</data>
+	<data name="Description.topMargin" type="System.String">
+		<value>O tamanho em pixels na margem de topo dessa página</value>
+	</data>
+	<data name="Description.vLink" type="System.String">
+		<value>A cor de links visitados nessa página</value>
+	</data>
+	<data name="Attribute.aLink" type="System.String">
+		<value>Cor de Link Ativo</value>
+	</data>
+	<data name="Attribute.bgProperties" type="System.String">
+		<value>Propriedades de Fundo</value>
+	</data>
+	<data name="Attribute.background" type="System.String">
+		<value>Imagem de Fundo</value>
+	</data>
+	<data name="Attribute.bgColor" type="System.String">
+		<value>Cor de Fundo</value>
+	</data>
+	<data name="Attribute.bottomMargin" type="System.String">
+		<value>Margem da base</value>
+	</data>
+	<data name="Attribute.leftMargin" type="System.String">
+		<value>Margem esquerda</value>
+	</data>
+	<data name="Attribute.link" type="System.String">
+		<value>Cor de Link</value>
+	</data>
+	<data name="Attribute.rightMargin" type="System.String">
+		<value>Margem direita</value>
+	</data>
+	<data name="Attribute.scroll" type="System.String">
+		<value>Barras de Rolagem</value>
+	</data>
+	<data name="Attribute.text" type="System.String">
+		<value>Cor de Texto</value>
+	</data>
+	<data name="Attribute.topMargin" type="System.String">
+		<value>Margem de Topo</value>
+	</data>
+	<data name="Attribute.vLink" type="System.String">
+		<value>Cor de link visitado</value>
+	</data>
+	<data name="Description.ScriptBlocks" type="System.String">
+		<value>Acesso ao editor de bloco de script</value>
+	</data>
+	<data name="Attribute.ScriptBlocks" type="System.String">
+		<value>Blocos de Script</value>
+	</data>
+	<data name="Description.NamedMetaTags" type="System.String">
+		<value>Editar tags META padrão no editor</value>
+	</data>
+	<data name="Attribute.NamedMetaTags" type="System.String">
+		<value>Nome META</value>
+	</data>
+	<data name="Description.HttpEquivMetaTags" type="System.String">
+		<value>Editar tags META padrão no editor</value>
+	</data>
+	<data name="Attribute.HttpEquivMetaTags" type="System.String">
+		<value>META httpEquiv</value>
+	</data>
+	<data name="Description.LinkedStylesheets" type="System.String">
+		<value>Editar links para documentos de estilo linkados</value>
+	</data>
+	<data name="Attribute.LinkedStylesheets" type="System.String">
+		<value>Stylesheets Linkados</value>
+	</data>
+	<data name="Description.Title_Body" type="System.String">
+		<value>O título identifica os conteúdos do documento e é mostrado na barra de cabeçalho da janela. Importante para mecanismos de busca.
+</value>
+	</data>
+	<data name="Attribute.Title_Body" type="System.String">
+		<value>Título</value>
+	</data>
+	<data name="Description.URL" type="System.String">
+		<value>A URL ou caminho de onde o documento foi carregado</value>
+	</data>
+	<data name="Attribute.URL" type="System.String">
+		<value>URL</value>
+	</data>
+	<data name="Description.LoadTime56K" type="System.String">
+		<value>Tempo médio para carregar o documento com Modem de 56K. A título de informação.</value>
+	</data>
+	<data name="Attribute.LoadTime56K" type="System.String">
+		<value>Tempo de Carregamento (56K)</value>
+	</data>
+	<data name="Description.FileSize" type="System.String">
+		<value>Tamanho atual do arquivo em bytes</value>
+	</data>
+	<data name="Attribute.FileSize" type="System.String">
+		<value>Tamanho do Arquivo</value>
+	</data>
+	<data name="Description.FileLastModified" type="System.String">
+		<value>Registro de quando o documento foi modificado pela última vez</value>
+	</data>
+	<data name="Attribute.FileLastModified" type="System.String">
+		<value>Última Modificação</value>
+	</data>
+	<data name="Description.NumberOfFrames" type="System.String">
+		<value>Número absoluto de frames, sem contar a estrutura provida.</value>
+	</data>
+	<data name="Attribute.NumberOfFrames" type="System.String">
+		<value>Número de Frames</value>
+	</data>
+	<data name="Description.NumberOfStylesheets" type="System.String">
+		<value>Número de stylesheets linkados</value>
+	</data>
+	<data name="Attribute.NumberOfStylesheets" type="System.String">
+		<value>Número de Stylesheets</value>
+	</data>
+	<data name="Description.NumberOfImages" type="System.String">
+		<value>Número de Imagens dentro do documento.</value>
+	</data>
+	<data name="Attribute.NumberOfImages" type="System.String">
+		<value>Número de imagens</value>
+	</data>
+	<data name="Description.NumberOfScriptBlocks" type="System.String">
+		<value>Número de blocos de script</value>
+	</data>
+	<data name="Attribute.NumberOfScriptBlocks" type="System.String">
+		<value>Número de SCRIPTs</value>
+	</data>
+	<data name="Description.NumberOfMetaTags" type="System.String">
+		<value>Número de tags META</value>
+	</data>
+	<data name="Attribute.NumberOfMetaTags" type="System.String">
+		<value>Número de METAs</value>
+	</data>
+	<data name="Attribute.cellPadding" type="System.String">
+		<value>Beirada de Célula</value>
+	</data>
+	<data name="Description.cellPadding" type="System.String">
+		<value>O espaço entre a borda e os conteúdos de cada célula na tabela</value>
+	</data>
+	<data name="Attribute.cellSpacing" type="System.String">
+		<value>Espaçamento de Célula</value>
+	</data>
+	<data name="Description.cellSpacing" type="System.String">
+		<value>O espaçamento entre as células na tabela</value>
+	</data>
+	<data name="Description.rules" type="System.String">
+		<value>Réguas são áreas entre colunas. Essa propriedade define a aparência das réguas</value>
+	</data>
+	<data name="Attribute.rules" type="System.String">
+		<value>Réguas</value>
+	</data>
+	<data name="Description.borderColor" type="System.String">
+		<value>A cor da borda de cada célula na tabela</value>
+	</data>
+	<data name="Attribute.borderColor" type="System.String">
+		<value>Cor de Borda</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>Número total de linhas na tabela. Não calcula atributos de comprimento. A título de informação apenas.</value>
+	</data>
+	<data name="Attribute.rows" type="System.String">
+		<value>Número de Linhas</value>
+	</data>
+	<data name="Description.valign" type="System.String">
+		<value>O alinhamento vertical do conteúdo interno à célula.</value>
+	</data>
+	<data name="Attribute.valign" type="System.String">
+		<value>Alinhamento Vertical</value>
+	</data>
+	<data name="Description.colspan" type="System.String">
+		<value>O número de colunas que a célula comporta.</value>
+	</data>
+	<data name="Attribute.colSpan" type="System.String">
+		<value>Comprimento de Coluna</value>
+	</data>
+	<data name="Description.rowspan" type="System.String">
+		<value>O número de linhas que a célula comporta.</value>
+	</data>
+	<data name="Attribute.rowSpan" type="System.String">
+		<value>Comprimento de Linha</value>
+	</data>
+	<data name="Description.cells" type="System.String">
+		<value>O número total de células nessa linha. Pode variar linha a linha devido ao atributo de comprimento de linha nas células em outras linhas.</value>
+	</data>
+	<data name="Attribute.cells" type="System.String">
+		<value>Número de Células</value>
+	</data>
+	<data name="FontPickerUserControl.ff.Text" type="System.String">
+		<value>Caixa de Seleção de Fonte</value>
+	</data>
+	<data name="FontForm.buttonOK.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="FontForm.buttonCancel.Text" type="System.String">
+		<value>Cancelar</value>
+	</data>
+	<data name="FontForm.label1.Text" type="System.String">
+		<value>Digite quantas fontes forem necessárias linha por linha.</value>
+	</data>
+	<data name="FontForm.tabPage4.Text" type="System.String">
+		<value>Fontes do Usuário</value>
+	</data>
+	<data name="FontForm.textBoxFreeFont.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="FontForm.tabPage1.Text" type="System.String">
+		<value>Sistema</value>
+	</data>
+	<data name="FontForm.tabPage2.Text" type="System.String">
+		<value>Web</value>
+	</data>
+	<data name="FontForm.tabPage3.Text" type="System.String">
+		<value>Genérico</value>
+	</data>
+	<data name="Attribute.border" type="System.String">
+		<value>Borda</value>
+	</data>
+	<data name="Description.border" type="System.String">
+		<value>Largura da borda em pixel. Se o elemento estiver dentro de um link, esse valor deve explicitamente se setado para 0 para remover bordas colocadas automaticamente.</value>
+	</data>
+	<data name="Attribute.dateTime" type="System.String">
+		<value>DataHora</value>
+	</data>
+	<data name="Description.dateTime" type="System.String">
+		<value>Informação padrão de dia e hora sobre quando o elemento foi modificado pelo última vez. Formato Esperado: JJJJ-MM-DDThh:mm:ssTZD</value>
+	</data>
+	<data name="Attribute.cite" type="System.String">
+		<value>Citação</value>
+	</data>
+	<data name="Description.cite" type="System.String">
+		<value>Comentário sobre o conteúdo</value>
+	</data>
+	<data name="HtmlDocumentStructure.ToString" type="System.String">
+		<value>[DOCUMENTO]</value>
+	</data>
+	<data name="CustomPropertyTab.Tooltip" type="System.String">
+		<value>Nomes de Atributos</value>
+	</data>
+	<!-- Categories -->
+	<data name="Category.Element Style" type="System.String">
+		<value>Estilo</value>
+	</data>
+	<data name="Category.Element Behavior" type="System.String">
+		<value>Comportamento</value>
+	</data>
+	<data name="Category.Standard Values" type="System.String">
+		<value>Valores de Base</value>
+	</data>
+	<data name="Category.Javascript Events" type="System.String">
+		<value>Eventos JavaScript</value>
+	</data>
+	<data name="Category.Element Layout" type="System.String">
+		<value>Layout</value>
+	</data>
+	<data name="Category.Element Appearance" type="System.String">
+		<value>Aparência</value>
+	</data>
+	<data name="Category.Content" type="System.String">
+		<value>Conteúdo</value>
+	</data>
+	<data name="Category.Information" type="System.String">
+		<value>Informação</value>
+	</data>
+	<!-- End Categories -->
+	<data name="Attribute.ScriptOnResize" type="System.String">
+		<value>Redimensionamento</value>
+	</data>
+	<data name="Description.ScriptOnResize" type="System.String">
+		<value>Executado se o usuário redimensiona o elemento usando scripting.</value>
+	</data>
+	<data name="Attribute.ScriptOnChange" type="System.String">
+		<value>Modificação</value>
+	</data>
+	<data name="Description.ScriptOnChange" type="System.String">
+		<value>Executado se o conteúdo do controle foi modificado pelo usuário.</value>
+	</data>
+	<data name="Attribute.cols" type="System.String">
+		<value>Colunas</value>
+	</data>
+	<data name="Description.cols" type="System.String">
+		<value>Número de Colunas medidas no caracter da largura padrão.</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>Número de Linhas para caracteres com fonte padrão.</value>
+	</data>
+	<data name="Attribute.type_LI" type="System.String">
+		<value>Type de elemento de lista</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseDown" type="System.String">
+		<value>Botão de Mouse Apertado</value>
+	</data>
+	<data name="Description.ScriptOnMouseDown" type="System.String">
+		<value>Executado se o usuário mantém clicado o botão do mouse imediatamente após o botão ser apertado e antes de ser solto.</value>
+	</data>
+	<data name="Description.id" type="System.String">
+		<value>Identificador para usar o elemento de dentro do código JavaScript ou como estilo alvo.</value>
+	</data>
+	<data name="Description.style" type="System.String">
+		<value>Estilo embutido. usa as elipses [...] para iniciar o editor integrado de estilo.</value>
+	</data>
+	<data name="Description.class" type="System.String">
+		<value>Classe de estilo (CSS), define uma relação para uma definição de classe de estilo, usando a sintaxe ".name" nos arquivos ou tags CSS.</value>
+	</data>
+	<data name="Attribute.ScriptOnDblClick" type="System.String">
+		<value>Duplo Clique</value>
+	</data>
+	<data name="StyleEditor.groupBox11.Text" type="System.String">
+		<value>Título da Tabela</value>
+	</data>
+	<data name="StyleEditor.fontPickerFont.Caption" type="System.String">
+		<value>Caixa de Seleção de Fonte</value>
+	</data>
+	<data name="StyleEditor.Combos.NoValue" type="System.String">
+		<value>Sem Valor</value>
+	</data>
+	<data name="StyleEditor.Combos.Inherit" type="System.String">
+		<value>Herança</value>
+	</data>
+	<data name="StyleEditor.Combos.Normal" type="System.String">
+		<value>Padrão</value>
+	</data>
+	<data name="StyleEditor.Combos.None" type="System.String">
+		<value>Nenhum</value>
+	</data>
+	<data name="StyleEditor.Combos.Solid" type="System.String">
+		<value>Sólido</value>
+	</data>
+	<data name="StyleEditor.Combos.Double" type="System.String">
+		<value>Dobro</value>
+	</data>
+	<data name="StyleEditor.Combos.Dotted" type="System.String">
+		<value>Pontilhado</value>
+	</data>
+	<data name="StyleEditor.Combos.Dashed" type="System.String">
+		<value>Hifenizado</value>
+	</data>
+	<data name="StyleEditor.Combos.OutSet" type="System.String">
+		<value>Outset</value>
+	</data>
+	<data name="StyleEditor.Combos.Groove" type="System.String">
+		<value>Groove</value>
+	</data>
+	<data name="StyleEditor.Combos.InSet" type="System.String">
+		<value>Inset</value>
+	</data>
+	<data name="StyleEditor.Combos.Ridge" type="System.String">
+		<value>Ridge</value>
+	</data>
+	<data name="StyleEditor.Combos.Hidden" type="System.String">
+		<value>Oculto</value>
+	</data>
+	<data name="StyleEditor.Combos.Pixel" type="System.String">
+		<value>Pixel</value>
+	</data>
+	<data name="StyleEditor.Combos.Point" type="System.String">
+		<value>Ponto</value>
+	</data>
+	<data name="StyleEditor.Combos.Percentage" type="System.String">
+		<value>Percentual</value>
+	</data>
+	<data name="StyleEditor.Combos.Pica" type="System.String">
+		<value>Pica</value>
+	</data>
+	<data name="StyleEditor.Combos.Millimeter" type="System.String">
+		<value>Milímetro</value>
+	</data>
+	<data name="StyleEditor.Combos.Centimeter" type="System.String">
+		<value>Centímetro</value>
+	</data>
+	<data name="StyleEditor.Combos.m-Size" type="System.String">
+		<value>Tamanho-M</value>
+	</data>
+	<data name="StyleEditor.Combos.x-Height" type="System.String">
+		<value>Altura-X</value>
+	</data>
+	<data name="StyleEditor.Combos.Bold" type="System.String">
+		<value>Negrito</value>
+	</data>
+	<data name="StyleEditor.Combos.Bolder" type="System.String">
+		<value>Em Negrito</value>
+	</data>
+	<data name="StyleEditor.Combos.Lighter" type="System.String">
+		<value>Mais Leve</value>
+	</data>
+	<data name="StyleEditor.Combos.CapitalLetter" type="System.String">
+		<value>Palavras Iniciadas com Maiúscula</value>
+	</data>
+	<data name="StyleEditor.Combos.Uppercase" type="System.String">
+		<value>Letra Maiúscula</value>
+	</data>
+	<data name="StyleEditor.Combos.Lowercase" type="System.String">
+		<value>Letra Minúscula</value>
+	</data>
+	<data name="StyleEditor.Combos.Top" type="System.String">
+		<value>Topo</value>
+	</data>
+	<data name="StyleEditor.Combos.Center" type="System.String">
+		<value>Centro</value>
+	</data>
+	<data name="StyleEditor.Combos.Bottom" type="System.String">
+		<value>Base</value>
+	</data>
+	<data name="StyleEditor.Combos.Absolute" type="System.String">
+		<value>Absoluto</value>
+	</data>
+	<data name="StyleEditor.Combos.AsBlock" type="System.String">
+		<value>Como Bloco</value>
+	</data>
+	<data name="StyleEditor.Combos.InlineText" type="System.String">
+		<value>Texto</value>
+	</data>
+	<data name="StyleEditor.Combos.ListItem" type="System.String">
+		<value>Item de Lista</value>
+	</data>
+	<data name="StyleEditor.Combos.Middle" type="System.String">
+		<value>Meio</value>
+	</data>
+	<data name="StyleEditor.Combos.Baseline" type="System.String">
+		<value>Linha de Base de Comparação</value>
+	</data>
+	<data name="StyleEditor.Combos.Sub" type="System.String">
+		<value>Sub</value>
+	</data>
+	<data name="StyleEditor.Combos.Super" type="System.String">
+		<value>Super</value>
+	</data>
+	<data name="StyleEditor.Combos.TopOfText" type="System.String">
+		<value>Topo de texto</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomOfText" type="System.String">
+		<value>Base de texto</value>
+	</data>
+	<data name="StyleEditor.Combos.Underline" type="System.String">
+		<value>Sublinhado</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOver" type="System.String">
+		<value>Sobre-tachado</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOut" type="System.String">
+		<value>Tachado</value>
+	</data>
+	<data name="StyleEditor.Combos.BlinkText" type="System.String">
+		<value>Piscar</value>
+	</data>
+	<data name="StyleEditor.Combos.Visible" type="System.String">
+		<value>Visível</value>
+	</data>
+	<data name="StyleEditor.Combos.NotVisible" type="System.String">
+		<value>Não Visível</value>
+	</data>
+	<data name="StyleEditor.Combos.ScrollableArea" type="System.String">
+		<value>Rolável</value>
+	</data>
+	<data name="StyleEditor.Combos.Automatic" type="System.String">
+		<value>Automático</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndLeft" type="System.String">
+		<value>Topo e Esquerda</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndRight" type="System.String">
+		<value>Topo e Direita</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndLeft" type="System.String">
+		<value>Base e Esquerda</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndRight" type="System.String">
+		<value>Base e Direita</value>
+	</data>
+	<data name="StyleEditor.Combos.Repeat" type="System.String">
+		<value>Repetir</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatRows" type="System.String">
+		<value>Repetir Linhas</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatColumns" type="System.String">
+		<value>Repetir Colunas</value>
+	</data>
+	<data name="StyleEditor.Combos.NoRepeat" type="System.String">
+		<value>Sem Repetição</value>
+	</data>
+	<data name="StyleEditor.Combos.Standard" type="System.String">
+		<value>Padrão</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtremSmall" type="System.String">
+		<value>Extremamente Pequeno</value>
+	</data>
+	<data name="StyleEditor.Combos.VerySmall" type="System.String">
+		<value>Muito Pequeno</value>
+	</data>
+	<data name="StyleEditor.Combos.small" type="System.String">
+		<value>Pequeno</value>
+	</data>
+	<data name="StyleEditor.Combos.Medium" type="System.String">
+		<value>Médio</value>
+	</data>
+	<data name="StyleEditor.Combos.Large" type="System.String">
+		<value>Grande</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtraLarge" type="System.String">
+		<value>Muito Grande</value>
+	</data>
+	<data name="StyleEditor.Combos.XXL" type="System.String">
+		<value>Extremamente Grande</value>
+	</data>
+	<data name="StyleEditor.Combos.Inside List" type="System.String">
+		<value>Lista Interna</value>
+	</data>
+	<data name="StyleEditor.Combos.Outside List" type="System.String">
+		<value>Lista Externa</value>
+	</data>
+	<data name="StyleEditor.Combos.Square" type="System.String">
+		<value>Retângulo</value>
+	</data>
+	<data name="StyleEditor.Combos.Disc" type="System.String">
+		<value>Disco</value>
+	</data>
+	<data name="StyleEditor.Combos.Circle" type="System.String">
+		<value>Círculo</value>
+	</data>
+	<data name="StyleEditor.Combos.Thin" type="System.String">
+		<value>Fino</value>
+	</data>
+	<data name="StyleEditor.Combos.Thick" type="System.String">
+		<value>Grosso</value>
+	</data>
+	<data name="StyleEditor.Combos.Auto" type="System.String">
+		<value>Automático</value>
+	</data>
+	<data name="StyleEditor.Combos.Cross" type="System.String">
+		<value>Cruz</value>
+	</data>
+	<data name="StyleEditor.Combos.Hand" type="System.String">
+		<value>Mão</value>
+	</data>
+	<data name="StyleEditor.Combos.HandIE5Only" type="System.String">
+		<value>Mão (IE 5 apenas)</value>
+	</data>
+	<data name="StyleEditor.Combos.MoveObject" type="System.String">
+		<value>Move</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeRightBorder" type="System.String">
+		<value>Redimensionamento Direito</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperRightCorner" type="System.String">
+		<value>Redim. Dir. Mais a Cima</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperLeftCorner" type="System.String">
+		<value>Redim. Esq. Mais a Cima</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeTopBorder" type="System.String">
+		<value>Redim. de Topo</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerRightCorner" type="System.String">
+		<value>Redim. Direito de Base</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerLeftCorner" type="System.String">
+		<value>Redim. Esquerdo de Base</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeBottomBorder" type="System.String">
+		<value>Redim. de Base</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLeftBorder" type="System.String">
+		<value>Redimensionamento Esquerdo</value>
+	</data>
+	<data name="StyleEditor.Combos.InsideTextbox" type="System.String">
+		<value>Texto (I-Beam)</value>
+	</data>
+	<data name="StyleEditor.Combos.Wait(Hourglass)" type="System.String">
+		<value>Espera (Hourglass)</value>
+	</data>
+	<data name="StyleEditor.Combos.Help" type="System.String">
+		<value>Ajuda</value>
+	</data>
+	<data name="StyleEditor.Combos.Scroll" type="System.String">
+		<value>Rolagem</value>
+	</data>
+	<data name="StyleEditor.Combos.Fixed" type="System.String">
+		<value>Fixo</value>
+	</data>
+	<data name="StyleEditor.Combos.Pre" type="System.String">
+		<value>Pré-formatado</value>
+	</data>
+	<data name="StyleEditor.Combos.NoWrap" type="System.String">
+		<value>Sem mudança automática de linha</value>
+	</data>
+	<data name="PropertyGrid.BackgroundPropertyType" type="System.String">
+		<value>Rolagem,Fixo</value>
+	</data>
+	<data name="PropertyGrid.ScrollType" type="System.String">
+		<value>Sim,Não,Auto</value>
+	</data>
+	<data name="PropertyGrid.Boolean" type="System.String">
+		<value>Sim,Não</value>
+	</data>
+	<data name="PropertyGrid.AreaShape" type="System.String">
+		<value>Default,Retângulo,Círculo,Polígono</value>
+	</data>
+	<data name="PropertyGrid.BreakClearEnum" type="System.String">
+		<value>Nenhum,Esquerdo,Direito,Todo</value>
+	</data>
+	<data name="PropertyGrid.HorizontalAlign" type="System.String">
+		<value>Sem ajuste,Esquerdo,Centro,Direito,Justificado</value>
+	</data>
+	<data name="PropertyGrid.VerticalAlign" type="System.String">
+		<value>Sem ajuste,Topo,Meio,Base</value>
+	</data>
+	<data name="PropertyGrid.FontUnit" type="System.String">
+		<value>Sem Valor,Extremamente pequeno,Muito pequeno,Pequeno,Médio,Grande,Muito grande,Extremamente Grande,Menor,Maior</value>
+	</data>
+	<data name="PropertyGrid.LinkElementMedia" type="System.String">
+		<value>Tudo,Tela,TTY,TV,Projetor,Handheld,Imprimir,Braille,Aural</value>
+	</data>
+	<data name="PropertyGrid.UnorderedListType" type="System.String">
+		<value>Default,Círculo,Disco,Retângulo</value>
+	</data>
+	<data name="PropertyGrid.ListType" type="System.String">
+		<value>Default,Numérico,Letra minúscula,Letra maiúscula,Numeral Romano minúsculo,Numeral Romano maiúsculo,Disco,Círculo,Retângulo</value>
+	</data>
+	<data name="Description.AreaTags" type="System.String">
+		<value>Coleção de áreas interativas registradas neste MAPa.</value>
+	</data>
+	<data name="Attribute.AreaTags" type="System.String">
+		<value>Áreas</value>
+	</data>
+	<data name="Attribute.index" type="System.String">
+		<value>Posição</value>
+	</data>
+	<data name="Description.index" type="System.String">
+		<value>Posição ordinal deste elemento de opção nesta caixa de lista.</value>
+	</data>
+	<data name="PropertyGrid.OrderedListType" type="System.String">
+		<value>Default,Númerico,Letra minúscula,Letra maiúscula,Numeral Romano minúsculo,Numeral Romano maiúsculo</value>
+	</data>
+	<data name="PropertyGrid.RulesType" type="System.String">
+		<value>Sem ajuste,Nenhum,Grupos,Linhas,Colunas,Tudo</value>
+	</data>
+	<data name="Attribute.maxLength" type="System.String">
+		<value>Máximo Comprimento de Campo</value>
+	</data>
+	<data name="Attribute.readOnly" type="System.String">
+		<value>Apenas para Leitura</value>
+	</data>
+	<data name="Attribute.value" type="System.String">
+		<value>Valor</value>
+	</data>
+	<data name="Description.maxLength" type="System.String">
+		<value>O máximo número de caracteres que o usuário pode entrar nesse campo.</value>
+	</data>
+	<data name="Description.ScriptOnDblClick" type="System.String">
+		<value>Executado se o usuário der clique duplo na área ativa de elementos.</value>
+	</data>
+	<data name="Description.readOnly" type="System.String">
+		<value>O conteúdo dos campos é apenas para leitura; isto é, o usuário não pode modificar o conteúdo.</value>
+	</data>
+	<data name="Description.value" type="System.String">
+		<value>O valor que o formulário enviará. É o texto na superfície dos elementos.</value>
+	</data>
+	<data name="Attribute.checked" type="System.String">
+		<value>Verificado</value>
+	</data>
+	<data name="Attribute.selected" type="System.String">
+		<value>Selecionado</value>
+	</data>
+	<data name="Attribute.text_Field" type="System.String">
+		<value>Texto de Opção</value>
+	</data>
+	<data name="Description.checked" type="System.String">
+		<value>O campo de caixa de verificação ou botão de rádio está ativado (verificado).</value>
+	</data>
+	<data name="Description.selected" type="System.String">
+		<value>O campo está selecionado por default.</value>
+	</data>
+	<data name="Description.text_Field" type="System.String">
+		<value>O texto que o usuário pode ver na lista de dropdown. Se nenhum valor é configurado, esse texto é enviado, também.</value>
+	</data>
+	<data name="StyleEditorForm.Text" type="System.String">
+		<value>Editor de Estilo</value>
+	</data>
+	<data name="StyleEditorForm.buttonOK.Text" type="System.String">
+		<value>OK</value>
+	</data>
+	<data name="Description.src" type="System.String">
+		<value>Arquivo fonte ou URL</value>
+	</data>
+	<data name="OptionCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar</value>
+	</data>
+	<data name="OptionCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Selecionar uma opção para editar:</value>
+	</data>
+	<data name="OptionCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remove</value>
+	</data>
+	<data name="Attribute.multiple" type="System.String">
+		<value>Múltiplo</value>
+	</data>
+	<data name="Description.multiple" type="System.String">
+		<value>Determina se (ou não) o usuário pode selecionar duas ou mais elementos de opção ao mesmo tempo usando a tecla CTRL.</value>
+	</data>
+	<data name="Attribute.Options" type="System.String">
+		<value>Opções</value>
+	</data>
+	<data name="Description.Options" type="System.String">
+		<value>Coleção de Opções de onde o id de lista cria.</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" type="System.String">
+		<value>Imagem para Fundo</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" type="System.String">
+		<value>Arquivos de Imagem(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|Todos os Arquivos (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Title" type="System.String">
+		<value>Imagem para Elemento de Lista</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Filter" type="System.String">
+		<value>Arquivos de Imagem(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|Todos os Arquivos (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.labelColumnGap.Text" type="System.String">
+		<value>Intervalo entre Colunas:</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerRoman" type="System.String">
+		<value>Romano Minúsculo</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperRoman" type="System.String">
+		<value>Romano Maiúsculo</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerAlpha" type="System.String">
+		<value>Alfabeto Minúsculo</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperAlpha" type="System.String">
+		<value>Alfabeto Maiúsculo</value>
+	</data>
+	<data name="StyleEditor.Combos.Decimal" type="System.String">
+		<value>Decimal</value>
+	</data>
+	<data name="StyleEditor.Combos.DecimalZero" type="System.String">
+		<value>Decimal, Zero</value>
+	</data>
+	<data name="StyleEditor.Combos.Left" type="System.String">
+		<value>Esquerdo</value>
+	</data>
+	<data name="StyleEditor.Combos.Right" type="System.String">
+		<value>Direito</value>
+	</data>
+	<data name="PropertyGrid.TableColumnHorizontalAlign" type="System.String">
+		<value>Sem Ajuste,Esquerdo,Direito,Centro,Caracter,Justificado</value>
+	</data>
+	<data name="Attribute.char" type="System.String">
+		<value>Caracter de Alinhamento</value>
+	</data>
+	<data name="Attribute.charoff" type="System.String">
+		<value>Espaço de Caracter de Alinhamento</value>
+	</data>
+	<data name="Description.char" type="System.String">
+		<value>O caracter usado para alinhar o conteúdo do elemento.</value>
+	</data>
+	<data name="Description.charoff" type="System.String">
+		<value>A Distância entre o caracter ao qual o conteúdo está alinhado e a borda direita do elemento.</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Editar Elementos de Estilo</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.addButton.Text" type="System.String">
+		<value>Adicionar Seletor</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.removeButton.Text" type="System.String">
+		<value>Remover Seletor</value>
+	</data>
+	<data name="Attribute.StylesheetContent" type="System.String">
+		<value>Conteúdo de Stylesheet</value>
+	</data>
+	<data name="Description.StylesheetContent" type="System.String">
+		<value>Essa Propriedade dá acesso ao conteúdo do conteúdo do arquivo de estilo linkado.</value>
+	</data>
+	<data name="Attribute.usemap" type="System.String">
+		<value>Usar Mapa</value>
+	</data>
+	<data name="Description.usemap" type="System.String">
+		<value>Use essa definição de MAP para construir um mapa de imagem clicável (site do cliente)</value>
+	</data>
+	<data name="Attribute.action" type="System.String">
+		<value>Ação</value>
+	</data>
+	<data name="Attribute.encType" type="System.String">
+		<value>Tipo Codificado</value>
+	</data>
+	<data name="Attribute.method" type="System.String">
+		<value>Método</value>
+	</data>
+	<data name="Attribute.name_Form" type="System.String">
+		<value>Nome do Formulário</value>
+	</data>
+	<data name="Description.action" type="System.String">
+		<value>Caminho completo ou relativo para uma URL que é chamada quando o formulário é enviado.</value>
+	</data>
+	<data name="Description.encType" type="System.String">
+		<value>O tipo codificado. Esse valor depende do conteúdo que é enviado. Para uploads de arquivo, use o Multipart.</value>
+	</data>
+	<data name="Description.method" type="System.String">
+		<value>O método HTTP que o browser usa para enviar o formulário. Formulários padrão são enviados via POST.</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>O nome do formulário para uso em ambientes de scripting.</value>
+	</data>
+	<data name="Attribute.size_Select" type="System.String">
+		<value>Opções Visíveis</value>
+	</data>
+	<data name="Description.size_Select" type="System.String">
+		<value>Número de opções visíveis. Se há mais opções visíveis, o valor de 1 produzirá uma lista de drop down enquanto valores maiores que 1 produzirão uma caixa de lista. Se há mais opções, a caixa de lista terá uma barra de rolagem.</value>
+	</data>
+	<data name="Attribute.label" type="System.String">
+		<value>Etiqueta</value>
+	</data>
+	<data name="Description.label" type="System.String">
+		<value>O texto no elemento selecionado mostrado ao usuário se o conteúdo de opção não for usado.</value>
+	</data>
+	<!-- NEW -->
+	<data name="Attribute.Selector" type="System.String">
+		<value>Seletor</value>
+	</data>
+	<data name="Description.Selector" type="System.String">
+		<value>A régua do stylesheet usada para definir um tipo de estilo. Escolha o tipo apropriado na propriedade Tipo de Seletor. O prefixo será ajustado da forma correta.</value>
+	</data>
+	<data name="Attribute.SelectorType" type="System.String">
+		<value>Tipo de Seletor</value>
+	</data>
+	<data name="Description.SelectorType" type="System.String">
+		<value>O tipo de seletor, isto é: classe, identificador, régua de bloco, ou global (asterisco). Para tipo padrão escreva nomes de tag HTML.</value>
+	</data>
+	<data name="Attribute.SelectorName" type="System.String">
+		<value>Nome do Seletor</value>
+	</data>
+	<data name="Description.SelectorName" type="System.String">
+		<value>O nome do seletor. Escolha, ou um nome qualquer, ou um nome de elemento HTML.</value>
+	</data>
+	<data name="Attribute.EmbeddedStylesheets" type="System.String">
+		<value>Estilos Embutidos</value>
+	</data>
+	<data name="Description.EmbeddedStylesheets" type="System.String">
+		<value>Elementos de Estilos dentro da seção Head do documento que contém as definições de estilos embutidos.</value>
+	</data>
+	<data name="Attribute.Caption" type="System.String">
+		<value>Título</value>
+	</data>
+	<data name="Description.Caption" type="System.String">
+		<value>Título da tabela. Use a opção Com Título para adicionar ou remover o título.</value>
+	</data>
+	<data name="Attribute.WithCaption" type="System.String">
+		<value>Com Título</value>
+	</data>
+	<data name="Description.WithCaption" type="System.String">
+		<value>Se estiver ajustado para Sim, a tabela terá um título que pode ser formatado e alinhado.</value>
+	</data>
+	<data name="PropertyGrid.StyleRuleType" type="System.String">
+		<value>Padrão,Classe,ID,Pseudo,Global</value>
+	</data>
+	<data name="height" type="System.String">
+		<value></value>
+	</data>
+</root>

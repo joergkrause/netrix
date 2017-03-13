@@ -1,0 +1,127 @@
+
+set frG=/res:TypeEditors\UITypeEditorColor.resources,       GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorColor.resources
+set frH=/res:TypeEditors\UITypeEditorComment.resources,     GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorComment.resources
+set frI=/res:TypeEditors\UITypeEditorFont.resources,        GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorFont.resources
+set frJ=/res:TypeEditors\UITypeEditorInt.resources,         GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorInt.resources
+set frK=/res:TypeEditors\UITypeEditorScript.resources,      GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorScript.resources
+set frL=/res:TypeEditors\UITypeEditorString.resources,      GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorString.resources
+set frM=/res:TypeEditors\UITypeEditorStyleStyle.resources,  GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorStyleStyle.resources
+set frN=/res:TypeEditors\UITypeEditorUnit.resources,        GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorUnit.resources
+set frO=/res:TypeEditors\UITypeEditorUrl.resources,         GuruComponents.Netrix.WebEditing.TypeEditors.UITypeEditorUrl.resources
+
+set ir6=/res:Resources\UserInterface\AddFont.ico,           GuruComponents.Netrix.Resources.UserInterface.AddFont.ico
+set irA=/res:Resources\UserInterface\RemoveFont.ico,        GuruComponents.Netrix.Resources.UserInterface.RemoveFont.ico
+set ir7=/res:Resources\UserInterface\FontDown.ico,          GuruComponents.Netrix.Resources.UserInterface.FontDown.ico
+set ir8=/res:Resources\UserInterface\FontUp.ico,            GuruComponents.Netrix.Resources.UserInterface.FontUp.ico
+
+set ir9=/res:Resources\UserInterface\PropertyGridCustomTab.ico,GuruComponents.Netrix.Resources.UserInterface.PropertyGridCustomTab.ico
+
+set ir10=/res:Resources\NoColor.ico,                        GuruComponents.Netrix.Resources.UserInterface.NoColor.ico
+set ir11=/res:Resources\WrongColor.ico,                     GuruComponents.Netrix.Resources.UserInterface.WrongColor.ico
+
+set ir12=/res:Resources\ToolBar\Alphabetical.ico,           GuruComponents.Netrix.Resources.ToolBar.Alphabetical.ico
+set ir13=/res:Resources\ToolBar\Alphabetical_Hover.ico,     GuruComponents.Netrix.Resources.ToolBar.Alphabetical_Hover.ico
+set ir14=/res:Resources\ToolBar\Alphabetical_Selected.ico,  GuruComponents.Netrix.Resources.ToolBar.Alphabetical_Selected.ico
+set ir15=/res:Resources\ToolBar\Document.ico,               GuruComponents.Netrix.Resources.ToolBar.Document.ico
+set ir16=/res:Resources\ToolBar\Document_Hover.ico,         GuruComponents.Netrix.Resources.ToolBar.Document_Hover.ico
+set ir17=/res:Resources\ToolBar\Document_Selected.ico,      GuruComponents.Netrix.Resources.ToolBar.Document_Selected.ico
+set ir18=/res:Resources\ToolBar\Events.ico,                 GuruComponents.Netrix.Resources.ToolBar.Events.ico
+set ir19=/res:Resources\ToolBar\Events_Hover.ico,           GuruComponents.Netrix.Resources.ToolBar.Events_Hover.ico
+set ir20=/res:Resources\ToolBar\Events_Selected.ico,        GuruComponents.Netrix.Resources.ToolBar.Events_Selected.ico
+set ir21=/res:Resources\ToolBar\Standard.ico,               GuruComponents.Netrix.Resources.ToolBar.Standard.ico
+set ir22=/res:Resources\ToolBar\Standard_Hover.ico,         GuruComponents.Netrix.Resources.ToolBar.Standard_Hover.ico
+set ir23=/res:Resources\ToolBar\Standard_Selected.ico,      GuruComponents.Netrix.Resources.ToolBar.Standard_Selected.ico
+set ir24=/res:Resources\ToolBar\Categorized.ico,            GuruComponents.Netrix.Resources.ToolBar.Categorized.ico
+set ir25=/res:Resources\ToolBar\Categorized_Hover.ico,      GuruComponents.Netrix.Resources.ToolBar.Categorized_Hover.ico
+set ir26=/res:Resources\ToolBar\Categorized_Selected.ico,   GuruComponents.Netrix.Resources.ToolBar.Categorized_Selected.ico
+
+set f01=/res:Resources\ToolBar\Flag_us.ico,                 GuruComponents.Netrix.Resources.ToolBar.Flag_us.ico
+set f02=/res:Resources\ToolBar\Flag_us_Hover.ico,           GuruComponents.Netrix.Resources.ToolBar.Flag_us_Hover.ico
+set f03=/res:Resources\ToolBar\Flag_us_Selected.ico,        GuruComponents.Netrix.Resources.ToolBar.Flag_us_Selected.ico
+set f04=/res:Resources\ToolBar\Flag_gb.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_gb.ico
+set f05=/res:Resources\ToolBar\Flag_gb_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_gb_Hover.ico
+set f06=/res:Resources\ToolBar\Flag_gb_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_gb_Selected.ico
+set f07=/res:Resources\ToolBar\Flag_au.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_au.ico
+set f08=/res:Resources\ToolBar\Flag_au_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_au_Hover.ico
+set f09=/res:Resources\ToolBar\Flag_au_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_au_Selected.ico
+set f10=/res:Resources\ToolBar\Flag_de.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_de.ico
+set f11=/res:Resources\ToolBar\Flag_de_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_de_Hover.ico
+set f12=/res:Resources\ToolBar\Flag_de_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_de_Selected.ico
+set f13=/res:Resources\ToolBar\Flag_at.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_at.ico
+set f14=/res:Resources\ToolBar\Flag_at_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_at_Hover.ico           
+set f15=/res:Resources\ToolBar\Flag_at_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_at_Selected.ico
+set f16=/res:Resources\ToolBar\Flag_ch.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_ch.ico
+set f17=/res:Resources\ToolBar\Flag_ch_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_ch_Hover.ico
+set f18=/res:Resources\ToolBar\Flag_ch_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_ch_Selected.ico
+set f19=/res:Resources\ToolBar\Flag_cn.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_cn.ico
+set f20=/res:Resources\ToolBar\Flag_cn_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_cn_Hover.ico
+set f21=/res:Resources\ToolBar\Flag_cn_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_cn_Selected.ico
+set f22=/res:Resources\ToolBar\Flag_jp.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_jp.ico      
+set f23=/res:Resources\ToolBar\Flag_jp_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_jp_Hover.ico           
+set f24=/res:Resources\ToolBar\Flag_jp_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_jp_Selected.ico
+set f25=/res:Resources\ToolBar\Flag_fr.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_fr.ico      
+set f26=/res:Resources\ToolBar\Flag_fr_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_fr_Hover.ico
+set f27=/res:Resources\ToolBar\Flag_fr_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_fr_Selected.ico
+set f28=/res:Resources\ToolBar\Flag_es.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_es.ico      
+set f29=/res:Resources\ToolBar\Flag_es_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_es_Hover.ico
+set f30=/res:Resources\ToolBar\Flag_es_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_es_Selected.ico
+set f31=/res:Resources\ToolBar\Flag_ru.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_ru.ico      
+set f32=/res:Resources\ToolBar\Flag_ru_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_ru_Hover.ico
+set f33=/res:Resources\ToolBar\Flag_ru_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_ru_Selected.ico
+set f34=/res:Resources\ToolBar\Flag_pt.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_pt.ico      
+set f35=/res:Resources\ToolBar\Flag_pt_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_pt_Hover.ico
+set f36=/res:Resources\ToolBar\Flag_pt_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_pt_Selected.ico
+set f37=/res:Resources\ToolBar\Flag_it.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_it.ico      
+set f38=/res:Resources\ToolBar\Flag_it_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_it_Hover.ico
+set f39=/res:Resources\ToolBar\Flag_it_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_it_Selectedico
+set f40=/res:Resources\ToolBar\Flag_eg.ico",                GuruComponents.Netrix.Resources.ToolBar.Flag_eg.ico      
+set f41=/res:Resources\ToolBar\Flag_eg_Hover.ico",          GuruComponents.Netrix.Resources.ToolBar.Flag_eg_Hover.ico
+set f42=/res:Resources\ToolBar\Flag_eg_Selected.ico",       GuruComponents.Netrix.Resources.ToolBar.Flag_eg_Selected.ico
+
+set ir27=/res:Resources\ToolBox\ColorEditor.ico,            GuruComponents.Netrix.Resources.ToolBox.ColorEditor.ico
+set ir28=/res:Resources\ToolBox\ColorPicker.ico,            GuruComponents.Netrix.Resources.ToolBox.ColorPicker.ico
+set ir29=/res:Resources\ToolBox\FontPicker.ico,             GuruComponents.Netrix.Resources.ToolBox.FontPicker.ico
+set ir30=/res:Resources\ToolBox\PropertyGrid.ico,           GuruComponents.Netrix.Resources.ToolBox.PropertyGrid.ico
+set ir31=/res:Resources\ToolBox\StyleEditor.ico,            GuruComponents.Netrix.Resources.ToolBox.StyleEditor.ico
+set ir32=/res:Resources\ToolBox\UnitEditor.ico,             GuruComponents.Netrix.Resources.ToolBox.UnitEditor.ico
+
+set ir33=/res:Resources\UserInterface\ColorPickerPopUpButton.ico,        GuruComponents.Netrix.Resources.UserInterface.ColorPickerPopUpButton.ico
+set ir34=/res:Resources\UserInterface\BorderAll.ico,        GuruComponents.Netrix.Resources.UserInterface.BorderAll.ico
+set ir35=/res:Resources\UserInterface\BorderBottom.ico,     GuruComponents.Netrix.Resources.UserInterface.BorderBottom.ico
+set ir36=/res:Resources\UserInterface\BorderLeft.ico,       GuruComponents.Netrix.Resources.UserInterface.BorderLeft.ico
+set ir37=/res:Resources\UserInterface\BorderRight.ico,      GuruComponents.Netrix.Resources.UserInterface.BorderRight.ico
+set ir38=/res:Resources\UserInterface\BorderTop.ico,        GuruComponents.Netrix.Resources.UserInterface.BorderTop.ico
+set ir39=/res:Resources\UserInterface\LayoutPage.ico,       GuruComponents.Netrix.Resources.UserInterface.LayoutPage.ico
+set ir40=/res:Resources\UserInterface\ListsPage.ico,        GuruComponents.Netrix.Resources.UserInterface.ListsPage.ico
+set ir41=/res:Resources\UserInterface\OtherPage.ico,        GuruComponents.Netrix.Resources.UserInterface.OtherPage.ico
+set ir42=/res:Resources\UserInterface\TablesPage.ico,       GuruComponents.Netrix.Resources.UserInterface.TablesPage.ico
+set ir43=/res:Resources\UserInterface\PositionPage.ico,     GuruComponents.Netrix.Resources.UserInterface.PositionPage.ico
+set ir44=/res:Resources\UserInterface\TextPage.ico,         GuruComponents.Netrix.Resources.UserInterface.TextPage.ico
+set ir45=/res:Resources\UserInterface\FontPage.ico,         GuruComponents.Netrix.Resources.UserInterface.FontPage.ico
+
+set ir50=/res:Resources\UserInterface\StyleEditor_Columns.bmp,              GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Columns.bmp
+set ir51=/res:Resources\UserInterface\StyleEditor_Layout_DirectionLtr.bmp,  GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Layout_DirectionLtr.bmp
+set ir52=/res:Resources\UserInterface\StyleEditor_Layout_DirectionRtl.bmp,  GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Layout_DirectionRtl.bmp
+set ir53=/res:Resources\UserInterface\StyleEditor_Lists_Position.bmp,       GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Lists_Position.bmp
+set ir54=/res:Resources\UserInterface\StyleEditor_Lists_Style.bmp,          GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Lists_Style.bmp
+set ir55=/res:Resources\UserInterface\StyleEditor_Lists_Without.bmp,        GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Lists_Without.bmp
+set ir56=/res:Resources\UserInterface\StyleEditor_Misc_Arrows.bmp,          GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Misc_Arrows.bmp
+set ir57=/res:Resources\UserInterface\StyleEditor_PaddingMargin.bmp,        GuruComponents.Netrix.Resources.UserInterface.StyleEditor_PaddingMargin.bmp
+set ir58=/res:Resources\UserInterface\StyleEditor_Position_Center.bmp,      GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Position_Center.bmp
+set ir59=/res:Resources\UserInterface\StyleEditor_Position_Justify.bmp,     GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Position_Justify.bmp
+set ir60=/res:Resources\UserInterface\StyleEditor_Position_Left.bmp,        GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Position_Left.bmp
+set ir61=/res:Resources\UserInterface\StyleEditor_Position_Right.bmp,       GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Position_Right.bmp
+set ir62=/res:Resources\UserInterface\StyleEditor_Tables_CaptionPos.bmp,    GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Tables_CaptionPos.bmp
+set ir63=/res:Resources\UserInterface\StyleEditor_Tables_ColSpan.bmp,       GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Tables_ColSpan.bmp
+set ir64=/res:Resources\UserInterface\StyleEditor_Tables_RowSpan.bmp,       GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Tables_RowSpan.bmp
+set ir65=/res:Resources\UserInterface\StyleEditor_Tables_RuleStyle.bmp,     GuruComponents.Netrix.Resources.UserInterface.StyleEditor_Tables_RuleStyle.bmp
+
+
+
+rem set xxx1=%f20% %f21% %f22% %f23% %f24% %f25% %f26% %f27% %f28% %f29% %f30% %f31% %f32% %f33% %f34% %35% %f36% %f37% %f38% %f39% %f40% %f41% %f42%
+rem set xxx2=%f01% %f02% %f03% %f04% %f05% %f06% %f07% %f08% %f09% %f10% %f11% %f12% %f13% %f14% %f15% %f16% %f17% %f18% %f19%
+rem set xxx3=%ir23% %ir24% %ir25% %ir26% %ir27% %ir28% %ir29% %ir30% %ir31% %ir32% %ir33% %ir34% %ir35% %ir36% %ir37% %ir38% %ir39% %ir40%
+rem set xxx4=%ir6% %irA% %ir7% %ir8% %ir9% %ir10% %ir11% %ir12% %ir13% %ir14% %ir15% %ir16% %ir17% %ir18% %ir19% %ir20% %ir21% %ir22% 
+rem set xxx5=%ir41% %ir42% %ir43% %ir44% %ir45% %ir50% %ir51% %ir52% %ir53% %ir54% %ir55% %ir56% %ir57% %ir58% %ir59% %ir60% %ir61% %ir62% %ir63% %ir64% %ir65% 
+rem set tbimgs=%xxx1% %xxx2% %xxx3% 
+rem set imgres=%xxx4% %xxx5%

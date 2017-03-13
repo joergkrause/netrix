@@ -1,0 +1,1996 @@
+// ******************************************************************************
+// * This is an automatically generated file containing the ribbon resource for *
+// * your application.                                                          *
+// ******************************************************************************
+
+STRINGTABLE 
+BEGIN
+    60001 L"HTML Editor Application" /* LabelTitle cmdApplicationMenu_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60002 L"Recent Files" /* LabelTitle cmdRecentFiles_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60003 L"Help" /* LabelTitle cmdHelp_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60004 L"Help" /* LabelTitle cmdHelpEditGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60005 L"Info" /* LabelTitle cmdHelpEdit_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60006 L"Features on this tab" /* TooltipTitle cmdHelpEdit_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60007 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpEdit_TooltipDescription_RESID: (null) */
+END
+
+60008    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpEdit_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60009 L"Help" /* LabelTitle cmdHelpElementGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60010 L"Info" /* LabelTitle cmdHelpElement_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60011 L"Features on this tab" /* TooltipTitle cmdHelpElement_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60012 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpElement_TooltipDescription_RESID: (null) */
+END
+
+60013    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpElement_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60014 L"Help" /* LabelTitle cmdHelpDisplayGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60015 L"Info" /* LabelTitle cmdHelpDisplay_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60016 L"Features on this tab" /* TooltipTitle cmdHelpDisplay_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60017 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpDisplay_TooltipDescription_RESID: (null) */
+END
+
+60018    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpDisplay_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60019 L"Help" /* LabelTitle cmdHelpControlGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60020 L"Info" /* LabelTitle cmdHelpControl_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60021 L"Features on this tab" /* TooltipTitle cmdHelpControl_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60022 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpControl_TooltipDescription_RESID: (null) */
+END
+
+60023    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpControl_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60024 L"Help" /* LabelTitle cmdHelpTextGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60025 L"Info" /* LabelTitle cmdHelpText_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60026 L"Features on this tab" /* TooltipTitle cmdHelpText_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60027 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpText_TooltipDescription_RESID: (null) */
+END
+
+60028    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpText_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60029 L"Help" /* LabelTitle cmdHelpStylesGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60030 L"Info" /* LabelTitle cmdHelpStyles_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60031 L"Features on this tab" /* TooltipTitle cmdHelpStyles_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60032 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpStyles_TooltipDescription_RESID: (null) */
+END
+
+60033    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpStyles_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60034 L"Help" /* LabelTitle cmdHelpHelplineGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60035 L"Info" /* LabelTitle cmdHelpHelpline_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60036 L"Features on this tab" /* TooltipTitle cmdHelpHelpline_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60037 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpHelpline_TooltipDescription_RESID: (null) */
+END
+
+60038    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpHelpline_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60039 L"Help" /* LabelTitle cmdHelpSpellerGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60040 L"Info" /* LabelTitle cmdHelpSpeller_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60041 L"Features on this tab" /* TooltipTitle cmdHelpSpeller_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60042 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpSpeller_TooltipDescription_RESID: (null) */
+END
+
+60043    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpSpeller_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60044 L"Help" /* LabelTitle cmdHelpTableEditorGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60045 L"Info" /* LabelTitle cmdHelpTableEditor_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60046 L"Features on this tab" /* TooltipTitle cmdHelpTableEditor_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60047 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpTableEditor_TooltipDescription_RESID: (null) */
+END
+
+60048    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpTableEditor_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60049 L"Help" /* LabelTitle cmdHelpTableOptionsGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60050 L"Info" /* LabelTitle cmdHelpTableOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60051 L"Features on this tab" /* TooltipTitle cmdHelpTableOptions_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60052 L"On this tab you find the common edit features. Click the button to load a document to play around." /* TooltipDescription cmdHelpTableOptions_TooltipDescription_RESID: (null) */
+END
+
+60053    BITMAP    "Resources\\Icons\\32x32\\help2.bmp" /* LargeImages cmdHelpTableOptions_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60054 L"Edit" /* LabelTitle cmdTabEdit_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60055 L"E" /* Keytip cmdTabEdit_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60056 L"&New" /* LabelTitle cmdButtonNew_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60057 L"New HTML File" /* LabelDescription cmdButtonNew_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60058 L"New (Ctrl+N)" /* TooltipTitle cmdButtonNew_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60059 L"Create a new HTML file." /* TooltipDescription cmdButtonNew_TooltipDescription_RESID: (null) */
+END
+
+60060    BITMAP    "Resources\\Icons\\16x16\\document.bmp" /* SmallImages cmdButtonNew_SmallImages_RESID: (null) */
+60061    BITMAP    "Resources\\Icons\\32x32\\document.bmp" /* LargeImages cmdButtonNew_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60062 L"Open" /* LabelTitle cmdButtonOpen_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60063 L"Open Description" /* LabelDescription cmdButtonOpen_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60064 L"Open (Ctrl+O)" /* TooltipTitle cmdButtonOpen_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60065 L"Open an existing HTML file." /* TooltipDescription cmdButtonOpen_TooltipDescription_RESID: (null) */
+END
+
+60066    BITMAP    "Resources\\Icons\\16x16\\folder_document.bmp" /* SmallImages cmdButtonOpen_SmallImages_RESID: (null) */
+60067    BITMAP    "Resources\\Icons\\32x32\\folder_document.bmp" /* LargeImages cmdButtonOpen_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60068 L"Save" /* LabelTitle cmdButtonSave_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60069 L"Save Description" /* LabelDescription cmdButtonSave_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60070 L"Save (Ctrl+S)" /* TooltipTitle cmdButtonSave_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60071 L"Save the current file to disc." /* TooltipDescription cmdButtonSave_TooltipDescription_RESID: (null) */
+END
+
+60072    BITMAP    "Resources\\Icons\\16x16\\floppy_disk.bmp" /* SmallImages cmdButtonSave_SmallImages_RESID: (null) */
+60073    BITMAP    "Resources\\Icons\\32x32\\floppy_disk.bmp" /* LargeImages cmdButtonSave_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60074 L"Print" /* LabelTitle cmdButtonPrint_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60075 L"Print with Preview" /* LabelDescription cmdButtonPrint_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60076 L"Print Preview  (Ctrl+P)" /* TooltipTitle cmdButtonPrint_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60077 L"Print the current file" /* TooltipDescription cmdButtonPrint_TooltipDescription_RESID: (null) */
+END
+
+60078    BITMAP    "Resources\\Icons\\16x16\\printer.bmp" /* SmallImages cmdButtonPrint_SmallImages_RESID: (null) */
+60079    BITMAP    "Resources\\Icons\\32x32\\printer.bmp" /* LargeImages cmdButtonPrint_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60080 L"Properties" /* LabelTitle cmdButtonProperties_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60081 L"Editor Properties" /* LabelDescription cmdButtonProperties_LabelDescription_RESID: (null) */
+END
+
+60082    BITMAP    "Resources\\Icons\\16x16\\preferences_edit.bmp" /* SmallImages cmdButtonProperties_SmallImages_RESID: (null) */
+60083    BITMAP    "Resources\\Icons\\32x32\\preferences_edit.bmp" /* LargeImages cmdButtonProperties_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60084 L"Exit" /* LabelTitle cmdButtonExit_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60085 L"Exit application" /* LabelDescription cmdButtonExit_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60086 L"Exit (ALT+F4)" /* TooltipTitle cmdButtonExit_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60087 L"Exit HTML Editor application." /* TooltipDescription cmdButtonExit_TooltipDescription_RESID: (null) */
+END
+
+60088    BITMAP    "Resources\\Icons\\16x16\\exit.bmp" /* SmallImages cmdButtonExit_SmallImages_RESID: (null) */
+60089    BITMAP    "Resources\\Icons\\32x32\\exit.bmp" /* LargeImages cmdButtonExit_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60090 L"Clipboard" /* LabelTitle cmdGroupClipboard_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60091 L"&Paste" /* LabelTitle cmdButtonPaste_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60092 L"Paste" /* LabelDescription cmdButtonPaste_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60093 L"Paste (Ctrl+V)" /* TooltipTitle cmdButtonPaste_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60094 L"Paste from clipboard." /* TooltipDescription cmdButtonPaste_TooltipDescription_RESID: (null) */
+END
+
+60095    BITMAP    "Resources\\Icons\\16x16\\paste.bmp" /* SmallImages cmdButtonPaste_SmallImages_RESID: (null) */
+60096    BITMAP    "Resources\\Icons\\32x32\\paste.bmp" /* LargeImages cmdButtonPaste_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60097 L"C&ut" /* LabelTitle cmdButtonCut_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60098 L"Cut" /* LabelDescription cmdButtonCut_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60099 L"Cut (Ctrl+X)" /* TooltipTitle cmdButtonCut_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60100 L"Cut selection and copy to clipboard." /* TooltipDescription cmdButtonCut_TooltipDescription_RESID: (null) */
+END
+
+60101    BITMAP    "Resources\\Icons\\16x16\\cut.bmp" /* SmallImages cmdButtonCut_SmallImages_RESID: (null) */
+60102    BITMAP    "Resources\\Icons\\32x32\\cut.bmp" /* LargeImages cmdButtonCut_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60103 L"&Copy" /* LabelTitle cmdButtonCopy_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60104 L"Copy" /* LabelDescription cmdButtonCopy_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60105 L"Copy (Ctrl+C)" /* TooltipTitle cmdButtonCopy_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60106 L"Copy to clipboard." /* TooltipDescription cmdButtonCopy_TooltipDescription_RESID: (null) */
+END
+
+60107    BITMAP    "Resources\\Icons\\16x16\\copy.bmp" /* SmallImages cmdButtonCopy_SmallImages_RESID: (null) */
+60108    BITMAP    "Resources\\Icons\\32x32\\copy.bmp" /* LargeImages cmdButtonCopy_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60109 L"Undo" /* LabelTitle cmdButtonUndo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60110 L"Undo" /* LabelDescription cmdButtonUndo_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60111 L"Undo (Ctrl+Z)" /* TooltipTitle cmdButtonUndo_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60112 L"Undo the last operation." /* TooltipDescription cmdButtonUndo_TooltipDescription_RESID: (null) */
+END
+
+60113    BITMAP    "Resources\\Icons\\16x16\\undo.bmp" /* SmallImages cmdButtonUndo_SmallImages_RESID: (null) */
+60114    BITMAP    "Resources\\Icons\\32x32\\undo.bmp" /* LargeImages cmdButtonUndo_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60115 L"&Redo" /* LabelTitle cmdButtonRedo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60116 L"Redo" /* LabelDescription cmdButtonRedo_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60117 L"Redo (Ctrl+Y)" /* TooltipTitle cmdButtonRedo_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60118 L"Redo operation." /* TooltipDescription cmdButtonRedo_TooltipDescription_RESID: (null) */
+END
+
+60119    BITMAP    "Resources\\Icons\\16x16\\redo.bmp" /* SmallImages cmdButtonRedo_SmallImages_RESID: (null) */
+60120    BITMAP    "Resources\\Icons\\32x32\\redo.bmp" /* LargeImages cmdButtonRedo_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60121 L"Paste Image" /* LabelTitle cmdButtonPasteImage_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60122 L"Paste Image from Clipboard" /* LabelDescription cmdButtonPasteImage_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60123 L"Paste Image from clipboard (creates an image element to a temp path)" /* TooltipTitle cmdButtonPasteImage_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60124 L"Paste from clipboard." /* TooltipDescription cmdButtonPasteImage_TooltipDescription_RESID: (null) */
+END
+
+60125    BITMAP    "Resources\\Icons\\16x16\\paste.bmp" /* SmallImages cmdButtonPasteImage_SmallImages_RESID: (null) */
+60126    BITMAP    "Resources\\Icons\\32x32\\paste.bmp" /* LargeImages cmdButtonPasteImage_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60127 L"Font" /* LabelTitle cmdGroupFont_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60128 L"&Font" /* LabelTitle cmdFont_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60129 L"Font" /* LabelDescription cmdFont_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60130 L"Font" /* TooltipTitle cmdFont_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60131 L"Set font for current text." /* TooltipDescription cmdFont_TooltipDescription_RESID: (null) */
+END
+
+60132    BITMAP    "Resources\\Icons\\16x16\\document.bmp" /* SmallImages cmdFont_SmallImages_RESID: (null) */
+60133    BITMAP    "Resources\\Icons\\32x32\\document.bmp" /* LargeImages cmdFont_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60134 L"Paragraph" /* LabelTitle cmdGroupParagraph_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60135 L"UL" /* LabelTitle cmdButtonInsertUL_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60136 L"Insert Unordered List" /* LabelDescription cmdButtonInsertUL_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60137 L"Insert Unordered List" /* TooltipTitle cmdButtonInsertUL_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60138 L"Insert Unordered List" /* TooltipDescription cmdButtonInsertUL_TooltipDescription_RESID: (null) */
+END
+
+60139    BITMAP    "Resources\\Icons\\16x16\\bullet_square_grey.bmp" /* SmallImages cmdButtonInsertUL_SmallImages_RESID: (null) */
+60140    BITMAP    "Resources\\Icons\\32x32\\bullet_square_grey.bmp" /* LargeImages cmdButtonInsertUL_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60141 L"OL" /* LabelTitle cmdButtonInsertOL_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60142 L"Insert Ordered List" /* LabelDescription cmdButtonInsertOL_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60143 L"Insert Ordered List" /* TooltipTitle cmdButtonInsertOL_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60144 L"Insert Ordered List." /* TooltipDescription cmdButtonInsertOL_TooltipDescription_RESID: (null) */
+END
+
+60145    BITMAP    "Resources\\Icons\\16x16\\bullet_ball_grey.bmp" /* SmallImages cmdButtonInsertOL_SmallImages_RESID: (null) */
+60146    BITMAP    "Resources\\Icons\\32x32\\bullet_ball_grey.bmp" /* LargeImages cmdButtonInsertOL_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60147 L"Outdent" /* LabelTitle cmdButtonInsertOutdent_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60148 L"Outdent" /* LabelDescription cmdButtonInsertOutdent_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60149 L"Outdent" /* TooltipTitle cmdButtonInsertOutdent_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60150 L"Outdent." /* TooltipDescription cmdButtonInsertOutdent_TooltipDescription_RESID: (null) */
+END
+
+60151    BITMAP    "Resources\\Icons\\16x16\\document.bmp" /* SmallImages cmdButtonInsertOutdent_SmallImages_RESID: (null) */
+60152    BITMAP    "Resources\\Icons\\32x32\\document.bmp" /* LargeImages cmdButtonInsertOutdent_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60153 L"Indent" /* LabelTitle cmdButtonInsertIndent_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60154 L"Indent" /* LabelDescription cmdButtonInsertIndent_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60155 L"Indent" /* TooltipTitle cmdButtonInsertIndent_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60156 L"Indent" /* TooltipDescription cmdButtonInsertIndent_TooltipDescription_RESID: (null) */
+END
+
+60157    BITMAP    "Resources\\Icons\\16x16\\document.bmp" /* SmallImages cmdButtonInsertIndent_SmallImages_RESID: (null) */
+60158    BITMAP    "Resources\\Icons\\32x32\\document.bmp" /* LargeImages cmdButtonInsertIndent_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60159 L"Left" /* LabelTitle cmdButtonAlignLeft_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60160 L"Align Left" /* LabelDescription cmdButtonAlignLeft_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60161 L"Left" /* TooltipTitle cmdButtonAlignLeft_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60162 L"Align Left." /* TooltipDescription cmdButtonAlignLeft_TooltipDescription_RESID: (null) */
+END
+
+60163    BITMAP    "Resources\\Icons\\16x16\\text_align_left.bmp" /* SmallImages cmdButtonAlignLeft_SmallImages_RESID: (null) */
+60164    BITMAP    "Resources\\Icons\\32x32\\text_align_left.bmp" /* LargeImages cmdButtonAlignLeft_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60165 L"Right" /* LabelTitle cmdButtonAlignRight_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60166 L"Align Right" /* LabelDescription cmdButtonAlignRight_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60167 L"Right" /* TooltipTitle cmdButtonAlignRight_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60168 L"Align Right." /* TooltipDescription cmdButtonAlignRight_TooltipDescription_RESID: (null) */
+END
+
+60169    BITMAP    "Resources\\Icons\\16x16\\text_align_right.bmp" /* SmallImages cmdButtonAlignRight_SmallImages_RESID: (null) */
+60170    BITMAP    "Resources\\Icons\\32x32\\text_align_right.bmp" /* LargeImages cmdButtonAlignRight_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60171 L"Center" /* LabelTitle cmdButtonAlignCenter_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60172 L"Align Center" /* LabelDescription cmdButtonAlignCenter_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60173 L"Center" /* TooltipTitle cmdButtonAlignCenter_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60174 L"Align Center" /* TooltipDescription cmdButtonAlignCenter_TooltipDescription_RESID: (null) */
+END
+
+60175    BITMAP    "Resources\\Icons\\16x16\\text_align_center.bmp" /* SmallImages cmdButtonAlignCenter_SmallImages_RESID: (null) */
+60176    BITMAP    "Resources\\Icons\\32x32\\text_align_center.bmp" /* LargeImages cmdButtonAlignCenter_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60177 L"Full" /* LabelTitle cmdButtonAlignFull_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60178 L"Align Full" /* LabelDescription cmdButtonAlignFull_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60179 L"Align Full" /* TooltipTitle cmdButtonAlignFull_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60180 L"Align Full" /* TooltipDescription cmdButtonAlignFull_TooltipDescription_RESID: (null) */
+END
+
+60181    BITMAP    "Resources\\Icons\\16x16\\text_align_justified.bmp" /* SmallImages cmdButtonAlignFull_SmallImages_RESID: (null) */
+60182    BITMAP    "Resources\\Icons\\32x32\\text_align_justified.bmp" /* LargeImages cmdButtonAlignFull_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60183 L"Control Mode" /* LabelTitle cmdGroupDesignMode_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60184 L"Design Mode" /* LabelTitle cmdDesignMode_LabelTitle_RESID: (null) */
+END
+
+60185    BITMAP    "Resources\\Icons\\16x16\\edit.bmp" /* SmallImages cmdDesignMode_SmallImages_RESID: (null) */
+60186    BITMAP    "Resources\\Icons\\32x32\\edit.bmp" /* LargeImages cmdDesignMode_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60187 L"View" /* LabelTitle cmdGroupInRibbonGallery_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60188 L"Glyphs" /* LabelTitle cmdGlyphsVariant_LabelTitle_RESID: (null) */
+END
+
+60189    BITMAP    "Resources\\Icons\\16x16\\TabControl.CodeView.bmp" /* SmallImages cmdGlyphsVariant_SmallImages_RESID: (null) */
+60190    BITMAP    "Resources\\Icons\\32x32\\TabControl.CodeView.bmp" /* LargeImages cmdGlyphsVariant_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60191 L"No Glyphs" /* LabelTitle cmdGlyphVariantNone_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60192 L"Standard Glyphs" /* LabelTitle cmdGlyphVariantStandard_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60193 L"Colored Glyphs" /* LabelTitle cmdGlyphVariantColored_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60194 L"Glyph Kind" /* LabelTitle cmdGlyphKind_LabelTitle_RESID: (null) */
+END
+
+60195    BITMAP    "Resources\\Icons\\16x16\\marker.bmp" /* SmallImages cmdGlyphKind_SmallImages_RESID: (null) */
+60196    BITMAP    "Resources\\Icons\\32x32\\marker.bmp" /* LargeImages cmdGlyphKind_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60197 L"View Source" /* LabelTitle cmdButtonViewSource_LabelTitle_RESID: (null) */
+END
+
+60198    BITMAP    "Resources\\Icons\\16x16\\code.bmp" /* SmallImages cmdButtonViewSource_SmallImages_RESID: (null) */
+60199    BITMAP    "Resources\\Icons\\32x32\\code.bmp" /* LargeImages cmdButtonViewSource_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60200 L"Edit" /* LabelTitle cmdGroupSearchReplace_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60201 L"Search" /* LabelTitle cmdButtonSearch_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60202 L"Search" /* TooltipTitle cmdButtonSearch_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60203 L"Search is implemented straight forward. You have some options controlled by parameters of the Find method.\n\nThe call loops from last caret position or, if the document is freshly loaded, from the beginning. The words found are highlighted by inverse colors." /* TooltipDescription cmdButtonSearch_TooltipDescription_RESID: (null) */
+END
+
+60204    BITMAP    "Resources\\Icons\\16x16\\find_text.bmp" /* SmallImages cmdButtonSearch_SmallImages_RESID: (null) */
+60205    BITMAP    "Resources\\Icons\\32x32\\find_text.bmp" /* LargeImages cmdButtonSearch_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60206 L"Replace" /* LabelTitle cmdButtonReplace_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60207 L"Replace" /* TooltipTitle cmdButtonReplace_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60208 L"Replace is implemented straight forward. You have some options controlled by parameters of the Replace method.\n\nThe call loops from last caret position or, if the document is freshly loaded, from the beginning. The words found are highlighted by inverse colors." /* TooltipDescription cmdButtonReplace_TooltipDescription_RESID: (null) */
+END
+
+60209    BITMAP    "Resources\\Icons\\16x16\\replace.bmp" /* SmallImages cmdButtonReplace_SmallImages_RESID: (null) */
+60210    BITMAP    "Resources\\Icons\\32x32\\replace.bmp" /* LargeImages cmdButtonReplace_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60211 L"Undo / Redo" /* LabelTitle cmdUndoRedo_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60212 L"Undo Stack" /* LabelTitle cmdUndoStack_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60213 L"Undo Last Step" /* LabelTitle cmdUndoStep_LabelTitle_RESID: (null) */
+END
+
+60214    BITMAP    "Resources\\Icons\\16x16\\undo.bmp" /* SmallImages cmdUndoStep_SmallImages_RESID: (null) */
+60215    BITMAP    "Resources\\Icons\\32x32\\undo.bmp" /* LargeImages cmdUndoStep_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60216 L"Redo Last Step" /* LabelTitle cmdRedoStep_LabelTitle_RESID: (null) */
+END
+
+60217    BITMAP    "Resources\\Icons\\16x16\\redo.bmp" /* SmallImages cmdRedoStep_SmallImages_RESID: (null) */
+60218    BITMAP    "Resources\\Icons\\32x32\\redo.bmp" /* LargeImages cmdRedoStep_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60219 L"Create Packed Operation" /* LabelTitle cmdUndoAddPackedStack_LabelTitle_RESID: (null) */
+END
+
+60220    BITMAP    "Resources\\Icons\\16x16\\document_refresh.bmp" /* SmallImages cmdUndoAddPackedStack_SmallImages_RESID: (null) */
+60221    BITMAP    "Resources\\Icons\\32x32\\document_refresh.bmp" /* LargeImages cmdUndoAddPackedStack_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60222 L"Insert" /* LabelTitle cmdTabInsert_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60223 L"I" /* Keytip cmdTabInsert_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60224 L"Paragraph Formatting" /* LabelTitle cmdGroupParagraphElements_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60225 L"Insert Elements" /* LabelTitle cmdGroupInsertCommonElements_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60226 L"Format" /* LabelTitle cmdGroupParagraphElementsHeader_LabelTitle_RESID: (null) */
+END
+
+60227    BITMAP    "Resources\\Icons\\16x16\\form_blue_add.bmp" /* SmallImages cmdGroupParagraphElementsHeader_SmallImages_RESID: (null) */
+60228    BITMAP    "Resources\\Icons\\32x32\\form_blue_add.bmp" /* LargeImages cmdGroupParagraphElementsHeader_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60229 L"PRE Element (Block)" /* LabelTitle cmdGroupParagraphElementsPre_LabelTitle_RESID: (null) */
+END
+
+60230    BITMAP    "Resources\\Icons\\16x16\\form_blue.bmp" /* SmallImages cmdGroupParagraphElementsPre_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60231 L"CODE Element (Inline)" /* LabelTitle cmdGroupParagraphElementsCode_LabelTitle_RESID: (null) */
+END
+
+60232    BITMAP    "Resources\\Icons\\16x16\\form_green.bmp" /* SmallImages cmdGroupParagraphElementsCode_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60233 L"Remove Block Format" /* LabelTitle cmdRemoveFormat_LabelTitle_RESID: (null) */
+END
+
+60234    BITMAP    "Resources\\Icons\\16x16\\form_blue_delete.bmp" /* SmallImages cmdRemoveFormat_SmallImages_RESID: (null) */
+60235    BITMAP    "Resources\\Icons\\32x32\\form_blue_delete.bmp" /* LargeImages cmdRemoveFormat_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60236 L"Remove Inline Format" /* LabelTitle cmdRemoveInlineFormat_LabelTitle_RESID: (null) */
+END
+
+60237    BITMAP    "Resources\\Icons\\16x16\\form_green_delete.bmp" /* SmallImages cmdRemoveInlineFormat_SmallImages_RESID: (null) */
+60238    BITMAP    "Resources\\Icons\\32x32\\form_green_delete.bmp" /* LargeImages cmdRemoveInlineFormat_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60239 L"Form Elements" /* LabelTitle cmdGroupInsertFormElements_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60240 L"Table" /* LabelTitle cmdGroupInsertTable_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60241 L"Insert Table" /* LabelTitle cmdInsertTABLE_LabelTitle_RESID: (null) */
+END
+
+60242    BITMAP    "Resources\\Icons\\16x16\\Table.bmp" /* SmallImages cmdInsertTABLE_SmallImages_RESID: (null) */
+60243    BITMAP    "Resources\\Icons\\32x32\\Table.bmp" /* LargeImages cmdInsertTABLE_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60244 L"Display" /* LabelTitle cmdTabDisplay_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60245 L"Helpline Tools" /* LabelTitle cmdHelplineTools_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60246 L"HelpLine Options" /* LabelTitle cmdTabHelpline_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60247 L"Position Options" /* LabelTitle cmdGroupDisplayPositioningOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60248 L"Display" /* LabelTitle cmdGroupRuler_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60249 L"Show Ruler" /* LabelTitle cmdRuler_LabelTitle_RESID: (null) */
+END
+
+60250    BITMAP    "Resources\\Icons\\16x16\\drawing_utensils.bmp" /* SmallImages cmdRuler_SmallImages_RESID: (null) */
+60251    BITMAP    "Resources\\Icons\\32x32\\drawing_utensils.bmp" /* LargeImages cmdRuler_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60252 L"Grid" /* LabelTitle cmdGroupDisplayGrid_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60253 L"Show Grid" /* LabelTitle cmdGridShow_LabelTitle_RESID: (null) */
+END
+
+60254    BITMAP    "Resources\\Icons\\16x16\\Grid.bmp" /* SmallImages cmdGridShow_SmallImages_RESID: (null) */
+60255    BITMAP    "Resources\\Icons\\32x32\\Grid.bmp" /* LargeImages cmdGridShow_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60256 L"Size" /* LabelTitle cmdGridSize_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60257 L"The distance between grid lines" /* LabelDescription cmdGridSize_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60258 L"Color" /* LabelTitle cmdGridColor_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60259 L"The color of all grid elements" /* LabelDescription cmdGridColor_LabelDescription_RESID: (null) */
+END
+
+60260    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdGridColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60261 L"Style" /* LabelTitle cmdGridStyle_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60262 L"The style of the cross elements" /* LabelDescription cmdGridStyle_LabelDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60263 L"Multiple Selection" /* LabelTitle cmdPositionMultipleSelection_LabelTitle_RESID: (null) */
+END
+
+60264    BITMAP    "Resources\\Icons\\16x16\\Multiselection.bmp" /* SmallImages cmdPositionMultipleSelection_SmallImages_RESID: (null) */
+60265    BITMAP    "Resources\\Icons\\32x32\\Multiselection.bmp" /* LargeImages cmdPositionMultipleSelection_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60266 L"Helpline" /* LabelTitle cmdGroupDisplayHelpline_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60267 L"Helpline" /* LabelTitle cmdHelpLine_A_LabelTitle_RESID: (null) */
+END
+
+60268    BITMAP    "Resources\\Icons\\16x16\\HelpLine.bmp" /* SmallImages cmdHelpLine_A_SmallImages_RESID: (null) */
+60269    BITMAP    "Resources\\Icons\\32x32\\HelpLine.bmp" /* LargeImages cmdHelpLine_A_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60270 L"X-Axis visible" /* LabelTitle cmdHelpLineX_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60271 L"Y-Axis visible" /* LabelTitle cmdHelpLineY_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60272 L"Position X" /* LabelTitle cmdHelpLinePositionX_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60273 L"Position Y" /* LabelTitle cmdHelpLinePositionY_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60274 L"Snap Elements to Line" /* LabelTitle cmdHelpLineSnap_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60275 L"Line Color" /* LabelTitle cmdHelpLineColor_A_LabelTitle_RESID: (null) */
+END
+
+60276    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdHelpLineColor_A_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60277 L"Line Width" /* LabelTitle cmdHelpLineLineSize_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60278 L"Line Dash Pattern" /* LabelTitle cmdHelpLineLineDash_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60279 L"Snap Line to Grid" /* LabelTitle cmdHelpLineSnapToGrid_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60280 L"Grid Size" /* LabelTitle cmdHelpLineSnapGridSize_A_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60281 L"Show Helpline B (predefined)" /* LabelTitle cmdHelpLine_B_LabelTitle_RESID: (null) */
+END
+
+60282    BITMAP    "Resources\\Icons\\16x16\\HelpLine.bmp" /* SmallImages cmdHelpLine_B_SmallImages_RESID: (null) */
+60283    BITMAP    "Resources\\Icons\\32x32\\HelpLine.bmp" /* LargeImages cmdHelpLine_B_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60284 L"Positioning" /* LabelTitle cmdGroupDisplayPositioning_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60285 L"Absolute Positioning" /* LabelTitle cmdPositionAbsolute_LabelTitle_RESID: (null) */
+END
+
+60286    BITMAP    "Resources\\Icons\\16x16\\2DPosition.bmp" /* SmallImages cmdPositionAbsolute_SmallImages_RESID: (null) */
+60287    BITMAP    "Resources\\Icons\\32x32\\2DPosition.bmp" /* LargeImages cmdPositionAbsolute_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60288 L"Move Element to Front" /* LabelTitle cmdPositionToFront_LabelTitle_RESID: (null) */
+END
+
+60289    BITMAP    "Resources\\Icons\\16x16\\front.bmp" /* SmallImages cmdPositionToFront_SmallImages_RESID: (null) */
+60290    BITMAP    "Resources\\Icons\\32x32\\front.bmp" /* LargeImages cmdPositionToFront_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60291 L"Move Element to Back" /* LabelTitle cmdPositionToBack_LabelTitle_RESID: (null) */
+END
+
+60292    BITMAP    "Resources\\Icons\\16x16\\back.bmp" /* SmallImages cmdPositionToBack_SmallImages_RESID: (null) */
+60293    BITMAP    "Resources\\Icons\\32x32\\back.bmp" /* LargeImages cmdPositionToBack_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60294 L"Scrollbars" /* LabelTitle cmdGroupDisplayScrollbars_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60295 L"Scrollbars Color" /* LabelTitle cmdScrollbarColor_LabelTitle_RESID: (null) */
+END
+
+60296    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdScrollbarColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60297 L"Scroll Up" /* LabelTitle cmdScrollbarUp_LabelTitle_RESID: (null) */
+END
+
+60298    BITMAP    "Resources\\Icons\\16x16\\arrow_up_blue.bmp" /* SmallImages cmdScrollbarUp_SmallImages_RESID: (null) */
+60299    BITMAP    "Resources\\Icons\\32x32\\arrow_up_blue.bmp" /* LargeImages cmdScrollbarUp_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60300 L"Scroll Down" /* LabelTitle cmdScrollbarDown_LabelTitle_RESID: (null) */
+END
+
+60301    BITMAP    "Resources\\Icons\\16x16\\arrow_down_blue.bmp" /* SmallImages cmdScrollbarDown_SmallImages_RESID: (null) */
+60302    BITMAP    "Resources\\Icons\\32x32\\arrow_down_blue.bmp" /* LargeImages cmdScrollbarDown_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60303 L"Scroll Left" /* LabelTitle cmdScrollbarLeft_LabelTitle_RESID: (null) */
+END
+
+60304    BITMAP    "Resources\\Icons\\16x16\\arrow_left_blue.bmp" /* SmallImages cmdScrollbarLeft_SmallImages_RESID: (null) */
+60305    BITMAP    "Resources\\Icons\\32x32\\arrow_left_blue.bmp" /* LargeImages cmdScrollbarLeft_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60306 L"Scroll Right" /* LabelTitle cmdScrollbarRight_LabelTitle_RESID: (null) */
+END
+
+60307    BITMAP    "Resources\\Icons\\16x16\\arrow_right_blue.bmp" /* SmallImages cmdScrollbarRight_SmallImages_RESID: (null) */
+60308    BITMAP    "Resources\\Icons\\32x32\\arrow_right_blue.bmp" /* LargeImages cmdScrollbarRight_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60309 L"Scrollbar Enabled" /* LabelTitle cmdScrollbarsEnabled_LabelTitle_RESID: (null) */
+END
+
+60310    BITMAP    "Resources\\Icons\\16x16\\scroll.bmp" /* SmallImages cmdScrollbarsEnabled_SmallImages_RESID: (null) */
+60311    BITMAP    "Resources\\Icons\\32x32\\scroll.bmp" /* LargeImages cmdScrollbarsEnabled_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60312 L"Horizontal Pos." /* LabelTitle cmdScrollbarX_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60313 L"Vertical Pos." /* LabelTitle cmdScrollbarY_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60314 L"Control" /* LabelTitle cmdTabControl_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60315 L"Element Events" /* LabelTitle cmdGroupControlElementEvents_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60316 L"Attach Event" /* LabelTitle cmdControlAttachEvent_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60317 L"Attach the selected events to elements." /* TooltipTitle cmdControlAttachEvent_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60318 L"Using this command you can attach the elements select in the right most button to the events in the middle button. The buttons open menus with checkboxes. You can select as many events and elements as you like.\n\nCheck event tips for more information." /* TooltipDescription cmdControlAttachEvent_TooltipDescription_RESID: (null) */
+END
+
+60319    BITMAP    "Resources\\Icons\\16x16\\magic_wand.bmp" /* SmallImages cmdControlAttachEvent_SmallImages_RESID: (null) */
+60320    BITMAP    "Resources\\Icons\\32x32\\magic_wand.bmp" /* LargeImages cmdControlAttachEvent_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60321 L"Events" /* LabelTitle cmdControlEventNames_LabelTitle_RESID: (null) */
+END
+
+60322    BITMAP    "Resources\\Icons\\16x16\\magic_wand2.bmp" /* SmallImages cmdControlEventNames_SmallImages_RESID: (null) */
+60323    BITMAP    "Resources\\Icons\\32x32\\magic_wand2.bmp" /* LargeImages cmdControlEventNames_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60324 L"Element Types" /* LabelTitle cmdControlElementNames_LabelTitle_RESID: (null) */
+END
+
+60325    BITMAP    "Resources\\Icons\\16x16\\TabControl.CodeView.bmp" /* SmallImages cmdControlElementNames_SmallImages_RESID: (null) */
+60326    BITMAP    "Resources\\Icons\\32x32\\TabControl.CodeView.bmp" /* LargeImages cmdControlElementNames_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60327 L"Anchor A" /* LabelTitle cmdControlElementNameA_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60328 L"Image IMG" /* LabelTitle cmdControlElementNameIMG_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60329 L"Division DIV" /* LabelTitle cmdControlElementNameDIV_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60330 L"Button BUTTON" /* LabelTitle cmdControlElementNameBUTTON_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60331 L"Mouse Events" /* LabelTitle cmdControlEventNamesGroupMouse_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60332 L"Click" /* LabelTitle cmdControlEventNameClick_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60333 L"Double Click" /* LabelTitle cmdControlEventNameDblClick_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60334 L"Down" /* LabelTitle cmdControlEventNameMouseDown_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60335 L"Enter" /* LabelTitle cmdControlEventNameMouseEnter_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60336 L"Leave" /* LabelTitle cmdControlEventNameMouseLeave_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60337 L"Out" /* LabelTitle cmdControlEventNameMouseOut_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60338 L"Up" /* LabelTitle cmdControlEventNameMouseUp_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60339 L"Wheel" /* LabelTitle cmdControlEventNameMouseWheel_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60340 L"Edit Events" /* LabelTitle cmdControlEventNamesGroupEdit_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60341 L"Before Cut" /* LabelTitle cmdControlEventNameBeforeCut_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60342 L"Cut" /* LabelTitle cmdControlEventNameCut_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60343 L"Before Copy" /* LabelTitle cmdControlEventNameBeforeCopy_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60344 L"Copy" /* LabelTitle cmdControlEventNameCopy_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60345 L"Before Paste" /* LabelTitle cmdControlEventNameBeforePaste_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60346 L"Paste" /* LabelTitle cmdControlEventNamePaste_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60347 L"Resize Events" /* LabelTitle cmdControlEventNamesGroupResize_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60348 L"Resize" /* LabelTitle cmdControlEventNameResize_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60349 L"Resize Event" /* TooltipTitle cmdControlEventNameResize_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60350 L"This event fires quite often an can decrease performance drastically. Use with caution." /* TooltipDescription cmdControlEventNameResize_TooltipDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60351 L"End" /* LabelTitle cmdControlEventNameResizeEnd_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60352 L"Start" /* LabelTitle cmdControlEventNameResizeStart_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60353 L"Move Events" /* LabelTitle cmdControlEventNamesGroupMove_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60354 L"Move" /* LabelTitle cmdControlEventNameMove_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60355 L"Move Event" /* TooltipTitle cmdControlEventNameMove_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60356 L"This event fires quite often an can decrease performance drastically. Use with caution." /* TooltipDescription cmdControlEventNameMove_TooltipDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60357 L"End" /* LabelTitle cmdControlEventNameMoveEnd_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60358 L"Start" /* LabelTitle cmdControlEventNameMoveStart_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60359 L"Drag and Drop Events" /* LabelTitle cmdControlEventNamesGroupDrag_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60360 L"Drag" /* LabelTitle cmdControlEventNameDrag_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60361 L"Drag Event" /* TooltipTitle cmdControlEventNameDrag_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60362 L"This event fires quite often an can decrease performance drastically. Use with caution." /* TooltipDescription cmdControlEventNameDrag_TooltipDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60363 L"End" /* LabelTitle cmdControlEventNameDragEnd_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60364 L"Enter" /* LabelTitle cmdControlEventNameDragEnter_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60365 L"Leave" /* LabelTitle cmdControlEventNameDragLeave_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60366 L"Start" /* LabelTitle cmdControlEventNameDragStart_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60367 L"Over" /* LabelTitle cmdControlEventNameDragOver_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60368 L"Drag Over Event" /* TooltipTitle cmdControlEventNameDragOver_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60369 L"This event fires quite often an can decrease performance drastically. Use with caution." /* TooltipDescription cmdControlEventNameDragOver_TooltipDescription_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60370 L"Drop" /* LabelTitle cmdControlEventNameDrop_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60371 L"Select Events" /* LabelTitle cmdControlEventNamesGroupSelect_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60372 L"Control Select" /* LabelTitle cmdControlEventNameControlSelect_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60373 L"Text Select" /* LabelTitle cmdControlEventNameSelect_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60374 L"Select Start" /* LabelTitle cmdControlEventNameSelectStart_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60375 L"Change Events" /* LabelTitle cmdControlEventNamesGroupChange_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60376 L"Change" /* LabelTitle cmdControlEventNameChange_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60377 L"Selection Change" /* LabelTitle cmdControlEventNameSelectionChange_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60378 L"Focus Events" /* LabelTitle cmdControlEventNamesGroupFocus_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60379 L"Focus" /* LabelTitle cmdControlEventNameFocus_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60380 L"In" /* LabelTitle cmdControlEventNameFocusin_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60381 L"Out" /* LabelTitle cmdControlEventNameFocusout_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60382 L"Blur" /* LabelTitle cmdControlEventNameBlur_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60383 L"Document Event Model" /* LabelTitle cmdGroupControlBehavior_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60384 L"Document Event Window" /* LabelTitle cmdControlShowEvent_LabelTitle_RESID: (null) */
+END
+
+60385    BITMAP    "Resources\\Icons\\16x16\\magic_wand.bmp" /* SmallImages cmdControlShowEvent_SmallImages_RESID: (null) */
+60386    BITMAP    "Resources\\Icons\\32x32\\magic_wand.bmp" /* LargeImages cmdControlShowEvent_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60387 L"Document Object Model" /* LabelTitle cmdGroupControlDOM_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60388 L"Document Outline Window" /* LabelTitle cmdControlToggleOutline_LabelTitle_RESID: (null) */
+END
+
+60389    BITMAP    "Resources\\Icons\\16x16\\text_tree.bmp" /* SmallImages cmdControlToggleOutline_SmallImages_RESID: (null) */
+60390    BITMAP    "Resources\\Icons\\32x32\\text_tree.bmp" /* LargeImages cmdControlToggleOutline_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60391 L"Text" /* LabelTitle cmdTabText_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60392 L"T" /* Keytip cmdTabText_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60393 L"Hightlight Text" /* LabelTitle cmdGroupTextHighlightText_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60394 L"Hightlight Text" /* LabelTitle cmdTextHighLightInvoke_LabelTitle_RESID: (null) */
+END
+
+60395    BITMAP    "Resources\\Icons\\16x16\\lightbulb_on.bmp" /* SmallImages cmdTextHighLightInvoke_SmallImages_RESID: (null) */
+60396    BITMAP    "Resources\\Icons\\32x32\\lightbulb_on.bmp" /* LargeImages cmdTextHighLightInvoke_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60397 L"Line Color" /* LabelTitle cmdTextHighLightColor_LabelTitle_RESID: (null) */
+END
+
+60398    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTextHighLightColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60399 L"Text Fore Color" /* LabelTitle cmdTextHighLightTextColor_LabelTitle_RESID: (null) */
+END
+
+60400    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTextHighLightTextColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60401 L"Text Background Color" /* LabelTitle cmdTextHighLightBackColor_LabelTitle_RESID: (null) */
+END
+
+60402    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTextHighLightBackColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60403 L"Search for" /* LabelTitle cmdTextHighLightText_LabelTitle_RESID: (null) */
+END
+
+60404    BITMAP    "Resources\\Icons\\16x16\\find_text.bmp" /* SmallImages cmdTextHighLightText_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60405 L"Line Pattern" /* LabelTitle cmdTextHighLightPattern_LabelTitle_RESID: (null) */
+END
+
+60406    BITMAP    "Resources\\Icons\\16x16\\bookmark_blue.bmp" /* SmallImages cmdTextHighLightPattern_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60407 L"Pattern Colors" /* LabelTitle cmdTextHighLightPatternColor_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60408 L"Remove Highlight" /* LabelTitle cmdTextHighLightRemove_LabelTitle_RESID: (null) */
+END
+
+60409    BITMAP    "Resources\\Icons\\16x16\\delete.bmp" /* SmallImages cmdTextHighLightRemove_SmallImages_RESID: (null) */
+60410    BITMAP    "Resources\\Icons\\32x32\\delete.bmp" /* LargeImages cmdTextHighLightRemove_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60411 L"Style Type Line Through" /* LabelTitle cmdTextHighLightPatternLineThrough_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60412 L"Single" /* LabelTitle cmdTextHighLightPatternLineThroughSingle_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60413 L"Double" /* LabelTitle cmdTextHighLightPatternLineThroughDouble_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60414 L"Style Type Underline" /* LabelTitle cmdTextHighLightPatternUnderline_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60415 L"Dash" /* LabelTitle cmdTextHighLightPatternUnderLineDash_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60416 L"Dot Dash" /* LabelTitle cmdTextHighLightPatternUnderLineDotDash_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60417 L"Dot Dot Dash" /* LabelTitle cmdTextHighLightPatternUnderLineDotDotDash_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60418 L"Dotted" /* LabelTitle cmdTextHighLightPatternUnderLineDotted_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60419 L"Single" /* LabelTitle cmdTextHighLightPatternUnderLineSingle_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60420 L"Thick" /* LabelTitle cmdTextHighLightPatternUnderLineThick_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60421 L"Thick Dash" /* LabelTitle cmdTextHighLightPatternUnderLineThickDash_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60422 L"Wave" /* LabelTitle cmdTextHighLightPatternUnderLineWave_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60423 L"Words" /* LabelTitle cmdTextHighLightPatternUnderLineWords_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60424 L"Underline Styles" /* LabelTitle cmdTextHighLightPatternUnderlineList_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60425 L"Manipulate Text" /* LabelTitle cmdGroupTextManipulateText_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60426 L"Word Lower Case" /* LabelTitle cmdTextManipulationAllLowercase_LabelTitle_RESID: (null) */
+END
+
+60427    BITMAP    "Resources\\Icons\\16x16\\document_text.bmp" /* SmallImages cmdTextManipulationAllLowercase_SmallImages_RESID: (null) */
+60428    BITMAP    "Resources\\Icons\\32x32\\document_text.bmp" /* LargeImages cmdTextManipulationAllLowercase_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60429 L"Word Upper Case" /* LabelTitle cmdTextManipulationAllUppercase_LabelTitle_RESID: (null) */
+END
+
+60430    BITMAP    "Resources\\Icons\\16x16\\document_up.bmp" /* SmallImages cmdTextManipulationAllUppercase_SmallImages_RESID: (null) */
+60431    BITMAP    "Resources\\Icons\\32x32\\document_up.bmp" /* LargeImages cmdTextManipulationAllUppercase_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60432 L"Word Title Case" /* LabelTitle cmdTextManipulationUppercase_LabelTitle_RESID: (null) */
+END
+
+60433    BITMAP    "Resources\\Icons\\16x16\\document_preferences.bmp" /* SmallImages cmdTextManipulationUppercase_SmallImages_RESID: (null) */
+60434    BITMAP    "Resources\\Icons\\32x32\\document_preferences.bmp" /* LargeImages cmdTextManipulationUppercase_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60435 L"Text Selection" /* LabelTitle cmdGroupTextSelection_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60436 L"Show Selection" /* LabelTitle cmdGroupTextShowSelection_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60437 L"Select Word" /* LabelTitle cmdGroupTextSelectWord_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60438 L"Select Sentence" /* LabelTitle cmdGroupTextSelectSentence_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60439 L"Select Paragraph" /* LabelTitle cmdGroupTextSelectParagraph_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60440 L"Select All" /* LabelTitle cmdGroupTextSelectAll_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60441 L"Markup Pointer" /* LabelTitle cmdGroupTextManipulatePointer_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60442 L"Styles" /* LabelTitle cmdTabStyles_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60443 L"S" /* Keytip cmdTabStyles_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60444 L"Styles" /* LabelTitle cmdGroupStyles_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60445 L"Enable LINKed Stylesheet" /* LabelTitle cmdStylesLinkedStylesEnabled_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60446 L"Edit Current Element Style" /* LabelTitle cmdStylesEditBodyStyle_LabelTitle_RESID: (null) */
+END
+
+60447    BITMAP    "Resources\\Icons\\16x16\\Style.bmp" /* SmallImages cmdStylesEditBodyStyle_SmallImages_RESID: (null) */
+60448    BITMAP    "Resources\\Icons\\32x32\\Style.bmp" /* LargeImages cmdStylesEditBodyStyle_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60449 L"Style Options" /* LabelTitle cmdGroupStyleOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60450 L"Table Tools" /* LabelTitle cmdTabGroupTableTools_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60451 L"O" /* Keytip cmdTabGroupTableTools_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60452 L"Table Options" /* LabelTitle cmdTabGroupTableAction_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60453 L"Table Commands" /* LabelTitle cmdTabTableTool_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60454 L"Tabledesigner Options" /* LabelTitle cmdTabTableOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60455 L"Designer Behavior" /* LabelTitle cmdTabGroupTableOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60456 L"Insert Options" /* LabelTitle cmdTabGroupInsertOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60457 L"Slider Options" /* LabelTitle cmdTabGroupTableSliderOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60458 L"Designer Help" /* LabelTitle cmdTabGroupTableParameterOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60459 L"Delete Row" /* LabelTitle cmdDeleteRow_LabelTitle_RESID: (null) */
+END
+
+60460    BITMAP    "Resources\\Icons\\16x16\\Table.DeleteRow.bmp" /* SmallImages cmdDeleteRow_SmallImages_RESID: (null) */
+60461    BITMAP    "Resources\\Icons\\32x32\\Table.DeleteRow.bmp" /* LargeImages cmdDeleteRow_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60462 L"Delete Column" /* LabelTitle cmdDeleteColumn_LabelTitle_RESID: (null) */
+END
+
+60463    BITMAP    "Resources\\Icons\\16x16\\Table.DeleteColumn.bmp" /* SmallImages cmdDeleteColumn_SmallImages_RESID: (null) */
+60464    BITMAP    "Resources\\Icons\\32x32\\Table.DeleteColumn.bmp" /* LargeImages cmdDeleteColumn_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60465 L"Insert Row" /* LabelTitle cmdInsertRow_LabelTitle_RESID: (null) */
+END
+
+60466    BITMAP    "Resources\\Icons\\16x16\\Table.InsertRow.bmp" /* SmallImages cmdInsertRow_SmallImages_RESID: (null) */
+60467    BITMAP    "Resources\\Icons\\32x32\\Table.InsertRow.bmp" /* LargeImages cmdInsertRow_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60468 L"Insert Column" /* LabelTitle cmdInsertColumn_LabelTitle_RESID: (null) */
+END
+
+60469    BITMAP    "Resources\\Icons\\16x16\\Table.InsertColumn.bmp" /* SmallImages cmdInsertColumn_SmallImages_RESID: (null) */
+60470    BITMAP    "Resources\\Icons\\32x32\\Table.InsertColumn.bmp" /* LargeImages cmdInsertColumn_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60471 L"Merge Cells" /* LabelTitle cmdMergeCells_LabelTitle_RESID: (null) */
+END
+
+60472    BITMAP    "Resources\\Icons\\16x16\\Table.MergeCells.bmp" /* SmallImages cmdMergeCells_SmallImages_RESID: (null) */
+60473    BITMAP    "Resources\\Icons\\32x32\\Table.MergeCells.bmp" /* LargeImages cmdMergeCells_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60474 L"Merge Down" /* LabelTitle cmdMergeDown_LabelTitle_RESID: (null) */
+END
+
+60475    BITMAP    "Resources\\Icons\\16x16\\Table.MergeDown.bmp" /* SmallImages cmdMergeDown_SmallImages_RESID: (null) */
+60476    BITMAP    "Resources\\Icons\\32x32\\Table.MergeDown.bmp" /* LargeImages cmdMergeDown_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60477 L"Merge Up" /* LabelTitle cmdMergeUp_LabelTitle_RESID: (null) */
+END
+
+60478    BITMAP    "Resources\\Icons\\16x16\\Table.MergeUp.bmp" /* SmallImages cmdMergeUp_SmallImages_RESID: (null) */
+60479    BITMAP    "Resources\\Icons\\32x32\\Table.MergeUp.bmp" /* LargeImages cmdMergeUp_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60480 L"Merge Left" /* LabelTitle cmdMergeLeft_LabelTitle_RESID: (null) */
+END
+
+60481    BITMAP    "Resources\\Icons\\16x16\\Table.MergeLeft.bmp" /* SmallImages cmdMergeLeft_SmallImages_RESID: (null) */
+60482    BITMAP    "Resources\\Icons\\32x32\\Table.MergeLeft.bmp" /* LargeImages cmdMergeLeft_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60483 L"Merge Right" /* LabelTitle cmdMergeRight_LabelTitle_RESID: (null) */
+END
+
+60484    BITMAP    "Resources\\Icons\\16x16\\Table.MergeRight.bmp" /* SmallImages cmdMergeRight_SmallImages_RESID: (null) */
+60485    BITMAP    "Resources\\Icons\\32x32\\Table.MergeRight.bmp" /* LargeImages cmdMergeRight_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60486 L"Split Cell Horizontally" /* LabelTitle cmdSplitCellHorizontal_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60487 L"Split Cell Verticall" /* LabelTitle cmdSplitCellVertical_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60488 L"Insert After Current Cell Position" /* LabelTitle cmdTableInsertAfter_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60489 L"Activate Slider" /* LabelTitle cmdTableSliderActive_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60490 L"Slider Add Mode" /* LabelTitle cmdTableSliderAddMode_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60491 L"Slider Color" /* LabelTitle cmdTableSliderColor_LabelTitle_RESID: (null) */
+END
+
+60492    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTableSliderColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60493 L"Cell Selection" /* LabelTitle cmdTableWithCellSelection_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60494 L"Process TAB Key" /* LabelTitle cmdTableProcessTabKey_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60495 L"Static Behavior" /* LabelTitle cmdTableStaticBehavior_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60496 L"Show Advanced Parameters" /* LabelTitle cmdTableAdvancedParameter_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60497 L"Border Color" /* LabelTitle cmdTableBorderColor_LabelTitle_RESID: (null) */
+END
+
+60498    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTableBorderColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60499 L"Cell Color" /* LabelTitle cmdTableCellColor_LabelTitle_RESID: (null) */
+END
+
+60500    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdTableCellColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60501 L"Spellchecker Tools" /* LabelTitle cmdSpellerTools_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60502 L"Spellchecker" /* LabelTitle cmdTabSpeller_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60503 L"Dictionary" /* LabelTitle cmdSpellerGroupDictionary_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60504 L"Language" /* LabelTitle cmdSpellerDictionary_LabelTitle_RESID: (null) */
+END
+
+60505    BITMAP    "Resources\\Icons\\16x16\\flag_generic.bmp" /* SmallImages cmdSpellerDictionary_SmallImages_RESID: (null) */
+60506    BITMAP    "Resources\\Icons\\32x32\\flag_generic.bmp" /* LargeImages cmdSpellerDictionary_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60507 L"Options" /* LabelTitle cmdSpellerGroupOptions_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60508 L"Ignore HTML" /* LabelTitle cmdSpellerIgnoreHtml_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60509 L"Ignore Words with Digits" /* LabelTitle cmdSpellerIgnoreWordsWithDigits_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60510 L"Suggestions" /* LabelTitle cmdSpellermaxSuggestionsCount_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60511 L"Ignore Upper Case" /* LabelTitle cmdSpellerignoreUpperCaseWords_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60512 L"Suggestions Type" /* LabelTitle cmdSpellerSuggestionEnum_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60513 L"Highlight Style" /* LabelTitle cmdSpellerGroupHighlight_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60514 L"Color" /* LabelTitle cmdSpellerHighlightColor_LabelTitle_RESID: (null) */
+END
+
+60515    BITMAP    "Resources\\Icons\\16x16\\colors_rgb.bmp" /* SmallImages cmdSpellerHighlightColor_SmallImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60516 L"Style" /* LabelTitle cmdSpellerHighlightUnderlineStyle_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60517 L"Spellchecker Commands" /* LabelTitle cmdSpellerCommands_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60518 L"Run in Background" /* LabelTitle cmdSpellerCommandBackground_LabelTitle_RESID: (null) */
+END
+
+60519    BITMAP    "Resources\\Icons\\16x16\\spellcheck.bmp" /* SmallImages cmdSpellerCommandBackground_SmallImages_RESID: (null) */
+60520    BITMAP    "Resources\\Icons\\32x32\\spellcheck.bmp" /* LargeImages cmdSpellerCommandBackground_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60521 L"Start Dialog" /* LabelTitle cmdSpellerCommandCheckWordStart_LabelTitle_RESID: (null) */
+END
+
+60522    BITMAP    "Resources\\Icons\\16x16\\step_add.bmp" /* SmallImages cmdSpellerCommandCheckWordStart_SmallImages_RESID: (null) */
+60523    BITMAP    "Resources\\Icons\\32x32\\step_add.bmp" /* LargeImages cmdSpellerCommandCheckWordStart_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60524 L"Stop Dialog" /* LabelTitle cmdSpellerCommandCheckWordStop_LabelTitle_RESID: (null) */
+END
+
+60525    BITMAP    "Resources\\Icons\\16x16\\step_delete.bmp" /* SmallImages cmdSpellerCommandCheckWordStop_SmallImages_RESID: (null) */
+60526    BITMAP    "Resources\\Icons\\32x32\\step_delete.bmp" /* LargeImages cmdSpellerCommandCheckWordStop_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60527 L"Remove Highlight" /* LabelTitle cmdSpellerCommandRemoveHighlight_LabelTitle_RESID: (null) */
+END
+
+60528    BITMAP    "Resources\\Icons\\16x16\\clipboard_next_down.bmp" /* SmallImages cmdSpellerCommandRemoveHighlight_SmallImages_RESID: (null) */
+60529    BITMAP    "Resources\\Icons\\32x32\\clipboard_next_down.bmp" /* LargeImages cmdSpellerCommandRemoveHighlight_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60530 L"Clear Buffer" /* LabelTitle cmdSpellerCommandClearBuffer_LabelTitle_RESID: (null) */
+END
+
+60531    BITMAP    "Resources\\Icons\\16x16\\clipboard_delete.bmp" /* SmallImages cmdSpellerCommandClearBuffer_SmallImages_RESID: (null) */
+60532    BITMAP    "Resources\\Icons\\32x32\\clipboard_delete.bmp" /* LargeImages cmdSpellerCommandClearBuffer_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    60533 L"Label:cmdQAT" /* LabelTitle cmdQAT_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    60534 L"Label:cmdCustomizeQAT" /* LabelTitle cmdCustomizeQAT_LabelTitle_RESID: (null) */
+END
+
+APPLICATION_RIBBON    UIFILE    "E:\\Dropbox\\p\\cats\\Netrix\\NetrixDemo\\NetrixHtmlEditorDemo\\RibbonMarkup.bml"

@@ -1,0 +1,38 @@
+<HTML XMLNS:IE>
+<HEAD>
+<STYLE TYPE="text/css">
+ie\:* { behavior: url(#default#clientCaps); }
+.lorstyle
+{
+    width:5.5in;
+    height:3in;
+    margin:1in;
+    background:white;   
+    border:1 dashed gray;
+}
+.pagestyle
+{ 
+    width:6.5in;
+    height:5in;
+    background:#FFFF99;   
+	border-left:1 solid black;
+	border-top:1 solid black;
+	border-right:4 solid black;
+	border-bottom:4 solid black;
+    margin:10px;
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+
+<IE:DEVICERECT ID="page1" CLASS="pagestyle" MEDIA="print" >
+	<IE:LAYOUTRECT ID="layoutrect1" CONTENTSRC="" CLASS="lorstyle" NEXTRECT="layoutrect2" />
+</IE:DEVICERECT>
+
+<IE:DEVICERECT ID="page2" CLASS="pagestyle" MEDIA="print" >
+	<IE:LAYOUTRECT ID="layoutrect2" CLASS="lorstyle" />
+</IE:DEVICERECT>
+
+</BODY>
+</HTML>

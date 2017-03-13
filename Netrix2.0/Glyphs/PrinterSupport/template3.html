@@ -1,0 +1,62 @@
+<HTML XMLNS:IE>
+<HEAD>
+<?IMPORT NAMESPACE="IE" IMPLEMENTATION="#default">
+<STYLE TYPE="text/css">
+.lorstyle
+{
+    width:5.5in;
+    height:8in;
+    margin:1in;
+    background:white;   
+    border:1 dashed gray;
+}
+.pagestyle
+{ 
+    background:#FFFF99;
+    border-left:1 solid black;
+    border-top:1 solid black;
+    border-right:4 solid black;
+    border-bottom:4 solid black;
+    width:8.5in;
+    height:11in;
+    margin:10px;
+    overflow:hidden;
+}
+</STYLE>
+<SCRIPT LANGUAGE="JScript">
+var iNextPageToCreate = 1;
+
+function AddFirstPage()
+{
+    newHTML  = "<IE:DEVICERECT ID='page1' MEDIA='print' CLASS='pagestyle'>";
+    newHTML += "<IE:LAYOUTRECT ID='layoutrect1' CONTENTSRC='document' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect2' CLASS='lorstyle'/>";
+    newHTML += "</IE:DEVICERECT>";
+
+    pagecontainer.insertAdjacentHTML("afterBegin", newHTML);
+    iNextPageToCreate = 2;
+}
+
+function OnRectComplete()
+{
+    if (event.contentOverflow == true)
+    {
+        document.all("layoutrect" + (iNextPageToCreate - 1)).onlayoutcomplete = null;
+
+        newHTML  = "<IE:DEVICERECT ID='page" + iNextPageToCreate +  "' MEDIA='print' CLASS='pagestyle'>";
+        newHTML += "<IE:LAYOUTRECT ID='layoutrect" + iNextPageToCreate + "' ONLAYOUTCOMPLETE='OnRectComplete()' NEXTRECT='layoutrect" + (iNextPageToCreate + 1) + "'  CLASS='lorstyle'/>";
+        newHTML += "</IE:DEVICERECT>";
+
+        pagecontainer.insertAdjacentHTML("beforeEnd", newHTML);
+        iNextPageToCreate++;
+    }
+}
+</SCRIPT>
+<HEAD>
+<BODY ONLOAD="AddFirstPage()">
+
+<DIV ID="pagecontainer">
+<!-- Dynamically created pages go here. -->
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,1759 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Attribute.href" type="System.String">
+		<value>Anchor</value>
+	</data>
+	<data name="Attribute.name" type="System.String">
+		<value>名称</value>
+	</data>
+	<data name="Attribute.accessKey" type="System.String">
+		<value>存取关键字</value>
+	</data>
+	<data name="Attribute.id" type="System.String">
+		<value>标识符</value>
+	</data>
+	<data name="Attribute.(id)" type="System.String">
+		<value>标识符</value>
+	</data>
+	<data name="Attribute.class" type="System.String">
+		<value>样式类</value>
+	</data>
+	<data name="Attribute.style" type="System.String">
+		<value>直列样式</value>
+	</data>
+	<data name="Attribute.src" type="System.String">
+		<value>源文件</value>
+	</data>
+	<data name="Attribute.width" type="System.String">
+		<value>宽度</value>
+	</data>
+	<data name="Attribute.height" type="System.String">
+		<value>高度</value>
+	</data>
+	<data name="Exception.accesskey" type="System.String">
+		<value>您在这里只能指定一个关键字段（字母或数字）。</value>
+	</data>
+	<data name="Attribute.disabled" type="System.String">
+		<value>失效的</value>
+	</data>
+	<data name="Attribute.hideFocus" type="System.String">
+		<value>隐藏光标</value>
+	</data>
+	<data name="Description.hideFocus" type="System.String">
+		<value>当本对象被选中时，指定是否隐藏中心矩形</value>
+	</data>
+	<data name="Description.disabled" type="System.String">
+		<value>如果该字段无效则为“真”</value>
+	</data>
+	<data name="Description.accesskey" type="System.String">
+		<value>本对象快捷键</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus" type="System.String">
+		<value>定位后开启</value>
+	</data>
+	<data name="Description.ScriptOnFocus" type="System.String">
+		<value>当本对象被选中时，事件发生</value>
+	</data>
+	<data name="Description.ScriptOnKeyPress" type="System.String">
+		<value>当本对象被选中使用者键入一个字符后，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnKeyPress" type="System.String">
+		<value>按键开启</value>
+	</data>
+	<data name="Description.tabIndex" type="System.String">
+		<value>本对象选项卡标记</value>
+	</data>
+	<data name="Attribute.tabIndex" type="System.String">
+		<value>跳格键标记</value>
+	</data>
+	<data name="Attribute.ScriptOnClick" type="System.String">
+		<value>单击开启</value>
+	</data>
+	<data name="Description.ScriptOnClick" type="System.String">
+		<value>当使用者单击本对象时，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOver" type="System.String">
+		<value>鼠标在上，开启</value>
+	</data>
+	<data name="Description.ScriptOnMouseOver" type="System.String">
+		<value>当鼠标指针进入本对象上面的区域时，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOut" type="System.String">
+		<value>鼠标离开，开启</value>
+	</data>
+	<data name="Description.ScriptOnMouseOut" type="System.String">
+		<value>当鼠标指针离开本对象上面的区域时，事件发生</value>
+	</data>
+	<data name="Attribute.title" type="System.String">
+		<value>标题</value>
+	</data>
+	<data name="Description.title" type="System.String">
+		<value>该对象的标题, 被用作此对象的'ToolTip'描述</value>
+	</data>
+	<data name="Description.title_Acronym" type="System.String">
+		<value>该缩写所代表的文字</value>
+	</data>
+	<data name="Description.href" type="System.String">
+		<value>该锚标链接的URL</value>
+	</data>
+	<data name="Description.name" type="System.String">
+		<value>该锚标的名称作为相应链接的对象</value>
+	</data>
+	<data name="Description.ScriptOnMouseUp" type="System.String">
+		<value>当鼠标在该对象上单击结束时, 事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseUp" type="System.String">
+		<value>鼠标放开，开启</value>
+	</data>
+	<data name="Attribute.target" type="System.String">
+		<value>目标窗口</value>
+	</data>
+	<data name="Description.target" type="System.String">
+		<value>该链接的对象</value>
+	</data>
+	<data name="Attribute.nohref" type="System.String">
+		<value>备用锚标</value>
+	</data>
+	<data name="Description.nohref" type="System.String">
+		<value>在该影象图中定义一非敏感区</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus_Area" type="System.String">
+		<value>定位，开启</value>
+	</data>
+	<data name="Description.ScriptOnFocus_Area" type="System.String">
+		<value>如果定位在该区域（变为有效），激发。</value>
+	</data>
+	<data name="Description.ScriptOnBlur_Area" type="System.String">
+		<value>如果离开在该区域（变为无效），激发。</value>
+	</data>
+	<data name="Attribute.ScriptOnBlur_Area" type="System.String">
+		<value>模糊，开启</value>
+	</data>
+	<data name="Attribute.alt" type="System.String">
+		<value>备选文本</value>
+	</data>
+	<data name="Description.alt" type="System.String">
+		<value>当置于下面的图像不明显时，文字出现。 如果鼠标经停该区域，相同的文字出现在一个弹出式的圈框中。</value>
+	</data>
+	<data name="Attribute.coords" type="System.String">
+		<value>具体区域的坐标</value>
+	</data>
+	<data name="Description.coords" type="System.String">
+		<value>XY坐标的一览表, 坐标确定该区域的多边形。矩形: 左-x、上-y、右-x、下-y 。圆：中心-x、中心-y、半径。注：当半径值是一百分比值时，用户工
+具将根据有关对象的宽度和高度计算最终的半径值。该半径将是两者之中的小者。 矩形: x1, y1, x2, y2, ..., xN, yN. 第一个x和y坐标对和最后一对将是相同的，以封闭该多边形。当这些坐标值不相同时，用户
+工具将推断出一附加的坐标对，以封闭该多边形。</value>
+	</data>
+	<data name="Attribute.shape" type="System.String">
+		<value>区域形状</value>
+	</data>
+	<data name="Description.shape" type="System.String">
+		<value>XY坐标的一览表, 坐标确定该区域的多边形。默认: 确定全部区域。矩形: 确定一矩形区域。圆形: 确定一圆形区域。多边形: 确定一多边形区域</value>
+	</data>
+	<data name="Attribute.color" type="System.String">
+		<value>颜色</value>
+	</data>
+	<data name="Description.color" type="System.String">
+		<value>该构件的前景色</value>
+	</data>
+	<data name="Attribute.face" type="System.String">
+		<value>字体</value>
+	</data>
+	<data name="Description.face" type="System.String">
+		<value>用逗点分隔的字体列表。浏览器将显示用户系统里该列表中的第一个字体。</value>
+	</data>
+	<data name="Attribute.size" type="System.String">
+		<value>大小</value>
+	</data>
+	<data name="Description.size" type="System.String">
+		<value>在字体组合中该部分的大小</value>
+	</data>
+	<data name="Attribute.ScriptOnSubmit" type="System.String">
+		<value>按提交按钮，开启</value>
+	</data>
+	<data name="Description.ScriptOnSubmit" type="System.String">
+		<value>当提交该表格的信息时，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnReset" type="System.String">
+		<value>按复位按钮，开启</value>
+	</data>
+	<data name="Description.ScriptOnReset" type="System.String">
+		<value>当关于该表格的数据被重调回到它的初始状态时，事件发生。</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>以JavaScript方式使用的表格的名称</value>
+	</data>
+	<data name="Attribute.frameBorder" type="System.String">
+		<value>窗口四周的边框</value>
+	</data>
+	<data name="Description.frameBorder" type="System.String">
+		<value>确定是否画围绕该窗口的边框</value>
+	</data>
+	<data name="Attribute.noResize" type="System.String">
+		<value>不可缩放</value>
+	</data>
+	<data name="Description.noResize" type="System.String">
+		<value>显示用户是否可以用鼠标缩放该窗口</value>
+	</data>
+	<data name="Attribute.Scrolling" type="System.String">
+		<value>滚动</value>
+	</data>
+	<data name="Description.Scrolling" type="System.String">
+		<value>确定该窗口周围滚动条的外观</value>
+	</data>
+	<data name="Attribute.marginHeight" type="System.String">
+		<value>上/下边距</value>
+	</data>
+	<data name="Description.marginHeight" type="System.String">
+		<value>上和下边距的大小</value>
+	</data>
+	<data name="Attribute.marginWidth" type="System.String">
+		<value>左/右边距</value>
+	</data>
+	<data name="Description.marginWidth" type="System.String">
+		<value>左和右边距的大小</value>
+	</data>
+	<data name="Attribute.name_Frame" type="System.String">
+		<value>窗口名称</value>
+	</data>
+	<data name="Description.name_Frame" type="System.String">
+		<value>该窗口的名称，用作超链接对象属性的名称。</value>
+	</data>
+	<data name="Attribute.ScriptOnActivate" type="System.String">
+		<value>激活，开启</value>
+	</data>
+	<data name="Description.ScriptOnActivate" type="System.String">
+		<value>当该窗口在该页上变为当前的对象时，事件发生</value>
+	</data>
+	<data name="Description.ScriptOnDeactivate" type="System.String">
+		<value>当该窗口在该页上不再是当前的对象时，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnDeactivate" type="System.String">
+		<value>撤消，开启</value>
+	</data>
+	<data name="Attribute.ScriptOnLoad" type="System.String">
+		<value>加载，开启</value>
+	</data>
+	<data name="Description.ScriptOnLoad" type="System.String">
+		<value>该窗口被加载后，事件发生</value>
+	</data>
+	<data name="Attribute.ScriptOnScroll" type="System.String">
+		<value>滚动，开启</value>
+	</data>
+	<data name="Description.ScriptOnScroll" type="System.String">
+		<value>当用户改变该对象的滚动位置时，事件发生</value>
+	</data>
+	<data name="Attribute.align" type="System.String">
+		<value>对齐方式</value>
+	</data>
+	<data name="Description.align" type="System.String">
+		<value>控制块部分的对齐方式</value>
+	</data>
+	<data name="Attribute.noshade" type="System.String">
+		<value>无底纹</value>
+	</data>
+	<data name="Description.noshade" type="System.String">
+		<value>确定是否用3-D底纹画水平隔栏线</value>
+	</data>
+	<data name="Attribute.size_Hr" type="System.String">
+		<value>粗细</value>
+	</data>
+	<data name="Description.size_Hr" type="System.String">
+		<value>该水平隔栏线的粗细</value>
+	</data>
+	<data name="Attribute.charset" type="System.String">
+		<value>字符集</value>
+	</data>
+	<data name="Description.charset" type="System.String">
+		<value>被链接文档的字符集</value>
+	</data>
+	<data name="Attribute.media" type="System.String">
+		<value>媒体</value>
+	</data>
+	<data name="Description.media" type="System.String">
+		<value>被链接文档要求的对象媒体</value>
+	</data>
+	<data name="Attribute.rel" type="System.String">
+		<value>关系</value>
+	</data>
+	<data name="Description.rel" type="System.String">
+		<value>与对象的关系。通常的取值是：'stylesheet', 'next', 'prev', 'index'。</value>
+	</data>
+	<data name="Attribute.rev" type="System.String">
+		<value>参照</value>
+	</data>
+	<data name="Description.rev" type="System.String">
+		<value>从对象文档反向参照</value>
+	</data>
+	<data name="Attribute.type" type="System.String">
+		<value>类型</value>
+	</data>
+	<data name="Description.type" type="System.String">
+		<value>以MIME为标准的被链接文档的类型。样式表使用'text/css'。</value>
+	</data>
+	<data name="Attribute.type_Ol" type="System.String">
+		<value>列表类型</value>
+	</data>
+	<data name="Description.type_Ol" type="System.String">
+		<value>显示在一张有序表中的数字种类</value>
+	</data>
+	<data name="Attribute.type_Ul" type="System.String" mimetype="	">
+		<value>列表类型</value>
+	</data>
+	<data name="Description.type_Ul" type="System.String">
+		<value>使用在一张无序列表中的项目符号种类或在一张有序表中的编号排列</value>
+	</data>
+	<data name="Attribute.type_Script" type="System.String">
+		<value>MIME类型</value>
+	</data>
+	<data name="Description.type_Script" type="System.String">
+		<value>该内容的MIME类型，例如，'text/javascript'。 任选的。 修改'language'属性。</value>
+	</data>
+	<data name="Attribute.language" type="System.String">
+		<value>脚本语言</value>
+	</data>
+	<data name="Description.language" type="System.String">
+		<value>描述内容的脚本语言，例如，'JavaScript'或'VBScript'。</value>
+	</data>
+	<data name="Attribute.ScriptContent" type="System.String">
+		<value>脚本内容</value>
+	</data>
+	<data name="Description.ScriptContent" type="System.String">
+		<value>脚本内容。单击省略符号以启动该集成脚本编辑器。</value>
+	</data>
+	<data name="Attribute.noWrap" type="System.String">
+		<value>压缩打包</value>
+	</data>
+	<data name="Description.noWrap" type="System.String">
+		<value>指定长文本行是否被打包。</value>
+	</data>
+	<data name="Attribute.clear" type="System.String">
+		<value>纯地址</value>
+	</data>
+	<data name="Description.clear" type="System.String">
+		<value>分隔符周围文字浮动特性</value>
+	</data>
+	<data name="Attribute.vSpace" type="System.String">
+		<value>垂直间距</value>
+	</data>
+	<data name="Description.vSpace" type="System.String">
+		<value>图像周围垂直间距或衬垫（上和下）</value>
+	</data>
+	<data name="Attribute.hSpace" type="System.String">
+		<value>水平间距</value>
+	</data>
+	<data name="Description.hSpace" type="System.String">
+		<value>图像周围水平间距或衬垫（左和右）</value>
+	</data>
+	<!-- GUI -->
+	<data name="StyleEditor.fontPickerFont.Title" type="System.String">
+		<value>字体</value>
+	</data>
+	<data name="StyleEditor.groupbox3.Text" type="System.String">
+		<value>字形</value>
+	</data>
+	<data name="StyleEditor.label3.Text" type="System.String">
+		<value>字母变换</value>
+	</data>
+	<data name="StyleEditor.label2.Text" type="System.String">
+		<value>粗细</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" type="System.String">
+		<value>小体大写字母</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontStyleItalic.Text" type="System.String">
+		<value>斜体</value>
+	</data>
+	<data name="StyleEditor.groupBox2.Text" type="System.String">
+		<value>字体属性</value>
+	</data>
+	<data name="StyleEditor.label36.Text" type="System.String">
+		<value>特殊的或普通的字号：</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeAbsolute.Text" type="System.String">
+		<value>字号名称：</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeUnit.Text" type="System.String">
+		<value>特殊字号：</value>
+	</data>
+	<data name="StyleEditor.label1.Text" type="System.String">
+		<value>文本颜色</value>
+	</data>
+	<data name="StyleEditor.groupBox1.Text" type="System.String">
+		<value>字体系列</value>
+	</data>
+	<data name="StyleEditor.label50.Text" type="System.String">
+		<value>可以是任何号数的字体或普通字体。浏览器从该列表中取第一个当场现有的字体。</value>
+	</data>
+	<data name="StyleEditor.label49.Text" type="System.String">
+		<value>字体系列列表</value>
+	</data>
+	<data name="StyleEditor.label52.Text" type="System.String">
+		<value>与容器构件有关</value>
+	</data>
+	<data name="StyleEditor.groupBox5.Text" type="System.String">
+		<value>背景图像</value>
+	</data>
+	<data name="Attribute.HttpEquiv" type="System.String">
+		<value>HTTP对等</value>
+	</data>
+	<data name="Description.HttpEquiv" type="System.String">
+		<value>决定此标记生成一个HTTP标题。</value>
+	</data>
+	<data name="Attribute.name_Meta" type="System.String">
+		<value>名称</value>
+	</data>
+	<data name="Description.name_Meta" type="System.String">
+		<value>META标记的名称属性</value>
+	</data>
+	<data name="Attribute.Content" type="System.String">
+		<value>内容</value>
+	</data>
+	<data name="Description.Content" type="System.String">
+		<value>内容, 含义由名称或HttpEquiv标记确定。</value>
+	</data>
+	<data name="StyleEditor.label9.Text" type="System.String">
+		<value>如何确定该图像的位置？</value>
+	</data>
+	<data name="StyleEditor.label8.Text" type="System.String">
+		<value>纵向：</value>
+	</data>
+	<data name="StyleEditor.label7.Text" type="System.String">
+		<value>横向：</value>
+	</data>
+	<data name="StyleEditor.label6.Text" type="System.String">
+		<value>固定</value>
+	</data>
+	<data name="StyleEditor.label5.Text" type="System.String">
+		<value>平铺</value>
+	</data>
+	<data name="StyleEditor.label4.Text" type="System.String">
+		<value>从盘中选择图像：</value>
+	</data>
+	<data name="StyleEditor.buttonBackgroundImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.groupBox4.Text" type="System.String">
+		<value>背景色</value>
+	</data>
+	<data name="StyleEditor.label27.Text" type="System.String">
+		<value>背景色：</value>
+	</data>
+	<data name="StyleEditor.checkBox6.Text" type="System.String">
+		<value>透明</value>
+	</data>
+	<data name="StyleEditor.groupBox18.Text" type="System.String">
+		<value>边缘、底纹和边框样式</value>
+	</data>
+	<data name="StyleEditor.label56.Text" type="System.String">
+		<value>底纹</value>
+	</data>
+	<data name="StyleEditor.label55.Text" type="System.String">
+		<value>边框宽度</value>
+	</data>
+	<data name="StyleEditor.label54.Text" type="System.String">
+		<value>边框样式</value>
+	</data>
+	<data name="StyleEditor.label53.Text" type="System.String">
+		<value>边框颜色</value>
+	</data>
+	<data name="StyleEditor.label17.Text" type="System.String">
+		<value>页边距</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>上边框</value>
+	</data>
+	<data name="StyleEditor.groupBox25.Text" type="System.String">
+		<value>所有边框</value>
+	</data>
+	<data name="StyleEditor.groupBox24.Text" type="System.String">
+		<value>左边框</value>
+	</data>
+	<data name="StyleEditor.groupBox17.Text" type="System.String">
+		<value>右边框</value>
+	</data>
+	<data name="StyleEditor.groupBox12.Text" type="System.String">
+		<value>下边框</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>所有边框</value>
+	</data>
+	<data name="StyleEditor.tabPageAll.Text" type="System.String">
+		<value>所有</value>
+	</data>
+	<data name="StyleEditor.tabPageLeft.Text" type="System.String">
+		<value>左</value>
+	</data>
+	<data name="StyleEditor.tabPageRight.Text" type="System.String">
+		<value>右</value>
+	</data>
+	<data name="StyleEditor.tabPageTop.Text" type="System.String">
+		<value>上</value>
+	</data>
+	<data name="StyleEditor.tabPageBottom.Text" type="System.String">
+		<value>下</value>
+	</data>
+	<data name="StyleEditor.groupBox21.Text" type="System.String">
+		<value>文字装饰</value>
+	</data>
+	<data name="StyleEditor.label67.Text" type="System.String">
+		<value>确定除字体特征外文字还有的其它显示方式。</value>
+	</data>
+	<data name="StyleEditor.groupBox8.Text" type="System.String">
+		<value>方向和缩进</value>
+	</data>
+	<data name="StyleEditor.label68.Text" type="System.String">
+		<value>确定控制块里面文字是如何对齐的</value>
+	</data>
+	<data name="StyleEditor.label29.Text" type="System.String">
+		<value>方向：</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRemove.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="StyleEditor.label51.Text" type="System.String">
+		<value>控制块缩进：</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRtl.Text" type="System.String">
+		<value>从右到左</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionLtr.Text" type="System.String">
+		<value>从左到右</value>
+	</data>
+	<data name="StyleEditor.groupBox7.Text" type="System.String">
+		<value>线和字符间距</value>
+	</data>
+	<data name="StyleEditor.label66.Text" type="System.String">
+		<value>这些选项确定浮动文字是如何显示的。结果取决于所选字体。</value>
+	</data>
+	<data name="StyleEditor.label37.Text" type="System.String">
+		<value>词：</value>
+	</data>
+	<data name="StyleEditor.label11.Text" type="System.String">
+		<value>行高：</value>
+	</data>
+	<data name="StyleEditor.label12.Text" type="System.String">
+		<value>字符：</value>
+	</data>
+	<data name="StyleEditor.groupBox6.Text" type="System.String">
+		<value>对齐方式</value>
+	</data>
+	<data name="StyleEditor.groupBox19.Text" type="System.String">
+		<value>水平对齐</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignDisable.Text" type="System.String">
+		<value>从表格中删除选项：</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignJustify.Text" type="System.String">
+		<value>调整</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignLeft.Text" type="System.String">
+		<value>左</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignCenter.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignRight.Text" type="System.String">
+		<value>右</value>
+	</data>
+	<data name="StyleEditor.label10.Text" type="System.String">
+		<value>中心</value>
+	</data>
+	<data name="StyleEditor.groupBox20.Text" type="System.String">
+		<value>垂直对齐</value>
+	</data>
+	<data name="StyleEditor.label65.Text" type="System.String">
+		<value>确定该构件垂直对齐的方式。这通常被用于表格和方框。</value>
+	</data>
+	<data name="StyleEditor.groupBox10.Text" type="System.String">
+		<value>文字浮动选项</value>
+	</data>
+	<data name="StyleEditor.label48.Text" type="System.String">
+		<value>换行符处理</value>
+	</data>
+	<data name="StyleEditor.label47.Text" type="System.String">
+		<value>溢出</value>
+	</data>
+	<data name="StyleEditor.label45.Text" type="System.String">
+		<value>显示</value>
+	</data>
+	<data name="StyleEditor.groupBox9.Text" type="System.String">
+		<value>一对象的位置状态</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRemove.Text" type="System.String">
+		<value>从表格中删除选项</value>
+	</data>
+	<data name="StyleEditor.label16.Text" type="System.String">
+		<value>从左边框：</value>
+	</data>
+	<data name="StyleEditor.label15.Text" type="System.String">
+		<value>从上边框</value>
+	</data>
+	<data name="StyleEditor.label14.Text" type="System.String">
+		<value>宽度</value>
+	</data>
+	<data name="StyleEditor.label13.Text" type="System.String">
+		<value>高度</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionAbsolute.Text" type="System.String">
+		<value>独立的</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRelative.Text" type="System.String">
+		<value>文字浮动</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionFixed.Text" type="System.String">
+		<value>相对不浮动</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionNone.Text" type="System.String">
+		<value>无</value>
+	</data>
+	<data name="StyleEditor.groupBox14.Text" type="System.String">
+		<value>确定列表项外观</value>
+	</data>
+	<data name="StyleEditor.label69.Text" type="System.String">
+		<value>这些选项决定无序列表的外观。最终结果还取决于写入的文字、字体和间距特征。</value>
+	</data>
+	<data name="StyleEditor.buttonListStyleImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.label22.Text" type="System.String">
+		<value>位置：</value>
+	</data>
+	<data name="StyleEditor.label23.Text" type="System.String">
+		<value>从盘中选择图像：</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletImage.Text" type="System.String">
+		<value>用用户自定义项目符号（选择图像）：</value>
+	</data>
+	<data name="StyleEditor.textBoxListStyleImage.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.label21.Text" type="System.String">
+		<value>样式</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletStyle.Text" type="System.String">
+		<value>用标准项目符号（选择样式和位置）：</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletNone.Text" type="System.String">
+		<value>无项目符号</value>
+	</data>
+	<data name="StyleEditor.groupBox23.Text" type="System.String">
+		<value>列和隔栏线</value>
+	</data>
+	<data name="StyleEditor.label42.Text" type="System.String">
+		<value>隔栏线宽：</value>
+	</data>
+	<data name="StyleEditor.label41.Text" type="System.String">
+		<value>隔栏线样式</value>
+	</data>
+	<data name="StyleEditor.label40.Text" type="System.String">
+		<value>隔栏线颜色</value>
+	</data>
+	<data name="StyleEditor.label39.Text" type="System.String">
+		<value>列</value>
+	</data>
+	<data name="StyleEditor.groupBox16.Text" type="System.String">
+		<value>表格</value>
+	</data>
+	<data name="StyleEditor.label44.Text" type="System.String">
+		<value>行宽</value>
+	</data>
+	<data name="StyleEditor.label43.Text" type="System.String">
+		<value>列宽</value>
+	</data>
+	<data name="StyleEditor.label38.Text" type="System.String">
+		<value>标题位置</value>
+	</data>
+	<data name="StyleEditor.linkLabel1.Text" type="System.String">
+		<value>点击这里设置</value>
+	</data>
+	<data name="StyleEditor.label71.Text" type="System.String">
+		<value>高度和宽度在位置标签卡中选择：</value>
+	</data>
+	<data name="StyleEditor.tabPageFonts.Text" type="System.String">
+		<value>字体</value>
+	</data>
+	<data name="StyleEditor.tabPageBackground.Text" type="System.String">
+		<value>背景</value>
+	</data>
+	<data name="StyleEditor.tabPageBorders.Text" type="System.String">
+		<value>边框</value>
+	</data>
+	<data name="StyleEditor.tabPageLayout.Text" type="System.String">
+		<value>版面</value>
+	</data>
+	<data name="StyleEditor.tabPagePosition.Text" type="System.String">
+		<value>位置</value>
+	</data>
+	<data name="StyleEditor.tabPageLists.Text" type="System.String">
+		<value>列表</value>
+	</data>
+	<data name="StyleEditor.tabPageTables.Text" type="System.String">
+		<value>表格</value>
+	</data>
+	<data name="StyleEditor.tabPageMisc.Text" type="System.String">
+		<value>其它</value>
+	</data>
+	<data name="StyleEditor.groupBox15.Text" type="System.String">
+		<value>用户界面</value>
+	</data>
+	<data name="StyleEditor.label70.Text" type="System.String">
+		<value>对于Internet Explorer以外的浏览器，光标和滚动条选项当前不可用。</value>
+	</data>
+	<data name="StyleEditor.label64.Text" type="System.String">
+		<value>路径</value>
+	</data>
+	<data name="StyleEditor.label63.Text" type="System.String">
+		<value>3D光线</value>
+	</data>
+	<data name="StyleEditor.label62.Text" type="System.String">
+		<value>高亮显示</value>
+	</data>
+	<data name="StyleEditor.label61.Text" type="System.String">
+		<value>黑影</value>
+	</data>
+	<data name="StyleEditor.label60.Text" type="System.String">
+		<value>阴影</value>
+	</data>
+	<data name="StyleEditor.label59.Text" type="System.String">
+		<value>基底</value>
+	</data>
+	<data name="StyleEditor.label26.Text" type="System.String">
+		<value>正面</value>
+	</data>
+	<data name="StyleEditor.label25.Text" type="System.String">
+		<value>滚动条构件的颜色：</value>
+	</data>
+	<data name="StyleEditor.label24.Text" type="System.String">
+		<value>光标：</value>
+	</data>
+	<data name="StyleEditor.comboBoxCursor.Text" type="System.String">
+		<value>光标</value>
+	</data>
+	<data name="StyleEditor.label58.Text" type="System.String">
+		<value>箭头</value>
+	</data>
+	<data name="StyleEditor.groupBox22.Text" type="System.String">
+		<value>透明度</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisiblityRemove.Text" type="System.String">
+		<value>从表格中删除选项</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityNone.Text" type="System.String">
+		<value>无</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityHidden.Text" type="System.String">
+		<value>隐藏</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityVisible.Text" type="System.String">
+		<value>可见的</value>
+	</data>
+	<data name="StyleEditor.label31.Text" type="System.String">
+		<value>如果构件被设置为不可见（Visiblity=Hidden），有必要用脚本改变其状态使其以后显示。如果无脚本功能，设为'None'或'remove'。</value>
+	</data>
+	<data name="StyleEditor.button1.Text" type="System.String">
+		<value>使左边、右边和底边值与上边值协调。</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonNo.Text" type="System.String">
+		<value>标准</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonCont.Text" type="System.String">
+		<value>继续</value>
+	</data>
+	<data name="ColorPanelUserControl.groupBox2.Text" type="System.String">
+		<value>排序选项</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonBrightness.Text" type="System.String">
+		<value>亮度</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonName.Text" type="System.String">
+		<value>名称</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonDistance.Text" type="System.String">
+		<value>距离</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonSaturation.Text" type="System.String">
+		<value>饱和</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonWeb.Text" type="System.String">
+		<value>环球网</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonCustom.Text" type="System.String">
+		<value>定制</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonSystem.Text" type="System.String">
+		<value>系统</value>
+	</data>
+	<data name="ColorPanelUserControl.label1.Text" type="System.String">
+		<value>按ESC键取消</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonNoColor.Text" type="System.String">
+		<value>无色</value>
+	</data>
+	<data name="MetaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>选择一META标记编辑：</value>
+	</data>
+	<data name="AreaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>选择一AREA标记编辑：</value>
+	</data>
+	<data name="ScriptCollectionEditor.memberLabel.Text" type="System.String">
+		<value>选择一脚本控制块编辑：</value>
+	</data>
+	<data name="StylesheetCollectionEditor.memberLabel.Text" type="System.String">
+		<value>选择一被链接的样式表标记编辑：</value>
+	</data>
+	<data name="MetaCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="StylesheetCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="ScriptCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="AreaCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="MetaCollectionEditor.addButton.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="ScriptCollectionEditor.addButton.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="StylesheetCollectionEditor.addButton.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="AreaCollectionEditor.addButton.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="UnitEditor.radioButtonPercent.Text" type="System.String">
+		<value>%</value>
+	</data>
+	<data name="UnitEditor.radioButtonPixel.Text" type="System.String">
+		<value>像素</value>
+	</data>
+	<data name="UnitEditor.radioButtonOff.Text" type="System.String">
+		<value>关闭</value>
+	</data>
+	<data name="Description.aLink" type="System.String">
+		<value>该页上现用链接的颜色</value>
+	</data>
+	<data name="Description.bgProperties" type="System.String">
+		<value>确定背景图像固定或滚动</value>
+	</data>
+	<data name="Description.backGround" type="System.String">
+		<value>用在该页上背景图像的URL</value>
+	</data>
+	<data name="Description.bgColor" type="System.String">
+		<value>该页背景颜色</value>
+	</data>
+	<data name="Description.bottomMargin" type="System.String">
+		<value>以像素为单位的下边距尺寸</value>
+	</data>
+	<data name="Description.leftMargin" type="System.String">
+		<value>以像素为单位的左边距尺寸</value>
+	</data>
+	<data name="Description.link" type="System.String">
+		<value>该页上链接的颜色</value>
+	</data>
+	<data name="Description.rightMargin" type="System.String">
+		<value>以像素为单位的右边距尺寸</value>
+	</data>
+	<data name="Description.scroll" type="System.String">
+		<value>注明是否到显示滚动条</value>
+	</data>
+	<data name="Description.text" type="System.String">
+		<value>该页上文本的前景色</value>
+	</data>
+	<data name="Description.topMargin" type="System.String">
+		<value>以像素为单位的该页上边距尺寸</value>
+	</data>
+	<data name="Description.vLink" type="System.String">
+		<value>该页上访问过链接的颜色</value>
+	</data>
+	<data name="Attribute.aLink" type="System.String">
+		<value>现用链接颜色</value>
+	</data>
+	<data name="Attribute.bgProperties" type="System.String">
+		<value>背景属性</value>
+	</data>
+	<data name="Attribute.background" type="System.String">
+		<value>背景图象</value>
+	</data>
+	<data name="Attribute.bgColor" type="System.String">
+		<value>背景色</value>
+	</data>
+	<data name="Attribute.bottomMargin" type="System.String">
+		<value>下边距</value>
+	</data>
+	<data name="Attribute.leftMargin" type="System.String">
+		<value>左边距</value>
+	</data>
+	<data name="Attribute.link" type="System.String">
+		<value>链接颜色</value>
+	</data>
+	<data name="Attribute.rightMargin" type="System.String">
+		<value>右边距</value>
+	</data>
+	<data name="Attribute.scroll" type="System.String">
+		<value>滚动条</value>
+	</data>
+	<data name="Attribute.text" type="System.String">
+		<value>文本颜色</value>
+	</data>
+	<data name="Attribute.topMargin" type="System.String">
+		<value>上边距</value>
+	</data>
+	<data name="Attribute.vLink" type="System.String">
+		<value>访问过链接的颜色</value>
+	</data>
+	<data name="Description.ScriptBlocks" type="System.String">
+		<value>进入该脚本控制块编辑器</value>
+	</data>
+	<data name="Attribute.ScriptBlocks" type="System.String">
+		<value>脚本控制块</value>
+	</data>
+	<data name="Description.NamedMetaTags" type="System.String">
+		<value>在该编辑器中编辑标准META标记</value>
+	</data>
+	<data name="Attribute.NamedMetaTags" type="System.String">
+		<value>META名称</value>
+	</data>
+	<data name="Description.HttpEquivMetaTags" type="System.String">
+		<value>在该编辑器中编辑标准META标记</value>
+	</data>
+	<data name="Attribute.HttpEquivMetaTags" type="System.String">
+		<value>META http对等</value>
+	</data>
+	<data name="Description.LinkedStylesheets" type="System.String">
+		<value>编辑指向被链接样式文档的链接</value>
+	</data>
+	<data name="Attribute.LinkedStylesheets" type="System.String">
+		<value>被链接的样式表</value>
+	</data>
+	<data name="Description.Title_Body" type="System.String">
+		<value>该标题识别文档的内容并被显示在窗口的标题栏中。对搜索引擎是重要的。
+</value>
+	</data>
+	<data name="Attribute.Title_Body" type="System.String">
+		<value>标题</value>
+	</data>
+	<data name="Description.URL" type="System.String">
+		<value>该文件加载的URL或路径</value>
+	</data>
+	<data name="Attribute.URL" type="System.String">
+		<value>URL</value>
+	</data>
+	<data name="Description.LoadTime56K" type="System.String">
+		<value>用56k调制解调器加载该文件的平均时间。仅作参考。</value>
+	</data>
+	<data name="Attribute.LoadTime56K" type="System.String">
+		<value>加载时间（56k）</value>
+	</data>
+	<data name="Description.FileSize" type="System.String">
+		<value>该文档当前大小（字节）</value>
+	</data>
+	<data name="Attribute.FileSize" type="System.String">
+		<value>文件大小</value>
+	</data>
+	<data name="Description.FileLastModified" type="System.String">
+		<value>该文档上次修改的时间戳</value>
+	</data>
+	<data name="Attribute.FileLastModified" type="System.String">
+		<value>上次修改</value>
+	</data>
+	<data name="Description.NumberOfFrames" type="System.String">
+		<value>不考虑结构，窗口的绝对数。</value>
+	</data>
+	<data name="Attribute.NumberOfFrames" type="System.String">
+		<value>窗口的数量</value>
+	</data>
+	<data name="Description.NumberOfStylesheets" type="System.String">
+		<value>被链接样式表的数量</value>
+	</data>
+	<data name="Attribute.NumberOfStylesheets" type="System.String">
+		<value>样式表的数量</value>
+	</data>
+	<data name="Description.NumberOfImages" type="System.String">
+		<value>该文档内的图像数量。</value>
+	</data>
+	<data name="Attribute.NumberOfImages" type="System.String">
+		<value>图像数量。</value>
+	</data>
+	<data name="Description.NumberOfScriptBlocks" type="System.String">
+		<value>脚本控制块数量</value>
+	</data>
+	<data name="Attribute.NumberOfScriptBlocks" type="System.String">
+		<value>SCRIPT数量</value>
+	</data>
+	<data name="Description.NumberOfMetaTags" type="System.String">
+		<value>META标记数量</value>
+	</data>
+	<data name="Attribute.NumberOfMetaTags" type="System.String">
+		<value>META数量</value>
+	</data>
+	<data name="Attribute.cellPadding" type="System.String">
+		<value>单元格底纹</value>
+	</data>
+	<data name="Description.cellPadding" type="System.String">
+		<value>该表格中每一单元格里在边框和内容之间的底纹</value>
+	</data>
+	<data name="Attribute.cellSpacing" type="System.String">
+		<value>单元格间隔</value>
+	</data>
+	<data name="Description.cellSpacing" type="System.String">
+		<value>该表格中单元格之间的间隔</value>
+	</data>
+	<data name="Description.rules" type="System.String">
+		<value>隔栏线是列之间的区域。该属性确定隔栏线的外观</value>
+	</data>
+	<data name="Attribute.rules" type="System.String">
+		<value>隔栏线</value>
+	</data>
+	<data name="Description.borderColor" type="System.String">
+		<value>该表格各单元格边框的颜色</value>
+	</data>
+	<data name="Attribute.borderColor" type="System.String">
+		<value>边框颜色</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>该表格中行的总数。宽度属性不作计算。仅作参考。</value>
+	</data>
+	<data name="Attribute.rows" type="System.String">
+		<value>行数</value>
+	</data>
+	<data name="Description.valign" type="System.String">
+		<value>单元格内的内容垂直对齐。</value>
+	</data>
+	<data name="Attribute.valign" type="System.String">
+		<value>垂直对齐</value>
+	</data>
+	<data name="Description.colspan" type="System.String">
+		<value>单元格所占的列数。</value>
+	</data>
+	<data name="Attribute.colSpan" type="System.String">
+		<value>列宽</value>
+	</data>
+	<data name="Description.rowspan" type="System.String">
+		<value>单元格所占的行数。</value>
+	</data>
+	<data name="Attribute.rowSpan" type="System.String">
+		<value>行宽</value>
+	</data>
+	<data name="Description.cells" type="System.String">
+		<value>该行单元格的总数。在其他行中由于单元格的行宽属性，行与行之间可能会有所变化。</value>
+	</data>
+	<data name="Attribute.cells" type="System.String">
+		<value>单元格数量</value>
+	</data>
+	<data name="FontPickerUserControl.ff.Text" type="System.String">
+		<value>字体选定框</value>
+	</data>
+	<data name="FontForm.buttonOK.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="FontForm.buttonCancel.Text" type="System.String">
+		<value>取消</value>
+	</data>
+	<data name="FontForm.label1.Text" type="System.String">
+		<value>逐行键入必要多的字体。</value>
+	</data>
+	<data name="FontForm.tabPage4.Text" type="System.String">
+		<value>用户字体</value>
+	</data>
+	<data name="FontForm.textBoxFreeFont.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="FontForm.tabPage1.Text" type="System.String">
+		<value>系统</value>
+	</data>
+	<data name="FontForm.tabPage2.Text" type="System.String">
+		<value>环球网</value>
+	</data>
+	<data name="FontForm.tabPage3.Text" type="System.String">
+		<value>普通</value>
+	</data>
+	<data name="Attribute.border" type="System.String">
+		<value>边框</value>
+	</data>
+	<data name="Description.border" type="System.String">
+		<value>以像素为单位的边框宽度。如果构件在一超链接之内，这里的值必须明确地设置为0以自动删除固有的边框。</value>
+	</data>
+	<data name="Attribute.dateTime" type="System.String">
+		<value>日期时间</value>
+	</data>
+	<data name="Description.dateTime" type="System.String">
+		<value>该构件上次修改的标准日期时间数据。要求格式：JJJJ-MM-DDThh:mm:ssTZD</value>
+	</data>
+	<data name="Attribute.cite" type="System.String">
+		<value>引用</value>
+	</data>
+	<data name="Description.cite" type="System.String">
+		<value>关于该内容的注解</value>
+	</data>
+	<data name="HtmlDocumentStructure.ToString" type="System.String">
+		<value>[DOCUMENT]</value>
+	</data>
+	<data name="CustomPropertyTab.Tooltip" type="System.String">
+		<value>属性名称</value>
+	</data>
+	<!-- Categories -->
+	<data name="Category.Element Style" type="System.String">
+		<value>直列样式</value>
+	</data>
+	<data name="Category.Element Behavior" type="System.String">
+		<value>状态</value>
+	</data>
+	<data name="Category.Standard Values" type="System.String">
+		<value>起始值</value>
+	</data>
+	<data name="Category.Javascript Events" type="System.String">
+		<value>JavaScript 事件</value>
+	</data>
+	<data name="Category.Element Layout" type="System.String">
+		<value>布局</value>
+	</data>
+	<data name="Category.Element Appearance" type="System.String">
+		<value>外观</value>
+	</data>
+	<data name="Category.Content" type="System.String">
+		<value>内容</value>
+	</data>
+	<data name="Category.Information" type="System.String">
+		<value>信息</value>
+	</data>
+	<!-- End Categories -->
+	<data name="Attribute.ScriptOnResize" type="System.String">
+		<value>缩放，开启</value>
+	</data>
+	<data name="Description.ScriptOnResize" type="System.String">
+		<value>如果用户用脚本改变该构件的大小，激活。</value>
+	</data>
+	<data name="Attribute.ScriptOnChange" type="System.String">
+		<value>改变，开启</value>
+	</data>
+	<data name="Description.ScriptOnChange" type="System.String">
+		<value>如果用户改变该控件的内容，激活。</value>
+	</data>
+	<data name="Attribute.cols" type="System.String">
+		<value>列</value>
+	</data>
+	<data name="Description.cols" type="System.String">
+		<value>按标准宽度的字符计量的列数。</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>按标准字体的字符计量的行数。</value>
+	</data>
+	<data name="Attribute.type_LI" type="System.String">
+		<value>列表元类型</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseDown" type="System.String">
+		<value>鼠标按下，开启</value>
+	</data>
+	<data name="Description.ScriptOnMouseDown" type="System.String">
+		<value>如果在键被按下未释放前，用户立即单击鼠标按钮，激活。</value>
+	</data>
+	<data name="Description.id" type="System.String">
+		<value>从JavaScript代码里面或作为样式对象，使用该构件的标识符。</value>
+	</data>
+	<data name="Description.style" type="System.String">
+		<value>嵌套样式。用省略符号[...]启动集成样式编辑器。</value>
+	</data>
+	<data name="Description.class" type="System.String">
+		<value>样式类(CSS)，在CSS文件或标记中用".name"文法确定与一个样式类定义的关系。</value>
+	</data>
+	<data name="Attribute.ScriptOnDblClick" type="System.String">
+		<value>双击，开启</value>
+	</data>
+	<data name="StyleEditor.groupBox11.Text" type="System.String">
+		<value>表格标题</value>
+	</data>
+	<data name="StyleEditor.fontPickerFont.Caption" type="System.String">
+		<value>字体选定框</value>
+	</data>
+	<data name="StyleEditor.Combos.NoValue" type="System.String">
+		<value>无值</value>
+	</data>
+	<data name="StyleEditor.Combos.Inherit" type="System.String">
+		<value>继承</value>
+	</data>
+	<data name="StyleEditor.Combos.Normal" type="System.String">
+		<value>标准</value>
+	</data>
+	<data name="StyleEditor.Combos.None" type="System.String">
+		<value>无</value>
+	</data>
+	<data name="StyleEditor.Combos.Solid" type="System.String">
+		<value>立体</value>
+	</data>
+	<data name="StyleEditor.Combos.Double" type="System.String">
+		<value>双重</value>
+	</data>
+	<data name="StyleEditor.Combos.Dotted" type="System.String">
+		<value>虚线</value>
+	</data>
+	<data name="StyleEditor.Combos.Dashed" type="System.String">
+		<value>阴影线</value>
+	</data>
+	<data name="StyleEditor.Combos.OutSet" type="System.String">
+		<value>边注</value>
+	</data>
+	<data name="StyleEditor.Combos.Groove" type="System.String">
+		<value>凹陷</value>
+	</data>
+	<data name="StyleEditor.Combos.InSet" type="System.String">
+		<value>镶边</value>
+	</data>
+	<data name="StyleEditor.Combos.Ridge" type="System.String">
+		<value>凸痕</value>
+	</data>
+	<data name="StyleEditor.Combos.Hidden" type="System.String">
+		<value>隐藏</value>
+	</data>
+	<data name="StyleEditor.Combos.Pixel" type="System.String">
+		<value>像素</value>
+	</data>
+	<data name="StyleEditor.Combos.Point" type="System.String">
+		<value>点</value>
+	</data>
+	<data name="StyleEditor.Combos.Percentage" type="System.String">
+		<value>百分比</value>
+	</data>
+	<data name="StyleEditor.Combos.Pica" type="System.String">
+		<value>12磅</value>
+	</data>
+	<data name="StyleEditor.Combos.Millimeter" type="System.String">
+		<value>毫米</value>
+	</data>
+	<data name="StyleEditor.Combos.Centimeter" type="System.String">
+		<value>厘米</value>
+	</data>
+	<data name="StyleEditor.Combos.m-Size" type="System.String">
+		<value>M-尺寸</value>
+	</data>
+	<data name="StyleEditor.Combos.x-Height" type="System.String">
+		<value>X-高度</value>
+	</data>
+	<data name="StyleEditor.Combos.Bold" type="System.String">
+		<value>粗体</value>
+	</data>
+	<data name="StyleEditor.Combos.Bolder" type="System.String">
+		<value>更粗</value>
+	</data>
+	<data name="StyleEditor.Combos.Lighter" type="System.String">
+		<value>更浅</value>
+	</data>
+	<data name="StyleEditor.Combos.CapitalLetter" type="System.String">
+		<value>大写字母</value>
+	</data>
+	<data name="StyleEditor.Combos.Uppercase" type="System.String">
+		<value>大写字母</value>
+	</data>
+	<data name="StyleEditor.Combos.Lowercase" type="System.String">
+		<value>小写字母</value>
+	</data>
+	<data name="StyleEditor.Combos.Top" type="System.String">
+		<value>顶部</value>
+	</data>
+	<data name="StyleEditor.Combos.Center" type="System.String">
+		<value>中心</value>
+	</data>
+	<data name="StyleEditor.Combos.Bottom" type="System.String">
+		<value>底部</value>
+	</data>
+	<data name="StyleEditor.Combos.Absolute" type="System.String">
+		<value>独立</value>
+	</data>
+	<data name="StyleEditor.Combos.AsBlock" type="System.String">
+		<value>作为控制块</value>
+	</data>
+	<data name="StyleEditor.Combos.InlineText" type="System.String">
+		<value>直列式文本</value>
+	</data>
+	<data name="StyleEditor.Combos.ListItem" type="System.String">
+		<value>列表项</value>
+	</data>
+	<data name="StyleEditor.Combos.Middle" type="System.String">
+		<value>中间</value>
+	</data>
+	<data name="StyleEditor.Combos.Baseline" type="System.String">
+		<value>基线</value>
+	</data>
+	<data name="StyleEditor.Combos.Sub" type="System.String">
+		<value>下</value>
+	</data>
+	<data name="StyleEditor.Combos.Super" type="System.String">
+		<value>上</value>
+	</data>
+	<data name="StyleEditor.Combos.TopOfText" type="System.String">
+		<value>文本顶部</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomOfText" type="System.String">
+		<value>文本底部</value>
+	</data>
+	<data name="StyleEditor.Combos.Underline" type="System.String">
+		<value>下划线</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOver" type="System.String">
+		<value>重叠</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOut" type="System.String">
+		<value>删除线</value>
+	</data>
+	<data name="StyleEditor.Combos.BlinkText" type="System.String">
+		<value>闪烁</value>
+	</data>
+	<data name="StyleEditor.Combos.Visible" type="System.String">
+		<value>可见</value>
+	</data>
+	<data name="StyleEditor.Combos.NotVisible" type="System.String">
+		<value>不可见</value>
+	</data>
+	<data name="StyleEditor.Combos.ScrollableArea" type="System.String">
+		<value>可滚动</value>
+	</data>
+	<data name="StyleEditor.Combos.Automatic" type="System.String">
+		<value>自动</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndLeft" type="System.String">
+		<value>上边和左边</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndRight" type="System.String">
+		<value>上边和右边</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndLeft" type="System.String">
+		<value>下边和左边</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndRight" type="System.String">
+		<value>下边和右边</value>
+	</data>
+	<data name="StyleEditor.Combos.Repeat" type="System.String">
+		<value>重复</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatRows" type="System.String">
+		<value>重复行</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatColumns" type="System.String">
+		<value>重复列</value>
+	</data>
+	<data name="StyleEditor.Combos.NoRepeat" type="System.String">
+		<value>不重复</value>
+	</data>
+	<data name="StyleEditor.Combos.Standard" type="System.String">
+		<value>标准</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtremSmall" type="System.String">
+		<value>极小</value>
+	</data>
+	<data name="StyleEditor.Combos.VerySmall" type="System.String">
+		<value>很小</value>
+	</data>
+	<data name="StyleEditor.Combos.small" type="System.String">
+		<value>小</value>
+	</data>
+	<data name="StyleEditor.Combos.Medium" type="System.String">
+		<value>中等</value>
+	</data>
+	<data name="StyleEditor.Combos.Large" type="System.String">
+		<value>大</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtraLarge" type="System.String">
+		<value>超大</value>
+	</data>
+	<data name="StyleEditor.Combos.XXL" type="System.String">
+		<value>极大</value>
+	</data>
+	<data name="StyleEditor.Combos.Inside List" type="System.String">
+		<value>在表内</value>
+	</data>
+	<data name="StyleEditor.Combos.Outside List" type="System.String">
+		<value>在表外</value>
+	</data>
+	<data name="StyleEditor.Combos.Square" type="System.String">
+		<value>正方形</value>
+	</data>
+	<data name="StyleEditor.Combos.Disc" type="System.String">
+		<value>圆面</value>
+	</data>
+	<data name="StyleEditor.Combos.Circle" type="System.String">
+		<value>圆圈</value>
+	</data>
+	<data name="StyleEditor.Combos.Thin" type="System.String">
+		<value>细</value>
+	</data>
+	<data name="StyleEditor.Combos.Thick" type="System.String">
+		<value>粗</value>
+	</data>
+	<data name="StyleEditor.Combos.Auto" type="System.String">
+		<value>自动</value>
+	</data>
+	<data name="StyleEditor.Combos.Cross" type="System.String">
+		<value>十字</value>
+	</data>
+	<data name="StyleEditor.Combos.Hand" type="System.String">
+		<value>手形</value>
+	</data>
+	<data name="StyleEditor.Combos.HandIE5Only" type="System.String">
+		<value>手形 (仅IE5)</value>
+	</data>
+	<data name="StyleEditor.Combos.MoveObject" type="System.String">
+		<value>移动</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeRightBorder" type="System.String">
+		<value>右缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperRightCorner" type="System.String">
+		<value>右上方缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperLeftCorner" type="System.String">
+		<value>左上方缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeTopBorder" type="System.String">
+		<value>上缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerRightCorner" type="System.String">
+		<value>右下方缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerLeftCorner" type="System.String">
+		<value>左下方缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeBottomBorder" type="System.String">
+		<value>下缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLeftBorder" type="System.String">
+		<value>左缩放</value>
+	</data>
+	<data name="StyleEditor.Combos.InsideTextbox" type="System.String">
+		<value>文本（I型光标）</value>
+	</data>
+	<data name="StyleEditor.Combos.Wait(Hourglass)" type="System.String">
+		<value>等待（沙漏标）</value>
+	</data>
+	<data name="StyleEditor.Combos.Help" type="System.String">
+		<value>帮助</value>
+	</data>
+	<data name="StyleEditor.Combos.Scroll" type="System.String">
+		<value>滚动</value>
+	</data>
+	<data name="StyleEditor.Combos.Fixed" type="System.String">
+		<value>固定</value>
+	</data>
+	<data name="StyleEditor.Combos.Pre" type="System.String">
+		<value>预先格式化</value>
+	</data>
+	<data name="StyleEditor.Combos.NoWrap" type="System.String">
+		<value>不打包</value>
+	</data>
+	<data name="PropertyGrid.BackgroundPropertyType" type="System.String">
+		<value>滚动,固定</value>
+	</data>
+	<data name="PropertyGrid.ScrollType" type="System.String">
+		<value>是,不是,自动</value>
+	</data>
+	<data name="PropertyGrid.Boolean" type="System.String">
+		<value>是,不是</value>
+	</data>
+	<data name="PropertyGrid.AreaShape" type="System.String">
+		<value>默认,矩形,圆形,多边形</value>
+	</data>
+	<data name="PropertyGrid.BreakClearEnum" type="System.String">
+		<value>无,左,右,全部</value>
+	</data>
+	<data name="PropertyGrid.HorizontalAlign" type="System.String">
+		<value>未设置,左,中心,右,调整</value>
+	</data>
+	<data name="PropertyGrid.VerticalAlign" type="System.String">
+		<value>未设置,顶部,中间,底部</value>
+	</data>
+	<data name="PropertyGrid.FontUnit" type="System.String">
+		<value>无值,极小,很小,小,中,大,很大,极大,更小、更大</value>
+	</data>
+	<data name="PropertyGrid.LinkElementMedia" type="System.String">
+		<value>全部,屏幕,电传机,电视,投影,轻便的,印刷,盲文,伴音</value>
+	</data>
+	<data name="PropertyGrid.UnorderedListType" type="System.String">
+		<value>默认,圆形,圆面,正方形</value>
+	</data>
+	<data name="PropertyGrid.ListType" type="System.String">
+		<value>默认,数字,小写字母,大写字母,小写字母罗马数字,大写字母罗马数字,圆面,圆形,正方形</value>
+	</data>
+	<data name="Description.AreaTags" type="System.String">
+		<value>在此MAP注册的交互性的区域集。</value>
+	</data>
+	<data name="Attribute.AreaTags" type="System.String">
+		<value>区域</value>
+	</data>
+	<data name="Attribute.index" type="System.String">
+		<value>位置</value>
+	</data>
+	<data name="Description.index" type="System.String">
+		<value>在列表框中，该选项构件的按序位置。</value>
+	</data>
+	<data name="PropertyGrid.OrderedListType" type="System.String">
+		<value>默认,数字,小写字母,大写字母,小写字母罗马数字,大写字母罗马数字</value>
+	</data>
+	<data name="PropertyGrid.RulesType" type="System.String">
+		<value>未设置,无,组,行,列,全部</value>
+	</data>
+	<data name="Attribute.maxLength" type="System.String">
+		<value>字段长度极大值</value>
+	</data>
+	<data name="Attribute.readOnly" type="System.String">
+		<value>只读</value>
+	</data>
+	<data name="Attribute.value" type="System.String">
+		<value>值</value>
+	</data>
+	<data name="Description.maxLength" type="System.String">
+		<value>用户可以在此栏键入的最大字符数。</value>
+	</data>
+	<data name="Description.ScriptOnDblClick" type="System.String">
+		<value>如果用户双击该构件的有效面积，激活。</value>
+	</data>
+	<data name="Description.readOnly" type="System.String">
+		<value>该栏内容只读，例如用户不能改变该内容。</value>
+	</data>
+	<data name="Description.value" type="System.String">
+		<value>该公式将传送的值。此文字是附加在构件表面的，用于按钮。</value>
+	</data>
+	<data name="Attribute.checked" type="System.String">
+		<value>已检查</value>
+	</data>
+	<data name="Attribute.selected" type="System.String">
+		<value>选取</value>
+	</data>
+	<data name="Attribute.text_Field" type="System.String">
+		<value>选项文字</value>
+	</data>
+	<data name="Description.checked" type="System.String">
+		<value>该复选框或单选按钮栏激活（选中）。(checked).</value>
+	</data>
+	<data name="Description.selected" type="System.String">
+		<value>该栏被缺省选定。</value>
+	</data>
+	<data name="Description.text_Field" type="System.String">
+		<value>用户可以在该下拉列表中看到的文字。如果未设值，此文字也被传送。</value>
+	</data>
+	<data name="StyleEditorForm.Text" type="System.String">
+		<value>样式编辑器</value>
+	</data>
+	<data name="StyleEditorForm.buttonOK.Text" type="System.String">
+		<value>确认</value>
+	</data>
+	<data name="Description.src" type="System.String">
+		<value>源文件或URL</value>
+	</data>
+	<data name="OptionCollectionEditor.addButton.Text" type="System.String">
+		<value>添加</value>
+	</data>
+	<data name="OptionCollectionEditor.memberLabel.Text" type="System.String">
+		<value>选择一选项编辑：</value>
+	</data>
+	<data name="OptionCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除</value>
+	</data>
+	<data name="Attribute.multiple" type="System.String">
+		<value>复合的</value>
+	</data>
+	<data name="Description.multiple" type="System.String">
+		<value>确定用户是否可以用CTRL键同时选择两个或更多构件选项。</value>
+	</data>
+	<data name="Attribute.Options" type="System.String">
+		<value>选项</value>
+	</data>
+	<data name="Description.Options" type="System.String">
+		<value>选项集，列表标识符自此生成。</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" type="System.String">
+		<value>背景图像</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" type="System.String">
+		<value>图像文件(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|所有文件(*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Title" type="System.String">
+		<value>列表构件图像</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Filter" type="System.String">
+		<value>图像文件(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|所有文件(*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.labelColumnGap.Text" type="System.String">
+		<value>列间间距：</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerRoman" type="System.String">
+		<value>小写罗马字体 </value>
+	</data>
+	<data name="StyleEditor.Combos.UpperRoman" type="System.String">
+		<value>大写罗马字体</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerAlpha" type="System.String">
+		<value>小写希腊字母</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperAlpha" type="System.String">
+		<value>大写希腊字母</value>
+	</data>
+	<data name="StyleEditor.Combos.Decimal" type="System.String">
+		<value>十进小数</value>
+	</data>
+	<data name="StyleEditor.Combos.DecimalZero" type="System.String">
+		<value>十进小数、前补零</value>
+	</data>
+	<data name="StyleEditor.Combos.Left" type="System.String">
+		<value>左</value>
+	</data>
+	<data name="StyleEditor.Combos.Right" type="System.String">
+		<value>右</value>
+	</data>
+	<data name="PropertyGrid.TableColumnHorizontalAlign" type="System.String">
+		<value>未设置,左,右,中心,字符,调整</value>
+	</data>
+	<data name="Attribute.char" type="System.String">
+		<value>对齐字符</value>
+	</data>
+	<data name="Attribute.charoff" type="System.String">
+		<value>对齐字符底纹</value>
+	</data>
+	<data name="Description.char" type="System.String">
+		<value>该符号用于对齐构件的内容。</value>
+	</data>
+	<data name="Description.charoff" type="System.String">
+		<value>在该字符与该内容间的补白（间距）对齐该构件的右边框。</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.memberLabel.Text" type="System.String">
+		<value>编辑样式构件</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.addButton.Text" type="System.String">
+		<value>添加选择器</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.removeButton.Text" type="System.String">
+		<value>删除选择器</value>
+	</data>
+	<data name="Attribute.StylesheetContent" type="System.String">
+		<value>样式表内容</value>
+	</data>
+	<data name="Description.StylesheetContent" type="System.String">
+		<value>此属性可进入该链接样式文件的内容。</value>
+	</data>
+	<data name="Attribute.usemap" type="System.String">
+		<value>使用映射</value>
+	</data>
+	<data name="Description.usemap" type="System.String">
+		<value>使用此映射定义创建一可单击的图象映射（客户地址）</value>
+	</data>
+	<data name="Attribute.action" type="System.String">
+		<value>运行</value>
+	</data>
+	<data name="Attribute.encType" type="System.String">
+		<value>编码类型</value>
+	</data>
+	<data name="Attribute.method" type="System.String">
+		<value>方法</value>
+	</data>
+	<data name="Attribute.name_Form" type="System.String">
+		<value>表单名</value>
+	</data>
+	<data name="Description.action" type="System.String">
+		<value>指向一URL的完整或相对路径，用来传递该公式。</value>
+	</data>
+	<data name="Description.encType" type="System.String">
+		<value>编码类型。此值取决于正在传送的内容。文件上载使用Multipart。</value>
+	</data>
+	<data name="Description.method" type="System.String">
+		<value>浏览器运用于传送该公式的HTTP方式。标准表格通过POST传送。</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>在脚本环境中惯用表格的名称。</value>
+	</data>
+	<data name="Attribute.size_Select" type="System.String">
+		<value>可见选项</value>
+	</data>
+	<data name="Description.size_Select" type="System.String">
+		<value>可见选项的数目。如果还有更多不可见的选项，一个1的值将产生一个下拉列表，而大于的1值将产生一个列表框。 如果有更多选项，该列表框将产生一滚动条。</value>
+	</data>
+	<data name="Attribute.label" type="System.String">
+		<value>标号</value>
+	</data>
+	<data name="Description.label" type="System.String">
+		<value>如果该选项内容不用，在该选定构件中的文字显示给用户。</value>
+	</data>
+	<!-- NEW -->
+	<data name="Attribute.Selector" type="System.String">
+		<value>选择符</value>
+	</data>
+	<data name="Description.Selector" type="System.String">
+		<value>该样式表标准用于确定一种样式。从SelectorType属性中选择适合的类型，前缀将被相应调整。</value>
+	</data>
+	<data name="Attribute.SelectorType" type="System.String">
+		<value>选择符类型</value>
+	</data>
+	<data name="Description.SelectorType" type="System.String">
+		<value>选择符类型, 例如类别、标识符、字组规则，或总的（通配符）。标准类型,填入HTML标识名。</value>
+	</data>
+	<data name="Attribute.SelectorName" type="System.String">
+		<value>选择符名称</value>
+	</data>
+	<data name="Description.SelectorName" type="System.String">
+		<value>该选择符的名称。选择一个自用名称或一个HTML构件名称。</value>
+	</data>
+	<data name="Attribute.EmbeddedStylesheets" type="System.String">
+		<value>嵌入的样式</value>
+	</data>
+	<data name="Description.EmbeddedStylesheets" type="System.String">
+		<value>文档Head部分内的样式构件，该文档包含嵌入样式的定义。</value>
+	</data>
+	<data name="Attribute.Caption" type="System.String">
+		<value>标题</value>
+	</data>
+	<data name="Description.Caption" type="System.String">
+		<value>表格的标题。使用WithCaption选项来添加或删除该标题。</value>
+	</data>
+	<data name="Attribute.WithCaption" type="System.String">
+		<value>有标题</value>
+	</data>
+	<data name="Description.WithCaption" type="System.String">
+		<value>如果设为Yes，该表格将有一个可以被格式化和对齐的标题。</value>
+	</data>
+	<data name="PropertyGrid.StyleRuleType" type="System.String">
+		<value>标准、类别、标识符、虚拟的、总的</value>
+	</data>
+	<data name="Description.height" type="System.String">
+		<value></value>
+	</data>
+</root>

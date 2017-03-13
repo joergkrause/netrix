@@ -1,0 +1,1763 @@
+<HTML xmlns:IE="http://www.netrixcomponent.net/ie/">
+  <HEAD>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"/>
+    <?import namespace="ie" implementation="#default" ?>
+    <META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes"/>
+    <TITLE>Print Preview</TITLE>
+    <STYLE>
+      <![CDATA[
+.divPage
+{
+position: absolute;
+top: -20000px;
+border-left: 1 solid black;
+border-top: 1 solid black;
+border-right: 4 solid black;
+border-bottom: 4 solid black;
+}
+.page
+{
+background: white;
+width: 8.5in;
+height: 11in;
+margin: 0px;
+overflow: hidden;
+}
+.mRect
+{
+position: absolute;
+margin: 1in;
+width: 6.5in;
+height: 9in;
+border: none;
+overflow : hidden;
+}
+.divHead
+{
+position: absolute;
+overflow: hidden;
+top: 0in;
+left: 0in;
+width: 8.5in;
+}
+.divFoot
+{
+position: absolute;
+overflow: hidden;
+bottom: 0in;
+left: 0in;
+width: 8.5in;
+}
+BODY { overflow: hidden; padding: 0; margin: 0; background: threedface; }
+TABLE { margin: 0px; padding: 0px; background: threedface; }
+.THeader { border: none; background: white; color: black; }
+.TFooter { border: none; background: white; color: black; }
+TD { padding: 0; margin: 0; border: none; }
+TD.UIPane { width: 20px; border: none; font-family: 'ms sans serif'; font-size: 8pt; }
+TD.UISeparator { width: 1px; border-left: 2px threedhighlight ridge; }
+BUTTON { border: 1px solid threedface; background: threedface; font-family: 'ms sans serif'; font-size: 8pt; color: buttontext;}
+]]>
+    </STYLE>
+    <SCRIPT DEFER="">
+//      <![CDATA[
+var g_aDocTree = new Object();
+var g_nDispPage = -1;
+var g_nZoomFactor = 0;
+var g_cLeftToPrint = 0;
+var g_fRTL;
+var g_fPreview;
+var g_fDelayClose = false;
+var g_nMarginTop = 0;
+var g_nMarginBottom = 0;
+var g_nMarginLeft = 0;
+var g_nMarginRight = 0;
+var g_nPageWidth = 0;
+var g_nPageHeight = 0;
+var g_nUnprintTop = 0;
+var g_nUnprintBottom = 0;
+var g_strHeader = "";
+var g_strFooter = "";
+var g_fTableOfLinks = false;
+var g_cPagesDisplayed = 0;
+var g_cxDisplaySlots = 1;
+var g_cyDisplaySlots = 1;
+var g_imgUnderMouse = null;
+var g_nFramesetLayout = 0;
+var g_strActiveFrame = null;
+var g_nTotalPages = 0;
+var g_nDocsToCalc = 0;
+var g_nFramesLeft = 0;
+function GetRuleFromSelector(strSelector)
+{
+var i;
+var oRule;
+var oSS = document.styleSheets[0];
+for (i=0;;i++)
+{
+oRule = oSS.rules[i];
+if (oRule == null)
+break;
+if (oRule.selectorText == strSelector)
+break;
+}
+return oRule;
+}
+function UnprintableURL(strLink)
+{
+var fUnprintable = false;
+var cIndex;
+cIndex = strLink.indexOf(":");
+switch (cIndex)
+{
+case 4:
+if (strLink.substr(0, cIndex) == "news")
+fUnprintable = true;
+break;
+case 5:
+if (strLink.substr(0, cIndex) == "snews")
+fUnprintable = true;
+break;
+case 6:
+if ( strLink.substr(0, cIndex) == "telnet"
+|| strLink.substr(0, cIndex) == "mailto")
+fUnprintable = true;
+break;
+case 8:
+if (strLink.substr(0,cIndex) == "vbscript")
+fUnprintable = true;
+break;
+case 10:
+if (strLink.substr(0,cIndex) == "javascript")
+fUnprintable = true;
+break;
+}
+return fUnprintable;
+}
+function OnKeyPress()
+{
+if (event.keyCode == 27)
+{
+Close();
+}
+}
+function OnKeyDown()
+{
+if (event.altKey)
+{
+switch (event.keyCode)
+{
+case 37:
+ChangeDispPage(g_nDispPage-1);
+break;
+case 39:
+ChangeDispPage(g_nDispPage+1);
+break;
+case 107:
+case 187:
+HandleZoom(-1);
+break;
+case 109:
+case 189:
+HandleZoom(1);
+break;
+case 35:
+HandleLastPage();
+break;
+case 36:
+HandleFirstPage();
+break;
+}
+}
+}
+function ShowHelp()
+{
+window.showHelp("iexplore.chm::/print_preview.htm");
+}
+function AttachDialogEvents()
+{
+butPrint.onclick = HandlePrintClick;
+butPageSetup.onclick = HandlePageSetup;
+butFirstPage.onclick = HandleFirstPage;
+butBackPage.onclick = HandleBackPage;
+butNextPage.onclick = HandleForwardPage;
+butLastPage.onclick = HandleLastPage;
+butZoomIn.onclick = HandleZoomInButton;
+butZoomOut.onclick = HandleZoomOutButton;
+butClose.onclick = Close;
+butHelp.onclick = ShowHelp;
+document.onhelp = ShowHelp;
+butPrint.onmousedown = buttonDown;
+butPageSetup.onmousedown = buttonDown;
+butFirstPage.onmousedown = buttonDown;
+butBackPage.onmousedown = buttonDown;
+butNextPage.onmousedown = buttonDown;
+butLastPage.onmousedown = buttonDown;
+butZoomIn.onmousedown = buttonDown;
+butZoomOut.onmousedown = buttonDown;
+butClose.onmousedown = buttonDown;
+butHelp.onmousedown = buttonDown;
+printCtl.onmouseover = buttonOver;
+printCtl.onmouseout = buttonOut;
+begin.onmouseover = buttonOver;
+begin.onmouseout = buttonOut;
+prev.onmouseover = buttonOver;
+prev.onmouseout = buttonOut;
+next.onmouseover = buttonOver;
+next.onmouseout = buttonOut;
+end.onmouseover = buttonOver;
+end.onmouseout = buttonOut;
+zoomIn.onmouseover = buttonOver;
+zoomIn.onmouseout = buttonOut;
+zoomOut.onmouseover = buttonOver;
+zoomOut.onmouseout = buttonOut;
+butPrint.onmouseover = new Function("buttonRaise(this);");
+butPrint.onmouseout = new Function("buttonLower(this);");
+butClose.onmouseover = new Function("buttonRaise(this);");
+butClose.onmouseout = new Function("buttonLower(this);");
+butHelp.onmouseover = new Function("buttonRaise(this);");
+butHelp.onmouseout = new Function("buttonLower(this);");
+inputPageNum.onkeypress = HandleInputKeyPress;
+inputPageNum.onchange = HandlePageSelect;
+selectZoom.onchange = HandleZoomSelect;
+selectFrameset.onchange = HandleFramesetSelect;
+window.onresize = OnResizeBody;
+window.onerror = HandleError;
+window.onfocus = new Function("MasterContainer.focus()");
+document.body.onkeypress = OnKeyPress;
+document.body.onkeydown = OnKeyDown;
+}
+function OnLoadBody()
+{
+g_fRTL = (document.body.currentStyle.direction.toLowerCase() == "rtl");
+g_fPreview = dialogArguments.__IE_PrintType == "Preview";
+if (UnprintableURL(dialogArguments.__IE_ContentDocumentUrl))
+{
+var L_Invalid_Text = "Cannot print this content.";
+alert(L_Invalid_Text);
+window.close();
+}
+var str;
+str = begin.src;
+begin.base = "Begin";
+str = end.src;
+end.base = "End";
+str = next.src;
+next.base = "Next";
+str = prev.src;
+prev.base = "Prev";
+ChangeZoom(75);
+if (dialogArguments.__IE_HeaderString)
+Printer.header = dialogArguments.__IE_HeaderString
+if (dialogArguments.__IE_FooterString)
+Printer.footer = dialogArguments.__IE_FooterString
+EnsureDocuments();
+window.document.body.style.cursor="wait";
+CreateDocument("document", "C", true);
+ChangeDispPage(1);
+g_nFramesLeft = 1;
+OnBuildAllFrames("C");
+if (g_fPreview)
+{
+AttachDialogEvents();
+OverflowContainer.style.top = idDivToolbar.offsetHeight;
+OverflowContainer.style.height = document.body.clientHeight - idDivToolbar.offsetHeight;
+}
+else
+{
+PrintNow(dialogArguments.__IE_PrintType == "Prompt");
+}
+}
+function BuildAllFramesComplete()
+{
+;
+window.document.body.style.cursor="auto";
+UpdateFramesetSelect();
+}
+function CalcDocsComplete()
+{
+;
+if (g_nFramesetLayout == 2)
+{
+ChangeFramesetLayout(g_nFramesetLayout, true)
+}
+}
+function OnResizeBody()
+{
+OverflowContainer.style.height = Math.max(0, document.body.clientHeight - idDivToolbar.offsetHeight);
+HandleDynamicZoom();
+PositionPages(g_nDispPage);
+}
+function HandleError(message, url, line)
+{
+var L_Internal_ErrorMessage = "Internet Explorer konnte das Dokument aufgrund eines internen Fehlers nicht drucken.";
+alert(L_Internal_ErrorMessage);
+window.close();
+return true;
+}
+function OnRectComplete( strDoc )
+{
+if (!g_aDocTree[strDoc])
+{
+HandleError("Document " + strDoc + " does not exist.", document.URL, "OnRectComplete");
+return;
+}
+window.setTimeout("OnRectCompleteNext('" + strDoc + "', " + event.contentOverflow + ",'" + event.srcElement.id + "');", 25);
+}
+function OnRectCompleteNext( strDoc, fOverflow, strElement)
+{
+g_aDocTree[strDoc].RectComplete(fOverflow, strElement);
+}
+function enableButton(btn, img)
+{
+btn.disabled = false;
+if (g_imgUnderMouse == img)
+{
+img.src = "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/" + img.base + "Hilite";
+buttonRaise(btn);
+}
+else
+{
+img.src = "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/" + img.base;
+buttonLower(btn);
+}
+}
+function disableButton(btn, img)
+{
+btn.disabled = true;
+buttonLower(btn);
+if (img != null)
+{
+img.src = "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/" + img.base + "Inactive";
+}
+}
+function updateNavButtons()
+{
+if (g_nDispPage == 1)
+{
+disableButton(butFirstPage, begin);
+disableButton(butBackPage, prev);
+}
+else
+{
+enableButton(butFirstPage, begin);
+enableButton(butBackPage, prev);
+}
+if (TotalDisplayPages() - g_nDispPage < g_cxDisplaySlots * g_cyDisplaySlots)
+{
+disableButton(butNextPage, next);
+disableButton(butLastPage, end);
+}
+else
+{
+enableButton(butNextPage, next);
+enableButton(butLastPage, end);
+}
+}
+function updateZoomButtons()
+{
+var fZoomOutDisabled = false;
+var fZoomInDisabled = false;
+var oOptions = selectZoom.options;
+if (g_nZoomFactor >= parseInt(oOptions[0].value))
+{
+disableButton(butZoomIn, null);
+zoomIn.src = "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/ZoominInactive";
+fZoomInDisabled = true;
+}
+else if (g_nZoomFactor <= parseInt(oOptions[oOptions.length-1-3].value))
+{
+disableButton(butZoomOut, null);
+zoomOut.src = "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/ZoomoutInactive";
+fZoomOutDisabled = true;
+}
+if (!fZoomOutDisabled)
+{
+enableButton(butZoomOut, zoomOut);
+}
+if (!fZoomInDisabled)
+{
+enableButton(butZoomIn, zoomIn);
+}
+}
+function UpdateFramesetSelect()
+{
+if ( g_aDocTree["C"]._fFrameset )
+{
+if (!g_strActiveFrame)
+{
+selectFrameset.options.remove(1);
+}
+separatorFrameset.style.display = "inline";
+cellFrameset.style.display = "inline";
+}
+}
+function getPageWidth()
+{
+return g_aDocTree["C"].Page(1).offsetWidth;
+}
+function getPageHeight()
+{
+return g_aDocTree["C"].Page(1).offsetHeight;
+}
+function UndisplayPages()
+{
+while (g_cPagesDisplayed > 0)
+{
+var oPage = DisplayPage(g_nDispPage + g_cPagesDisplayed - 1);
+if (oPage != null)
+{
+oPage.style.top = "-20000px";
+if (g_fRTL)
+oPage.style.right = "10px";
+else
+oPage.style.left = "10px";
+}
+g_cPagesDisplayed--;
+}
+}
+function PositionPages(nDispPage)
+{
+var strDispDoc = DisplayDocument(nDispPage);
+if ( g_aDocTree != null
+&& g_aDocTree[strDispDoc] != null
+&& g_aDocTree[strDispDoc].Pages() > 0)
+{
+UndisplayPages();
+var xPageWidth = getPageWidth();
+var yPageHeight = getPageHeight();
+var nMaxPage = TotalDisplayPages();
+g_cxDisplaySlots = Math.max(1, Math.floor((OverflowContainer.offsetWidth*100)/(g_nZoomFactor*(xPageWidth+10))));
+g_cyDisplaySlots = Math.max(1, Math.floor((OverflowContainer.offsetHeight*100)/(g_nZoomFactor*(yPageHeight+10))));
+var nMaxPageRequest = Math.max(nMaxPage - g_cxDisplaySlots * g_cyDisplaySlots + 1, 1);
+if ( nDispPage < 1 )
+nDispPage = 1;
+else if (nDispPage > nMaxPageRequest)
+nDispPage = nMaxPageRequest;
+g_nDispPage = nDispPage;
+document.all.spanPageTotal.innerText = nMaxPage;
+document.all.inputPageNum.value = g_nDispPage;
+updateNavButtons();
+var xDisplaySlot = 1;
+var yDisplaySlot = 1;
+var iPage = g_nDispPage;
+g_cPagesDisplayed = 0;
+while (iPage <= nMaxPage && yDisplaySlot <= g_cyDisplaySlots)
+{
+var xPos = xDisplaySlot*10 + (xDisplaySlot-1)*xPageWidth;
+var yPos = yDisplaySlot*10 + (yDisplaySlot-1)*yPageHeight;
+var oPage = DisplayPage(iPage);
+if (g_fRTL)
+oPage.style.right = xPos;
+else
+oPage.style.left = xPos;
+oPage.style.top = yPos;
+iPage++;
+if (++xDisplaySlot > g_cxDisplaySlots)
+{
+xDisplaySlot = 1;
+yDisplaySlot++;
+}
+g_cPagesDisplayed++;
+}
+}
+}
+function ChangeDispPage(nDispPageNew)
+{
+if (isNaN(nDispPageNew))
+{
+inputPageNum.value = g_nDispPage;
+}
+else
+{
+if (nDispPageNew < 1)
+nDispPageNew = 1;
+else if (nDispPageNew > TotalDisplayPages())
+nDispPageNew = TotalDisplayPages();
+OverflowContainer.scrollTop = 0;
+PositionPages(nDispPageNew);
+}
+return g_nDispPage;
+}
+function DisplayDocument(nWhichPage)
+{
+switch (g_nFramesetLayout)
+{
+case 0:
+return "C";
+break;
+case 1:
+return g_strActiveFrame;
+break;
+case 2:
+var i;
+if (!nWhichPage)
+return null;
+;
+for (i in g_aDocTree)
+{
+if ( nWhichPage >= g_aDocTree[i]._nStartingPage
+&& nWhichPage < (g_aDocTree[i]._nStartingPage + g_aDocTree[i].Pages()))
+return i;
+}
+default:
+HandleError("Display document cannot be found!", document.URL, "DisplayDocument");
+}
+}
+function TotalDisplayPages()
+{
+if (g_nFramesetLayout == 2)
+return g_nTotalPages;
+return g_aDocTree[DisplayDocument()].Pages();
+}
+function DisplayPage(nWhichPage)
+{
+;
+if (g_nFramesetLayout != 2)
+return g_aDocTree[DisplayDocument(nWhichPage)].Page(nWhichPage);
+return g_aDocTree[DisplayDocument(nWhichPage)].Page(nWhichPage - g_aDocTree[DisplayDocument(nWhichPage)]._nStartingPage + 1);
+}
+function ChangeZoom(nNewVal)
+{
+if (nNewVal < 10)
+nNewVal = 10;
+else if (nNewVal > 1000)
+nNewVal = 1000;
+else if (isNaN(nNewVal))
+nNewVal = g_nZoomFactor;
+if (nNewVal != g_nZoomFactor)
+{
+MasterContainer.style.zoom = nNewVal + "%";
+g_nZoomFactor = nNewVal;
+updateZoomButtons();
+PositionPages(g_nDispPage);
+}
+return g_nZoomFactor;
+}
+function BuildTableOfLinks( docSource )
+{
+var aLinks = docSource.links;
+var nLinks = aLinks.length;
+if (nLinks > 0)
+{
+var fDuplicate;
+var i;
+var j;
+var newHTM;
+var docLinkTable = document.createElement("BODY");
+var L_LINKSHEADER1_Text = "Verknüpfungstext";
+var L_LINKSHEADER2_Text = "Internetadresse";
+newHTM = "<CENTER><TABLE BORDER=1>";
+newHTM += "<THEAD style=\"display:table-header-group\"><TR><TH>"
++ L_LINKSHEADER1_Text
++ "</TH><TH>" + L_LINKSHEADER2_Text + "</TH></TR></THEAD><TBODY>";
+for (i = 0; i < nLinks; i++)
+{
+fDuplicate = false;
+for (j = 0; (!fDuplicate) && (j < i); j++)
+{
+if (aLinks[i].href == aLinks[j].href)
+fDuplicate = true;
+}
+if (!fDuplicate)
+newHTM += ("<TR><TD>" + aLinks[i].innerText + "</TD><TD>" + aLinks[i].href + "</TD></TR>");
+}
+newHTM += "</TBODY></TABLE></CENTER>";
+docLinkTable.innerHTML = newHTM;
+return docLinkTable.document;
+}
+return null;
+}
+function CreateDocument( docURL, strDocID, fUseStreamHeader )
+{
+if (g_aDocTree[strDocID])
+return;
+g_aDocTree[strDocID] = new CPrintDoc( strDocID, docURL );
+g_aDocTree[strDocID].InitDocument( fUseStreamHeader );
+}
+function ChangeFramesetLayout( nNewLayout, fForce )
+{
+if ( g_nFramesetLayout == nNewLayout
+&& !fForce)
+return;
+UndisplayPages();
+g_nFramesetLayout = nNewLayout;
+switch ( nNewLayout )
+{
+case 0:
+case 1:
+break;
+case 2:
+g_nTotalPages = 0;
+for (i in g_aDocTree)
+{
+if ( g_aDocTree[i]._fFrameset
+|| i == "S")
+g_aDocTree[i]._nStartingPage = 0;
+else
+{
+g_aDocTree[i]._nStartingPage = g_nTotalPages + 1;
+g_nTotalPages += g_aDocTree[i].Pages();
+}
+}
+break;
+default:
+HandleError("Impossible frameset layout type: " + nNewLayout, document.URL, "ChangeFramesetLayout");
+}
+ChangeDispPage(1);
+}
+function EnsureDocuments()
+{
+var i;
+var tmp;
+var top = Printer.marginTop / 100;
+var bottom = Printer.marginBottom / 100;
+var left = Printer.marginLeft / 100;
+var right = Printer.marginRight / 100;
+var pageWidth = Printer.pageWidth / 100;
+var pageHeight = Printer.pageHeight / 100;
+var linktable = Printer.tableOfLinks;
+var upTop = Printer.unprintableTop / 100;
+var upBottom = Printer.unprintableBottom / 100;
+var header = Printer.header;
+var footer = Printer.footer;
+if (header)
+{
+tmp = upTop + (27 / 100);
+if (tmp > top)
+top = tmp;
+}
+if (footer)
+{
+tmp = upBottom + (27 / 100);
+if (tmp > bottom)
+bottom = tmp;
+}
+if (upTop != g_nUnprintTop)
+{
+g_nUnprintTop = upTop;
+oRule = GetRuleFromSelector(".divHead");
+if (oRule == null)
+{
+HandleError("'.divHead' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.top = upTop + "in";
+}
+if (upBottom != g_nUnprintBottom)
+{
+g_nUnprintBottom= upBottom;
+oRule = GetRuleFromSelector(".divFoot");
+if (oRule == null)
+{
+HandleError("'.divFoot' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.bottom = upBottom + "in";
+}
+if ( top != g_nMarginTop
+|| bottom != g_nMarginBottom
+|| left != g_nMarginLeft
+|| right != g_nMarginRight
+|| pageWidth != g_nPageWidth
+|| pageHeight != g_nPageHeight
+|| header != g_strHeader
+|| footer != g_strFooter )
+{
+var conWidth = pageWidth - left - right;
+var conHeight = pageHeight - top - bottom;
+var oStyleSheet = document.styleSheets[0];
+var oRule;
+if (conWidth < 0)
+conWidth = 0;
+if (conHeight < 0)
+conHeight = 0;
+UndisplayPages();
+g_nTotalPages = 0;
+g_nDocsToCalc = 0;
+for (i in g_aDocTree)
+{
+g_nDocsToCalc++;
+g_aDocTree[i].ResetDocument();
+}
+g_nMarginTop = top;
+g_nMarginBottom = bottom;
+g_nMarginLeft = left;
+g_nMarginRight = right;
+g_nPageWidth = pageWidth;
+g_nPageHeight = pageHeight;
+g_fTableofLinks = linktable;
+g_strHeader = header;
+g_strFooter = footer;
+HeadFoot.textHead = g_strHeader;
+HeadFoot.textFoot = g_strFooter;
+oRule = GetRuleFromSelector(".page");
+if (oRule == null)
+{
+HandleError("'.page' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.width = pageWidth + "in";
+oRule.style.height = pageHeight + "in";
+oRule = GetRuleFromSelector(".mRect");
+if (oRule == null)
+{
+HandleError("'.mRect' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.marginLeft = left + "in";
+oRule.style.marginRight = right + "in";
+oRule.style.marginTop = top + "in";
+oRule.style.marginBottom = bottom + "in";
+oRule.style.width = conWidth + "in";
+oRule.style.height = conHeight + "in";
+oRule = GetRuleFromSelector(".divHead");
+if (oRule == null)
+{
+HandleError("'.divHead' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.left = left + "in";
+oRule.style.width = conWidth + "in";
+oRule = GetRuleFromSelector(".divFoot");
+if (oRule == null)
+{
+HandleError("'.divHead' rule does not exist!", document.URL, "CPrintDoc::EnsureDocuments");
+}
+oRule.style.left = left + "in";
+oRule.style.width = conWidth + "in";
+for (i in g_aDocTree)
+{
+g_aDocTree[i].InitDocument((g_aDocTree[i]._anMerge[1] == 1));
+}
+if (g_nFramesetLayout == 2)
+ChangeFramesetLayout(g_nFramesetLayout, true);
+PositionPages(g_nDispPage);
+}
+else if (linktable != g_fTableOfLinks)
+{
+g_fTableOfLinks = linktable;
+for (i in g_aDocTree)
+{
+g_aDocTree[i].ResetTableOfLinks();
+}
+}
+}
+function buttonRaise( elem )
+{
+elem.style.borderStyle = "outset";
+elem.style.borderColor = "threedhighlight";
+}
+function buttonLower( elem )
+{
+elem.style.borderStyle = "solid";
+elem.style.borderColor = "threedface";
+}
+function buttonDepress(elem)
+{
+elem.style.borderStyle = "inset";
+elem.style.borderColor = "threedshadow";
+}
+function buttonOver()
+{
+var imgSrc = event.srcElement;
+g_imgUnderMouse = imgSrc;
+if (imgSrc == begin ||
+imgSrc == prev ||
+imgSrc == next ||
+imgSrc == end)
+{
+updateNavButtons();
+}
+else if (imgSrc == zoomIn ||
+imgSrc == zoomOut)
+{
+updateZoomButtons();
+}
+else
+{
+imgSrc.src= "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/" + imgSrc.id + "Hilite";
+buttonRaise( imgSrc.parentNode );
+}
+}
+function buttonOut()
+{
+var imgSrc = event.srcElement;
+g_imgUnderMouse = null;
+if (imgSrc == begin ||
+imgSrc == prev ||
+imgSrc == next ||
+imgSrc == end)
+{
+updateNavButtons();
+}
+else if (imgSrc == zoomIn ||
+imgSrc == zoomOut)
+{
+updateZoomButtons();
+}
+else
+{
+imgSrc.src= "res://Comzept.Genesis.NetRix.Resources.dll/PRINT/" + imgSrc.id + "";
+buttonLower( imgSrc.parentNode );
+}
+}
+function buttonDown()
+{
+buttonDepress(event.srcElement);
+}
+function HandlePageSelect()
+{
+event.srcElement.value = ChangeDispPage(parseInt(inputPageNum.value));
+MasterContainer.focus();
+}
+function HandlePageSetup()
+{
+if (Printer.showPageSetupDialog())
+EnsureDocuments();
+}
+function HandleForwardPage()
+{
+ChangeDispPage(g_nDispPage + 1);
+MasterContainer.focus();
+}
+function HandleBackPage()
+{
+ChangeDispPage(g_nDispPage - 1);
+MasterContainer.focus();
+}
+function HandleFirstPage()
+{
+ChangeDispPage(1);
+MasterContainer.focus();
+}
+function HandleLastPage()
+{
+ChangeDispPage(TotalDisplayPages());
+MasterContainer.focus();
+}
+function NumericFromSpecialZoom(fnBounder)
+{
+var iMaxNumericZoom = selectZoom.options.length-1-3;
+var iBelow = -1;
+var nBelow = 0;
+var iAbove = iMaxNumericZoom + 1;
+var i;
+for (i = 0; i <= iMaxNumericZoom; i++)
+{
+var nThisIndex = parseInt(selectZoom.options[i].value);
+if (nThisIndex >= g_nZoomFactor)
+{
+iBelow = i;
+nBelow = nThisIndex;
+}
+else
+{
+break;
+}
+}
+if (nBelow > g_nZoomFactor)
+{
+iAbove = iBelow + 1;
+}
+else
+{
+iAbove = iBelow;
+}
+return fnBounder(iBelow, iAbove);
+}
+function HandleZoom(nZoomIndexDelta)
+{
+var iCurrZoom = selectZoom.selectedIndex;
+var iMaxNumericZoom = selectZoom.options.length-1-3;
+if (iCurrZoom > iMaxNumericZoom)
+{
+var fnRemapBounder = null;
+if (nZoomIndexDelta == 1)
+{
+fnRemapBounder = Math.min;
+}
+else
+{
+fnRemapBounder = Math.max;
+}
+iCurrZoom = NumericFromSpecialZoom(fnRemapBounder);
+}
+selectZoom.selectedIndex = Math.min(Math.max(0, iCurrZoom + nZoomIndexDelta), iMaxNumericZoom);
+ChangeZoom(parseInt(selectZoom.options[selectZoom.selectedIndex].value));
+}
+function HandleDynamicZoom()
+{
+var nZoomType = parseInt(selectZoom.options[selectZoom.selectedIndex].value);
+if (nZoomType < 0)
+{
+var nZoomFactor = 100;
+var xPageWidth = getPageWidth();
+switch (nZoomType)
+{
+case -1:
+nZoomFactor = Math.floor(((OverflowContainer.offsetWidth - 20) * 100) / xPageWidth);
+break;
+case -2:
+var xZoom = Math.floor(((OverflowContainer.offsetWidth - 20) * 100) / xPageWidth);
+var yZoom = Math.floor(((OverflowContainer.offsetHeight - 20) * 100) / getPageHeight());
+nZoomFactor = Math.min(xZoom, yZoom);
+break;
+case -3:
+nZoomFactor = Math.floor(((OverflowContainer.offsetWidth - 30) * 100) / (2 * xPageWidth));
+break;
+default:
+nZoomFactor = 100;
+break;
+}
+ChangeZoom(nZoomFactor);
+}
+}
+function HandleZoomSelect()
+{
+var nZoomFactor = parseInt(selectZoom.options[selectZoom.selectedIndex].value);
+if (nZoomFactor < 0)
+{
+HandleDynamicZoom();
+}
+else
+{
+ChangeZoom(nZoomFactor);
+}
+}
+function HandleFramesetSelect()
+{
+ChangeFramesetLayout(parseInt(selectFrameset.options[selectFrameset.selectedIndex].value), false);
+}
+function HandleZoomInButton()
+{
+HandleZoom(-1);
+MasterContainer.focus();
+}
+function HandleZoomOutButton()
+{
+HandleZoom(1);
+MasterContainer.focus();
+}
+function HandleInputKeyPress()
+{
+var keyStroke = event.keyCode;
+if (keyStroke == 13)
+{
+event.srcElement.onchange();
+}
+else if (keyStroke < 48 || keyStroke > 57)
+{
+event.returnValue = false;
+}
+}
+function Close()
+{
+Printer.updatePageStatus(-1);
+if (g_fDelayClose)
+{
+g_fDelayClose = false;
+window.setTimeout("Close()", 120000);
+return;
+}
+window.close();
+}
+function PrintAll()
+{
+var i;
+var nFirstDoc;
+if ( g_nFramesLeft > 0
+&& Printer.framesetDocument
+&& !Printer.frameAsShown )
+{
+window.setTimeout("PrintAll()", 100);
+return;
+}
+EnsureDocuments();
+if (Printer.copies <= 0)
+{
+Close();
+}
+else if ( Printer.selectedPages
+&& Printer.pageFrom > Printer.pageTo )
+{
+var L_PAGERANGE_ErrorMessage = "Der Wert im 'Von'-Feld darf nicht größer als der Wert im 'Bis'-Feld sein.";
+alert(L_PAGERANGE_ErrorMessage);
+;
+if (!g_fPreview)
+PrintNow(true);
+}
+else
+{
+g_cLeftToPrint = 1;
+Printer.updatePageStatus(1);
+PrintSentinel(((Printer.selection)
+? "S"
+: (Printer.frameActive && !!g_strActiveFrame)
+? g_strActiveFrame
+: "C"),
+true);
+}
+}
+function PrintSentinel( strDoc, fRecursionOK )
+{
+if ( !g_aDocTree[strDoc]
+|| !g_aDocTree[strDoc].ReadyToPrint() )
+{
+window.setTimeout("PrintSentinel('" + strDoc + "'," + fRecursionOK + ");", 500);
+return;
+}
+g_aDocTree[strDoc].Print(fRecursionOK);
+}
+function PrintDocumentComplete()
+{
+g_cLeftToPrint--;
+if (g_cLeftToPrint <= 0)
+{
+Close();
+}
+}
+function PrintNow( fWithPrompt)
+{
+if ( !g_aDocTree["C"]
+|| !g_aDocTree["C"]._aaRect[1][0]
+|| !g_aDocTree["C"]._aaRect[1][0].contentDocument.body)
+{
+window.setTimeout("PrintNow('" + fWithPrompt + "');", 100);
+return;
+}
+var oDoc = g_aDocTree["C"]._aaRect[1][0].contentDocument;
+var fConfirmed;
+var fFramesetDocument = (oDoc.body.tagName.toUpperCase() == "FRAMESET");
+var fActiveFrame = (oDoc.all.tags("HTML").item(0).__IE_ActiveFrame != null);
+Printer.framesetDocument = fFramesetDocument;
+Printer.frameActiveEnabled = fActiveFrame;
+if (g_fPreview)
+{
+Printer.frameActive = (g_nFramesetLayout == 1);
+Printer.frameAsShown = (g_nFramesetLayout == 0);
+Printer.currentPageAvail = true;
+}
+else
+{
+Printer.frameActive = fActiveFrame;
+Printer.frameAsShown = false;
+Printer.currentPageAvail = false;
+}
+Printer.selectionEnabled = !!(dialogArguments.__IE_ContentSelectionUrl);
+Printer.selection = false;
+fConfirmed = (eval(fWithPrompt)) ? Printer.showPrintDialog() : Printer.ensurePrintDialogDefaults();
+if ( fConfirmed )
+{
+if ( Printer.selection
+&& dialogArguments.__IE_ContentSelectionUrl )
+{
+CreateDocument(dialogArguments.__IE_ContentSelectionUrl, "S", true);
+}
+Printer.usePrinterCopyCollate = ( Printer.deviceSupports("copies") >= Printer.copies
+&& ( !Printer.collate
+|| Printer.deviceSupports("collate") ));
+PrintAll();
+}
+else
+{
+if ( !g_fPreview )
+{
+Close();
+}
+else
+{
+Printer.tableoflinks = false;
+}
+}
+}
+function HandlePrintClick()
+{
+PrintNow(true, true);
+}
+function CPrintDoc_ReadyToPrint()
+{
+if ( this._nStatus == 4
+&& this._aaRect[1][0].contentDocument.readyState == "complete")
+{
+return true;
+}
+return false;
+}
+function CPrintDoc_Print( fRecursionOK )
+{
+if (!this.ReadyToPrint())
+{
+HandleError("Printing when not ready!", document.URL, "CPrintDoc::Print");
+return;
+}
+var nCount = (Printer.usePrinterCopyCollate) ? 1 : Printer.copies;
+var nFrom;
+var nTo;
+;
+if (fRecursionOK)
+{
+var fFrameset = (this._aaRect[1][0].contentDocument.body.tagName.toUpperCase() == "FRAMESET");
+if (Printer.frameActive)
+{
+var n = parseInt(this._aaRect[1][0].contentDocument.all.tags("HTML").item(0).__IE_ActiveFrame);
+if (n >= 0)
+{
+var oTargetFrame = (fFrameset)
+? this._aaRect[1][0].contentDocument.all.tags("FRAME").item(n)
+: this._aaRect[1][0].contentDocument.all.tags("IFRAME").item(n);
+if ( IsPersistedDoc()
+&& ( oTargetFrame.src == "res://SHDOCLC.DLL/printnof.htm"
+|| oTargetFrame.src == "about:blank" ))
+{
+Printer.printNonNativeFrames(this._aaRect[1][0].contentDocument, true);
+}
+else
+{
+this.CreateSubDocument(oTargetFrame.src, true);
+this.PrintAllSubDocuments(true);
+}
+PrintDocumentComplete();
+return;
+}
+}
+if (fFrameset)
+{
+if (!Printer.frameAsShown)
+{
+this.PrintAllSubDocuments(true);
+if (IsPersistedDoc())
+{
+Printer.printNonNativeFrames(this._aaRect[1][0].contentDocument, false);
+}
+PrintDocumentComplete();
+return;
+}
+else
+{
+Printer.printNonNativeFrames(this._aaRect[1][0].contentDocument, false);
+}
+}
+else
+{
+if (Printer.allLinkedDocuments)
+{
+this.BuildAllLinkedDocuments();
+this.PrintAllSubDocuments(false);
+}
+}
+}
+if (Printer.printNonNative(this._aaRect[1][0].contentDocument) )
+{
+g_fDelayClose = !g_fPreview;
+PrintDocumentComplete();
+return;
+}
+if (Printer.selectedPages)
+{
+nFrom = Printer.pageFrom;
+nTo = Printer.pageTo;
+if (nFrom < 1)
+nFrom = 1;
+if (nTo > this.Pages())
+nTo = this.Pages();
+}
+else if ( Printer.currentPage
+&& this._strDoc == DisplayDocument())
+{
+nFrom = (this.Pages() >= g_nDispPage) ? g_nDispPage : this.Pages();
+nTo = nFrom;
+}
+else
+{
+nFrom = 1;
+nTo = this.Pages();
+}
+if (nTo < nFrom)
+{
+PrintDocumentComplete();
+return;
+}
+;
+;
+;
+if (Printer.startDoc(this._aaRect[1][0].contentDocument.URL))
+{
+if (Printer.collate)
+{
+var fExtraPage = ( Printer.duplex
+&& ((nFrom - nTo) % 2 == 0) );
+for (j = 0; j < nCount; j++)
+{
+for (i = nFrom; i <= nTo; i++)
+{
+Printer.printPage(this.Page(i).children[0]);
+}
+if (fExtraPage)
+Printer.printBlankPage();
+}
+}
+else
+{
+var fDuplex = Printer.duplex;
+for (i = nFrom; i <= nTo; i++)
+{
+for (j = 0; j < nCount; j++)
+{
+Printer.printPage(this.Page(i).children[0]);
+if (fDuplex)
+{
+if (i < nTo)
+Printer.printPage(this.Page(i+1));
+else
+Printer.printBlankPage();
+}
+}
+if (fDuplex)
+i++;
+}
+}
+Printer.stopDoc();
+}
+PrintDocumentComplete();
+}
+function CPrintDoc_RectComplete(fOverflow, strElement)
+{
+var nStatus = parseInt(strElement.substr(5,1));
+var nPage = parseInt(strElement.substr(strElement.lastIndexOf("p") + 1));
+;
+;
+if (nStatus > this._nStatus)
+return false;
+if (nPage != this._acPage[nStatus] - 1 + this._anMerge[nStatus])
+return false;
+if (nStatus != this._nStatus)
+{
+if (!fOverflow)
+return false;
+this.StopFixupHF();
+if (this._nStatus == 4)
+g_nDocsToCalc++;
+this._nStatus = nStatus;
+}
+if (fOverflow)
+{
+this.AddPage();
+}
+else
+{
+switch (this._nStatus)
+{
+case 0:
+this._nStatus = 1;
+this.AddFirstPage();
+this._aaRect[this._nStatus][0].contentSrc = this._strDocURL;
+break;
+case 1:
+this._nStatus = 2;
+this.AddTableOfLinks();
+break;
+case 2:
+this._nStatus = 3;
+if (this._strDoc == DisplayDocument())
+ChangeDispPage(g_nDispPage);
+this.FixupHF();
+break;
+}
+}
+if (this._strDoc == DisplayDocument())
+{
+spanPageTotal.innerText = this.Pages();
+updateNavButtons();
+}
+}
+function CPrintDoc_AddPage()
+{
+var newHTM = "";
+var aPage = this._aaPage[this._nStatus];
+var aRect = this._aaRect[this._nStatus];
+;
+(this._acPage[this._nStatus])++;
+HeadFoot.URL = this.EnsureURL();
+HeadFoot.title = this.EnsureTitle();
+HeadFoot.pageTotal = this.Pages();
+HeadFoot.page = HeadFoot.pageTotal;
+if (this._acPage[this._nStatus] <= aPage.length)
+{
+var oPage = aPage[this._acPage[this._nStatus] - 1];
+oPage.children("header").innerHTML = HeadFoot.HtmlHead;
+oPage.children("footer").innerHTML = HeadFoot.HtmlFoot;
+}
+else
+{
+newHTM = "<DIV class=divPage><IE:DeviceRect media=\"print\" class=page id=mDiv" + this._nStatus + this._strDoc + "p" + aPage.length + ">";
+newHTM += "<IE:LAYOUTRECT id=mRect" + this._nStatus + this._strDoc + "p" + aRect.length;
+newHTM += " class=mRect nextRect=mRect" + this._nStatus + this._strDoc + "p" + (aRect.length + 1);
+newHTM += " onlayoutcomplete=OnRectComplete('" + this._strDoc + "')";
+newHTM += " tabindex=-1 onbeforefocusenter='event.returnValue=false;' ";
+newHTM += " /><DIV class=divHead id=header>";
+newHTM += HeadFoot.HtmlHead;
+newHTM += "</DIV><DIV class=divFoot id=footer>";
+newHTM += HeadFoot.HtmlFoot;
+newHTM += " </DIV></IE:DeviceRect></DIV>";
+MasterContainer.insertAdjacentHTML("beforeEnd", newHTM);
+aPage[aPage.length] = eval( "document.all.mDiv" + this._nStatus + this._strDoc + "p" + aPage.length);
+aRect[aRect.length] = eval("document.all.mRect" + this._nStatus + this._strDoc + "p" + aRect.length);
+}
+}
+function CPrintDoc_AddFirstPage()
+{
+this._acPage[this._nStatus] = 0;
+if (this._anMerge[this._nStatus] == 0)
+{
+this.AddPage();
+}
+else
+{
+var aRect = this._aaRect[this._nStatus];
+var oPage = this._aaPage[this._nStatus - 1][this._acPage[this._nStatus - 1] - 1];
+var oTop = this._aaRect[this._nStatus - 1][this._acPage[this._nStatus - 1] + this._anMerge[this._nStatus - 1] - 1];
+var nTop = oTop.offsetTop + oTop.scrollHeight;
+var nHeight = oTop.clientHeight - oTop.scrollHeight;
+;
+;
+if (aRect.length > 0)
+{
+var oNode = aRect[0];
+oNode.style.marginTop = nTop + "px";
+oNode.style.pixelHeight = nHeight;
+if (oNode.parentElement != oPage)
+oPage.insertBefore(oNode);
+}
+else
+{
+var newHTM;
+var oNode;
+newHTM = "<IE:LAYOUTRECT id=mRect" + this._nStatus + this._strDoc + "p0";
+newHTM += " class=mRect nextRect=mRect" + this._nStatus + this._strDoc + "p1";
+newHTM += " onlayoutcomplete=OnRectComplete('" + this._strDoc + "')";
+newHTM += " tabindex=-1 onbeforefocus='event.returnValue=false;' />";
+oPage.insertAdjacentHTML("beforeEnd", newHTM);
+oNode = eval("document.all.mRect" + this._nStatus + this._strDoc + "p0");
+aRect[0] = oNode;
+oNode.style.marginTop = nTop + "px";
+oNode.style.height = nHeight + "px";
+}
+}
+}
+function CPrintDoc_InitDocument( fUseStreamHeader )
+{
+var fReallyUseStreamHeader = (fUseStreamHeader && (dialogArguments.__IE_OutlookHeader != null));
+this._anMerge[1] = (fReallyUseStreamHeader) ? 1 : 0;
+this._nStatus = (fReallyUseStreamHeader) ? 0 : 1;
+this.AddFirstPage();
+this._aaRect[this._nStatus][0].contentSrc = (fReallyUseStreamHeader)
+? dialogArguments.__IE_OutlookHeader
+: this._strDocURL;
+}
+function CPrintDoc_PrintAllSubDocuments( fRecursionOK )
+{
+if (!this._aDoc)
+return;
+var nDocs = this._aDoc.length;
+var i;
+g_cLeftToPrint += nDocs;
+for (i = 0; i < nDocs; i++)
+{
+PrintSentinel(this._aDoc[i]._strDoc, fRecursionOK);
+}
+}
+function CPrintDoc_BuildAllLinkedDocuments()
+{
+var strURL = this._aaRect[1][0].contentDocument.URL;
+var aLinks = this._aaRect[1][0].contentDocument.links;
+var nLinks = aLinks.length;
+var i;
+var j;
+var strLink;
+for (i = 0; i < nLinks; i++)
+{
+strLink = aLinks[i].href;
+if ( (strURL == strLink)
+|| UnprintableURL(strLink) )
+continue;
+for (j = 0; j < i; j++)
+{
+if (strLink == aLinks[j].href)
+break;
+}
+if (j < i)
+continue;
+this.CreateSubDocument(strLink, false);
+}
+}
+function OnBuildAllFrames( strDoc )
+{
+if ( !g_aDocTree[strDoc]
+|| !g_aDocTree[strDoc]._aaRect[1][0]
+|| !g_aDocTree[strDoc]._aaRect[1][0].contentDocument.body)
+{
+window.setTimeout("OnBuildAllFrames('" + strDoc + "');", 100);
+return;
+}
+g_aDocTree[strDoc].BuildAllFrames();
+}
+function IsPersistedDoc()
+{
+return (!!g_aDocTree["C"]._aaRect[1][0].contentDocument.all.tags("HTML")[0].__IE_DisplayURL);
+}
+function CPrintDoc_BuildAllFrames()
+{
+var aFrames = this._aaRect[1][0].contentDocument.all.tags("FRAME");
+var nFrames = aFrames.length;
+var nActive = parseInt(this._aaRect[1][0].contentDocument.all.tags("HTML").item(0).__IE_ActiveFrame);
+var i;
+var strSrc;
+var strDoc;
+if (nFrames > 0)
+this._fFrameset = true;
+for (i = 0; i < nFrames; i++)
+{
+strSrc = aFrames[i].src;
+if (strSrc == "res://SHDOCLC.DLL/printnof.htm")
+continue;
+strDoc = this.CreateSubDocument(strSrc, true);
+if (i == nActive)
+g_strActiveFrame = strDoc;
+g_nFramesLeft++;
+OnBuildAllFrames(strDoc);
+}
+g_nFramesLeft--;
+if (g_nFramesLeft <= 0)
+BuildAllFramesComplete();
+}
+function CPrintDoc_CreateSubDocument( docURL, fUseStreamHeader )
+{
+if (!this._aDoc)
+this._aDoc = new Array();
+var nDoc = this._aDoc.length;
+var strDoc = this._strDoc + "_" + nDoc;
+CreateDocument(docURL, strDoc, fUseStreamHeader);
+this._aDoc[nDoc] = g_aDocTree[strDoc];
+return (strDoc);
+}
+function CPrintDoc_AddTableOfLinks()
+{
+;
+if (!g_fTableOfLinks)
+{
+this._nStatus = 3;
+ChangeDispPage(g_nDispPage);
+this.FixupHF();
+}
+else
+{
+var oTableOfLinks = BuildTableOfLinks(this._aaRect[1][0].contentDocument);
+if (oTableOfLinks != null)
+{
+var oBody = oTableOfLinks.body;
+this.AddFirstPage()
+this._aaRect[this._nStatus][0].contentSrc = oBody.document;
+}
+else
+{
+this._nStatus = 3;
+ChangeDispPage(g_nDispPage);
+this.FixupHF();
+}
+}
+}
+function OnTickHF( strDoc )
+{
+if (!g_aDocTree[strDoc])
+{
+HandleError("Document " + strDoc + " does not exist.", document.URL, "OnRectComplete");
+return;
+}
+g_aDocTree[strDoc].TickHF();
+}
+function CPrintDoc_TickHF()
+{
+var i, j;
+var iTo, jTo;
+var aTok;
+var oTok;
+var nStartPage = this._nNextHF;
+var cPages = this.Pages();
+iTo = nStartPage + 2;
+if (iTo > cPages)
+iTo = cPages;
+for (i = nStartPage; i <= iTo; i++)
+{
+aTok = this.Page(i).children[0].getElementsByTagName("SPAN");
+for (j=0, jTo = aTok.length; j < jTo; j++)
+{
+oTok = aTok[j];
+if (oTok.className == "hfPageTotal")
+oTok.innerText = cPages;
+else if ( oTok.className == "hfUrl"
+&& oTok.innerText == "" )
+oTok.innerText = this.EnsureURL();
+else if ( oTok.className == "hfTitle"
+&& oTok.innerText == "" )
+oTok.innerText = this.EnsureTitle();
+}
+}
+this._nNextHF = i;
+if (iTo == cPages)
+{
+this._nStatus = 4;
+if (--g_nDocsToCalc == 0)
+CalcDocsComplete();
+}
+else
+{
+this._nTimerHF = window.setTimeout("OnTickHF('" + this._strDoc + "');", 250);
+}
+}
+function CPrintDoc_FixupHF()
+{
+;
+this.TickHF();
+}
+function CPrintDoc_Pages()
+{
+var i;
+var c;
+for (i = 0, c = 0; i < 3; i++)
+{
+c += this._acPage[i];
+}
+return c;
+}
+function CPrintDoc_Page(nPage)
+{
+var i;
+var n = nPage;
+if (n <= 0)
+return null;
+for (i = 0; i < 3; i++)
+{
+if (n <= this._acPage[i])
+return this._aaPage[i][n - 1].parentElement;
+n -= this._acPage[i];
+}
+return null;
+}
+function CPrintDoc_EnsureURL()
+{
+if (this._strURL == null)
+{
+if ( this._aaRect[1][0]
+&& this._aaRect[1][0].contentDocument)
+{
+this._strURL = this._aaRect[1][0].contentDocument.URL;
+}
+if (this._strURL == null)
+return "";
+}
+return this._strURL;
+}
+function CPrintDoc_EnsureTitle()
+{
+if (this._strTitle == null)
+{
+if ( this._aaRect[1][0]
+&& this._aaRect[1][0].contentDocument)
+{
+this._strTitle = this._aaRect[1][0].contentDocument.title;
+}
+if (this._strTitle == null)
+return "";
+}
+return this._strTitle;
+}
+function CPrintDoc_ResetDocument()
+{
+var i;
+for (i = 0; i < 3; i++)
+{
+this._acPage[i] = 0;
+if (this._aaRect[i][0])
+this._aaRect[i][0].contentSrc = "";
+}
+this.StopFixupHF();
+}
+function CPrintDoc_ResetTableOfLinks()
+{
+if (this._nStatus <= 2)
+return;
+this.StopFixupHF();
+this._nStatus = 2;
+this.AddTableOfLinks();
+}
+function CPrintDoc_StopFixupHF()
+{
+if (this._nTimerHF != -1)
+window.clearTimeout(this._nTimerHF);
+this._nTimerHF = -1;
+this._nNextHF = 1;
+}
+function CPrintDoc( nDocNum, strDocURL )
+{
+var i;
+this._aDoc = null;
+this._strDoc = nDocNum;
+this._strDocURL = strDocURL;
+this._nStatus = 0;
+this._aaPage = new Array(3);
+this._aaRect = new Array(3);
+this._acPage = new Array(3);
+this._anMerge = new Array(3);
+for (i=0; i<3; i++)
+{
+this._aaPage[i] = new Array();
+this._aaRect[i] = new Array();
+this._acPage[i] = 0;
+this._anMerge[i] = 0;
+}
+this._nNextHF = 1;
+this._nTimerHF = -1;
+this._strURL = null;
+this._strTitle = null;
+this._fFrameset = false;
+this._nStartingPage = 0;
+}
+CPrintDoc.prototype.RectComplete = CPrintDoc_RectComplete;
+CPrintDoc.prototype.AddPage = CPrintDoc_AddPage;
+CPrintDoc.prototype.AddFirstPage = CPrintDoc_AddFirstPage;
+CPrintDoc.prototype.AddTableOfLinks = CPrintDoc_AddTableOfLinks;
+CPrintDoc.prototype.FixupHF = CPrintDoc_FixupHF;
+CPrintDoc.prototype.StopFixupHF = CPrintDoc_StopFixupHF;
+CPrintDoc.prototype.TickHF = CPrintDoc_TickHF;
+CPrintDoc.prototype.InitDocument = CPrintDoc_InitDocument;
+CPrintDoc.prototype.ResetDocument = CPrintDoc_ResetDocument;
+CPrintDoc.prototype.ResetTableOfLinks = CPrintDoc_ResetTableOfLinks;
+CPrintDoc.prototype.BuildAllLinkedDocuments = CPrintDoc_BuildAllLinkedDocuments;
+CPrintDoc.prototype.BuildAllFrames = CPrintDoc_BuildAllFrames;
+CPrintDoc.prototype.CreateSubDocument = CPrintDoc_CreateSubDocument;
+CPrintDoc.prototype.Print = CPrintDoc_Print;
+CPrintDoc.prototype.PrintAllSubDocuments = CPrintDoc_PrintAllSubDocuments;
+CPrintDoc.prototype.ReadyToPrint = CPrintDoc_ReadyToPrint;
+CPrintDoc.prototype.Page = CPrintDoc_Page;
+CPrintDoc.prototype.Pages = CPrintDoc_Pages;
+CPrintDoc.prototype.EnsureURL = CPrintDoc_EnsureURL;
+CPrintDoc.prototype.EnsureTitle = CPrintDoc_EnsureTitle;
+//]]>
+    </SCRIPT>
+  </HEAD>
+  <BODY onload="setTimeout('OnLoadBody()', 400);">
+    <!-- Controls for printing -->
+    <IE:TemplatePrinter id="Printer" />
+    <IE:HeaderFooter id="HeadFoot" />
+    <DIV id="idDivToolbar" style="width:100%; overflow:hidden;">
+      <DIV style="width=100%; border:'thin threedhighlight groove';">
+        <TABLE>
+          <TR>
+            <TD class="UIPane">
+              <BUTTON id="butPrint" title="Print Dokument (Alt+P)" accesskey="P">
+                <U>P</U>rint...
+              </BUTTON>
+            </TD>
+            <TD class="UISeparator">
+              <IMG width="0" height="0"/>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butPageSetup" accesskey="e">
+                <IMG id="printCtl" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/Printctl" alt="Setup Page (Alt+E)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UISeparator">
+              <IMG width="0" height="0"/>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butFirstPage">
+                <IMG id="begin" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/BeginInactive" alt="First Page (Alt+Pos1)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butBackPage">
+                <IMG id="prev" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/PrevInactive" alt="Prev Page (Alt+Left Arrow)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UIPane">
+              <SPAN style="color:windowtext;">
+                <NOBR Loc="">
+                  &#160;<ID id="idTdPageXofYLocText1">
+                    <U>S</U>eite
+                  </ID>&#160;<INPUT type="text" id="inputPageNum" title="Seitenvorschau (Alt+A)" value="1" style="height:1.5em; width: 2em; color:windowtext;" accesskey="s"/>
+                  <ID id="idTdPageXofYLocText2"> von </ID><SPAN id="spanPageTotal"></SPAN>
+                  &#160;
+                </NOBR>
+              </SPAN>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butNextPage">
+                <IMG id="next" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/NextInactive" alt="Next Page (Alt+Right Arrow)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butLastPage">
+                <IMG id="end" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/EndInactive" alt="Last Page (Alt+Ende)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UISeparator">
+              <IMG width="0" height="0"/>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butZoomOut">
+                <IMG id="zoomOut" base="zoomOut" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/Zoomout" alt="Zoom Out (Alt+Minus)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butZoomIn">
+                <IMG id="zoomIn" base="zoomIn" src="res://Comzept.Genesis.NetRix.Resources.dll/PRINT/Zoomin" alt="Zoom In (Alt+Plus)"/>
+              </BUTTON>
+            </TD>
+            <TD class="UIPane">
+              <SELECT id="selectZoom" accesskey="z">
+                <OPTION VALUE="500" >500%</OPTION>
+                <OPTION VALUE="200" >200%</OPTION>
+                <OPTION VALUE="150" >150%</OPTION>
+                <OPTION VALUE="100" >100%</OPTION>
+                <OPTION VALUE="75" SELECTED="" >75%</OPTION>
+                <OPTION VALUE="50" >50%</OPTION>
+                <OPTION VALUE="25" >25%</OPTION>
+                <OPTION VALUE="10" >10%</OPTION>
+                <!-- ID's are for localization -->
+                <OPTION VALUE="-1" id="idPageWidth">Whole Width</OPTION>
+                <OPTION VALUE="-2" id="idWholePage">Whole Page</OPTION>
+                <OPTION VALUE="-3" id="idTwoPages" >Two Pages </OPTION>
+              </SELECT>
+            </TD>
+            <TD class="UISeparator" id="separatorFrameset" style="display:none">
+              <IMG width="0" height="0"/>
+              </TD>
+            <TD class="UIPane" id="cellFrameset" style="display:none">
+              <SELECT id="selectFrameset" accesskey="f">
+                <OPTION VALUE="0" id="idLaidOut">As shown</OPTION>
+                <OPTION VALUE="1" id="idSelected">Only current Frame</OPTION>
+                <OPTION VALUE="2" id="idSeparate">Frame by Frame</OPTION>
+              </SELECT>
+            </TD>
+            <TD class="UISeparator">
+              <IMG width="0" height="0"/>
+            </TD>
+            <TD class="UIPane">
+              <BUTTON id="butHelp" title="Druckvorschauhilfe (Alt+H)" accesskey="h">
+                <U>H</U>elp
+              </BUTTON>
+            </TD>
+            <TD class="UISeparator">
+              <IMG width="0" height="0"/>
+              </TD>
+            <TD class="UIPane">
+              <BUTTON id="butClose" title="Druckvorschau schließen (Alt+C)" accessKey="c">
+                <U>C</U>lose
+              </BUTTON>
+            </TD>
+          </TR>
+        </TABLE>
+      </DIV>
+    </DIV>
+    <DIV id="OverflowContainer" onclick="this.focus();" onfocus="butPrint.scrollIntoView();" tabindex="1" style="position:absolute; left:0; width:100%; overflow:auto; border:'thin threedhighlight inset'; background:threedshadow;">
+      <DIV id="MasterContainer" tabindex="0" style="width:100%; position:absolute;">
+        <!-- Pages go here -->
+      </DIV>
+    </DIV>
+  </BODY>
+</HTML>

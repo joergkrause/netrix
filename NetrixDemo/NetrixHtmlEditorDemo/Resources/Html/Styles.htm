@@ -1,0 +1,152 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+        code { font-family: Courier New; font-size:10pt; }
+        </style>
+	</head>
+	<body>
+	    <h1>Styles</h1>
+        <p>
+            Netrix Component has full support for styles. You can:</p>
+        <ul>
+            <li>Add stylesheet files using the LINK element (internally, a collection is 
+                provided for easy handling)</li>
+            <li>Parse and edit styles using an integrated style parser</li>
+            <li>Use the embedded style editing dialog (part of UI assembly, with seven languages 
+                supported)</li>
+            <li>Retrieve and set the current style of an element (as an inherited composition of 
+                document styles and local ones)</li>
+            <li>Retrieve and set the current runtime style. This style type has immediate effect 
+                for element rendering, but does not persists in markup.</li>
+            <li>Access styles through the propertygrid</li>
+        </ul>
+        <h1>Exercise</h1>
+        <p>This document can be modified by adding an external stylesheet. This is done by 
+            adding a LINK element. The style sheet file is copied to the assemblies 
+            exeutable folder.</p>
+        <p>Assume you have a dialog where a style editor is present, the following code 
+            writes and shows the current element&#39;s styles:</p>
+        <pre style="font-family: consolas"><span style="color: #2b91af">IElement</span>&nbsp;currentElement&nbsp;=&nbsp;EditorDocument.HtmlEditor.GetCurrentElement();
+<span style="color: blue">string</span>&nbsp;cssText&nbsp;=&nbsp;currentElement.GetStyle();
+<span style="color: blue">if</span>&nbsp;(editStylesDialog.ShowDialog(<span 
+            style="color: blue">this</span>)&nbsp;==&nbsp;System.Windows.Forms.<span 
+            style="color: #2b91af">DialogResult</span>.OK)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;currentElement.SetStyle(cssText);
+}</pre>
+        <h2>Working with Style Sheets</h2>
+        <p>Style sheets are linked through a LINK element in the HEAD section. The 
+            HtmlDocumentStructure class exposes this (and other parts) as collections. The 
+            code shown next adds and removes a stylesheet accordingly to the state of the 
+            ribbon&#39;s toggle button.</p>
+        <pre style="font-family: consolas"><span style="color: blue">void</span>&nbsp;_toggleButtonStylesLinkedStylesEnabled_ExecuteEvent(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">ExecuteEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">bool</span>&nbsp;enable&nbsp;=&nbsp;_toggleButtonStylesLinkedStylesEnabled.BooleanValue;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;assume&nbsp;the&nbsp;file&nbsp;&quot;LinkedStylesheet.css&quot;&nbsp;is&nbsp;in&nbsp;the&nbsp;output&nbsp;directory</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green">//&nbsp;for&nbsp;the&nbsp;first&nbsp;time,&nbsp;we&nbsp;add&nbsp;it&nbsp;to&nbsp;the&nbsp;current&nbsp;document</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">bool</span>&nbsp;alreadyLinked&nbsp;=&nbsp;<span style="color: blue">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(EditorDocument.HtmlEditor.DocumentStructure.LinkedStylesheets.Count&nbsp;&gt;&nbsp;0)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">IElement</span>&nbsp;linkedCss&nbsp;=&nbsp;EditorDocument.HtmlEditor.GetElementById(<span 
+            style="color: #a31515">&quot;LinkElement2134&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(linkedCss&nbsp;!=&nbsp;<span style="color: blue">null</span>&nbsp;&amp;&amp;&nbsp;linkedCss&nbsp;<span 
+            style="color: blue">is</span>&nbsp;<span style="color: #2b91af">LinkElement</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alreadyLinked&nbsp;=&nbsp;<span style="color: blue">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkedCss.ElementDom.RemoveElement(<span style="color: blue">false</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">string</span>&nbsp;css&nbsp;=&nbsp;<span style="color: #2b91af">Path</span>.Combine(<span 
+            style="color: #2b91af">Path</span>.GetDirectoryName(<span 
+            style="color: #2b91af">Application</span>.ExecutablePath),&nbsp;<span 
+            style="color: #a31515">&quot;Resources\\Css\\LinkedStylesheet.css&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(<span style="color: #2b91af">File</span>.Exists(css)&nbsp;&amp;&amp;&nbsp;!alreadyLinked&nbsp;&amp;&amp;&nbsp;enable)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">LinkElement</span>&nbsp;link&nbsp;=&nbsp;EditorDocument.HtmlEditor.CreateElement(<span 
+            style="color: #a31515">&quot;LINK&quot;</span>)&nbsp;<span style="color: blue">as</span>&nbsp;<span 
+            style="color: #2b91af">LinkElement</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.rel&nbsp;=&nbsp;<span style="color: #a31515">&quot;Stylesheet&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.media&nbsp;=&nbsp;<span style="color: #2b91af">LinkElementMedia</span>.All;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.type&nbsp;=&nbsp;<span style="color: #a31515">&quot;text/css&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.href&nbsp;=&nbsp;css;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.ID&nbsp;=&nbsp;<span style="color: #a31515">&quot;LinkElement2134&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EditorDocument.HtmlEditor.DocumentStructure.LinkedStylesheets.Add(link);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(enable)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #2b91af">MessageBox</span>.Show(<span 
+            style="color: #2b91af">String</span>.Format(<span style="color: #a31515">&quot;{0}&nbsp;linked&nbsp;styles&nbsp;found&quot;</span>,&nbsp;EditorDocument.HtmlEditor.DocumentStructure.LinkedStylesheets.Count),&nbsp;<span 
+            style="color: #a31515">&quot;Linked&nbsp;Stylesheet&quot;</span>,&nbsp;<span 
+            style="color: #2b91af">MessageBoxButtons</span>.OK,&nbsp;<span 
+            style="color: #2b91af">MessageBoxIcon</span>.Information);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+        <p>There are several techniques involved here. The LINK element is created using the 
+            CreateElement method. The required attributes are set properly. Then the element 
+            is being added to the collection of stylesheet. By default this collection is 
+            empty. You can add as many stylesheets as you like.</p>
+        <p>If the link is about to be removed the element is first retrieved using its ID. 
+            If it is there, the ElementDom class is used to remove it from the document.</p>
+        <p>This is, however, a complete access to the documents content. If you like to 
+            disable the style temporarily, just to check an effect first, you can use this 
+            call:</p>
+        <pre style="font-family: consolas">EditorDocument.HtmlEditor.LinkedStylesheetsEnabled&nbsp;=&nbsp;enable;</pre>
+        <p>The stylesheet has no effect if disabled, but the LINK element is still in the 
+            document. </p>
+        <h2>Working with the Style Parser</h2>
+        <p>The style parser parses a stylesheet and creates a dictionary of styles, each as 
+            an object. The style dialog uses this code:</p>
+        <pre style="font-family: consolas"><span style="color: blue">public</span>&nbsp;<span 
+            style="color: blue">string</span>&nbsp;CssText
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">get</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">return</span>&nbsp;styleControl1.StyleString;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">set</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styleControl1.StyleString&nbsp;=&nbsp;<span style="color: blue">value</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+ 
+<span style="color: blue">public</span>&nbsp;<span style="color: #2b91af">IElement</span>&nbsp;Element
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">set</span>
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">if</span>&nbsp;(<span style="color: blue">value</span>&nbsp;!=&nbsp;<span 
+            style="color: blue">null</span>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labelElement.Text&nbsp;=&nbsp;<span style="color: blue">value</span>.TagName.ToUpper();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styleControl1.Enabled&nbsp;=&nbsp;<span style="color: blue">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBoxStyles.Enabled&nbsp;=&nbsp;<span style="color: blue">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue">else</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labelElement.Text&nbsp;=&nbsp;<span style="color: #a31515">&quot;&quot;</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styleControl1.Enabled&nbsp;=&nbsp;<span style="color: blue">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textBoxStyles.Enabled&nbsp;=&nbsp;<span style="color: blue">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+  
+<span style="color: blue">private</span>&nbsp;<span style="color: blue">void</span>&nbsp;styleControl1_ParserReady(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">SelectorEventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;textBoxStyles.Text&nbsp;=&nbsp;e.Selector.ToString();
+}
+ 
+<span style="color: blue">private</span>&nbsp;<span style="color: blue">void</span>&nbsp;styleControl1_ContentChanged(<span 
+            style="color: blue">object</span>&nbsp;sender,&nbsp;<span style="color: #2b91af">EventArgs</span>&nbsp;e)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;textBoxStyles.Text&nbsp;=&nbsp;styleControl1.StyleString;
+}</pre>
+        <p>Two events are used. ParserReady is fired after the stylesheet has been parsed. 
+            Here it is used to sync the textbox. When the user changes a style in the 
+            control, the parser fires the ContentChanged event. The current style is always 
+            available through the style control&#39;s StyleString property.</p>
+        <p>&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,1010 @@
+using System;
+using System.Collections;
+using System.Reflection;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.CustomMarshalers;
+using System.Runtime.CompilerServices;
+
+using Comzept.Genesis.NetRix.ComInterop;
+
+namespace Comzept.Genesis.NetRix.VgxDraw
+{
+    [ComImport()]
+    [Guid("3050f563-98b5-11cf-bb82-00aa00bdce0b")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    public interface IHTMLGenericElement
+    {
+        [DispId(Interop.DISPID_IHTMLELEMENT_SETATTRIBUTE)]
+        void setAttribute( System.String strAttributeName,  System.Object AttributeValue,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_GETATTRIBUTE)]
+        System.Object getAttribute( System.String strAttributeName,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_REMOVEATTRIBUTE)]
+        System.Boolean removeAttribute( System.String strAttributeName,  System.Int32 lFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_SCROLLINTOVIEW)]
+        void scrollIntoView( System.Object varargStart);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_CONTAINS)]
+        System.Boolean contains( Interop.IHTMLElement pChild);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_INSERTADJACENTHTML)]
+        void insertAdjacentHTML( System.String where,  System.String html);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_INSERTADJACENTTEXT)]
+        void insertAdjacentText( System.String where,  System.String text);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_CLICK)]
+        void click();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT_TOSTRING)]
+        System.String toString();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_SETCAPTURE)]
+        void setCapture( System.Boolean containerCapture);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_RELEASECAPTURE)]
+        void releaseCapture();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_COMPONENTFROMPOINT)]
+        System.String componentFromPoint( System.Int32 x,  System.Int32 y);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_DOSCROLL)]
+        void doScroll( System.Object component);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETCLIENTRECTS)]
+        IHTMLRectCollection getClientRects();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETBOUNDINGCLIENTRECT)]
+        Interop.IHTMLRect getBoundingClientRect();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_SETEXPRESSION)]
+        void setExpression( System.String propname,  System.String expression,  System.String language);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETEXPRESSION)]
+        System.Object getExpression( System.String propname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEEXPRESSION)]
+        System.Boolean removeExpression( System.String propname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_FOCUS)]
+        void focus();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_BLUR)]
+        void blur();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ADDFILTER)]
+        void addFilter( System.Object pUnk);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEFILTER)]
+        void removeFilter( System.Object pUnk);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ATTACHEVENT)]
+        System.Boolean attachEvent( System.String @event,  System.Object pDisp);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_DETACHEVENT)]
+        void detachEvent( System.String @event,  System.Object pDisp);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_CREATECONTROLRANGE)]
+        System.Object createControlRange();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_CLEARATTRIBUTES)]
+        void clearAttributes();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_INSERTADJACENTELEMENT)]
+        Interop.IHTMLElement insertAdjacentElement( System.String where,  Interop.IHTMLElement insertedElement);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_APPLYELEMENT)]
+        Interop.IHTMLElement applyElement( Interop.IHTMLElement apply,  System.String where);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETADJACENTTEXT)]
+        System.String getAdjacentText( System.String where);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REPLACEADJACENTTEXT)]
+        System.String replaceAdjacentText( System.String where,  System.String newText);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_ADDBEHAVIOR)]
+        System.Int32 addBehavior( System.String bstrUrl,  System.Object pvarFactory);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_REMOVEBEHAVIOR)]
+        System.Boolean removeBehavior( System.Int32 cookie);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT2_GETELEMENTSBYTAGNAME)]
+        Interop.IHTMLElementCollection getElementsByTagName( System.String v);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_MERGEATTRIBUTES)]
+        void mergeAttributes( Interop.IHTMLElement mergeThis,  System.Object pvarFlags);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_SETACTIVE)]
+        void setActive();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_FIREEVENT)]
+        System.Boolean fireEvent( System.String bstrEventName,  System.Object pvarEventObject);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT3_DRAGDROP)]
+        System.Boolean dragDrop();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_NORMALIZE)]
+        void normalize();
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_GETATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute getAttributeNode( System.String bstrname);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_SETATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute setAttributeNode( Interop.IHTMLDOMAttribute pattr);
+
+        [DispId(Interop.DISPID_IHTMLELEMENT4_REMOVEATTRIBUTENODE)]
+        Interop.IHTMLDOMAttribute removeAttributeNode( Interop.IHTMLDOMAttribute pattr);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_HASCHILDNODES)]
+        System.Boolean hasChildNodes();
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_INSERTBEFORE)]
+        Interop.IHTMLDOMNode insertBefore( Interop.IHTMLDOMNode newChild,  System.Object refChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REMOVECHILD)]
+        Interop.IHTMLDOMNode removeChild( Interop.IHTMLDOMNode oldChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REPLACECHILD)]
+        Interop.IHTMLDOMNode replaceChild( Interop.IHTMLDOMNode newChild,  Interop.IHTMLDOMNode oldChild);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_CLONENODE)]
+        Interop.IHTMLDOMNode cloneNode( System.Boolean fDeep);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REMOVENODE)]
+        Interop.IHTMLDOMNode removeNode( System.Boolean fDeep);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_SWAPNODE)]
+        Interop.IHTMLDOMNode swapNode( Interop.IHTMLDOMNode otherNode);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_REPLACENODE)]
+        Interop.IHTMLDOMNode replaceNode( Interop.IHTMLDOMNode replacement);
+
+        [DispId(Interop.DISPID_IHTMLDOMNODE_APPENDCHILD)]
+        Interop.IHTMLDOMNode appendChild( Interop.IHTMLDOMNode newChild);
+
+        [DispId(Interop.DISPID_IHTMLGENERICELEMENT_NAMEDRECORDSET)]
+        System.Object namedRecordset( System.String dataMember,  System.Object hierarchy);
+
+        System.Object onbeforepaste
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREPASTE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREPASTE)]
+            set;
+        }
+        System.String outerText
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERTEXT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERTEXT)]
+            set;
+        }
+        Interop.IHTMLStyle style
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_STYLE)]
+            get;
+        }
+        Interop.IHTMLElement parentElement
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_PARENTELEMENT)]
+            get;
+        }
+        System.Object onhelp
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONHELP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONHELP)]
+            set;
+        }
+        System.Object ondataavailable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATAAVAILABLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATAAVAILABLE)]
+            set;
+        }
+        System.Object onfilterchange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONFILTERCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONFILTERCHANGE)]
+            set;
+        }
+        System.Object ondblclick
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDBLCLICK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDBLCLICK)]
+            set;
+        }
+        System.String tagName
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_TAGNAME)]
+            get;
+        }
+        System.Boolean inflateBlock
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_INFLATEBLOCK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_INFLATEBLOCK)]
+            set;
+        }
+        Interop.IHTMLDOMNode firstChild
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_FIRSTCHILD)]
+            get;
+        }
+        System.Object oncontextmenu
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCONTEXTMENU)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCONTEXTMENU)]
+            set;
+        }
+        System.Object onmousedown
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEDOWN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEDOWN)]
+            set;
+        }
+        System.Int32 clientWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTWIDTH)]
+            get;
+        }
+        System.Int32 scrollTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLTOP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLTOP)]
+            set;
+        }
+        System.Object onmouseover
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOVER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOVER)]
+            set;
+        }
+        System.Int32 readyStateValue
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_READYSTATEVALUE)]
+            get;
+        }
+        System.String language
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANGUAGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANGUAGE)]
+            set;
+        }
+        System.Object onpaste
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPASTE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPASTE)]
+            set;
+        }
+        System.Object onmouseenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSEENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSEENTER)]
+            set;
+        }
+        System.String nodeName
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODENAME)]
+            get;
+        }
+        System.Int16 tabIndex
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TABINDEX)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TABINDEX)]
+            set;
+        }
+        System.Object onresizestart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZESTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZESTART)]
+            set;
+        }
+        System.Object onresize
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONRESIZE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONRESIZE)]
+            set;
+        }
+        Interop.IHTMLDOMNode nextSibling
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NEXTSIBLING)]
+            get;
+        }
+        System.String title
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_TITLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_TITLE)]
+            set;
+        }
+        System.Object childNodes
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_CHILDNODES)]
+            get;
+        }
+        System.Object onmouseleave
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSELEAVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOUSELEAVE)]
+            set;
+        }
+        System.String dir
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_DIR)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_DIR)]
+            set;
+        }
+        System.Object onbeforeupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONBEFOREUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONBEFOREUPDATE)]
+            set;
+        }
+        System.Object onlosecapture
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONLOSECAPTURE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONLOSECAPTURE)]
+            set;
+        }
+        System.Object onselectstart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONSELECTSTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONSELECTSTART)]
+            set;
+        }
+        System.Object onactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONACTIVATE)]
+            set;
+        }
+        System.Object nodeValue
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODEVALUE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODEVALUE)]
+            set;
+        }
+        System.Object oncut
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCUT)]
+            set;
+        }
+        System.Object ondeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONDEACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONDEACTIVATE)]
+            set;
+        }
+        System.Int32 offsetHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETHEIGHT)]
+            get;
+        }
+        System.Object onrowexit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWEXIT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWEXIT)]
+            set;
+        }
+        System.Int32 sourceIndex
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_SOURCEINDEX)]
+            get;
+        }
+        System.Int32 clientLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTLEFT)]
+            get;
+        }
+        System.String lang
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANG)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_LANG)]
+            set;
+        }
+        System.Object onmouseup
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEUP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEUP)]
+            set;
+        }
+        System.Object oncellchange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCELLCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCELLCHANGE)]
+            set;
+        }
+        System.Object onkeypress
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYPRESS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYPRESS)]
+            set;
+        }
+        Interop.IHTMLElement offsetParent
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETPARENT)]
+            get;
+        }
+        System.String outerHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERHTML)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_OUTERHTML)]
+            set;
+        }
+        System.Int32 scrollWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLWIDTH)]
+            get;
+        }
+        System.Object ondrop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDROP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDROP)]
+            set;
+        }
+        System.Boolean isDisabled
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISDISABLED)]
+            get;
+        }
+        System.Object onmouseout
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEOUT)]
+            set;
+        }
+        System.Boolean isTextEdit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ISTEXTEDIT)]
+            get;
+        }
+        System.Object ondragend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGEND)]
+            set;
+        }
+        System.Object recordNumber
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_RECORDNUMBER)]
+            get;
+        }
+        System.Object attributes
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_ATTRIBUTES)]
+            get;
+        }
+        System.Int32 offsetLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETLEFT)]
+            get;
+        }
+        System.Object recordset
+        {
+            [DispId(Interop.DISPID_IHTMLGENERICELEMENT_RECORDSET)]
+            get;
+        }
+        System.Object ondrag
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAG)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAG)]
+            set;
+        }
+        System.Boolean canHaveChildren
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CANHAVECHILDREN)]
+            get;
+        }
+        System.Object oncontrolselect
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONCONTROLSELECT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONCONTROLSELECT)]
+            set;
+        }
+        System.Object onbeforedeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONBEFOREDEACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONBEFOREDEACTIVATE)]
+            set;
+        }
+        System.Object onmove
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVE)]
+            set;
+        }
+        System.Object onrowsdelete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSDELETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSDELETE)]
+            set;
+        }
+        System.Int32 uniqueNumber
+        {
+            [DispId(Interop.DISPID_IHTMLUNIQUENAME_UNIQUENUMBER)]
+            get;
+        }
+        System.Object onfocusin
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSIN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSIN)]
+            set;
+        }
+        Interop.IHTMLElement parentTextEdit
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_PARENTTEXTEDIT)]
+            get;
+        }
+        System.Object onkeyup
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYUP)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYUP)]
+            set;
+        }
+        System.String className
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_CLASSNAME)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_CLASSNAME)]
+            set;
+        }
+        System.String id
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ID)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ID)]
+            set;
+        }
+        System.Object ondragenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGENTER)]
+            set;
+        }
+        System.Object onbeforecopy
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECOPY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECOPY)]
+            set;
+        }
+        System.Object onafterupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONAFTERUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONAFTERUPDATE)]
+            set;
+        }
+        System.Object onerrorupdate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONERRORUPDATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONERRORUPDATE)]
+            set;
+        }
+        System.String contentEditable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CONTENTEDITABLE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CONTENTEDITABLE)]
+            set;
+        }
+        System.Object onfocusout
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSOUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONFOCUSOUT)]
+            set;
+        }
+        System.Boolean hideFocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_HIDEFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_HIDEFOCUS)]
+            set;
+        }
+        System.Int32 clientHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTHEIGHT)]
+            get;
+        }
+        System.Object onbeforecut
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECUT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFORECUT)]
+            set;
+        }
+        System.String scopeName
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCOPENAME)]
+            get;
+        }
+        System.Object onbeforeeditfocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREEDITFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBEFOREEDITFOCUS)]
+            set;
+        }
+        System.Int32 scrollLeft
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLLEFT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLLEFT)]
+            set;
+        }
+        System.Object onpage
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONPAGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONPAGE)]
+            set;
+        }
+        System.Int32 clientTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CLIENTTOP)]
+            get;
+        }
+        System.Object ondragover
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGOVER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGOVER)]
+            set;
+        }
+        System.Object onlayoutcomplete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONLAYOUTCOMPLETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONLAYOUTCOMPLETE)]
+            set;
+        }
+        System.Object onmovestart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVESTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVESTART)]
+            set;
+        }
+        System.Object ondatasetchanged
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCHANGED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCHANGED)]
+            set;
+        }
+        System.Object ownerDocument
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE2_OWNERDOCUMENT)]
+            get;
+        }
+        System.Object onrowenter
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWENTER)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONROWENTER)]
+            set;
+        }
+        System.Int32 scrollHeight
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_SCROLLHEIGHT)]
+            get;
+        }
+        System.Object onbeforeactivate
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONBEFOREACTIVATE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONBEFOREACTIVATE)]
+            set;
+        }
+        System.Object children
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_CHILDREN)]
+            get;
+        }
+        System.Int32 nodeType
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_NODETYPE)]
+            get;
+        }
+        System.String accessKey
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ACCESSKEY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ACCESSKEY)]
+            set;
+        }
+        System.Int32 offsetWidth
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETWIDTH)]
+            get;
+        }
+        System.Object onresizeend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZEEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONRESIZEEND)]
+            set;
+        }
+        System.Object onclick
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONCLICK)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONCLICK)]
+            set;
+        }
+        System.Object onreadystatechange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONREADYSTATECHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONREADYSTATECHANGE)]
+            set;
+        }
+        System.Object behaviorUrns
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_BEHAVIORURNS)]
+            get;
+        }
+        System.Object document
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_DOCUMENT)]
+            get;
+        }
+        System.String uniqueID
+        {
+            [DispId(Interop.DISPID_IHTMLUNIQUENAME_UNIQUEID)]
+            get;
+        }
+        System.Object onmousemove
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEMOVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONMOUSEMOVE)]
+            set;
+        }
+        Interop.IHTMLCurrentStyle currentStyle
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_CURRENTSTYLE)]
+            get;
+        }
+        System.Object oncopy
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCOPY)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONCOPY)]
+            set;
+        }
+        System.Boolean disabled
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_DISABLED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_DISABLED)]
+            set;
+        }
+        System.Object onmousewheel
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONMOUSEWHEEL)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT4_ONMOUSEWHEEL)]
+            set;
+        }
+        System.String tagUrn
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TAGURN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_TAGURN)]
+            set;
+        }
+        System.Object onscroll
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONSCROLL)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONSCROLL)]
+            set;
+        }
+        System.Object onkeydown
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYDOWN)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONKEYDOWN)]
+            set;
+        }
+        System.Object readyState
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_READYSTATE)]
+            get;
+        }
+        System.Object ondragstart
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDRAGSTART)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDRAGSTART)]
+            set;
+        }
+        Interop.IHTMLDOMNode parentNode
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_PARENTNODE)]
+            get;
+        }
+        System.Object all
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ALL)]
+            get;
+        }
+        Interop.IHTMLStyle runtimeStyle
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_RUNTIMESTYLE)]
+            get;
+        }
+        System.String innerText
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERTEXT)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERTEXT)]
+            set;
+        }
+        Interop.IHTMLDOMNode lastChild
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_LASTCHILD)]
+            get;
+        }
+        System.Boolean canHaveHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_CANHAVEHTML)]
+            get;
+        }
+        System.Object onrowsinserted
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSINSERTED)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONROWSINSERTED)]
+            set;
+        }
+        System.Object onpropertychange
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONPROPERTYCHANGE)]
+            set;
+        }
+        System.Object ondatasetcomplete
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCOMPLETE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_ONDATASETCOMPLETE)]
+            set;
+        }
+        System.Object ondragleave
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGLEAVE)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONDRAGLEAVE)]
+            set;
+        }
+        System.Object onblur
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBLUR)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONBLUR)]
+            set;
+        }
+        Interop.IHTMLDOMNode previousSibling
+        {
+            [DispId(Interop.DISPID_IHTMLDOMNODE_PREVIOUSSIBLING)]
+            get;
+        }
+        System.Int32 glyphMode
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_GLYPHMODE)]
+            get;
+        }
+        System.String innerHTML
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERHTML)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT_INNERHTML)]
+            set;
+        }
+        System.Object onfocus
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONFOCUS)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT2_ONFOCUS)]
+            set;
+        }
+        System.Int32 offsetTop
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_OFFSETTOP)]
+            get;
+        }
+        Interop.IHTMLFiltersCollection filters
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT_FILTERS)]
+            get;
+        }
+        System.Boolean isContentEditable
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISCONTENTEDITABLE)]
+            get;
+        }
+        System.Object onmoveend
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVEEND)]
+            get;
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ONMOVEEND)]
+            set;
+        }
+        System.Boolean isMultiLine
+        {
+            [DispId(Interop.DISPID_IHTMLELEMENT3_ISMULTILINE)]
+            get;
+        }
+    }
+
+    [ComImport()]
+    [Guid("3050f4a4-98b5-11cf-bb82-00aa00bdce0b")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    public interface IHTMLRectCollection
+    {
+        [DispId(Interop.DISPID_IHTMLRECTCOLLECTION_ITEM)]
+        System.Object item( System.Object pvarIndex);
+
+        System.Int32 length
+        {
+            [DispId(Interop.DISPID_IHTMLRECTCOLLECTION_LENGTH)]
+            get;
+        }
+        System.Object _newEnum
+        {
+            [DispId(Interop.DISPID_IHTMLRECTCOLLECTION__NEWENUM)]
+            get;
+        }
+    }
+
+
+}

@@ -1,0 +1,1758 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Attribute.href" type="System.String">
+		<value>URL-адрес связанного ресурса</value>
+	</data>
+	<data name="Attribute.name" type="System.String">
+		<value>Имя</value>
+	</data>
+	<data name="Attribute.accessKey" type="System.String">
+		<value>"Горячая клавиша"</value>
+	</data>
+	<data name="Attribute.id" type="System.String">
+		<value>Идентификатор</value>
+	</data>
+	<data name="Attribute.(id)" type="System.String">
+		<value>Идентификатор</value>
+	</data>
+	<data name="Attribute.class" type="System.String">
+		<value>Класс стилей</value>
+	</data>
+	<data name="Attribute.style" type="System.String">
+		<value>Стиль</value>
+	</data>
+	<data name="Attribute.src" type="System.String">
+		<value>Файл-источник</value>
+	</data>
+	<data name="Attribute.width" type="System.String">
+		<value>Ширина</value>
+	</data>
+	<data name="Attribute.height" type="System.String">
+		<value>Высота</value>
+	</data>
+	<data name="Exception.accesskey" type="System.String">
+		<value>Для данного объекта вы можете установить только одну "горячую клавишу" (букву или цифру).</value>
+	</data>
+	<data name="Attribute.disabled" type="System.String">
+		<value>Недоступно</value>
+	</data>
+	<data name="Attribute.hideFocus" type="System.String">
+		<value>Скрыть рамку фокуса</value>
+	</data>
+	<data name="Description.hideFocus" type="System.String">
+		<value>Определяет, нужно ли скрывать рамку фокуса при выборе данного объекта</value>
+	</data>
+	<data name="Description.disabled" type="System.String">
+		<value>Истина если поле недоступно</value>
+	</data>
+	<data name="Description.accesskey" type="System.String">
+		<value>"Горячая клавиша" для данного объекта</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus" type="System.String">
+		<value>Фокус</value>
+	</data>
+	<data name="Description.ScriptOnFocus" type="System.String">
+		<value>Действие, производимое при выборе данного объекта</value>
+	</data>
+	<data name="Description.ScriptOnKeyPress" type="System.String">
+		<value>Действие, производимое при нажатии пользователем символьной клавиши во время активности данного объекта</value>
+	</data>
+	<data name="Attribute.ScriptOnKeyPress" type="System.String">
+		<value>Нажатие клавиши</value>
+	</data>
+	<data name="Description.tabIndex" type="System.String">
+		<value>Индекс перехода по Tab для данного объекта</value>
+	</data>
+	<data name="Attribute.tabIndex" type="System.String">
+		<value>Индекс перехода по Tab</value>
+	</data>
+	<data name="Attribute.ScriptOnClick" type="System.String">
+		<value>Щелчок мыши над объектом</value>
+	</data>
+	<data name="Description.ScriptOnClick" type="System.String">
+		<value>Действие, производимое при щелчке мышью над данным объектом</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOver" type="System.String">
+		<value>Указатель мыши над объектом</value>
+	</data>
+	<data name="Description.ScriptOnMouseOver" type="System.String">
+		<value>Действие, производимое при попадании указателя мыши в область над данным объектом</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseOut" type="System.String">
+		<value>Выход указателя мыши из объекта</value>
+	</data>
+	<data name="Description.ScriptOnMouseOut" type="System.String">
+		<value>Действие, производимое при выходе указателя мыши из области над данным объектом</value>
+	</data>
+	<data name="Attribute.title" type="System.String">
+		<value>Имя</value>
+	</data>
+	<data name="Description.title" type="System.String">
+		<value>Имя объекта, используемое в качестве текста всплывающей подсказки</value>
+	</data>
+	<data name="Description.title_Acronym" type="System.String">
+		<value>Текст, сопоставляемый с данным сокращением</value>
+	</data>
+	<data name="Description.href" type="System.String">
+		<value>Адрес URL, на который ссылается данная ссылка</value>
+	</data>
+	<data name="Description.name" type="System.String">
+		<value>Имя якоря, используемое для перехода по относительным ссылкам</value>
+	</data>
+	<data name="Description.ScriptOnMouseUp" type="System.String">
+		<value>Действие, производимое, если кнопка мыши отпускается при указателе мыши над данным объектом</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseUp" type="System.String">
+		<value>Кнопка мыши отпускается</value>
+	</data>
+	<data name="Attribute.target" type="System.String">
+		<value>Объект (цель) ссылки</value>
+	</data>
+	<data name="Description.target" type="System.String">
+		<value>Объект (цель) данной ссылки</value>
+	</data>
+	<data name="Attribute.nohref" type="System.String">
+		<value>Альтернативная ссылка</value>
+	</data>
+	<data name="Description.nohref" type="System.String">
+		<value>Определяет нечувствительную область изображения (image map)</value>
+	</data>
+	<data name="Attribute.ScriptOnFocus_Area" type="System.String">
+		<value>Фокус</value>
+	</data>
+	<data name="Description.ScriptOnFocus_Area" type="System.String">
+		<value>Исполняется при передаче фокуса данной области (когда область становится активной).</value>
+	</data>
+	<data name="Description.ScriptOnBlur_Area" type="System.String">
+		<value>Исполняется при потере фокуса данной областью (когда область становится неактивной).</value>
+	</data>
+	<data name="Attribute.ScriptOnBlur_Area" type="System.String">
+		<value>Потеря фокуса</value>
+	</data>
+	<data name="Attribute.alt" type="System.String">
+		<value>Альтернативный текст</value>
+	</data>
+	<data name="Description.alt" type="System.String">
+		<value>Текст, выводимый в случае, если изображение не отображается. Этот же текст выводится во всплывающей подсказке, если указатель мыши задерживается над данной областью.</value>
+	</data>
+	<data name="Attribute.coords" type="System.String">
+		<value>Геометрические параметры области</value>
+	</data>
+	<data name="Description.coords" type="System.String">
+		<value>Список координат, определяющих многоугольник области. Прямоугольник: left-x (координата x для левого верхнего угла), top-y (координата y для левого верхнего угла), right-x (координата x для правого нижнего угла), bottom-y (координата y для правого нижнего угла). Круг: center-x (координата x центра), center-y (координата y центра), radius (радиус). Примечание: если значение радиуса задано в процентной форме, браузер должен рассчитать абсолютное значение радиуса исходя из значений ширины и высоты связанного объекта (радиус должен быть рассчитан на основе меньшего из этих двух значений). Многоугольная область: x1, y1, x2, y2, ..., xN, yN. Первая и последняя пара координат (x,y) должны совпадать для обеспечения замкнутости многоугольника. Если они не совпадают, браузер должен использовать дополнительную пару координат для замыкания многоугольной области.</value>
+	</data>
+	<data name="Attribute.shape" type="System.String">
+		<value>Форма области</value>
+	</data>
+	<data name="Description.shape" type="System.String">
+		<value>Список координат, определяющих форму многоугольной области. Default (По умолчанию): Определяется вся область. Rectangle (Прямоугольник): определяется прямоугольная область. Circle (Круг): Определяется круглая область. Polygon (Многоугольник): Определяется многугольная область</value>
+	</data>
+	<data name="Attribute.color" type="System.String">
+		<value>Цвет</value>
+	</data>
+	<data name="Description.color" type="System.String">
+		<value>Цвет элемента</value>
+	</data>
+	<data name="Attribute.face" type="System.String">
+		<value>Шрифты</value>
+	</data>
+	<data name="Description.face" type="System.String">
+		<value>Список шрифтов, указанных через запятую. Браузер должен использовать первый шрифт из списка, присутствующий на компьютере пользователя.</value>
+	</data>
+	<data name="Attribute.size" type="System.String">
+		<value>Размер</value>
+	</data>
+	<data name="Description.size" type="System.String">
+		<value>Размер элемента в единицах измерения размера шрифта</value>
+	</data>
+	<data name="Attribute.ScriptOnSubmit" type="System.String">
+		<value>Нажатие кнопки Submit</value>
+	</data>
+	<data name="Description.ScriptOnSubmit" type="System.String">
+		<value>Действие, производимое при принятии браузером данных формы к отправке (нажатии кнопки Submit).</value>
+	</data>
+	<data name="Attribute.ScriptOnReset" type="System.String">
+		<value>Нажатие кнопки Reset</value>
+	</data>
+	<data name="Description.ScriptOnReset" type="System.String">
+		<value>Действие, производимое при возврате формы в ее первоначальное состояние (при нажатии кнопки Reset)</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>Имя формы, используемое скриптами JavaScript</value>
+	</data>
+	<data name="Attribute.frameBorder" type="System.String">
+		<value>Рамка границы фрэйма</value>
+	</data>
+	<data name="Description.frameBorder" type="System.String">
+		<value>Определяет, нужно ли отображать границы фрэйма</value>
+	</data>
+	<data name="Attribute.noResize" type="System.String">
+		<value>Изменение размеров недоступно</value>
+	</data>
+	<data name="Description.noResize" type="System.String">
+		<value>Показывает, может ли пользователь с помощью мыши изменять размеры фрэйма.</value>
+	</data>
+	<data name="Attribute.Scrolling" type="System.String">
+		<value>Полосы прокрутки</value>
+	</data>
+	<data name="Description.Scrolling" type="System.String">
+		<value>Определяет внешний вид полос прокрутки фрэйма</value>
+	</data>
+	<data name="Attribute.marginHeight" type="System.String">
+		<value>Верхнее/Нижнее поле</value>
+	</data>
+	<data name="Description.marginHeight" type="System.String">
+		<value>Размер верхнего и нижнего полей</value>
+	</data>
+	<data name="Attribute.marginWidth" type="System.String">
+		<value>Левое/Правое поле</value>
+	</data>
+	<data name="Description.marginWidth" type="System.String">
+		<value>Размер левого и правого полей</value>
+	</data>
+	<data name="Attribute.name_Frame" type="System.String">
+		<value>Имя фрэйма</value>
+	</data>
+	<data name="Description.name_Frame" type="System.String">
+		<value>Имя фрэйма. Используется в значениях параметра "объект" ("цель") гиперссылок.</value>
+	</data>
+	<data name="Attribute.ScriptOnActivate" type="System.String">
+		<value>Активация</value>
+	</data>
+	<data name="Description.ScriptOnActivate" type="System.String">
+		<value>Действие, производимое, когда фрэйм становится активным элементом отображаемой страницы.</value>
+	</data>
+	<data name="Description.ScriptOnDeactivate" type="System.String">
+		<value>Действие, производимое, когда фрэйм перестает быть активным элементом отображаемой страницы</value>
+	</data>
+	<data name="Attribute.ScriptOnDeactivate" type="System.String">
+		<value>Дезактивация</value>
+	</data>
+	<data name="Attribute.ScriptOnLoad" type="System.String">
+		<value>Окончание загрузки On Load</value>
+	</data>
+	<data name="Description.ScriptOnLoad" type="System.String">
+		<value>Действие, производимое по окончании загрузки фрэйма</value>
+	</data>
+	<data name="Attribute.ScriptOnScroll" type="System.String">
+		<value>Прокрутка</value>
+	</data>
+	<data name="Description.ScriptOnScroll" type="System.String">
+		<value>Действие, производимое, когда пользователь использует прокрутку данного объекта</value>
+	</data>
+	<data name="Attribute.align" type="System.String">
+		<value>Выравнивание</value>
+	</data>
+	<data name="Description.align" type="System.String">
+		<value>Выравнивание блочного элемента</value>
+	</data>
+	<data name="Attribute.noshade" type="System.String">
+		<value>Отсутствие тени</value>
+	</data>
+	<data name="Description.noshade" type="System.String">
+		<value>Определяет, нужно ли при рисовании горизонтальной линии использовать трехмерное изображение ее тени</value>
+	</data>
+	<data name="Attribute.size_Hr" type="System.String">
+		<value>Толщина</value>
+	</data>
+	<data name="Description.size_Hr" type="System.String">
+		<value>Толщина данной горизонтальной линии</value>
+	</data>
+	<data name="Attribute.charset" type="System.String">
+		<value>Набор символов</value>
+	</data>
+	<data name="Description.charset" type="System.String">
+		<value>Набор символов связанного документа</value>
+	</data>
+	<data name="Attribute.media" type="System.String">
+		<value>Средство</value>
+	</data>
+	<data name="Description.media" type="System.String">
+		<value>Средство, необходимое связанному документу</value>
+	</data>
+	<data name="Attribute.rel" type="System.String">
+		<value>Тип прямой связи</value>
+	</data>
+	<data name="Description.rel" type="System.String">
+		<value>Тип прямой связи с документом. Типичные значения: 'stylesheet' (таблица стилей), 'next' (следующая страница), 'prev' (предыдущая страница), 'index' (индекс).</value>
+	</data>
+	<data name="Attribute.rev" type="System.String">
+		<value>Обратная связь</value>
+	</data>
+	<data name="Description.rev" type="System.String">
+		<value>Обратная связь связанного документа</value>
+	</data>
+	<data name="Attribute.type" type="System.String">
+		<value>Тип</value>
+	</data>
+	<data name="Description.type" type="System.String">
+		<value>MIME-тип связанного документа. Для каскадных таблиц стилей используется тип 'text/css'.</value>
+	</data>
+	<data name="Attribute.type_Ol" type="System.String">
+		<value>Тип индексов списка</value>
+	</data>
+	<data name="Description.type_Ol" type="System.String">
+		<value>Тип числовых индексов, используемых в упорядоченном списке</value>
+	</data>
+	<data name="Attribute.type_Ul" type="System.String" mimetype="	">
+		<value>Тип индексов списка</value>
+	</data>
+	<data name="Description.type_Ul" type="System.String">
+		<value>Тип символьных индексов, используемых в неупорядоченном списке, или схема нумерации упорядоченного списка.</value>
+	</data>
+	<data name="Attribute.type_Script" type="System.String">
+		<value>Тип MIME</value>
+	</data>
+	<data name="Description.type_Script" type="System.String">
+		<value>MIME-тип содержимого, например, 'text/javascript'. Необязателен. Приоритетен к атрибуту 'language' (язык скрипта).</value>
+	</data>
+	<data name="Attribute.language" type="System.String">
+		<value>Язык скрипта</value>
+	</data>
+	<data name="Description.language" type="System.String">
+		<value>Язык написания скриптов, используемый в содержимом, например, 'JavaScript' или 'VBScript'.</value>
+	</data>
+	<data name="Attribute.ScriptContent" type="System.String">
+		<value>Содержимое скрипта</value>
+	</data>
+	<data name="Description.ScriptContent" type="System.String">
+		<value>Содержимое скрипта. Щелкните на эллипсах для запуска интегрированного редактора скриптов.</value>
+	</data>
+	<data name="Attribute.noWrap" type="System.String">
+		<value>Перенос в строках</value>
+	</data>
+	<data name="Description.noWrap" type="System.String">
+		<value>Определяет, нужно ли автоматически осуществлять перенос в длинных строках.</value>
+	</data>
+	<data name="Attribute.clear" type="System.String">
+		<value>Очистка</value>
+	</data>
+	<data name="Description.clear" type="System.String">
+		<value>Поведение плавающего текста вокруг разрыва</value>
+	</data>
+	<data name="Attribute.vSpace" type="System.String">
+		<value>Верхнее и нижнее поля</value>
+	</data>
+	<data name="Description.vSpace" type="System.String">
+		<value>Верхнее и нижнее поля изображения</value>
+	</data>
+	<data name="Attribute.hSpace" type="System.String">
+		<value>Левое и правое поля</value>
+	</data>
+	<data name="Description.hSpace" type="System.String">
+		<value>Левое и правое поля изображения</value>
+	</data>
+	<!-- GUI -->
+	<data name="StyleEditor.fontPickerFont.Title" type="System.String">
+		<value>Шрифты</value>
+	</data>
+	<data name="StyleEditor.groupbox3.Text" type="System.String">
+		<value>Стили шрифтов</value>
+	</data>
+	<data name="StyleEditor.label3.Text" type="System.String">
+		<value>Символьные преобразования</value>
+	</data>
+	<data name="StyleEditor.label2.Text" type="System.String">
+		<value>Толщина</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontVariantSmallCaps.Text" type="System.String">
+		<value>Капительные буквы</value>
+	</data>
+	<data name="StyleEditor.checkBoxFontStyleItalic.Text" type="System.String">
+		<value>Курсив</value>
+	</data>
+	<data name="StyleEditor.groupBox2.Text" type="System.String">
+		<value>Атрибуты шрифта</value>
+	</data>
+	<data name="StyleEditor.label36.Text" type="System.String">
+		<value>Абсолютный или генерируемый размер шрифта:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeAbsolute.Text" type="System.String">
+		<value>Наименование размера:</value>
+	</data>
+	<data name="StyleEditor.radioButtonFontSizeUnit.Text" type="System.String">
+		<value>Абсолютный размер:</value>
+	</data>
+	<data name="StyleEditor.label1.Text" type="System.String">
+		<value>Цвет текста</value>
+	</data>
+	<data name="StyleEditor.groupBox1.Text" type="System.String">
+		<value>Семейство шрифтов</value>
+	</data>
+	<data name="StyleEditor.label50.Text" type="System.String">
+		<value>Может содержать любое количество шрифтов или генерируемых шрифтов. Браузер использует первый шрифт из списка, доступный локально.</value>
+	</data>
+	<data name="StyleEditor.label49.Text" type="System.String">
+		<value>Список семейств шрифтов</value>
+	</data>
+	<data name="StyleEditor.label52.Text" type="System.String">
+		<value>В соответствии с контейнерным элементом</value>
+	</data>
+	<data name="StyleEditor.groupBox5.Text" type="System.String">
+		<value>Фоновое изображение</value>
+	</data>
+	<data name="Attribute.HttpEquiv" type="System.String">
+		<value>Эквивалентный заголовок протокола HTTP</value>
+	</data>
+	<data name="Description.HttpEquiv" type="System.String">
+		<value>Определяет, что данный тег создает заголовок HTTP.</value>
+	</data>
+	<data name="Attribute.name_Meta" type="System.String">
+		<value>Имя</value>
+	</data>
+	<data name="Description.name_Meta" type="System.String">
+		<value>Атрибут 'Имя' тега META</value>
+	</data>
+	<data name="Attribute.Content" type="System.String">
+		<value>ЗначениеContent</value>
+	</data>
+	<data name="Description.Content" type="System.String">
+		<value>Значение; тип определяется атрибутом 'Имя' или 'Эквивалентный заголовок HTTP'.</value>
+	</data>
+	<data name="StyleEditor.label9.Text" type="System.String">
+		<value>Как позиционировать изображение?</value>
+	</data>
+	<data name="StyleEditor.label8.Text" type="System.String">
+		<value>Вертикальный:</value>
+	</data>
+	<data name="StyleEditor.label7.Text" type="System.String">
+		<value>Горизонтальный:</value>
+	</data>
+	<data name="StyleEditor.label6.Text" type="System.String">
+		<value>Жесткий (привязанный)</value>
+	</data>
+	<data name="StyleEditor.label5.Text" type="System.String">
+		<value>Расположение рядом</value>
+	</data>
+	<data name="StyleEditor.label4.Text" type="System.String">
+		<value>Выбрать изображение с диска:</value>
+	</data>
+	<data name="StyleEditor.buttonBackgroundImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.groupBox4.Text" type="System.String">
+		<value>Цвет фона</value>
+	</data>
+	<data name="StyleEditor.label27.Text" type="System.String">
+		<value>Цвет фона:</value>
+	</data>
+	<data name="StyleEditor.checkBox6.Text" type="System.String">
+		<value>Прозрачность</value>
+	</data>
+	<data name="StyleEditor.groupBox18.Text" type="System.String">
+		<value>Поля, отступы и стиль границ</value>
+	</data>
+	<data name="StyleEditor.label56.Text" type="System.String">
+		<value>Отступ</value>
+	</data>
+	<data name="StyleEditor.label55.Text" type="System.String">
+		<value>Ширина границы</value>
+	</data>
+	<data name="StyleEditor.label54.Text" type="System.String">
+		<value>Стиль границы</value>
+	</data>
+	<data name="StyleEditor.label53.Text" type="System.String">
+		<value>Цвет границы</value>
+	</data>
+	<data name="StyleEditor.label17.Text" type="System.String">
+		<value>Поля</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>Верхняя граница</value>
+	</data>
+	<data name="StyleEditor.groupBox25.Text" type="System.String">
+		<value>Все границы</value>
+	</data>
+	<data name="StyleEditor.groupBox24.Text" type="System.String">
+		<value>Левая граница</value>
+	</data>
+	<data name="StyleEditor.groupBox17.Text" type="System.String">
+		<value>Правая граница</value>
+	</data>
+	<data name="StyleEditor.groupBox12.Text" type="System.String">
+		<value>Нижняя граница</value>
+	</data>
+	<data name="StyleEditor.groupBox13.Text" type="System.String">
+		<value>Все границы</value>
+	</data>
+	<data name="StyleEditor.tabPageAll.Text" type="System.String">
+		<value>Все</value>
+	</data>
+	<data name="StyleEditor.tabPageLeft.Text" type="System.String">
+		<value>Левый</value>
+	</data>
+	<data name="StyleEditor.tabPageRight.Text" type="System.String">
+		<value>Правый</value>
+	</data>
+	<data name="StyleEditor.tabPageTop.Text" type="System.String">
+		<value>Верхний</value>
+	</data>
+	<data name="StyleEditor.tabPageBottom.Text" type="System.String">
+		<value>Нижний</value>
+	</data>
+	<data name="StyleEditor.groupBox21.Text" type="System.String">
+		<value>Дополнительные элементы шрифта</value>
+	</data>
+	<data name="StyleEditor.label67.Text" type="System.String">
+		<value>В дополнение к характеристикам шрифта определяет, как отображается текст.</value>
+	</data>
+	<data name="StyleEditor.groupBox8.Text" type="System.String">
+		<value>Напрваление текста и отступ первой строки</value>
+	</data>
+	<data name="StyleEditor.label68.Text" type="System.String">
+		<value>Определяет, как осуществляется выравнивание текста внутри блока</value>
+	</data>
+	<data name="StyleEditor.label29.Text" type="System.String">
+		<value>Направление:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRemove.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="StyleEditor.label51.Text" type="System.String">
+		<value>Отступ блока:</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionRtl.Text" type="System.String">
+		<value>справа налево</value>
+	</data>
+	<data name="StyleEditor.radioButtonDirectionLtr.Text" type="System.String">
+		<value>слева направо</value>
+	</data>
+	<data name="StyleEditor.groupBox7.Text" type="System.String">
+		<value>Промежуток линии и символа</value>
+	</data>
+	<data name="StyleEditor.label66.Text" type="System.String">
+		<value>Эти параметры (опции) определяют, как отображается плавающий текст. Результат зависит от выбранного шрифта.</value>
+	</data>
+	<data name="StyleEditor.label37.Text" type="System.String">
+		<value>Слова:</value>
+	</data>
+	<data name="StyleEditor.label11.Text" type="System.String">
+		<value>ВЫсота линии:</value>
+	</data>
+	<data name="StyleEditor.label12.Text" type="System.String">
+		<value>Символы:</value>
+	</data>
+	<data name="StyleEditor.groupBox6.Text" type="System.String">
+		<value>Выравнивание</value>
+	</data>
+	<data name="StyleEditor.groupBox19.Text" type="System.String">
+		<value>Горизонтальное выравнивание</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignDisable.Text" type="System.String">
+		<value>Удалить опцию из списка</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignJustify.Text" type="System.String">
+		<value>Выключка</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignLeft.Text" type="System.String">
+		<value>Левый</value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignCenter.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.radioButtonTextAlignRight.Text" type="System.String">
+		<value>Правый</value>
+	</data>
+	<data name="StyleEditor.label10.Text" type="System.String">
+		<value>По центру</value>
+	</data>
+	<data name="StyleEditor.groupBox20.Text" type="System.String">
+		<value>Вертикальное выравнивание</value>
+	</data>
+	<data name="StyleEditor.label65.Text" type="System.String">
+		<value>Определяет, как осуществляется вертикальное выравнивание.Обычно используется в таблицах и ячейках.</value>
+	</data>
+	<data name="StyleEditor.groupBox10.Text" type="System.String">
+		<value>Параметры (опции) плавающего текста</value>
+	</data>
+	<data name="StyleEditor.label48.Text" type="System.String">
+		<value>Разрыв строки</value>
+	</data>
+	<data name="StyleEditor.label47.Text" type="System.String">
+		<value>Режим усечения текстов</value>
+	</data>
+	<data name="StyleEditor.label45.Text" type="System.String">
+		<value>Отображение</value>
+	</data>
+	<data name="StyleEditor.groupBox9.Text" type="System.String">
+		<value>Режим позиционирования объектов</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRemove.Text" type="System.String">
+		<value>Удалить опцию из списка</value>
+	</data>
+	<data name="StyleEditor.label16.Text" type="System.String">
+		<value>От левой границы:</value>
+	</data>
+	<data name="StyleEditor.label15.Text" type="System.String">
+		<value>От верхней границы</value>
+	</data>
+	<data name="StyleEditor.label14.Text" type="System.String">
+		<value>Ширина</value>
+	</data>
+	<data name="StyleEditor.label13.Text" type="System.String">
+		<value>Высота</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionAbsolute.Text" type="System.String">
+		<value>Абсолютный</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionRelative.Text" type="System.String">
+		<value>Плавание текста</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionFixed.Text" type="System.String">
+		<value>Относительный неплавающий</value>
+	</data>
+	<data name="StyleEditor.radioButtonPositionNone.Text" type="System.String">
+		<value>Никакой</value>
+	</data>
+	<data name="StyleEditor.groupBox14.Text" type="System.String">
+		<value>Определить внешний вид элемента списка</value>
+	</data>
+	<data name="StyleEditor.label69.Text" type="System.String">
+		<value>Эти параметры определяют внешний вид неупорядоченных списков. Конечный результат также зависит от текста, шрифта и параметров отступов.</value>
+	</data>
+	<data name="StyleEditor.buttonListStyleImage.Text" type="System.String">
+		<value>...</value>
+	</data>
+	<data name="StyleEditor.label22.Text" type="System.String">
+		<value>Позиция:</value>
+	</data>
+	<data name="StyleEditor.label23.Text" type="System.String">
+		<value>Выбрать изображение с диска:</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletImage.Text" type="System.String">
+		<value>С использованием маркера, определенного пользователем (выберите изображение):</value>
+	</data>
+	<data name="StyleEditor.textBoxListStyleImage.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="StyleEditor.label21.Text" type="System.String">
+		<value>Стиль</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletStyle.Text" type="System.String">
+		<value>С использованием стандартных маркеров (выберите стиль и позицию):</value>
+	</data>
+	<data name="StyleEditor.radioButtonListBulletNone.Text" type="System.String">
+		<value>Без маркеров</value>
+	</data>
+	<data name="StyleEditor.groupBox23.Text" type="System.String">
+		<value>Колонки и линейки</value>
+	</data>
+	<data name="StyleEditor.label42.Text" type="System.String">
+		<value>Ширина линейки:</value>
+	</data>
+	<data name="StyleEditor.label41.Text" type="System.String">
+		<value>Стиль линейки</value>
+	</data>
+	<data name="StyleEditor.label40.Text" type="System.String">
+		<value>Цвет линейки</value>
+	</data>
+	<data name="StyleEditor.label39.Text" type="System.String">
+		<value>Колонки</value>
+	</data>
+	<data name="StyleEditor.groupBox16.Text" type="System.String">
+		<value>Таблицы</value>
+	</data>
+	<data name="StyleEditor.label44.Text" type="System.String">
+		<value>Объединение рядов</value>
+	</data>
+	<data name="StyleEditor.label43.Text" type="System.String">
+		<value>Объединение колонок</value>
+	</data>
+	<data name="StyleEditor.label38.Text" type="System.String">
+		<value>Позиция заголовка</value>
+	</data>
+	<data name="StyleEditor.linkLabel1.Text" type="System.String">
+		<value>Щелкните здесь для установки</value>
+	</data>
+	<data name="StyleEditor.label71.Text" type="System.String">
+		<value>Ширина и высота определяются шкалой табуляции:</value>
+	</data>
+	<data name="StyleEditor.tabPageFonts.Text" type="System.String">
+		<value>Шрифт</value>
+	</data>
+	<data name="StyleEditor.tabPageBackground.Text" type="System.String">
+		<value>Фон</value>
+	</data>
+	<data name="StyleEditor.tabPageBorders.Text" type="System.String">
+		<value>Границы</value>
+	</data>
+	<data name="StyleEditor.tabPageLayout.Text" type="System.String">
+		<value>Раскладка</value>
+	</data>
+	<data name="StyleEditor.tabPagePosition.Text" type="System.String">
+		<value>Позиция</value>
+	</data>
+	<data name="StyleEditor.tabPageLists.Text" type="System.String">
+		<value>Списки</value>
+	</data>
+	<data name="StyleEditor.tabPageTables.Text" type="System.String">
+		<value>Таблицы</value>
+	</data>
+	<data name="StyleEditor.tabPageMisc.Text" type="System.String">
+		<value>Разное</value>
+	</data>
+	<data name="StyleEditor.groupBox15.Text" type="System.String">
+		<value>Пользовательский интерфейс</value>
+	</data>
+	<data name="StyleEditor.label70.Text" type="System.String">
+		<value>Опции Cursor (Курсор) и Scrollbar (полоса прокрутки) в настоящий момент доступны только для браузеров Internet Explorer.</value>
+	</data>
+	<data name="StyleEditor.label64.Text" type="System.String">
+		<value>Трэк</value>
+	</data>
+	<data name="StyleEditor.label63.Text" type="System.String">
+		<value>Трехмерное изображение светлое</value>
+	</data>
+	<data name="StyleEditor.label62.Text" type="System.String">
+		<value>Выделение</value>
+	</data>
+	<data name="StyleEditor.label61.Text" type="System.String">
+		<value>Темная тень</value>
+	</data>
+	<data name="StyleEditor.label60.Text" type="System.String">
+		<value>Тень</value>
+	</data>
+	<data name="StyleEditor.label59.Text" type="System.String">
+		<value>Базовый цвет</value>
+	</data>
+	<data name="StyleEditor.label26.Text" type="System.String">
+		<value>Передний план</value>
+	</data>
+	<data name="StyleEditor.label25.Text" type="System.String">
+		<value>Цвета элементов полос прокрутки:</value>
+	</data>
+	<data name="StyleEditor.label24.Text" type="System.String">
+		<value>Курсор:</value>
+	</data>
+	<data name="StyleEditor.comboBoxCursor.Text" type="System.String">
+		<value>Курсор</value>
+	</data>
+	<data name="StyleEditor.label58.Text" type="System.String">
+		<value>Стрелка</value>
+	</data>
+	<data name="StyleEditor.groupBox22.Text" type="System.String">
+		<value>Видимость</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisiblityRemove.Text" type="System.String">
+		<value>Удалить опцию из списка</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityNone.Text" type="System.String">
+		<value>Никакой</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityHidden.Text" type="System.String">
+		<value>Скрытый</value>
+	</data>
+	<data name="StyleEditor.radioButtonVisibilityVisible.Text" type="System.String">
+		<value>Видимый</value>
+	</data>
+	<data name="StyleEditor.label31.Text" type="System.String">
+		<value>Если элемент определен как невидимый (Visiblity = Hidden) необходимо изменить с помощью скрипта его поведение, чтобы показать его в дальнейшем. Если не подключено использование скриптов - установить в 'None' (Никакой) или 'Remove' (Удалить).</value>
+	</data>
+	<data name="StyleEditor.button1.Text" type="System.String">
+		<value>Синхронизировать левое, правое и нижнее значения с верхним. </value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonNo.Text" type="System.String">
+		<value>Стандартный</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonCont.Text" type="System.String">
+		<value>Продолжение</value>
+	</data>
+	<data name="ColorPanelUserControl.groupBox2.Text" type="System.String">
+		<value>Сортировать опции</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonBrightness.Text" type="System.String">
+		<value>Яркость</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonName.Text" type="System.String">
+		<value>Имя</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonDistance.Text" type="System.String">
+		<value>Расстояние</value>
+	</data>
+	<data name="ColorPanelUserControl.radioButtonSaturation.Text" type="System.String">
+		<value>Насыщение</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonWeb.Text" type="System.String">
+		<value>Паутина (Web) </value>
+	</data>
+	<data name="ColorPanelUserControl.buttonCustom.Text" type="System.String">
+		<value>Переменный</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonSystem.Text" type="System.String">
+		<value>Система</value>
+	</data>
+	<data name="ColorPanelUserControl.label1.Text" type="System.String">
+		<value>Нажмите ESC для отмены</value>
+	</data>
+	<data name="ColorPanelUserControl.buttonNoColor.Text" type="System.String">
+		<value>Нет цветового выделения</value>
+	</data>
+	<data name="MetaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Выберите тег META для редактирования:</value>
+	</data>
+	<data name="AreaCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Выберите тег AREA для редактирования:</value>
+	</data>
+	<data name="ScriptCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Выберите блок скрипта для редактирования:</value>
+	</data>
+	<data name="StylesheetCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Выберите тег связанной таблицы стилей для редактирования:</value>
+	</data>
+	<data name="MetaCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="StylesheetCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="ScriptCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="AreaCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="MetaCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="ScriptCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="StylesheetCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="AreaCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="UnitEditor.radioButtonPercent.Text" type="System.String">
+		<value>%</value>
+	</data>
+	<data name="UnitEditor.radioButtonPixel.Text" type="System.String">
+		<value>Пиксел</value>
+	</data>
+	<data name="UnitEditor.radioButtonOff.Text" type="System.String">
+		<value>Выключено</value>
+	</data>
+	<data name="Description.aLink" type="System.String">
+		<value>Цвет активных ссылок на этой странице</value>
+	</data>
+	<data name="Description.bgProperties" type="System.String">
+		<value>Определяет, является ли фоновое изображение привязанным или подледит прокрутке</value>
+	</data>
+	<data name="Description.backGround" type="System.String">
+		<value>Адрес URL фонового изображения этой страницы</value>
+	</data>
+	<data name="Description.bgColor" type="System.String">
+		<value>Цвет фона этой страницы</value>
+	</data>
+	<data name="Description.bottomMargin" type="System.String">
+		<value>Размер в пикселах нижнего поля</value>
+	</data>
+	<data name="Description.leftMargin" type="System.String">
+		<value>Размер в пикселах левого поля</value>
+	</data>
+	<data name="Description.link" type="System.String">
+		<value>Цвет ссылок на этой странице</value>
+	</data>
+	<data name="Description.rightMargin" type="System.String">
+		<value>Размер в пикселах правого поля</value>
+	</data>
+	<data name="Description.scroll" type="System.String">
+		<value>Показывает, нужно ли отображать полосы прокрутки</value>
+	</data>
+	<data name="Description.text" type="System.String">
+		<value>Цвет текста на данной странице</value>
+	</data>
+	<data name="Description.topMargin" type="System.String">
+		<value>Размер в пикселах верхнего поля данной страницы</value>
+	</data>
+	<data name="Description.vLink" type="System.String">
+		<value>Цвет посещенных ссылок на этой странице</value>
+	</data>
+	<data name="Attribute.aLink" type="System.String">
+		<value>Цвет активной ссылки</value>
+	</data>
+	<data name="Attribute.bgProperties" type="System.String">
+		<value>Параметр фона</value>
+	</data>
+	<data name="Attribute.background" type="System.String">
+		<value>Фоновое изображение</value>
+	</data>
+	<data name="Attribute.bgColor" type="System.String">
+		<value>Цвет фона</value>
+	</data>
+	<data name="Attribute.bottomMargin" type="System.String">
+		<value>Нижнее поле</value>
+	</data>
+	<data name="Attribute.leftMargin" type="System.String">
+		<value>Левое поле</value>
+	</data>
+	<data name="Attribute.link" type="System.String">
+		<value>Цвет ссылки</value>
+	</data>
+	<data name="Attribute.rightMargin" type="System.String">
+		<value>Правое поле</value>
+	</data>
+	<data name="Attribute.scroll" type="System.String">
+		<value>Полосы прокрутки</value>
+	</data>
+	<data name="Attribute.text" type="System.String">
+		<value>Цвет текста</value>
+	</data>
+	<data name="Attribute.topMargin" type="System.String">
+		<value>Верхнее поле</value>
+	</data>
+	<data name="Attribute.vLink" type="System.String">
+		<value>Цвет посещенной ссылки</value>
+	</data>
+	<data name="Description.ScriptBlocks" type="System.String">
+		<value>Доступ к редактору блока скрипта</value>
+	</data>
+	<data name="Attribute.ScriptBlocks" type="System.String">
+		<value>Блоки скрипта</value>
+	</data>
+	<data name="Description.NamedMetaTags" type="System.String">
+		<value>Редактировать стандартные теги META в редакторе</value>
+	</data>
+	<data name="Attribute.NamedMetaTags" type="System.String">
+		<value>Имя META</value>
+	</data>
+	<data name="Description.HttpEquivMetaTags" type="System.String">
+		<value>Редактировать стандартные теги META в редакторе</value>
+	</data>
+	<data name="Attribute.HttpEquivMetaTags" type="System.String">
+		<value>HTTP-эквивалент тега META (META httpEquiv)</value>
+	</data>
+	<data name="Description.LinkedStylesheets" type="System.String">
+		<value>Редактировать ссылки на связанные документы стилей</value>
+	</data>
+	<data name="Attribute.LinkedStylesheets" type="System.String">
+		<value>Связанные таблицы стилей</value>
+	</data>
+	<data name="Description.Title_Body" type="System.String">
+		<value>Название определяет содержимое документа и отображается в заголовочной строке окна. Важно для поисковых машин.
+</value>
+	</data>
+	<data name="Attribute.Title_Body" type="System.String">
+		<value>Название</value>
+	</data>
+	<data name="Description.URL" type="System.String">
+		<value>Адрес URL или путь документа, из которого был осуществлен переход к текущему</value>
+	</data>
+	<data name="Attribute.URL" type="System.String">
+		<value>Адрес URL</value>
+	</data>
+	<data name="Description.LoadTime56K" type="System.String">
+		<value>Среднее время, необходимое для загрузки документа с помощью модема типа 56K. Справочная информация.</value>
+	</data>
+	<data name="Attribute.LoadTime56K" type="System.String">
+		<value>Время загрузки (56K)</value>
+	</data>
+	<data name="Description.FileSize" type="System.String">
+		<value>Текущий размер файла в байтах</value>
+	</data>
+	<data name="Attribute.FileSize" type="System.String">
+		<value>Размер файла</value>
+	</data>
+	<data name="Description.FileLastModified" type="System.String">
+		<value>Указание на время последнего изменения документа</value>
+	</data>
+	<data name="Attribute.FileLastModified" type="System.String">
+		<value>Последнее изменение</value>
+	</data>
+	<data name="Description.NumberOfFrames" type="System.String">
+		<value>Абслютное количество фрэймов, вне зависимости от структуры контейнера.</value>
+	</data>
+	<data name="Attribute.NumberOfFrames" type="System.String">
+		<value>Количество фрэймов</value>
+	</data>
+	<data name="Description.NumberOfStylesheets" type="System.String">
+		<value>Количество связанных таблиц стилей</value>
+	</data>
+	<data name="Attribute.NumberOfStylesheets" type="System.String">
+		<value>Количество таблиц стилей</value>
+	</data>
+	<data name="Description.NumberOfImages" type="System.String">
+		<value>Количество изображений, содержащихся в документе.</value>
+	</data>
+	<data name="Attribute.NumberOfImages" type="System.String">
+		<value>Количество изображений</value>
+	</data>
+	<data name="Description.NumberOfScriptBlocks" type="System.String">
+		<value>Количество блоков скрипта</value>
+	</data>
+	<data name="Attribute.NumberOfScriptBlocks" type="System.String">
+		<value>Количество SCRIPT</value>
+	</data>
+	<data name="Description.NumberOfMetaTags" type="System.String">
+		<value>Количество тегов META данного документа</value>
+	</data>
+	<data name="Attribute.NumberOfMetaTags" type="System.String">
+		<value>Количество META</value>
+	</data>
+	<data name="Attribute.cellPadding" type="System.String">
+		<value>Внутрение поля ячеек</value>
+	</data>
+	<data name="Description.cellPadding" type="System.String">
+		<value>Поля между границами ячейки и ее содержимым (для всех ячеек таблицы)</value>
+	</data>
+	<data name="Attribute.cellSpacing" type="System.String">
+		<value>Поля между ячейками</value>
+	</data>
+	<data name="Description.cellSpacing" type="System.String">
+		<value>Поля между ячейками в таблице</value>
+	</data>
+	<data name="Description.rules" type="System.String">
+		<value>Линейки - это области, расположенные между колонками. Это свойство определяет внешний вид линеек</value>
+	</data>
+	<data name="Attribute.rules" type="System.String">
+		<value>Линейки</value>
+	</data>
+	<data name="Description.borderColor" type="System.String">
+		<value>Цвет рамки каждой ячейки таблицы</value>
+	</data>
+	<data name="Attribute.borderColor" type="System.String">
+		<value>Цвет рамки</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>Общее количество рядов в таблице. Не учитывает объединение рядов. Исключительно справочная информация.</value>
+	</data>
+	<data name="Attribute.rows" type="System.String">
+		<value>Количество рядов</value>
+	</data>
+	<data name="Description.valign" type="System.String">
+		<value>Вертикальное выравнивание содержимого ячейки.</value>
+	</data>
+	<data name="Attribute.valign" type="System.String">
+		<value>Вертикальное выравнивание</value>
+	</data>
+	<data name="Description.colspan" type="System.String">
+		<value>Количество колонок, объединяемых в данной ячейке.</value>
+	</data>
+	<data name="Attribute.colSpan" type="System.String">
+		<value>Объединение колонок</value>
+	</data>
+	<data name="Description.rowspan" type="System.String">
+		<value>Количество рядов, объединяемых в данной ячейке.</value>
+	</data>
+	<data name="Attribute.rowSpan" type="System.String">
+		<value>Объединение рядов</value>
+	</data>
+	<data name="Description.cells" type="System.String">
+		<value>Общее количество ячеек в данном ряду. Может изменяться от ряда к ряду в соответствии с параметрами объединения рядов, присвоенными ячейкам других рядов.</value>
+	</data>
+	<data name="Attribute.cells" type="System.String">
+		<value>Количество ячеек</value>
+	</data>
+	<data name="FontPickerUserControl.ff.Text" type="System.String">
+		<value>Выбор шрифта</value>
+	</data>
+	<data name="FontForm.buttonOK.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="FontForm.buttonCancel.Text" type="System.String">
+		<value>Отменить</value>
+	</data>
+	<data name="FontForm.label1.Text" type="System.String">
+		<value>Укажите построчно шрифты (столько, сколько нужно).</value>
+	</data>
+	<data name="FontForm.tabPage4.Text" type="System.String">
+		<value>Пользовательские шрифты</value>
+	</data>
+	<data name="FontForm.textBoxFreeFont.Text" type="System.String">
+		<value></value>
+	</data>
+	<data name="FontForm.tabPage1.Text" type="System.String">
+		<value>Система</value>
+	</data>
+	<data name="FontForm.tabPage2.Text" type="System.String">
+		<value>Паутина (Web)</value>
+	</data>
+	<data name="FontForm.tabPage3.Text" type="System.String">
+		<value>Генерируемый</value>
+	</data>
+	<data name="Attribute.border" type="System.String">
+		<value>Граница</value>
+	</data>
+	<data name="Description.border" type="System.String">
+		<value>Ширина границы (рамки) в пикселах. Если элемент находится внутри гиперссылки, этот параметр должен быть установлен в значение 0 для удаления автоматически выстраиваемых границ (рамок).</value>
+	</data>
+	<data name="Attribute.dateTime" type="System.String">
+		<value>Дата и время</value>
+	</data>
+	<data name="Description.dateTime" type="System.String">
+		<value>Стандартная информация о дате и времени последнего изменения элемента. Ожидаемый формат: ГГГГ-ММ-ДДTчч:мм:ссTZD</value>
+	</data>
+	<data name="Attribute.cite" type="System.String">
+		<value>Комментарий</value>
+	</data>
+	<data name="Description.cite" type="System.String">
+		<value>Комментарий к содержимому</value>
+	</data>
+	<data name="HtmlDocumentStructure.ToString" type="System.String">
+		<value>[ДОКУМЕНТ]</value>
+	</data>
+	<data name="CustomPropertyTab.Tooltip" type="System.String">
+		<value>Имена атрибутов</value>
+	</data>
+	<!-- Categories -->
+	<data name="Category.Element Style" type="System.String">
+		<value>Стиль</value>
+	</data>
+	<data name="Category.Element Behavior" type="System.String">
+		<value>Поведение</value>
+	</data>
+	<data name="Category.Standard Values" type="System.String">
+		<value>Базовые значения</value>
+	</data>
+	<data name="Category.Javascript Events" type="System.String">
+		<value>События JavaScript</value>
+	</data>
+	<data name="Category.Element Layout" type="System.String">
+		<value>Раскладка</value>
+	</data>
+	<data name="Category.Element Appearance" type="System.String">
+		<value>Внешний вид</value>
+	</data>
+	<data name="Category.Content" type="System.String">
+		<value>Содержимое</value>
+	</data>
+	<data name="Category.Information" type="System.String">
+		<value>Информация</value>
+	</data>
+	<!-- End Categories -->
+	<data name="Attribute.ScriptOnResize" type="System.String">
+		<value>Изменение размеров</value>
+	</data>
+	<data name="Description.ScriptOnResize" type="System.String">
+		<value>Вызывается, если пользователь изменяет размеры элемента посредством скрипта.</value>
+	</data>
+	<data name="Attribute.ScriptOnChange" type="System.String">
+		<value>Изменение содержимого</value>
+	</data>
+	<data name="Description.ScriptOnChange" type="System.String">
+		<value>Вызывается, если содержимое элемента изменено пользователем.</value>
+	</data>
+	<data name="Attribute.cols" type="System.String">
+		<value>Колонки</value>
+	</data>
+	<data name="Description.cols" type="System.String">
+		<value>Количество колонок, измеренное в символах стандартной ширины.</value>
+	</data>
+	<data name="Description.rows" type="System.String">
+		<value>Количество рядов для символов стандартной ширины.</value>
+	</data>
+	<data name="Attribute.type_LI" type="System.String">
+		<value>Тип элемента списка</value>
+	</data>
+	<data name="Attribute.ScriptOnMouseDown" type="System.String">
+		<value>Нажатие кнопки мыши</value>
+	</data>
+	<data name="Description.ScriptOnMouseDown" type="System.String">
+		<value>Вызывается при повторном нажатии пользователем кнопки мыши, осуществленном до ее отпускания.</value>
+	</data>
+	<data name="Description.id" type="System.String">
+		<value>Идентификатор элемента, используемый скриптами JavaScript или для определения экземпляра класса, к которому применяется тот или иной стиль.</value>
+	</data>
+	<data name="Description.style" type="System.String">
+		<value>Внутренний стиль. Используйте эллипсы [...] для запуска интегрированного редактора стилей.</value>
+	</data>
+	<data name="Description.class" type="System.String">
+		<value>Класс стиля (CSS), определяет отношение к определению класса стиля, используя синтаксис ".name", в файлах или тегах каскадных таблиц стилей (CSS).</value>
+	</data>
+	<data name="Attribute.ScriptOnDblClick" type="System.String">
+		<value>Двойной щелчок мыши</value>
+	</data>
+	<data name="StyleEditor.groupBox11.Text" type="System.String">
+		<value>Заголовок таблицы</value>
+	</data>
+	<data name="StyleEditor.fontPickerFont.Caption" type="System.String">
+		<value>Выбор шрифта</value>
+	</data>
+	<data name="StyleEditor.Combos.NoValue" type="System.String">
+		<value>Нет значения</value>
+	</data>
+	<data name="StyleEditor.Combos.Inherit" type="System.String">
+		<value>Наследованный</value>
+	</data>
+	<data name="StyleEditor.Combos.Normal" type="System.String">
+		<value>Стандартный</value>
+	</data>
+	<data name="StyleEditor.Combos.None" type="System.String">
+		<value>Никакой</value>
+	</data>
+	<data name="StyleEditor.Combos.Solid" type="System.String">
+		<value>Жирный</value>
+	</data>
+	<data name="StyleEditor.Combos.Double" type="System.String">
+		<value>Двойной</value>
+	</data>
+	<data name="StyleEditor.Combos.Dotted" type="System.String">
+		<value>Точечный ("......")</value>
+	</data>
+	<data name="StyleEditor.Combos.Dashed" type="System.String">
+		<value>Прерывистый ("-----")</value>
+	</data>
+	<data name="StyleEditor.Combos.OutSet" type="System.String">
+		<value>Выпуклый</value>
+	</data>
+	<data name="StyleEditor.Combos.Groove" type="System.String">
+		<value>Вдавленный</value>
+	</data>
+	<data name="StyleEditor.Combos.InSet" type="System.String">
+		<value>Вдавленный</value>
+	</data>
+	<data name="StyleEditor.Combos.Ridge" type="System.String">
+		<value>Приподнятый</value>
+	</data>
+	<data name="StyleEditor.Combos.Hidden" type="System.String">
+		<value>Скрытый</value>
+	</data>
+	<data name="StyleEditor.Combos.Pixel" type="System.String">
+		<value>Пикселы</value>
+	</data>
+	<data name="StyleEditor.Combos.Point" type="System.String">
+		<value>Точки</value>
+	</data>
+	<data name="StyleEditor.Combos.Percentage" type="System.String">
+		<value>Проценты</value>
+	</data>
+	<data name="StyleEditor.Combos.Pica" type="System.String">
+		<value>Пика</value>
+	</data>
+	<data name="StyleEditor.Combos.Millimeter" type="System.String">
+		<value>Миллиметры</value>
+	</data>
+	<data name="StyleEditor.Combos.Centimeter" type="System.String">
+		<value>Сантиметры</value>
+	</data>
+	<data name="StyleEditor.Combos.m-Size" type="System.String">
+		<value>Средний размер</value>
+	</data>
+	<data name="StyleEditor.Combos.x-Height" type="System.String">
+		<value>X-Высота</value>
+	</data>
+	<data name="StyleEditor.Combos.Bold" type="System.String">
+		<value>Полужирный</value>
+	</data>
+	<data name="StyleEditor.Combos.Bolder" type="System.String">
+		<value>Жирнее</value>
+	</data>
+	<data name="StyleEditor.Combos.Lighter" type="System.String">
+		<value>Светлее</value>
+	</data>
+	<data name="StyleEditor.Combos.CapitalLetter" type="System.String">
+		<value>Заглавная буква</value>
+	</data>
+	<data name="StyleEditor.Combos.Uppercase" type="System.String">
+		<value>Заглавные буквы</value>
+	</data>
+	<data name="StyleEditor.Combos.Lowercase" type="System.String">
+		<value>Строчные буквы</value>
+	</data>
+	<data name="StyleEditor.Combos.Top" type="System.String">
+		<value>Верх</value>
+	</data>
+	<data name="StyleEditor.Combos.Center" type="System.String">
+		<value>Центр</value>
+	</data>
+	<data name="StyleEditor.Combos.Bottom" type="System.String">
+		<value>Низ</value>
+	</data>
+	<data name="StyleEditor.Combos.Absolute" type="System.String">
+		<value>Абсолютный</value>
+	</data>
+	<data name="StyleEditor.Combos.AsBlock" type="System.String">
+		<value>Как блок</value>
+	</data>
+	<data name="StyleEditor.Combos.InlineText" type="System.String">
+		<value>Встроенный (подключенный) текст</value>
+	</data>
+	<data name="StyleEditor.Combos.ListItem" type="System.String">
+		<value>Элемент списка</value>
+	</data>
+	<data name="StyleEditor.Combos.Middle" type="System.String">
+		<value>Середина</value>
+	</data>
+	<data name="StyleEditor.Combos.Baseline" type="System.String">
+		<value>Базовая линия</value>
+	</data>
+	<data name="StyleEditor.Combos.Sub" type="System.String">
+		<value>Нижний индекс</value>
+	</data>
+	<data name="StyleEditor.Combos.Super" type="System.String">
+		<value>Верхний индекс</value>
+	</data>
+	<data name="StyleEditor.Combos.TopOfText" type="System.String">
+		<value>Верх текста</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomOfText" type="System.String">
+		<value>Низ текста</value>
+	</data>
+	<data name="StyleEditor.Combos.Underline" type="System.String">
+		<value>Подчеркивание</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOver" type="System.String">
+		<value>Зачеркивание</value>
+	</data>
+	<data name="StyleEditor.Combos.StrikeOut" type="System.String">
+		<value>Зачеркивание</value>
+	</data>
+	<data name="StyleEditor.Combos.BlinkText" type="System.String">
+		<value>Мерцание</value>
+	</data>
+	<data name="StyleEditor.Combos.Visible" type="System.String">
+		<value>Видимый</value>
+	</data>
+	<data name="StyleEditor.Combos.NotVisible" type="System.String">
+		<value>Невидимый</value>
+	</data>
+	<data name="StyleEditor.Combos.ScrollableArea" type="System.String">
+		<value>Подлежащий прокрутке</value>
+	</data>
+	<data name="StyleEditor.Combos.Automatic" type="System.String">
+		<value>Автоматический</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndLeft" type="System.String">
+		<value>Верхний и левый</value>
+	</data>
+	<data name="StyleEditor.Combos.TopAndRight" type="System.String">
+		<value>Верхниый и правый</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndLeft" type="System.String">
+		<value>Нижний и левый</value>
+	</data>
+	<data name="StyleEditor.Combos.BottomAndRight" type="System.String">
+		<value>Нижний и правый</value>
+	</data>
+	<data name="StyleEditor.Combos.Repeat" type="System.String">
+		<value>Повторить</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatRows" type="System.String">
+		<value>Повторить ряды</value>
+	</data>
+	<data name="StyleEditor.Combos.RepeatColumns" type="System.String">
+		<value>Повторить колонки</value>
+	</data>
+	<data name="StyleEditor.Combos.NoRepeat" type="System.String">
+		<value>Нет повторов</value>
+	</data>
+	<data name="StyleEditor.Combos.Standard" type="System.String">
+		<value>Стандартный</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtremSmall" type="System.String">
+		<value>Чрезвычайно маленький</value>
+	</data>
+	<data name="StyleEditor.Combos.VerySmall" type="System.String">
+		<value>Очень маленький</value>
+	</data>
+	<data name="StyleEditor.Combos.small" type="System.String">
+		<value>Маленький</value>
+	</data>
+	<data name="StyleEditor.Combos.Medium" type="System.String">
+		<value>Средний</value>
+	</data>
+	<data name="StyleEditor.Combos.Large" type="System.String">
+		<value>Большой</value>
+	</data>
+	<data name="StyleEditor.Combos.ExtraLarge" type="System.String">
+		<value>Особенно большой</value>
+	</data>
+	<data name="StyleEditor.Combos.XXL" type="System.String">
+		<value>Чрезвычайно большой</value>
+	</data>
+	<data name="StyleEditor.Combos.Inside List" type="System.String">
+		<value>В списке</value>
+	</data>
+	<data name="StyleEditor.Combos.Outside List" type="System.String">
+		<value>Вне списка</value>
+	</data>
+	<data name="StyleEditor.Combos.Square" type="System.String">
+		<value>Квадрат</value>
+	</data>
+	<data name="StyleEditor.Combos.Disc" type="System.String">
+		<value>Диск</value>
+	</data>
+	<data name="StyleEditor.Combos.Circle" type="System.String">
+		<value>Окружность</value>
+	</data>
+	<data name="StyleEditor.Combos.Thin" type="System.String">
+		<value>Тонкий</value>
+	</data>
+	<data name="StyleEditor.Combos.Thick" type="System.String">
+		<value>Толстый</value>
+	</data>
+	<data name="StyleEditor.Combos.Auto" type="System.String">
+		<value>Автоматический</value>
+	</data>
+	<data name="StyleEditor.Combos.Cross" type="System.String">
+		<value>Скрещенный (пересекающийся)</value>
+	</data>
+	<data name="StyleEditor.Combos.Hand" type="System.String">
+		<value>Ручной</value>
+	</data>
+	<data name="StyleEditor.Combos.HandIE5Only" type="System.String">
+		<value>Ручной (только IE 5)</value>
+	</data>
+	<data name="StyleEditor.Combos.MoveObject" type="System.String">
+		<value>Переместить</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeRightBorder" type="System.String">
+		<value>Изменить правую границу</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperRightCorner" type="System.String">
+		<value>Изменить верхний правый угол</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeUpperLeftCorner" type="System.String">
+		<value>Изменить верхний левый угол</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeTopBorder" type="System.String">
+		<value>Изменить верхнюю границу</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerRightCorner" type="System.String">
+		<value>Изменить нижний правый угол</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLowerLeftCorner" type="System.String">
+		<value>Изменить нижний левый угол</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeBottomBorder" type="System.String">
+		<value>Изменить нижнюю границу</value>
+	</data>
+	<data name="StyleEditor.Combos.ResizeLeftBorder" type="System.String">
+		<value>Изменить левую границу</value>
+	</data>
+	<data name="StyleEditor.Combos.InsideTextbox" type="System.String">
+		<value>Текст (I-образный)</value>
+	</data>
+	<data name="StyleEditor.Combos.Wait(Hourglass)" type="System.String">
+		<value>Ожидание (Песочные часы)</value>
+	</data>
+	<data name="StyleEditor.Combos.Help" type="System.String">
+		<value>Помощь</value>
+	</data>
+	<data name="StyleEditor.Combos.Scroll" type="System.String">
+		<value>Прокрутка</value>
+	</data>
+	<data name="StyleEditor.Combos.Fixed" type="System.String">
+		<value>Привязанный</value>
+	</data>
+	<data name="StyleEditor.Combos.Pre" type="System.String">
+		<value>Преформатированный</value>
+	</data>
+	<data name="StyleEditor.Combos.NoWrap" type="System.String">
+		<value>Нет переносов</value>
+	</data>
+	<data name="PropertyGrid.BackgroundPropertyType" type="System.String">
+		<value>Прокручиваемый (Scroll),Привязанный (Fixed)</value>
+	</data>
+	<data name="PropertyGrid.ScrollType" type="System.String">
+		<value>Да (Yes),Нет (No),Автоматический (Auto)</value>
+	</data>
+	<data name="PropertyGrid.Boolean" type="System.String">
+		<value>Да (Yes),Нет (No)</value>
+	</data>
+	<data name="PropertyGrid.AreaShape" type="System.String">
+		<value>По умолчанию (Default),Прямоугольник (Rectangle),Круг (Circle),Многоугольник (Polygon)</value>
+	</data>
+	<data name="PropertyGrid.BreakClearEnum" type="System.String">
+		<value>Никакой (None),Левый (Left),Правый (Right),Все (All)</value>
+	</data>
+	<data name="PropertyGrid.HorizontalAlign" type="System.String">
+		<value>Не устанвлено (Not set),Левый (Left),По центру (Center),Правый (Right),Выключка (Justify)</value>
+	</data>
+	<data name="PropertyGrid.VerticalAlign" type="System.String">
+		<value>Не установлено (Not Set),Верх (Top),Середина (Middle),Низ (Bottom)</value>
+	</data>
+	<data name="PropertyGrid.FontUnit" type="System.String">
+		<value>Нет значения (No Value),Чрезвычайно маленький (Extrem small),Очень маленький (Very small),Маленький (Small),Средний (Middle),Большой (Large),Очень большой (Very large),Чрезвычайно большой (Extrem large),Меньше (Smaller),Больше (Larger)</value>
+	</data>
+	<data name="PropertyGrid.LinkElementMedia" type="System.String">
+		<value>Все (All),Экран (Screen),Терминал (TTY),ТВ (TV),Проектор (Projection),Ручной (Handheld),Для печати (Print),Брайль (Braille),Звуковой (Aural)</value>
+	</data>
+	<data name="PropertyGrid.UnorderedListType" type="System.String">
+		<value>По умолчанию (Default),Круг (Circle),Диск (Disc),Квадрат (Square)</value>
+	</data>
+	<data name="PropertyGrid.ListType" type="System.String">
+		<value>По умолчанию (Default),Цифровой (Numeric),Строчные символы (Lower case),Заглавные символы (Upper case),Строчные символы-римские цифры,Заглавные символы-римские цифры,Диск (Disc),Круг (Circle),Квадрат (Square)</value>
+	</data>
+	<data name="Description.AreaTags" type="System.String">
+		<value>Коллекция интерактивных областей, зарегистрированных в данном изображении MAP.</value>
+	</data>
+	<data name="Attribute.AreaTags" type="System.String">
+		<value>Области</value>
+	</data>
+	<data name="Attribute.index" type="System.String">
+		<value>Позиция</value>
+	</data>
+	<data name="Description.index" type="System.String">
+		<value>Позиция данной опции в списке.</value>
+	</data>
+	<data name="PropertyGrid.OrderedListType" type="System.String">
+		<value>По умолчанию (Default),Цифровой (Numeric),Строчные символы (Lower case),Заглавные символы (Upper case),Строчные символы-римские цифры,Заглавные символы-римские цифры</value>
+	</data>
+	<data name="PropertyGrid.RulesType" type="System.String">
+		<value>Не установлено (Not Set),Никакой (None),Группы (Groups),Ряды (Rows),Колонки (Columns),Все (All)</value>
+	</data>
+	<data name="Attribute.maxLength" type="System.String">
+		<value>Максимальная длина поля</value>
+	</data>
+	<data name="Attribute.readOnly" type="System.String">
+		<value>Только чтение</value>
+	</data>
+	<data name="Attribute.value" type="System.String">
+		<value>Значение</value>
+	</data>
+	<data name="Description.maxLength" type="System.String">
+		<value>Максимальное количество символов, которое пользователь может ввести в данном поле.</value>
+	</data>
+	<data name="Description.ScriptOnDblClick" type="System.String">
+		<value>Вызывается, если пользователь дважды щелкает кнопкой мыши на элементах активной области.</value>
+	</data>
+	<data name="Description.readOnly" type="System.String">
+		<value>Содержимое поля доступно только для чтения, т.е. пользователь не может изменять его.</value>
+	</data>
+	<data name="Description.value" type="System.String">
+		<value>Значение, которое будет отправлено из формы. Для кнопок это также текст, отображаемый  на поверхности элемента.</value>
+	</data>
+	<data name="Attribute.checked" type="System.String">
+		<value>Выбрано</value>
+	</data>
+	<data name="Attribute.selected" type="System.String">
+		<value>Выбрано</value>
+	</data>
+	<data name="Attribute.text_Field" type="System.String">
+		<value>Текст опций</value>
+	</data>
+	<data name="Description.checked" type="System.String">
+		<value>Флажок или радиокнопка активированы (выбраны).</value>
+	</data>
+	<data name="Description.selected" type="System.String">
+		<value>Поле выбирается по умолчанию.</value>
+	</data>
+	<data name="Description.text_Field" type="System.String">
+		<value>Текст, который пользователь видит в открывающемся (выпадающем) списке. Если не установлено никакое значение, этот текст также отправляется.</value>
+	</data>
+	<data name="StyleEditorForm.Text" type="System.String">
+		<value>Редактор стилей</value>
+	</data>
+	<data name="StyleEditorForm.buttonOK.Text" type="System.String">
+		<value>OK</value>
+	</data>
+	<data name="Description.src" type="System.String">
+		<value>Файл-источник или адрес URL</value>
+	</data>
+	<data name="OptionCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить</value>
+	</data>
+	<data name="OptionCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Выберите опцию для редактирования:</value>
+	</data>
+	<data name="OptionCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить</value>
+	</data>
+	<data name="Attribute.multiple" type="System.String">
+		<value>Множественный</value>
+	</data>
+	<data name="Description.multiple" type="System.String">
+		<value>Определяет, может ли пользователь выделять (выбирать) сразу несколько опций, используя удерживаемую кнопку CTRL.</value>
+	</data>
+	<data name="Attribute.Options" type="System.String">
+		<value>Опции</value>
+	</data>
+	<data name="Description.Options" type="System.String">
+		<value>Коллекция опций, из которой сформирован данный список.</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Title" type="System.String">
+		<value>Изображение, используемое в качестве фона</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.BackgroundImage.Filter" type="System.String">
+		<value>Файлы с изображениями (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Title" type="System.String">
+		<value>Изображение для элемента списка</value>
+	</data>
+	<data name="StyleEditor.OpenFileDialog.ListImage.Filter" type="System.String">
+		<value>Файлы с изображениями (*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*</value>
+	</data>
+	<data name="StyleEditor.labelColumnGap.Text" type="System.String">
+		<value>Промежуток между колонками:</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerRoman" type="System.String">
+		<value>Римские, строчные</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperRoman" type="System.String">
+		<value>Римские, заглавные</value>
+	</data>
+	<data name="StyleEditor.Combos.LowerAlpha" type="System.String">
+		<value>Строчные буквы алфавита</value>
+	</data>
+	<data name="StyleEditor.Combos.UpperAlpha" type="System.String">
+		<value>Заглавные буквы алфавита</value>
+	</data>
+	<data name="StyleEditor.Combos.Decimal" type="System.String">
+		<value>Десятичные</value>
+	</data>
+	<data name="StyleEditor.Combos.DecimalZero" type="System.String">
+		<value>Десятичные, "Ведущий ноль"</value>
+	</data>
+	<data name="StyleEditor.Combos.Left" type="System.String">
+		<value>Левый</value>
+	</data>
+	<data name="StyleEditor.Combos.Right" type="System.String">
+		<value>Правый</value>
+	</data>
+	<data name="PropertyGrid.TableColumnHorizontalAlign" type="System.String">
+		<value>Не установлено (Not Set),Левый (Left),Правый (Right),По центру (Center),Символьный (Char),Выключка (Justify)</value>
+	</data>
+	<data name="Attribute.char" type="System.String">
+		<value>Символ для выравнивания</value>
+	</data>
+	<data name="Attribute.charoff" type="System.String">
+		<value>Отступ от символа выравнивания</value>
+	</data>
+	<data name="Description.char" type="System.String">
+		<value>Символ, используемый для выравнивания содержимого элемента.</value>
+	</data>
+	<data name="Description.charoff" type="System.String">
+		<value>Отступ (расстояние) между символом, по которому выравнивается содержимое, и правой границей элемента.</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.memberLabel.Text" type="System.String">
+		<value>Редактировать элементы стиля</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.addButton.Text" type="System.String">
+		<value>Добавить выбор</value>
+	</data>
+	<data name="StyleSelectorCollectionEditor.removeButton.Text" type="System.String">
+		<value>Удалить выбор</value>
+	</data>
+	<data name="Attribute.StylesheetContent" type="System.String">
+		<value>Содержание стиля</value>
+	</data>
+	<data name="Description.StylesheetContent" type="System.String">
+		<value>Это свойство предоставляет доступ к содержимому связанного файла стилей.</value>
+	</data>
+	<data name="Attribute.usemap" type="System.String">
+		<value>Использовать изображение MAP</value>
+	</data>
+	<data name="Description.usemap" type="System.String">
+		<value>Использовать это описание изображения MAP для построения интерактивного изображения MAP (клиентский сайт)</value>
+	</data>
+	<data name="Attribute.action" type="System.String">
+		<value>Действие</value>
+	</data>
+	<data name="Attribute.encType" type="System.String">
+		<value>Тип содержимого</value>
+	</data>
+	<data name="Attribute.method" type="System.String">
+		<value>Метод</value>
+	</data>
+	<data name="Attribute.name_Form" type="System.String">
+		<value>Имя формы</value>
+	</data>
+	<data name="Description.action" type="System.String">
+		<value>Полный (абсолютный) или относительный путь или адрес URL, на который производится отправка данных формы по ее заполнении.</value>
+	</data>
+	<data name="Description.encType" type="System.String">
+		<value>Тип содержимого. Значение этого параметра зависит от типа отправляемого содержимого. Для выгрузки на сайт используется тип Multipart.</value>
+	</data>
+	<data name="Description.method" type="System.String">
+		<value>Метод протокола HTTP, используемый для отправки данных формы на сервер. Стандартные формы отправляются с использованием метода POST.</value>
+	</data>
+	<data name="Description.name_Form" type="System.String">
+		<value>Имя формы, используемое скриптами.</value>
+	</data>
+	<data name="Attribute.size_Select" type="System.String">
+		<value>Видимые опции</value>
+	</data>
+	<data name="Description.size_Select" type="System.String">
+		<value>Количество видимых (отображаемых) опций. Если существует больше опций, чем отображено, значение "1" сгенерирует выпадающий список в то время как при значении, большем "1" будет сгенерирован список из нескольких опций. Если количество опций больше оптического размера списка, список будет оснащен полосой прокрутки.</value>
+	</data>
+	<data name="Attribute.label" type="System.String">
+		<value>Метка</value>
+	</data>
+	<data name="Description.label" type="System.String">
+		<value>Текст элемента списка опций, отображаемый пользователю, если содержимое опции не используется.</value>
+	</data>
+	<!-- NEW -->
+	<data name="Attribute.Selector" type="System.String">
+		<value>Selector</value>
+	</data>
+	<data name="Description.Selector" type="System.String">
+		<value>The stylesheet rule used to define one type of style. Choose the appropritiate type from the SelectorType property. The prefix will be set accordingly.</value>
+	</data>
+	<data name="Attribute.SelectorType" type="System.String">
+		<value>Selector Type</value>
+	</data>
+	<data name="Description.SelectorType" type="System.String">
+		<value>The type of selector, e.g. class, id, block rule, or global (asterisk). For standard type write HTML tag names.</value>
+	</data>
+	<data name="Attribute.SelectorName" type="System.String">
+		<value>Selector Name</value>
+	</data>
+	<data name="Description.SelectorName" type="System.String">
+		<value>The name of the selector. Choose either a free name or a HTML element name.</value>
+	</data>
+	<data name="Attribute.EmbeddedStylesheets" type="System.String">
+		<value>Embedded Styles</value>
+	</data>
+	<data name="Description.EmbeddedStylesheets" type="System.String">
+		<value>Style elements within the Head section of the document containing embedded style definitions.</value>
+	</data>
+	<data name="Attribute.Caption" type="System.String">
+		<value>Caption</value>
+	</data>
+	<data name="Description.Caption" type="System.String">
+		<value>Caption of the table. Use option WithCaption to add or remove the caption.</value>
+	</data>
+	<data name="Attribute.WithCaption" type="System.String">
+		<value>Has Caption</value>
+	</data>
+	<data name="Description.WithCaption" type="System.String">
+		<value>If set to Yes the table will have a caption which can be formatted and aligned.</value>
+	</data>
+	<data name="PropertyGrid.StyleRuleType" type="System.String">
+		<value>Standard,Class,ID,Pseudo,Global</value>
+	</data>
+	<data name="height" type="System.String">
+		<value></value>
+		<comment></comment>
+	</data>
+</root>

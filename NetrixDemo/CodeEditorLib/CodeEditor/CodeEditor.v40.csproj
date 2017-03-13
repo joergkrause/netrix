@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F4AAFEE-3A1F-4D43-953E-F3E26F48C2F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuruComponents.CodeEditor</RootNamespace>
+    <AssemblyName>GuruComponents.CodeEditor</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeEditor\Autolist\AutoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Autolist\TabListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Caret.cs" />
+    <Compile Include="CodeEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\CodeEditorDesigner.cs" />
+    <Compile Include="CodeEditor\Dialogs\FindReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Dialogs\GotoLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Dialogs\Settings.cs" />
+    <Compile Include="CodeEditor\EditView\EditViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Events.cs" />
+    <Compile Include="CodeEditor\InfoTip\InfoTipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\IPainter.cs" />
+    <Compile Include="CodeEditor\KeyboadActionList.cs" />
+    <Compile Include="CodeEditor\KeyboardAction.cs" />
+    <Compile Include="CodeEditor\Localizations.cs" />
+    <Compile Include="CodeEditor\Painter_GDI.cs" />
+    <Compile Include="CodeEditor\Selection.cs" />
+    <Compile Include="CodeEditor\Structs.cs" />
+    <Compile Include="ControlBorderStyle.cs" />
+    <Compile Include="Core\Collections\Generic\IKeyedCollection.cs" />
+    <Compile Include="Core\Collections\Generic\ILightCollection.cs" />
+    <Compile Include="Core\Collections\Generic\KeyedCollection.cs" />
+    <Compile Include="Core\Collections\Generic\LightCollection.cs" />
+    <Compile Include="Core\Collections\Generic\TreeCollection.cs" />
+    <Compile Include="Core\Collections\Generic\TreeItem.cs" />
+    <Compile Include="Core\Collections\Generic\TreeItemCollection.cs" />
+    <Compile Include="Core\Collections\Generic\TreeItemEnumerator.cs" />
+    <Compile Include="Core\Collections\Specialized\StringCollection.cs" />
+    <Compile Include="Core\Globalization\IMEWindow.cs" />
+    <Compile Include="Core\IO\FilesCache.cs" />
+    <Compile Include="Core\Serialization\Serializer.cs" />
+    <Compile Include="Core\Serialization\SerializerAttribute.cs" />
+    <Compile Include="Core\Serialization\SerializerPropertyAttribute.cs" />
+    <Compile Include="Core\Text\WordReader.cs" />
+    <Compile Include="Core\Text\XmlNodeTextReader.cs" />
+    <Compile Include="Core\Timers\WeakTimer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Win32\Enums.cs" />
+    <Compile Include="Core\Win32\NativeMethods.cs" />
+    <Compile Include="Core\Win32\NativeSubclasser.cs" />
+    <Compile Include="Core\Xml\XmlDocumentExtended.cs" />
+    <Compile Include="Core\Xml\XmlNodeExtended.cs" />
+    <Compile Include="DrawingTools.cs" />
+    <Compile Include="Drawing\ColorHLS.cs" />
+    <Compile Include="Drawing\ColorUtils.cs" />
+    <Compile Include="Drawing\FreeImage.cs" />
+    <Compile Include="Drawing\FreeImageBrightness.cs" />
+    <Compile Include="Drawing\FreeImageConstrast.cs" />
+    <Compile Include="Drawing\FreeImageGamma.cs" />
+    <Compile Include="Drawing\FreeImageGeometryTransformation.cs" />
+    <Compile Include="Drawing\FreeImagePixelTransformation.cs" />
+    <Compile Include="Drawing\FreeImageRescale.cs" />
+    <Compile Include="Drawing\FreeImageSupport.cs" />
+    <Compile Include="Drawing\FreeImageTransformation.cs" />
+    <Compile Include="Drawing\GDI\FontEnum.cs" />
+    <Compile Include="Drawing\GDI\GDIBitmap.cs" />
+    <Compile Include="Drawing\GDI\GDIBrushes.cs" />
+    <Compile Include="Drawing\GDI\GDIFont.cs" />
+    <Compile Include="Drawing\GDI\GDIObject.cs" />
+    <Compile Include="Drawing\GDI\GDIPens.cs" />
+    <Compile Include="Drawing\GDI\GDISurface.cs" />
+    <Compile Include="Drawing\GDI\MemHandler.cs" />
+    <Compile Include="Drawing\ImageInfo\Constants.cs" />
+    <Compile Include="Drawing\ImageInfo\Fraction.cs" />
+    <Compile Include="Drawing\ImageInfo\Info.cs" />
+    <Compile Include="Drawing\ImageInfo\PropertyTag.cs" />
+    <Compile Include="Drawing\Internal\FreeImageAPI.cs" />
+    <Compile Include="Drawing\Internal\GDIplus.cs" />
+    <Compile Include="Drawing\PixelBuffer.cs" />
+    <Compile Include="Drawing\RoundSelectionBrush.cs" />
+    <Compile Include="Drawing\Shapes\IDrawable.cs" />
+    <Compile Include="Drawing\Shapes\IFillable.cs" />
+    <Compile Include="Drawing\Shapes\IRectangle.cs" />
+    <Compile Include="Drawing\Shapes\Shape.cs" />
+    <Compile Include="Drawing\Shapes\ShapeArc.cs" />
+    <Compile Include="Drawing\Shapes\ShapeBezier.cs" />
+    <Compile Include="Drawing\Shapes\ShapeClosedCurve.cs" />
+    <Compile Include="Drawing\Shapes\ShapeCurve.cs" />
+    <Compile Include="Drawing\Shapes\ShapeEllipse.cs" />
+    <Compile Include="Drawing\Shapes\ShapeLine.cs" />
+    <Compile Include="Drawing\Shapes\ShapePie.cs" />
+    <Compile Include="Drawing\Shapes\ShapePolygon.cs" />
+    <Compile Include="Drawing\Shapes\ShapePolyline.cs" />
+    <Compile Include="Drawing\Shapes\ShapeRectangle.cs" />
+    <Compile Include="Drawing\Shapes\ShapeRoundRectangle.cs" />
+    <Compile Include="Drawing\Shapes\ShapeSpyral.cs" />
+    <Compile Include="Drawing\Shapes\ShapeStar.cs" />
+    <Compile Include="Drawing\Shapes\ShapeThumbSize.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="FormatLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormatLabelElement.cs" />
+    <Compile Include="FormatLabelRow.cs" />
+    <Compile Include="FormatLabelWord.cs" />
+    <Compile Include="IntelliMouse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IntelliMouseEvents.cs" />
+    <Compile Include="Plugins\Dialogs\PluginConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugins\Dialogs\PluginConfigurationDialog.Designer.cs">
+      <DependentUpon>PluginConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\IPluginApplication.cs" />
+    <Compile Include="Plugins\IPluginManager.cs" />
+    <Compile Include="Plugins\IPluginObject.cs" />
+    <Compile Include="Plugins\PluginApplication.cs" />
+    <Compile Include="Plugins\PluginBase.cs" />
+    <Compile Include="Plugins\PluginInfo.cs" />
+    <Compile Include="Plugins\PluginLoadInfo.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="RegionHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SplitViewChildWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SplitViewWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyntaxDocument\CodeEditorSyntaxLoader.cs" />
+    <Compile Include="SyntaxDocument\Syntax\BlockType\BlockType.cs" />
+    <Compile Include="SyntaxDocument\Syntax\BlockType\BlockTypeCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\CollectionBase.cs" />
+    <Compile Include="SyntaxDocument\Syntax\RowEventHandler.cs" />
+    <Compile Include="SyntaxDocument\Syntax\RowEventArgs.cs">
+    </Compile>
+    <Compile Include="SyntaxDocument\Syntax\Document\Formatting\FormatRange.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Formatting\FormatRangeCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Pattern\Pattern.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Pattern\PatternCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Pattern\PatternList.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Pattern\PatternListList.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Print\SourceCodePrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyntaxDocument\Syntax\Document\Row\Row.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Row\RowCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Row\Scope\Scope.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Row\Scope\ScopeCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Segment\Segment.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Segment\SegmentCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Structs.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\SyntaxDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyntaxDocument\Syntax\Document\TextRange.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\TextStyle\TextStyle.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\TextStyle\TextStyleDesignerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SyntaxDocument\Syntax\Document\TextStyle\TextStyleUIEditor.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Undo\UndoBlock.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Undo\UndoBlockCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Undo\UndoBuffer.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Word\Word.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Document\Word\WordCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Export\HTMLExporter.cs" />
+    <Compile Include="SyntaxDocument\Syntax\IntCollection.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Language\Language.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Language\LanguageList.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Language\LanguageReader.cs" />
+    <Compile Include="SyntaxDocument\Syntax\ParserEventHandler.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Parser\DefaultParser.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Parser\IParser.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Parser\ParseTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Parser\ScanResult_Segment.cs" />
+    <Compile Include="SyntaxDocument\Syntax\Parser\ScanResult_Word.cs" />
+    <Compile Include="ThumbControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Widget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeEditor\Autolist\AutoListForm.resx">
+      <DependentUpon>AutoListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Autolist\TabListBox.resx">
+      <DependentUpon>TabListBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditorControl.resx">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Dialogs\FindReplace.resx">
+      <DependentUpon>FindReplace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Dialogs\GotoLine.resx">
+      <DependentUpon>GotoLine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Dialogs\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\EditView\EditViewControl.resx">
+      <DependentUpon>EditViewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\InfoTip\InfoTipForm.resx">
+      <DependentUpon>InfoTipForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntelliMouse.resx">
+      <DependentUpon>IntelliMouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\Dialogs\PluginConfigurationDialog.resx">
+      <DependentUpon>PluginConfigurationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxDocument\Syntax\Document\SyntaxDocument.resx">
+      <DependentUpon>SyntaxDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyntaxDocument\Syntax\Document\TextStyle\TextStyleDesignerDialog.resx">
+      <DependentUpon>TextStyleDesignerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Properties\" />
+    <Folder Include="Resources\" />
+    <Folder Include="SyntaxDocument\Properties\" />
+    <Folder Include="SyntaxDocument\Syns\" />
+    <Folder Include="Windows\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drawing\Shapes\ToDoList.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

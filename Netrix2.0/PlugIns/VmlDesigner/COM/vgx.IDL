@@ -1,0 +1,1955 @@
+// Generated .IDL file (by the OLE/COM Object Viewer)
+// 
+// typelib filename: 1
+
+[
+  uuid(33BACB5D-9F3D-11D1-9870-00A0C955B42C),
+  version(1.7),
+  helpstring("Microsoft VML Renderer Object Library"),
+  helpfile("vbavgx1.chm"),
+  helpcontext(0x00000001)
+]
+library VgxDraw
+{
+    // TLib :     // TLib : OLE Automation : {00020430-0000-0000-C000-000000000046}
+    importlib("STDOLE2.TLB");
+
+    // Forward declare all types defined in this typelib
+    interface _IVgDispObj;
+    interface IVgAdjustments;
+    interface IVgColor;
+    interface IVgEquation;
+    interface IVgFill;
+    interface IVgVector2D;
+    interface IVgGradientColorArray;
+    interface IVgGradientColorArrayItem;
+    interface IVgFormula;
+    interface IVgGroupShapes;
+    interface IVgShape;
+    interface IVgPath;
+    interface IVgFixedRectangleArray;
+    interface IVgFixedRectangle;
+    interface IVgSegments;
+    interface IVgSegment;
+    interface IVgStroke;
+    interface IVgLineDashStyle;
+    interface IVgDashStyleArray;
+    interface IVgShadow;
+    interface IVgSkewOffset;
+    interface IVgSkewMatrix;
+    interface IVgExtrusion;
+    interface IVgVector3D;
+    interface IVgTextPath;
+    interface IVgSkew;
+    interface IVgFormulas;
+    interface IVgImageData;
+    interface IVgShapes;
+    interface IVgPoints;
+    interface IVgRuntimeStyle;
+    interface IVgReturnedPointArray;
+    interface IVgTextBox;
+    interface IVgVMLCanvas;
+    interface IVgView;
+    interface IVgBackground;
+
+    [
+      odl,
+      uuid(000D0300-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface _IVgDispObj : IDispatch {
+        [id(0x60020000), propget, restricted, hidden, helpcontext(0x000003e9)]
+        HRESULT Application([out, retval] IDispatch** ppidisp);
+        [id(0x60020001), propget, restricted, hidden, helpcontext(0x000003ea)]
+        HRESULT Creator([out, retval] long* plCreator);
+    };
+
+    typedef enum {
+        vgLineDashStyleMixed = 0xfffffffe,
+        vgLineDashStyleCustom = 0,
+        vgLineDashStyleSolid = 1,
+        vgLineDashStyleShortDash = 2,
+        vgLineDashStyleShortDot = 3,
+        vgLineDashStyleShortDashDot = 4,
+        vgLineDashStyleShortDashDotDot = 5,
+        vgLineDashStyleDot = 6,
+        vgLineDashStyleDash = 7,
+        vgLineDashStyleLongDash = 8,
+        vgLineDashStyleDashDot = 9,
+        vgLineDashStyleLongDashDot = 10,
+        vgLineDashStyleLongDashDotDot = 11
+    } VgLineDashStyle;
+
+    typedef enum {
+        vgLineStyleMixed = 0xfffffffe,
+        vgLineStyleSingle = 1,
+        vgLineStyleThinThin = 2,
+        vgLineStyleThinThick = 3,
+        vgLineStyleThickThin = 4,
+        vgLineStyleThickBetweenThin = 5
+    } VgLineStyle;
+
+    typedef enum {
+        vgArrowheadStyleMixed = 0xfffffffe,
+        vgArrowheadStyleNone = 1,
+        vgArrowheadStyleBlock = 2,
+        vgArrowheadStyleClassic = 3,
+        vgArrowheadStyleDiamond = 4,
+        vgArrowheadStyleOval = 5,
+        vgArrowheadStyleOpen = 6,
+        vgArrowheadStyleChevron = 7,
+        vgArrowheadStyleDoubleChevron = 8
+    } VgArrowheadStyle;
+
+    typedef enum {
+        vgArrowheadWidthMixed = 0xfffffffe,
+        vgArrowheadWidthNarrow = 1,
+        vgArrowheadWidthMedium = 2,
+        vgArrowheadWidthWide = 3
+    } VgArrowheadWidth;
+
+    typedef enum {
+        vgArrowheadLengthMixed = 0xfffffffe,
+        vgArrowheadLengthShort = 1,
+        vgArrowheadLengthMedium = 2,
+        vgArrowheadLengthLong = 3
+    } VgArrowheadLength;
+
+    typedef enum {
+        vgFillMixed = 0xfffffffe,
+        vgFillSolid = 1,
+        vgFillPattern = 2,
+        vgFillTile = 3,
+        vgFillFrame = 4,
+        vgFillGradient = 5,
+        vgFillGradientUnscaled = 6,
+        vgFillGradientCenter = 7,
+        vgFillGradientRadial = 8,
+        vgFillGradientTitle = 9,
+        vgFillBackground = 10
+    } VgFillType;
+
+    typedef enum {
+        vgGradientMixed = 0xfffffffe,
+        vgGradientHorizontal = 1,
+        vgGradientVertical = 2,
+        vgGradientDiagonalUp = 3,
+        vgGradientDiagonalDown = 4,
+        vgGradientFromCorner = 5,
+        vgGradientFromTitle = 6,
+        vgGradientFromCenter = 7
+    } VgGradientStyle;
+
+    typedef enum {
+        vgGradientColorMixed = 0xfffffffe,
+        vgGradientOneColor = 1,
+        vgGradientTwoColors = 2,
+        vgGradientPresetColors = 3
+    } VgGradientColorType;
+
+    typedef enum {
+        vgShadowMixed = 0xfffffffe,
+        vgShadowSingle = 1,
+        vgShadowDouble = 2,
+        vgShadowPerspective = 3,
+        vgShadowShapeRelative = 4,
+        vgShadowDrawingRelative = 5,
+        vgShadowEmboss = 6
+    } VgShadowType;
+
+    typedef enum {
+        VgSegmentMixed = 0xfffffffe,
+        vgSegmentLine = 0,
+        vgSegmentCurve = 1
+    } VgSegmentType;
+
+    typedef enum {
+        vgTriStateMixed = 0xfffffffe,
+        vgTriStateTrue = 0xffffffff,
+        vgTriStateFalse = 0,
+        vgTriStateCTrue = 1,
+        vgTriStateT = 0xffffffff,
+        vgTriStateF = 0,
+        vgTriStateToggle = 0xfffffffd
+    } VgTriState;
+
+    typedef enum {
+        vgColorTypeMixed = 0xfffffffe,
+        vgColorTypeRGB = 1,
+        vgColorTypeScheme = 2,
+        vgColorTypeNamed = 3
+    } VgColorType;
+
+    typedef enum {
+        vgBlackWhiteMixed = 0xfffffffe,
+        vgBlackWhiteAuto = 1,
+        vgBlackWhiteColor = 2,
+        vgBlackWhiteGrayScale = 3,
+        vgBlackWhiteLightGrayScale = 4,
+        vgBlackWhiteInverseGray = 5,
+        vgBlackWhiteGrayOutline = 6,
+        vgBlackWhiteBlackTextAndLines = 7,
+        vgBlackWhiteHighContrast = 8,
+        vgBlackWhiteBlack = 9,
+        vgBlackWhiteWhite = 10,
+        vgBlackWhiteUndrawn = 11
+    } VgBlackWhiteMode;
+
+    typedef enum {
+        vgIntegerMixed = 0x80000000,
+        vgSingleMixed = 0x80000000
+    } VgMixedType;
+
+    typedef enum {
+        vgSigmaMixed = 0xfffffffe,
+        vgSigmaNone = 0,
+        vgSigmaLinear = 1,
+        vgSigmaSigma = 2,
+        vgSigmaAny = 3
+    } VgSigmaType;
+
+    typedef enum {
+        vgLineJoinMixed = 0xfffffffe,
+        vgLineJoinRound = 1,
+        vgLineJoinBevel = 2,
+        vgLineJoinMiter = 3
+    } VgLineJoinStyle;
+
+    typedef enum {
+        vgLineEndCapMixed = 0xfffffffe,
+        vgLineEndCapFlat = 1,
+        vgLineEndCapSquare = 2,
+        vgLineEndCapRound = 3
+    } VgLineEndCapStyle;
+
+    typedef enum {
+        vgLineFillMixed = 0xfffffffe,
+        vgLineFillSolid = 1,
+        vgLineFillTile = 2,
+        vgLineFillPattern = 3,
+        vgLineFillFrame = 4
+    } VgLineFillType;
+
+    typedef enum {
+        vgAspectMixed = 0xfffffffe,
+        vgAspectIgnore = 1,
+        vgAspectAtLeast = 2,
+        vgAspectAtMost = 3
+    } VgAspectType;
+
+    typedef enum {
+        vgEquationOperationMixed = 0xfffffffe,
+        vgEquationOperationVal = 1,
+        vgEquationOperationSum = 2,
+        vgEquationOperationProduct = 3,
+        vgEquationOperationMid = 4,
+        vgEquationOperationAbs = 5,
+        vgEquationOperationMin = 6,
+        vgEquationOperationMax = 7,
+        vgEquationOperationIf = 8,
+        vgEquationOperationMod = 9,
+        vgEquationOperationATan2 = 10,
+        vgEquationOperationSin = 11,
+        vgEquationOperationCos = 12,
+        vgEquationOperationCosATan2 = 13,
+        vgEquationOperationSinATan2 = 14,
+        vgEquationOperationSqrt = 15,
+        vgEquationOperationSumAngle = 16,
+        vgEquationOperationEllipse = 17,
+        vgEquationOperationTan = 18
+    } VgEquationOperationType;
+
+    typedef enum {
+        vgExtrusionTypeMixed = 0xfffffffe,
+        vgExtrusionTypeParallel = 1,
+        vgExtrusionTypePerspective = 2
+    } VgExtrusionType;
+
+    typedef enum {
+        vg3DRenderModeMixed = 0xfffffffe,
+        vg3DRenderModeSolid = 1,
+        vg3DRenderModeWireFrame = 2,
+        vg3DRenderModeBoundingCube = 3
+    } Vg3DRenderMode;
+
+    typedef enum {
+        vg3DColorModeMixed = 0xfffffffe,
+        vg3DColorModeAuto = 1,
+        vg3DColorModeCustom = 2
+    } Vg3DColorMode;
+
+    typedef enum {
+        vg3DExtrudePlaneMixed = 0xfffffffe,
+        vg3DExtrudePlaneXY = 1,
+        vg3DExtrudePlaneZX = 2,
+        vg3DExtrudePlaneYZ = 3
+    } Vg3DExtrudePlane;
+
+    typedef enum {
+        vgSkewTransformMixed = 0xfffffffe,
+        vgSkewTransformShapeRelative = 1,
+        vgSkewTransformAbsolute = 2
+    } VgSkewTransformType;
+
+    typedef enum {
+        vgFormulaParamTypeMixed = 0xfffffffe,
+        vgFormulaParamTypeValue = 1,
+        vgFormulaParamTypeAdjustmentReference = 2,
+        vgFormulaParamTypeFormulaReference = 3
+    } VgFormulaParamType;
+
+    typedef enum {
+        vgVectorTypeMixed = 0xfffffffe,
+        vgVectorTypeMeasure = 1,
+        vgVectorTypeLength = 2,
+        vgVectorTypeAngleInDegrees = 3,
+        vgVectorTypeFraction = 4,
+        vgVectorTypeNumber = 5,
+        vgVectorTypePercentage = 6,
+        vgVectorTypeInteger = 7,
+        vgVectorTypePositiveInteger = 8
+    } VgVectorType;
+
+    typedef enum {
+        vgFlipMixed = 0xfffffffe,
+        vgFlipX = 1,
+        vgFlipY = 2,
+        vgFlipXY = 3,
+        vgFlipYX = 4
+    } VgFlipOrientation;
+
+    typedef enum {
+        VgSegemntCommandTypeMixed = 0xfffffffe,
+        VgSegmentCommandTypeMoveTo = 0xffffffff,
+        VgSegmentCommandTypeLineTo = 0,
+        VgSegmentCommandTypeCurveTo = 1,
+        VgSegmentCommandTypeClose = 2,
+        VgSegmentCommandTypeEnd = 3,
+        VgSegmentCommandTypeNoFill = 4,
+        VgSegmentCommandTypeNoStroke = 5,
+        VgSegmentCommandTypeAngleElipseTo = 6,
+        VgSegmentCommandTypeAngleElipse = 7,
+        VgSegmentCommandTypeArcTo = 8,
+        VgSegmentCommandTypeArc = 9,
+        VgSegmentCommandTypeClockwiseArcTo = 10,
+        VgSegmentCommandTypeClockwiseArc = 11,
+        VgSegmentCommandTypeElipticalQuadrantX = 12,
+        VgSegmentCommandTypeElipticalQuadrantY = 13,
+        VgSegmentCommandTypeQuadraticBezier = 14,
+        VgSegmentCommandTypeExtension = 256
+    } VgSegmentCommandType;
+
+    typedef enum {
+        VgSegmentCommandParamMixed = 0xfffffffe,
+        VgSegmentCommandParamCoordinate = 0xffffffff,
+        VgSegmentCommandParamAdjustmentReference = 0,
+        VgSegmentCommandParamFormulaReference = 1
+    } VgSegmentCommandParamType;
+
+    typedef enum {
+        VgSegmentInsertionPositionMixed = 0xfffffffe,
+        VgSegmentInsertionPositionBefore = 1,
+        VgSegmentInsertionPositionAfter = 2
+    } VgSegmentInsertionPosition;
+
+    typedef [public]
+    long VgRGBType;
+
+    typedef [public]
+    double VgMeasure;
+
+    typedef [public]
+    double VgLength;
+
+    typedef [public]
+    double VgFraction;
+
+    typedef [public]
+    double VgPercentage;
+
+    typedef [public]
+    double VgSignedPercentage;
+
+    typedef [public]
+    double VgAngleInDegrees;
+
+    typedef [public]
+    double VgNumber;
+
+    typedef [public]
+    double VgPositiveNumber;
+
+    [
+      odl,
+      uuid(000D0310-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgAdjustments : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] long* Val);
+        [id(00000000), propput]
+        HRESULT item(
+                        [in] int Index, 
+                        [in] long Val);
+        [id(0x00000003), propget]
+        HRESULT exists(
+                        [in] int Index, 
+                        [out, retval] VgTriState* pExists);
+        [id(0x00000004), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(0x00000004), propput]
+        HRESULT value([in] BSTR value);
+    };
+
+    [
+      odl,
+      uuid(000D0312-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgColor : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000064), propget]
+        HRESULT RGB([out, retval] VgRGBType* RGB);
+        [id(0x00000064), propput]
+        HRESULT RGB([in] VgRGBType RGB);
+        [id(0x00000067), propget]
+        HRESULT R([out, retval] int* R);
+        [id(0x00000067), propput]
+        HRESULT R([in] int R);
+        [id(0x00000068), propget]
+        HRESULT G([out, retval] int* G);
+        [id(0x00000068), propput]
+        HRESULT G([in] int G);
+        [id(0x00000069), propget]
+        HRESULT B([out, retval] int* B);
+        [id(0x00000069), propput]
+        HRESULT B([in] int B);
+        [id(0x00000066), propget]
+        HRESULT Type([out, retval] VgColorType* Type);
+    };
+
+    [
+      odl,
+      uuid(000D0351-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgEquation : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentEquations([out, retval] IDispatch** Parent);
+        [id(0x00000065), propget]
+        HRESULT operation([out, retval] VgEquationOperationType* operation);
+        [id(0x00000065), propput]
+        HRESULT operation([in] VgEquationOperationType operation);
+        [id(0x00000066), propget]
+        HRESULT param1([out, retval] int* param);
+        [id(0x00000066), propput]
+        HRESULT param1([in] int param);
+        [id(0x00000067), propget]
+        HRESULT paramtype1([out, retval] VgFormulaParamType* paramType);
+        [id(0x00000067), propput]
+        HRESULT paramtype1([in] VgFormulaParamType paramType);
+        [id(0x00000068), propget]
+        HRESULT param2([out, retval] int* param);
+        [id(0x00000068), propput]
+        HRESULT param2([in] int param);
+        [id(0x00000069), propget]
+        HRESULT paramtype2([out, retval] VgFormulaParamType* paramType);
+        [id(0x00000069), propput]
+        HRESULT paramtype2([in] VgFormulaParamType paramType);
+        [id(0x0000006a), propget]
+        HRESULT Val([out, retval] int* Val);
+        [id(0x0000006a), propput]
+        HRESULT Val([in] int Val);
+        [id(0x0000006b), propget]
+        HRESULT valtype([out, retval] VgFormulaParamType* paramType);
+        [id(0x0000006b), propput]
+        HRESULT valtype([in] VgFormulaParamType paramType);
+    };
+
+    [
+      odl,
+      uuid(000D0314-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgFill : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x0000000a)]
+        HRESULT Background();
+        [id(0x0000000b)]
+        HRESULT OneColorGradient(
+                        [in] VgGradientStyle Style, 
+                        [in] int Variant, 
+                        [in] VgAngleInDegrees Degree);
+        [id(0x00000010)]
+        HRESULT TwoColorGradient(
+                        [in] VgGradientStyle Style, 
+                        [in] int Variant);
+        [id(0x00000011)]
+        HRESULT Picture([in] BSTR PictureFile);
+        [id(0x00000012)]
+        HRESULT Textured([in] BSTR TextureFile);
+        [id(0x00000064), propget]
+        HRESULT color([out, retval] IVgColor** ForeColor);
+        [id(0x00000065), propget]
+        HRESULT color2([out, retval] IVgColor** BackColor);
+        [id(0x0000006f), propget]
+        HRESULT opacity([out, retval] VgFraction* opacity);
+        [id(0x0000006f), propput]
+        HRESULT opacity([in] VgFraction opacity);
+        [id(0x00000073), propget]
+        HRESULT opacity2([out, retval] VgFraction* opacity2);
+        [id(0x00000073), propput]
+        HRESULT opacity2([in] VgFraction opacity2);
+        [id(0x00000070), propget]
+        HRESULT Type([out, retval] VgFillType* Type);
+        [id(0x00000070), propput]
+        HRESULT Type([in] VgFillType Type);
+        [id(0x00000071), propget]
+        HRESULT on([out, retval] VgTriState* Visible);
+        [id(0x00000071), propput]
+        HRESULT on([in] VgTriState Visible);
+        [id(0x0000006d), propget]
+        HRESULT src([out, retval] BSTR* src);
+        [id(0x0000006d), propput]
+        HRESULT src([in] BSTR src);
+        [id(0x0000009b), propget]
+        HRESULT size([out, retval] IVgVector2D** size);
+        [id(0x00000074), propget]
+        HRESULT origin([out, retval] IVgVector2D** origin);
+        [id(0x00000075), propget]
+        HRESULT position([out, retval] IVgVector2D** position);
+        [id(0x00000076), propget]
+        HRESULT focussize([out, retval] IVgVector2D** position);
+        [id(0x00000077), propget]
+        HRESULT focusposition([out, retval] IVgVector2D** position);
+        [id(0x00000078), propget]
+        HRESULT colors([out, retval] IVgGradientColorArray** gradientColors);
+        [id(0x00000079), propget]
+        HRESULT method([out, retval] VgSigmaType* method);
+        [id(0x00000079), propput]
+        HRESULT method([in] VgSigmaType method);
+        [id(0x0000007a), propget]
+        HRESULT angle([out, retval] VgAngleInDegrees* angle);
+        [id(0x0000007a), propput]
+        HRESULT angle([in] VgAngleInDegrees angle);
+        [id(0x0000007b), propget]
+        HRESULT focus([out, retval] VgSignedPercentage* opacity2);
+        [id(0x0000007b), propput]
+        HRESULT focus([in] VgSignedPercentage opacity2);
+        [id(0x0000007c), propget]
+        HRESULT aspect([out, retval] VgAspectType* aspect);
+        [id(0x0000007c), propput]
+        HRESULT aspect([in] VgAspectType aspect);
+        [id(0x0000007d), propget]
+        HRESULT alignshape([out, retval] VgTriState* alignshape);
+        [id(0x0000007d), propput]
+        HRESULT alignshape([in] VgTriState alignshape);
+        [id(0x0000007e), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x0000007e), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0342-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgVector2D : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT Parent([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT x([out, retval] double* x);
+        [id(0x00000064), propput]
+        HRESULT x([in] double x);
+        [id(0x00000065), propget]
+        HRESULT y([out, retval] double* y);
+        [id(0x00000065), propput]
+        HRESULT y([in] double y);
+        [id(0x00000066), propget]
+        HRESULT Type([out, retval] VgVectorType* Type);
+    };
+
+    [
+      odl,
+      uuid(000D0344-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgGradientColorArray : _IVgDispObj {
+        [id(0xfffffffc), propget, restricted, hidden]
+        HRESULT _newEnum([out, retval] IUnknown** _newEnum);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgGradientColorArrayItem** Formula);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(0x00000064), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000065), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(0x00000066)]
+        HRESULT addColor(
+                        [in] VgFraction percent, 
+                        [out, retval] IVgColor** color);
+        [id(0x00000067)]
+        HRESULT removeColor([in] VgFraction percent);
+    };
+
+    [
+      odl,
+      uuid(000D035A-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgGradientColorArrayItem : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentGradientColorArray([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT rangeEndPoint([out, retval] VgFraction* value);
+        [id(0x00000065), propget]
+        HRESULT color([out, retval] IVgColor** color);
+        [id(0x00000066)]
+        HRESULT remove();
+    };
+
+    [
+      odl,
+      uuid(000D0349-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgFormula : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentFormulas([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT eqn([out, retval] IVgEquation** Equation);
+    };
+
+    [
+      odl,
+      uuid(000D0316-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgGroupShapes : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** ppidisp);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* pnShapes);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgShape** item);
+        [id(0xfffffffc), propget]
+        HRESULT _newEnum([out, retval] IUnknown** ppienum);
+    };
+
+    [
+      odl,
+      uuid(000D031C-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgShape : _IVgDispObj {
+        [id(0x00000064), propget]
+        HRESULT adj([out, retval] IVgAdjustments** Adjustments);
+        [id(0x00000083), propget]
+        HRESULT alt([out, retval] BSTR* AlternativeText);
+        [id(0x00000083), propput]
+        HRESULT alt([in] BSTR AlternativeText);
+        [id(0x00000096), propget]
+        HRESULT path([out, retval] IVgPath** path);
+        [id(0x00000097), propget]
+        HRESULT href([out, retval] BSTR* href);
+        [id(0x00000097), propput]
+        HRESULT href([in] BSTR href);
+        [id(0x00000098), propget, restricted, hidden]
+        HRESULT opacity([out, retval] VgFraction* opacity);
+        [id(0x00000098), propput, restricted, hidden]
+        HRESULT opacity([in] VgFraction opacity);
+        [id(0x00000099), propget, restricted, hidden]
+        HRESULT chromakey([out, retval] IVgColor** chromakey);
+        [id(0x0000009a), propget]
+        HRESULT stroke([out, retval] IVgStroke** stroke);
+        [id(0x0000009b), propget]
+        HRESULT strokecolor([out, retval] IVgColor** strokecolor);
+        [id(0x0000009c), propget]
+        HRESULT strokeweight([out, retval] VgLength* strokeweight);
+        [id(0x0000009c), propput]
+        HRESULT strokeweight([in] VgLength strokeweight);
+        [id(0x0000009d), propget]
+        HRESULT fill([out, retval] IVgFill** fill);
+        [id(0x0000009e), propget, restricted, hidden]
+        HRESULT spt([out, retval] BSTR* spt);
+        [id(0x0000009e), propput, restricted, hidden]
+        HRESULT spt([in] BSTR spt);
+        [id(0x0000009f), propget]
+        HRESULT oned([out, retval] VgTriState* spt);
+        [id(0x0000009f), propput]
+        HRESULT oned([in] VgTriState spt);
+        [id(0x000000a0), propget]
+        HRESULT fillcolor([out, retval] IVgColor** fill);
+        [id(0x000000a1), propget]
+        HRESULT print([out, retval] VgTriState* print);
+        [id(0x000000a1), propput]
+        HRESULT print([in] VgTriState print);
+        [id(0x000000a2), propget]
+        HRESULT coordsize([out, retval] IVgVector2D** coordsize);
+        [id(0x000000a3), propget]
+        HRESULT coordorigin([out, retval] IVgVector2D** coordorigin);
+        [id(0x000000a4), propget, restricted, hidden]
+        HRESULT scale([out, retval] IVgVector2D** coordorigin);
+        [id(0x000000a5), propget]
+        HRESULT button([out, retval] VgTriState* button);
+        [id(0x000000a5), propput]
+        HRESULT button([in] VgTriState button);
+        [id(0x000000a6), propget]
+        HRESULT bwmode([out, retval] VgBlackWhiteMode* bwmode);
+        [id(0x000000a6), propput]
+        HRESULT bwmode([in] VgBlackWhiteMode bwmode);
+        [id(0x000000a7), propget]
+        HRESULT bwpure([out, retval] VgBlackWhiteMode* bwmode);
+        [id(0x000000a7), propput]
+        HRESULT bwpure([in] VgBlackWhiteMode bwmode);
+        [id(0x000000a8), propget]
+        HRESULT bwnormal([out, retval] VgBlackWhiteMode* bwnormal);
+        [id(0x000000a8), propput]
+        HRESULT bwnormal([in] VgBlackWhiteMode bwnormal);
+        [id(0x000000a9), propget, restricted, hidden]
+        HRESULT forcedash([out, retval] VgTriState* forcedash);
+        [id(0x000000a9), propput, restricted, hidden]
+        HRESULT forcedash([in] VgTriState forcedash);
+        [id(0x000000be), propget]
+        HRESULT shadow([out, retval] IVgShadow** shadow);
+        [id(0x000000bf), propget]
+        HRESULT extrusion([out, retval] IVgExtrusion** extrusion);
+        [id(0x000000c0), propget]
+        HRESULT textpath([out, retval] IVgTextPath** textpath);
+        [id(0x000000c2), propget]
+        HRESULT skew([out, retval] IVgSkew** skew);
+        [id(0x000000c3), propget]
+        HRESULT formulas([out, retval] IVgFormulas** formulas);
+        [id(0x00000076), propget]
+        HRESULT imagedata([out, retval] IVgImageData** imagedata);
+        [id(0x000000c8), propget]
+        HRESULT filled([out, retval] VgTriState* filled);
+        [id(0x000000c8), propput]
+        HRESULT filled([in] VgTriState filled);
+        [id(0x000000c9), propget]
+        HRESULT stroked([out, retval] VgTriState* stroked);
+        [id(0x000000c9), propput]
+        HRESULT stroked([in] VgTriState stroked);
+        [id(0x000000ca), propget]
+        HRESULT rotation([out, retval] VgAngleInDegrees* rotation);
+        [id(0x000000ca), propput]
+        HRESULT rotation([in] VgAngleInDegrees rotation);
+        [id(0x000000cd), propget]
+        HRESULT version([out, retval] BSTR* pver);
+        [id(0x000000cf), propget]
+        HRESULT Type([out, retval] BSTR* href);
+        [id(0x000000cf), propput]
+        HRESULT Type([in] BSTR href);
+        [id(0x000000d0), propget, restricted, hidden]
+        HRESULT left([out, retval] VgMeasure* left);
+        [id(0x000000d0), propput, restricted, hidden]
+        HRESULT left([in] VgMeasure left);
+        [id(0x000000d1), propget, restricted, hidden]
+        HRESULT top([out, retval] VgMeasure* top);
+        [id(0x000000d1), propput, restricted, hidden]
+        HRESULT top([in] VgMeasure top);
+        [id(0x000000d2), propget, restricted, hidden]
+        HRESULT width([out, retval] VgMeasure* width);
+        [id(0x000000d2), propput, restricted, hidden]
+        HRESULT width([in] VgMeasure width);
+        [id(0x000000d3), propget, restricted, hidden]
+        HRESULT height([out, retval] VgMeasure* height);
+        [id(0x000000d3), propput, restricted, hidden]
+        HRESULT height([in] VgMeasure height);
+        [id(0x000000d4), propget, restricted, hidden]
+        HRESULT flip([out, retval] VgFlipOrientation* height);
+        [id(0x000000d4), propput, restricted, hidden]
+        HRESULT flip([in] VgFlipOrientation height);
+        [id(0x0000006c), propget]
+        HRESULT childShapes([out, retval] IVgShapes** GroupShapes);
+        [id(0x000000d6), propget]
+        HRESULT from([out, retval] IVgVector2D** from);
+        [id(0x000000d7), propget]
+        HRESULT to([out, retval] IVgVector2D** to);
+        [id(0x000000d8), propget]
+        HRESULT points([out, retval] IVgPoints** to);
+        [id(0x000000d9), propget]
+        HRESULT control1([out, retval] IVgVector2D** control1);
+        [id(0x000000da), propget]
+        HRESULT control2([out, retval] IVgVector2D** control2);
+        [id(0x000000db), propget]
+        HRESULT startAngle([out, retval] VgAngleInDegrees* startAngle);
+        [id(0x000000db), propput]
+        HRESULT startAngle([in] VgAngleInDegrees startAngle);
+        [id(0x000000dc), propget]
+        HRESULT endAngle([out, retval] VgAngleInDegrees* endAngle);
+        [id(0x000000dc), propput]
+        HRESULT endAngle([in] VgAngleInDegrees endAngle);
+        [id(0x000000dd), propget, restricted, hidden]
+        HRESULT arcSize([out, retval] VgFraction* arcSize);
+        [id(0x000000dd), propput, restricted, hidden]
+        HRESULT arcSize([in] VgFraction arcSize);
+        [id(0x000000de), propget]
+        HRESULT blacklevel([out, retval] VgFraction* blacklevel);
+        [id(0x000000de), propput]
+        HRESULT blacklevel([in] VgFraction blacklevel);
+        [id(0x000000df), propget]
+        HRESULT gain([out, retval] VgPositiveNumber* gain);
+        [id(0x000000df), propput]
+        HRESULT gain([in] VgPositiveNumber gain);
+        [id(0x000000e0), propget]
+        HRESULT cropbottom([out, retval] VgNumber* cropbottom);
+        [id(0x000000e0), propput]
+        HRESULT cropbottom([in] VgNumber cropbottom);
+        [id(0x000000e1), propget]
+        HRESULT cropleft([out, retval] VgNumber* cropleft);
+        [id(0x000000e1), propput]
+        HRESULT cropleft([in] VgNumber cropleft);
+        [id(0x000000e2), propget]
+        HRESULT cropright([out, retval] VgNumber* cropright);
+        [id(0x000000e2), propput]
+        HRESULT cropright([in] VgNumber cropright);
+        [id(0x000000e3), propget]
+        HRESULT croptop([out, retval] VgNumber* croptop);
+        [id(0x000000e3), propput]
+        HRESULT croptop([in] VgNumber croptop);
+        [id(0x000000e4), propget]
+        HRESULT src([out, retval] BSTR* src);
+        [id(0x000000e4), propput]
+        HRESULT src([in] BSTR src);
+        [id(0x000000e5), propget]
+        HRESULT embosscolor([out, retval] IVgColor** embosscolor);
+        [id(0x000000e6), propget]
+        HRESULT gamma([out, retval] VgFraction* gamma);
+        [id(0x000000e6), propput]
+        HRESULT gamma([in] VgFraction gamma);
+        [id(0x000000e9), propget]
+        HRESULT grayscale([out, retval] VgTriState* grayscale);
+        [id(0x000000e9), propput]
+        HRESULT grayscale([in] VgTriState grayscale);
+        [id(0x000000ea), propget]
+        HRESULT bilevel([out, retval] VgTriState* bilevel);
+        [id(0x000000ea), propput]
+        HRESULT bilevel([in] VgTriState bilevel);
+        [id(0x0000010e), propget]
+        HRESULT shapeType([out, retval] IVgShape** shapeType);
+        [id(0x000000fa), propget, hidden]
+        HRESULT _shape([out, retval] IVgShape** thisShape);
+        [id(0x000000fb), propget, hidden]
+        HRESULT _vgRuntimeStyle([out, retval] IVgRuntimeStyle** rts);
+        [id(0x000000fc), propget, hidden]
+        HRESULT _anchorRect([out, retval] IVgReturnedPointArray** pts);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x0000000b), restricted, hidden]
+        HRESULT Delete();
+        [id(0x0000000c), restricted, hidden]
+        HRESULT Duplicate([out, retval] IVgShape** Duplicate);
+        [id(0x0000010f), propget]
+        HRESULT textbox([out, retval] IVgTextBox** textbox);
+        [id(0x000000eb), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x000000eb), propput]
+        HRESULT template([in] BSTR Val);
+        [id(0x000000ec), propget]
+        HRESULT formulaValue(
+                        [in] int Index, 
+                        [out, retval] int* Val);
+    };
+
+    [
+      odl,
+      uuid(000D0343-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgPath : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000065), propget]
+        HRESULT textboxrect([out, retval] IVgFixedRectangleArray** rect);
+        [id(0x00000066), propget]
+        HRESULT limo([out, retval] IVgVector2D** limo);
+        [id(0x00000067), propget]
+        HRESULT v([out, retval] BSTR* value);
+        [id(0x00000067), propput]
+        HRESULT v([in] BSTR value);
+        [id(0x00000068), propget]
+        HRESULT segments([out, retval] IVgSegments** segs);
+        [id(0x00000069), propget]
+        HRESULT arrowok([out, retval] VgTriState* arrowok);
+        [id(0x00000069), propput]
+        HRESULT arrowok([in] VgTriState arrowok);
+        [id(0x0000006a), propget]
+        HRESULT shadowok([out, retval] VgTriState* shadowok);
+        [id(0x0000006a), propput]
+        HRESULT shadowok([in] VgTriState shadowok);
+        [id(0x0000006b), propget]
+        HRESULT extrusionok([out, retval] VgTriState* extrusionok);
+        [id(0x0000006b), propput]
+        HRESULT extrusionok([in] VgTriState extrusionok);
+        [id(0x0000006c), propget]
+        HRESULT strokeok([out, retval] VgTriState* strokeok);
+        [id(0x0000006c), propput]
+        HRESULT strokeok([in] VgTriState strokeok);
+        [id(0x0000006d), propget]
+        HRESULT textpathok([out, retval] VgTriState* textpathok);
+        [id(0x0000006d), propput]
+        HRESULT textpathok([in] VgTriState textpathok);
+        [id(0x0000006e), propget]
+        HRESULT gradientshapeok([out, retval] VgTriState* gradientshapeok);
+        [id(0x0000006e), propput]
+        HRESULT gradientshapeok([in] VgTriState gradientshapeok);
+        [id(0x0000006f), propget]
+        HRESULT fillok([out, retval] VgTriState* fillok);
+        [id(0x0000006f), propput]
+        HRESULT fillok([in] VgTriState fillok);
+        [id(0x00000070), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x00000070), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0354-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgFixedRectangleArray : _IVgDispObj {
+        [id(0xfffffffc), propget, restricted, hidden]
+        HRESULT _newEnum([out, retval] IUnknown** _newEnum);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgFixedRectangle** rect);
+        [id(0x00000064), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(0x00000065), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(0x00000065), propput]
+        HRESULT value([in] BSTR value);
+    };
+
+    [
+      odl,
+      uuid(000D0355-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgFixedRectangle : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000064), propget]
+        HRESULT left([out, retval] double* x);
+        [id(0x00000064), propput]
+        HRESULT left([in] double x);
+        [id(0x00000065), propget]
+        HRESULT top([out, retval] double* y);
+        [id(0x00000065), propput]
+        HRESULT top([in] double y);
+        [id(0x00000066), propget]
+        HRESULT right([out, retval] double* Z);
+        [id(0x00000066), propput]
+        HRESULT right([in] double Z);
+        [id(0x00000067), propget]
+        HRESULT bottom([out, retval] double* Z);
+        [id(0x00000067), propput]
+        HRESULT bottom([in] double Z);
+    };
+
+    [
+      odl,
+      uuid(000D0360-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgSegments : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentPath([out, retval] IDispatch** Parent);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgSegment** Val);
+    };
+
+    [
+      odl,
+      uuid(000D0361-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgSegment : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentPath([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT command([out, retval] VgSegmentCommandType* command);
+        [id(0x00000065), propget]
+        HRESULT x(
+                        [in] int Index, 
+                        [out, retval] double* Val);
+        [id(0x00000065), propput]
+        HRESULT x(
+                        [in] int Index, 
+                        [in] double Val);
+        [id(0x00000066), propget]
+        HRESULT y(
+                        [in] int Index, 
+                        [out, retval] double* Val);
+        [id(0x00000066), propput]
+        HRESULT y(
+                        [in] int Index, 
+                        [in] double Val);
+        [id(0x00000067), propget]
+        HRESULT xParamType(
+                        [in] int Index, 
+                        [out, retval] VgSegmentCommandParamType* Type);
+        [id(0x00000067), propput]
+        HRESULT xParamType(
+                        [in] int Index, 
+                        [in] VgSegmentCommandParamType Type);
+        [id(0x00000068), propget]
+        HRESULT yParamType(
+                        [in] int Index, 
+                        [out, retval] VgSegmentCommandParamType* Type);
+        [id(0x00000068), propput]
+        HRESULT yParamType(
+                        [in] int Index, 
+                        [in] VgSegmentCommandParamType Type);
+        [id(0x00000069), propget]
+        HRESULT vertexCount([out, retval] int* CVerticies);
+        [id(0x0000006a), propget]
+        HRESULT vertexGroupCount([out, retval] int* CGroupCount);
+        [id(0x0000006f), propget]
+        HRESULT numberVerticiesPerGroup([out, retval] int* CInGroup);
+        [id(0x0000006b)]
+        HRESULT addVertexGroup([in] int groupIndexToInsertBefore);
+        [id(0x0000006c)]
+        HRESULT removeVertexGroup([in] int groupIndexToDestroy);
+        [id(0x0000006d)]
+        HRESULT insertAdjacentSegment(
+                        [in] VgSegmentInsertionPosition pos, 
+                        [in] VgSegmentCommandType Type, 
+                        [out, retval] IVgSegment** pNewSegment);
+        [id(0x0000006e)]
+        HRESULT remove();
+    };
+
+    [
+      odl,
+      uuid(000D0317-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgStroke : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT color2([out, retval] IVgColor** BackColor);
+        [id(0x00000065), propget]
+        HRESULT startarrowlength([out, retval] VgArrowheadLength* startarrowlength);
+        [id(0x00000065), propput]
+        HRESULT startarrowlength([in] VgArrowheadLength startarrowlength);
+        [id(0x00000066), propget]
+        HRESULT startarrow([out, retval] VgArrowheadStyle* startarrow);
+        [id(0x00000066), propput]
+        HRESULT startarrow([in] VgArrowheadStyle startarrow);
+        [id(0x00000067), propget]
+        HRESULT startarrowwidth([out, retval] VgArrowheadWidth* startarrowwidth);
+        [id(0x00000067), propput]
+        HRESULT startarrowwidth([in] VgArrowheadWidth startarrowwidth);
+        [id(0x00000068), propget]
+        HRESULT dashstyle([out, retval] IVgLineDashStyle** dashstyle);
+        [id(0x00000069), propget]
+        HRESULT endarrowlength([out, retval] VgArrowheadLength* endarrowlength);
+        [id(0x00000069), propput]
+        HRESULT endarrowlength([in] VgArrowheadLength endarrowlength);
+        [id(0x0000006a), propget]
+        HRESULT endarrow([out, retval] VgArrowheadStyle* endarrow);
+        [id(0x0000006a), propput]
+        HRESULT endarrow([in] VgArrowheadStyle endarrow);
+        [id(0x0000006b), propget]
+        HRESULT endarrowwidth([out, retval] VgArrowheadWidth* endarrowwidth);
+        [id(0x0000006b), propput]
+        HRESULT endarrowwidth([in] VgArrowheadWidth endarrowwidth);
+        [id(0x0000006c), propget]
+        HRESULT color([out, retval] IVgColor** ForeColor);
+        [id(0x0000006e), propget]
+        HRESULT linestyle([out, retval] VgLineStyle* Style);
+        [id(0x0000006e), propput]
+        HRESULT linestyle([in] VgLineStyle Style);
+        [id(0x0000006f), propget]
+        HRESULT opacity([out, retval] VgFraction* Transparency);
+        [id(0x0000006f), propput]
+        HRESULT opacity([in] VgFraction Transparency);
+        [id(0x00000070), propget]
+        HRESULT on([out, retval] VgTriState* Visible);
+        [id(0x00000070), propput]
+        HRESULT on([in] VgTriState Visible);
+        [id(0x00000071), propget]
+        HRESULT weight([out, retval] VgLength* weight);
+        [id(0x00000071), propput]
+        HRESULT weight([in] VgLength weight);
+        [id(0x00000072), propget]
+        HRESULT imagealignshape([out, retval] VgTriState* imagealignshape);
+        [id(0x00000072), propput]
+        HRESULT imagealignshape([in] VgTriState imagealignshape);
+        [id(0x00000073), propget]
+        HRESULT imagesize([out, retval] IVgVector2D** imagesize);
+        [id(0x00000074), propget]
+        HRESULT miterlimit([out, retval] VgPositiveNumber* miterlimit);
+        [id(0x00000074), propput]
+        HRESULT miterlimit([in] VgPositiveNumber miterlimit);
+        [id(0x00000075), propget]
+        HRESULT joinstyle([out, retval] VgLineJoinStyle* weight);
+        [id(0x00000075), propput]
+        HRESULT joinstyle([in] VgLineJoinStyle weight);
+        [id(0x00000076), propget]
+        HRESULT endcap([out, retval] VgLineEndCapStyle* weight);
+        [id(0x00000076), propput]
+        HRESULT endcap([in] VgLineEndCapStyle weight);
+        [id(0x00000077), propget]
+        HRESULT filltype([out, retval] VgLineFillType* filltype);
+        [id(0x00000077), propput]
+        HRESULT filltype([in] VgLineFillType filltype);
+        [id(0x00000078), propget]
+        HRESULT src([out, retval] BSTR* src);
+        [id(0x00000078), propput]
+        HRESULT src([in] BSTR src);
+        [id(0x00000079), propget]
+        HRESULT imageaspect([out, retval] VgAspectType* imageaspect);
+        [id(0x00000079), propput]
+        HRESULT imageaspect([in] VgAspectType imageaspect);
+        [id(0x0000007a), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x0000007a), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0359-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgLineDashStyle : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT presetStyle([out, retval] VgLineDashStyle* value);
+        [id(0x00000064), propput]
+        HRESULT presetStyle([in] VgLineDashStyle value);
+        [id(0x00000065), propget]
+        HRESULT array([out, retval] IVgDashStyleArray** array);
+    };
+
+    [
+      odl,
+      uuid(000D035B-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgDashStyleArray : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] long* Val);
+        [id(00000000), propput]
+        HRESULT item(
+                        [in] int Index, 
+                        [in] long Val);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentDashStyle([out, retval] IDispatch** Parent);
+        [id(0x00000002), propput]
+        HRESULT length([in] int Count);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+    };
+
+    [
+      odl,
+      uuid(000D031B-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgShadow : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT color([out, retval] IVgColor** ForeColor);
+        [id(0x00000065), propget]
+        HRESULT obscured([out, retval] VgTriState* obscured);
+        [id(0x00000065), propput]
+        HRESULT obscured([in] VgTriState obscured);
+        [id(0x00000066), propget]
+        HRESULT offset([out, retval] IVgSkewOffset** offset);
+        [id(0x00000067), propget]
+        HRESULT offset2([out, retval] IVgVector2D** offset2);
+        [id(0x00000068), propget]
+        HRESULT opacity([out, retval] VgFraction* opacity);
+        [id(0x00000068), propput]
+        HRESULT opacity([in] VgFraction opacity);
+        [id(0x00000069), propget]
+        HRESULT Type([out, retval] VgShadowType* Type);
+        [id(0x00000069), propput]
+        HRESULT Type([in] VgShadowType Type);
+        [id(0x0000006a), propget]
+        HRESULT on([out, retval] VgTriState* on);
+        [id(0x0000006a), propput]
+        HRESULT on([in] VgTriState on);
+        [id(0x0000006b), propget]
+        HRESULT color2([out, retval] IVgColor** BackColor);
+        [id(0x0000006c), propget]
+        HRESULT origin([out, retval] IVgVector2D** origin);
+        [id(0x0000006e), propget]
+        HRESULT matrix([out, retval] IVgSkewMatrix** ppSkewMatrix);
+        [id(0x0000006f), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x0000006f), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D035C-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgSkewOffset : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentSkew([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT x([out, retval] double* x);
+        [id(0x00000064), propput]
+        HRESULT x([in] double x);
+        [id(0x00000065), propget]
+        HRESULT y([out, retval] double* y);
+        [id(0x00000065), propput]
+        HRESULT y([in] double y);
+        [id(0x00000066), propget]
+        HRESULT Type([out, retval] VgSkewTransformType* Type);
+        [id(0x00000066), propput]
+        HRESULT Type([in] VgSkewTransformType Type);
+    };
+
+    [
+      odl,
+      uuid(000D0346-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgSkewMatrix : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* Val);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR Val);
+        [id(0x00000064), propget]
+        HRESULT xtox([out, retval] double* Val);
+        [id(0x00000064), propput]
+        HRESULT xtox([in] double Val);
+        [id(0x00000065), propget]
+        HRESULT ytox([out, retval] double* Val);
+        [id(0x00000065), propput]
+        HRESULT ytox([in] double Val);
+        [id(0x00000066), propget]
+        HRESULT xtoy([out, retval] double* Val);
+        [id(0x00000066), propput]
+        HRESULT xtoy([in] double Val);
+        [id(0x00000067), propget]
+        HRESULT ytoy([out, retval] double* Val);
+        [id(0x00000067), propput]
+        HRESULT ytoy([in] double Val);
+        [id(0x00000068), propget]
+        HRESULT perspectivex([out, retval] double* Val);
+        [id(0x00000068), propput]
+        HRESULT perspectivex([in] double Val);
+        [id(0x00000069), propget]
+        HRESULT perspectivey([out, retval] double* Val);
+        [id(0x00000069), propput]
+        HRESULT perspectivey([in] double Val);
+        [id(0x0000006a), propget]
+        HRESULT transformtype([out, retval] VgSkewTransformType* Type);
+    };
+
+    [
+      odl,
+      uuid(000D0321-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgExtrusion : _IVgDispObj {
+        [id(0x00000096), propget]
+        HRESULT on([out, retval] VgTriState* on);
+        [id(0x00000096), propput]
+        HRESULT on([in] VgTriState on);
+        [id(0x00000067), propget]
+        HRESULT Type([out, retval] VgExtrusionType* Type);
+        [id(0x00000067), propput]
+        HRESULT Type([in] VgExtrusionType Type);
+        [id(0x00000068), propget]
+        HRESULT viewpointorigin([out, retval] IVgVector2D** viewpointorigin);
+        [id(0x00000069), propget]
+        HRESULT plane([out, retval] Vg3DExtrudePlane* Type);
+        [id(0x00000069), propput]
+        HRESULT plane([in] Vg3DExtrudePlane Type);
+        [id(0x0000006a), propget]
+        HRESULT skewangle([out, retval] VgAngleInDegrees* skewangle);
+        [id(0x0000006a), propput]
+        HRESULT skewangle([in] VgAngleInDegrees skewangle);
+        [id(0x0000006b), propget]
+        HRESULT skewamt([out, retval] VgPercentage* skewamt);
+        [id(0x0000006b), propput]
+        HRESULT skewamt([in] VgPercentage skewamt);
+        [id(0x0000006c), propget]
+        HRESULT foredepth([out, retval] VgLength* foredepth);
+        [id(0x0000006c), propput]
+        HRESULT foredepth([in] VgLength foredepth);
+        [id(0x0000006d), propget]
+        HRESULT backdepth([out, retval] VgLength* backdepth);
+        [id(0x0000006d), propput]
+        HRESULT backdepth([in] VgLength backdepth);
+        [id(0x0000006f), propget]
+        HRESULT orientationangle([out, retval] VgAngleInDegrees* orientationangle);
+        [id(0x0000006f), propput]
+        HRESULT orientationangle([in] VgAngleInDegrees orientationangle);
+        [id(0x00000070), propget]
+        HRESULT rotationcenter([out, retval] IVgVector3D** rotationcenter);
+        [id(0x00000071), propget]
+        HRESULT rotationangle([out, retval] IVgVector2D** orientationangle);
+        [id(0x00000072), propget]
+        HRESULT color([out, retval] IVgColor** color);
+        [id(0x00000073), propget]
+        HRESULT shininess([out, retval] int* shininess);
+        [id(0x00000073), propput]
+        HRESULT shininess([in] int shininess);
+        [id(0x00000074), propget]
+        HRESULT specularity([out, retval] VgPositiveNumber* specularity);
+        [id(0x00000074), propput]
+        HRESULT specularity([in] VgPositiveNumber specularity);
+        [id(0x00000076), propget]
+        HRESULT metal([out, retval] VgTriState* metal);
+        [id(0x00000076), propput]
+        HRESULT metal([in] VgTriState metal);
+        [id(0x00000077), propget]
+        HRESULT edge([out, retval] VgLength* edge);
+        [id(0x00000077), propput]
+        HRESULT edge([in] VgLength edge);
+        [id(0x00000078), propget]
+        HRESULT facet([out, retval] VgPositiveNumber* facet);
+        [id(0x00000078), propput]
+        HRESULT facet([in] VgPositiveNumber facet);
+        [id(0x00000079), propget]
+        HRESULT lightface([out, retval] VgTriState* lightface);
+        [id(0x00000079), propput]
+        HRESULT lightface([in] VgTriState lightface);
+        [id(0x0000007a), propget]
+        HRESULT brightness([out, retval] VgPositiveNumber* brightness);
+        [id(0x0000007a), propput]
+        HRESULT brightness([in] VgPositiveNumber brightness);
+        [id(0x0000007b), propget]
+        HRESULT lightposition([out, retval] IVgVector3D** lightposition);
+        [id(0x0000007c), propget]
+        HRESULT lightlevel([out, retval] int* lightlevel);
+        [id(0x0000007c), propput]
+        HRESULT lightlevel([in] int lightlevel);
+        [id(0x0000007d), propget]
+        HRESULT lightharsh([out, retval] VgTriState* lightharsh);
+        [id(0x0000007d), propput]
+        HRESULT lightharsh([in] VgTriState lightharsh);
+        [id(0x0000007e), propget]
+        HRESULT lightposition2([out, retval] IVgVector3D** lightposition2);
+        [id(0x0000007f), propget]
+        HRESULT lightlevel2([out, retval] int* lightlevel2);
+        [id(0x0000007f), propput]
+        HRESULT lightlevel2([in] int lightlevel2);
+        [id(0x00000080), propget]
+        HRESULT lightharsh2([out, retval] VgTriState* lightharsh2);
+        [id(0x00000080), propput]
+        HRESULT lightharsh2([in] VgTriState lightharsh2);
+        [id(0x00000081), propget]
+        HRESULT render([out, retval] Vg3DRenderMode* render);
+        [id(0x00000081), propput]
+        HRESULT render([in] Vg3DRenderMode render);
+        [id(0x00000082), propget]
+        HRESULT colormode([out, retval] Vg3DColorMode* mode);
+        [id(0x00000082), propput]
+        HRESULT colormode([in] Vg3DColorMode mode);
+        [id(0x00000083), propget]
+        HRESULT diffusity([out, retval] VgPositiveNumber* diffusity);
+        [id(0x00000083), propput]
+        HRESULT diffusity([in] VgPositiveNumber diffusity);
+        [id(0x00000084), propget]
+        HRESULT viewpoint([out, retval] IVgVector3D** viewpoint);
+        [id(0x00000085), propget]
+        HRESULT orientation([out, retval] IVgVector3D** viewpoint);
+        [id(0x00000086), propget]
+        HRESULT lockrotationcenter([out, retval] VgTriState* lockrotationcenter);
+        [id(0x00000086), propput]
+        HRESULT lockrotationcenter([in] VgTriState lockrotationcenter);
+        [id(0x00000087), propget]
+        HRESULT autorotationcenter([out, retval] VgTriState* autorotationcenter);
+        [id(0x00000087), propput]
+        HRESULT autorotationcenter([in] VgTriState autorotationcenter);
+        [id(0x00000088), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x00000088), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0347-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgVector3D : _IVgDispObj {
+        [id(00000000), propget]
+        HRESULT value([out, retval] BSTR* value);
+        [id(00000000), propput]
+        HRESULT value([in] BSTR value);
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT Parent([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT x([out, retval] double* x);
+        [id(0x00000064), propput]
+        HRESULT x([in] double x);
+        [id(0x00000065), propget]
+        HRESULT y([out, retval] double* y);
+        [id(0x00000065), propput]
+        HRESULT y([in] double y);
+        [id(0x00000066), propget]
+        HRESULT Z([out, retval] double* Z);
+        [id(0x00000066), propput]
+        HRESULT Z([in] double Z);
+        [id(0x00000067), propget]
+        HRESULT Type([out, retval] VgVectorType* Type);
+    };
+
+    [
+      odl,
+      uuid(000D031F-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgTextPath : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT on([out, retval] VgTriState* on);
+        [id(0x00000064), propput]
+        HRESULT on([in] VgTriState on);
+        [id(0x00000065), propget, restricted, hidden]
+        HRESULT filleachchar([out, retval] VgTriState* filleachchar);
+        [id(0x00000065), propput, restricted, hidden]
+        HRESULT filleachchar([in] VgTriState filleachchar);
+        [id(0x00000066), propget]
+        HRESULT fitshape([out, retval] VgTriState* fitshape);
+        [id(0x00000066), propput]
+        HRESULT fitshape([in] VgTriState fitshape);
+        [id(0x00000067), propget]
+        HRESULT fitpath([out, retval] VgTriState* fitpath);
+        [id(0x00000067), propput]
+        HRESULT fitpath([in] VgTriState fitpath);
+        [id(0x00000068), propget]
+        HRESULT trim([out, retval] VgTriState* trim);
+        [id(0x00000068), propput]
+        HRESULT trim([in] VgTriState trim);
+        [id(0x00000069), propget]
+        HRESULT string([out, retval] BSTR* string);
+        [id(0x00000069), propput]
+        HRESULT string([in] BSTR string);
+        [id(0x0000006a), propget]
+        HRESULT xscale([out, retval] VgTriState* xscale);
+        [id(0x0000006a), propput]
+        HRESULT xscale([in] VgTriState xscale);
+        [id(0x0000006b), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x0000006b), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0345-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgSkew : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT on([out, retval] VgTriState* on);
+        [id(0x00000064), propput]
+        HRESULT on([in] VgTriState on);
+        [id(0x00000066), propget]
+        HRESULT offset([out, retval] IVgSkewOffset** offset);
+        [id(0x00000067), propget]
+        HRESULT origin([out, retval] IVgVector2D** origin);
+        [id(0x00000068), propget]
+        HRESULT matrix([out, retval] IVgSkewMatrix** origin);
+        [id(0x00000069), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x00000069), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0348-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgFormulas : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(0xfffffffc), propget, restricted, hidden]
+        HRESULT _newEnum([out, retval] IUnknown** _newEnum);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgFormula** Formula);
+    };
+
+    [
+      odl,
+      uuid(000D031A-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgImageData : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000064), propget]
+        HRESULT blacklevel([out, retval] VgFraction* blacklevel);
+        [id(0x00000064), propput]
+        HRESULT blacklevel([in] VgFraction blacklevel);
+        [id(0x00000066), propget]
+        HRESULT gain([out, retval] VgPositiveNumber* gain);
+        [id(0x00000066), propput]
+        HRESULT gain([in] VgPositiveNumber gain);
+        [id(0x00000067), propget]
+        HRESULT cropbottom([out, retval] VgFraction* cropbottom);
+        [id(0x00000067), propput]
+        HRESULT cropbottom([in] VgFraction cropbottom);
+        [id(0x00000068), propget]
+        HRESULT cropleft([out, retval] VgFraction* cropleft);
+        [id(0x00000068), propput]
+        HRESULT cropleft([in] VgFraction cropleft);
+        [id(0x00000069), propget]
+        HRESULT cropright([out, retval] VgFraction* cropright);
+        [id(0x00000069), propput]
+        HRESULT cropright([in] VgFraction cropright);
+        [id(0x0000006a), propget]
+        HRESULT croptop([out, retval] VgFraction* croptop);
+        [id(0x0000006a), propput]
+        HRESULT croptop([in] VgFraction croptop);
+        [id(0x0000006e), propget]
+        HRESULT src([out, retval] BSTR* src);
+        [id(0x0000006e), propput]
+        HRESULT src([in] BSTR src);
+        [id(0x0000006f), propget]
+        HRESULT embosscolor([out, retval] IVgColor** embosscolor);
+        [id(0x00000070), propget]
+        HRESULT gamma([out, retval] VgFraction* gamma);
+        [id(0x00000070), propput]
+        HRESULT gamma([in] VgFraction gamma);
+        [id(0x00000071), propget]
+        HRESULT chromakey([out, retval] IVgColor** chromakey);
+        [id(0x00000072), propget]
+        HRESULT grayscale([out, retval] VgTriState* grayscale);
+        [id(0x00000072), propput]
+        HRESULT grayscale([in] VgTriState grayscale);
+        [id(0x00000073), propget]
+        HRESULT bilevel([out, retval] VgTriState* bilevel);
+        [id(0x00000073), propput]
+        HRESULT bilevel([in] VgTriState bilevel);
+        [id(0x00000074), propget]
+        HRESULT template([out, retval] BSTR* Val);
+        [id(0x00000074), propput]
+        HRESULT template([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D031E-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgShapes : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT Parent([out, retval] IDispatch** Parent);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgShape** item);
+        [id(0xfffffffc), propget]
+        HRESULT _newEnum([out, retval] IUnknown** _newEnum);
+    };
+
+    [
+      odl,
+      uuid(000D0363-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgPoints : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** Parent);
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(00000000), propget]
+        HRESULT item(
+                        [in] int Index, 
+                        [out, retval] IVgVector2D** Val);
+        [id(0x0000006b)]
+        HRESULT add(
+                        [in] unsigned int insertionIndex, 
+                        [out, retval] IVgVector2D** pNewPt);
+        [id(0x00000064), propget]
+        HRESULT value([out, retval] BSTR* Val);
+        [id(0x00000064), propput]
+        HRESULT value([in] BSTR Val);
+    };
+
+    [
+      odl,
+      uuid(000D0369-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgRuntimeStyle : _IVgDispObj {
+        [id(0x00000065), propget, hidden]
+        HRESULT left([out, retval] BSTR* left);
+        [id(0x00000065), propput, hidden]
+        HRESULT left([in] BSTR left);
+        [id(0x00000066), propget, hidden]
+        HRESULT top([out, retval] BSTR* top);
+        [id(0x00000066), propput, hidden]
+        HRESULT top([in] BSTR top);
+        [id(0x00000067), propget, hidden]
+        HRESULT width([out, retval] BSTR* width);
+        [id(0x00000067), propput, hidden]
+        HRESULT width([in] BSTR width);
+        [id(0x00000068), propget, hidden]
+        HRESULT height([out, retval] BSTR* height);
+        [id(0x00000068), propput, hidden]
+        HRESULT height([in] BSTR height);
+        [id(0x00000069), propget, hidden]
+        HRESULT marginLeft([out, retval] BSTR* marginLeft);
+        [id(0x00000069), propput, hidden]
+        HRESULT marginLeft([in] BSTR marginLeft);
+        [id(0x0000006a), propget, hidden]
+        HRESULT marginTop([out, retval] BSTR* marginTop);
+        [id(0x0000006a), propput, hidden]
+        HRESULT marginTop([in] BSTR marginTop);
+        [id(0x0000006b), propget, hidden]
+        HRESULT marginRight([out, retval] BSTR* marginRight);
+        [id(0x0000006b), propput, hidden]
+        HRESULT marginRight([in] BSTR marginRight);
+        [id(0x0000006c), propget, hidden]
+        HRESULT dir([out, retval] BSTR* dir);
+        [id(0x0000006c), propput, hidden]
+        HRESULT dir([in] BSTR dir);
+        [id(0x0000006d), propget, hidden]
+        HRESULT right([out, retval] BSTR* right);
+        [id(0x0000006d), propput, hidden]
+        HRESULT right([in] BSTR right);
+        [id(0x0000006e), propget, hidden]
+        HRESULT flip([out, retval] BSTR* flip);
+        [id(0x0000006e), propput, hidden]
+        HRESULT flip([in] BSTR flip);
+        [id(0x0000006f), propget, hidden]
+        HRESULT rotation([out, retval] BSTR* rotation);
+        [id(0x0000006f), propput, hidden]
+        HRESULT rotation([in] BSTR rotation);
+        [id(0x00000071), propget, hidden]
+        HRESULT msoPositionHorizontal([out, retval] BSTR* msoPositionHorizontal);
+        [id(0x00000071), propput, hidden]
+        HRESULT msoPositionHorizontal([in] BSTR msoPositionHorizontal);
+        [id(0x00000072), propget, hidden]
+        HRESULT msoPositionHorizontalRelative([out, retval] BSTR* msoPositionHorizontalRelative);
+        [id(0x00000072), propput, hidden]
+        HRESULT msoPositionHorizontalRelative([in] BSTR msoPositionHorizontalRelative);
+        [id(0x00000073), propget, hidden]
+        HRESULT msoPositionVertical([out, retval] BSTR* msoPositionVertical);
+        [id(0x00000073), propput, hidden]
+        HRESULT msoPositionVertical([in] BSTR msoPositionVertical);
+        [id(0x00000074), propget, hidden]
+        HRESULT msoPositionVerticalRelative([out, retval] BSTR* msoPositionVerticalRelative);
+        [id(0x00000074), propput, hidden]
+        HRESULT msoPositionVerticalRelative([in] BSTR msoPositionVerticalRelative);
+        [id(0x00000075), propget, hidden]
+        HRESULT msoWrapDistanceTop([out, retval] BSTR* msoWrapDistanceTop);
+        [id(0x00000075), propput, hidden]
+        HRESULT msoWrapDistanceTop([in] BSTR msoWrapDistanceTop);
+        [id(0x00000076), propget, hidden]
+        HRESULT msoWrapDistanceLeft([out, retval] BSTR* msoWrapDistanceLeft);
+        [id(0x00000076), propput, hidden]
+        HRESULT msoWrapDistanceLeft([in] BSTR msoWrapDistanceLeft);
+        [id(0x00000077), propget, hidden]
+        HRESULT msoWrapDistanceRight([out, retval] BSTR* msoWrapDistanceRight);
+        [id(0x00000077), propput, hidden]
+        HRESULT msoWrapDistanceRight([in] BSTR msoWrapDistanceRight);
+        [id(0x00000078), propget, hidden]
+        HRESULT msoWrapDistanceBottom([out, retval] BSTR* msoWrapDistanceBottom);
+        [id(0x00000078), propput, hidden]
+        HRESULT msoWrapDistanceBottom([in] BSTR msoWrapDistanceBottom);
+        [id(0x00000079), propget, hidden]
+        HRESULT antialias([out, retval] BSTR* antialias);
+        [id(0x00000079), propput, hidden]
+        HRESULT antialias([in] BSTR antialias);
+        [id(0x0000007a), propget, hidden]
+        HRESULT position([out, retval] BSTR* position);
+        [id(0x0000007a), propput, hidden]
+        HRESULT position([in] BSTR position);
+        [id(0x0000007b), propget, hidden]
+        HRESULT visibility([out, retval] BSTR* visibility);
+        [id(0x0000007b), propput, hidden]
+        HRESULT visibility([in] BSTR visibility);
+        [id(0x0000007c), propget, hidden]
+        HRESULT display([out, retval] BSTR* display);
+        [id(0x0000007c), propput, hidden]
+        HRESULT display([in] BSTR display);
+        [id(0x0000007d), hidden]
+        HRESULT commit();
+    };
+
+    [
+      odl,
+      uuid(000D0370-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgReturnedPointArray : _IVgDispObj {
+        [id(0x00000002), propget]
+        HRESULT length([out, retval] int* Count);
+        [id(0x00000065), propget]
+        HRESULT x(
+                        [in] int Index, 
+                        [out, retval] double* Val);
+        [id(0x00000066), propget]
+        HRESULT y(
+                        [in] int Index, 
+                        [out, retval] double* Val);
+    };
+
+    [
+      odl,
+      uuid(000D036A-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgTextBox : _IVgDispObj {
+        [id(0x00000065), propget]
+        HRESULT inset([out, retval] BSTR* pValue);
+        [id(0x00000065), propput]
+        HRESULT inset([in] BSTR pValue);
+        [id(0x00000066), propget]
+        HRESULT insetleft([out, retval] double* Val);
+        [id(0x00000066), propput]
+        HRESULT insetleft([in] double Val);
+        [id(0x00000067), propget]
+        HRESULT insettop([out, retval] double* Val);
+        [id(0x00000067), propput]
+        HRESULT insettop([in] double Val);
+        [id(0x00000068), propget]
+        HRESULT insetright([out, retval] double* Val);
+        [id(0x00000068), propput]
+        HRESULT insetright([in] double Val);
+        [id(0x00000069), propget]
+        HRESULT insetbottom([out, retval] double* Val);
+        [id(0x00000069), propput]
+        HRESULT insetbottom([in] double Val);
+    };
+
+    [
+      odl,
+      uuid(000D0364-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgVMLCanvas : _IVgDispObj {
+        [id(0x00000064), propget]
+        HRESULT clip([out, retval] VgTriState* clip);
+        [id(0x00000064), propput]
+        HRESULT clip([in] VgTriState clip);
+        [id(0x00000065), propget]
+        HRESULT src([out, retval] BSTR* src);
+        [id(0x00000065), propput]
+        HRESULT src([in] BSTR src);
+        [id(0x00000066), propget]
+        HRESULT origin([out, retval] IVgVector2D** origin);
+        [id(0x00000067), propget]
+        HRESULT size([out, retval] IVgVector2D** size);
+        [id(0x00000068), propget]
+        HRESULT shape(
+                        [in] BSTR value, 
+                        [out, retval] IVgShape** pShape);
+        [id(0x00000069), propget]
+        HRESULT hitShape([out, retval] IVgShape** pShape);
+    };
+
+    [
+      odl,
+      uuid(000D036B-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgView : _IVgDispObj {
+        [id(0x00000065), propget, hidden]
+        HRESULT left([out, retval] BSTR* left);
+        [id(0x00000066), propget, hidden]
+        HRESULT top([out, retval] BSTR* top);
+        [id(0x00000067), propget, hidden]
+        HRESULT width([out, retval] BSTR* width);
+        [id(0x00000068), propget, hidden]
+        HRESULT height([out, retval] BSTR* height);
+    };
+
+    [
+      odl,
+      uuid(000D0350-0000-0000-C000-000000000046),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IVgBackground : _IVgDispObj {
+        [id(0x00000001), propget, restricted, hidden]
+        HRESULT parentShape([out, retval] IDispatch** ppidisp);
+        [id(0x00000064), propget]
+        HRESULT fillcolor([out, retval] IVgColor** fill);
+        [id(0x00000065), propget]
+        HRESULT fill([out, retval] IVgFill** fill);
+        [id(0x00000066), propget]
+        HRESULT bwmode([out, retval] VgBlackWhiteMode* bwmode);
+        [id(0x00000066), propput]
+        HRESULT bwmode([in] VgBlackWhiteMode bwmode);
+        [id(0x00000067), propget]
+        HRESULT bwpure([out, retval] VgBlackWhiteMode* bwmode);
+        [id(0x00000067), propput]
+        HRESULT bwpure([in] VgBlackWhiteMode bwmode);
+        [id(0x00000068), propget]
+        HRESULT bwnormal([out, retval] VgTriState* bwnormal);
+        [id(0x00000068), propput]
+        HRESULT bwnormal([in] VgTriState bwnormal);
+    };
+};

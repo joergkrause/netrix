@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{283EACD5-D111-4102-8446-8FC7AC563EC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Comzept.Genesis.Imaging</RootNamespace>
+    <AssemblyName>Comzept.Genesis.Imaging</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Win32\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Win32\NativeMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Win32\NativeSubclasser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ColorHLS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ColorUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\FreeImage.cs" />
+    <Compile Include="Drawing\FreeImageBrightness.cs" />
+    <Compile Include="Drawing\FreeImageConstrast.cs" />
+    <Compile Include="Drawing\FreeImageGamma.cs" />
+    <Compile Include="Drawing\FreeImageGeometryTransformation.cs" />
+    <Compile Include="Drawing\FreeImagePixelTransformation.cs" />
+    <Compile Include="Drawing\FreeImageRescale.cs" />
+    <Compile Include="Drawing\FreeImageSupport.cs" />
+    <Compile Include="Drawing\FreeImageTransformation.cs" />
+    <Compile Include="Drawing\GDI\FontEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\GDIBitmap.cs" />
+    <Compile Include="Drawing\GDI\GDIBrushes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\GDIFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\GDIObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\GDIPens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\GDISurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\GDI\MemHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ImageInfo\Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ImageInfo\Fraction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ImageInfo\Info.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\ImageInfo\PropertyTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\Internal\FreeImageAPI.cs" />
+    <Compile Include="Drawing\Internal\GDIplus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\PixelBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\RoundSelectionBrush.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drawing\Shapes\IDrawable.cs" />
+    <Compile Include="Drawing\Shapes\IFillable.cs" />
+    <Compile Include="Drawing\Shapes\IRectangle.cs" />
+    <Compile Include="Drawing\Shapes\Shape.cs" />
+    <Compile Include="Drawing\Shapes\ShapeArc.cs" />
+    <Compile Include="Drawing\Shapes\ShapeBezier.cs" />
+    <Compile Include="Drawing\Shapes\ShapeClosedCurve.cs" />
+    <Compile Include="Drawing\Shapes\ShapeCurve.cs" />
+    <Compile Include="Drawing\Shapes\ShapeEllipse.cs" />
+    <Compile Include="Drawing\Shapes\ShapeLine.cs" />
+    <Compile Include="Drawing\Shapes\ShapePie.cs" />
+    <Compile Include="Drawing\Shapes\ShapePolygon.cs" />
+    <Compile Include="Drawing\Shapes\ShapePolyline.cs" />
+    <Compile Include="Drawing\Shapes\ShapeRectangle.cs" />
+    <Compile Include="Drawing\Shapes\ShapeRoundRectangle.cs" />
+    <Compile Include="Drawing\Shapes\ShapeSpyral.cs" />
+    <Compile Include="Drawing\Shapes\ShapeStar.cs" />
+    <Compile Include="Drawing\Shapes\ShapeThumbSize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drawing\Shapes\ToDoList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

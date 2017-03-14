@@ -25,7 +25,8 @@ The control has a lot of new features not part of MSHTML:
 
 ### Main Features
 
-* HTML WYSIWYG editor control with these important features:
+HTML WYSIWYG editor control with these important features:
+
 * Complete table support (resizing, column width, join/split cells, multiple cell selection, ...)
 * Drag and Drop support
 * Drag & Drop from outside the control
@@ -44,7 +45,6 @@ The control has a lot of new features not part of MSHTML:
 * Head element editing: META, LINK,
 * Localizable, 10 languages supported out-of-the-box (Full version only)
 * Multiselection
-
 * Absolute positioning, global and per element, like VS.NETs GridLayout
 * Auto detect URL and E-Mail addresses, inserts anchors automatically
 * Show zero borders around invisible tables and images

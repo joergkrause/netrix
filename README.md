@@ -31,7 +31,7 @@ Additionally you can find a table that shows a Complete Feature List.
 
 ## Plug Ins
 
-There are sevferal plug-ins available:
+There are several plug-ins available:
 
 * Spell Checker
 * Table Designer

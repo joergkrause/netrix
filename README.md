@@ -27,7 +27,7 @@ We have compiled a collection of pages that explain the basic features. You can 
 * Form Support
 * Table Designer
 
-Additionally you can find a table that shows a Complete Feature List.
+Additionally you can find a table that shows a [Complete Feature List](Features.md).
 
 ## Plug Ins
 

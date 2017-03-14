@@ -13,14 +13,16 @@ The control has a lot of new features not part of MSHTML:
 * Full programmatic access to document and all elements, as well as their properties.
 * Only 2000 KB in size (PropertyGrid support and UI needs additonal 700 KB with ten language packs)
 * Does NOT need interop assembly interop.mshtml.dll as part of your program
-* Full version supports Studio 2005 up to 2013 (Framework 2.0 to 4.5.1).
+* Full version supports Studio 2005 up to 2017 (Framework 2.0 to 4.6.2).
+* Works on Vista, Windows 7, 8, 8.1, 10
+* Works with IE 8, 9, 10, and 11 (does not matter what the user actually uses)
 * Browse mode to use as browser without editing function (limited)
 * Replaces file monikers internally to display embedded images as well
 * Access of document through XmlDocument based interface
 * Beautifies the code internally, no more terrible MSHTML code (Export as XHTML 1.0 or HTML 4.0)
 * Full HTML 5.0 support, including editor for OPTGROUP
-* Completely written in C#
-* Toolbox (VS.NET Designer) support
+* Completely written in C#, works well with projects in VB.NET 
+* Toolbox (VS Designer) support
 * Sophisticated Insert Entity Control, just for free as part of the demo application (with colored browser version support advice bar)
 
 ### Main Features
@@ -43,7 +45,7 @@ HTML WYSIWYG editor control with these important features:
 * Unit editor
 * Document property editor
 * Head element editing: META, LINK,
-* Localizable, 10 languages supported out-of-the-box (Full version only)
+* Localizable, 10 languages supported out-of-the-box
 * Multiselection
 * Absolute positioning, global and per element, like VS.NETs GridLayout
 * Auto detect URL and E-Mail addresses, inserts anchors automatically
@@ -65,10 +67,12 @@ HTML WYSIWYG editor control with these important features:
 * Select multiple cells (even irregular shape) and assign properties
 * Works well with nested tables (unlimited nesting levels)
 * Advanced features customizable (on/off, highlight colors)
-* Super professional options:
+
+Super professional options:
+
 * Glyphs in various states
 * Drag and Drop
-* Spell checker interface
+* Spell checker interface (Spell checker with eight languages included)
 * Grid and "Snap to grid"
 * Helpline (elements can be aligned to)
 * Frames editor and in-frame editing support

@@ -1,0 +1,1166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuruComponents.Netrix.PlugIns.HtmlFormatter.v45</name>
+    </assembly>
+    <members>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo">
+            <summary>
+            This class is used to store information about the kind of element.
+            </summary>
+            <remarks>
+            It is used internally to control the formatting behavior. Externally it is used to provide such information for plug-in modules.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.Type">
+            <summary>
+            The type of element controls the generel formatting behavior.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.Flags">
+            <summary>
+            Determines how to format this kind of element.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.FollowingWhiteSpaceType">
+            <summary>
+            Determines how significant are whitespaces following this element.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.InnerWhiteSpaceType">
+            <summary>
+            Determines how significant are whitespaces within this element.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.IsComment">
+            <summary>
+            The element has to treated as comment.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.IsInline">
+            <summary>
+            The element is an inline element.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.IsXml">
+            <summary>
+            The element has to be treated as pure XML.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.NoEndTag">
+            <summary>
+            The element does not has an end tag, e.g. it is not a container.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.NoIndent">
+            <summary>
+            The element does not being indented, even if it starts at a new line.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.PreserveContent">
+            <summary>
+            The element is supposed to preserve its content.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.TagName">
+            <summary>
+            The tag name of the element.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.#ctor(System.String,GuruComponents.Netrix.HtmlFormatting.Elements.FormattingFlags)">
+            <overloads/>
+            <summary>
+            Creates a new tag info with basic parameters. 
+            </summary>
+            <param name="tagName"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.#ctor(System.String,GuruComponents.Netrix.HtmlFormatting.Elements.FormattingFlags,GuruComponents.Netrix.HtmlFormatting.Elements.ElementType)">
+            <summary>
+            Creates a new tag info with basic parameters. 
+            </summary>
+            <param name="tagName"></param>
+            <param name="flags"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.#ctor(System.String,GuruComponents.Netrix.HtmlFormatting.Elements.FormattingFlags,GuruComponents.Netrix.HtmlFormatting.Elements.WhiteSpaceType,GuruComponents.Netrix.HtmlFormatting.Elements.WhiteSpaceType)">
+            <summary>
+            Creates a new tag info with basic parameters. 
+            </summary>
+            <param name="tagName"></param>
+            <param name="flags"></param>
+            <param name="innerWhiteSpace"></param>
+            <param name="followingWhiteSpace"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.#ctor(System.String,GuruComponents.Netrix.HtmlFormatting.Elements.FormattingFlags,GuruComponents.Netrix.HtmlFormatting.Elements.WhiteSpaceType,GuruComponents.Netrix.HtmlFormatting.Elements.WhiteSpaceType,GuruComponents.Netrix.HtmlFormatting.Elements.ElementType)">
+            <summary>
+            Creates a new tag info with basic parameters. 
+            </summary>
+            <param name="tagName"></param>
+            <param name="flags"></param>
+            <param name="innerWhiteSpace"></param>
+            <param name="followingWhiteSpace"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.#ctor(System.String,GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo)">
+            <summary>
+            Creates a new tag info with basic parameters. 
+            </summary>
+            <param name="newTagName"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo.CanContainTag(GuruComponents.Netrix.HtmlFormatting.Elements.ITagInfo)">
+            <summary>
+            Informs that a element can carry another one.
+            </summary>
+            <remarks>
+            This method always returns true. Classes derive from <see cref="T:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo"/> may
+            overwrite it to control the behavior of complex elements.
+            </remarks>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.ErrorEventHandler">
+            <summary>
+            Used for error event, called if the formatted cannot resolve the content.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.ErrorEventArgs">
+            <summary>
+            The Event Arguments for the Error Event.
+            </summary>
+            <remarks>
+            The Error event is fired than the given code can not satisfy the output tree.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.ErrorEventArgs.TokenBeforeText">
+            <summary>
+            The text of the token before the error
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.ErrorEventArgs.TokenAfterText">
+            <summary>
+            The text of the token after the error
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.ErrorEventArgs.TokenBeforeLength">
+            <summary>
+            The length of the token before the error
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.ErrorEventArgs.TokenAfterLength">
+            <summary>
+            The length of the token after the error
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.FinishEventHandler">
+            <summary>
+            Fired when formatting is done.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.FinishEventArgs">
+            <summary>
+            The Event Arguments for the Finish Event, fired after finishing a html formatter task.
+            </summary>
+            <remarks>
+            This event is internally fired after after each save operation (means save the html content
+            from component to a variable.)
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.FinishEventArgs.Output">
+            <summary>
+            The TextWriter which contains the beautified content
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.FinishEventArgs.Source">
+            <summary>
+            The originally used source string
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.FinishEventArgs.WithErrors">
+            <summary>
+            Set to true if an error occured during formatting.
+            </summary>
+            <remarks>
+            Use the OnError event to get information about what kind of error
+            occured.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter">
+            <summary>
+            The HtmlFormatter formats a HTML stream into XHTML format and indent the element in a functional
+            related way, e.g. it recognizes tables and can distinguish between inline and block tags.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.FormatInfo">
+            <summary>
+            Contains information about how to format a specific tag.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.FormatInfo.indent">
+            <summary>
+            Indentation
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.FormatInfo.isBeginTag">
+            <summary>
+            Currently after a beginning tag
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.FormatInfo.#ctor(GuruComponents.Netrix.HtmlFormatting.Elements.ITagInfo,System.Boolean)">
+            <summary>
+            Register the type of formatting.
+            </summary>
+            <param name="info">Tag information</param>
+            <param name="isEnd">True if it is an end tag.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.AddCustomElement(GuruComponents.Netrix.HtmlFormatting.Elements.ITagInfo)">
+            <summary>
+            This method adds a new TagInfo object to the collection of TagInfos. These collection is used to format
+            any registered tag correctly. All tag known in HTML 4.0 are predefined. The Plug-In module uses this method to 
+            enhance the know tags.
+            </summary>
+            <param name="ti"></param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.#cctor">
+            <summary>
+            This static constructor builds the replacement table for entities and defines the type of HTML tags that the
+            formatter recognizes to build a functional related tree for output.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.OnFinish">
+            <summary>
+            Will fire if the formatter is ready.
+            </summary>
+        </member>
+        <member name="E:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.OnError">
+            <summary>
+            Will fire if the formatter reached an unresolvable conflict in input stream.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.Format(System.String,System.IO.TextWriter,GuruComponents.Netrix.HtmlFormatting.IHtmlFormatterOptions)">
+            <summary>
+            Starts the beautifier and returns the resulting code in the TextWriter.
+            </summary>
+            <param name="input">The string to be beautified.</param>
+            <param name="output">A TextWriter derived pointer to the result.</param>
+            <param name="options">The formatting options used to handle the content.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.GetEntities(System.String,GuruComponents.Netrix.HtmlFormatting.EntityFormat)">
+            <summary>
+            Formats a string by replacing extended characters as entities.
+            </summary>
+            <param name="text">The text to be formatted.</param>
+            <param name="Entities">The way to format.</param>
+            <returns>The formatted text.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.BuildEntities(System.String@,GuruComponents.Netrix.HtmlFormatting.EntityFormat)">
+            <summary>
+            Change any Unicode or higher ASCII into entities, if possible.
+            </summary>
+            <param name="input">The text in which the entities are formatted.</param>
+            <param name="Entities">Determines the formatting of entities.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.Match(System.Text.RegularExpressions.Match)">
+            <summary>
+            Converts string entities into numeric ones.
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.AntiMatch(System.Text.RegularExpressions.Match)">
+            <summary>
+            Converts string entities into numeric ones.
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter.StripHTML(System.String,System.Boolean)">
+            <summary> 
+            This function filters out unwanted html tags from a html string. 
+            It also empties tags of any attributes, e.g. &lt;p style="msonormal"&gt; becomes &lt;p&gt;
+            </summary> 
+            <param name="html">The HTML fragment to work on</param> 
+            <param name="keepTags">An array of strings, each representing a html tag, e.g. "a","img", etc.</param> 
+            <returns>Returns the clean HTML as string.</returns> 
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions">
+            <summary>
+            Formatter options used to determine the overall behavior of the formatter class.
+            </summary>
+            <remarks>
+            The formatter will analyse and refresh the content to beeing HTML 4/XHTML compliant.
+            This changes the indentation, quotes and newlines. The formatter does not allow
+            any code preservation.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATAAddsNewline">
+            <summary>
+            After CDATA and before ending a newline is added autoamtically.
+            </summary>
+            <seealso cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATA"/>
+            <remarks>By default there is no newline added.</remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.FakeEmptyParaTag">
+            <summary>
+            Empty P Tags do not render properly in MSHTML. To fix this option adds &amp;nbsp; between.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.PreserveWhitespace">
+            <summary>
+            Indicates whether whitespaces (space, newline, tab) should be preserved, if possible. Default is false.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.ReformatStyles">
+            <summary>
+            Reformats the CSS in attributes and style tags to remove unneccessary spaces. Default is false.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATA">
+            <summary>
+            Gets or sets the ability to add JavaScript comments before CDATA token.
+            </summary>
+            <remarks>
+            The XHTML module wraps JavaScript code into &lt;![CDATA[ ]]&gt; sections. Some
+            script processors have problems reading this. To avoid any scripting issues this
+            option can set to <c>true</c> and the formatter will add // sign in front of &lt;![CDATA[ ]]&gt;:
+            <para>
+            &lt;script>
+            //&lt;![CDATA[ 
+            	Script goes here
+            //]]&gt;
+            &lt;/script>
+            </para>
+            <para>
+            Default setting is <c>false</c> (option not being used).
+            </para>						
+            The used string for comment signs defaults to "//". The value can be changed using <see cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATAString"/>.
+            <seealso cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATAString"/>																		 
+            </remarks>		
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATAString">
+            <summary>
+            The string value used if the formatter needs to add comments before CDATA tokens.
+            </summary>
+            <remarks>
+            <seealso cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.CommentCDATA"/>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.WordClean">
+            <summary>
+            Gets or sets the ability to clean MS Word styles.
+            </summary>
+            <remarks>
+            MS Word produces some weird output when content was saved as HTML. If such
+            content was loaded or dropped this formatting feature can strip out the
+            most of the non HTML 4/XHTML 1 compliant code.
+            <para>
+            The value defaults to <c>false</c> and must set explicitly.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.AttributeCasing">
+            <summary>
+            Set the case of attributes. Does not work if <see cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.MakeXhtml"/> is set to <c>true</c>.
+            </summary>
+            <remarks>
+            If <code>true</code> all attribute names are upper case.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.Entities">
+            <summary>
+            Determines how entities are treaten.
+            </summary>
+            <remarks>
+            The entities are built as &amp;name; variant by default, if any known
+            entity exists. Otherwise any enhanced ASCII or unicode character will be
+            replaced by the numeric expression &amp;#NNN;.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.ElementCasing">
+            <summary>
+            Set the case of element names. Does not work if <see cref="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.MakeXhtml"/> is set to <c>true</c>.
+            </summary>
+            <remarks>
+            If <code>true</code> all element names are upper case.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.IndentChar">
+            <summary>
+            Determines the char used to build indentation.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.IndentSize">
+            <summary>
+            Determines the number of chars used for each indentation level. Use 1 for tabs and 4 to 8 for whitespace.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.MakeXhtml">
+            <summary>
+            If <code>true</code> the output conforms to XHTML 1.0, otherwise to HTML 4.0
+            If input is XHTML compliant the output will never changed back to HTML 4.0 regardless this option.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.MaxLineLength">
+            <summary>
+            Forces a line break after leaving the given number of columns per line.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.#ctor">
+            <overloads/>
+            <summary>
+            Standard constructor to build default formatter options.
+            </summary>
+            <remarks>
+            This constructor sets the folowing default options:
+            <list type="bullet">
+                <item><term>IndentChar = ' ' (space)</term></item>
+                
+            </list>
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.#ctor(System.Char,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Standard constructor to build formatter options with the minimum number of parameters needed.
+            </summary>
+            <param name="indentChar">Char used to indent</param>
+            <param name="indentSize">Number of chars the indent char is repeated each level</param>
+            <param name="maxLineLength">Dermines the forced line break</param>
+            <param name="makeXhtml"><code>true</code> if XHTML should produced</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.#ctor(System.Char,System.Int32,System.Int32,GuruComponents.Netrix.HtmlFormatting.HtmlFormatterCase,GuruComponents.Netrix.HtmlFormatting.HtmlFormatterCase,System.Boolean)">
+            <summary>
+            Advanced constructor to build formatter options with the minimum number of parameters needed.
+            </summary>
+            <param name="indentChar">Char used to indent</param>
+            <param name="indentSize">Number of chars the indent char is repeated each level</param>
+            <param name="maxLineLength">Dermines the forced line break</param>
+            <param name="elementCasing"><code>true</code> makes all attributes upper case</param>
+            <param name="attributeCasing"><code>true</code> makes all elements upper case</param>
+            <param name="makeXhtml"><code>true</code> if XHTML should produced</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.#ctor(System.Char,System.Int32,System.Int32,GuruComponents.Netrix.HtmlFormatting.HtmlFormatterCase,GuruComponents.Netrix.HtmlFormatting.HtmlFormatterCase,System.Boolean,GuruComponents.Netrix.HtmlFormatting.EntityFormat)">
+            <summary>
+            Advanced constructor to build formatter options with the minimum number of parameters needed.
+            </summary>
+            <param name="indentChar">Char used to indent</param>
+            <param name="indentSize">Number of chars the indent char is repeated each level</param>
+            <param name="maxLineLength">Dermines the forced line break</param>
+            <param name="elementCasing"><c>true</c> makes all attributes upper case</param>
+            <param name="attributeCasing"><c>true</c> makes all elements upper case</param>
+            <param name="makeXhtml"><c>true</c> if XHTML should produced</param>
+            <param name="Entities">Determines the formatting of entities.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlFormatterOptions.ToString">
+            <summary>
+            Support a text for the propertygrid.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer">
+            <summary>
+            This class creates a stream of tokens from the input string. The tokens control how the
+            formatter will place the elements in line or on a new line and how to indent.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.HtmlTokenizerStates">
+            <summary>
+            The Tokenizer codes to set the state of the currently found or checked character state.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.GetFirstToken(System.Char[])">
+            <summary>
+            Start search for the first token with the current content. The content comes in 
+            array of char, which is build in the <see cref="T:GuruComponents.Netrix.HtmlFormatting.HtmlFormatter"/> class.
+            </summary>
+            <param name="chars"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.GetFirstToken(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Start with the first token at a specific position.
+            </summary>
+            <param name="chars">Content array</param>
+            <param name="length">Start position</param>
+            <param name="initialState">Current State from which the token is searched.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.GetNextToken(GuruComponents.Netrix.HtmlFormatting.Token)">
+            <summary>
+            The next token in the stream
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.GetNextToken(System.Char[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The next token within the stream from a given start position and state. The tokenizer loops through the
+            chars and determines the next token based on the given state and an "expected" state (Exp = expected).
+            If the expected state is recognized, the token is build, otherwise the search goes further until the 
+            current state is completely resolved or an error is thrown.
+            </summary>
+            <param name="chars">Content array</param>
+            <param name="length">Length, number of chars to beeing searched.</param>
+            <param name="startIndex">Start index, point from which the search starts.</param>
+            <param name="startState">The current state of the tokenizer.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.IsWhitespace(System.Char)">
+            <summary>
+            Checks the char is a whitespace.
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.IsWordChar(System.Char)">
+            <summary>
+            Checks the char is a word character, which is a letter, a digit or one of the characters
+            '_' (underline), ':' (colon), '#' (hash sign), '-' (minus sign), '*' (asterisk), '.' (dot), and '^'.
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.HtmlFormatting.HtmlTokenizer.IndexOf(System.Char[],System.Int32,System.Int32,System.String)">
+            <summary>
+            Searches for a specific character or string within the chars array from a specific position
+            and to a specific position.
+            </summary>
+            <param name="chars">Chars array</param>
+            <param name="startIndex">Start position</param>
+            <param name="endColumnNumber">End position</param>
+            <param name="s">String to be searched for</param>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.ScriptFormatter">
+            <summary>
+            This class formattes embedded script sections. It is currently not used.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.Token">
+            <summary>
+            This class represents a token, which defines a part of text with a specific meaning,
+            like an attribute or a closing tag.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.HtmlFormatting.TokenType">
+            <summary>
+            The Type of the currently processed or stored token.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.Whitespace">
+            <summary>
+            Whitspace
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.TagName">
+            <summary>
+            Name of a tag
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.AttrName">
+            <summary>
+            Name of an attribute
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.AttrVal">
+            <summary>
+            Value of an attribute
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.TextToken">
+            <summary>
+            Text (any other part not specific tokenized)
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.SelfTerminating">
+            <summary>
+            A tag which is self terminated, like &lt;br/&gt;
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.Empty">
+            <summary>
+            Empty token
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.Comment">
+            <summary>
+            Comment token
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.Error">
+            <summary>
+            During retrieving of this token an error occured
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.OpenBracket">
+            <summary>
+            Open bracket (&lt;)
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.CloseBracket">
+            <summary>
+            Close bracket (&gt;)
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.ForwardSlash">
+            <summary>
+            A forward slash appears, controls closing and self terminated tags
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.DoubleQuote">
+            <summary>
+            Double quote (")
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.SingleQuote">
+            <summary>
+            Single quote (')
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.EqualsChar">
+            <summary>
+            The equals sign (=)
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.ClientScriptBlock">
+            <summary>
+            A script block which does not have a runat="server" attribute
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.Style">
+            <summary>
+            A style block
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.InlineServerScript">
+            <summary>
+            A server side script block 
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.ServerScriptBlock">
+            <summary>
+            ASP / ASP.NET / PHP and other script blocks
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.XmlDirective">
+            <summary>
+            A XML directive
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.HtmlFormatting.TokenType.PhpScriptTag">
+            <summary>
+            A PHP script tag
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.CssParser">
+            <summary>
+            This class parses a stylesheet file
+            </summary>
+            <remarks>
+            It checks for style selectors and fires an event
+            if a selector was found.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+            <remarks>
+            Initialises the instance of the parser class.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.StyleSheet">
+            <summary>
+            The style sheet file.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.LoadStylesheetFromFile(System.String)">
+            <summary>
+            Load styles from a file.
+            </summary>
+            <remarks>
+            Throws a FileNotFoundException if the file cannot be found.
+            
+            </remarks>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if the style file was not found.</exception>
+            <param name="fileName">The name of the file what is loaded.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.Parse">
+            <summary>
+            Parses the previously loaded document.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.FileName">
+            <summary>
+            Gets the filename from which the document was loaded.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.ParsedStyles">
+            <summary>
+            Returns the collection of parsed styles as style objects
+            </summary>
+            <remarks>
+            Returns either <c>null</c> or old data if <see cref="M:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.Parse"/> has not been called before reading.
+            <seealso cref="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject"/>
+            </remarks>
+        </member>
+        <member name="E:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.SelectorReady">
+            <summary>
+            Event which is fired when a new selector was found.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.OnSelectorReady(GuruComponents.Netrix.UserInterface.StyleParser.StyleObject)">
+            <summary>
+            This method fires the <see cref="E:GuruComponents.Netrix.UserInterface.StyleParser.CssParser.SelectorReady"/> event and informs the caller
+            in this way that a selector was found.
+            </summary>
+            <param name="so"></param>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.Parser">
+            <summary>
+            This is the StyleParser. It parses a stylesheet and creates the style objects from
+            the found strings.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Parser.ParseStylesheet(GuruComponents.Netrix.UserInterface.StyleParser.CssParser,System.String)">
+            <summary>
+            Parses the given string and fires the selector event handler.
+            </summary>
+            <param name="main">Main class</param>
+            <param name="source">Styles to parse</param>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.SelectorEventArgs">
+            <summary>
+            SelectorEventArgs are used as event arguments when the parser fires a new style found event.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorEventArgs.Name">
+            <summary>
+            The Name of the Selector regardless the type.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorEventArgs.Type">
+            <summary>
+            The type of selector.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorEventArgs.Selector">
+            <summary>
+            The content of the selector as object.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.SelectorEventHandler">
+            <summary>
+            Used to define a event which is fired on each selector recognized.
+            </summary>
+            <remarks>
+            This event handler is used internally by the style parser class. It may be used
+            to enhance the behavior by an external handler.
+            </remarks>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType">
+            <summary>
+            The type of selector currently processed.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.CONDITIONAL_SELECTOR">
+            <summary>
+            A Condition.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.ANY_NODE_SELECTOR">
+            <summary>
+            Any other type.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.ROOT_NODE_SELECTOR">
+            <summary>
+            The root node (*).
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.NEGATIVE_SELECTOR">
+            <summary>
+            A negative (exclude) selector.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.ELEMENT_NODE_SELECTOR">
+            <summary>
+            An element node like B, P, or H1.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.TEXT_NODE_SELECTOR">
+            <summary>
+            A text node.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.CDATA_SECTION_NODE_SELECTOR">
+            <summary>
+            A cdata node. Not recognized in versions less or equal 1.1.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.ATTRIBUTE_SELECTOR">
+            <summary>
+            A attribute. Poorly supported by browsers.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.COMMENT_NODE_SELECTOR">
+            <summary>
+            A comment node. Not recognized in versions less or equal 1.1.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.PSEUDO_ELEMENT_SELECTOR">
+            <summary>
+            A pseudo element like @block.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.DESCENDANT_SELECTOR">
+            <summary>
+            Descendant selector, like A+B.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.DIRECT_ADJACENT_SELECTOR">
+            <summary>
+            Adjacent selector, like A B.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.CHILD_SELECTOR">
+            <summary>
+            Child selector, like A>B.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.CLASS_SELECTOR">
+            <summary>
+            A class selector, like .class.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.ID_SELECTOR">
+            <summary>
+            An ID selector, like #id.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.SelectorType.PSEUDO_CLASS_SELECTOR">
+            <summary>
+            A pseudo class selector, like A:hover.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor">
+            <summary>
+            Zusammenfassung für StyleColor.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.#ctor">
+            <summary>
+            Set the colors to no color.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.R">
+            <summary>
+            Gets or sets the value for color Red.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.G">
+            <summary>
+            Gets or sets the value for color Green.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.B">
+            <summary>
+            Gets or sets the value for color Blue.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.Name">
+            <summary>
+            Gets or sets the color name and internally the appropriciate RGB values.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleColor.ToString">
+            <summary>
+            HTML form of color.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup">
+            <summary>
+            A StyleGroup is a combination of a simple style property, a style unit and a style color. 
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup.Unit">
+            <summary>
+            The unit value.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup.Color">
+            <summary>
+            The color value.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup.Property">
+            <summary>
+            The property value.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup.List">
+            <summary>
+            The list value.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup.ToString">
+            <summary>
+            Override for design time support.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleList">
+            <summary>
+            StyleList contains one or more string values, e.g. "Arial Verdana.."
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleList.JoinedList">
+            <summary>
+            Gets the joined list (string list) of the list elements. Read only.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleList.ToString">
+            <summary>
+            String representation of list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleList.ToArray">
+            <summary>
+            The styles as fixed lenght array.
+            </summary>
+            <returns>The styles as fixed lenght array.</returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject">
+            <summary>
+            StyleObject contains a complete list of styles assigned to one selector.
+            </summary>
+            <remarks>
+            The class uses
+            the case insensitive version of a hastable to recognize the style names in a more robust way.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.#ctor">
+            <summary>
+            The constructor used to create a new style object.
+            </summary>
+            <remarks>
+            This class uses a case insensitive <see cref="T:System.Collections.Hashtable">Hashtable</see> to 
+            simplify the access to the keys.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.ToString">
+            <summary>
+            String representation of styles.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.ContainsKey(System.Object)">
+            <summary>
+            Checks if the style name already exists.
+            </summary>
+            <param name="Key">The style name.</param>
+            <returns>Returns <c>true</c> on success.</returns>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.SelectorName">
+            <summary>
+            The name of the selector (rule).
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.SelectorType">
+            <summary>
+            The type of the selector (rule).
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.String,GuruComponents.Netrix.UserInterface.StyleParser.StyleProperty)">
+            <summary>
+            Adds a property to the collection.
+            </summary>
+            <param name="property">The name of the property.</param>
+            <param name="o">The property value.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.String,GuruComponents.Netrix.UserInterface.StyleParser.StyleColor)">
+            <summary>
+            Adds a color to the collection.
+            </summary>
+            <param name="property">The name of the property.</param>
+            <param name="o">The color value.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.String,GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit)">
+            <summary>
+            Adds a unit to the collection.
+            </summary>
+            <param name="property">The name of the property.</param>
+            <param name="o">The unit value.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.String,GuruComponents.Netrix.UserInterface.StyleParser.StyleList)">
+            <summary>
+            Adds a list to the collection.
+            </summary>
+            <param name="property">The name of the property.</param>
+            <param name="o">The list value.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.String,GuruComponents.Netrix.UserInterface.StyleParser.StyleGroup)">
+            <summary>
+            Adds a group to the collection.
+            </summary>
+            <param name="property">The name of the property.</param>
+            <param name="o">The group value.</param>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Add(System.Object)">
+            <summary>
+            Add a new style object.
+            </summary>
+            <param name="o">The value.</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Property">
+            <summary>
+            Sets a default property which the next value is added to.
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleObject.Styles">
+            <summary>
+            The collection of style rules.
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleProperty">
+            <summary>
+            Contains a simple text property like "solid".
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleProperty.#ctor(System.String)">
+            <summary>
+            The constructor sets the base value.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleProperty.Value">
+            <summary>
+            Gets or sets the value of the property.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleProperty.ToString">
+            <summary>
+            String form of value;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleType">
+            <summary>
+            To check what type of attribute it is.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.StyleType.Color">
+            <summary>
+            Attribute is a color.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.StyleType.Unit">
+            <summary>
+            Attribute is a unit.
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.StyleType.List">
+            <summary>
+            Attribute is a list (any number of values, comma separated).
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.StyleType.Property">
+            <summary>
+            Attribute is a property (any string value).
+            </summary>
+        </member>
+        <member name="F:GuruComponents.Netrix.UserInterface.StyleParser.StyleType.Group">
+            <summary>
+            Attribute is a combination of Property, Color and Unit (in any order).
+            </summary>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit">
+            <summary>
+            Contains a pair of a value and a unit like "px" or "pt".
+            </summary>
+            <remarks>
+            This class supports the StyleParser.
+            </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit.#ctor(System.Single,System.String)">
+            <summary>
+            Constructor, sets the default values.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="unit">The unit for the value (px or pt or similiar).</param>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit.Value">
+            <summary>
+            The value. The application should assure to avoid combination that doesn't make sense, like 1.5 with unit "px".
+            </summary>
+        </member>
+        <member name="P:GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit.Unit">
+            <summary>
+            The unit.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.StyleUnit.ToString">
+            <summary>
+            String value of unit.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GuruComponents.Netrix.UserInterface.StyleParser.Util">
+            <summary>
+             Utility class with various useful static functions.
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.ConvertToHtmlFontSize(System.Web.UI.WebControls.FontUnit)">
+            <summary>
+             Converts a FontUnit to a size for the HTML FONT tag
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.FindForm(System.Web.UI.Control)">
+            <summary>
+             Searches for an object's parents for a Form object
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.ExtractNumberString(System.String)">
+            <summary>
+            Given a string that contains a number, extracts the substring containing the number.
+            Returns only the first number.
+            Example: "5px" returns "5"
+            </summary>
+            <param name="str">The string containing the number.</param>
+            <returns>The extracted number or String.Empty.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.ExtractNumberStrings(System.String)">
+            <summary>
+            Extracts all numbers from the string.
+            </summary>
+            <param name="str">The string containing numbers.</param>
+            <returns>An array of the numbers as strings.</returns>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.ColorToHexString(System.String)">
+            <summary>
+             Converts a color string to a hex value string ("Green" -> "#000800")
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.ColorToHexString(System.Drawing.Color)">
+            <summary>
+             Converts a Color to a hex value string (Color.Green -> "#000800")
+            </summary>
+        </member>
+        <member name="M:GuruComponents.Netrix.UserInterface.StyleParser.Util.HexStringToRgb(System.String,System.Int16@,System.Int16@,System.Int16@)">
+            <summary>
+            Converts a hex string into name and resulting int color.
+            </summary>
+            <param name="hex">The hex value to convert.</param>
+            <param name="_r">The R (red) part.</param>
+            <param name="_g">The G (green) part.</param>
+            <param name="_b">The B part (blue).</param>
+            <returns>An integer value of the whole color.</returns>
+        </member>
+    </members>
+</doc>

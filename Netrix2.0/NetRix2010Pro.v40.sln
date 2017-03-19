@@ -21,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellChecker2010.v40", "Plu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDesigner2010.v40", "PlugIns\TableDesigner\TableDesigner2010.v40.csproj", "{1C2F074F-D062-4DBD-A8B2-3133E9787E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicensingCore2010.v40", "LicensingCore\LicensingCore2010.v40.csproj", "{83E8EA74-7EE0-4E48-A065-1FB46912A110}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,20 +160,6 @@ Global
 		{1C2F074F-D062-4DBD-A8B2-3133E9787E04}.Release|Win32.ActiveCfg = Release|Any CPU
 		{1C2F074F-D062-4DBD-A8B2-3133E9787E04}.Release|x64.ActiveCfg = Release|Any CPU
 		{1C2F074F-D062-4DBD-A8B2-3133E9787E04}.Release|x86.ActiveCfg = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|Win32.ActiveCfg = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|x64.ActiveCfg = Release|Any CPU
-		{83E8EA74-7EE0-4E48-A065-1FB46912A110}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

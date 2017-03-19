@@ -5,23 +5,23 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlugIns", "PlugIns", "{FFE5C4C1-21AE-40B3-9BAE-D32A3A4D171C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceLibrary", "Glyphs\ResourceLibrary2010.vcxproj", "{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceLibrary", "Glyphs\ResourceLibrary2015.vcxproj", "{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core2010.v40", "Core\Core2010.v40.csproj", "{ECBC8A51-DB2A-4F69-AC98-B61680198650}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core2015.v45", "Core\Core2015.v45.csproj", "{ECBC8A51-DB2A-4F69-AC98-B61680198650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRix2010.v40", "NetRixMain\NetRix2010.v40.csproj", "{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRix2015.v45", "NetRixMain\NetRix2015.v45.csproj", "{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRixUI2010.v40", "NetRixUI\NetRixUI2010.v40.csproj", "{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRixUI2015.v45", "NetRixUI\NetRixUI2015.v45.csproj", "{965DD31A-E3B4-4086-A47F-DD7CA967A0CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspDotNetDesigner2010.v40", "PlugIns\AspDotNetDesigner\AspDotNetDesigner2010.v40.csproj", "{95E9E07C-53AE-4557-8BCB-6E7023B245C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspDotNetDesigner2015.v45", "PlugIns\AspDotNetDesigner\AspDotNetDesigner2015.v45.csproj", "{95E9E07C-53AE-4557-8BCB-6E7023B245C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpLine2010.v40", "PlugIns\HelpLine\HelpLine2010.v40.csproj", "{F09F9E73-0994-4A20-B6D5-79675F959F41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpLine2015.v45", "PlugIns\HelpLine\HelpLine2015.v45.csproj", "{F09F9E73-0994-4A20-B6D5-79675F959F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlFormatter2010.v40", "PlugIns\HtmlFormatter\HtmlFormatter2010.v40.csproj", "{7504FB79-389D-40C9-B61C-79F4F01E8DCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlFormatter2015.v45", "PlugIns\HtmlFormatter\HtmlFormatter2015.v45.csproj", "{7504FB79-389D-40C9-B61C-79F4F01E8DCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellChecker2010.v40", "PlugIns\SpellChecker\SpellChecker2010.v40.csproj", "{3D7A48C5-23DF-4968-8D15-2FC55C091F1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpellChecker2015.v45", "PlugIns\SpellChecker\SpellChecker2015.v45.csproj", "{3D7A48C5-23DF-4968-8D15-2FC55C091F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDesigner2010.v40", "PlugIns\TableDesigner\TableDesigner2010.v40.csproj", "{1C2F074F-D062-4DBD-A8B2-3133E9787E04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDesigner2015.v45", "PlugIns\TableDesigner\TableDesigner2015.v45.csproj", "{1C2F074F-D062-4DBD-A8B2-3133E9787E04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

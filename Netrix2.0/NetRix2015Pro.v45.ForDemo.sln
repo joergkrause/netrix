@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlugIns", "PlugIns", "{FFE5C4C1-21AE-40B3-9BAE-D32A3A4D171C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceLibrary", "Glyphs\ResourceLibrary2010.vcxproj", "{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}"
@@ -19,41 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRixUI2012.v45.ForDemo", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetRix2012.v45.ForDemo", "NetRixMain\NetRix2012.v45.ForDemo.csproj", "{5C4D1229-1114-470E-8A94-F07E0931F784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{6FF0C894-8555-4E2D-8C95-0FB58117AD78}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs16
-		SccProjectUniqueName0 = NetRixMain\\NetRix2012.v45.ForDemo.csproj
-		SccProjectName0 = NetRixMain
-		SccLocalPath0 = NetRixMain
-		SccProjectUniqueName1 = PlugIns\\SpellChecker\\SpellChecker2012.v45.ForDemo.csproj
-		SccProjectTopLevelParentUniqueName1 = NetRix2012Pro.v45.ForDemo.sln
-		SccProjectName1 = PlugIns/SpellChecker
-		SccLocalPath1 = PlugIns\\SpellChecker
-		SccProjectUniqueName2 = PlugIns\\HelpLine\\HelpLine2012.v45.ForDemo.csproj
-		SccProjectTopLevelParentUniqueName2 = NetRix2012Pro.v45.ForDemo.sln
-		SccProjectName2 = PlugIns/HelpLine
-		SccLocalPath2 = PlugIns\\HelpLine
-		SccProjectUniqueName3 = PlugIns\\HtmlFormatter\\HtmlFormatter2012.v45.ForDemo.csproj
-		SccProjectTopLevelParentUniqueName3 = NetRix2012Pro.v45.ForDemo.sln
-		SccProjectName3 = PlugIns/HtmlFormatter
-		SccLocalPath3 = PlugIns\\HtmlFormatter
-		SccProjectUniqueName4 = Glyphs\\ResourceLibrary2010.vcxproj
-		SccProjectName4 = Glyphs
-		SccLocalPath4 = Glyphs
-		SccProjectUniqueName5 = PlugIns\\TableDesigner\\TableDesigner2012.v45.ForDemo.csproj
-		SccProjectTopLevelParentUniqueName5 = NetRix2012Pro.v45.ForDemo.sln
-		SccProjectName5 = PlugIns/TableDesigner
-		SccLocalPath5 = PlugIns\\TableDesigner
-		SccProjectUniqueName6 = Core\\Core2012.v45.ForDemo.csproj
-		SccProjectName6 = Core
-		SccLocalPath6 = Core
-		SccProjectUniqueName7 = NetRixUI\\NetRixUI2012.v45.ForDemo.csproj
-		SccProjectName7 = NetRixUI
-		SccLocalPath7 = NetRixUI
-		SccLocalPath8 = .
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -178,6 +148,26 @@ Global
 		{5C4D1229-1114-470E-8A94-F07E0931F784}.Release|Win32.ActiveCfg = Release|Any CPU
 		{5C4D1229-1114-470E-8A94-F07E0931F784}.Release|x64.ActiveCfg = Release|Any CPU
 		{5C4D1229-1114-470E-8A94-F07E0931F784}.Release|x86.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|Win32.Build.0 = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|x64.Build.0 = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Debug|x86.Build.0 = Debug|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Win32.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|Win32.Build.0 = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|x64.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|x64.Build.0 = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|x86.ActiveCfg = Release|Any CPU
+		{6FF0C894-8555-4E2D-8C95-0FB58117AD78}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

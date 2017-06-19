@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D7A48C5-23DF-4968-8D15-2FC55C091F1E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GuruComponents.Netrix.PlugIns.SpellChecker.v47.Demo</AssemblyName>
+    <AssemblyOriginatorKeyFile>NetRixMain.key</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GuruComponents.Netrix.SpellChecker</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;DOTNET40</DefineConstants>
+    <DocumentationFile>..\..\Documentation\GuruComponents.Netrix.PlugIns.SpellChecker.v35.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\GuruComponents.Netrix.PlugIns.SpellChecker.v47.Demo.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NetSpell\ISpelling.cs" />
+    <Compile Include="NetSpell\SuggestionEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spellchecker\ISpellcheckerDialog.cs" />
+    <Compile Include="Spellchecker\ReplacedWordEventHandler.cs" />
+    <Compile Include="Spellchecker\ISpellChecker.cs" />
+    <Compile Include="NetSpell\NativeMethods.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixEntry.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixEntryCollection.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixEntryEnumerator.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixRule.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixRuleCollection.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixRuleEnumerator.cs" />
+    <Compile Include="NetSpell\Dictionary\Affix\AffixUtility.cs" />
+    <Compile Include="NetSpell\Dictionary\Phonetic\PhoneticRule.cs" />
+    <Compile Include="NetSpell\Dictionary\Phonetic\PhoneticRuleCollection.cs" />
+    <Compile Include="NetSpell\Dictionary\Phonetic\PhoneticRuleEnumerator.cs" />
+    <Compile Include="NetSpell\Dictionary\Phonetic\PhoneticUtility.cs" />
+    <Compile Include="NetSpell\Dictionary\Word.cs" />
+    <Compile Include="NetSpell\Dictionary\WordDictionary.cs">
+    </Compile>
+    <Compile Include="NetSpell\ReplaceWordEventArgs.cs" />
+    <Compile Include="NetSpell\Spelling.cs">
+    </Compile>
+    <Compile Include="NetSpell\SpellingEventArgs.cs" />
+    <Compile Include="Spellchecker\WordEventHandler.cs" />
+    <Compile Include="SpellCommands.cs" />
+    <Compile Include="SpellControlDesigner.cs" />
+    <Compile Include="Speller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpellCheckerProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Spellchecker\SpellChecker.cs">
+    </Compile>
+    <Compile Include="Spellchecker\SpellingEventArgs.cs" />
+    <Compile Include="Spellchecker\WordCheckerEventArgs.cs" />
+    <Compile Include="Spellchecker\WordCheckerFinishedHandler.cs" />
+    <Compile Include="Spellchecker\WordCheckerHandler.cs" />
+    <Compile Include="Spellchecker\WordOnContextEventArgs.cs" />
+    <Compile Include="Spellchecker\WordOnContextHandler.cs" />
+    <Compile Include="Spellchecker\WordStopHandler.cs" />
+    <EmbeddedResource Include="NetSpell\Dictionary\WordDictionary.resx">
+      <DependentUpon>WordDictionary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetSpell\Spelling.resx">
+      <DependentUpon>Spelling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Speller.resx">
+      <DependentUpon>Speller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dictionary\de-DE.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\en-AU.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\en-CA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\en-GB.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\en-US.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\es-ES.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\es-MX.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\fr-FR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dictionary\it-IT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Toolbox.ico" />
+    <!--
+    <EmbeddedResource Include="Speller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Speller.cs</DependentUpon>
+    </EmbeddedResource>
+-->
+    <Content Include="Resources\Dictionary.bmp" />
+    <Content Include="Resources\Interactive.bmp" />
+    <Content Include="Resources\Spelling.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetRixMain.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core2017.v47.ForDemo.csproj">
+      <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
+      <Name>Core2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixMain\NetRix2017.v47.ForDemo.csproj">
+      <Project>{5c4d1229-1114-470e-8a94-f07e0931f784}</Project>
+      <Name>NetRix2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlFormatter\HtmlFormatter2017.v47.ForDemo.csproj">
+      <Project>{72ce54fb-a6f7-4da4-8506-e106eaf48076}</Project>
+      <Name>HtmlFormatter2017.v47.ForDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

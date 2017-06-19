@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>GuruComponents.Netrix.PlugIns.HtmlFormatter.v40.Demo</name>
+        <name>GuruComponents.Netrix.PlugIns.HtmlFormatter.v47.Demo</name>
     </assembly>
     <members>
         <member name="T:GuruComponents.Netrix.HtmlFormatting.Elements.TagInfo">

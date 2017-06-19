@@ -5,10 +5,10 @@ using GuruComponents.Netrix.ComInterop;
 namespace GuruComponents.Netrix.WebEditing.UndoRedo
 {
 
-    /// <summary>
-    /// Implements <see cref="Interop.IHTMLChangeSink"/> to receive Notify events in case of document changes.
-    /// </summary>
-    [ComVisible(true)]
+  /// <summary>
+  /// Implements <see cref="GuruComponents.Netrix.ComInterop.Interop.IHTMLChangeSink"/> to receive Notify events in case of document changes.
+  /// </summary>
+  [ComVisible(true)]
     public class ChangeSink : Interop.IHTMLChangeSink, IDisposable
     {
 

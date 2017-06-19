@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication1</RootNamespace>
     <AssemblyName>WindowsFormsApplication1</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,15 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GuruComponents.Netrix.PlugIns.HtmlFormatter.v40.Demo">
-      <HintPath>..\PlugIns\HtmlFormatter\bin\Debug\GuruComponents.Netrix.PlugIns.HtmlFormatter.v40.Demo.dll</HintPath>
-    </Reference>
-    <Reference Include="GuruComponents.Netrix.Professional.Core.v40.Demo">
-      <HintPath>..\Core\bin\Debug\GuruComponents.Netrix.Professional.Core.v40.Demo.dll</HintPath>
-    </Reference>
-    <Reference Include="GuruComponents.Netrix.Professional.UI.v40.Demo">
-      <HintPath>..\NetRixUI\bin\Debug\GuruComponents.Netrix.Professional.UI.v40.Demo.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -68,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,9 +86,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NetRixMain\NetRix2012.v45.ForDemo.csproj">
-      <Project>{5C4D1229-1114-470E-8A94-F07E0931F784}</Project>
-      <Name>NetRix2012.v45.ForDemo</Name>
+    <ProjectReference Include="..\Core\Core2017.v47.ForDemo.csproj">
+      <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
+      <Name>Core2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Glyphs\ResourceLibrary2017.vcxproj">
+      <Project>{4485fb2d-3ae5-4f7e-a1cb-a334b2ec9d16}</Project>
+      <Name>ResourceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetRixMain\NetRix2017.v47.ForDemo.csproj">
+      <Project>{5c4d1229-1114-470e-8a94-f07e0931f784}</Project>
+      <Name>NetRix2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetRixUI\NetRixUI2017.v47.ForDemo.csproj">
+      <Project>{965dd31a-e3b4-4086-a47f-dd7ca967a0cd}</Project>
+      <Name>NetRixUI2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\HelpLine\HelpLine2017.v47.ForDemo.csproj">
+      <Project>{f09f9e73-0994-4a20-b6d5-79675f959f41}</Project>
+      <Name>HelpLine2017.v47.ForDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlugIns\HtmlFormatter\HtmlFormatter2017.v47.ForDemo.csproj">
+      <Project>{72ce54fb-a6f7-4da4-8506-e106eaf48076}</Project>
+      <Name>HtmlFormatter2017.v47.ForDemo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

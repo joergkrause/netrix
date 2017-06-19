@@ -7,7 +7,6 @@ using GuruComponents.Netrix.ComInterop;
 using TE = GuruComponents.Netrix.UserInterface.TypeEditors;
 using GuruComponents.Netrix.UserInterface.TypeEditors;
 
-
 namespace GuruComponents.Netrix.WebEditing.Styles
 {
     /// <summary>
@@ -2276,13 +2275,13 @@ namespace GuruComponents.Netrix.WebEditing.Styles
             get { return textDecorationStyle; }
         }
 
-        /// <summary>
-        /// Implements a container for text decoration styles.
-        /// </summary>
-        /// <remarks>
-        /// Based on <see cref="Interop.IHTMLStyle"/> interface.
-        /// </remarks>
-        public class TextDecoration : GuruComponents.Netrix.WebEditing.Styles.ITextDecoration
+    /// <summary>
+    /// Implements a container for text decoration styles.
+    /// </summary>
+    /// <remarks>
+    /// Based on <see cref="GuruComponents.Netrix.ComInterop.Interop.IHTMLStyle"/> interface.
+    /// </remarks>
+    public class TextDecoration : GuruComponents.Netrix.WebEditing.Styles.ITextDecoration
         {
 
             Interop.IHTMLStyle htmlStyle;

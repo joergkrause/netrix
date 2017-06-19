@@ -1,0 +1,208 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Comzept.NetRix.PlugIns.Tidy</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Comzept.Genesis.NetRix.Tidy</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectGuid>{B6863C7C-E313-4BC8-A009-E06A6842D998}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>bin\Release\Comzept.Genesis.Tidy.XML</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="SupportClass.cs" />
+    <Compile Include="TidySharpExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TidySharpProperties.cs" />
+    <Compile Include="W3C\Dom\Attr.cs" />
+    <Compile Include="W3C\Dom\CDATASection.cs" />
+    <Compile Include="W3C\Dom\CharacterData.cs" />
+    <Compile Include="W3C\Dom\Comment.cs" />
+    <Compile Include="W3C\Dom\Document.cs" />
+    <Compile Include="W3C\Dom\DocumentFragment.cs" />
+    <Compile Include="W3C\Dom\DocumentType.cs" />
+    <Compile Include="W3C\Dom\DOMException.cs" />
+    <Compile Include="W3C\Dom\DOMImplementation.cs" />
+    <Compile Include="W3C\Dom\Element.cs" />
+    <Compile Include="W3C\Dom\Entity.cs" />
+    <Compile Include="W3C\Dom\EntityReference.cs" />
+    <Compile Include="W3C\Dom\NamedNodeMap.cs" />
+    <Compile Include="W3C\Dom\Node.cs" />
+    <Compile Include="W3C\Dom\NodeList.cs" />
+    <Compile Include="W3C\Dom\Notation.cs" />
+    <Compile Include="W3C\Dom\ProcessingInstruction.cs" />
+    <Compile Include="W3C\Dom\Text.cs" />
+    <Compile Include="W3C\Tidy\Attr\AttrCheck.cs" />
+    <Compile Include="W3C\Tidy\Attr\AttrCheckImpl.cs" />
+    <Compile Include="W3C\Tidy\Attr\Attribute.cs" />
+    <Compile Include="W3C\Tidy\Attr\AttributeTable.cs" />
+    <Compile Include="W3C\Tidy\Attr\AttVal.cs" />
+    <Compile Include="W3C\Tidy\Attr\CheckAttribs.cs" />
+    <Compile Include="W3C\Tidy\Attr\CheckAttribsImpl.cs" />
+    <Compile Include="W3C\Tidy\Clean.cs" />
+    <Compile Include="W3C\Tidy\Configuration.cs" />
+    <Compile Include="W3C\Tidy\Dict.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMAttrImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMAttrMapImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMCDATASectionImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMCharacterDataImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMCommentImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMDocumentImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMDocumentTypeImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMElementImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMExceptionImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMNodeImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMNodeListByTagNameImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMNodeListImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMProcessingInstructionImpl.cs" />
+    <Compile Include="W3C\Tidy\DOM\DOMTextImpl.cs" />
+    <Compile Include="W3C\Tidy\Entity.cs" />
+    <Compile Include="W3C\Tidy\EntityTable.cs" />
+    <Compile Include="W3C\Tidy\IStack.cs" />
+    <Compile Include="W3C\Tidy\Lexer.cs" />
+    <Compile Include="W3C\Tidy\MutableBoolean.cs" />
+    <Compile Include="W3C\Tidy\MutableInteger.cs" />
+    <Compile Include="W3C\Tidy\MutableObject.cs" />
+    <Compile Include="W3C\Tidy\Node.cs" />
+    <Compile Include="W3C\Tidy\Out.cs" />
+    <Compile Include="W3C\Tidy\OutImpl.cs" />
+    <Compile Include="W3C\Tidy\Parser\Parser.cs" />
+    <Compile Include="W3C\Tidy\Parser\ParserImpl.cs" />
+    <Compile Include="W3C\Tidy\Parser\ParserParts.cs" />
+    <Compile Include="W3C\Tidy\PPrint.cs" />
+    <Compile Include="W3C\Tidy\Report.cs" />
+    <Compile Include="W3C\Tidy\StreamIn.cs" />
+    <Compile Include="W3C\Tidy\StreamInImpl.cs" />
+    <Compile Include="W3C\Tidy\Style.cs" />
+    <Compile Include="W3C\Tidy\StyleProp.cs" />
+    <Compile Include="W3C\Tidy\TagTable.cs" />
+    <Compile Include="W3C\Tidy\Tidy.cs" />
+    <Compile Include="W3C\Tidy\TidyBeanInfo.cs" />
+    <Compile Include="Xml\Sax\AttributeList.cs" />
+    <Compile Include="Xml\Sax\Attributes.cs" />
+    <Compile Include="Xml\Sax\ContentHandler.cs" />
+    <Compile Include="Xml\Sax\DocumentHandler.cs" />
+    <Compile Include="Xml\Sax\DTDHandler.cs" />
+    <Compile Include="Xml\Sax\EntityResolver.cs" />
+    <Compile Include="Xml\Sax\ErrorHandler.cs" />
+    <Compile Include="Xml\Sax\HandlerBase.cs" />
+    <Compile Include="Xml\Sax\InputSource.cs" />
+    <Compile Include="Xml\Sax\Locator.cs" />
+    <Compile Include="Xml\Sax\Parser.cs" />
+    <Compile Include="Xml\Sax\SAXException.cs" />
+    <Compile Include="Xml\Sax\SAXNotRecognizedException.cs" />
+    <Compile Include="Xml\Sax\SAXNotSupportedException.cs" />
+    <Compile Include="Xml\Sax\SAXParseException.cs" />
+    <Compile Include="Xml\Sax\XMLFilter.cs" />
+    <Compile Include="Xml\Sax\XMLReader.cs" />
+    <Content Include="W3C\Tidy\config.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core2005.csproj">
+      <Project>{ECBC8A51-DB2A-4F69-AC98-B61680198650}</Project>
+      <Name>Core2005</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetRixMain\NetRix2005.csproj">
+      <Project>{0D20B7BC-3B10-4849-8CE2-AEB260D6A352}</Project>
+      <Name>NetRix2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

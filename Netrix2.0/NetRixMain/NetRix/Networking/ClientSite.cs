@@ -6,11 +6,11 @@ using ComTypes = GuruComponents.Netrix.ComInterop;
 
 namespace GuruComponents.Netrix.Networking
 {
-    /// <summary>
-    /// This is the implementation of the <see cref="Interop.IOleClientSite"/> interface.
-    /// Additionally the internal authentication was implemented later.
-    /// </summary>
-    internal class ClientSite : Interop.IAuthenticate, Interop.IHttpSecurity // Interop.IOleClientSite, 
+  /// <summary>
+  /// This is the implementation of the <see cref="GuruComponents.Netrix.ComInterop.Interop.IOleClientSite"/> interface.
+  /// Additionally the internal authentication was implemented later.
+  /// </summary>
+  internal class ClientSite : Interop.IAuthenticate, Interop.IHttpSecurity // Interop.IOleClientSite, 
     {
 
         string userName;

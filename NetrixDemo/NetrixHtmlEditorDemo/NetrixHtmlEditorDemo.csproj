@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GuruComponents.EditorDemo</RootNamespace>
     <AssemblyName>GuruComponents.EditorDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -57,9 +57,6 @@
     <StartupObject>NetrixHtmlEditorDemo.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GuruComponents.Netrix.Resources">
-      <HintPath>E:\Dropbox\p\cats\Netrix\Netrix2.0\Glyphs\Release\GuruComponents.Netrix.Resources.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -296,58 +293,60 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Netrix2.0\Core\Core2015.v46.ForDemo.csproj">
-      <Project>{bffd7795-5295-428c-8c15-daf8028da532}</Project>
-      <Name>Core2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\Core\Core2017.v47.ForDemo.csproj">
+      <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
+      <Name>Core2017.v47.ForDemo</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Netrix2.0\Glyphs\ResourceLibrary2015.vcxproj">
       <Project>{4485fb2d-3ae5-4f7e-a1cb-a334b2ec9d16}</Project>
       <Name>ResourceLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\NetRixMain\NetRix2015.v46.ForDemo.csproj">
-      <Project>{0d20b7bc-3b10-4849-8ce2-aeb260d6a352}</Project>
-      <Name>NetRix2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\NetRixMain\NetRix2017.v47.ForDemo.csproj">
+      <Project>{5c4d1229-1114-470e-8a94-f07e0931f784}</Project>
+      <Name>NetRix2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\NetRixUI\NetRixUI2015.v46.ForDemo.csproj">
-      <Project>{a66482e3-db0f-4f53-884e-b538595dfbd8}</Project>
-      <Name>NetRixUI2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\NetRixUI\NetRixUI2017.v47.ForDemo.csproj">
+      <Project>{965dd31a-e3b4-4086-a47f-dd7ca967a0cd}</Project>
+      <Name>NetRixUI2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HelpLine\HelpLine2015.v46.ForDemo.csproj">
-      <Project>{e53f5ec3-5464-4cd7-be38-67e79c09b470}</Project>
-      <Name>HelpLine2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HelpLine\HelpLine2017.v47.ForDemo.csproj">
+      <Project>{f09f9e73-0994-4a20-b6d5-79675f959f41}</Project>
+      <Name>HelpLine2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HtmlFormatter\HtmlFormatter2015.v46.ForDemo.csproj">
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\HtmlFormatter\HtmlFormatter2017.v47.ForDemo.csproj">
       <Project>{72ce54fb-a6f7-4da4-8506-e106eaf48076}</Project>
-      <Name>HtmlFormatter2015.v46.ForDemo</Name>
+      <Name>HtmlFormatter2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\PlugIns\SpellChecker\SpellChecker2015.v46.ForDemo.csproj">
-      <Project>{83186904-7ab3-483c-b602-83471c38bfa7}</Project>
-      <Name>SpellChecker2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\SpellChecker\SpellChecker2017.v47.ForDemo.csproj">
+      <Project>{3d7a48c5-23df-4968-8d15-2fc55c091f1e}</Project>
+      <Name>SpellChecker2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\PlugIns\TableDesigner\TableDesigner2015.v46.ForDemo.csproj">
-      <Project>{5bfd19c7-3850-4714-9d77-74ddc561aba4}</Project>
-      <Name>TableDesigner2015.v46.ForDemo</Name>
+    <ProjectReference Include="..\..\Netrix2.0\PlugIns\TableDesigner\TableDesigner2017.v47.ForDemo.csproj">
+      <Project>{1c2f074f-d062-4dbd-a8b2-3133e9787e04}</Project>
+      <Name>TableDesigner2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CodeEditorLib\CodeEditor\CodeEditor2015.v46.csproj">
+    <ProjectReference Include="..\CodeEditorLib\CodeEditor\CodeEditor2017.v47.csproj">
       <Project>{6f4aafee-3a1f-4d43-953e-f3e26f48c2f3}</Project>
-      <Name>CodeEditor2015.v46</Name>
+      <Name>CodeEditor2017.v47</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DockPanelLib\WinFormsUI\WinFormsUI2015.v46.csproj">
+    <ProjectReference Include="..\DockPanelLib\WinFormsUI\WinFormsUI2017.v47.csproj">
       <Project>{c75532c4-765b-418e-b09b-46d36b2abdb1}</Project>
-      <Name>WinFormsUI2015.v46</Name>
+      <Name>WinFormsUI2017.v47</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RibbonLib\Ribbon\Ribbon2015.v46.csproj">
+    <ProjectReference Include="..\RibbonLib\Ribbon\Ribbon2017.v47.csproj">
       <Project>{0d4f3c14-b605-4471-b581-79784a89675c}</Project>
-      <Name>Ribbon2015.v46</Name>
+      <Name>Ribbon2017.v47</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin\UICC.exe" "$(ProjectDir)RibbonMarkup.xml" "$(ProjectDir)RibbonMarkup.bml" /res:"$(ProjectDir)RibbonMarkup.rc" 
+    <PreBuildEvent>"..\CompilerSupportExecutables\UICC.exe" "$(ProjectDir)RibbonMarkup.xml" "$(ProjectDir)RibbonMarkup.bml" /res:"$(ProjectDir)RibbonMarkup.rc" 
 
-"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin\rc.exe" /v "$(ProjectDir)RibbonMarkup.rc" 
+".\CompilerSupportExecutables\rc.exe" /v "$(ProjectDir)RibbonMarkup.rc" 
 
-cmd /c "("C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\vcvars32.bat") &amp;&amp; ("C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe" /VERBOSE /NOENTRY /DLL /OUT:"$(ProjectDir)RibbonMarkup.ribbon" "$(ProjectDir)RibbonMarkup.res")"</PreBuildEvent>
+cmd /c "("C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars32.bat") &amp;&amp; ("C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.10.25017\bin\HostX86\x86\link.exe" /VERBOSE /NOENTRY /DLL /OUT:"$(ProjectDir)RibbonMarkup.ribbon" "$(ProjectDir)RibbonMarkup.res")"
+
+</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

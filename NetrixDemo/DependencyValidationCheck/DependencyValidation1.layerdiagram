@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c9630661-e0ae-4eb0-8f24-9de195a0dd8e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="ea5a53b0-460f-4869-afda-afe679b9fd67" name="MainForm.cs">
+      <references>
+        <reference Id="6c862a3d-b337-40c9-859c-d1916de654c9" name="MainForm.cs">
+          <ArtifactNode Label="MainForm.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../NetrixHtmlEditorDemo/NetrixHtmlEditorDemo.csproj File=../NetrixHtmlEditorDemo/MainForm.cs)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=GuruComponents.EditorDemo Namespace=NetrixHtmlEditorDemo Type=MainForm)" Label="MainForm" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9c2390ef-59c7-4262-8d0a-dd4bb943a02c" name="MainForm.Designer.cs">
+      <references>
+        <reference Id="a84d9203-ec05-46ca-9e1a-f71862681742" name="MainForm.Designer.cs">
+          <ArtifactNode Label="MainForm.Designer.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../NetrixHtmlEditorDemo/NetrixHtmlEditorDemo.csproj File=../NetrixHtmlEditorDemo/MainForm.Designer.cs)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=GuruComponents.EditorDemo Namespace=NetrixHtmlEditorDemo Type=MainForm)" Label="MainForm" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="d6c06136-9d64-46a9-84aa-05022d93b0e6" name="MainForm.resx">
+      <references>
+        <reference Id="6a483245-9112-4629-8159-f76b04ace5af" name="MainForm.resx">
+          <ArtifactNode Label="MainForm.resx" Category="CodeSchema_ProjectItem" Id="(Assembly=../NetrixHtmlEditorDemo/NetrixHtmlEditorDemo.csproj File=../NetrixHtmlEditorDemo/MainForm.resx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

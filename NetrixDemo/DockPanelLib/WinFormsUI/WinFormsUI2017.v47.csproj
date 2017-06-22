@@ -186,6 +186,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Include="..\..\DependencyValidationCheck\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="Docking\Resources\DockIndicator_PaneDiamond.bmp" />
     <None Include="Docking\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
     <None Include="Docking\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
@@ -204,6 +208,7 @@
     <None Include="Docking\Resources\DockIndicator_PanelRight_Active.bmp" />
     <None Include="Docking\Resources\DockIndicator_PanelTop.bmp" />
     <None Include="Docking\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="license.txt">
@@ -236,6 +241,10 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\..\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

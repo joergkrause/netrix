@@ -143,6 +143,8 @@
     <Compile Include="NetRix\WebEditing\DragDrop\DropInfo.cs" />
     <Compile Include="NetRix\WebEditing\DragDrop\IDataObjectConverter.cs" />
     <Compile Include="NetRix\WebEditing\Elements\ExtendedElements\EventSink.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\HeaderElement.cs" />
+    <Compile Include="NetRix\WebEditing\Elements\Html5\FooterElement.cs" />
     <Compile Include="NetRix\WebEditing\Elements\Html5\ArticleElement.cs" />
     <Compile Include="NetRix\WebEditing\Elements\Html5\AsideElement.cs" />
     <Compile Include="NetRix\WebEditing\Elements\Html5\AudioElement.cs" />
@@ -580,9 +582,6 @@
     <Compile Include="NetRix\WebEditing\Elements\HeadElements\StyleRuleType_Enum.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="NetRix\WebEditing\Elements\HeaderElement.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="NetRix\WebEditing\Elements\Header_Enum.cs" />
     <Compile Include="NetRix\WebEditing\Elements\HorizontalRuleElement.cs">
       <SubType>Code</SubType>
@@ -841,7 +840,12 @@
     <Folder Include="Resources\Printing\" />
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Include="..\..\NetrixDemo\DependencyValidationCheck\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="NetRixMain.key" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -863,6 +867,10 @@
       <Project>{72ce54fb-a6f7-4da4-8506-e106eaf48076}</Project>
       <Name>HtmlFormatter2017.v47.ForDemo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\NetrixDemo\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\..\NetrixDemo\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -212,13 +212,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Include="..\..\..\NetrixDemo\DependencyValidationCheck\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
     <None Include="NetRixMain.key" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Core2017.v47.ForDemo.csproj">
       <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
       <Name>Core2017.v47.ForDemo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\NetrixDemo\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\..\..\NetrixDemo\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

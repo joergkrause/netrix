@@ -161,6 +161,7 @@ namespace GuruComponents.Netrix
                 elementTypes["html:figure"] = typeof(FigureElement);    // 5
                 elementTypes["html:figcaption"] = typeof(FigCaptionElement);    // 5
                 elementTypes["html:font"] = typeof(FontElement);
+                elementTypes["html:footer"] = typeof(GuruComponents.Netrix.WebEditing.Elements.Html5.FooterElement);
                 elementTypes["html:frame"] = typeof(FrameElement);
                 elementTypes["html:frameset"] = typeof(FrameSetElement);
                 elementTypes["html:hr"] = typeof(HorizontalRuleElement);

@@ -7,16 +7,16 @@ using System.ComponentModel;
 using TE=GuruComponents.Netrix.UserInterface.TypeEditors;
 
 
-namespace GuruComponents.Netrix.WebEditing.Elements
+namespace GuruComponents.Netrix.WebEditing.Elements.Html5
 {
     
     /// <summary>
-    /// The hx element defines a heading.
+    /// The footer element defines a footer area.
     /// </summary>
     /// <remarks>
-    /// The regular headers.
+    /// A footer is a semantic HTML 5 element.
     /// </remarks>
-	public sealed class HeaderElement : StyledElement
+	public sealed class FooterElement : StyledElement
 	{
 		/// <include file='DocumentorIncludes.xml' path='//WebEditing/Elements[@name="HorizontalAlign"]/*'/>
 		[DescriptionAttribute("")]
@@ -44,12 +44,12 @@ namespace GuruComponents.Netrix.WebEditing.Elements
         /// </summary>
         /// <param name="editor">The editor this element belongs to.</param>
         /// <param name="h">The type of header being created.</param>
-        public HeaderElement(IHtmlEditor editor, Header h)
-            : base(h.ToString(), editor)
+        public FooterElement(IHtmlEditor editor)
+            : base("footer", editor)
         {
         }
 
-		internal HeaderElement (Interop.IHTMLElement peer, IHtmlEditor editor) : base (peer, editor)
+		internal FooterElement (Interop.IHTMLElement peer, IHtmlEditor editor) : base (peer, editor)
 		{
 		}
 	}

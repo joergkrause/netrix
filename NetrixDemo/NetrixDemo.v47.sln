@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Netrix", "Netrix", "{00D0CD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{D3701F49-5C3C-46BF-8484-3A46D547A564}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ResourceLibrary", "..\Netrix2.0\Glyphs\ResourceLibrary2017.vcxproj", "{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetrixHtmlEditorDemo", "NetrixHtmlEditorDemo\NetrixHtmlEditorDemo.csproj", "{6BDC113C-FC8A-4AEE-A94B-7C5DD23756F8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A4D3E16B-F831-42F1-8E66-938FE96220DA}"
@@ -65,35 +63,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|Win32.Build.0 = Debug|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|x64.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|x64.Build.0 = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Debug|x86.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|Any CPU.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|Mixed Platforms.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|Mixed Platforms.Build.0 = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|Win32.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|x64.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|x64.Build.0 = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DebugDemoForm|x86.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|Any CPU.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|Mixed Platforms.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|Mixed Platforms.Build.0 = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|Win32.ActiveCfg = Debug|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|Win32.Build.0 = Debug|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|x64.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|x64.Build.0 = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.DeployIsolated_HtmlFormatter_Debug|x86.ActiveCfg = Debug|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|Any CPU.ActiveCfg = Release|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|Win32.ActiveCfg = Release|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|Win32.Build.0 = Release|Win32
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|x64.ActiveCfg = Release|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|x64.Build.0 = Release|x64
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16}.Release|x86.ActiveCfg = Release|Win32
 		{6BDC113C-FC8A-4AEE-A94B-7C5DD23756F8}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{6BDC113C-FC8A-4AEE-A94B-7C5DD23756F8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{6BDC113C-FC8A-4AEE-A94B-7C5DD23756F8}.Debug|Win32.ActiveCfg = Debug|x86
@@ -488,7 +457,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D3701F49-5C3C-46BF-8484-3A46D547A564} = {00D0CD46-7945-4E72-86BB-1B49197A68B3}
-		{4485FB2D-3AE5-4F7E-A1CB-A334B2EC9D16} = {00D0CD46-7945-4E72-86BB-1B49197A68B3}
 		{91A26F23-2359-48B2-9061-3B73FD382C72} = {00D0CD46-7945-4E72-86BB-1B49197A68B3}
 		{5C4D1229-1114-470E-8A94-F07E0931F784} = {00D0CD46-7945-4E72-86BB-1B49197A68B3}
 		{965DD31A-E3B4-4086-A47F-DD7CA967A0CD} = {00D0CD46-7945-4E72-86BB-1B49197A68B3}

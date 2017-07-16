@@ -302,10 +302,6 @@
       <Project>{91a26f23-2359-48b2-9061-3b73fd382c72}</Project>
       <Name>Core2017.v47.ForDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Netrix2.0\Glyphs\ResourceLibrary2015.vcxproj">
-      <Project>{4485fb2d-3ae5-4f7e-a1cb-a334b2ec9d16}</Project>
-      <Name>ResourceLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Netrix2.0\NetRixMain\NetRix2017.v47.ForDemo.csproj">
       <Project>{5c4d1229-1114-470e-8a94-f07e0931f784}</Project>
       <Name>NetRix2017.v47.ForDemo</Name>

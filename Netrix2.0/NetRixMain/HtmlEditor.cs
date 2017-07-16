@@ -5035,7 +5035,7 @@ namespace GuruComponents.Netrix {
 
     internal IntPtr PanelHandle
     {
-      get { return panelEditContainer.Handle; }
+      get { return panelEditContainer.IsDisposed ? IntPtr.Zero : panelEditContainer.Handle; }
     }
 
     /// <internalonly/>

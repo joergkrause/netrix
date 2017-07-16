@@ -152,10 +152,14 @@ namespace WeifenLuo.WinFormsUI.Docking
 						m_mdiClientController.Layout -= new LayoutEventHandler(MdiClient_Layout);
 						m_mdiClientController.Dispose();
 					}
-					FloatWindows.Dispose();
-					Panes.Dispose();
-					DummyContent.Dispose();
+          try {
+            FloatWindows.Dispose();
+            Panes.Dispose();
+            DummyContent.Dispose();
 
+          }
+          catch (Exception) {
+          }
 					m_disposed = true;
 				}
 				

@@ -2024,16 +2024,16 @@ namespace GuruComponents.Netrix
             }
         }
 
-        /// <summary>
-        /// Allows computer users to employ IME reconversion while browsing Web pages.
-        /// </summary>
-        /// <remarks>
-        /// During initialization, the host can set this flag to enable Input Method Editor (IME) reconversion, allowing computer users to employ IME reconversion while browsing Web pages. An input method editor is a program that allows users to enter complex characters and symbols, such as Japanese Kanji characters, using a standard keyboard.
-        /// <para>
-        /// Note: This features is available as of NetRix Pro 1.6.
-        /// </para>
-        /// </remarks>
-        [DefaultValue(false), Browsable(true), Category("Netrix Component"), Description("Allows computer users to employ IME reconversion while browsing Web pages.")]
+    /// <summary>
+    /// Allows computer users to employ IME reconversion while browsing Web pages.
+    /// </summary>
+    /// <remarks>
+    /// During initialization, the host can set this flag to enable Input Method Editor (IME) reconversion, allowing computer users to employ IME reconversion while browsing Web pages. An input method editor is a program that allows users to enter complex characters and symbols, such as Japanese Kanji characters, using a standard keyboard.
+    /// <para>
+    /// Note: This features is available as of NetRix Pro 1.6.
+    /// </para>
+    /// </remarks>
+    [DefaultValue(false), Browsable(true), Category("Netrix Component"), Description("Allows computer users to employ IME reconversion while browsing Web pages.")]
         public bool ImeReconversion
         {
             get

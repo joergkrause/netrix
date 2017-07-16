@@ -84,7 +84,7 @@ namespace GuruComponents.Netrix.WebEditing.Styles
                 get
                 {
                     string bgs = htmlStyle.GetBackground();
-                    if (bgs != null)
+                    if (!String.IsNullOrEmpty(bgs))
                     {
                         return (BackgroundStyles)Enum.Parse(typeof(BackgroundStyles), bgs, true);
                     }

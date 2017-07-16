@@ -1191,6 +1191,54 @@
             Connects the specified control and its underlying element to the event sink.
             </summary>
         </member>
+        <member name="T:GuruComponents.Netrix.WebEditing.Elements.HeaderElement">
+            <summary>
+            The hx element defines a heading.
+            </summary>
+            <remarks>
+            The regular headers.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.WebEditing.Elements.HeaderElement.align">
+            <summary>
+        Horizontal alignment (left, center, right) within the surrounding block element.
+        </summary><remarks>
+        This attributes allows the horizontal alignment within the surrounding block element. The options
+        and there behavior differs slightly between the elements. The property allows the list provided
+        by the <see cref="T:System.Web.UI.WebControls.HorizontalAlign">HorizontalAlign</see> enumeration.
+        </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.WebEditing.Elements.HeaderElement.#ctor(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.WebEditing.Elements.Header)">
+            <summary>
+            Creates the specified header element.
+            </summary>
+            <param name="editor">The editor this element belongs to.</param>
+            <param name="h">The type of header being created.</param>
+        </member>
+        <member name="T:GuruComponents.Netrix.WebEditing.Elements.Html5.FooterElement">
+            <summary>
+            The footer element defines a footer area.
+            </summary>
+            <remarks>
+            A footer is a semantic HTML 5 element.
+            </remarks>
+        </member>
+        <member name="P:GuruComponents.Netrix.WebEditing.Elements.Html5.FooterElement.align">
+            <summary>
+        Horizontal alignment (left, center, right) within the surrounding block element.
+        </summary><remarks>
+        This attributes allows the horizontal alignment within the surrounding block element. The options
+        and there behavior differs slightly between the elements. The property allows the list provided
+        by the <see cref="T:System.Web.UI.WebControls.HorizontalAlign">HorizontalAlign</see> enumeration.
+        </remarks>
+        </member>
+        <member name="M:GuruComponents.Netrix.WebEditing.Elements.Html5.FooterElement.#ctor(GuruComponents.Netrix.IHtmlEditor)">
+            <summary>
+            Creates the specified header element.
+            </summary>
+            <param name="editor">The editor this element belongs to.</param>
+            <param name="h">The type of header being created.</param>
+        </member>
         <member name="T:GuruComponents.Netrix.WebEditing.Elements.Html5.AsideElement">
             <summary>
             This class represents the &lt;aside&gt; element.
@@ -6739,30 +6787,6 @@
             <summary>
             The asterisk *. Not followed by any text.
             </summary>
-        </member>
-        <member name="T:GuruComponents.Netrix.WebEditing.Elements.HeaderElement">
-            <summary>
-            The HX element defines a heading.
-            </summary>
-            <remarks>
-            Any heading (H1 through H6) uses the same class to instantiate elements.
-            </remarks>
-        </member>
-        <member name="P:GuruComponents.Netrix.WebEditing.Elements.HeaderElement.align">
-            <summary>
-        Horizontal alignment (left, center, right) within the surrounding block element.
-        </summary><remarks>
-        This attributes allows the horizontal alignment within the surrounding block element. The options
-        and there behavior differs slightly between the elements. The property allows the list provided
-        by the <see cref="T:System.Web.UI.WebControls.HorizontalAlign">HorizontalAlign</see> enumeration.
-        </remarks>
-        </member>
-        <member name="M:GuruComponents.Netrix.WebEditing.Elements.HeaderElement.#ctor(GuruComponents.Netrix.IHtmlEditor,GuruComponents.Netrix.WebEditing.Elements.Header)">
-            <summary>
-            Creates the specified header element.
-            </summary>
-            <param name="editor">The editor this element belongs to.</param>
-            <param name="h">The type of header being created.</param>
         </member>
         <member name="T:GuruComponents.Netrix.WebEditing.Elements.Header">
             <summary>
